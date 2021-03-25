@@ -18,4 +18,5 @@ Main PR Rules:
  - Write commit messages for all important thing!
  - Use English for commit messages(even for localization).
  
- 
+Other things:
+ - All configs must be 'combined' before using in game(that can be done with "File merger.exe")
