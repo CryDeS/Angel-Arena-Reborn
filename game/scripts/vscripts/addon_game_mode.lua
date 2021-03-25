@@ -13,7 +13,7 @@ require('lib/duel/duel_controller')
 require('lib/gpm_lib')
 require('lib/percent_damage')
 require('lib/panorama_pings')
-require('lib/captains_mode')
+--require('lib/captains_mode')
 require('lib/spawners/creep_spawner')
 require('lib/spawners/creep_leveling')
 require('lib/timers')
@@ -31,6 +31,7 @@ require('lib/team_helper')
 require('lib/game_ender')
 require('lib/connection_helpers')
 require('lib/output_redirect')
+require('lib/game_modes/game_mode_selector')
 
 -- Список модулей которые нужно загружать в InitGameMode, а не при создании VM'ки 
 local postRequireList = {
@@ -111,6 +112,15 @@ function AngelArena:InitGameMode()
 		require(moduleName)
 	end
 
+	local gameMode = GetBaseGamemode()
+	
+	self.gameMode = gameMode
+	
+	print("[AngelArena] Game mode is", gameMode)
+
+
+	self.gameMode:InitGameMode()
+
 	Convars:SetInt("dota_max_physical_items_purchase_limit", 100)
 
 	local GameMode = GameRules:GetGameModeEntity()
@@ -120,16 +130,6 @@ function AngelArena:InitGameMode()
 	--GameRules:SetSafeToLeave(true)
 
 	GameRules:SetPreGameTime(60) -- old 90
-
-	if GetMapName() == "map_5x5_cm" then
-		GameRules:SetHeroSelectionTime(50)
-		GameRules:SetStrategyTime(10)
-	else
-		GameMode:SetDraftingHeroPickSelectTimeOverride(60)
-		GameMode:SetDraftingBanningTimeOverride(20)
-		GameRules:SetStrategyTime(15.0)
-		GameRules:SetHeroSelectionTime(90) -- old 60
-	end
 
 	GameMode:SetCustomBackpackSwapCooldown(4.0)
 	GameRules:SetPostGameTime(30)
@@ -819,7 +819,7 @@ end
 
 
 function AngelArena:OnGameStateChange()
-	if GetMapName() ~= "map_5x5_cm" then
+	if AngelArena.gameMode and AngelArena.gameMode.RandomHeroOnShowcase then
 		if GameRules:State_Get() == DOTA_GAMERULES_STATE_TEAM_SHOWCASE then
 
 			TeamHelper:ApplyForPlayers(team, function(ply_id)

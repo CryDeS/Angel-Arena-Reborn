@@ -51,6 +51,8 @@ function PreloadCache:_init()
 	end
 
 	self.ability_data = self.ability_data or load_kv_data('scripts/npc/npc_abilities.txt', 'scripts/npc/npc_abilities_custom.txt')
+
+	self.hero_list = self.herolist or LoadKeyValues('scripts/npc/herolist.txt')
 end
 
 function PreloadCache:GetHeroData()
@@ -59,6 +61,10 @@ end
 
 function PreloadCache:GetAbilityData()
 	return self.ability_data
+end
+
+function PreloadCache:GetHeroList()
+	return self.hero_list
 end
 
 PreloadCache:_init()

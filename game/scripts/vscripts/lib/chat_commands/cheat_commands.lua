@@ -217,6 +217,7 @@ function Commands:q(player, arg)
 	hero:AddItemByName("item_angels_sword")
 	hero:AddItemByName("item_angels_sword")
 end
+
 function Commands:restore_obelisk(player, arg)
 	local buildings = Entities:FindAllByClassname('npc_dota_building')
 
@@ -230,4 +231,26 @@ function Commands:restore_obelisk(player, arg)
 			end 
 		end 
 	end 
+end
+
+require('lib/game_modes/captains_mode')
+
+function Commands:cm_pick(player,arg)
+	local playerid = tonumber(arg[1])
+	local heroName = arg[2]
+
+	CaptainsMode:_OnHeroPicked( { playerID = playerid, heroName = heroName })
+end
+
+function Commands:cm_be_captain(player, arg)
+	local playerid = tonumber(arg)
+
+	CaptainsMode:_OnCaptainSelected( { playerID = playerid })
+end
+
+function Commands:cm_ban(player, arg)
+	local playerid = tonumber(arg[1])
+	local heroName = arg[2]
+
+	CaptainsMode:_OnHeroBanned( { playerID = playerid, heroName = heroName })
 end

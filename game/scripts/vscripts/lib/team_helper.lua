@@ -27,7 +27,7 @@ function TeamHelper:ApplyForHeroes(iTeamNumber, functor, allowInvalidHeroes)
 		local ent = PlayerResource:GetSelectedHeroEntity( playerid )
 
 		if allowInvalidHeroes or (ent and not ent:IsNull() and IsValidEntity(ent) and ent:IsRealHero() and not ent:IsNull()) then
-			functor(playerid, ent)
+			if functor(playerid, ent) then return end
 		end
 	end)
 end 
@@ -40,9 +40,9 @@ end
 function TeamHelper:ApplyForPlayers(iTeamNumber, functor)
 	for playerid = 0, PlayerResource:GetPlayerCount() do
 		if iTeamNumber == nil or ( PlayerResource:GetTeam(playerid) == iTeamNumber ) then 
-			functor( playerid )
+			if functor( playerid ) then return end
 		end 
-	end 
+	end
 end 
 
 function TeamHelper:GetPlayerCount(iteamNumber)
