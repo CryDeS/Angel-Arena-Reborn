@@ -1,10 +1,16 @@
 @echo off
 
 :: CONFIGURABLE
-set DOTA_PATH=
+:: Please, configure you DOTA 2 PATH parent directory
+:: DOTA_PATH=D:\Games\Steam\steamapps\common\dota 2 beta\
+
+set DOTA_PATH=D:\Games\Steam\steamapps\common\dota 2 beta\
 set ADDON_NAME=angel_arena_reborn
 
+::
 :: INTERNALS
+::
+ 
 set EXIT_WITH_ERROR=exit /b -1
 set _ADDON_PATH=dota_addons\%ADDON_NAME%
 set DOTA_GAME_PATH=%DOTA_PATH%\game\%_ADDON_PATH%
