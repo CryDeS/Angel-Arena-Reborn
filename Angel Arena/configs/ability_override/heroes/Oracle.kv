@@ -1,0 +1,226 @@
+"oracle_fortunes_end"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"850"
+	"AbilityCastPoint"				"0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"6"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"130"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"channel_time"					"2.5"
+			"LinkedSpecialBonus"	"special_bonus_unique_oracle_7"
+			"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_SUBTRACT"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage"					"120 150 220 280 360 420 520"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bolt_speed"				"1200"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"minimum_purge_duration"	"0.5"
+			"LinkedSpecialBonus"	"special_bonus_unique_oracle_2"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"maximum_purge_duration"	"2.5"
+			"LinkedSpecialBonus"		"special_bonus_unique_oracle_2"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"					"300"
+		}
+		"07"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"scepter_bonus_range"					"500"
+			"RequiresScepter"	"1"
+		}
+		"08"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"scepter_bonus_radius"					"150"
+			"RequiresScepter"	"1"
+		}
+		"09"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"scepter_stun_percentage"	"50"
+			"RequiresScepter"	"1"
+		}
+		"10"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"damage_pct"				"100"
+			"CalculateSpellDamageTooltip" "0"
+		}
+	}
+}
+
+//=================================================================================================================
+// Oracle: Fate's Edict
+//=================================================================================================================
+"oracle_fates_edict"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"700"
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.2 0.1 0.0"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"12.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"0"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"3.0 3.5 4.0 4.5 5.0 5.5 6.0"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"magic_damage_resistance_pct_tooltip"				"100"
+		}
+	}
+}
+
+//=================================================================================================================
+// Oracle: Purifying Flames
+//=================================================================================================================
+"oracle_purifying_flames"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"550"
+	"AbilityCastPoint"				"0.3"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"2.25"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"70 85 100 115 130 145 160"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage"				"90 180 270 320 360 380 400"
+		}			
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"heal_per_second"		"9.9 19.8 29.7 39.6 42.0 48.0 60.0"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"total_heal_tooltip"	"99 198 297 396 420 480 600"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"9.0"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"tick_rate"				"1.0"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"cooldown_scepter"		"1.0"
+			"RequiresScepter"	"1"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"castpoint_scepter"		"0.0"
+			"RequiresScepter"	    "1"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_pct"			"40"
+			"CalculateSpellDamageTooltip" "0"
+		}
+	}
+} 
+
+//=================================================================================================================
+// Oracle: False Promise
+//=================================================================================================================
+"oracle_false_promise"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"1000"
+	"AbilityCastPoint"				"0.3"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"60"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100 160 220 280 340 400 460"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"4.5 4.7 5.0 5.5 6.0 6.5 7.0"
+			"LinkedSpecialBonus"	"special_bonus_unique_oracle"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"radius"				"1000"
+		}
+	}
+}

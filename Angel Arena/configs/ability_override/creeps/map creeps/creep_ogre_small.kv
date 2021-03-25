@@ -1,0 +1,137 @@
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"ogre_small_move" // Активная: Дает +100мувспида герою на 10 секунд, кд 10 секунд 
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityTextureName"			"custom/ogre_small_move"
+	"ScriptFile"					"creeps/abilities/ogre_small_move.lua"
+	
+	"MaxLevel"						"1"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"10.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"155"
+	"AbilityCastAnimation"			"0.2"
+	"AbilityCastRange"				"600"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"movement_bonus"			"100"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"10"
+		}
+	}
+	
+	"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"ogre_small_buff" // Активная: Накладывает баф на 10 секунд, кд 10 секунд, и при атаке на этого юнита скорость атаки врага замедлитя на 40
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityTextureName"			"custom/ogre_small_buff"
+	"ScriptFile"					"creeps/abilities/ogre_small_buff.lua"
+	
+	"MaxLevel"						"1"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"10.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"165"
+	"AbilityCastAnimation"			"0.2"
+	"AbilityCastRange"				"600"
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"attack_slow"				"-40"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"debuff_duration"			"3"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"duration"					"10"
+		}
+	}
+	"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"ogre_small_burn" // Кидает в цель банку которая поджигает врага на 4 секунды нанося 90 чистого урона в секунду
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+	"AbilityTextureName"			"custom/ogre_small_burn"
+	"ScriptFile"					"creeps/abilities/ogre_small_burn.lua"
+	
+	"MaxLevel"						"1"
+
+	"AbilityCooldown"				"16.0"
+	
+	"AbilityManaCost"				"420"
+	"AbilityCastPoint"				"0.7"
+	"AbilityCastRange"				"1400"
+	"AbilityDuration"				"4.0"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"duration"					"4"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"damage"					"90"
+		}
+	}
+	"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+}

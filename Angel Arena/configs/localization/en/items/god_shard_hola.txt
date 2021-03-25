@@ -1,0 +1,13 @@
+"DOTA_Tooltip_ability_item_shard_hola"									    "Hola's Scepter Shard"
+"DOTA_Tooltip_ability_item_shard_hola_Description"						    "<h1>Active: Heal</h1>Restore health of selected target and purge all debuffs."
+"DOTA_Tooltip_ability_item_shard_hola_all_stats"						    "+$all"
+"DOTA_Tooltip_ability_item_shard_hola_health"				                "+$health"
+"DOTA_Tooltip_ability_item_shard_hola_health_regen"				            "+$hp_regen"
+"DOTA_Tooltip_ability_item_shard_hola_heal_const"				    	    "HEAL:"
+
+"DOTA_Tooltip_ability_item_shard_hola_dummy"								"Hola's Scepter Shard"
+"DOTA_Tooltip_ability_item_shard_hola_dummy_Description"					"<h1>Active: Heal</h1>Restore health of selected target and purge all debuffs."
+"DOTA_Tooltip_ability_item_shard_hola_dummy_all_stats"						"+$all"
+"DOTA_Tooltip_ability_item_shard_hola_dummy_health"				            "+$health"
+"DOTA_Tooltip_ability_item_shard_hola_dummy_health_regen"				    "+$hp_regen"
+"DOTA_Tooltip_ability_item_shard_hola_dummy_heal_const"				    	"HEAL:"

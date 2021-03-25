@@ -1,0 +1,146 @@
+"root"
+{
+	"abyss_warrior"
+	{
+		"unit_name" 			"npc_aa_abyss_warrior"
+		"point_name"			"AA_TARGET_BOSS_ABYSS_WARRIOR"
+		
+		"spawn_delay"			"0"
+		"spawn_interval"		"300"
+		"spawn_interval_random"	"60"
+		
+		"stats"
+		{
+			"base_health"		"15000"
+			"base_armor"		"25"
+			"base_damage"		"350"
+			
+			"health_per_death"	"10000"
+			"armor_per_death"	"15"
+			"damage_per_death"	"200"
+		}
+		
+		"on_death"
+		{
+			"message"			"#on_boss_die_abyss_warrior"
+			
+			"base_gold"			"1000"
+			"base_exp"			"1000"
+			
+			"gold_per_death"	"500"
+			"exp_per_death"		"500"
+			
+			"dropbox"			"box_boss_abyss_warrior"
+		}
+	}
+	
+	"soul_guardian"
+	{
+		"unit_name" 			"npc_aa_soul_guardian"
+		"point_name"			"AA_TARGET_BOSS_SOUL_GUARDIAN"
+		
+		"spawn_delay"			"0"
+		"spawn_interval"		"300"
+		"spawn_interval_random"	"100"
+		
+		"stats"
+		{
+			"base_health"		"15000"
+			"base_armor"		"25"
+			"base_damage"		"350"
+			
+			"health_per_death"	"10000"
+			"armor_per_death"	"15"
+			"damage_per_death"	"200"
+		}
+		
+		"on_death"
+		{
+			"message"			"#on_boss_die_soul_guardian"
+			
+			"base_gold"			"1000"
+			"base_exp"			"1000"
+			
+			"gold_per_death"	"500"
+			"exp_per_death"		"500"
+			
+			"dropbox"			"box_boss_soul_guradian"
+		}
+	}
+	
+	"possessed_demon"
+	{
+		"unit_name" 			"boss_possessed_demon"
+		"point_name"			"AA_TARGET_BOSS_POSSESSED"
+		
+		"spawn_delay"			"300"
+		"spawn_interval"		"300"
+		"spawn_interval_random"	"75"
+		
+		"stats"
+		{
+			"base_health"		"20000"
+			"base_armor"		"25"
+			"base_damage"		"350"
+			
+			"health_per_death"	"10000"
+			"armor_per_death"	"15"
+			"damage_per_death"	"200"
+		}
+		
+		"on_death"
+		{
+			"message"			"#on_boss_die_possessed"
+			
+			"base_gold"			"1000"
+			"base_exp"			"1000"
+			
+			"gold_per_death"	"500"
+			"exp_per_death"		"500"
+			
+			"dropbox"			"box_boss_possessed"
+		}
+	}
+	
+	"keymaster_radiant"
+	{
+		"unit_name" 			"npc_aa_keymaster_radiant"
+		"point_name"			"AA_TARGET_BOSS_KEYMASTER_RADIANT"
+		
+		"spawn_delay"			"150"
+		"spawn_interval"		"240"
+		"spawn_interval_random"	"50"
+		
+		"stats"
+		{
+			"base_health"		"15000"
+			"base_armor"		"25"
+			"base_damage"		"350"
+			
+			"health_per_death"	"2500"
+			"armor_per_death"	"5"
+			"damage_per_death"	"150"
+		}
+		
+		"on_death"
+		{
+			"message"			"#on_boss_die_keymaster"
+			
+			"base_gold"			"1000"
+			"base_exp"			"1000"
+			
+			"gold_per_death"	"500"
+			"exp_per_death"		"500"
+					
+			"dropbox"			"box_boss_keymaster"
+		}
+	}
+	
+	"keymaster_dire"
+	{
+		"master" 				"keymaster_radiant"
+		
+		"unit_name" 			"npc_aa_keymaster_dire"
+		"point_name"			"AA_TARGET_BOSS_KEYMASTER_DIRE"
+	}
+}

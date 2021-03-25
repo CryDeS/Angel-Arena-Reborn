@@ -1,0 +1,126 @@
+<root>
+
+	<styles>
+		<include src="file://{resources}/styles/custom_game/ui_hero_change_style.css" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/hero_change.js" />
+	</scripts>
+	<Panel class="Main" hit1="false">
+		<!--
+		<Image src="file://{images}/custom_game/hero_change_interface/hero_av/hero_avat_alchemist.png" />	
+		<Image src="file://{images}/custom_game/hero_change_interface/hero_av/hero_avat_sven.png" />	
+		<Image src="file://{images}/custom_game/hero_change_interface/hero_av/hero_avat_joe_black.png" />	
+		<Image src="file://{images}/custom_game/hero_change_interface/hero_av/hero_avat_hola.png" />	
+		<Image src="file://{images}/custom_game/hero_change_interface/hero_av/hero_avat_medusa.png" />	
+		<Image src="file://{images}/custom_game/hero_change_interface/hero_av/hero_avat_satan.png" />	
+		<Image src="file://{images}/custom_game/hero_change_interface/hero_av/hero_avat_tiny.png" />	
+		<Image src="file://{images}/custom_game/hero_change_interface/hero_av/hero_avat_fisher.png" />	
+		<Image src="file://{images}/custom_game/hero_change_interface/hero_av/hero_avat_ember.png" />	
+		<Image src="file://{images}/custom_game/hero_change_interface/hero_av/hero_avat_razor.png" />	
+		-->
+		<Panel hit1="false" id="CBlock">
+			<!-- LINE 1 -->
+			<Label hit1="false" id="title_text" text="#PN_hero_change_text" />
+			<Button id="bt_close" onactivate="bt_id('11')"/>	
+			
+			<Panel hit1="false" id="Line_1">
+			
+				<Panel hit1="false" id="bt_left_style">
+				
+					<Image hit1="false" id="bt_1_av" >
+						<Panel hit1="false" id="bt_1_av_border" />
+					</Image>				
+					<Button id="bt_id1" onactivate="bt_id('1')">
+						<Label hit1="false" id="bt_1_text" text="#PN_bt1_text" />
+					</Button>
+				</Panel>
+				<Panel hit1="false" id="bt_right_style">
+					<Image hit1="false" id="bt_2_av" >
+						<Panel hit1="false" id="bt_2_av_border" />
+					</Image>				
+					<Button id="bt_id2" onactivate="bt_id('2')">
+						<Label hit1="false" id="bt_2_text" text="#PN_bt2_text" />
+					</Button>
+				</Panel>
+				
+			</Panel>
+			
+			<!-- LINE 2 -->
+			<Panel hit1="false" id="Line_2">
+			
+				<Panel hit1="false" id="bt_left_style">
+				
+					<Image hit1="false" id="bt_3_av" >
+						<Panel hit1="false" id="bt_3_av_border" />
+					</Image>				
+					<Button id="bt_id3" onactivate="bt_id('3')">
+						<Label hit1="false" id="bt_3_text" text="#PN_bt3_text" />
+					</Button>
+				</Panel>
+				<Panel hit1="false" id="bt_right_style">
+					<Image hit1="false" id="bt_4_av" >
+						<Panel hit1="false" id="bt_4_av_border" />
+					</Image>				
+					<Button id="bt_id4" onactivate="bt_id('4')">
+						<Label hit1="false" id="bt_4_text" text="#PN_bt4_text" />
+					</Button>
+				</Panel>
+				
+			</Panel>
+			
+			<!-- LINE 3 -->
+			<Panel hit1="false" id="Line_3">
+			
+				<Panel hit1="false" id="bt_left_style">
+				
+					<Image hit1="false" id="bt_5_av" >
+						<Panel hit1="false" id="bt_5_av_border" />
+					</Image>				
+					<Button id="bt_id5" onactivate="bt_id('5')">
+						<Label hit1="false" id="bt_5_text" text="#PN_bt5_text" />
+					</Button>
+				</Panel>
+				<Panel hit1="false" id="bt_right_style">
+					<Image hit1="false" id="bt_6_av" >
+						<Panel hit1="false" id="bt_6_av_border" />
+					</Image>				
+					<Button id="bt_id6" onactivate="bt_id('6')">
+						<Label hit1="false" id="bt_6_text" text="#PN_bt6_text" />
+					</Button>
+				</Panel>
+				
+			</Panel>
+			
+			<!-- LINE 4 -->
+			<Panel hit1="false" id="Line_4">
+			
+				<Panel hit1="false" id="bt_left_style">
+				
+					<Image hit1="false" id="bt_7_av" >
+						<Panel hit1="false" id="bt_7_av_border" />
+					</Image>				
+					<Button id="bt_id7" onactivate="bt_id('7')">
+						<Label hit1="false" id="bt_7_text" text="#PN_bt7_text" />
+					</Button>
+				</Panel>
+				<Panel hit1="false" id="bt_right_style">
+					<Image hit1="false" id="bt_8_av" >
+						<Panel hit1="false" id="bt_8_av_border" />
+					</Image>				
+					<Button id="bt_id8" onactivate="bt_id('8')">
+						<Label hit1="false" id="bt_8_text" text="#PN_bt8_text" />
+					</Button>
+				</Panel>
+				
+			</Panel>
+			<!-- LINE 5, close, next page, prev page -->
+			<Panel hit1="false" id="LR_PANEL">
+				<Button id="bt_left" onactivate="bt_id('9')"/>
+				<Label hit1="false" id="list_text" text="0" />
+				<Button id="bt_right" onactivate="bt_id('10')"/>				
+			</Panel>
+		</Panel>
+	</Panel>
+</root>
+<!-- onactivate="bt_id('1')" -->

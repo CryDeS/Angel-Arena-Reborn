@@ -1,0 +1,46 @@
+"item_black_king_bar"
+{
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"70 65 60"
+	"AbilitySharedCooldown"			"items_magic_immune"
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"3975"
+	"ItemShopTags"					"str;damage;hard_to_tag"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"bkb;black king bar"
+	"ItemSellable"					"1"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_strength"		"10"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"24"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"9.0 8.0 7.0"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"max_level"				"3"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"model_scale"			"30"     // Percentage over model scale
+		}
+	}
+}

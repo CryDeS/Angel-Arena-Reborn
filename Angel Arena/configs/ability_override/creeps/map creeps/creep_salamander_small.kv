@@ -1,0 +1,118 @@
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"npc_aa_creep_salamander_small_damage_aura_lua"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+    "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+    "BaseClass"					    "ability_lua"
+    "AbilityTextureName"			"custom/npc_aa_creep_salamander_small_damage_aura_lua"
+    "ScriptFile"					"creeps/abilities/npc_aa_creep_salamander_small/npc_aa_creep_salamander_small_damage_aura_lua"
+     "MaxLevel"                      "1"
+
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"				"900"
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"			"FIELD_INTEGER"
+            "bonus_dmg"	        "35"
+        }
+        "02"
+        {
+            "var_type"			"FIELD_INTEGER"
+            "radius"	    	"700"
+        }
+
+    }
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"npc_aa_creep_salamander_small_buff_as_lua"
+{
+    // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+        "BaseClass"					    "ability_lua"
+        "AbilityTextureName"			"custom/npc_aa_creep_salamander_small_buff_as_lua"
+        "ScriptFile"					"creeps/abilities/npc_aa_creep_salamander_small/npc_aa_creep_salamander_small_buff_as_lua"
+        "MaxLevel"                      "1"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"				"1000"
+
+        // Time
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"				"15"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"				"FIELD_INTEGER"
+                "bonus_attack_spd"      "200"
+            }
+            "02"
+            {
+                "var_type"				"FIELD_INTEGER"
+                "duration"             	"2.5"
+            }
+
+        }
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"npc_aa_creep_salamander_small_buff_armor_lua"
+{
+    // General
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+            //"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+            "BaseClass"					    "ability_lua"
+            "AbilityTextureName"			"custom/npc_aa_creep_salamander_small_buff_armor_lua"
+            "ScriptFile"					"creeps/abilities/npc_aa_creep_salamander_small/npc_aa_creep_salamander_small_buff_armor_lua"
+            "MaxLevel"                      "1"
+
+            "AbilityCooldown"				"30"
+            "AbilityCastRange"				"700"
+            "AbilityManaCost"				"50"
+            "AbilitySpecial"
+
+            {
+                "01"
+                {
+                   "var_type"			    "FIELD_INTEGER"
+                   "radius"		            "300"
+                }
+                "02"
+                {
+                    "var_type"			    "FIELD_INTEGER"
+                    "duration"              "10"
+                }
+                "03"
+                {
+                    "var_type"			    "FIELD_INTEGER"
+                    "bonus_armor"           "5"
+                }
+            }
+}

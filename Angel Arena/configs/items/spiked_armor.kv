@@ -1,0 +1,129 @@
+"item_recipe_spiked_armor"
+{
+	"AbilityTextureName" 				"item_recipe_spiked_armor"
+	
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1179"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"3000"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_spiked_armor"
+	"ItemRequirements"
+	{
+		"01"						"item_boss_soul;item_amaliels_cuirass;item_blade_mail"
+	}
+}
+
+"item_spiked_armor"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    //"BaseClass"						"item_datadriven"
+	"BaseClass"						"item_lua"
+	"ScriptFile"					"items/spiked_armor/item_spiked_armor.lua"
+	
+	"ID"							"1180"
+	"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityTextureName"	        "spiked_armor"
+	"AbilityCooldown"				"18.0"
+	"AbilityManaCost"				"400"	
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySharedCooldown"			"return_damage_item"
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"19000"
+	"ItemStackable"					"0"
+	
+	"ItemPermanent"					"0"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"precache"
+	{
+		"soundfile"	"soundevents/game_sounds_items.vsndevts"
+		"soundfile"	"sounds/items/blade_mail_damage.vsnd"
+	}
+	
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"20"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_aspeed"			"80"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"400"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_stats"			"25"
+		}
+		
+		//aura
+		
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor_aura"		"20"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_aspeed_aura"		"60"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"friend_radius"			"1200"
+		}
+		//aura disarm
+		
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"disarmor_aura"			"-18"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"disarmor_aura_pct"		"15"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"enemy_radius"			"1200"
+		}
+		"11"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"return_duration"		"4.5"
+		}
+		"12"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"return_damage"			"100"
+		}
+	}
+}

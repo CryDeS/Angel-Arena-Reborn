@@ -1,0 +1,143 @@
+"item_recipe_recovery_orb"
+{
+		"AbilityTextureName" 				"item_recipe_recovery_orb"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1249"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1200"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_recovery_orb"
+	"ItemRequirements"
+	{
+		"01"						"item_refresher;item_boss_soul"
+	}
+}
+
+"item_recovery_orb"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1250"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"ItemBaseLevel"					"2"
+	"BaseClass"						"item_datadriven"
+	"AbilityTextureName"			"recovery_orb"
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+	"AbilityCooldown"				"110.0"
+	"AbilityManaCost"				"375"
+	"AbilitySharedCooldown"			"item_refresher"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"375"
+	"ItemCost"						"17000"
+	"ItemShopTags"					"regen_health;regen_mana;hard_to_tag;refresher"
+	"ItemQuality"					"rare"
+	"ItemAliases"					"refresher orb"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health_regen"	"40"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_mana_regen"		"12.0"
+		}		
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"150"
+		}		
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"ability_chance"		"30"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"ultimate_chance"		"20"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"		"items/recovery_orb.lua"
+			"Function"			"Refresh"
+		}
+		"FireSound"
+		{
+			"Target"			"CASTER"
+			"EffectName"		"DOTA_Item.Refresher.Activate"
+		}
+		"FireEffect"
+		{
+			"Target"			"CASTER"
+			"EffectName"		"particles/items2_fx/refresher.vpcf"
+			"EffectAttachType"  "follow_origin"
+			"Radius"			"200"
+			"Duration"			"2.0"
+		}
+	}
+	
+	"Modifiers"
+	{	
+		"modifier_item_recovery_orb_passive"
+		{
+			"Passive"		"1"
+			"IsHidden"	 	"1"
+			"IsPurgable"	"0"
+			
+			"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"				"%bonus_health_regen"
+				"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"					"%bonus_mana_regen"
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"				"%bonus_damage"
+			}
+		}
+		"modifier_item_recovery_orb_passive_refresh"
+		{
+			"Passive"		"1"
+			"IsHidden"	 	"1"
+			"IsPurgable"	"0"
+			
+			"OnAbilityExecuted"
+			{
+				"DelayedAction"
+				{
+					"Delay" "0.01"
+					"Action"
+					{
+						"RunScript"
+						{
+							"ScriptFile"		"items/recovery_orb.lua"
+							"Function"			"PassiveRefresh"
+							"ChanceAbility"		"%ability_chance"
+							"ChanceUltimate"	"%ultimate_chance"
+						}
+					}
+				}
+			}
+		}
+	}
+}

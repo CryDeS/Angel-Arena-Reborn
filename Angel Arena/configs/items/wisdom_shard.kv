@@ -1,0 +1,31 @@
+"item_wisdom_shard"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1524"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "wisdom_shard"
+	"ScriptFile"					"items/wisdom_shard/wisdom_shard"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"400"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"ItemQuality"					"common"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_int"				"5"
+		}
+	}
+}

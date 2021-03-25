@@ -1,0 +1,184 @@
+"item_recipe_snake_boots"
+{
+	"AbilityTextureName" 				"item_recipe_snake_boots"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1177"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1000"	
+	"ItemShopTags"					"int"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_snake_boots"
+	"ItemRequirements"
+	{
+		"01"						"item_travel_boots_2;"
+	}
+}
+
+"item_snake_boots"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1178"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+	
+	"AbilityTextureName"	        "item_snake_boots"
+	"AbilityCooldown"				"45.0"
+	"AbilityChannelTime"      		"1.5"
+	"AbilityCastAnimation"  		"ACT_DOTA_TELEPORT"
+	
+	"precache"
+	{
+		"particle"					"particles/econ/events/fall_major_2016/teleport_end_fm06_ground_flash.vpcf"
+		"particle"					"particles/econ/events/fall_major_2015/teleport_end_fallmjr_2015_lvl2_black.vpcf"
+		"particle"					"particles/econ/events/fall_major_2015/teleport_start_fallmjr_2015.vpcf"
+		"particle"					"particles/items2_fx/teleport_end.vpcf"
+	}
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"5500"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+	"ItemShopTags"					"teleport;move_speed"
+	"ItemQuality"					"common"
+	"ItemAliases"					"bot;boots of travel;tp"
+	
+	"AbilitySharedCooldown"			"travel"
+	
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_speed"			"100"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"2"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_hp_regen"		"5"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_stats"			"20"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"teleport_mod_time"		"2"
+		}
+	}
+	
+	"OnAbilityPhaseStart"
+	{	
+		"ApplyModifier"
+		{
+			"ModifierName"		"modifier_snake_boots_teleport"
+			"Target"			"CASTER"
+			"Duration"			"%AbilityChannelTime"
+		}
+		
+		"RunScript"
+		{
+			"ScriptFile"			"items/teleport.lua"
+			"Function"				"StartTeleport"
+			"Target"				"POINT"
+			"delay"					"%teleport_mod_time"
+		}
+	}
+	
+	"OnChannelInterrupted"
+	{
+		"RunScript"
+		{
+			"ScriptFile"			"items/teleport.lua"
+			"Function"				"InterruptTeleport"
+		}
+		
+		"RemoveModifier"
+		{
+			"ModifierName"		"modifier_snake_boots_teleport"
+			"Target"			"CASTER"
+		}
+	}
+	
+	"OnChannelSucceeded"
+	{
+		"RunScript"
+		{
+			"ScriptFile"			"items/teleport.lua"
+			"Function"				"Teleport"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_passive_snake_boots"
+		{
+			"Purgable"	"0"
+			"Passive"	"1"
+			"IsHidden"	"1"
+			"Attributes"  "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%bonus_armor"
+				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"			"%bonus_hp_regen"
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"				"%bonus_stats"
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"			"%bonus_stats"
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"			"%bonus_stats"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"			"%bonus_speed"
+			}		
+		}
+		
+		"modifier_snake_boots_teleport_target"
+		{
+			"EffectName" "particles/econ/events/fall_major_2015/teleport_start_fallmjr_2015.vpcf"
+			
+			"IsHidden"		"0"
+			"IsPurgable"	"0"
+			"Purgable"		"0"
+			"Attributes"  	"MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"TextureName"	"item_snake_boots"
+		}
+		
+		"modifier_snake_boots_teleport"
+		{
+			"EffectName" "particles/econ/events/fall_major_2015/teleport_end_fallmjr_2015_lvl2_black.vpcf"
+			
+			"OnCreated"
+			{
+				"AttachEffect"
+				{
+					"EffectName"		"particles/econ/events/fall_major_2016/teleport_end_fm06_ground_flash.vpcf"
+					"EffectAttachType"	"follow_origin"
+					"Target"			"CASTER"
+				}
+			}
+			"IsHidden"		"0"
+			"Purgable"		"0"
+			
+			"TextureName"	"item_snake_boots"
+		}
+	}
+}

@@ -1,0 +1,70 @@
+"npc_hero_satan"
+{													
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"override_hero" 			"npc_dota_hero_doom_bringer"
+	"Team"						"Bad"
+
+	"IsGod"						"1"
+	"GodRepickItem"				"item_shard_satan"
+	
+	// Abilities
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityLayout"				"5"
+	"Ability1"					"satan_breath"
+	"Ability2"					"satan_might"						
+	"Ability3"					"satan_trade"
+	"Ability4"					"satan_overpain"
+	"Ability5"					"generic_hidden"
+	"Ability6"					"satan_curse"
+	
+	"Ability10"				"special_bonus_strength_6"
+	"Ability11"				"special_bonus_attack_damage_20"
+	"Ability12"				"satan_special_bonus_trade_damage"
+	"Ability13"				"satan_special_bonus_trade_duration"
+	"Ability14"				"satan_special_bonus_breath_damage"
+	"Ability15"				"satan_special_bonus_might_nocd"
+	"Ability16"				"special_bonus_agility_25"
+	"Ability17"				"special_bonus_armor_15"
+
+	// Armor
+	//-------------------------------------------------------------------------------------------------------------
+	"ArmorPhysical"				"-1"										// Physical protection.
+
+	// Attack
+	//-------------------------------------------------------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+	"AttackDamageMin"			"80"									// Damage range min.
+	"AttackDamageMax"			"85"									// Damage range max.	
+	
+	"AttackRate"				"1.7"									// Speed of attack.
+	"AttackAnimationPoint"		"0.3"										// Normalized time in animation cycle to attack.
+	
+	"AttackAcquisitionRange"	"400"									// Range within a target can be acquired.
+	"AttackRange"				"150"									// Range within a target can be attacked.
+	
+	"ProjectileModel"			""										// Particle system model for projectile.
+	"ProjectileSpeed"			"1200"										// Speed of projectile.
+
+	// Attributes
+	//-------------------------------------------------------------------------------------------------------------
+	"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+	"AttributeBaseStrength"		"38"									// Base strength
+	"AttributeStrengthGain"		"3.2"									// Strength bonus per level.
+	"AttributeBaseAgility"		"20"									// Base agility
+	"AttributeAgilityGain"		"2.8"									// Agility bonus per level.
+	"AttributeBaseIntelligence"	"18"									// Base intelligence
+	"AttributeIntelligenceGain"	"1.6"									// Intelligence bonus per level.
+	
+	"StatusHealth" 				"200" 
+	"StatusHealthRegen" 		"4.0" 
+	"StatusMana"				"100" 
+	"StatusManaRegen"			"0.5" 
+	// Movement
+	//-------------------------------------------------------------------------------------------------------------
+	"MovementSpeed"				"300"									// Speed.
+	"MovementTurnRate"			"0.5"									// Turning rate.
+	
+	"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+	"HealthBarOffset"			"140"
+}

@@ -1,0 +1,95 @@
+"item_recipe_vampire_claw"
+{
+	"AbilityTextureName" 				"item_recipe_vampire_claw"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1528"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"200"
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_vampire_claw"
+	"ItemRequirements"
+	{
+		"01"						"item_consumption_orb"
+	}
+}
+
+"item_vampire_claw"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1320"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityTextureName"	        "vampire_claw_1"
+	"ScriptFile"					"items/vampire_claw/vampire_claw"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"14"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"700"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+	"ItemPurchasable"				"1"
+	"ItemInitialCharges"			"0"
+	"ItemDisplayCharges"			"1"
+	"ItemRequiresCharges"			"1"
+
+	"ItemQuality"					"common"
+
+	"AbilitySpecial"
+	{
+		//Passive
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"20"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_str"				"2"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"lifesteal"				"20"
+		}
+		//Active
+		"05"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"charges_for_attack_creep"	"1"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"charges_for_attack_hero"	"2"
+		}
+		"07"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"max_charges"				"25"
+		}
+		"08"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"heal_per_charge"			"8"
+		}
+	}
+}

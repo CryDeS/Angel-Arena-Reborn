@@ -1,0 +1,157 @@
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"golem_big_disarm" // Активная: обезоруживает врага на 3 секунды, кд 14 секунд, не снимается 
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"custom/golem_big_disarm"
+	"ScriptFile"					"creeps/abilities/golems/golem_big_disarm.lua"
+	
+	"precache"
+	{
+		"particle"			"particles/generic_gameplay/generic_disarm.vpcf"
+	}
+	
+	"MaxLevel"						"1"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"14.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"125"
+	"AbilityCastAnimation"			"0.2"
+	"AbilityCastRange"				"600"
+	"AbilityDuration"				"3.0"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"3.0"
+		}
+	}
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"golem_big_throw_rock" // Активная: бросает камень во врага, давая стан на 0.2 секунды, кд 2 секунды, 50 урона(чистого)
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+	"AbilityTextureName"			"custom/golem_big_throw_rock"
+	"ScriptFile"					"creeps/abilities/golems/golem_big_throw_rock.lua"
+	
+	"MaxLevel"						"1"
+
+	"precache"
+	{
+		"particle"			"particles/neutral_fx/mud_golem_hurl_boulder.vpcf"
+		"particle"			"particles/neutral_fx/mud_golem_hurl_boulder_explode.vpcf"
+	}
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"2.0"
+	"AbilityCastPoint"				"0.3"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"75"
+	
+	"AbilityCastRange"				"700"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"damage"					"75"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"stun_duration"				"0.5"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"speed"						"700"
+		}
+	}
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"golem_resist_rock" // Активная: Превращает себя в камень, дающий ему 80% резиста ко всему, и регенерирующий ему 5%хп/сек, длительность 4 сек, кд 10 сек 
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityTextureName"			"custom/golem_resist_rock"
+	"ScriptFile"					"creeps/abilities/golems/golem_resist_rock.lua"
+	
+	"MaxLevel"						"1"
+	
+	"precache"
+	{
+		"particle"			"particles/status_fx/status_effect_earth_spirit_petrify.vpcf"
+	}
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"10.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"185"
+	
+	"AbilityCastAnimation"			"0.1"
+	
+	"AbilityDuration"				"4.0"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"resist"					"80.0"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"regen_health"				"5.0"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"4"
+		}
+	}
+}

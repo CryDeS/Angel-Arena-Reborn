@@ -1,0 +1,45 @@
+"item_tome_lvlup"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"1192"
+	"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	
+	"AbilityTextureName"	        "tome_lvlup"
+
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"900"
+	"ItemQuality"					"component"
+	"ItemAliases"					"lvl;book;tome;книга;уровень;героев"
+	"ItemStackable"					"1"
+	"ItemPermanent"					"0"
+	"ItemInitialCharges"			"1"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+	"ItemInitialStockTime"			"360.0"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"Target"			"CASTER"
+			"ScriptFile"		"tome.lua"
+			"Function"			"tome_levelup"
+		}
+		"SpendCharge"
+		{
+		}        
+	}
+}

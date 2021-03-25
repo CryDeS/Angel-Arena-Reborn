@@ -1,0 +1,61 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/dotastyles.css" />
+		<include src="file://{resources}/styles/custom_game/game_info.css" />
+		
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/game_info_items.js" />
+	</scripts>
+	<Panel class="GameInfoMain">
+		<Panel id="Title">
+			<Label id="TitleName" text="#addon_game_name" />
+		</Panel>
+		<!-- <Label id="KillLimit" class="Header" html="true" text="#PN_KillLimit" />
+		<Label id="HowToPlayHeader" class="Header" html="true" text="#PN_HowToPlay" />
+		<Panel id="FarmRow" class="InfoRow">
+			<Label id="FarmText" html="true" text="#PN_farm_text" />
+			<Image id="FarmImage" src="file://{images}/custom_game/game_info/farm_image.psd" />
+		</Panel>
+		
+		<Label id="BossHeader" class="Header" html="true" text="#PN_Boss_header" />
+		<Panel id="BossRow" class="InfoRow">
+		
+			<Label id="BossText" html="true" text="#PN_boss_text" />
+			<Image id="BossImage" src="file://{images}/custom_game/game_info/boss_image.psd" />	
+		</Panel>
+
+		
+		<Label id="ChangeHeroGodHeader" class="Header" html="true" text="#PN_changeherogod_header" />
+		<Panel id="ChangeHeroGod" class="InfoRow">
+			<Label id="ChangeHeroGodText" html="true" text="#PN_ChangeHeroGod" />
+			<Image id="ChangeHeroGodImage" src="file://{images}/custom_game/game_info/changehero_god_image.psd" />
+		</Panel>
+		
+		<Label id="TipsHeader" class="Header" html="true" text="#PN_Tips_header" />
+		<Panel id="TipsRow" class="InfoRow">
+			<Label id="TipText01" class="TipText" html="true" text="#PN_gameinfo_tip1" />
+			<Label id="TipText02" class="TipText" html="true" text="#PN_gameinfo_tip2" />
+			<Label id="TipText04" class="TipText" html="true" text="#PN_gameinfo_tip4" />
+		</Panel> -->
+		<Panel id="Items" hittest="false">
+			<Label text="Physical Items" class="item_help_text" />
+			<Panel id="item_phys" class="item_container"  hittest="false">
+			</Panel>
+			
+			<Label text="Magical Items" class="item_help_text" />
+			<Panel id="item_mag" class="item_container" hittest="false">
+			</Panel>
+			
+			<Label text="Books" class="item_help_text" />
+			<Panel id="item_books" class="item_container" hittest="false">
+			</Panel>
+			
+			<Label text="Other Items" class="item_help_text" />
+			<Panel id="item_other" class="item_container" hittest="false">
+			</Panel>
+		</Panel>
+		
+	</Panel>
+</root>
+

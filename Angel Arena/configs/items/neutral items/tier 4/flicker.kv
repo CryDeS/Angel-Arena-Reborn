@@ -1,0 +1,43 @@
+"item_flicker"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"335"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"5.0"
+	"AbilityManaCost"				"25"
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"
+	"ItemIsNeutralDrop"				"0"
+	"ItemPurchasable"				"0"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+
+	"Model"							"models/props_gameplay/neutral_box.vmdl"
+	
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"range"					"600"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"min_range"				"600"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_movement_speed"			"60"
+		}
+	}
+}

@@ -1,0 +1,118 @@
+"item_recipe_center_of_peace"
+{
+	"AbilityTextureName" 				"item_recipe_center_of_peace"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1505"
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"450"
+	"ItemShopTags"					""
+
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_center_of_peace"
+	"ItemRequirements"
+	{
+		//1740
+		"01"						"item_energy_booster;item_ultimate_orb"
+	}
+}
+
+"item_center_of_peace"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1504"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+	"AbilityTextureName"	        "item_center_of_peace"
+	"ScriptFile"					"items/center_of_peace/item_center_of_peace"
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"20.0"
+	"AbilityCastPoint"				"0.0"
+	"AbilityChannelTime"			"4"
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1741"
+	"ItemStackable"					"0"
+	"ItemQuality"					"epic"
+
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"AbilitySpecial"
+	{
+	    //Stats
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_mana"			"500"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_int"				"20"
+		}
+		"03"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "bonus_agi"				"20"
+        }
+		"04"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "bonus_str"				"20"
+        }
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_manaregen"		"10"
+		}
+
+		// Active
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"mana_regen_total_pct"	"1000"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_magical_resist"	"50"
+		}
+		"08"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "channel_time_tooltip"	"4"
+        }
+
+		// After cast bonus
+		"09"
+        {
+            "var_type"				     "FIELD_INTEGER"
+            "after_cast_bonus_duration"	 "14"
+        }
+		"10"
+        {
+            "var_type"				     "FIELD_INTEGER"
+            "after_cast_mana_regen"	     "15"
+        }
+		"11"
+        {
+            "var_type"					      "FIELD_INTEGER"
+            "after_cast_reduce_manacost_pct"  "20"
+        }
+
+	}
+}

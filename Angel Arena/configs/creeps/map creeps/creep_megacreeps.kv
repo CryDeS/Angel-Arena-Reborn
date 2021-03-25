@@ -1,0 +1,129 @@
+"npc_aa_creep_megacreep_warrior" 
+{
+	"BaseClass" 			"npc_dota_creep_neutral" 
+	"Model" 				"models/creeps/lane_creeps/creep_radiant_melee/radiant_melee_mega.vmdl"
+
+	"precache"
+	{
+		"model"				"models/creeps/lane_creeps/creep_radiant_melee/radiant_melee_mega.vmdl"
+	}
+
+	"SoundSet" 				"Creep_Good_Melee_Mega"
+	"GameSoundsFile"  		"soundevents/game_sounds_creeps.vsndevts" 
+	"ModelScale" 			"1.0"
+	"Level"				 	"1" 
+	"IsNeutralUnitType"		"1"
+	"CanBeDominated" 		"1" 
+
+	"Ability1" 				"megacreep_warrior_passive_rage_lua"
+	"Ability2"				"megacreep_warrior_aura_lua"
+	"Ability3" 				"megacreep_warrior_rage_lua"
+	"Ability4" 				"" 
+	"Ability5" 				"" 
+	"Ability6" 				"" 
+	"Ability7" 				"" 
+	"Ability8" 				"" 
+	
+	"ArmorPhysical" 		"1" 
+	"MagicalResistance" 	"25" 
+
+	"AttackCapabilities"	"DOTA_UNIT_CAP_MELEE_ATTACK"
+	"ProjectileModel"		""
+	"ProjectileSpeed" 			"900" 
+
+	"AttackDamageMin" 			"0" 
+	"AttackDamageMax" 			"0" 
+	"AttackRate" 				"1.0" 
+	"AttackAnimationPoint" 		"0.3" 
+	"AttackAcquisitionRange" 	"300" 
+	"AttackRange" 				"175" 
+
+	"BountyXP" 				"0" 
+	"BountyGoldMin"			"0" 
+	"BountyGoldMax" 		"0" 
+
+	"MovementCapabilities" 	"DOTA_UNIT_CAP_MOVE_GROUND" 
+	"MovementSpeed" 		"325" 
+	"MovementTurnRate" 		"0.8" 
+
+	"StatusHealth" 			"100" 
+	"StatusHealthRegen" 	"1.2" 
+	"StatusMana" 			"5000" 
+	"StatusManaRegen" 		"0" 
+
+	"TeamName"				"DOTA_TEAM_NEUTRALS"							// Team name.
+	"UnitRelationshipClass"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	"VisionDaytimeRange" 	"800" 
+	"VisionNighttimeRange" 	"800" 
+	
+	"RingRadius"			"45"
+	"HealthBarOffset"		"190"
+
+	"HasInventory" 			"0" 
+}
+
+"npc_aa_creep_megacreep_mage" 
+{
+	"BaseClass" 			"npc_dota_creep_neutral" 
+	"Model" 				"models/creeps/lane_creeps/creep_radiant_ranged/radiant_ranged_mega.vmdl"
+
+	"precache"
+	{
+		"model"				"models/creeps/lane_creeps/creep_radiant_ranged/radiant_ranged_mega.vmdl"
+	}
+
+	"SoundSet" 				"Creep_Good_Range"
+	"GameSoundsFile"  		"soundevents/game_sounds_creeps.vsndevts" 
+	"ModelScale" 			"1.0"
+	"Level"				 	"1" 
+	"IsNeutralUnitType"		"1"
+	"CanBeDominated" 		"1" 
+
+	"Ability1" 				"megacreep_mage_magic_damage_lua"
+	"Ability2"				"megacreep_mage_sleep_lua"
+	"Ability3" 				"megacreep_mage_dic_resist_lua"
+	"Ability4" 				"" 
+	"Ability5" 				"" 
+	"Ability6" 				"" 
+	"Ability7" 				"" 
+	"Ability8" 				"" 
+	
+	"ArmorPhysical" 		"1" 
+	"MagicalResistance" 	"25" 
+
+	"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"ProjectileModel"		"particles/base_attacks/ranged_goodguy.vpcf"
+	"ProjectileSpeed" 		"900" 
+
+	"AttackDamageMin" 			"0" 
+	"AttackDamageMax" 			"0" 
+	"AttackRate" 				"1.0" 
+	"AttackAnimationPoint" 		"0.3" 
+	"AttackAcquisitionRange" 	"300" 
+	"AttackRange" 				"400" 
+
+	"BountyXP" 				"0" 
+	"BountyGoldMin"			"0" 
+	"BountyGoldMax" 		"0" 
+
+	"MovementCapabilities" 	"DOTA_UNIT_CAP_MOVE_GROUND" 
+	"MovementSpeed" 		"325" 
+	"MovementTurnRate" 		"0.8" 
+
+	"StatusHealth" 			"100" 
+	"StatusHealthRegen" 	"1.2" 
+	"StatusMana" 			"5000" 
+	"StatusManaRegen" 		"0" 
+
+	"TeamName"				"DOTA_TEAM_NEUTRALS"							// Team name.
+	"UnitRelationshipClass"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	"VisionDaytimeRange" 	"800" 
+	"VisionNighttimeRange" 	"800" 
+	
+	"RingRadius"			"45"
+	"HealthBarOffset"		"190"
+
+	"HasInventory" 			"0" 
+}

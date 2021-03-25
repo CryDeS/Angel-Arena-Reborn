@@ -1,0 +1,149 @@
+"angel_arena_fast_aura"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityTextureName"			"custom/angel_arena_fast_aura"
+	
+	"AbilityCooldown"				"3.0"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"MaxLevel"						"7"
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"aura_radius"			"900 900 900 900 900 900 900"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_aspeed"			"10 15 20 25 30 40 45"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_speed"			"5 6 7 8 9 10 12"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"1.0"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration_creep"		"2.0"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"chance_pct"			"5 8 10 12 14 18 22"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"40 50 60 70 90 120 160"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_fast_aura"
+		{
+			"Passive"			"1"
+			"IsHidden"			"0"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%bonus_aspeed"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" 	"%bonus_speed"
+			}
+		}
+		
+		"modifier_fast_aura_emitter"  
+		{
+			"Passive"				"1"
+			"IsHidden"				"1"
+			
+			"Aura" 					"modifier_fast_aura"
+			"Aura_Radius" 			"%aura_radius"
+			"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+			"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			"Aura_ApplyToCaster" 	"1"
+		}
+		
+		"modifier_fast_aura_basher"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+			"AllowsIllusionDuplicate"	"0"
+			
+			"OnCreated"
+            {
+				"RunScript"
+				{
+					"ScriptFile"		"heroes/nightshade/fast_aura_bash.lua"
+					"Function"			"CheckIllusion"
+				}
+			}
+			
+			"OnAttackLanded"
+			{
+				"Random"
+				{
+					"Chance"	"%chance_pct"
+					"PseudoRandom"	"DOTA_PSEUDO_RANDOM_FACELESS_BASH"
+
+					"OnSuccess"
+					{
+						"FireSound"
+						{
+							"EffectName"	"Hero_FacelessVoid.TimeLockImpact"
+							"Target"		"TARGET"
+						}
+						
+						"RunScript"
+						{
+							"ScriptFile"		"heroes/nightshade/fast_aura_bash.lua"
+							"Function"			"ApplyBash"
+							"ModifierName"		"modifier_fast_aura_bash"
+							"duration"			"%duration"
+							"duration_creep"	"%duration_creep"
+						}
+				
+						"Damage"
+						{
+							"Target"	"TARGET"
+							"Type"		"DAMAGE_TYPE_MAGICAL"
+							"Damage"	"%bonus_damage"
+						}
+					}
+				}
+			}
+		}
+		
+		"modifier_fast_aura_bash"
+		{
+			"IsDebuff"	"1"
+		
+			"EffectName"	"particles/generic_gameplay/generic_stunned.vpcf"
+			"EffectAttachType"	"follow_overhead"
+
+			"StatusEffectName"		"particles/status_fx/status_effect_faceless_chronosphere.vpcf"
+			"StatusEffectPriority"	"1"
+
+			"States"
+			{
+				"MODIFIER_STATE_STUNNED"	"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_FROZEN"		"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+	}
+}

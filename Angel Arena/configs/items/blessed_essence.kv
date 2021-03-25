@@ -1,0 +1,61 @@
+"item_recipe_blessed_essence"
+{
+		"AbilityTextureName" 				"item_recipe_blessed_essence"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1259"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"700"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_blessed_essence"
+	"ItemRequirements"
+	{
+		"01"						"item_cursed_orb;item_health_gel"
+	}
+}
+
+"item_blessed_essence"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1223"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "blessed_essence"
+	"ScriptFile"					"items/blessed_essence/blessed_essence"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"2600"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_stats"			"10"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_hp"				"400"
+		}
+	}
+}

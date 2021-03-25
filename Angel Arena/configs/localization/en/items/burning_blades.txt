@@ -1,0 +1,14 @@
+"DOTA_Tooltip_ability_item_burning_blades"							"Burning Blades"
+"DOTA_Tooltip_ability_item_burning_blades_Description"				"<h1>Passive: Damned Hit</h1> With every attack owner has chance %maim_chance%%  to apply a maim to enemy that deal %maim_damage% magical damage and slow attack speed for %maim_decrease_as% and movespeed for %maim_decrease_ms%%.\n<h1>Passive: Hellfire</h1> Decreasing armor of attacked target by %disarmor% for %disarmor_duration% seconds."
+
+"DOTA_Tooltip_Ability_item_burning_blades_bonus_damage"    			"+$damage"
+"DOTA_Tooltip_Ability_item_burning_blades_bonus_str"     			"+$str"
+"DOTA_Tooltip_Ability_item_burning_blades_bonus_agi"    			"+$agi"
+"DOTA_Tooltip_Ability_item_burning_blades_bonus_ms"    				"%+$move_speed"
+"DOTA_Tooltip_Ability_item_burning_blades_bonus_as"  				"+$attack"
+"DOTA_Tooltip_Ability_item_burning_blades_bonus_status_resist"		"%+$status_resist"
+
+"DOTA_Tooltip_ability_item_burning_blades_lore"						"That double blades belongs top demons of Burning Legions. Legends say owner of that blades is becomes one of the solider of Burning Legion for bringing doom and death anywhere where they appears."
+
+"DOTA_Tooltip_modifier_burning_blades_maim"							"Curse Hit"
+"DOTA_Tooltip_modifier_burning_blades_disarmor"						"Hellfire"

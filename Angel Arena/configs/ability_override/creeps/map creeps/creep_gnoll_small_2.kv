@@ -1,0 +1,126 @@
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"gnoll_small_two_blood" // Активная: Вызывает кровотечение у врага наносящее 350 магического урона, повторное применение в течении 5 секунд нанесет на 33% больше урона, кд 10 секунд
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"custom/gnoll_small_two_blood"
+	"ScriptFile"					"creeps/abilities/gnoll_small_two_blood.lua"
+	
+	"MaxLevel"						"1"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"12.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"350"
+	"AbilityCastAnimation"			"0.2"
+	"AbilityCastRange"				"700"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage"					"350"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"damage_amp"				"33"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"amp_duration"				"5"
+		}
+	}
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"gnoll_small_two_aura" // Аура: +32 атакспида, + 15 регена хп героям
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	
+	"AbilityTextureName"			"custom/gnoll_small_two_aura"
+	"ScriptFile"					"creeps/abilities/gnoll_small_two_aura.lua"
+	
+	"MaxLevel"						"1"
+
+	"AbilityCastRange"				"700"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"attack_speed"				"35"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"hpregen"					"15"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"					"700"
+		}
+	}
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"gnoll_small_two_passive" // Пассивная: При смерти излечивает союзных героев в радиусе 1000 на 18% от их хп
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"custom/gnoll_small_two_passive"
+	"ScriptFile"					"creeps/abilities/gnoll_small_two_passive.lua"
+	
+	"MaxLevel"						"1"
+	
+	"AbilityCastRange"				"1000"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"					"1000"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"heal_pct"					"18"
+		}
+	}
+}

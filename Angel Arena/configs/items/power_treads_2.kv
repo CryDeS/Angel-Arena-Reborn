@@ -1,0 +1,105 @@
+"item_power_treads"
+{
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1350"
+	"ItemShopTags"					"attack_speed;move_speed;int;agi;str"
+	"ItemQuality"					"common"
+	"ItemAliases"					"power treads"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+	"ItemBaseLevel"					"1"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_movement_speed"  "45 50 55"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_stat"			"10 28 42"
+		}	
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attack_speed"	"25 55 90"
+		}		
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"0"
+		}	
+	}
+}
+
+"item_recipe_power_treads_2"
+{
+		"AbilityTextureName" 				"item_recipe_power_treads_2"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1213"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"550"	
+	"ItemShopTags"					"artifacts"
+
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_power_treads_2"
+	"ItemRequirements"
+	{
+		"01"						"item_power_treads;item_power_treads"
+	}
+}
+
+"item_power_treads_2"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1214"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"BaseClass"						"item_power_treads"
+	"AbilityTextureName"			"power_treads_2"
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"3250"
+	"ItemShopTags"					"attack_speed;move_speed;int;agi;str"
+	"ItemQuality"					"common"
+	"ItemAliases"					"power treads"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+	"ItemBaseLevel"					"2"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_movement_speed"  "45 50 55"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_stat"			"10 28 42"
+		}	
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attack_speed"	"25 55 90"
+		}		
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"0"
+		}		
+	}
+}

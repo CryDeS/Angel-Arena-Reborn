@@ -1,0 +1,238 @@
+"item_recipe_bfury_2"
+{
+	"AbilityTextureName" 				"item_recipe_bfury_2"
+	
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1114"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"3750"
+	"ItemShopTags"					"int"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_bfury_2"
+	"ItemRequirements"
+	{
+		"01"						"item_bfury;item_ultimate_orb"
+	}
+}
+
+"item_bfury_2"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1115"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_CUSTOM"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+	"AbilityTextureName"	        "bfury_2"
+	"AbilityCastRange"				"300"
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"3.0"
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"10425"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"ItemQuality"					"common"
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_agility"			"20"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_str"				"20"	
+			
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_speed"			"16"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attack_speed"	"20"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"75"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"curse_chance"			"22"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"curse_duration"		"5"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"curse_slow"			"-20"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"curse_attackspeed"		"-20"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"cleave"				"35"
+		}
+		"11"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"cleave_radius"			"300"
+		}
+		"12"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"health_regen"			"30"
+		}
+		"13"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"mp_regen"				"4.0"
+		}
+		"14"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"quelling_bonus"		"160"
+		}
+		"15"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"quelling_bonus_ranged"	"125"
+		}	
+	}
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"			"items/funcs/tree_break.lua"
+			"Function"				"DestroyTree"
+		}
+	}
+		
+	"Modifiers"
+	{
+		"modifier_passive_curse_bfury_2"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+			"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
+			"OnAttackStart"
+			{
+				"Random"
+				{
+					"Chance"		"%curse_chance"
+					"PseudoRandom"	"DOTA_PSEUDO_RANDOM_ITEM_SANGEYASHA_MAIM"
+					
+					"OnSuccess"
+					{
+						"RemoveModifier"
+						{
+							"ModifierName"	"modifier_curse_bfury_2"
+							"Target"		"TARGET"
+						}
+						
+						"ApplyModifier"
+						{
+							"ModifierName"	"modifier_curse_bfury_2"
+							"Target"		"TARGET"
+							"Duration"		"%curse_duration"
+						}
+					}
+				}
+			}
+			
+			"OnAttackLanded"
+			{
+				"RunScript"
+			    {
+					"Target" 
+					{
+						"Center"	"TARGET"
+						"Flags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+					}
+			        "ScriptFile"    "items/funcs/cleave.lua"
+			        "Function"      "CleaveDD"
+					"radius"		"%cleave_radius"
+					"damage"		"%attack_damage"
+					"dmg_pct"		"%cleave"
+			    }
+			}
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" 				"%bonus_str"
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"				"%bonus_damage"
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" 				"%bonus_agility"		
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE_UNIQUE" 	"%bonus_speed"		
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" 			"%bonus_attack_speed"	
+				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"				"%health_regen"
+				"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"					"%mp_regen"
+			}
+		}
+		
+		"modifier_passive_bfury2_quelling_blade"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+			
+			"OnAttackLanded"
+			{
+				"RunScript"
+			    {
+					"Target" 
+					{
+						"Center"	"TARGET"
+						"Flags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+					}
+			        "ScriptFile"    "items/funcs/quelling_blade.lua"
+			        "Function"      "BonusDamageCreeps"
+					"damage"		"%attack_damage"
+					"damage_pct"	"%quelling_bonus"
+					"damage_pct_range"	"%quelling_bonus_ranged"
+			    }
+			}
+		}
+		
+		"modifier_curse_bfury_2"
+		{
+			"IsHidden"	"0"
+			"IsDebuff"	"1"
+			"IsPurgable"	"1"
+			
+			"TextureName" "custom/bfury_2"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%curse_slow"
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%curse_attackspeed"
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+"item_grove_bow"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"288"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"Model"							"models/props_gameplay/neutral_box.vmdl"
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"
+	"ItemIsNeutralDrop"				"0"
+	"ItemPurchasable"				"0"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"attack_range_bonus"			"150"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"attack_speed_bonus"			"70"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"magic_resistance_reduction"		"15"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"debuff_duration"		"6"
+		}
+	}
+}

@@ -1,0 +1,362 @@
+"tinker_laser"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"550"
+	"AbilityCastPoint"				"0.4"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"12.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"125 135 145 155 165 175 185"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"miss_rate"				"70"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration_hero"			"3"
+			"LinkedSpecialBonus"	"special_bonus_unique_tinker_4"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration_creep"		"6.0"
+			"LinkedSpecialBonus"	"special_bonus_unique_tinker_4"
+		}		
+		"04"	
+		{
+			"var_type"				"FIELD_INTEGER"
+			"laser_damage"			"115 190 280 320 390 450 515"
+			"LinkedSpecialBonus"	"special_bonus_unique_tinker"
+		}			
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"scepter_bounce_range"	"550"
+			"RequiresScepter"			"1"
+		}
+	}
+}
+
+//=================================================================================================================
+// Tinker: Heat Seeking Missile
+//=================================================================================================================
+"tinker_heat_seeking_missile"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"8.0"
+	"AbilityCastRange"				"2500"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"80 90 100 110 120 130 140"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{ 
+		"01"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"damage"			"135 210 280 360 425 500 570"
+		}
+		"02"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"radius"			"2500"
+		}
+		"03"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"targets"			"2"
+		}
+		"04"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"speed"				"900 900 900 900 900 900 900"
+		}
+		"05"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"targets_scepter"	"4"
+			"RequiresScepter"			"1"
+		}
+	}
+}
+
+//=================================================================================================================
+// Tinker: March of the Machines
+//=================================================================================================================
+"tinker_march_of_the_machines"
+{
+	"MaxLevel"						"7"
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"300"
+	"AbilityCastPoint"				"0.05"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"20.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"75 85 95 105 115 125 135"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"900"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"collision_radius"		"50"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"splash_radius"			"150"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"6.0"
+			"LinkedSpecialBonus"	"special_bonus_unique_tinker_5"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"speed"					"400"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"machines_per_sec"		"24"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"distance"				"1800"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"distance_scepter"		"1800"
+		}
+        "09"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "damage"				"25 40 50 60 70 80 90"
+            "LinkedSpecialBonus"	"special_bonus_unique_tinker_2"
+        }
+	}
+}
+
+//=================================================================================================================
+// Tinker: Rearm
+//=================================================================================================================
+"tinker_rearm"
+{
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityTextureName"			"tinker_rearm"
+	"AbilityCastAnimation"			"ACT_DOTA_CHANNEL_ABILITY_4"
+	"MaxLevel"						"7"
+
+	"precache"
+	{
+		"soundfile"				"soundevents/game_sounds_heroes/game_sounds_tinker.vsndevts"
+		"particle"				"particles/units/heroes/hero_tinker/tinker_rearm.vpcf"
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.1"
+	"AbilityChannelTime"			"3.0 2.5 2.0 1.75 1.5 1.25 1.0"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"0.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"145 185 200 235 275 325 375"
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"channel_tooltip"			"3.0 2.5 2.0 1.75 1.5 1.25 1.0"
+		}
+	}
+	
+	"OnAbilityPhaseStart"
+	{
+		"FireSound"
+		{
+			"Target"			"CASTER"
+			"EffectName"		"Hero_Tinker.RearmStart"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"Target"			"CASTER"
+			"EffectName"		"Hero_Tinker.Rearm"
+		}
+	
+		"RunScript"
+		{
+			"ScriptFile"		"heroes/tinker/refresh.lua"
+			"Function"			"Refresh_tinker_animation"
+		}
+	}
+	
+	"OnChannelInterrupted"
+	{
+		"RemoveModifier"
+		{
+			"Target"			"CASTER"
+			"ModifierName"		"modifier_tinker_rearm_level_1"
+		}
+		
+		"RemoveModifier"
+		{
+			"Target"			"CASTER"
+			"ModifierName"		"modifier_tinker_rearm_level_1"
+		}
+		"RemoveModifier"
+		{
+			"Target"			"CASTER"
+			"ModifierName"		"modifier_tinker_rearm_level_3"
+		}
+	}
+
+	"OnChannelSucceeded"
+	{
+		"RunScript"
+		{
+			"ScriptFile"		"heroes/tinker/refresh.lua"
+			"Function"			"Refresh"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_tinker_rearm_level_1"
+		{	
+			"IsHidden"			"0"
+		
+			"Duration"			"%channel_tooltip"
+			
+			"EffectName"		"particles/units/heroes/hero_tinker/tinker_rearm.vpcf"
+			"EffectAttachType"	"follow_origin"
+			
+			"OverrideAnimation"	"ACT_DOTA_TINKER_REARM1"
+		}
+		
+		"modifier_tinker_rearm_level_2"
+		{
+			"IsHidden"			"0"
+		
+			"Duration"			"%channel_tooltip"
+			
+			"EffectName"		"particles/units/heroes/hero_tinker/tinker_rearm.vpcf"
+			"EffectAttachType"	"follow_origin"
+			
+			"OverrideAnimation"	"ACT_DOTA_TINKER_REARM2"
+		}
+		
+		"modifier_tinker_rearm_level_3"
+		{
+			"IsHidden"			"0"
+		
+			"Duration"			"%channel_tooltip"
+			
+			"EffectName"		"particles/units/heroes/hero_tinker/tinker_rearm.vpcf"
+			"EffectAttachType"	"follow_origin"
+			
+			"OverrideAnimation"	"ACT_DOTA_TINKER_REARM3"
+		}
+	}
+}
+
+"tinker_defense_matrix"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+	"MaxLevel"						"1"
+	"FightRecapLevel"				"1"
+	"IsGrantedByShard"				"1"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"400"
+	"AbilityCastPoint"				"0.2"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"30"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"damage_absorb"		"800"
+		}
+		"02"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"status_resistance"	"40"
+		}
+		"03"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"barrier_duration"	"10"
+		}
+	}
+}

@@ -1,0 +1,7 @@
+"DOTA_Tooltip_Ability_item_bandoline_blade"							"Bandolin's Blade"
+"DOTA_Tooltip_Ability_item_bandoline_blade_Description"				"<h1>Passive: Phantom Attack</h1> Second attack after %attack_delay% seconds for melee heroes."
+"DOTA_Tooltip_Ability_item_bandoline_blade_note0"					"Phantom Attack applies attack modifiers."
+"DOTA_Tooltip_Ability_item_bandoline_blade_lore"					"That blade was used by legendary duelist but now it transfers from hand to hand seeking glory, richness and power."
+"DOTA_Tooltip_Ability_item_bandoline_blade_bonus_damage"			"+$damage"
+"DOTA_Tooltip_Ability_item_bandoline_blade_bonus_as"				"+$attack"
+"DOTA_Tooltip_Ability_item_bandoline_blade_bonus_stats"				"+$all"

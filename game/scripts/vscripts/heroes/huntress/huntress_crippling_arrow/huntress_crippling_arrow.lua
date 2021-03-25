@@ -1,0 +1,10 @@
+huntress_crippling_arrow = huntress_crippling_arrow or class({})
+
+LinkLuaModifier("modifier_huntress_crippling_arrow", "heroes/huntress/huntress_crippling_arrow/modifier_huntress_crippling_arrow", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_huntress_crippling_arrow_slow", "heroes/huntress/huntress_crippling_arrow/modifier_huntress_crippling_arrow_slow", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_huntress_crippling_arrow_root", "heroes/huntress/huntress_crippling_arrow/modifier_huntress_crippling_arrow_root", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_huntress_crippling_arrow_stun", "heroes/huntress/huntress_crippling_arrow/modifier_huntress_crippling_arrow_stun", LUA_MODIFIER_MOTION_NONE)
+
+function huntress_crippling_arrow:GetIntrinsicModifierName()
+    return "modifier_huntress_crippling_arrow"
+end

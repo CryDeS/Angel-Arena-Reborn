@@ -1,0 +1,155 @@
+"item_recipe_heavens_halberd_2"
+{
+	"AbilityTextureName" 				"item_recipe_heavens_halberd_2"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1283"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_heavens_halberd_2"
+	"ItemRequirements"
+	{
+		"01"						"item_heavens_halberd;item_heavens_halberd"
+	}
+}
+
+"item_heavens_halberd_2"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1282"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"BaseClass"						"item_heavens_halberd"
+	"AbilityTextureName"			"heavens_halberd_2"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"FightRecapLevel"				"1"
+	"ItemBaseLevel"					"2"
+
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"18"
+	"AbilityCastRange"				"700"
+	"AbilityCastPoint"				"0.0"
+	"AbilitySharedCooldown"			"items_halbert"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100"
+	"ItemCost"						"7500"
+	"ItemShopTags"					"str;damage;evasion"
+	"ItemQuality"					"artifact"
+	"ItemAliases"					"heaven's halberd"
+	"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_evasion"			"25 30"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_strength"		"20 60"
+		}
+        "03"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "disarm_range"				"3.5 4.0"
+        }
+        "04"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "disarm_melee"				"3.0 3.5"
+        }
+        "05"
+        {
+            "var_type"						"FIELD_INTEGER"
+            "status_resistance"				"20 25"
+        }
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"hp_regen_amp"			"30 50"
+		}
+	}
+}
+
+// Recipe: Heaven's Halberd
+//=================================================================================================================
+"item_recipe_heavens_halberd"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"							"209"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"						"550"
+    "ItemShopTags"					""
+
+    // Recipe
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemRecipe"					"1"
+    "ItemResult"					"item_heavens_halberd"
+    "ItemRequirements"
+    {
+        "01"						"item_claymore;item_talisman_of_evasion"
+    }
+}
+
+"item_heavens_halberd"
+{
+	"ItemBaseLevel"					"1"
+	"AbilityCastRange"				"700"
+	"AbilitySharedCooldown"			"items_halbert"
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_evasion"			"25 30"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_strength"		"20 60"
+		}
+        "03"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "disarm_range"				"3.5 4.0"
+        }
+        "04"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "disarm_melee"				"3.0 3.5"
+        }
+        "05"
+        {
+            "var_type"						"FIELD_INTEGER"
+            "status_resistance"				"20 25"
+        }
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"hp_regen_amp"			"30 50"
+		}
+	}
+}

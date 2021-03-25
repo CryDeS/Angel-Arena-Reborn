@@ -1,0 +1,156 @@
+"item_recipe_lightning_flash"
+{
+	"AbilityTextureName" 				"item_recipe_lightning_flash"
+	
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1227"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"100"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_lightning_flash"
+	"ItemRequirements"
+	{
+		"01"						"item_blink;item_boss_soul"
+	}
+}
+
+
+"item_lightning_flash"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1228"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityTextureName"	        "lightning_flash"
+	
+	"precache"
+	{
+		"soundfile"					"sounds/weapons/hero/leshrac/lightning_storm01.vsnd"		
+	}
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"22950"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"AbilityCastPoint"				"0.0"
+	"AbilityCooldown"				"10.0"
+	"AbilityManaCost"				"0"
+	"AbilitySharedCooldown"			"item_blink"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"60"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"4"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_all_stats"		"20"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attack_speed"	"60"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_movement_speed"	"60"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"blink_range"			"1450"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_cooldown"		"3"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_pct"			"8"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_range"			"500"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"			"items/lightning_flash.lua"
+			"Function"				"Blink"
+			"Target"				"POINT"
+			"BlinkRange"			"%blink_range"
+			"Radius"				"%damage_range"
+			"Damage"				"%damage_pct"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_lightning_flash_passive"
+		{
+			"IsHidden"	"1"
+			"Passive"	"1"
+			
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_PERMANENT"
+			
+			"OnTakeDamage"
+			{
+				"RunScript"
+				{
+					"ScriptFile"			"items/lightning_flash.lua"
+					"Function"				"OnTakeDamage"
+					"Cooldown"				"%damage_cooldown"
+					"Damage"				"%attack_damage"
+				}
+			}
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"			"%bonus_damage"
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%bonus_armor"
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"			"%bonus_all_stats"
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"				"%bonus_all_stats"
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"			"%bonus_all_stats"
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%bonus_attack_speed"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"		"%bonus_movement_speed"
+			}		
+		}
+	}
+	
+}
+
+"item_blink"
+{
+	"AbilitySharedCooldown"			"item_blink"
+}

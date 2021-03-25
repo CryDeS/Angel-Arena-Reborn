@@ -1,0 +1,131 @@
+"item_recipe_life_catcher"
+{
+	"AbilityTextureName" 				"item_recipe_life_catcher"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1313"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"225"
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_life_catcher"
+	"ItemRequirements"
+	{
+		"01"						"item_talisman_of_mastery;item_consumption_orb;item_restoration_bracer;item_wisdom_shard"
+	}
+}
+
+"item_life_catcher"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1312"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+	"AbilityTextureName"	        "life_catcher"
+	"ScriptFile"					"items/life_catcher/life_catcher.lua"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"13.0"
+	"AbilityManaCost"				"100"
+	"AbilityCastRange"				"650"
+	"AbilityCastPoint"				"0.0"
+	"AbilitySharedCooldown"			"item_life_catcher"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1740"
+	"ItemStackable"					"0"
+	"ItemBaseLevel"					"1"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_str"				"4"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_int"				"12"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_hpregen"			"2"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_manaregen"		"3.5"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"25"
+		}
+		
+		// Dmg to exp 
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_to_exp_ranged"	"10"
+		}
+        "07"
+        {
+            "var_type"				"FIELD_FlOAT"
+            "damage_to_exp_melee" 	"15"
+        }
+
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"min_exp_ranged"		"32"
+		}
+		"09"
+        {
+            "var_type"				"FIELD_FlOAT"
+            "min_exp_melee"			"38"
+        }
+		"10"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"exp_cooldown"			"2.5"
+		}
+        
+		// Active 
+		"11"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage"				"150"
+		}
+		"12"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"mainstat_to_dmg"		"200"
+		}
+		"13"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"projectile_speed"		"1050"
+		}
+	}
+}

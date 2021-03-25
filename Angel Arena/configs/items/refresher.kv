@@ -1,0 +1,77 @@
+"item_refresher"
+{
+	"BaseClass"						"item_datadriven"
+	"AbilityTextureName"			"refresher"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	
+	"AbilityCastPoint"				"0.0"
+	"AbilityCooldown"				"120.0"
+
+	"AbilityManaCost"				"375"
+	"ItemCost"						"5200"
+	"AbilitySharedCooldown"			"item_refresher"
+	"ItemShopTags"					"regen_health;regen_mana;hard_to_tag"
+	"ItemQuality"					"rare"
+	"ItemAliases"					"refresher orb"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health_regen"	"10"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_mana_regen"		"8"
+		}		
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"20"
+		}		
+	}
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"		"items/refresher.lua"
+			"Function"			"Refresh"
+		}
+		"FireSound"
+		{
+			"Target"			"CASTER"
+			"EffectName"		"DOTA_Item.Refresher.Activate"
+		}
+		"FireEffect"
+		{
+			"Target"			"CASTER"
+			"EffectName"		"particles/items2_fx/refresher.vpcf"
+			"EffectAttachType"  "follow_origin"
+			"Radius"			"200"
+			"Duration"			"2.0"
+		}
+	}
+	
+	"Modifiers"
+	{	
+		"modifier_item_refresher"
+		{
+			"Passive"		"1"
+			"IsHidden"	 	"1"
+			"IsPurgable"	"0"
+			
+			"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"				"%bonus_health_regen"
+				"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"					"%bonus_mana_regen"
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"				"%bonus_damage"
+			}
+		}
+	}
+}

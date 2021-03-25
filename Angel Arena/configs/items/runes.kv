@@ -1,0 +1,235 @@
+// 1293 - Haste +
+// 1294 - Double Damage +
+// 1295 - Arcane +
+// 1296 - Regeneration +
+// 1297 - Bounty +
+// 1298 - Invis +
+
+"item_rune_invis"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"1298"
+	"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	"AbilityTextureName"	        "rune_invis"
+	
+	"Model" 						"models/props_gameplay/rune_invisibility01.vmdl"
+	"Effect" 						"particles/generic_gameplay/rune_invisibility.vpcf"
+	"UIPickupSound" 				"Rune.Invis" 
+	
+	"ItemInitialCharges"			"1"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "0"
+	"ItemDroppable"                 "0"
+	"ItemPurchasable"				"0"
+	"ItemCastOnPickup" 				"1"	
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"Target"			"CASTER"
+			"ScriptFile"		"runes.lua"
+			"Function"			"Invis"
+		}
+		"SpendCharge"
+		{
+		}        
+	}
+	//special
+
+}
+
+
+"item_rune_regen"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"1296"
+	"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	"AbilityTextureName"	        "rune_regen"
+	
+	"Model" 						"models/props_gameplay/rune_regeneration01.vmdl"
+	"Effect" 						"particles/generic_gameplay/rune_regeneration.vpcf"
+	"UIPickupSound" 				"Rune.Regen" 
+	
+	"ItemInitialCharges"			"1"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "0"
+	"ItemDroppable"                 "0"
+	"ItemPurchasable"				"0"
+	"ItemCastOnPickup" 				"1"	
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"Target"			"CASTER"
+			"ScriptFile"		"runes.lua"
+			"Function"			"Regen"
+		}
+		"SpendCharge"
+		{
+		}        
+	}
+	//special
+
+}
+
+"item_rune_arcane"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"1295"
+	"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	"AbilityTextureName"	        "rune_arcane"
+	
+	"Model" 						"models/props_gameplay/rune_arcane.vmdl"
+	"Effect" 						"particles/generic_gameplay/rune_arcane.vpcf"
+	"UIPickupSound" 				"Rune.Arcane" 
+	
+	"ItemInitialCharges"			"1"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "0"
+	"ItemDroppable"                 "0"
+	"ItemPurchasable"				"0"
+	"ItemCastOnPickup" 				"1"	
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"Target"			"CASTER"
+			"ScriptFile"		"runes.lua"
+			"Function"			"Arcane"
+		}
+		"SpendCharge"
+		{
+		}        
+	}
+	//special
+
+}
+
+"item_rune_haste"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"1293"
+	"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	"AbilityTextureName"	        "rune_haste"
+	
+	"Model" 						"models/props_gameplay/rune_haste01.vmdl"
+	"Effect" 						"particles/generic_gameplay/rune_haste.vpcf"
+	"UIPickupSound" 				"Rune.Haste" 
+	
+	"ItemInitialCharges"			"1"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "0"
+	"ItemDroppable"                 "0"
+	"ItemPurchasable"				"0"
+	"ItemCastOnPickup" 				"1"	
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"Target"			"CASTER"
+			"ScriptFile"		"runes.lua"
+			"Function"			"Haste"
+		}
+		"SpendCharge"
+		{
+		}        
+	}
+	//special
+
+}
+
+"item_rune_bounty"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"1297"
+	"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	"AbilityTextureName"	        "rune_bounty"
+	
+	"Model" 						"models/props_gameplay/rune_goldxp.vmdl"
+	"Effect" 						"particles/generic_gameplay/rune_bounty.vpcf"
+	"UIPickupSound" 				"Rune.Bounty" 
+	
+	"ItemInitialCharges"			"1"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "0"
+	"ItemDroppable"                 "0"
+	"ItemPurchasable"				"0"
+	"ItemCastOnPickup" 				"1"	
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"Target"			"CASTER"
+			"ScriptFile"		"runes.lua"
+			"Function"			"Bounty"
+		}
+		"SpendCharge"
+		{
+		}        
+	}
+	//special
+
+}
+
+"item_rune_dd"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"1294"
+	"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	"AbilityTextureName"	        "rune_dd"
+	
+	"Model" 						"models/props_gameplay/rune_doubledamage01.vmdl"
+	"Effect" 						"particles/generic_gameplay/rune_doubledamage.vpcf"
+	"UIPickupSound" 				"Rune.DD" 
+	
+	"ItemInitialCharges"			"1"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "0"
+	"ItemDroppable"                 "0"
+	"ItemPurchasable"				"0"
+	"ItemCastOnPickup" 				"1"	
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"Target"			"CASTER"
+			"ScriptFile"		"runes.lua"
+			"Function"			"DoubleDamage"
+		}
+		"SpendCharge"
+		{
+		}        
+	}
+	//special
+
+}

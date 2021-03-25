@@ -1,0 +1,135 @@
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"harpy_small_dive" // Активная: Пикерование, наносит 300 урона в радиусе 350, дает стан на 1.2 секунды всем, кд 8 секунд. Наносит себе 150 урона 
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"AbilityTextureName"			"custom/harpy_small_dive"
+	"ScriptFile"					"creeps/abilities/npc_aa_creep_harpy_small/harpy_small_dive.lua"
+	
+	"MaxLevel"						"1"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"8.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"125"
+	"AbilityCastAnimation"			"0.2"
+	"AbilityCastRange"				"350"
+	"AbilityDuration"				"1.2"
+	
+	"precache"
+	{
+		"particle"			"particles/econ/items/elder_titan/elder_titan_ti7/elder_titan_echo_stomp_ti7.vpcf"
+	}
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"1.2"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage"					"300"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage_self"				"150"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"					"350"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"height"					"300"				// maybe 500?
+		}
+		"06"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"speed"						"1200"				// per second 
+		}
+	}
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"harpy_small_knockback" // Активная: Отбрасывание всех врагов в радиусе 450 от точки, длительность толчка 0.4 секунды(во время толчка стан)
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"custom/harpy_small_knockback"
+	"ScriptFile"					"creeps/abilities/npc_aa_creep_harpy_small/harpy_small_knockback.lua"
+	
+	"MaxLevel"						"1"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"16.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"150"
+	
+	"AbilityCastRange"				"700"
+
+	"precache"
+	{
+		"particle"			"particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_blinding_light_aoe.vpcf"
+	}
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"radius"					"450"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"0.4"			
+		}
+	}
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"harpy_small_fly" // Тоггл: Полет, юнит может летать 
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_TOGGLE"
+	"AbilityTextureName"			"custom/harpy_small_fly"
+	"ScriptFile"					"creeps/abilities/npc_aa_creep_harpy_small/harpy_small_fly.lua"
+	
+	"MaxLevel"						"1"
+}

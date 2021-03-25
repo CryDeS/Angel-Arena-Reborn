@@ -1,0 +1,70 @@
+"item_recipe_corrupted_skull"
+{
+	"AbilityTextureName" 				"item_recipe_corrupted_skull"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1556"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"2000"
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_corrupted_skull"
+	"ItemRequirements"
+	{
+		"01"						"item_enchanted_skull"
+	}
+}
+
+"item_corrupted_skull"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1557"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "corrupted_skull"
+	"ScriptFile"					"items/corrupted_skull/corrupted_skull"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"3200"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"ItemQuality"					"common"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_damage"			"25"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_str"				"5"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"disarmor"				"5"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"disarmor_duration"		"4"
+		}
+	}
+}

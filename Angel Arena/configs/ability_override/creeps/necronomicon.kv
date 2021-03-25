@@ -1,0 +1,181 @@
+"necronomicon_warrior_last_will"
+{
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"explosion"				"800 1200 2000"
+		}
+	}
+	"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+}
+
+//=================================================================================================================
+// Ability: Necronomicon Warrior's Sight
+//=================================================================================================================
+"necronomicon_warrior_sight"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"					"5201"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"1000"
+		}
+	}
+	"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+}
+
+//=================================================================================================================
+// Ability: Necronomicon Warrior's Mana Burn
+//=================================================================================================================
+"necronomicon_warrior_mana_burn"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"					"5202"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"burn_amount"			"50 100 150"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"burn_damage_conversion"	"100"
+		}
+	}
+	"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+}
+
+//=================================================================================================================
+// Ability: Necronomicon Archer's Mana Burn
+//=================================================================================================================
+"necronomicon_archer_mana_burn"
+{
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"600"
+	"AbilityCastPoint"				"0.5 0.5 0.5"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"7"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"0 0 0"
+			
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"burn_amount"			"200 400 600"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"burn_as_damage_tooltip"			"100"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"cast_range_tooltip"			"600"
+		}
+	}
+}
+
+//=================================================================================================================
+// Ability: Necronomicon Archer's Purge
+//=================================================================================================================
+"necronomicon_archer_purge"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"					"8203"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"	
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+			
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"600"
+	"AbilityCastPoint"				"0.3"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"15"
+
+			
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"purge_rate"		"5"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"4.0"
+		}
+	}
+	"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+}
+
+//=================================================================================================================
+// Ability: Necronomicon Archer's AoE
+//=================================================================================================================
+"necronomicon_archer_aoe"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"					"5204"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"1200"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"ms_bonus"			"15 17 20"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"as_bonus"			"50 100 150"
+		}
+	}
+	"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+}

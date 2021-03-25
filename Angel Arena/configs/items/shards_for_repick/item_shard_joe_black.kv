@@ -1,0 +1,139 @@
+"item_recipe_shard_joe_black"
+{
+	"AbilityTextureName" 				"item_recipe_shard_joe_black"
+	
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1705"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_shard_joe_black"
+	"ItemRequirements"
+	{
+		"01"						"item_shard_joe_black_dummy"
+	}
+}
+
+"item_shard_joe_black"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1322"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+	"AbilityTextureName"	        "shard_joe_black"
+	"ScriptFile"					"items/shards_for_repick/shard_joe_black/item_shard_joe_black"
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"15.0"
+	"AbilityManaCost"               "120"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemStackable"					"0"
+	"ItemBaseLevel"					"1"
+
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "0"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_abs_pct"		"35.0"
+		}
+		"02"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "duration"      		"5.0"
+        }
+        //Stats
+        "03"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "armor"     	        "10.0"
+        }
+        "04"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "all_stats"	            "25"
+        }
+        "05"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "mag_resist_pct"	    "20.0"
+        }
+	}
+}
+"item_shard_joe_black_dummy"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1704"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+	"AbilityTextureName"	        "shard_joe_black"
+	"ScriptFile"					"items/shards_for_repick/shard_joe_black/item_shard_joe_black"
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"15.0"
+	"AbilityManaCost"               "120"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemStackable"					"0"
+	"ItemBaseLevel"					"1"
+
+	"ItemKillable"                  "0"
+	"ItemSellable"                  "0"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"0"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_abs_pct"		"35.0"
+		}
+		"02"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "duration"      		"5.0"
+        }
+        //Stats
+        "03"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "armor"     	        "10.0"
+        }
+        "04"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "all_stats"	            "25"
+        }
+        "05"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "mag_resist_pct"	    "20.0"
+        }
+	}
+}

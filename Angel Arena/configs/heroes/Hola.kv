@@ -1,0 +1,77 @@
+"npc_hero_hola"
+{													
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"override_hero" 			"npc_dota_hero_keeper_of_the_light"
+		"Team"						"Good"
+		
+		"IsGod"						"1"
+		"GodRepickItem"				"item_shard_hola"
+	
+		// Abilities
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityLayout"				"4"
+		
+		"Ability1"					"hola_stunhammer"				// Ability 1
+		"Ability2"					"hola_grace"				// Ability 2
+		"Ability3"					"hola_stomp"					// Ability 3
+		"Ability4"					"generic_hidden"					// Ability 4
+		"Ability5"					"generic_hidden"
+		"Ability6"					"hola_rescure"
+		"Ability7"					"generic_hidden"
+		"Ability8"					"generic_hidden"
+		"Ability9"					"generic_hidden"
+		"Ability10"					"generic_hidden"
+		
+		"Ability11"				"special_bonus_strength_13"			//10
+		"Ability12"				"special_bonus_evasion_25"	//10
+		"Ability13"				"special_bonus_movement_speed_20"		//15
+		"Ability14"				"special_bonus_cast_range_200"				//15
+		"Ability15"				"hola_special_bonus_heal"			//20
+		"Ability16"				"hola_special_bonus_ultimate"		//20
+		"Ability17"				"special_bonus_cooldown_reduction_30"			//25
+		"Ability18"				"special_bonus_magic_resistance_40"			//25
+		
+		"AbilityTalentStart" 	"11"
+		
+		// Armor
+		//-------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"				"1"										// Physical protection.
+
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"82"									// Damage range min.
+		"AttackDamageMax"			"86"									// Damage range max.	
+		
+		"AttackRate"				"1.7"									// Speed of attack.
+		"AttackAnimationPoint"		"0.3"									// Normalized time in animation cycle to attack.
+		
+		"AttackAcquisitionRange"	"620"									// Range within a target can be acquired.
+		"AttackRange"				"620"									// Range within a target can be attacked.
+		
+		"ProjectileModel"			"particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_base_attack.vpcf"										// Particle system model for projectile.
+		"ProjectileSpeed"			"900"										// Speed of projectile.
+
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeBaseStrength"		"25"									// Base strength
+		"AttributeStrengthGain"		"4.0"									// Strength bonus per level.
+		"AttributeBaseAgility"		"26"									// Base agility
+		"AttributeAgilityGain"		"4.0"									// Agility bonus per level.
+		"AttributeBaseIntelligence"	"32"									// Base intelligence
+		"AttributeIntelligenceGain"	"8.0"									// Intelligence bonus per level.
+		
+		"StatusHealth" 				"210" 
+		"StatusHealthRegen" 		"250.0" 
+		"StatusMana" 				"210" 
+		"StatusManaRegen" 			"8.5" 
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementSpeed"				"295"									// Speed.
+		"MovementTurnRate"			"0.5"									// Turning rate.
+		
+		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+		"HealthBarOffset"			"140"
+}

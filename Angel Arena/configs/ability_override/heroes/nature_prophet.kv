@@ -1,0 +1,260 @@
+//=================================================================================================================
+// Furion: Sprout
+//=================================================================================================================
+"furion_sprout"
+{
+	"MaxLevel"						"7"
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"625 650 675 700 725 750 775"
+	"AbilityCastPoint"				"0.2"
+	"AbilityCooldown"				"14 13 12 11 10 9 8"
+	"AbilityManaCost"				"120 100 90 70 50 35 10"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"vision_range"			"1400"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"3 3.5 4 4.5 5 5.5 6"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"cast_range_tooltip"	"625 650 675 700 725 750 775"
+		}
+	}
+}
+
+//=================================================================================================================
+// Furion: Teleportation
+//=================================================================================================================
+"furion_teleportation"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+	"MaxLevel"						"7"
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"0"
+	"AbilityCastPoint"				"2"
+	"AbilityCooldown"				"45 40 35 30 25 20 10"
+	"AbilityManaCost"				"95"
+}
+
+//=================================================================================================================
+// Furion: Force of Nature
+//=================================================================================================================
+"furion_force_of_nature"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"5247"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"MaxLevel"						"7"
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"750"
+	"AbilityCastPoint"				"0.5 0.5 0.5 0.5 0.5 0.5 0.5"
+	"AbilityCooldown"				"20"
+	"AbilityManaCost"				"160"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"area_of_effect"		"150 225 300 375 475 525 650"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"max_treants"			"3 4 5 6 7 8 10"
+			"LinkedSpecialBonus"	"special_bonus_unique_furion_2"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"60"
+		}
+		"04"
+		{
+			"var_type"				        "FIELD_INTEGER"
+			"treant_health_tooltip"	        "550 650 750 850 950 1050 1150"
+			"LinkedSpecialBonus"	        "special_bonus_unique_furion"
+            "LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
+		}
+		"05"
+		{
+			"var_type"				        "FIELD_INTEGER"
+			"treant_dmg_tooltip"	        "45 55 65 75 85 95 105"
+			"LinkedSpecialBonus"	        "special_bonus_unique_furion"
+            "LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"treant_hp_bonus"				"550 650 750 850 950 1050 1150"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"treant_damage_bonus"		"45 55 65 75 85 95 105"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"treant_large_hp_bonus"				"3500"
+			"RequiresScepter"		"1"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"treant_large_damage_bonus"		"225"
+			"RequiresScepter"		"1"
+		}
+	}
+}
+
+//=================================================================================================================
+// Furion: Nature Wraith
+//=================================================================================================================
+"furion_nature_wraith"
+{
+	"BaseClass"					"ability_datadriven"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+	"MaxLevel"					"7"
+	
+	"AbilityCastAnimation" 		"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityTextureName"		"custom/furion_nature_wraith"
+	
+	"AbilityCooldown"			"24.0"
+	"AbilityManaCost"			"100 120 140 160 180 200"
+	"AbilityCastPoint"			"1.0"
+	
+	"precache"
+	{
+		"soundfile" "sounds/physics/footsteps/hero/furion/treant_roar.vsnd"
+		"particle"	"particles/units/heroes/hero_furion/furion_wrath_of_nature_start.vpcf"
+	}
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"duration"			"1.8"
+		}
+		"02"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"attack_speed"		"30 50 70 90 110 130 150"
+		}
+		"03"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"bat"				"0.6"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"ApplyModifier"
+		{
+			"Target"			"CASTER"
+			"ModifierName"		"modifier_nature_wraith_active"
+			"Duration"			"%duration"
+		}
+		
+		"FireSound"
+		{
+			"Target"				"CASTER"
+			"EffectName"			"Hero_Furion.TreantRoar"
+		}
+		
+		"FireEffect"
+		{
+			"Target"				"CASTER"
+			"EffectName"			"particles/units/heroes/hero_furion/furion_wrath_of_nature_start.vpcf"
+		}
+	}
+	"Modifiers"
+	{
+		"modifier_nature_wraith_active"
+		{
+			"IsHidden"			"0"
+			"IsBuff"			"1"
+			"Passive"			"0"
+		
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_BASE_ATTACK_TIME_CONSTANT"	"%bat"
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%attack_speed"
+			}
+		}
+		
+	}
+}
+
+//=================================================================================================================
+// Furion: Wrath of Nature
+//=================================================================================================================
+"furion_wrath_of_nature"
+{
+	"MaxLevel"						"7"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"0"
+	"AbilityCastPoint"				"0.25"
+	"AbilityCooldown"				"40"
+	"AbilityManaCost"				"175 225 275 375 475 525 600"
+		
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"max_targets"			"20"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage"				"200 350 500 700 800 900 1000"
+			"LinkedSpecialBonus"			"special_bonus_unique_furion_5"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_percent_add"	"2"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"jump_delay"			"0.25"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"kill_damage"			"5 6 7 8 9 10 11"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"kill_damage_duration"			"50"
+		}
+	}
+}

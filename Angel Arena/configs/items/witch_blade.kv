@@ -1,0 +1,82 @@
+"item_recipe_witch_blade"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"600"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_witch_blade"
+	"ItemRequirements"
+	{
+		"01"						"item_blitz_knuckles;item_robe;item_chainmail"
+	}
+}
+
+//=================================================================================================================
+// Witch Blade
+//=================================================================================================================
+"item_witch_blade"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"9.0"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"2600"
+	"ItemShopTags"					"damage;int;attack_speed;regen_mana"
+	"ItemQuality"					"common"
+	"ItemAliases"					"witch blade;wb"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attack_speed"	"35"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_intellect"		"12"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"6"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"int_damage_multiplier"	"1"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"slow"					"25"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"slow_duration"			"3"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"projectile_speed"		"300"
+		}
+	}
+}

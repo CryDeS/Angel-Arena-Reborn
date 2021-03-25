@@ -1,0 +1,238 @@
+"soul_guardian_heroes_ring"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "BaseClass"					    "ability_lua"
+    "AbilityTextureName"			"custom/soul_guardian/soul_guardian_heroes_ring"
+    "ScriptFile"					"creeps/boss/soul_guardian/soul_guardian_heroes_ring/soul_guardian_heroes_ring"
+    "MaxLevel"                      "1"
+    "AbilityCooldown"				"20"
+    "AbilityCastRange"				"800"
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"particle"					"particles/bosses/soul_guardian/soul_guardian_heroes_ring/soul_guardian_heroes_ring_1.vpcf"
+		"particle"					"particles/bosses/soul_guardian/soul_guardian_heroes_ring/soul_guardian_heroes_ring_2.vpcf"
+	}
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"			    "FIELD_INTEGER"
+            "base_damage"	    	"15000"
+        }
+        "02"
+        {
+            "var_type"			    	"FIELD_INTEGER"
+            "damage_reduction_per_hero" "2500"
+        }
+        "03"
+        {
+            "var_type"			   	"FIELD_INTEGER"
+            "circle_radius"	        "800"
+        }
+        "04"
+        {
+            "var_type"			    "FIELD_FLOAT"
+            "circle_creation_time"  "3.0"
+        }
+		"04"
+		{
+			"var_type"			    "FIELD_FLOAT"
+			"detanation_delay"  	"2.0"
+		}
+    }
+}
+
+"soul_guardian_heavy_strike"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"					    "ability_lua"
+    "AbilityTextureName"			"custom/soul_guardian/soul_guardian_heavy_strike"
+    "ScriptFile"					"creeps/boss/soul_guardian/soul_guardian_heavy_strike/soul_guardian_heavy_strike"
+    "MaxLevel"                      "1"
+    "AbilityCooldown"				"12"
+	"precache"
+	{
+		"particle"					"particles/bosses/soul_guardian/soul_guardian_heavy_strike/econ/items/ursa/ursa_ti10/soul_guardian_heavy_strike.vpcf"
+	}
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"					"FIELD_INTEGER"
+            "duration_slow"				"6"
+        }
+        "02"
+        {
+            "var_type"					"FIELD_FLOAT"
+            "duration_stun"				"2.0"
+        }
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"knockback_radius_search"	"450"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"knockback_radius"			"700"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"knockback_duration"		"0.3"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"knockback_slow_pct"		"40"
+		}
+    }
+}
+
+"soul_guardian_pure_heal"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "BaseClass"					    "ability_lua"
+    "AbilityTextureName"			"custom/soul_guardian/soul_guardian_pure_heal"
+    "ScriptFile"					"creeps/boss/soul_guardian/soul_guardian_pure_heal/soul_guardian_pure_heal"
+    "MaxLevel"                      "1"
+    "AbilityCooldown"				"20"
+	"precache"
+	{
+		"particle"					"particles/bosses/soul_guardian/soul_guardian_pure_heal/soul_guardian_pure_heal.vpcf"
+	}
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"			    "FIELD_INTEGER"
+            "base_heal"	    		"4000"
+        }
+		"02"
+		{
+			"var_type"			    "FIELD_INTEGER"
+			"heal_pct_from_max_hp"	"8"
+		}
+    }
+    "AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+}
+
+"soul_guardian_damage_steal"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "BaseClass"					    "ability_lua"
+    "AbilityTextureName"			"custom/soul_guardian/soul_guardian_damage_steal"
+    "ScriptFile"					"creeps/boss/soul_guardian/soul_guardian_damage_steal/soul_guardian_damage_steal"
+    "MaxLevel"                      "1"
+    "AbilityCooldown"				"20"
+    "AbilityCastRange"				"450"
+	"precache"
+	{
+		"particle"					"particles/bosses/soul_guardian/soul_guardian_damage_steal/soul_guardian_damage_steal_delay.vpcf"
+		"particle"					"particles/bosses/soul_guardian/soul_guardian_damage_steal/soul_guardian_damage_steal.vpcf"
+	}
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"			    "FIELD_INTEGER"
+            "duration"	    		"5"
+        }
+		"02"
+		{
+			"var_type"			    "FIELD_INTEGER"
+			"radius"				"450"
+		}
+		"03"
+		{
+			"var_type"			    "FIELD_FLOAT"
+			"delay_for_start"		"1.8"
+		}
+		"04"
+		{
+			"var_type"			    "FIELD_FLOAT"
+			"interval"				"0.1"
+		}
+		"05"
+		{
+			"var_type"			    "FIELD_FLOAT"
+			"damage_per_tick"		"15"
+		}
+		"06"
+		{
+			"var_type"			    	"FIELD_FLOAT"
+			"damage_per_second_tootip"	"150"
+		}
+		"07"
+		{
+			"var_type"			    	"FIELD_FLOAT"
+			"debuff_duration"		"5"
+		}
+    }
+     "AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+}
+
+"soul_guardian_holy_rage"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "BaseClass"					    "ability_lua"
+    "AbilityTextureName"			"custom/soul_guardian/soul_guardian_holy_rage"
+    "ScriptFile"					"creeps/boss/soul_guardian/soul_guardian_holy_rage/soul_guardian_holy_rage"
+    "MaxLevel"                      "1"
+    "AbilityCooldown"				"20"
+	"precache"
+	{
+		"particle"					"particles/bosses/soul_guardian/soul_guardian_holy_rage/soul_guardian_holy_rage.vpcf"
+	}
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "status_resist_pct"		"60"
+        }
+		"02"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"attack_speed"		"200"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage_for_purge_base"		"1200"
+		}
+		"04"
+		{
+			"var_type"			    				"FIELD_INTEGER"
+			"damage_for_purge_pct_from_max_hp"		"6"
+		}
+		"05"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"max_duration"		"30"
+		}
+    }
+    "AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+}

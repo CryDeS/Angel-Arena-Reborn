@@ -1,0 +1,198 @@
+"item_recipe_eclipse_amphora"
+{
+		"AbilityTextureName" 				"recipe"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1271"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_datadriven"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_eclipse_amphora"
+	"ItemRequirements"
+	{
+		"01"						"item_eclipse_amphora_dummy"
+	}
+}
+
+"item_eclipse_amphora"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1136"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+	"AbilityTextureName"	        "eclipse_amphora"
+	"AbilityManaCost"         		"525"
+    "AbilityCooldown"        		"25"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"5000"
+	"ItemStackable"					"0"
+	
+	"ItemPermanent"					"0"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+	
+	"precache"
+	{
+		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_bane.vsndevts"		
+		"particle"		"particles/units/heroes/hero_bane/bane_nightmare.vpcf"		
+	}	
+	
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"600"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"				"6"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"	"Hero_Bane.Nightmare"
+			"Target"		"CASTER"
+		}
+		
+		"ActOnTargets"
+		{
+			"Target"
+			{
+				"Center"  	"CASTER"
+				"Radius" 	"%radius"
+				"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+			}
+			"Action"   
+			{
+				"RunScript"
+				{
+					"ScriptFile"			"items/eclipse.lua"
+					"Function"				"OnSpellStart"
+					"Target"				"TARGET"
+					"Duration"				"%duration"
+				}    
+			}
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_eclipse_amphora"
+		{
+			"Passive"	"0"
+			"IsHidden"	"0"
+			"IsDebuff"	"1"
+			"IsPurgable"	"1"
+			
+			"EffectName"    		"particles/units/heroes/hero_bane/bane_nightmare.vpcf"
+            "EffectAttachType"      "follow_overhead"
+
+			"TextureName"	"custom/eclipse_amphora"
+			
+            "OverrideAnimation"     "ACT_DOTA_FLAIL"
+            "AnimationPlaybackRate"	"0.3"
+
+            "OnTakeDamage"
+            {
+            	"RemoveModifier"
+            	{
+            		"ModifierName"	"modifier_eclipse_amphora"
+            		"Target" 		"UNIT"
+            	}
+            }
+
+            "OnCreated"
+            {
+            	"FireSound"
+            	{
+            		"EffectName"	"Hero_Bane.Nightmare.Loop"
+            		"Target" 		"TARGET"
+            	}
+            }
+
+            "States"
+            {
+	           	"MODIFIER_STATE_NIGHTMARED"     		"MODIFIER_STATE_VALUE_ENABLED"
+	            "MODIFIER_STATE_STUNNED"        		"MODIFIER_STATE_VALUE_ENABLED"
+	            "MODIFIER_STATE_LOW_ATTACK_PRIORITY"	"MODIFIER_STATE_VALUE_ENABLED"		
+            }
+		}
+
+		"modifier_eclipse_amphora_cooldown"
+		{
+			"Passive"		"0"
+			"IsHidden"		"0"
+			"IsBuff"		"1"
+			"IsPurgable"	"0"
+		}
+	}
+}
+
+"item_eclipse_amphora_dummy"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1270"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+	"AbilityTextureName"	        "eclipse_amphora"
+	"AbilityManaCost"         		"125"
+    "AbilityCooldown"        		"25"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"5000"
+	"ItemStackable"					"0"
+	
+	"ItemPermanent"					"0"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"0"
+	
+	"precache"
+	{
+		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_bane.vsndevts"		
+		"particle"		"particles/units/heroes/hero_bane/bane_nightmare.vpcf"		
+	}	
+	
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"900"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"				"6"
+		}
+	}
+}

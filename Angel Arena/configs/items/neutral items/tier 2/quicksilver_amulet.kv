@@ -1,0 +1,52 @@
+"item_quicksilver_amulet"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"686"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"
+	"ItemIsNeutralDrop"				"0"
+	"ItemPurchasable"				"0"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+
+	"Model"							"models/props_gameplay/neutral_box.vmdl"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"base_movement"			"10"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"base_attack"			"30"
+		}		
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_movement"		"15"
+		}	
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attack"			"15"
+		}	
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"anim_increase"			"30"
+		}	
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"projectile_increase"	"30"
+		}		
+	}
+}

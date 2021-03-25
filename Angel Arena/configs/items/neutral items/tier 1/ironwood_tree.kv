@@ -1,0 +1,53 @@
+"item_recipe_ironwood_tree"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"303"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1"
+	"ItemIsNeutralDrop"				"0"
+	"ItemPurchasable"				"0"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+	
+	"Model"							"models/props_gameplay/neutral_box.vmdl"
+}
+
+"item_ironwood_tree"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"304"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"800"
+	"AbilityCooldown"				"4.0"
+				
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"151"
+	"ItemIsNeutralDrop"				"0"
+	"ItemPurchasable"				"0"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+	
+	"Model"							"models/props_gameplay/neutral_box.vmdl"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_all_stats"			"8"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"tree_duration"		"20"
+		}
+	}
+}

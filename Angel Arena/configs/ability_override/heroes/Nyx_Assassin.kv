@@ -1,0 +1,279 @@
+//=================================================================================================================
+// Nyx Assassin: Impale
+//=================================================================================================================
+"nyx_assassin_impale"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"700"
+	"AbilityCastPoint"				"0.2"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"13.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"95 115 135 155 175 195 215"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"width"				"125 125 125 125 125 125 125"
+		}
+		"02"
+		{	
+			"var_type"			"FIELD_FLOAT"
+			"duration"			"1.27 1.47 1.67 1.87 2.07 2.17 2.27"
+			"LinkedSpecialBonus"	"special_bonus_unique_nyx_4"
+		}
+		"03"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"length"			"700"
+		}
+		"04"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"speed"				"1600"
+		}
+		"05"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"cooldown_upgrade"	"9"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"impale_damage"			"130 150 180 210 350 450 520"
+			"LinkedSpecialBonus"	"special_bonus_unique_nyx_2"
+		}
+		"07"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"damage_pct"		"100"
+			"CalculateSpellDamageTooltip" "0"
+		}
+	}
+}
+
+//=================================================================================================================
+// Nyx Assassin: Mana Burn
+//=================================================================================================================
+"nyx_assassin_mana_burn"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"600 600 600 600 600 600 600"
+	"AbilityCastPoint"				"0.4 0.4 0.4 0.4 0.4 0.4 0.4"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"28.0 20.0 16.0 12.0 10.0 8.0 5.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"float_multiplier"		"4.0"
+		}
+	}
+}
+
+//=================================================================================================================
+// Nyx Assassin: Spiked Carapce
+//=================================================================================================================
+"nyx_assassin_spiked_carapace"
+{
+	"MaxLevel"						"7"
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"14"
+	"AbilityCastPoint"				"0 0 0 0 0 0 0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"40 40 40 40 40 40 40"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"reflect_duration"			"2.25"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"stun_duration"				"1.0 1.2 1.6 1.8 1.9 2.0 2.2"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_damage"				"0"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_armor"				"0"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_intellect"				"0"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"burrow_aoe"				"300"
+		}
+	}
+}
+
+//=================================================================================================================
+// Nyx Assassin: Vendetta
+//=================================================================================================================
+"nyx_assassin_vendetta"
+{
+	"MaxLevel"						"7"
+
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"60.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"160 210 260 320 450 560 650"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"40"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"fade_time"				"0.0"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"movement_speed"		"16 18 20 22 24 26 28"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"100 175 225 300 325 400 450"
+		}
+		"05"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"health_regen_rate_scepter"		"4"
+		}
+		"06"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"mana_regen_rate_scepter"		"4"
+		}
+        "07"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "break_duration"		"4.0"
+        }
+		"08"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"shard_magic_resist_reduction"	"20"
+		}
+		"09"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"damage_pct"		"200"
+			"CalculateSpellDamageTooltip" "0"
+		}
+	}
+}
+
+//=================================================================================================================
+// Nyx Assassin: Burrow ( scepter ability )
+//=================================================================================================================
+"nyx_assassin_burrow"
+{
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"health_regen_rate"		"2.5"
+			"RequiresScepter"	"1"
+		}
+		"02"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"mana_regen_rate"		"2.5"
+			"RequiresScepter"	"1"
+		}
+		"03"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"damage_reduction"			"35"
+			"RequiresScepter"	"1"
+		}
+		"04"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"impale_burn_range_increase_pct_tooltip"			"75"
+			"RequiresScepter"	"1"
+		}			
+		"05"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"mana_burn_burrow_range_tooltip"			"1050"
+			"RequiresScepter"	"1"
+		}
+		"06"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"impale_burrow_range_tooltip"			"1225"
+			"RequiresScepter"	"1"
+		}
+		"07"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"impale_burrow_cooldown_tooltip"			"7"
+			"RequiresScepter"	"1"
+		}
+		"08"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"carapace_burrow_range_tooltip"			"400"
+			"RequiresScepter"	"1"
+		
+		}
+	}
+}

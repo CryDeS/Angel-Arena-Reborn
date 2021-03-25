@@ -1,0 +1,126 @@
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"ogre_big_heal" // Активная: Хил на 250 хп + 15хп/мин
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityTextureName"			"custom/ogre_big_heal"
+	"ScriptFile"					"creeps/abilities/ogre_big_heal.lua"
+	
+	"MaxLevel"						"1"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"16.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"425"
+	"AbilityCastAnimation"			"0.5"
+	"AbilityCastRange"				"900"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"heal_const"				"250"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"heap_per_min"				"15"
+		}
+	}
+	
+	"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"ogre_big_aura" // Аура: 1 броню за каждые 5 минут в ауре + 1 стартовая броня
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityTextureName"			"custom/ogre_big_aura"
+	"ScriptFile"					"creeps/abilities/ogre_big_aura.lua"
+	
+	"MaxLevel"						"1"
+
+	"AbilityCastRange"				"700"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_armor"				"1"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"armor_per_five_min"		"1"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"					"700"
+		}
+	}
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"ogre_big_passive" // Пассивная: 25% шанс на баш на 1 секунду, кд 3 секунды, наносит 135 физ урона 
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+	"AbilityTextureName"			"custom/ogre_big_passive"
+	"ScriptFile"					"creeps/abilities/ogre_big_passive.lua"
+	
+	"MaxLevel"						"1"
+
+	"AbilityCooldown"				"3.0"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bash_chance"					"25"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"bash_duration"				"1"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bash_damage"				"135"
+		}
+	}
+}

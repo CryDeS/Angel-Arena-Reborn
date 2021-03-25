@@ -1,0 +1,118 @@
+<root>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/functions.js" />	 
+		<include src="file://{resources}/scripts/custom_game/gold_changer.js" />	
+		<include src="file://{resources}/scripts/custom_game/captains_mode_init.js" /> 
+	</scripts>
+	
+	<script>
+		function DisableElement(root_element, element_name)
+		{
+			var panel = root_element.FindChildTraverse(element_name)
+					
+			if (panel)
+			{
+				panel.style.opacity = "0";
+				panel.style.width = "0%";
+			}
+		}
+		
+		function EnableElement(root_element, element_name)
+		{
+			var panel = root_element.FindChildTraverse(element_name)
+					
+			if (panel)
+			{
+				panel.style.opacity = "1";
+				panel.style.visibility = "visible";
+			}
+		}
+		
+		function OnStateChanged(args)
+		{
+			var dotaHud = $.GetContextPanel().GetParent().GetParent().GetParent()
+			var pregame = dotaHud.FindChildTraverse("PreGame")
+
+			if (Game.GetState() <= 2)
+			{
+				if (pregame)
+					pregame.style.opacity = "0";
+					
+				$.Msg("disabled premenu")	
+			}
+			
+			if (Game.GetState() == 3)
+			{
+				if (pregame)
+				{
+					pregame.style.opacity = "1";
+					$.Msg("enable premenu")	
+					
+					DisableElement(pregame, "GridTeamComp");
+					DisableElement(pregame, "PreMinimapContainer");
+					DisableElement(pregame, "BattlePassContainer");
+					DisableElement(pregame, "AvailableItemsContainer");
+					DisableElement(pregame, "StrategyTabTopRow");
+					DisableElement(pregame, "AvailableItemsContainer");
+					EnableElement(pregame, "Header");
+
+					var tempPanel = pregame.FindChildTraverse("BottomPanels")
+		
+					if (tempPanel)
+					{
+						tempPanel.style.horizontalAlign = "center";
+						tempPanel.style.marginLeft = "60%";
+						tempPanel.style.width = "700px";
+					}
+					
+					tempPanel = pregame.FindChildTraverse("Chat")
+					
+					if (tempPanel)
+					{
+						tempPanel.style.width = "700px"
+					}
+					
+					tempPanel = pregame.FindChildTraverse("StartingItems")
+					
+					if (tempPanel)
+					{
+						tempPanel.style.marginTop = "-85%";
+						tempPanel.style.height = "360px"
+					}
+					
+					tempPanel = pregame.FindChildTraverse("StrategyTab")
+								
+					if (tempPanel)
+					{
+						tempPanel.style.height = "360px"
+					}
+
+				}
+				
+			}
+			if (Game.GetState() >= 5)
+			{
+				
+			}
+		}
+		
+		GameEvents.Subscribe("game_rules_state_change", OnStateChanged);
+
+	</script>
+	<Panel>
+		<CustomUIElement type="Hud" 		layoutfile="file://{resources}/layout/custom_game/duel_ui.xml" />
+		<CustomUIElement type="Hud" 		layoutfile="file://{resources}/layout/custom_game/neutral_item_slot.xml" />
+		<CustomUIElement type="GameInfo" 	layoutfile="file://{resources}/layout/custom_game/game_info.xml" />
+		<CustomUIElement type="Hud" 		layoutfile="file://{resources}/layout/custom_game/repick_menu.xml" />
+
+		<!--<CustomUIElement type="HeroSelection" 		layoutfile="file://{resources}/layout/custom_game/game_info.xml" /> -->
+		
+		<!--  
+		<CustomUIElement type="HudTopBar"			layoutfile="file://{resources}/layout/custom_game/multiteam_top_scoreboard.xml" />
+		<CustomUIElement type="GameSetup"			layoutfile="file://{resources}/layout/custom_game/team_select.xml" />
+		<CustomUIElement type="FlyoutScoreboard"	layoutfile="file://{resources}/layout/custom_game/multiteam_flyout_scoreboard.xml" />
+		<CustomUIElement type="HeroSelection" 		layoutfile="file://{resources}/layout/custom_game/multiteam_hero_select_overlay.xml" />
+		<CustomUIElement type="HeroSelection" 		layoutfile="file://{resources}/layout/custom_game/pick_menu_dummy.xml" /> 
+		-->
+	</Panel>
+</root>

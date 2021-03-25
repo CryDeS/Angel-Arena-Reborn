@@ -1,0 +1,160 @@
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+"ancient_dragon_big_ancient_form"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"ability_lua"
+    "AbilityTextureName"			"custom/ancient_dragon_big_ancient_form"
+    "MaxLevel"						"1"
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "ScriptFile"					"creeps/abilities/npc_aa_creep_ancient_dragon_big/ancient_dragon_big_ancient_form"
+
+    "AbilityCooldown"				"30"
+    "AbilityManaCost"				"25"
+
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"			"FIELD_INTEGER"
+            "add_damage"		"100"
+        }
+        "02"
+        {
+            "var_type"			"FIELD_INTEGER"
+            "add_hp"			"1000"
+        }
+        "03"
+        {
+            "var_type"			"FIELD_FLOAT"
+            "duration"			"10.0"
+        }
+    }
+}
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+"ancient_dragon_big_fly"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"ability_lua"
+    "AbilityTextureName"			"custom/ancient_dragon_big_fly"
+    "MaxLevel"						"1"
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "ScriptFile"					"creeps/abilities/npc_aa_creep_ancient_dragon_big/ancient_dragon_big_fly"
+
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastPoint"				"0.0"
+
+    // Time
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"				"8"
+
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityManaCost"				"25"
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"			"FIELD_INTEGER"
+            "add_ms"			"125"
+        }
+        "02"
+        {
+            "var_type"			"FIELD_FLOAT"
+            "duration"			"4"
+        }
+    }
+}
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"ancient_dragon_big_fire_breath"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"custom/ancient_dragon_big_fire_breath"
+		"ScriptFile"					"creeps/abilities/npc_aa_creep_ancient_dragon_big/ancient_dragon_big_fire_breath"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.45"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"8.5"
+		"AbilityDuration"				"0.6"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"				"360"
+			}
+
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"breath_width_initial"		"175"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"breath_width_end"			"320"
+			}
+
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"breath_distance"			"875"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"breath_speed"				"900"
+            }
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"timerate"					"1"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"duration"					"3"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"ms_reduction"				"-35"
+			}
+		}
+	}

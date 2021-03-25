@@ -1,0 +1,49 @@
+"item_tome_med"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"1193"
+	"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	
+	"AbilityTextureName"	        "tome_med"
+
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"2000"
+	"ItemAliases"					"medical;book;tome;health;mana;med;книга;жизней;медецинский"
+	"ItemQuality"					"component"
+	"ItemStackable"					"1"
+	"ItemPermanent"					"0"
+	"ItemInitialCharges"			"1"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"ItemStockMax"					"6"
+	"ItemStockInitial"				"5"
+	"ItemStockTime"					"180.0"
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"Target"			"CASTER"
+			"ScriptFile"		"tome.lua"
+			"Function"			"MedicalTractat"
+		}
+		"SpendCharge"
+		{
+		}        
+	}
+	//special
+}

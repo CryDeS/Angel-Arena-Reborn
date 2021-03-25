@@ -1,0 +1,67 @@
+"npc_hero_spike"
+{													
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"override_hero" 			"npc_dota_hero_bloodseeker"
+		"Team"						"Good"
+
+
+		// Abilities
+		//-------------------------------------------------------------------------------------------------------------
+		"Ability1"					"spike_dash"		//"angel_arena_dash"				// Ability 1
+		"Ability2"					"spike_heal"				// Ability 2
+		"Ability3"					"angel_arena_shell"					// Ability 3
+		"Ability4"					"generic_hidden"					// Ability 4
+		"Ability5"					"generic_hidden"
+		"Ability6"					"spike_conclusion"
+
+		"Ability10"					"special_bonus_strength_6"
+		"Ability11"					"special_bonus_attack_damage_20"
+		"Ability12"					"spike_special_bonus_attack"
+        "Ability13"					"spike_special_bonus_dash_doubled"
+		"Ability14"					"special_bonus_attack_speed_20" // "special_bonus_attack_speed_20"
+		"Ability15"					"special_bonus_hp_250" //"special_bonus_hp_250"
+		"Ability16"					"spike_special_bonus_shell_25"
+		"Ability17"					"spike_special_bonus_shell_block" //"special_bonus_armor_15"
+
+		// Armor
+		//-------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"				"0"										// Physical protection.
+
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"32"									// Damage range min.
+		"AttackDamageMax"			"36"									// Damage range max.	
+		
+		"AttackRate"				"1.7"									// Speed of attack.
+		"AttackAnimationPoint"		"0.3"									// Normalized time in animation cycle to attack.
+		
+		"AttackAcquisitionRange"	"400"									// Range within a target can be acquired.
+		"AttackRange"				"150"									// Range within a target can be attacked.
+		
+		"ProjectileModel"			""										// Particle system model for projectile.
+		"ProjectileSpeed"			"0"										// Speed of projectile.
+
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"20"									// Base strength
+		"AttributeStrengthGain"		"2.2"									// Strength bonus per level.
+		"AttributeBaseAgility"		"29"									// Base agility
+		"AttributeAgilityGain"		"3.0"									// Agility bonus per level.
+		"AttributeBaseIntelligence"	"2"										// Base intelligence
+		"AttributeIntelligenceGain"	"2.1"									// Intelligence bonus per level.
+		
+		"StatusHealth" 				"200" 
+		"StatusHealthRegen" 		"0.5" 
+		"StatusMana" 				"200" 
+		"StatusManaRegen" 			"1.2" 
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementSpeed"				"300"									// Speed.
+		"MovementTurnRate"			"0.5"									// Turning rate.
+		
+		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+		"HealthBarOffset"			"140"
+}

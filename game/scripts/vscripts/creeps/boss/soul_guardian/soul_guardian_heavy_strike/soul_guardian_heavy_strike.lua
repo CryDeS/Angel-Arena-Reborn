@@ -1,0 +1,10 @@
+soul_guardian_heavy_strike =  class({})
+
+LinkLuaModifier("modifier_soul_guardian_heavy_strike", "creeps/boss/soul_guardian/soul_guardian_heavy_strike/modifier_soul_guardian_heavy_strike", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_soul_guardian_heavy_strike_slow", "creeps/boss/soul_guardian/soul_guardian_heavy_strike/modifier_soul_guardian_heavy_strike_slow", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_soul_guardian_heavy_strike_knockback", "creeps/boss/soul_guardian/soul_guardian_heavy_strike/modifier_soul_guardian_heavy_strike_knockback", LUA_MODIFIER_MOTION_HORIZONTAL)
+LinkLuaModifier("modifier_soul_guardian_heavy_strike_stun", "creeps/boss/soul_guardian/soul_guardian_heavy_strike/modifier_soul_guardian_heavy_strike_stun", LUA_MODIFIER_MOTION_NONE)
+
+function soul_guardian_heavy_strike:GetIntrinsicModifierName()
+    return "modifier_soul_guardian_heavy_strike"
+end

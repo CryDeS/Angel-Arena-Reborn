@@ -1,0 +1,173 @@
+"item_recipe_shard_satan"
+{
+	"AbilityTextureName" 				"item_recipe_shard_satan"
+	
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1707"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_shard_satan"
+	"ItemRequirements"
+	{
+		"01"						"item_shard_satan_dummy"
+	}
+}
+
+"item_shard_satan"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1323"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+	"AbilityTextureName"	        "shard_satan"
+	"ScriptFile"					"items/shards_for_repick/shard_satan/item_shard_satan"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"15.0"
+	"AbilityManaCost"               "120"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemStackable"					"0"
+	"ItemBaseLevel"					"1"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "0"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_per_tick"		"150"
+		}
+		"02"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "move_speed_slow_const" "150"
+        }
+        "03"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "interval_tick"		    "1.0"
+        }
+        "04"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "radius"		        "600"
+        }
+        "05"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "duration"		        "5.0"
+        }
+
+        //Stats
+        "06"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "damage"	            "150"
+        }
+        "07"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "all_stats"	            "25"
+        }
+        "08"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "move_speed_bonus"      "25"
+        }
+	}
+}
+"item_shard_satan_dummy"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1706"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+	"AbilityTextureName"	        "shard_satan"
+	"ScriptFile"					"items/shards_for_repick/shard_satan/item_shard_satan"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"15.0"
+	"AbilityManaCost"               "120"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemStackable"					"0"
+	"ItemBaseLevel"					"1"
+	
+	"ItemKillable"                  "0"
+	"ItemSellable"                  "0"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"0"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_per_tick"		"150"
+		}
+		"02"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "move_speed_slow_const" "150"
+        }
+        "03"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "interval_tick"		    "1.0"
+        }
+        "04"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "radius"		        "600"
+        }
+        "05"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "duration"		        "5.0"
+        }
+
+        //Stats
+        "06"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "damage"	            "150"
+        }
+        "07"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "all_stats"	            "25"
+        }
+        "08"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "move_speed_bonus"      "110"
+        }
+	}
+}

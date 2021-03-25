@@ -1,0 +1,465 @@
+"pet_ancient_hulk_hammer"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"custom/pet_ancient_hulk_hammer"
+	"AOERadius"						"%bolt_aoe"
+	"MaxLevel"						"1"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+		"particle"			"particles/units/heroes/hero_sven/sven_spell_storm_bolt.vpcf"
+		"particle"			"particles/units/heroes/hero_sven/sven_storm_bolt_projectile_explosion.vpcf"
+		"particle"			"particles/generic_gameplay/generic_stunned.vpcf"
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"900"
+	"AbilityCastPoint"				"0.2"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"12.0"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"300"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"140"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bolt_speed"			"1400"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bolt_stun_duration"	"2.0"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bolt_aoe"				"300"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"TrackingProjectile"
+		{
+			"Target"           	"TARGET"
+		    "EffectName"       	"particles/units/heroes/hero_sven/sven_spell_storm_bolt.vpcf"
+		    "Dodgeable"        	"1"
+		    "ProvidesVision"   	"0"
+		    "MoveSpeed"        	"%bolt_speed"
+		    "SourceAttachment"  "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
+		}
+
+		"FireSound"
+		{
+			"EffectName"		"Hero_Sven.StormBolt"
+			"Target"			"CASTER"
+		}
+	}
+
+	"OnProjectileHitUnit"
+	{
+		"FireSound"
+		{
+			"EffectName"		"Hero_Sven.StormBoltImpact"
+			"Target"			"TARGET"
+		}
+
+		"FireEffect"
+		{
+			"EffectName"	"particles/units/heroes/hero_sven/sven_storm_bolt_projectile_explosion.vpcf"
+			"EffectAttachType"	"attach_origin"
+			"Target"		"TARGET"
+			"ControlPointEntities"
+			{
+				"TARGET"	"attach_origin"
+				"TARGET"	"attach_origin"
+				"TARGET"	"attach_origin"
+				"TARGET"	"attach_origin"	//CP3 has a child explosion origin
+			}
+		}
+
+		"ActOnTargets"
+		{
+			"Target"
+			{
+				"Center" "POINT"
+                "Radius" "%bolt_aoe"
+                "Teams" "DOTA_UNIT_TARGET_TEAM_ENEMY" 
+                "Types" "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+			}
+
+			"Action"
+			{
+				"Damage"
+				{
+					"Target"	"TARGET"
+					"Type"		"DAMAGE_TYPE_MAGICAL"
+					"Damage"	"%AbilityDamage"
+				}
+
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_pet_hammer_stun"
+					"Target"		"TARGET"
+				}
+
+			}
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_pet_hammer_stun"
+		{
+			"Duration"		"%bolt_stun_duration"
+			"IsDebuff"		"1"
+			"OverrideAnimation"	"ACT_DOTA_DISABLED"
+
+			"EffectName"	"particles/generic_gameplay/generic_stunned.vpcf"
+			"EffectAttachType"	"follow_overhead"
+
+			"States"
+			{
+				"MODIFIER_STATE_STUNNED"	"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+	}
+}
+
+"pet_ancient_hulk_blink"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+	"AbilityTextureName"			"custom/pet_ancient_hulk_blink"
+	"MaxLevel"						"1"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_queenofpain.vsndevts"
+		"particle"			"particles/units/heroes/hero_queenofpain/queen_blink_end.vpcf"
+		"particle"			"particles/units/heroes/hero_queenofpain/queen_blink_start.vpcf"
+	}
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"0"
+	"AbilityCastPoint"				"0.3"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"12.0"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"50"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"blink_range"			"2150"
+		}
+		
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"min_blink_range"		"200"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"scripts/vscripts/creeps/blink.lua"
+			"Function"		"Blink"
+			"Target"		"POINT"
+		}
+
+		"FireSound"
+		{
+			"EffectName"	"Hero_QueenOfPain.Blink_out"
+			"Target"		"CASTER"
+		}
+
+		"AttachEffect"
+		{
+			"EffectName"	"particles/units/heroes/hero_queenofpain/queen_blink_start.vpcf"
+			"Target"		"CASTER"
+			"EffectAttachType"	"attach_hitloc"
+		}
+
+		"FireSound"
+		{
+			"EffectName"	"Hero_QueenOfPain.Blink_in"
+			"Target"		"CASTER"
+		}
+
+		"AttachEffect"
+		{
+			"EffectName"	"particles/units/heroes/hero_queenofpain/queen_blink_end.vpcf"
+			"Target"		"CASTER"
+			"EffectAttachType"	"follow_origin"
+		}
+	}
+}
+
+"pet_ancient_hulk_invis"
+{
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+	"AbilityTextureName"			"custom/pet_ancient_hulk_invis"
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+	  "soundfile"   "soundevents/game_sounds_heroes/game_sounds_bounty_hunter.vsndevts"
+	  "particle"	"particles/units/heroes/hero_bounty_hunter/bounty_hunter_windwalk.vpcf"
+	  "particle"	"particles/generic_hero_status/status_invisibility_start.vpcf"
+	}
+	"AbilityCooldown"				"30.0"
+	"AbilityCastPoint"				"0.0"
+	"AbilityManaCost"				"100"
+	
+	"MaxLevel"						"1"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"25.0"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"fade_time"					"0.2"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_movespeed"			"15"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"FireEffect"
+		{
+			"EffectName"	"particles/units/heroes/hero_bounty_hunter/bounty_hunter_windwalk.vpcf"
+			"Target"	"CASTER"
+			"EffectAttachType"	"attach_origin"
+		}
+		"FireSound"
+		{
+			"Target"	"CASTER"
+			"EffectName"	"Hero_BountyHunter.WindWalk"
+		}
+		"ApplyModifier"
+		{
+			"Target"	"CASTER"
+			"ModifierName"	"modifier_pet_hulk_fade"
+			"Duration"	"%fade_time"
+		}
+	}
+	"Modifiers"
+	{
+		"modifier_pet_hulk_fade"
+		{
+			"isBuff"	"1"
+			"IsHidden"	"1"
+			"EffectName"	"particles/generic_hero_status/status_invisibility_start.vpcf"
+			"EffectAttachType"	"follow_origin"
+			"OnDestroy"
+			{
+				"ApplyModifier"
+				{
+					"Target" 		"CASTER"
+					"ModifierName" 	"modifier_pet_hulk_invis"
+					"duration"		"%duration"
+				}
+				"ApplyModifier"
+				{
+					"Target" 		"CASTER"
+					"ModifierName" 	"modifier_invisible"
+					"duration"		"%duration"
+				}
+				"ApplyModifier"
+				{
+					"Target" "CASTER"
+					"ModifierName"	"modifier_pet_hulk_speed"
+					"duration"		"%duration"
+				}
+			}
+		}
+
+		"modifier_pet_hulk_invis"
+		{
+			"isBuff"	"1"
+			"isHidden"	"1"
+	
+			"OnAttackLanded"
+			{
+				"RemoveModifier"
+				{
+					"Target"	"CASTER"
+					"ModifierName"	"modifier_pet_hulk_invis"
+				}
+				"RemoveModifier"
+				{
+					"Target"	"CASTER"
+					"ModifierName"	"modifier_invisible"
+				}
+				"RemoveModifier"
+				{
+					"Target" "CASTER"
+					"ModifierName"	"modifier_pet_hulk_speed"
+				}
+			}
+	
+			"OnAbilityExecuted"
+			{
+				"RemoveModifier"
+				{
+					"Target"	"CASTER"
+					"ModifierName"	"modifier_pet_hulk_invis"
+				}
+				"RemoveModifier"
+				{
+					"Target"	"CASTER"
+					"ModifierName"	"modifier_invisible"
+				}
+				"RemoveModifier"
+				{
+					"Target" "CASTER"
+					"ModifierName"	"modifier_pet_hulk_speed"
+				}
+			}
+	
+			"States"
+			{
+				"MODIFIER_STATE_INVISIBLE"	"MODIFIER_STATE_VALUE_ENABLED" 
+			}
+	
+			"OnDestroy"
+			{
+				"RemoveModifier"
+				{
+					"Target"
+					{
+						"Center"	"CASTER"
+						"Flags"	"DOTA_UNIT_TARGET_FLAG_DEAD"
+					}
+					"ModifierName"	"modifier_invisible"
+				}
+				"RemoveModifier"
+				{
+					"Target" "CASTER"
+					"ModifierName"	"modifier_pet_hulk_speed"
+				}
+			}
+		}
+		"modifier_pet_hulk_speed"
+		{
+			"IsHidden"	"1"
+			"IsPassive"	"0"
+			"Properties"
+			{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%bonus_movespeed"
+			}
+		}
+	}	
+}
+
+"pet_ancient_hulk_desolation"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "pet_ancient_hulk_desolation"
+	
+	"MaxLevel"						"1"
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"-20"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"				"6"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_pet_ancient_hulk_desolation"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+
+			"OnAttackLanded"
+			{
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_pet_ah_disarmor"
+					"Target" 
+					{
+						"Center"	"TARGET"
+						"Flags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+					}
+					"Duration"		"%duration"
+				}
+			}
+			
+		}
+
+		"modifier_pet_ah_disarmor"
+		{
+			"IsHidden"	 "0"
+			"IsDebuff"	 "1"
+			"IsPurgable" "1"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armor"
+			}
+		}
+	}
+}

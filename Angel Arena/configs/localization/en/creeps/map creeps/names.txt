@@ -1,0 +1,64 @@
+"npc_aa_creep_zombie_walking"											"Walking Zombie"
+"npc_aa_creep_zombie_lying"												"Lying Zombie"
+
+"npc_aa_creep_wolf_big"													"Mother Wolf"
+"npc_aa_creep_wolf_small"												"Fury Wolf"
+
+"npc_aa_creep_windwing_big"												"Mother Windwing"
+"npc_aa_creep_windwing_small"											"Windwing"
+
+"npc_aa_creep_bear_big"													"Raged Bear"
+"npc_aa_creep_bear_small"												"Forest Bear"
+
+"npc_aa_creep_spider_one"												"Toxic spider"
+"npc_aa_creep_spider_two"												"Tarantul"
+
+"npc_aa_creep_small_satyr_head"											"Satyr Head"
+"npc_aa_creep_small_satyr_middle"										"Satyr Hand"
+"npc_aa_creep_small_satyr_little"										"Satyr Phalanx"
+
+"npc_aa_creep_skelet_1"													"Bone Warrior"
+"npc_aa_creep_skelet_2"													"Skeleton"
+
+"npc_aa_creep_ogre_big"													"Forest Ogre"
+"npc_aa_creep_ogre_small"												"Ogre shaman"
+
+"npc_aa_creep_megacreep_warrior"										"Ancient Warrior"
+"npc_aa_creep_megacreep_mage"											"Ancient Mage"
+
+"npc_aa_creep_harpy_big"												"Electric Harpy"
+"npc_aa_creep_harpy_small"												"Harpy"
+
+"npc_aa_creep_golem_big"												"Golem"
+"npc_aa_creep_golem_small"												"Clay Golem"
+
+"npc_aa_creep_gnoll_one"												"Gnoll Ranger"
+"npc_aa_creep_gnoll_two"												"Gnoll Thief"
+
+"npc_aa_creep_ghost_big"												"Banshi"
+"npc_aa_creep_ghost_small_blue"											"Water Spirit"
+"npc_aa_creep_ghost_small_red"											"Vengence Spirit"
+"npc_aa_creep_ghost_small_green"										"Live Spirit"
+
+"npc_aa_creep_fallen_warrior"											"Demonic Creature"
+"npc_aa_creep_fallen_mage"												"Demonic Witcher"
+
+"npc_aa_creep_demon_warrior"											"Demon Warrior"
+"npc_aa_creep_demon_archer"												"Demon Archer"
+
+"npc_aa_creep_salamander_big"											"Underground Salamander"
+"npc_aa_creep_salamander_small"											"Salamander"
+
+"npc_aa_creep_ancient_satyr_big"										"Ancient Satyr"
+"npc_aa_creep_ancient_satyr_small"										"Ancient Henchman"
+
+"npc_aa_creep_ancient_dragon_big"										"Fire Dragon"
+"npc_aa_creep_ancient_dragon_small"										"Dragon"
+
+"npc_aa_creep_centaur_big"												"Centaur Warlord"
+"npc_aa_creep_centaur_small"											"Centaur"
+
+
+"npc_aa_megacreep_energy_creature"										"Energy Creature"
+"npc_aa_megacreep_beast"												"Legendary Beast"
+"npc_aa_megacreep_golem"												"Abyss Golem"

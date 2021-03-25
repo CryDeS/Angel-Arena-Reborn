@@ -1,0 +1,107 @@
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"creep_bear_small_rage_lua"
+{
+// General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "BaseClass"					    "ability_lua"
+        "AbilityTextureName"			"custom/creep_bear_small_rage_lua"
+        "ScriptFile"					"creeps/abilities/npc_aa_creep_bear_small/creep_bear_small_rage_lua"
+        "MaxLevel"                      "1"
+
+		"AbilityCooldown"				"10"
+		
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+               "var_type"			    "FIELD_INTEGER"
+               "rage_duration"		    "5"
+            }
+
+            "02"
+            {
+                "var_type"			    "FIELD_INTEGER"
+                "bonus_attack_speed_pct"    "100"
+            }
+            "03"
+            {
+                "var_type"			    "FIELD_INTEGER"
+                "bonus_resist_pct"    "65"
+            }
+
+        }
+}
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"creep_bear_small_aura_lua"
+{
+// General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+        "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "BaseClass"					    "ability_lua"
+        "AbilityTextureName"			"custom/creep_bear_small_aura_lua"
+        "ScriptFile"					"creeps/abilities/npc_aa_creep_bear_small/creep_bear_small_aura_lua"
+        "MaxLevel"                      "1"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+               "var_type"			    "FIELD_INTEGER"
+               "aura_radius"		    "600"
+            }
+
+            "02"
+            {
+                "var_type"			    "FIELD_INTEGER"
+                "bonus_movespeed"       "15"
+            }
+
+
+            "03"
+            {
+                "var_type"		        "FIELD_INTEGER"
+                "bonus_damage"	    	"25"
+            }
+
+        }
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"creep_bear_small_regen_lua"
+{
+// General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+        "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "BaseClass"					    "ability_lua"
+        "AbilityTextureName"		    "custom/creep_bear_small_regen_lua"
+        "ScriptFile"					"creeps/abilities/npc_aa_creep_bear_small/creep_bear_small_regen_lua"
+        "MaxLevel"                      "1"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+               "var_type"			    "FIELD_INTEGER"
+               "bonus_regen"		    "30"
+            }
+
+        }
+}

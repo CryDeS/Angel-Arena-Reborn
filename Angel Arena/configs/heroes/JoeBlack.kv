@@ -1,0 +1,69 @@
+"npc_hero_joe_black"
+{													
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"override_hero" "npc_dota_hero_vengefulspirit"
+	"Team"						"Bad"
+
+	"IsGod"						"1"
+	"GodRepickItem"				"item_shard_joe_black"
+	
+	// Abilities
+	//-------------------------------------------------------------------------------------------------------------
+	"Ability1"				"joe_black_face_of_death"
+	"Ability2"				"joe_black_protection"
+	"Ability3"				"joe_black_sleep"
+	"Ability4"				"generic_hidden"					// Ability 4
+	"Ability5"				"generic_hidden"
+	"Ability6"				"joe_black_song"
+
+	"Ability10"				"special_bonus_cooldown_reduction_15"	// 10
+	"Ability11"				"joe_black_special_protection"			// 10
+	"Ability12"				"joe_black_special_song"				// 15
+	"Ability13"				"joe_black_special_unique_aoe"			// 15
+	"Ability14"				"joe_black_special_unique_cooldown"		// 20
+	"Ability15"				"joe_black_special_sleep"				// 20
+	"Ability16"				"joe_black_special_target_ult"			// 25
+	"Ability17"				"special_bonus_armor_15"				// 25
+	
+	// Armor
+	//-------------------------------------------------------------------------------------------------------------
+	"ArmorPhysical"				"1"										// Physical protection.
+
+	// Attack
+	//-------------------------------------------------------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackDamageMin"			"90"									// Damage range min.
+	"AttackDamageMax"			"100"									// Damage range max.	
+	
+	"AttackRate"				"1.7"									// Speed of attack.
+	"AttackAnimationPoint"		"0.2"									// Normalized time in animation cycle to attack.
+	
+	"AttackAcquisitionRange"	"620"									// Range within a target can be acquired.
+	"AttackRange"				"600"									// Range within a target can be attacked.
+	
+	"ProjectileModel"			"particles/units/heroes/hero_vengeful/vengeful_base_attack.vpcf"										// Particle system model for projectile.
+	"ProjectileSpeed"			"1400"										// Speed of projectile.
+
+	// Attributes
+	//-------------------------------------------------------------------------------------------------------------
+	"AttributePrimary"			"DOTA_ATTRIBUTE_INTELLECT"
+	"AttributeBaseStrength"		"28"									// Base strength
+	"AttributeStrengthGain"		"3.0"									// Strength bonus per level.
+	"AttributeBaseAgility"		"44"									// Base agility
+	"AttributeAgilityGain"		"3.0"									// Agility bonus per level.
+	"AttributeBaseIntelligence"	"28"									// Base intelligence
+	"AttributeIntelligenceGain"	"3.5"									// Intelligence bonus per level.
+	
+	"StatusHealth" "200" 
+	//"StatusHealthRegen" "0" 
+	//"StatusMana" "400" 
+	//"StatusManaRegen" "0.3" 
+	// Movement
+	//-------------------------------------------------------------------------------------------------------------
+	"MovementSpeed"				"320"									// Speed.
+	"MovementTurnRate"			"0.5"									// Turning rate.
+	
+	"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+	"HealthBarOffset"			"140"
+}

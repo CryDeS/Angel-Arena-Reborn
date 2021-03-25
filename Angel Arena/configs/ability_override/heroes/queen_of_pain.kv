@@ -1,0 +1,272 @@
+"queenofpain_shadow_strike"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"600"
+	"AbilityCastPoint"				"0.452 0.452 0.452 0.452 0.452 0.452 0.452"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"16.0 14.0 12.0 8.0 6.0 5.0 4.0"
+	"AbilityDuration"				"3.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"110"
+
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"strike_damage"			"80 125 175 250 300 350 400"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration_damage"		"50 55 60 75 95 120 150"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"movement_slow"			"-35"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"projectile_speed"		"900"
+		}			
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_interval"		"1.0"
+		}
+	}
+}
+
+//=================================================================================================================
+// Queen of Pain: Blink
+//=================================================================================================================
+"queenofpain_blink"
+{
+	"MaxLevel"						"7"
+	"AbilityCastPoint"				"0.33 0.33 0.33 0.33 0.33 0.33 0.33"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"15.0 14.0 13.0 10.0 8.0 7.0 6.0"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"60 50 40 30 20 10 0"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"blink_range"			"750 800 850 900 950 1000 1050"
+		}
+		
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"min_blink_range"		"200"
+		}
+	}
+}
+
+//=================================================================================================================
+// Queen of Pain: Scream of Pain
+//=================================================================================================================
+"queenofpain_scream_of_pain"
+{
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"queenofpain_scream_of_pain"
+	
+	"MaxLevel"						"7"
+	
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_queenofpain.vsndevts"
+		"particle"			"particles/units/heroes/hero_queenofpain/queen_scream_of_pain.vpcf"
+		"particle"			"particles/units/heroes/hero_queenofpain/queen_scream_of_pain_owner.vpcf"
+	}	
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"0"
+	"AbilityCastPoint"				"0.0 0.0 0.0 0.0 0.0 0.0 0.0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"9.0"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"120 215 295 380 420 480 520"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"110 120 130 140 150 160 170"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"area_of_effect"		"475"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"projectile_speed"		"900"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_pct"			"125"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"	"Hero_QueenOfPain.ScreamOfPain"
+			"Target"		"CASTER"
+		}
+
+		"AttachEffect"
+		{
+			"EffectName"	"particles/units/heroes/hero_queenofpain/queen_scream_of_pain_owner.vpcf"
+			"EffectAttachType"	"attach_origin"
+			"Target"		"CASTER"
+		}
+
+		"ActOnTargets"
+		{
+			"Target"
+			{
+				"Center"	"CASTER"
+				"Radius"	"%area_of_effect"
+				"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Types"		"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+			}
+
+			"Action"
+			{
+				"TrackingProjectile"
+				{
+					"Target"           "TARGET"
+					"EffectName"       "particles/units/heroes/hero_queenofpain/queen_scream_of_pain.vpcf"
+					"Dodgeable"        "0"
+					"ProvidesVision"   "0"
+					"MoveSpeed"        "%projectile_speed"
+					"SourceAttachment"  "DOTA_PROJECTILE_ATTACHMENT_HITLOCATION"
+				}
+			}
+		}
+	}
+
+	"OnProjectileHitUnit"
+	{
+		"RunScript"
+		{
+			"Target" 		"TARGET"
+			"ScriptFile"    "heroes/qop/scream.lua"
+			"Function"      "Damage"
+			"dmg_const"		"%AbilityDamage"
+			"dmg_pct"		"%damage_pct"
+		}
+	}
+}
+
+//=================================================================================================================
+// Queen of Pain: Sonic Wave
+//=================================================================================================================
+"queenofpain_sonic_wave"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"700"
+	"AbilityCastPoint"				"0.452 0.452 0.452 0.452 0.452 0.452 0.452"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"45"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"250 360 420 530 580 620 630"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"starting_aoe"		"100"
+		}
+		"02"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"distance"			"900"
+		}
+		"03"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"final_aoe"			"450"
+		}
+		"04"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"speed"				"1100"
+		}
+		"05"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"damage"			"360 450 560 675 800 900 1000"
+			"LinkedSpecialBonus"		"special_bonus_unique_queen_of_pain_4"
+		}
+		"06"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"cooldown_scepter"	"35"
+			"RequiresScepter"		"1"
+		}
+		"07"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"damage_scepter"	"400 525 600 725 875 950 1150"
+			"RequiresScepter"		"1"
+		}
+		"08"
+        {
+            "var_type"			"FIELD_INTEGER"
+            "knockback_distance"	"350"
+        }
+        "09"
+        {
+            "var_type"			"FIELD_FLOAT"
+            "knockback_duration" "1.4"
+        }
+	}
+}

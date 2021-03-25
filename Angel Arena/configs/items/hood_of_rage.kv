@@ -1,0 +1,128 @@
+"item_recipe_hood_of_rage"
+{
+		"AbilityTextureName" 				"item_recipe_hood_of_rage"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1141"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1000"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_hood_of_rage"
+	"ItemRequirements"
+	{
+		"01"						"item_hood_of_defiance;item_ring_of_health"
+	}
+}
+
+"item_hood_of_rage"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1142"
+	"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityTextureName"	        "hood_of_rage"
+	"AbilityCastPoint"				"0.0"
+	"AbilityCooldown"				"12.0"
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	"precache"
+	{
+		"soundfile"		"sounds/items/pipe.vsnd"		
+		"particle"		"particles/items2_fx/pipe_of_insight.vpcf"		
+	}
+	
+	// Item Info
+	"ItemCost"						"3975"
+	"ItemStackable"					"0"
+	
+	"ItemPermanent"					"0"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_hpregen"			"50"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"magic_resist"			"30"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"activate_resist"		"50"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"activate_duration"		"4"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_hood_of_rage_active"
+			"Target" 		"CASTER"
+			"Duration"		"%activate_duration"
+		}
+		"FireSound"
+		{
+			"Target"		"CASTER"
+			"EffectName"	"DOTA_Item.Pipe.Activate"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_hor_passive"
+		{
+			"Passive"		"1"
+			"IsHidden"		"1"
+			"IsPurgable"	"0"
+			"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" 			"%bonus_hpregen"	
+				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%magic_resist"				
+			}
+		}
+		
+		"modifier_hood_of_rage_active"
+		{
+			"Passive"	"0"
+			"IsHidden"	"0"
+			"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"TextureName"				"custom/hood_of_rage"
+			
+			"EffectName"				"particles/items2_fx/pipe_of_insight.vpcf"
+			"EffectAttachType"			"attach_origin"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%activate_resist"				
+			}
+		}
+	}
+}

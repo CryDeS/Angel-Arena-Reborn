@@ -1,0 +1,444 @@
+"beastmaster_wild_axes"
+{
+	"MaxLevel"						"7"
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"1400"
+	"AbilityCastPoint"				"0.4"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"19 18 17 16 15 14 13"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"125"		
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"					"140"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"spread"					"353"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"range"						"1400"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"axe_damage"				"80 100 125 175 220 260 280"
+			"LinkedSpecialBonus"		"special_bonus_unique_beastmaster"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"						"20"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage_amp"				"6 8 10 12 14 16 18"
+		}
+		"07"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"scepter_cooldown"			"0"
+			"RequiresScepter"		    "1"
+		}
+		"08"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"min_throw_duration"						"0.4"
+		}
+		"09"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"max_throw_duration"						"1.0"
+		}
+		"10"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage_pct"				"50"
+		}
+	}
+}
+
+"beastmaster_call_of_the_wild"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "AbilitySound"					"Hero_Beastmaster.Call.Boar"
+
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastPoint"				"0.3"
+
+    // Time
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"				"25"
+
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityManaCost"				"50 60 70 80 100 120 140"
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "duration"				"60"
+        }
+        "02"
+        {
+            "var_type"					"FIELD_INTEGER"
+            "boar_hp_tooltip"			"300 450 600 750"
+        }
+        "03"
+        {
+            "var_type"					"FIELD_INTEGER"
+            "boar_damage_tooltip"		"14 26 38 50"
+            "LinkedSpecialBonus"		"special_bonus_unique_beastmaster_2"
+        }
+        "04"
+        {
+            "var_type"					"FIELD_INTEGER"
+            "boar_moveslow_tooltip"				"10 20 30 40"
+        }
+        "05"
+        {
+            "var_type"					"FIELD_FLOAT"
+            "boar_poison_duration_tooltip"	"3.0"
+        }
+    }
+    "AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+}
+
+"beastmaster_call_of_the_wild_boar"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"					"5580"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastPoint"				"0.3"
+
+    // Time
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"				"42 38 34 30"
+
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityManaCost"				"25"
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+    "01"
+        {
+            "var_type"					"FIELD_INTEGER"
+            "duration"				"60 60 60 60"
+        }
+    "02"
+        {
+            "var_type"					"FIELD_INTEGER"
+            "boar_hp_tooltip"				"200 300 400 500"
+        }
+    "03"
+        {
+            "var_type"					"FIELD_INTEGER"
+            "boar_damage_tooltip"				"10 25 40 55"
+            "LinkedSpecialBonus"	"special_bonus_unique_beastmaster_2"
+        }
+    "04"
+        {
+            "var_type"					"FIELD_INTEGER"
+            "boar_moveslow_tooltip"				"30 40 50 60"
+        }
+    "06"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "boar_poison_duration_tooltip"				"3"
+        }
+    }
+}
+//=================================================================================================================
+	// Beastmaster: Call of the Wild Hawk
+	//=================================================================================================================
+	"beastmaster_call_of_the_wild_hawk"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"7231"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilitySound"					"Hero_Beastmaster.Call.Hawk"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.3"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"30 70 90 120"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration"				"60"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"hawk_hp_tooltip"			"300 450 600 750"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"hawk_speed_tooltip"		"300 340 380 420"
+				"LinkedSpecialBonus"		"special_bonus_unique_beastmaster_2"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"hawk_vision_tooltip"		"600 700 800 900"
+				"LinkedSpecialBonus"	"special_bonus_unique_beastmaster_5"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+//=================================================================================================================
+// Beastmaster: Greater Hawk: Invisibility
+//=================================================================================================================
+"beastmaster_hawk_invisibility"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5170"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"fade_time"				"1.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"idle_invis_delay"		"2"		// This plus the fade time equal the total time before the hawk goes invis.
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"fade_tooltip"		"0 0 4 4"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+//=================================================================================================================
+// Beastmaster: Boar: Poison
+//=================================================================================================================
+"beastmaster_boar_poison"
+{
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"attack_speed"			"-35 -50 -70 -120"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"movement_speed"		"-25 -30 -35 -40"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"3.0"
+		}
+	}
+}
+
+//=================================================================================================================
+// Beastmaster: Boar: Poison LEGACY
+//=================================================================================================================
+"beastmaster_greater_boar_poison"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"					"5352"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"attack_speed"			"-120"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"movement_speed"		"-40"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"3.0"
+		}
+	}
+}
+
+//=================================================================================================================
+// Beastmaster: Inner Beast
+//=================================================================================================================
+"beastmaster_inner_beast"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	"AbilitySpecial"
+	{
+		"01"
+		{	
+			"var_type"					"FIELD_INTEGER"
+			"radius"					"1200"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_attack_speed"		"30 55 80 105 130 155 180"
+			"LinkedSpecialBonus"		"special_bonus_unique_beastmaster_4"
+		}
+	}
+}
+
+//=================================================================================================================
+// Beastmaster: Primal Roar
+//=================================================================================================================
+"beastmaster_primal_roar"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.5 0.5 0.5 0.5 0.5 0.5 0.5"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"50.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"150 200 250 350 500 650 700"		
+	
+	// Cast Range
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"1000"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"3.0"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage"					"200 250 300 400 500 600 700"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"side_damage"				"200 250 300 400 500 600 700"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage_radius"				"300"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"slow_movement_speed_pct"	"-50"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"slow_attack_speed_pct"		"-50"
+		}
+		"07"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"push_distance"				"300"
+		}
+		"08"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"push_duration"				"0.6"
+		}
+		"09"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"slow_duration"				"2.0 3.0 4.0 5.0 6.0 7.0 8.0"
+		}
+		"10"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"movement_speed"			"40"
+		}
+		"11"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"movement_speed_duration"			"3.0"
+		}
+		"14"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"damage_pct"				"150 175 200 250 275 300 350"
+			"CalculateSpellDamageTooltip" "0"
+		}
+	}
+}

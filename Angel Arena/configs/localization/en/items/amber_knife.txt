@@ -1,0 +1,7 @@
+"DOTA_Tooltip_Ability_item_amber_knife"							"Amber's Knife"
+"DOTA_Tooltip_Ability_item_amber_knife_Description"				"<h1>Active: Phase Shift</h1> Makes you invisible until the duration ends, or until you attack or cast a spell. Activates invisibility after %invis_fadetime% seconds and invisibility duration is %invis_duration% seconds. Attack from invisibility deals additional %invis_damage% damage."
+"DOTA_Tooltip_Ability_item_amber_knife_lore"					"Knife that belongs to one of minions of God of Cunning. Almost nobody can catch sight of you with that blade."
+"DOTA_Tooltip_Ability_item_amber_knife_bonus_health"			"+$health"
+"DOTA_Tooltip_Ability_item_amber_knife_bonus_stats"				"+$all"
+
+"DOTA_Tooltip_modifier_amber_knife_invis"						"Amber's Knife Invisibility"

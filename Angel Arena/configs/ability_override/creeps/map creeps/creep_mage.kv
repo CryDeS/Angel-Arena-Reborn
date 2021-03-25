@@ -1,0 +1,141 @@
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"creep_mage_heal_lua"
+{
+// General
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+    "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+    "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+    "BaseClass"					    "ability_lua"
+    "AbilityTextureName"			"custom/creep_mage_heal_lua"
+    "ScriptFile"					"creeps/abilities/npc_aa_creep_mage/creep_mage_heal_lua"
+    "MaxLevel"                      "1"
+
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"				"600"
+    "AbilityCastPoint"				"0.2"
+
+    // Time
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"				"15"
+
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityManaCost"				"10"
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "heal"	"300"
+        }
+
+    }
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"creep_mage_healing_aura_lua"
+{
+// General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "BaseClass"					    "ability_lua"
+        "AbilityTextureName"			"custom/creep_mage_healing_aura_lua"
+        "ScriptFile"					"creeps/abilities/npc_aa_creep_mage/creep_mage_healing_aura_lua"
+        "MaxLevel"                      "1"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+               "var_type"			    "FIELD_INTEGER"
+               "heal"		            "30"
+            }
+            "02"
+            {
+               "var_type"			    "FIELD_INTEGER"
+               "radius"	                "1000"
+            }
+        }
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"creep_mage_channel"
+{
+	// General
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+    "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+    "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+    "BaseClass"					    "ability_lua"
+    "AbilityTextureName"			"custom/creep_mage_channel"
+    "ScriptFile"					"creeps/abilities/npc_aa_creep_mage/creep_mage_channel"
+    "MaxLevel"                      "1"
+
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"				"1200"
+    "AbilityCastPoint"				"0.2"
+
+    // Time
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"				"18"
+	"AbilityChannelTime"			"4.6"
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityManaCost"				"325"
+	
+	"precache"
+	{
+		"particle"			"particles/mage_ball/mage_ball.vpcf"
+	}
+	
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "radius"				"1200"
+        }
+		"02"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "damage"				"225"
+        }
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"projectile_speed"		"1250"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"projectile_interval"	"0.2"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"angle"					"27.8"
+		}
+    }
+}

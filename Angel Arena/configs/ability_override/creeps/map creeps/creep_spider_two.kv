@@ -1,0 +1,108 @@
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"spider_two_invis" // Активная: Невидимость, длительность 20 секунд, кд 15 секунд, урон из невидимости магический 250 + отравление на 2 секунды по 85 урона
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"AbilityTextureName"			"custom/spider_two_invis"
+	"ScriptFile"					"creeps/abilities/spider_two_invis.lua"
+	
+	"MaxLevel"						"1"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"15.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"250"
+	"AbilityCastAnimation"			"0.0"
+	"AbilityCastRange"				"0"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"20"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage"					"250"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage_per_sec"			"85"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"poison_duration"			"2"
+		}
+	}
+	
+	"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"spider_two_aura" // Аура: замедление мувспида всех врагов в радиусе 400 на 18% 
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityTextureName"			"custom/spider_two_aura"
+	"ScriptFile"					"creeps/abilities/spider_two_aura.lua"
+	
+	"MaxLevel"						"1"
+
+	"AbilityCastRange"				"400"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"					"400"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"move_slow"					"-18"
+		}
+	}
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"spider_two_passive" // Пассивная: позволяет ему ходить по хг
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"custom/spider_two_passive"
+	"ScriptFile"					"creeps/abilities/spider_two_passive.lua"
+	
+	"MaxLevel"						"1"
+}

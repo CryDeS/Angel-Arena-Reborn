@@ -1,0 +1,188 @@
+"item_recipe_angels_greaves"
+{
+	"AbilityTextureName" 				"item_recipe_angels_greaves"
+	
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1109"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1000"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_angels_greaves"
+	"ItemRequirements"
+	{
+		"01"						"item_boss_soul;item_guardian_greaves"
+	}
+}
+
+"item_angels_greaves"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1110"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityTextureName"	        "angels_greaves"
+
+	"AbilityCooldown"				"50.0"
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	"ItemCost"						"17300"
+	"ItemStackable"					"0"
+	
+	"ItemPermanent"					"0"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"movespeed"				"55"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_mana"			"600"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_att"				"17"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"15"
+		}
+		
+		//aura
+		
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"aura_armor"			"12"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"aura_hpregen"			"75"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"aura_radius"			"1200"
+		}
+		
+		//active
+		
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"activate_hp"			"600"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"activate_mana"			"300"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"activate_hp_pct"		"25.0"
+		}
+		"11"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"activate_mana_pct"		"25.0"
+		}
+		"12"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"activate_radius"		"1200"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"			"items/angels_greaves.lua"
+			"Function"				"StartAngelGreaves"
+			"ActivateHealth"		"%activate_hp"
+			"ActivateMana"			"%activate_mana"
+			"ActivateHPPCT"			"%activate_hp_pct"
+			"ActivateMPPCT"			"%activate_mana_pct"
+			"Radius"				"%activate_radius"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_angels_greaves_passive"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+			"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%bonus_armor"
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"				"%bonus_att"
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"			"%bonus_att"
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"			"%bonus_att"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"		"%movespeed"
+				"MODIFIER_PROPERTY_MANA_BONUS"						"bonus_mana"
+			}
+		}
+		
+		"modifier_item_angels_greaves_emitter"
+		{
+			"Passive"				"1"
+			"IsHidden"				"1"
+			
+			"Aura" 					"modifier_item_angels_greaves_aura"
+			"Aura_Radius" 			"%aura_radius"
+			"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+			"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+			"Aura_ApplyToCaster" 	"1"
+		}
+		"modifier_item_angels_greaves_aura"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			
+			
+			"TextureName" "custom/angels_greaves"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"		"%aura_hpregen"
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%aura_armor"
+			}
+		}
+		"modifier_item_angels_greaves_fuckit"
+		{
+			"IsHidden"		"0"
+			"Duration"		"30"
+			
+			"TextureName" "custom/angels_greaves"
+		}
+	}
+}

@@ -1,0 +1,51 @@
+"item_tome_agi_6"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"1187"
+	"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	
+	"AbilityTextureName"	        "tome_agi_6"
+
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1800"
+	"ItemQuality"					"component"
+	"ItemStackable"					"1"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+	"ItemAliases"					"agi;book;tome;stats;книга;ловкости"
+	"ItemPermanent"					"0"
+	"ItemInitialCharges"			"1"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"ItemStockMax"					"20"
+	"ItemStockInitial"				"5"
+	"ItemStockTime"					"120.0"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"Target"			"CASTER"
+			"ScriptFile"		"tome.lua"
+			"Function"			"UpgradeStats"
+			"Agi"				"6"
+		}
+		"SpendCharge"
+		{
+		}        
+	}
+	//special
+}

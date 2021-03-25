@@ -1,0 +1,107 @@
+"item_recipe_dimensional_predictor"
+{
+	"AbilityTextureName" 				"item_recipe_dimensional_predictor"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1318"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"100"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_dimensional_predictor"
+	"ItemRequirements"
+	{
+		// 1000 + 2000 + 500
+		"01"						"item_ogre_axe;item_hyperstone;"
+	}
+}
+
+"item_dimensional_predictor"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1319"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+	"AbilityTextureName"	        "dimensional_predictor"
+	"ScriptFile"					"items/dimensional_predictor/dimensional_predictor.lua"
+	
+	"precache"
+	{
+		"particle"			"particles/status_fx/status_effect_blur.vpcf"
+		"particle"			"particles/econ/items/sven/sven_warcry_ti5/sven_spell_warcry_small_c_it_5.vpcf"
+		"particle"			"particles/units/heroes/hero_sven/sven_storm_bolt_projectile_explosion.vpcf"
+	}
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"35.0"
+	"AbilityCastRange"				"0"
+	"AbilityCastPoint"				"0.0"
+	"AbilityManaCost"				"0"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"3100"
+	"ItemStackable"					"0"
+	"ItemBaseLevel"					"1"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_strength"		"16"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attackspeed"		"50"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"30"
+		}
+		
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_magresist"		"20"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"passive_cd"			"3"
+		}		
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"passive_damage_att"	"300"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"active_duration"		"25"
+		}
+		"08"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "radius"		        "300"
+        }
+
+	}
+}

@@ -1,0 +1,354 @@
+"kunkka_torrent"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"1100"
+	"AbilityCastPoint"				"0.4"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"10"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"120 120 120 120 120 120 120"
+
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"					"225"
+			"LinkedSpecialBonus"		"special_bonus_unique_kunkka"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"movespeed_bonus"			"-35"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"slow_duration"				"1.0 1.5 2.0 2.5 3.0 3.5 4.0"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"stun_duration"				"1.4 1.6 1.7 1.8 1.9 2.0 2.2"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"delay"						"1.6"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"torrent_damage"			"145 215 250 325 425 475 525"
+			"LinkedSpecialBonus"		"special_bonus_unique_kunkka_2"
+		}
+	}		
+}
+
+//=================================================================================================================
+// Kunkka: Tidebringer
+//=================================================================================================================
+"kunkka_tidebringer"
+{
+	"MaxLevel"						"7"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"2.0"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"cleave_starting_width"			"150"
+		}			
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"cleave_ending_width"			"450 475 500 525 550 575 600"
+		}			
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"cleave_distance"			"650 750 800 850 950 1000 1100"
+		}
+		"04"
+		{
+			"var_type"					    "FIELD_INTEGER"
+			"damage_bonus"				    "65 75 85 95 115 135 150"
+			"CalculateSpellDamageTooltip"	"0"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"cleave_damage"				"100 110 120 130 140 150 165"
+			"LinkedSpecialBonus"		"special_bonus_unique_kunkka_4"
+		}
+	}
+}
+
+//=================================================================================================================
+// Kunkka: X Marks the Spot
+//=================================================================================================================
+"kunkka_x_marks_the_spot"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"600 800 1000 1100 1200 1400 1600"
+	"AbilityCastPoint"				"0.4 0.4 0.4 0.4 0.4 0.4 0.4"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"26 24 20 16 14 10 8"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"60 50 40 30 20 10 0"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"6.0"
+		}	
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"allied_duration"			"12.0"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"fow_range"					"400"
+		}	  
+		"04"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"fow_duration"				"5.94"
+		}	
+	}
+}
+
+//=================================================================================================================
+// Kunkka: Return
+//=================================================================================================================
+"kunkka_return"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.4 0.4 0.4 0.4 0.4 0.4 0.4"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"1.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"0"
+}
+
+//=================================================================================================================
+// Kunkka: Ghostship
+//=================================================================================================================
+"kunkka_ghostship"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"1000 1100 1200 1300 1400 1500 1600"
+	"AbilityCastPoint"				"0.3"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"60.0 55.0 50.0 45.0 40.0 35.0 30.0"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"400 500 600 700 800 900 1000"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"150 200 250 300 350 400 450 500"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"tooltip_delay"				"3.0"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"ghostship_distance"		"1500"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"ghostship_width"			"425"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"movespeed_bonus"			"10"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"buff_duration"				"10"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"stun_duration"				"1.4"
+		}
+		"07"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"ghostship_speed"			"650"
+		}
+		"08"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"ghostship_absorb"			"40 42 45 47 50 55 60"
+		}
+		"09"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"damage_pct"				"250.0"
+			"CalculateSpellDamageTooltip" "0"
+		}
+	}
+}
+
+
+"kunkka_torrent_storm"
+{
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.4"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+
+	// Time
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"75"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"250"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"torrent_interval"			"0.5"
+			"RequiresScepter"			"1"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"torrent_duration"			"5.5"
+			"RequiresScepter"			"1"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"torrent_min_distance"		"300"
+			"RequiresScepter"			"1"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"torrent_max_distance"		"750"
+			"RequiresScepter"			"1"
+		}
+	}
+}
+
+"kunkka_tidal_wave"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+	"MaxLevel"						"1"
+	"FightRecapLevel"				"1"
+	"IsGrantedByShard"			"1"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"1400"
+	"AbilityCastPoint"				"0.2"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+	
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"16"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"150"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"speed"				"700"
+		}
+		"02"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"radius"			"750"
+		}
+		"03"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"damage"			"625"
+		}
+		"04"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"duration"			"1.25"
+		}
+		"05"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"knockback_distance"		"600"
+		}
+	}
+}

@@ -1,0 +1,348 @@
+"snapfire_scatterblast"
+{
+	"MaxLevel" "7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"800"
+	"AbilityCastPoint"				"0.4"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+	"AnimationPlaybackRate"			"1.2" // 1.0 corresponds to cast point of 0.45 or so
+
+	// Time
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"10.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"80 90 100 110 130 140 150"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage"					"150 225 300 350 400 425 500"
+			"LinkedSpecialBonus"		"special_bonus_unique_snapfire_7"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"blast_speed"				"3000"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"blast_width_initial"		"225"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"blast_width_end"			"400"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"debuff_duration"			"1.0"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"movement_slow_pct"			"100"
+		}
+		"07"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"attack_slow_pct"			"100"
+		}
+		"08"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"point_blank_range"			"450"
+		}
+		"09"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"point_blank_dmg_bonus_pct"	"50.0"
+		}
+	}
+}
+
+//=================================================================================================================
+// Ability: Snapfire Mortimer Kisses
+//=================================================================================================================
+"snapfire_mortimer_kisses"
+{
+	"MaxLevel" "7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"3000"
+	"AbilityCastPoint"				"0.5"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+	// Damage
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"65"
+	"AbilityDuration"				"6.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"125 150 175 195 220 245"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"projectile_count"		"8"
+			"LinkedSpecialBonus"	"special_bonus_unique_snapfire_1"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"projectile_speed"		"1300"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"projectile_width"		"130"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"impact_radius"			"275"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_per_impact"		"300 400 500 600 700 800 900"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration_tooltip"		"6.0"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"projectile_vision"		"500"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"turn_rate"				"75"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"burn_interval"			"0.5"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"burn_damage"			"100 150 200 250 300 350 400"
+		}
+		"11"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"move_slow_pct"			"25"
+			"LinkedSpecialBonus"	"special_bonus_unique_snapfire_4"
+		}
+		"12"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"burn_ground_duration"	"3.0"
+		}
+		"13"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"dist_change_speed"		"75"
+		}
+		"14"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"min_range"				"600"
+		}
+		"15"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"min_lob_travel_time"	"0.8"
+		}
+		"16"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"max_lob_travel_time"	"2.0"
+		}
+		"17"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"delay_after_last_projectile"	"0.5"
+		}
+		"18"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"burn_linger_duration"	"1.0"
+		}
+	}
+}
+
+//=================================================================================================================
+// Ability: Snapfire Firesnap Cookie
+//=================================================================================================================
+"snapfire_firesnap_cookie"
+{
+	"MaxLevel" "7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"700"
+	"AbilityCastPoint"				"0.2"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+
+	// Time
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"18 17 16 15 14 13 12"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"projectile_speed"		"800"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"pre_hop_duration"		"0.0"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"jump_duration"			"0.484" //"0.431 0.484 0.538 0.592" // proportional to horizontal distance
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"jump_height"			"257" //"228 257 285 314" // proportional to horizontal distance
+		}
+		"05"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"jump_horizontal_distance"	"450" //"400 450 500 550"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"pre_land_anim_time"	"0.14"
+		}
+		"07"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"landing_gesture_duration"	"0.6"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"impact_radius"			"300"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"impact_damage"			"90 160 230 300 400 500 600"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"impact_stun_duration"	"1.6 1.8 2.1 2.3 2.5 2.8 3.0"
+		}
+		"11"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"self_cast_delay"		"0.4"
+		}
+	}
+}
+
+//=================================================================================================================
+// Ability: Snapfire Lil Shredder
+//=================================================================================================================
+"snapfire_lil_shredder"
+{
+	"MaxLevel" "7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+	"AbilityCastRange"				"800"
+	"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_3"
+
+	// Time
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"16 15 14 13 12 11 10"
+	"AbilityDuration"				"8"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"75"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage"					"45 60 75 90 110 130 140"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"buffed_attacks"			"6"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"attack_speed_bonus"		"300"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"attack_range_bonus"		"75 150 225 300 325 450 500"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"buff_duration_tooltip"		"8"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"base_attack_time"			"1.0"
+		}
+		"07"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"armor_reduction_per_attack"	"1"
+		}
+		"08"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"armor_duration"				"4.0"
+		}
+	}
+}

@@ -1,0 +1,77 @@
+"item_recipe_bandoline_blade"
+{
+	"AbilityTextureName" 				"item_recipe_bandoline_blade"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1540"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"900"
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_bandoline_blade"
+	"ItemRequirements"
+	{
+		"01"						"item_cursed_orb;item_steel_frame"
+	}
+}
+
+"item_bandoline_blade"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1539"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "bandoline_blade"
+	"ScriptFile"					"items/bandoline_blade/bandoline_blade"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"3200"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"ItemQuality"					"common"
+
+	"AbilityCooldown"				"3.0"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_damage"			"25"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_as"				"20"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_stats"			"8"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"abilitycooldown"		""
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"attack_delay"			"0.1"
+		}
+	}
+}

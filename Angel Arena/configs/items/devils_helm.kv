@@ -1,0 +1,76 @@
+"item_recipe_devils_helm"
+{
+	"AbilityTextureName" 				"item_recipe_devils_helm"
+	
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1558"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1800"
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_devils_helm"
+	"ItemRequirements"
+	{
+		"01"						"item_corrupted_skull;item_corrupted_skull"
+	}
+}
+
+"item_devils_helm"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1559"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "devils_helm"
+	"ScriptFile"					"items/devils_helm/devils_helm"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"7200"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"ItemQuality"					"common"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_damage"			"50"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_str"				"10"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_status_resist"	"15"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"disarmor"				"9"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"disarmor_duration"		"5"
+		}
+	}
+}

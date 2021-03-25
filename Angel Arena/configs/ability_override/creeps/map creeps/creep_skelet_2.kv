@@ -1,0 +1,126 @@
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+"skelet_2_aura"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+    "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "BaseClass"					    "ability_lua"
+    "AbilityTextureName"			"custom/skelet_2_aura"
+    "ScriptFile"					"creeps/abilities/npc_aa_creep_skelet_2/skelet_2_aura"
+     "MaxLevel"                      "1"
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"			"FIELD_INTEGER"
+            "damage_per_second"	"5"
+        }
+        "02"
+        {
+            "var_type"			"FIELD_INTEGER"
+            "radius"	    	"700"
+        }
+        "03"
+        {
+             "var_type"			"FIELD_INTEGER"
+             "time_rate_sec"	"1"
+        }
+
+    }
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"skelet_2_heal"
+{
+    // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "BaseClass"					    "ability_lua"
+        "AbilityTextureName"			"custom/skelet_2_heal"
+        "ScriptFile"					"creeps/abilities/npc_aa_creep_skelet_2/skelet_2_heal"
+        "MaxLevel"                      "1"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"				"600"
+
+        // Time
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"				"15"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"				"10"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"			                "FIELD_INTEGER"
+                "heal_const"	                    "150"
+            }
+            "02"
+            {
+                "var_type"			     	        "FIELD_INTEGER"
+                "heal_per_main_stat_target_coef"  	"1"
+            }
+
+        }
+}
+
+
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"skelet_2_buff_hp"
+{
+    // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "BaseClass"					    "ability_lua"
+        "AbilityTextureName"			"custom/skelet_2_buff_hp"
+        "ScriptFile"					"creeps/abilities/npc_aa_creep_skelet_2/skelet_2_buff_hp"
+        "MaxLevel"                      "1"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"				"1000"
+
+        // Time
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"				"15"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"				"FIELD_INTEGER"
+                "bonus_health_pct"      "25"
+            }
+            "02"
+            {
+                "var_type"				"FIELD_INTEGER"
+                "duration"             	"3"
+            }
+
+        }
+}

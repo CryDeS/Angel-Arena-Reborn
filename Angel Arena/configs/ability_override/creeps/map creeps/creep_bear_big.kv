@@ -1,0 +1,103 @@
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"creep_bear_big_clap_silence_lua"
+{
+// General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+        //"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "BaseClass"					    "ability_lua"
+        "AbilityTextureName"			"custom/creep_bear_big_clap_silence_lua"
+        "ScriptFile"					"creeps/abilities/npc_aa_creep_bear_big/creep_bear_big_clap_silence_lua"
+        "MaxLevel"
+                        "1"
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint"				"0.2"
+
+        // Time
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"				"15"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"				"50"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+               "var_type"			    "FIELD_INTEGER"
+               "radius"		            "350"
+            }
+
+            "02"
+            {
+                "var_type"			    "FIELD_INTEGER"
+                "duration"              "3"
+            }
+        }
+}
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"creep_bear_big_passive_anticreep_lua"
+{
+// General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "BaseClass"					    "ability_lua"
+        "AbilityTextureName"			"custom/creep_bear_big_passive_anticreep_lua"
+        "ScriptFile"					"creeps/abilities/npc_aa_creep_bear_big/creep_bear_big_passive_anticreep_lua"
+        "MaxLevel"                      "1"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+               "var_type"			    "FIELD_INTEGER"
+               "damage_creep_pct"		            "100"
+            }
+        }
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"creep_bear_big_aura_lua"
+{
+// General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+        "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "BaseClass"					    "ability_lua"
+        "AbilityTextureName"			"custom/creep_bear_big_aura_lua"
+        "ScriptFile"					"creeps/abilities/npc_aa_creep_bear_big/creep_bear_big_aura_lua"
+        "MaxLevel"                      "1"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+               "var_type"			    "FIELD_INTEGER"
+               "aura_radius"		    "700"
+            }
+
+            "02"
+            {
+                "var_type"			    "FIELD_INTEGER"
+                "bonus_attack"    "20"
+            }
+
+        }
+}

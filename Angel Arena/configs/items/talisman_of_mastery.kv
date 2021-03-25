@@ -1,0 +1,63 @@
+"item_talisman_of_mastery"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"								"1299"
+	"BaseClass"							"item_lua"
+	"AbilityTextureName" 				"talisman_of_mastery"
+	"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"ItemDeclarations"					"DECLARE_PURCHASES_TO_TEAMMATES"
+	"ScriptFile"						"items/talisman_of_mastery/talisman_of_mastery.lua"
+	
+	"ItemQuality"						"common"
+	"ItemDroppable" 					"1"
+	"ItemCastOnPickup"					"0"
+	"ItemKillable"						"1"
+	"ItemPurchasable"					"1"
+	"ItemSellable"						"1"
+	"ItemCost"							"375"
+	"ItemStackable"						"0"
+	"AbilityCooldown"					"2.5"
+	"ShouldBeInitiallySuggested"		"1"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attack"			"2"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_str"				"2"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FlOAT"
+			"bonus_hp_regen"		"0.5"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_to_exp_ranged"	"12"
+		}
+        "05"
+        {
+            "var_type"				"FIELD_FlOAT"
+            "damage_to_exp_melee" 	"15"
+        }
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"min_exp_ranged"		"22"
+		}
+		"07"
+        {
+            "var_type"				"FIELD_FlOAT"
+            "min_exp_melee"			"32"
+        }
+	}
+}

@@ -1,0 +1,241 @@
+//=================================================================================================================
+// Broodmother: Spawn Spiderlings
+//=================================================================================================================
+"broodmother_spawn_spiderlings"
+{
+	"MaxLevel"						"7"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"900"
+	"AbilityCastPoint"				"0.2 0.2 0.2 0.2 0.2 0.2 0.2"
+	"AbilityCooldown"				"10.0 10.0 10.0 10.0 10.0 10.0 10.0"
+	"AbilityManaCost"				"120 120 120 120 120 120 120"
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityModifierSupportValue"	"0.0"	// Modifier has no support value
+		
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"buff_duration"			"3.0"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"spiderling_duration"	"60"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage"				"125 225 275 325 350 400 450"
+			"LinkedSpecialBonus"	"special_bonus_unique_broodmother_3"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"count"					"1 2 3 4 5 6 7"
+		}	 
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"projectile_speed"	"1200"
+		}
+	}
+}
+
+
+//=================================================================================================================
+// Broodmother: Spawn Spiderites
+//=================================================================================================================
+"broodmother_spawn_spiderite"
+{
+	"MaxLevel"								"7"
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"spiderite_duration"			"60.0"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"buff_duration"					"4.0"
+		}
+	}
+}
+
+
+//=================================================================================================================
+// Broodmother: Spin Web
+//=================================================================================================================
+"broodmother_spin_web"
+{
+	"MaxLevel"						"7"
+	"AbilityCharges"				"4 6 8 10 12 14 16"
+	"AbilityChargeRestoreTime"		"15.0"
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"1000"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"count"					"4 5 6 8 9 10 12"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"heath_regen"			"2 4 6 8 16 20 36"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_movespeed"		"20 25 30 35 40 45 50"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"max_charges_scepter"	"6 9 12 15 18 21 24"
+			"RequiresScepter"		"1"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_movespeed_scepter"	"30 37 45 52 60 67 75"
+			"RequiresScepter"		"1"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"count_scepter"			"6 9 12 15 18 21 24"
+			"RequiresScepter"		"1"
+		}
+	}
+}
+
+//=================================================================================================================
+// Broodmother: Incapacitating Bite
+//=================================================================================================================
+"broodmother_incapacitating_bite"
+{
+	"MaxLevel"						"7"
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"miss_chance"			"30 45 50 65 75 80 85"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_movespeed"		"-10 -15 -17 -20 -22 -25 -30"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"2.0 2.0 2.0 2.0 2.0 2.0 2.0"
+		}
+	}
+}
+
+//=================================================================================================================
+// Broodmother: Insatiable Hunger
+//=================================================================================================================
+"broodmother_insatiable_hunger"
+{
+	"MaxLevel"						"7"
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.1"
+	"AbilityCooldown"				"30.0"
+	"AbilityManaCost"				"100 150 200 250 300 350 400"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"100 150 200 225 250 375 400"
+			"LinkedSpecialBonus"	"special_bonus_unique_broodmother_1"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"lifesteal_pct"			"60 70 80 90 115 130 150"
+			"LinkedSpecialBonus"	"special_bonus_unique_broodmother_1"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"14.0"
+		}
+	}
+}
+
+"broodmother_silken_bola"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+	"FightRecapLevel"				"1"
+	"MaxLevel"						"1"
+	"IsGrantedByShard"				"1"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"900"
+	"AbilityCastPoint"				"0.1"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"12"
+
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"50"
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityModifierSupportValue"	"0.3"	// Primarily about the damageo
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"2"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"projectile_speed"		"1200"
+		}
+	}
+	"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+}

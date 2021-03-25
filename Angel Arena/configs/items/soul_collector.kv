@@ -1,0 +1,184 @@
+"item_recipe_soul_collector"
+{
+	"AbilityTextureName" 			"item_recipe_soul_collector"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1501"
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1250"
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_soul_collector"
+	"ItemRequirements"
+	{
+		"01"						"item_soul_stone;item_soul_merchant;item_boss_soul"
+	}
+}
+
+"item_soul_collector"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1500"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+	"AbilityTextureName"	        "soul_collector"
+	"ScriptFile"					"items/soul_collector/soul_collector"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"13.0"
+	"AbilityManaCost"				"350"
+	"AbilityCastRange"				"1300"
+	"AbilityCastPoint"				"0.0"
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"10310"
+	"ItemStackable"					"0"
+	"ItemBaseLevel"					"2"
+	"ItemQuality"					"epic"
+	"AbilitySharedCooldown"			"item_life_catcher"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"AbilitySpecial"
+	{
+	    //Stats
+		"01"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "bonus_damage"			"100"
+        }
+		
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_str"				"35"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_int"				"35"
+		}
+		"04"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "bonus_as"				"50"
+        }
+		"05"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "bonus_agi"				"40"
+        }
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"health_regen"			"15"
+		}
+		"07"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "bonus_manaregen"		"7.5"
+        }
+		"08"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "spell_amp" 			"35"
+        }
+
+		// Active 
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"wave_width_init"		"150"
+		}
+		"10"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "wave_width_end"		"250"
+        }
+        "11"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "wave_speed"		    "1000"
+        }
+		"12"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"projectile_speed"		"1050"
+		}
+		"13"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "decrease_heal_pct"		"100"
+        }
+        "14"
+        {
+            "var_type"				    "FIELD_INTEGER"
+            "decrease_heal_duration"    "5"
+        }
+        "15"
+        {
+            "var_type"				    "FIELD_INTEGER"
+            "slow_percent"	            "60"
+        }
+		
+        // Damage and heal
+        "16"
+        {
+            "var_type"				    "FIELD_INTEGER"
+            "damage"                    "900"
+        }
+        "17"
+        {
+            "var_type"				    "FIELD_INTEGER"
+            "mainstat_to_dmg_pct"       "300"
+        }
+        "18"
+        {
+            "var_type"				    "FIELD_FLOAT"
+            "heal_pct"              	"1.0"
+        }
+		
+		// Dmg to exp 
+		"19"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_to_exp_ranged"	"20"
+		}
+        "20"
+        {
+            "var_type"				"FIELD_FlOAT"
+            "damage_to_exp_melee" 	"25"
+        }
+		"21"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"min_exp_ranged"		"60"
+		}
+		"22"
+        {
+            "var_type"				"FIELD_FlOAT"
+            "min_exp_melee"			"100"
+        }
+		"23"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"exp_cooldown"			"1"
+		}
+	}
+}

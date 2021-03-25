@@ -1,0 +1,51 @@
+"itembuilds"
+{
+	"author"		"Valve"
+	"hero"			"npc_dota_hero_phoenix"
+	"Title"			"Recommended items for pHOENIX"
+	
+	"Items"
+	{		
+		"#DOTA_Item_Build_Starting_Items"
+		{
+
+			"item"		"item_tango"
+			"item"		"item_talisman_of_mastery"
+			"item"		"item_courier"
+		}
+
+		"#DOTA_Item_Build_Early_Game"
+		{
+
+			"item"		"item_tranquil_boots"
+			"item"		"item_urn_of_shadows"
+			"item"		"item_veil_of_discord"
+			"item"		"item_shivas_guard"
+			"item"		"item_ward_observer"
+		}
+
+		"#DOTA_Item_Build_Mid_Items"
+
+		{
+			"item"		"item_soul_vessel"
+			"item"		"item_guardian_greaves"
+			"item"		"item_shivas_guard_2"
+			"item"		"item_plague_staff"
+			"item"		"item_sheepstick"
+			"item"		"item_ultimate_scepter"
+
+		}
+
+		"#DOTA_Item_Build_Late_Items"
+		{
+
+			"item"		"item_guardian_greaves"
+			"item"		"item_sphere_2"
+			"item"		"item_lotus_orb"
+			"item"		"item_sheepstick"
+			"item"		"item_octarine_core_2"
+			"item"		"item_recovery_orb"
+
+		}
+	}
+}

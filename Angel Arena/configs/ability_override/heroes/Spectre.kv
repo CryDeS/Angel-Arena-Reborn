@@ -1,0 +1,266 @@
+//=================================================================================================================
+// Spectre: Spectral Dagger
+//=================================================================================================================
+"spectre_spectral_dagger"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"2000"
+	"AbilityCastPoint"				"0.3"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"16.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"45 50 55 60 65 70 75"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage"				"100 166 233 300 366 433 500"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_movespeed"		"8 12 16 20 26 28 30"
+			"LinkedSpecialBonus"	"special_bonus_unique_spectre_3"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"dagger_path_duration"	"12.0"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"hero_path_duration"	"7.0"
+		}
+		"05"	
+		{
+			"var_type"				"FIELD_FLOAT"
+			"buff_persistence"		"4.0"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"dagger_radius"			"125"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"path_radius"			"175"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"vision_radius"			"200"
+		}
+		"11"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"speed"					"800"
+		}
+		"12"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"dagger_grace_period"	"4.0"
+		}
+	}
+}
+
+//=================================================================================================================
+// Spectre: Desolate
+//=================================================================================================================
+"spectre_desolate"
+{
+	"MaxLevel"						"7"
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"50 55 60 65 70 75 80"
+			"LinkedSpecialBonus"	"special_bonus_unique_spectre_2"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"325"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"blind_pct"				"25"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"blind_duration"		"5.0"
+		}
+	}
+}
+
+//=================================================================================================================
+// Spectre: Dispersion
+//=================================================================================================================
+"spectre_dispersion"
+{
+	"MaxLevel"						"7"
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_reflection_pct"	"16 17 18 19 20 21 22"
+			"LinkedSpecialBonus"	"special_bonus_unique_spectre_5"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"min_radius"			"300"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"max_radius"			"600"
+		}	
+	}
+}
+
+//=================================================================================================================
+// Spectre: Haunt
+//=================================================================================================================
+"spectre_haunt"
+{
+	"MaxLevel"						"7"
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.3"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"90.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"150 200 300 400 500 600 700"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"5.0 5.5 6.0 6.5 7.0 7.5 8.0"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"illusion_damage_outgoing"	"-60"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"tooltip_outgoing"			"40"
+			"LinkedSpecialBonus"		"special_bonus_unique_spectre_4"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"illusion_damage_incoming"	"250"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"tooltip_illusion_total_damage_incoming"	"350"
+		}			
+		"06"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"attack_delay"				"1.0"
+		}			
+	}
+}
+
+
+"spectre_haunt_single"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.3"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"45"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"180"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"7.0"
+			"RequiresScepter"			"1"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"illusion_damage_outgoing"	"-60"
+			"RequiresScepter"			"1"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"tooltip_outgoing"			"40"
+			"LinkedSpecialBonus"		"special_bonus_unique_spectre_4"
+			"RequiresScepter"			"1"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"illusion_damage_incoming"	"100"
+			"RequiresScepter"			"1"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"tooltip_illusion_total_damage_incoming"	"200"
+			"RequiresScepter"			"1"
+		}			
+		"06"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"attack_delay"				"1.0"
+			"RequiresScepter"			"1"
+		}
+        "07"
+        {
+            "var_type"					"FIELD_FLOAT"
+            "tooltip_cooldown"			"45"
+            "RequiresScepter"			"1"
+        }
+	}
+}

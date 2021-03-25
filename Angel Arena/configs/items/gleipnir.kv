@@ -1,0 +1,123 @@
+"item_recipe_gungir"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"700"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_gungir"
+	"ItemRequirements"
+	{
+		"01"						"item_maelstrom;item_rod_of_atos*"
+	}
+}
+
+//=================================================================================================================
+// Gleipnir
+//=================================================================================================================
+"item_gungir"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"FightRecapLevel"				"1"
+	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+	"AbilitySharedCooldown"			"atos"
+
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"18"
+	"AbilityCastRange"				"1100"
+	"AbilityCastPoint"				"0.0"
+
+	"AbilityManaCost"				"200"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"6150"
+	"ItemShopTags"					"damage;attack_speed;unique"
+	"ItemQuality"					"artifact"
+	"ItemAliases"					"gleipnir;gliepnir;glaypnir"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	"ShouldBeSuggested"				"1"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"30"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"chain_chance"			"30"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"chain_damage"			"160"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"chain_strikes"			"4"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"chain_radius"			"650"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"chain_delay"			"0.25"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"chain_cooldown"		"0.2"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_intellect"		"20"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_strength"		"12"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_agility"			"12"
+		}
+		"11"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"2.0"
+		}
+		"12"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"			"450"
+		}
+		"13"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"active_damage"			"220"
+		}
+	}
+}

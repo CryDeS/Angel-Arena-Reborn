@@ -1,0 +1,17 @@
+"ability_obelisk_passive"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"							"ability_lua"
+	"AbilityTextureName" 				"custom/building_obelisk"
+	"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"ScriptFile"						"buildings/obelisk/obelisk_passive.lua"
+	
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds.vsndevts"		// Destroy towers
+		"soundfile"			"soundevents/game_sounds_ui.vsndevts"	// Coin sound 
+		"particle"			"particles/obelisk/obelisk_broken.vpcf"
+		"particle"			"particles/items_fx/aegis_respawn.vpcf"
+	}
+}

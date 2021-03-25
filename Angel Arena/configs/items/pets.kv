@@ -1,0 +1,134 @@
+"item_pet_hulk"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"1156"
+	"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	
+	"AbilityTextureName"	        "pet_hulk"
+	"AbilitySharedCooldown"			"item_pets"
+	"ItemAliases"					"pet;mage"
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+	"AbilityCooldown"				"45.0"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"20000"
+	"ItemQuality"					"component"
+	"ItemStackable"					"1"
+	"ItemPermanent"					"0"
+	"ItemInitialCharges"			"1"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"		"items/pets.lua"
+			"Function"			"SpawnPet"
+			"Pet"				"hulk"
+		}
+		"SpendCharge"
+		{
+		}        
+	}
+}
+
+"item_pet_mage"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"1157"
+	"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	
+	"AbilityTextureName"	        "pet_mage"
+	"AbilitySharedCooldown"			"item_pets"
+	"ItemAliases"					"pet;mage"
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+	"AbilityCooldown"				"45.0"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"21000"
+	"ItemQuality"					"component"
+	"ItemStackable"					"1"
+	"ItemPermanent"					"0"
+	"ItemInitialCharges"			"1"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"		"items/pets.lua"
+			"Function"			"SpawnPet"
+			"Pet"				"mage"
+		}
+		"SpendCharge"
+		{
+		}        
+	}
+}
+
+"item_pet_wolf"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"1158"
+	"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	
+	"AbilityTextureName"	        "pet_wolf"
+	"AbilitySharedCooldown"			"item_pets"
+	"ItemAliases"					"pet;mage"
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+	"AbilityCooldown"				"45.0"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"22000"
+	"ItemQuality"					"component"
+	"ItemStackable"					"1"
+	"ItemPermanent"					"0"
+	"ItemInitialCharges"			"1"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"		"items/pets.lua"
+			"Function"			"SpawnPet"
+			"Pet"				"wolf"
+		}
+		"SpendCharge"
+		{
+		}        
+	}
+}

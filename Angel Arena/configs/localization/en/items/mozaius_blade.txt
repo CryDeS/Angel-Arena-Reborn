@@ -1,0 +1,8 @@
+"DOTA_Tooltip_Ability_item_mozaius_blade"							"Mozaius Blade"
+"DOTA_Tooltip_Ability_item_mozaius_blade_Description"				"<h1>Active: Battle Rush</h1> Immediatly restore %heal_per_charge% health per charge.<br><br>Can have only %max_charges% charges. Recives %charges_for_attack_hero% charges by attack for hero and %charges_for_attack_creep% by attack for creep\n<h1>Passive: Mozaius Attack</h1> Additional attack after %attack_delay% for melee hero every %attack_cd% seconds.\n<h1>Passive: Mozaius Consumption</h1>Restores %lifesteal%%  health for every attack."
+"DOTA_Tooltip_Ability_item_mozaius_blade_note0"						"Mozaius Attack applies attack modifiers."
+"DOTA_Tooltip_Ability_item_mozaius_blade_lore"						"Blade of the Archemage that was hardened in a thousand battles now full of void power and ready to cut soul and flesh of him enemies."
+"DOTA_Tooltip_Ability_item_mozaius_blade_bonus_damage"				"+$damage"
+"DOTA_Tooltip_Ability_item_mozaius_blade_bonus_as"					"+$attack"
+"DOTA_Tooltip_Ability_item_mozaius_blade_bonus_stats"				"+$all"
+"DOTA_Tooltip_Ability_item_mozaius_blade_bonus_hp"					"+$health"

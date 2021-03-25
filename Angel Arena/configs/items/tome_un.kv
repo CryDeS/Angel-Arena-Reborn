@@ -1,0 +1,52 @@
+"item_tome_un_6"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"1198"
+	"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	
+	"AbilityTextureName"	        "tome_un_6"
+
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"2800"
+	"ItemQuality"					"component"
+	"ItemStackable"					"1"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+	"ItemAliases"					"all;book;tome;stats;gods;книга;богов;статы"
+	"ItemPermanent"					"0"
+	"ItemInitialCharges"			"1"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"ItemStockMax"					"20"
+	"ItemStockInitial"				"5"
+	"ItemStockTime"					"120.0"
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"Target"			"CASTER"
+			"ScriptFile"		"tome.lua"
+			"Function"			"UpgradeStats"
+			"Str"				"6"
+			"Agi"				"6"
+			"Int"				"6"
+		}
+		"SpendCharge"
+		{
+		}        
+	}
+}

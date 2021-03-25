@@ -1,0 +1,5 @@
+"DOTA_Tooltip_Ability_item_material_projector"						"Material Projector"
+"DOTA_Tooltip_Ability_item_material_projector_Lore"					"Ancient artefact that gives him owner unprecedented durability in any battle."
+"DOTA_Tooltip_Ability_item_material_projector_bonus_stats"			"+$all"
+"DOTA_Tooltip_Ability_item_material_projector_bonus_hp"				"+$health"
+"DOTA_Tooltip_Ability_item_material_projector_bonus_damage"			"+$damage"

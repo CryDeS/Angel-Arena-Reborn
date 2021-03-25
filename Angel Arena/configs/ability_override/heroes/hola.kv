@@ -1,0 +1,234 @@
+"hola_stunhammer"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET| DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"MaxLevel"						"7"
+	"BaseClass"						"ability_lua"
+	"AbilityTextureName"			"custom/hola_stunhammer"
+	"ScriptFile"					"heroes/hola/hola_stunhammer.lua" 
+
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+		"particle"			"particles/units/heroes/hero_sven/sven_spell_storm_bolt.vpcf"
+		"particle"			"particles/units/heroes/hero_sven/sven_storm_bolt_projectile_explosion.vpcf"
+	}
+	
+	"AbilityCastRange"				"800"
+	"AbilityCastPoint"				"0.1"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"12.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"250"
+	
+	"AbilitySpecial"
+	{	
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"bolt_damage"	            	"250 375 475 520 680 750 800"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"bolt_aoe"	       		 		"275"
+		}
+		"03"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"bolt_speed"	           		"1400"
+		}			
+		"04"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"bolt_stun_duration"	        "1.5"
+		}
+	}
+}
+
+"hola_grace"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"MaxLevel"						"7"
+	"BaseClass"						"ability_lua"
+	"AbilityTextureName"			"custom/angel_arena_grace"
+	"ScriptFile"					"heroes/hola/hola_grace.lua" 
+
+	"precache"
+	{
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts"
+		"particle"	"particles/units/heroes/hero_omniknight/omniknight_purification.vpcf"
+		"particle"	"particles/units/heroes/hero_omniknight/omniknight_purification_hit.vpcf"
+		"particle"	"particles/units/heroes/hero_omniknight/omniknight_purification_cast.vpcf"
+	}
+
+	"AbilityCastRange"				"900"
+	"AbilityCastPoint"				"0.2"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"16.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100 120 140 160 180 200 220"
+	
+	"AbilitySpecial"
+	{	
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"heal"	           				"500 800 1000 1200 1400 1850 3000"
+		}
+	}
+}
+
+
+"hola_stomp"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"MaxLevel"						"7"
+	"BaseClass"						"ability_lua"
+	"AbilityTextureName"			"custom/angel_arena_hola_heal"
+	"ScriptFile"					"heroes/hola/hola_stomp.lua" 
+
+	"precache"
+	{
+		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_earthshaker.vsndevts"		
+		"particle"		"particles/econ/items/centaur/centaur_ti6/centaur_ti6_warstomp.vpcf"
+		"particle"		"particles/units/heroes/hero_earthshaker/earthshaker_echoslam_start_c.vpcf"
+	}
+
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.3 0.3 0.3"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"20.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"400 500 600 700 800 900 1000 1200"
+	
+	"AbilitySpecial"
+	{	
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"					"700"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"heal"						"400 500 600 700 800 900 1000"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage"					"400 500 600 700 800 900 1000"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"heal_percent"				"350"
+		}
+	}
+}
+
+
+"hola_special_bonus_heal"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"BaseClass"						"special_bonus_unique_earth_spirit"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"1"
+		}
+	}
+}
+
+"hola_rescure"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"	
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"MaxLevel"						"7"
+	"BaseClass"						"ability_lua"
+	"AbilityTextureName"			"custom/hola_rescure"
+	"ScriptFile"					"heroes/hola/hola_rescure.lua" 
+
+	"precache"
+	{
+		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_earthshaker.vsndevts"		
+		"particle"		"particles/econ/items/centaur/centaur_ti6/centaur_ti6_warstomp.vpcf"
+		"particle"		"particles/units/heroes/hero_earthshaker/earthshaker_echoslam_start_c.vpcf"
+	}
+
+	"AbilityCastPoint"				"0.3"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"40 38 34 30 28 24 20"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"400 500 600 700 800 900 1000 1200"
+	
+	"AbilitySpecial"
+	{	
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"0.8"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"radius"				"1000"
+		}
+	}
+}
+
+"hola_special_bonus_ultimate"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityType"                   "DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"BaseClass"						"special_bonus_unique_earth_spirit"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"1"
+		}
+	}
+}

@@ -1,0 +1,163 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Boss_Possessed.MagmaTrails.Cast = 
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/snapfire/magma01.vsnd",
+		]
+		volume = "2.000000"
+		pitch = "1.10000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "1.50000"
+	}
+	
+	Boss_Possessed.MagmaTrails.Trail =
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/snapfire/magma_target.vsnd",
+		]
+		volume = "1.500000"
+		pitch = "1.00000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.50000"
+	}
+	
+	Boss_Possessed.FallenSword.Kill =
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/doom_bringer/lvl_death.vsnd",
+		]
+		volume = "1.500000"
+		pitch = "1.00000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.50000"
+	}
+	
+	Boss_Possessed.FallenSword.DebuffHit =
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/doom_bringer/infernal_blade_target.vsnd",
+		]
+		volume = "1.500000"
+		pitch = "1.00000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.50000"
+	}
+	
+	Boss_Possessed.DevilStomp.Cast =
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/creep/neutral/thunderlizard_stomp.vsnd",
+		]
+		volume = "1.500000"
+		pitch = "1.00000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.50000"
+	}
+	
+	Boss_Possessed.Curse.Cast =
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/doom_bringer/doom.vsnd",
+		]
+		volume = "1.500000"
+		pitch = "1.00000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.50000"
+		stop_at_time = "3"
+	}
+	
+	Boss_Possessed.Curse.Penalty =
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/oracle/false_promise_damage.vsnd",
+		]
+		volume = "2.500000"
+		pitch = "1.00000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.50000"
+	}
+	
+	Boss_Possessed.Curse.Saved =
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/oracle/false_promise_heal.vsnd",
+		]
+		volume = "1.500000"
+		pitch = "1.00000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.50000"
+	}
+	
+	Boss_Possessed.Hellshield.Damage =
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/abaddon/shield_cast.vsnd",
+		]
+		volume = "0.750000"
+		pitch = "1.00000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.50000"
+	}
+	
+	Boss_Possessed.Hellshield.Cast =
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/items/blade_mail_damage.vsnd",
+		]
+		volume = "1.500000"
+		pitch = "1.00000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.50000"
+	}
+}

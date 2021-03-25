@@ -1,0 +1,109 @@
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"npc_aa_creep_wolf_small_crit_lua"
+{
+    // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+        "BaseClass"					    "ability_lua"
+        "AbilityTextureName"			"custom/npc_aa_creep_wolf_small_crit_lua"
+        "ScriptFile"					"creeps/abilities/npc_aa_creep_wolf_small/npc_aa_creep_wolf_small_crit_lua"
+        "MaxLevel"                      "1"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"				"1000"
+
+        // Time
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"				"10"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+
+            "01"
+            {
+                "var_type"				"FIELD_INTEGER"
+                "duration"             	"20"
+            }
+            "02"
+            {
+                "var_type"				"FIELD_INTEGER"
+                "crit_chance"      "20"
+            }
+            "03"
+            {
+                "var_type"				"FIELD_INTEGER"
+                "crit_damage"      "145"
+            }
+
+        }
+}
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"npc_aa_creep_wolf_small_vam_aura_lua"
+{
+    // General
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+            "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+            "BaseClass"					    "ability_lua"
+            "AbilityTextureName"			"custom/npc_aa_creep_wolf_small_vam_aura_lua"
+            "ScriptFile"					"creeps/abilities/npc_aa_creep_wolf_small/npc_aa_creep_wolf_small_vam_aura_lua"
+            "MaxLevel"                      "1"
+
+            "AbilitySpecial"
+            {
+                "01"
+                {
+                   "var_type"			    "FIELD_INTEGER"
+                   "radius"		            "700"
+                }
+
+                "02"
+                {
+                    "var_type"			    "FIELD_INTEGER"
+                    "lifesteal"             "20"
+                }
+            }
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"npc_aa_creep_wolf_small_all_vision_lua"
+{
+    // General
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+            "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+            "BaseClass"					    "ability_lua"
+            "AbilityTextureName"			"custom/npc_aa_creep_wolf_small_all_vision_lua"
+            "ScriptFile"					"creeps/abilities/npc_aa_creep_wolf_small/npc_aa_creep_wolf_small_all_vision_lua"
+            "MaxLevel"                      "1"
+
+            "AbilitySpecial"
+            {
+                "01"
+                {
+                   "var_type"			    "FIELD_INTEGER"
+                   "day_vision"		        "1400"
+                }
+
+                "02"
+                {
+                    "var_type"			    "FIELD_INTEGER"
+                    "night_vision"          "1400"
+                }
+            }
+}

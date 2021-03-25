@@ -1,0 +1,129 @@
+.AddonLoadingRoot
+{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    
+}
+
+#TitlePanel
+{
+	horizontal-align: center;
+	vertical-align: bottom;
+	flow-children: down;
+}
+
+#CustomBg
+{
+    overflow: clip;
+}
+
+#TeamListHeader
+{
+	margin-top:182px;
+}
+
+#Discord
+{
+	box-shadow: fill #7289ca 1px 1px 2px 2px;
+	margin-top:60px;
+	margin-right:25.5%;
+	horizontal-align: right;
+	width:232px;
+	height:122px;
+}
+
+.flag1
+{
+	horizontal-align:center;
+	margin-right:40%;
+	margin-top:60%;
+	width:66px;
+	height:43px;
+	border: 1px solid black;
+}
+.flag2
+{
+	margin-top:60%;
+	margin-left:40%;
+	horizontal-align:center;
+	width:66px;
+	height:43px;
+	border: 1px solid black;
+}
+
+@define TotalLength: 8s;
+@define TimingFunc: linear;
+@define IterationCount: infinite;
+
+@keyframes 'seq_left_anim'
+{
+	0% { transform: translateX( 4px ) translateY( -4px ); }
+	50%  { transform: translateX( 0px ) translateY( 0px ); }
+	100%  { transform: translateX( 4px ) translateY( -4px ); }
+}
+
+@keyframes 'seq_right_anim'
+{
+	0% { transform: translateX( -4px ) translateY( 4px ); }
+	50%  { transform: translateX( 0px ) translateY( 0px ); }
+	100%  { transform: translateX( -4px ) translateY( 4px ); }
+}
+
+#seq_left
+{
+	pre-transform-scale2d: 1.007;
+	animation-name: seq_left_anim;
+	animation-duration: TotalLength;
+	animation-timing-function: TimingFunc;
+	animation-iteration-count: IterationCount;
+}
+
+
+#seq_right
+{
+	pre-transform-scale2d: 1.007;
+	margin-left:690px;
+	animation-name: seq_right_anim;
+	animation-duration: TotalLength;
+	animation-timing-function: TimingFunc;
+	animation-iteration-count: IterationCount;
+}
+
+#separator
+{
+	margin-left:610px;
+}
+
+#text1
+{
+	vertical-align: center;
+	text-transform: uppercase;
+	font-size: 130px;
+	font-weight: bold;
+	color: #fafafafa;
+	text-shadow:0px 0px 8px 8.0 #000000;
+}
+
+
+#text2
+{
+	vertical-align: center;
+	horizontal-align: center;
+	text-transform: uppercase;
+	font-size: 140px;
+	font-weight: bold;
+	color: #66ff99fF;
+	text-shadow:0px 0px 2px 3.0 #000000;
+	text-align: center;
+}
+
+#fire_effect
+{
+	width:117px;
+	height:290px;
+	margin-bottom: 140px;	
+	margin-right:1px;
+	vertical-align: bottom;
+	horizontal-align: center;
+}

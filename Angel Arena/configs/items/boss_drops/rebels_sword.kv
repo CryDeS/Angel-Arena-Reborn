@@ -1,0 +1,171 @@
+"item_recipe_rebels_sword"
+{
+		"AbilityTextureName" 				"item_recipe_rebels_sword"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1277"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_rebels_sword"
+	"ItemRequirements"
+	{
+		"01"						"item_rebels_sword_dummy"
+	}
+}
+
+"item_rebels_sword"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1226"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "rebels_sword"
+	"ScriptFile"					"items/rebels_sword/rebels_sword.lua"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"5000"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+	
+	"AbilityCooldown"				"0.4"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"50"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"12"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_all_stats"		"5"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attack_speed"	"20"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"250"
+		}
+		
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"disarmor"				"8"
+		}
+		
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"disarmor_const"		"4"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"max_disarmor_pct"		"40"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"				"3"
+		}
+	}
+}
+
+
+"item_rebels_sword_dummy"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1225"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "rebels_sword"
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"5000"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"0"
+	
+	"AbilityCooldown"				"0.4"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"110"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"12"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_all_stats"		"35"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attack_speed"	"80"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"250"
+		}
+		
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"disarmor"				"8"
+		}
+		
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"disarmor_const"		"4"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"max_disarmor_pct"		"70"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"				"3"
+		}
+	}
+}

@@ -1,0 +1,153 @@
+// Rewrite of the Sven Storm Bolt ability
+// Author: Pizzalol
+// Date: 28.12.2014.
+"angel_arena_hammer"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"custom/angel_arena_hammer"
+	"AOERadius"						"%bolt_aoe"
+	"MaxLevel"						"7"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+		"particle"			"particles/units/heroes/hero_sven/sven_spell_storm_bolt.vpcf"
+		"particle"			"particles/units/heroes/hero_sven/sven_storm_bolt_projectile_explosion.vpcf"
+		"particle"			"particles/generic_gameplay/generic_stunned.vpcf"
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"800"
+	"AbilityCastPoint"				"0.2 0.2 0.2 0.2 0.2 0.2 0.2"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"15.0"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"120 200 280 350 550 700 850"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"140"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bolt_speed"			"1400"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bolt_stun_duration"	"2.0"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bolt_aoe"				"255"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"TrackingProjectile"
+		{
+			"Target"           	"TARGET"
+		    "EffectName"       	"particles/units/heroes/hero_sven/sven_spell_storm_bolt.vpcf"
+		    "Dodgeable"        	"1"
+		    "ProvidesVision"   	"0"
+		    "MoveSpeed"        	"%bolt_speed"
+		    "SourceAttachment"  "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
+		}
+
+		"FireSound"
+		{
+			"EffectName"		"Hero_Sven.StormBolt"
+			"Target"			"CASTER"
+		}
+	}
+
+	"OnProjectileHitUnit"
+	{
+		"FireSound"
+		{
+			"EffectName"		"Hero_Sven.StormBoltImpact"
+			"Target"			"TARGET"
+		}
+
+		"FireEffect"
+		{
+			"EffectName"	"particles/units/heroes/hero_sven/sven_storm_bolt_projectile_explosion.vpcf"
+			"EffectAttachType"	"attach_origin"
+			"Target"		"TARGET"
+			"ControlPointEntities"
+			{
+				"TARGET"	"attach_origin"
+				"TARGET"	"attach_origin"
+				"TARGET"	"attach_origin"
+				"TARGET"	"attach_origin"	//CP3 has a child explosion origin
+			}
+		}
+
+		"ActOnTargets"
+		{
+			"Target"
+			{
+				"Center" "POINT"
+                "Radius" "%bolt_aoe"
+                "Teams" "DOTA_UNIT_TARGET_TEAM_ENEMY" 
+                "Types" "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+			}
+
+			"Action"
+			{
+				"Damage"
+				{
+					"Target"	"TARGET"
+					"Type"		"DAMAGE_TYPE_MAGICAL"
+					"Damage"	"%AbilityDamage"
+				}
+
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_hammer_stun"
+					"Target"		"TARGET"
+				}
+
+			}
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_hammer_stun"
+		{
+			"Duration"		"%bolt_stun_duration"
+			"IsDebuff"		"1"
+			"OverrideAnimation"	"ACT_DOTA_DISABLED"
+
+			"EffectName"	"particles/generic_gameplay/generic_stunned.vpcf"
+			"EffectAttachType"	"follow_overhead"
+
+			"States"
+			{
+				"MODIFIER_PROPERTY_STATUS_RESISTANCE"	"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+"DOTA_Tooltip_ability_item_azrael_crossbow"							"Azrael Crossbow"
+"DOTA_Tooltip_ability_item_azrael_crossbow_Description"				"<h1>Active: Angel Shot</h1>Owner shots from crossbow into selected target, when bolt contant with target it applies owner attack and stun enemy for %stun_duration%  seconds and dealing %damage%  + %attack_to_dmg%%  damage from attack. Heals owner in depends of dealed damage.\n<h1>Passive: Critical Strike</h1> Each owner attack have chance %crit_chance%%  to deal %crit_damage%%  critical damage.\n<h1>Passive: Secondary Attack</h1>When owner is ranged attacker grants owner additional attack with %attack_cd%  seconds cooldown."
+"DOTA_Tooltip_ability_item_azrael_crossbow_Note0"					"Angel Shot applies attack modifiers."
+"DOTA_Tooltip_ability_item_azrael_crossbow_Note1"					"Secondary Attack applies attack modifiers"
+"DOTA_Tooltip_ability_item_azrael_crossbow_lore"					"That crossbow was belong to Azrael and he was killed from that crossbow"
+
+"DOTA_Tooltip_ability_item_azrael_crossbow_bonus_damage"			"+$damage"
+"DOTA_Tooltip_ability_item_azrael_crossbow_bonus_stats"				"+$all"
+"DOTA_Tooltip_ability_item_azrael_crossbow_bonus_as"				"+$attack"
+"DOTA_Tooltip_ability_item_azrael_crossbow_bonus_hpreg"				"+$hp_regen"
+"DOTA_Tooltip_ability_item_azrael_crossbow_bonus_mpreg"				"+$mana_regen"
+"DOTA_Tooltip_ability_item_azrael_crossbow_bonus_attack_range"		"+$attack_range"
+
+"DOTA_Tooltip_ability_item_azrael_crossbow_projectile_speed"		"PROJECTILE SPEED:"
+"DOTA_Tooltip_ability_item_azrael_crossbow_abilitycastrange"		"CAST RANGE:"
+
+"DOTA_Tooltip_modifier_azrael_crossbow_stun"						"Azrael Crossbow Stun"
+"DOTA_Tooltip_modifier_azrael_crossbow_cd"							"Secondary Attack Cooldown"

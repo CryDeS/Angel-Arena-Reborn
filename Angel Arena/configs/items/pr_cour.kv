@@ -1,0 +1,38 @@
+"item_pr_cour"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1292"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+	"BaseClass"						"item_datadriven"
+	"AbilityTextureName"			"courier_dire"
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"200"
+	"ItemShopTags"					"consumable"
+	"ItemQuality"					"consumable"
+	"ItemAliases"					"private"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemStockMax"					"1"
+	"ItemStockTime"					"120.0"
+	"ItemSupport"					"1"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+	
+	"IsTempestDoubleClonable"		"0"
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"			"items/courier.lua"
+			"Function"				"OnSpellStart"
+		}
+		"SpendCharge"
+		{
+		}   
+	}
+}

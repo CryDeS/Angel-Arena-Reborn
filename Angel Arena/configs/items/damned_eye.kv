@@ -1,0 +1,93 @@
+"item_recipe_damned_eye"
+{
+	"AbilityTextureName" 				"item_recipe_damned_eye"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1316"
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"100"
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_damned_eye"
+	"ItemRequirements"
+	{
+		//100+450+550
+		"01"						"item_belt_of_strength;item_chainmail"
+	}
+}
+
+"item_damned_eye"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1317"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+	"AbilityTextureName"	        "damned_eye"
+	"ScriptFile"					"items/damned_eye/item_damned_eye.lua"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"16.0"
+	"AbilityManaCost"               "100"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1100"
+	"ItemStackable"					"0"
+	"ItemBaseLevel"					"1"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"heal_const"			"650"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"heal_per_main_stat"	"5.0"
+		}
+		"03"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "time_to_heal"	        "3.5"
+        }
+        //Stats
+        "05"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "armor"	                "3.0"
+        }
+        "06"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "health_regen"	        "5.5"
+        }
+        "07"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "all_stats"	            "10"
+        }
+        "07"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "health"	            "100"
+        }
+	}
+}

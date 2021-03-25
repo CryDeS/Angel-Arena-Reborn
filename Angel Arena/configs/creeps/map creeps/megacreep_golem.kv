@@ -1,0 +1,70 @@
+// -createhero npc_aa_megacreep_golem enemy
+"npc_aa_megacreep_golem" 
+{
+	"BaseClass" 			"npc_dota_creature" 
+	
+	"Model" 				"models/items/warlock/golem/ti_8_warlock_darkness_apostate_golem/ti_8_warlock_darkness_apostate_golem.vmdl"
+	"vscripts"				"creeps/ai/megacreep_golem/ai_main.lua"
+
+	"precache"
+	{
+		"model"				"models/items/warlock/golem/ti_8_warlock_darkness_apostate_golem/ti_8_warlock_darkness_apostate_golem.vmdl"
+	}
+	
+	"SoundSet" 				"n_creep_Melee"
+	"GameSoundsFile"  		"soundevents/game_sounds_creeps.vsndevts" 
+	"ModelScale" 			"0.7"
+	"Level"				 	"1" 
+	"IsNeutralUnitType"		"1"
+	"IsAncient"				"1"
+	"CanBeDominated" 		"1"
+
+	"Ability1" 				"megacreep_ancient_golem_fireball"
+	"Ability2"				"megacreep_ancient_golem_fire_fist"
+	"Ability3" 				"megacreep_ancient_golem_burn_close"
+	"Ability4" 				"megacreep_ancient_golem_burn_far"
+	"Ability5" 				"megacreep_ancient_golem_meteor_rain" 
+	"Ability6" 				"" 
+	"Ability7" 				"" 
+	"Ability8" 				"" 
+	
+	"ArmorPhysical" 		"1" 
+	"MagicalResistance" 	"25" 
+
+	"AttackCapabilities"	"DOTA_UNIT_CAP_MELEE_ATTACK"
+	"ProjectileModel"		""
+	"ProjectileSpeed" 		"0" 
+
+	"AttackDamageMin" 		"0" 
+	"AttackDamageMax" 		"0" 
+	"AttackRate" 			"1.0" 
+	"AttackAnimationPoint" 	"0.3" 
+	"AttackAcquisitionRange" 	"300" 
+	"AttackRange" 			"225" 
+
+	"BountyXP" 				"0" 
+	"BountyGoldMin"			"0" 
+	"BountyGoldMax" 		"0" 
+
+	"MovementCapabilities" 	"DOTA_UNIT_CAP_MOVE_GROUND" 
+	"MovementSpeed" 		"365" 
+	"MovementTurnRate" 		"0.4" 
+
+	"StatusHealth" 			"100" 
+	"StatusHealthRegen" 	"1.2" 
+	"StatusMana" 			"5000" 
+	"StatusManaRegen" 		"0" 
+
+	"TeamName"				"DOTA_TEAM_NEUTRALS"							// Team name.
+	"CombatClassAttack"		"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"		"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+	"UnitRelationshipClass"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	"VisionDaytimeRange" 	"800" 
+	"VisionNighttimeRange" 	"800" 
+	
+	"RingRadius"			"100"
+	"HealthBarOffset"		"200"
+
+	"HasInventory" 			"0" 
+}

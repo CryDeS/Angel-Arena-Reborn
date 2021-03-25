@@ -1,0 +1,7 @@
+"npc_eidolon_1" "Enigma Eidelon"
+"npc_eidolon_2" "Enigma Eidelon"
+"npc_eidolon_3" "Enigma Eidelon"
+"npc_eidolon_4" "Enigma Eidelon"
+"npc_eidolon_5" "Enigma Eidelon"
+"npc_eidolon_6" "Enigma Eidelon"
+"npc_eidolon_7" "Enigma Eidelon"

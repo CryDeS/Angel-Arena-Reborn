@@ -1,0 +1,122 @@
+"item_recipe_possessed_sword"
+{
+		"AbilityTextureName" 				"item_recipe_possessed_sword"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1536"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_possessed_sword"
+	"ItemRequirements"
+	{
+		"01"						"item_possessed_sword_dummy"
+	}
+}
+
+"item_possessed_sword"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1159"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "possessed_sword"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"5000"
+	"ItemStackable"					"0"
+	
+	"ItemPermanent"					"0"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"48"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_aspeed"			"44"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_passive_possessed_sword"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+			"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" 			"%bonus_damage"		
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" 		"%bonus_aspeed"		
+			}
+			"States"
+			{
+				"MODIFIER_STATE_CANNOT_MISS"			"MODIFIER_STATE_VALUE_ENABLED"
+			}				
+		}
+	}
+}
+
+"item_possessed_sword_dummy"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1276"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "possessed_sword"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"5000"
+	"ItemStackable"					"0"
+	
+	"ItemPermanent"					"0"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"0"
+
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"48"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_aspeed"			"45"
+		}
+	}
+}

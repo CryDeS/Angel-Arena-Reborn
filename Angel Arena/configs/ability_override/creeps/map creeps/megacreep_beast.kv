@@ -1,0 +1,307 @@
+// ---------------------------------------------------
+// Beast skill: Stomp 
+// AOE stun and damage for many targets 
+// ---------------------------------------------------
+"megacreep_beast_stomp"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"AbilityCastAnimation"			"ACT_DOTA_LEAP_STUN"
+	"BaseClass"						"ability_lua"
+	"AbilityTextureName"			"custom/megacreep_beast_stomp"
+	"ScriptFile"					"creeps/abilities/megacreep_beast/megacreep_beast_stomp"
+	"MaxLevel"                      "1"
+
+	"precache"
+	{
+		"soundfile"         		"sounds/weapons/creep/neutral/thunderlizard_stomp.vsnd"
+		"soundfile"         		"sounds/npc/cny_beast/cast_ability01.vsnd"
+		"particle"					"particles/econ/items/centaur/centaur_ti6/centaur_ti6_warstomp.vpcf"
+	}
+	
+	"AbilityCastPoint"				"0.9"
+	"AbilityCooldown"				"9"
+	"AbilityManaCost"				"150"
+	"AbilityCastRange"				"350"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			    "FIELD_INTEGER"
+			"radius"		        "350"
+		}
+		"02"
+		{
+			"var_type"			    "FIELD_FLOAT"
+			"duration"		        "1.2"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage"				"375"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_from_hp"		"0.2"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"cast_offset"			"160"
+		}
+	}
+}
+
+// ---------------------------------------------------
+// Beast skill: Jump 
+// Jump to target 
+// ---------------------------------------------------
+"megacreep_beast_jump"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"BaseClass"						"ability_lua"
+	"AbilityTextureName"			"custom/megacreep_beast_jump"
+	"ScriptFile"					"creeps/abilities/megacreep_beast/megacreep_beast_jump"
+	"MaxLevel"                      "1"
+	
+	"precache"
+	{
+		"soundfile"         		"sounds/weapons/hero/bloodseeker/blood_rite_cast.vsnd"
+		"soundfile"         		"sounds/npc/cny_beast/cast_ability01.vsnd"
+		"particle"					"particles/units/heroes/hero_bloodseeker/bloodseeker_rupture_nuke.vpcf"
+	}
+	
+	"AbilityCastPoint"				"0.0"
+	"AbilityCooldown"				"4"
+	"AbilityManaCost"				"150"
+	"AbilityCastRange"				"1200"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			    "FIELD_FLOAT"
+			"duration"		        "1.0"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage"				"250"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_from_hp"		"0.2"
+		}
+	}
+}
+
+// ---------------------------------------------------
+// Beast skill: Haste
+// Buff speed of beast and his teammates
+// ---------------------------------------------------
+"megacreep_beast_haste"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_MOVEMENT"
+	"BaseClass"						"ability_lua"
+	"AbilityTextureName"			"custom/megacreep_beast_haste"
+	"ScriptFile"					"creeps/abilities/megacreep_beast/megacreep_beast_haste"
+	"MaxLevel"                      "1"
+
+	"AbilityCastPoint"				"0.0"
+	"AbilityCooldown"				"12"
+	"AbilityManaCost"				"150"
+	"AbilityCastRange"				"900"
+			
+	"precache"
+	{
+		"soundfile"         		"sounds/weapons/hero/elder_titan/spirit_buff.vsnd"
+		"particle"					"particles/econ/items/weaver/weaver_immortal_ti7/weaver_swarm_infected_debuff_ti7_ground_rings.vpcf"
+	}
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			    "FIELD_FLOAT"
+			"duration"		        "3.5"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"900"
+		}
+	}
+}
+
+// ---------------------------------------------------
+// Beast skill: Tail Stomp
+// Beast attack by his tail enemies like a 'stomp'
+// ---------------------------------------------------
+"megacreep_beast_tail_stomp"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_6"
+	"BaseClass"						"ability_lua"
+	"AbilityTextureName"			"custom/megacreep_beast_tail_stomp"
+	"ScriptFile"					"creeps/abilities/megacreep_beast/megacreep_beast_tail_stomp"
+	"MaxLevel"                      "1"
+
+	"AbilityCastPoint"				"1.1"
+	"AbilityCooldown"				"7"
+	"AbilityManaCost"				"150"
+
+	"precache"
+	{
+		"soundfile"         		"sounds/weapons/creep/neutral/thunderlizard_stomp.vsnd"
+		"soundfile"         		"sounds/npc/cny_beast/cast_ability01.vsnd"
+		"particle"					"particles/econ/items/centaur/centaur_ti6/centaur_ti6_warstomp.vpcf"
+	}
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			    "FIELD_FLOAT"
+			"radius"		        "300"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage"				"250"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_from_hp"		"0.1"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"cast_offset"			"-210"
+		}
+	}
+}
+
+// ---------------------------------------------------
+// Beast skill: Life Drain
+// Beast drain life from enemy 
+// ---------------------------------------------------
+"megacreep_beast_life_drain"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"BaseClass"						"ability_lua"
+	"AbilityTextureName"			"custom/megacreep_beast_life_drain"
+	"ScriptFile"					"creeps/abilities/megacreep_beast/megacreep_beast_life_drain"
+	"MaxLevel"                      "1"
+	
+	"precache"
+	{
+		"soundfile"         		"sounds/npc/cny_beast/cast_ability01.vsnd"
+		"particle"					"particles/units/heroes/hero_pugna/pugna_lifedrain_drainfield.vpcf"
+		"particle"					"particles/units/heroes/hero_pugna/pugna_lifedrain_innerglow_give.vpcf"
+	}
+	
+	"AbilityChannelTime"			"4.0"
+	"AbilityDuration"				"4.0"
+	"AbilityCastPoint"				"0.0"
+	
+	"AbilityCooldown"				"7"
+	"AbilityManaCost"				"150"
+	"AbilityCastRange"				"650"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			    "FIELD_FLOAT"
+			"range"		        	"650"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"4"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage"				"150"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_from_hp"		"0.1"
+		}
+	}
+}
+
+// ---------------------------------------------------
+// Beast skill: Attack speed 
+// Beast have a maximum attack speed to 2 seconds 
+// ---------------------------------------------------
+"megacreep_beast_bonus_attackspeed"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_MOVEMENT"
+	"BaseClass"						"ability_lua"
+	"AbilityTextureName"			"custom/megacreep_beast_bonus_attackspeed"
+	"ScriptFile"					"creeps/abilities/megacreep_beast/megacreep_beast_bonus_attackspeed"
+	"MaxLevel"                      "1"
+	
+	"precache"
+	{
+		"soundfile"					"sounds/weapons/hero/lone_druid/battle_cry_bear.vsnd"
+		"particle"					"particles/units/heroes/hero_troll_warlord/troll_warlord_battletrance_buff.vpcf"
+	}
+	
+	"AbilityCooldown"				"5"
+	
+	"AbilityManaCost"				"0"
+	"AbilityCastPoint"				"0.0"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			    "FIELD_FLOAT"
+			"attackspeed"	       	"99999"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"2"
+		}
+	}
+}

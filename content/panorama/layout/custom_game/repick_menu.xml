@@ -1,0 +1,87 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/repick_menu.css" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/repick_menu.js" />
+	</scripts>
+  
+	<Panel class="Root" hittest="false">
+		<Panel id="CustomRoot" class="Root" hittest="true" onactivate="OnClose()" oncontextmenu="OnClose()">
+			<Panel class="Precache" style="visibility:collapse;">
+				<Image src="file://{images}/custom_game/repick_menu/item_shard_hola.png" />
+				<Image src="file://{images}/custom_game/repick_menu/item_shard_joe_black.png" />
+				<Image src="file://{images}/custom_game/repick_menu/item_shard_satan.png" />
+				<Image src="file://{images}/custom_game/repick_menu/item_shard_huntress.png" />
+			</Panel>
+			
+			<Panel id="MainRepickMenu" hittest="true" onactivate="" oncontextmenu="">
+				<Panel id="HeroBlockHolder" class="HeroBlockHolder">
+					<Panel id="HeroBlock"/>
+				</Panel>
+				
+				<Panel id="PreviewHolder" hittest="true"/>
+				
+				<Panel id="HeroInfo" hittest="true">
+					<Label id="HeroName" text="..." hittest="true"/>
+					<Panel id="HeroAbilities" hittest="true"/>
+					<Panel class="StatRow">
+						<Panel class="StatRowContent HealtRow">
+							<Panel class="DummyRow">
+								<Label id="HealthStatus" class="BaseLabel" text="400" hittest="true"/>
+								<Label id="HealthRegen" class="BaseLabel" text="+ 4.3" hittest="true"/>
+							</Panel>
+						</Panel>
+						
+						<Panel class="StatRowContent ManaRow">
+							<Panel class="DummyRow">
+								<Label id="ManaStatus" class="BaseLabel" text="400" hittest="true"/>
+								<Label id="ManaRegen" class="BaseLabel" text="+ 4.3" hittest="true"/>
+							</Panel>
+						</Panel>
+						
+						<Panel class="StatRowContent">
+							<Panel id="AttStrengthImage" class="AttImage" hittest="true"/>
+							<Label id="AttStrengthLabel" class="StatLabel BaseLabel" text="#DOTA_HeroLoadout_StrengthAttribute" hittest="true"/>
+						</Panel>
+						<Panel class="StatRowContent">
+							<Panel id="AttAgilityImage" class="AttImage" hittest="true"/>
+							<Label id="AttAgilityLabel" class="StatLabel BaseLabel" text="#DOTA_HeroLoadout_AgilityAttribute" hittest="true"/>
+						</Panel>
+						<Panel class="StatRowContent">
+							<Panel id="AttIntellectImage" class="AttImage" hittest="true"/>
+							<Label id="AttIntellectLabel" class="StatLabel BaseLabel" text="#DOTA_HeroLoadout_IntelligenceAttribute" hittest="true"/>
+						</Panel>
+						
+						<Panel class="StatRowContent CenteredRow">
+							<Panel class="AttImage DamageImage" hittest="true"/>
+							<Label id="DamageLabel" class="StatLabel BaseLabel" text="unknown" hittest="true"/>
+						</Panel>
+						<Panel class="StatRowContent CenteredRow">
+							<Panel class="AttImage BaseAttackTimeImage" hittest="true"/>
+							<Label id="BaseAttackTimeLabel" class="StatLabel BaseLabel" text="unknown" hittest="true"/>
+						</Panel>
+						<Panel class="StatRowContent CenteredRow">
+							<Panel class="AttImage MovespeedImage" hittest="true"/>
+							<Label id="MovespeedLabel" class="StatLabel BaseLabel" text="unknown" hittest="true"/>
+						</Panel>
+						<Panel class="StatRowContent CenteredRow">
+							<Panel class="AttImage ArmorImage" hittest="true"/>
+							<Label id="ArmorLabel" class="StatLabel BaseLabel" text="unknown" hittest="true"/>
+						</Panel>
+					</Panel>
+				</Panel>
+				
+				
+			</Panel>
+			<!--
+			<Panel id="Close" hittest="true" onactivate="OnClose()"/>
+			-->
+			
+			<Panel id="PickButton" class="CantPickButton" hittest="true" onactivate="PickHero()">
+				<Panel id="PickShard"/>
+				<Label id="PickButtonLabel" text="Repick hero" hittest="false"/>
+			</Panel>
+		</Panel>
+	</Panel>
+</root>

@@ -1,0 +1,142 @@
+"item_recipe_angels_armor"
+{
+		"AbilityTextureName" 				"recipe"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1269"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_datadriven"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_angels_armor"
+	"ItemRequirements"
+	{
+		"01"						"item_angels_armor_dummy"
+	}
+}
+
+"item_angels_armor"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1105"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "angels_armor"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"10250"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"22"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"attack_speed"			"60"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"200"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_stats"			"10"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_passive_angels_armor"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+			"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" 		"%attack_speed"		
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%bonus_armor"
+				"MODIFIER_PROPERTY_HEALTH_BONUS"					"%bonus_health"
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"				"%bonus_stats"
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"			"%bonus_stats"
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"			"%bonus_stats"			
+			}
+			
+		}
+
+	}
+	
+}
+
+"item_angels_armor_dummy"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1268"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "angels_armor"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"10250"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"0"
+
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"					"22"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"attack_speed"			"60"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"200"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_stats"			"10"
+		}
+	}
+}

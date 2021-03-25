@@ -1,0 +1,18 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/custom_loading_screen.css" />
+	</styles>
+	<Panel class="AddonLoadingRoot">
+		<Panel id="CustomBg" >
+			<Image id="seq_right" class="loadScreenRight" src="file://{images}/custom_game/loading_screen/loadscreen/right.png" />
+			<Image id="seq_left" class="loadScreenLeft" src="file://{images}/custom_game/loading_screen/loadscreen/left.png" />
+			<Image id="separator" class="loadScreenSeparator" src="file://{images}/custom_game/loading_screen/loadscreen/separator.png" />
+		</Panel>
+		
+		<Panel id="TitlePanel">
+			<Label id="text1" text="Angel    Arena" />
+			<Label id="text2" text="Reborn" />
+		</Panel>
+		<Image id="fire_effect" src="file://{images}/custom_game/loading_screen/loadscreen/fire_effect.png" />
+	</Panel>
+</root>

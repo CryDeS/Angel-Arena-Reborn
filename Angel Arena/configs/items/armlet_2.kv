@@ -1,0 +1,275 @@
+//=================================================================================================================
+// Recipe: Armlet
+//=================================================================================================================
+"item_recipe_armlet_3"
+{
+		"AbilityTextureName" 				"item_recipe_armlet_3"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1289"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_armlet_3"
+	"ItemRequirements"
+	{
+		"01"						"item_armlet_2;item_armlet_2"
+	}
+}
+
+//=================================================================================================================
+// Armlet
+//=================================================================================================================
+"item_armlet_3"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1286"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+	"ItemBaseLevel"					"3"
+	"BaseClass"                     "item_armlet"
+	"AbilityTextureName"			"armlet_3"
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"0.0"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"10520"
+	"ItemShopTags"					"damage;attack_speed;armor;regen_health;hard_to_tag"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"armlet of mordiggian"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"12 75 100"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attack_speed"	"25 35 55"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"7 15 35"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health_regen"	"9 30 62"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"unholy_bonus_damage"	"32 40 60"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"unholy_bonus_attack_speed"	"0 0 0"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"unholy_bonus_strength"	"25 40 75"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"unholy_bonus_armor"	"5 5 5"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"unholy_health_drain_per_second"	"40 80 120"
+		}	
+		"10"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"toggle_cooldown"		"0.036f"
+		}				
+	}
+}
+
+//=================================================================================================================
+// Recipe: Armlet
+//=================================================================================================================
+"item_recipe_armlet_2"
+{
+		"AbilityTextureName" 				"item_recipe_armlet_2"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1111"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"500"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_armlet_2"
+	"ItemRequirements"
+	{
+		"01"						"item_armlet;item_armlet;"
+	}
+}
+
+//=================================================================================================================
+// Armlet
+//=================================================================================================================
+"item_armlet_2"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1112"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+	"ItemBaseLevel"					"2"
+	"BaseClass"                     "item_armlet"
+	"AbilityTextureName"			"armlet_2"
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"0.0"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"5260"
+	"ItemShopTags"					"damage;attack_speed;armor;regen_health;hard_to_tag"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"armlet of mordiggian"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"12 75 100"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attack_speed"	"25 35 55"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"7 15 35"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health_regen"	"9 30 62"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"unholy_bonus_damage"	"32 40 60"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"unholy_bonus_attack_speed"	"0 0 0"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"unholy_bonus_strength"	"25 40 75"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"unholy_bonus_armor"	"5 5 5"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"unholy_health_drain_per_second"	"40 80 120"
+		}	
+		"10"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"toggle_cooldown"		"0.036f"
+		}				
+	}
+}
+
+"item_armlet"
+{
+
+	"ItemBaseLevel"					"1"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"12 75 100"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attack_speed"	"25 35 55"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"7 15 35"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health_regen"	"9 30 62"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"unholy_bonus_damage"	"32 40 60"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"unholy_bonus_attack_speed"	"0 0 0"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"unholy_bonus_strength"	"25 40 75"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"unholy_bonus_armor"	"5 5 5"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"unholy_health_drain_per_second"	"40 80 120"
+		}	
+		"10"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"toggle_cooldown"		"0.036f"
+		}				
+	}
+}

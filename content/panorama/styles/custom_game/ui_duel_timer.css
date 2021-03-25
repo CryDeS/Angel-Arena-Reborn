@@ -1,0 +1,79 @@
+.TeamOverlay {
+	width: 100%;
+	height: 100%;
+}
+
+#Block {
+	width: 246px;
+	height: 42px;
+	align: left bottom;
+	margin-bottom: 247px;
+	margin-left: -1px;
+	background-image: url("s2r://panorama/images/hud/reborn/quickbuy_bg_psd.vtex");
+	background-size: 160%;
+	background-color: #2e2b34;
+	/*background-color: gradient(linear, 0% 100%, 0% 0%, from(rgba(15, 15, 15, 0.9)), to(rgba(35, 35, 35, 0.9)));*/
+	border-style: solid;
+	border-width: -1px;
+	border-color: rgba(232, 233, 255, 0.1);
+	border-top: 1px;
+	border-right: 1px;
+	border-bottom: 1px;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+.MinimapExtraLarge #Block {
+	width: 282px;
+	margin-bottom: 280px;
+}
+.HUDFlipped #Block {
+	align: right bottom;
+}
+
+#Attension {
+	flow-children: down;
+	horizontal-align: center;
+	margin-top: 65px;
+	color: #ff0000;
+	font-size: 34px;
+}
+
+#DuelTextBlock {
+	horizontal-align: left;
+	flow-children: none;
+	vertical-align: center;
+	horizontal-align: center;
+	vertical-align: center;
+	horizontal-align: center;
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: bold;
+	text-shadow: 3px 5px 5px black;
+}
+
+#KillLimit {
+	horizontal-align: center;
+	margin-top: 42px;
+	background-image: url("s2r://panorama/images/custom_game/kill_limit.png");
+}
+
+#KillLimit_text {
+	horizontal-align: center;
+	vertical-align: center;
+	color: white;
+	font-size: 19px;
+}
+
+#TEST {
+	vertical-align: center;
+	horizontal-align: center;
+	width: 500px;
+	height: 500px;
+	background-color: #ff000011;
+}
+
+#TST {
+	width: 200px;
+	height: 64px;
+	background-color: #00ff00ff;
+}

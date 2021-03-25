@@ -1,0 +1,219 @@
+"megacreep_ancient_golem_fireball"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"MaxLevel"						"1"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"FightRecapLevel"				"1"
+	"BaseClass"						"ability_lua"
+	"AbilityTextureName"			"custom/megacreep_ancient_golem_fireball"
+	"ScriptFile"					"creeps/abilities/megacreep_golem/megacreep_ancient_golem_fireball"
+
+	"precache"
+	{
+		"particle"	"particles/units/heroes/hero_invoker/invoker_forged_spirit_projectile.vpcf"
+	}
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"1000"
+	"AbilityCastPoint"				"0.3"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"10"				
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"fireball_speed"		"1250"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"fireball_damage"		"400"
+		}
+		
+	}
+}
+
+
+
+"megacreep_ancient_golem_burn_close"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"MaxLevel"						"1"
+	"BaseClass"						"ability_lua"
+	"AbilityTextureName"			"custom/megacreep_ancient_golem_burn_close"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"ScriptFile"					"creeps/abilities/megacreep_golem/megacreep_ancient_golem_burn_close"
+	
+	"precache"
+	{
+		"particle"	"particles/units/heroes/hero_batrider/batrider_flamebreak_explosion.vpcf"
+		"particle"	"particles/units/heroes/hero_batrider/batrider_firefly_startflash.vpcf"
+	}
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"5.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"25"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"radius"			"400"		
+		}
+		"02"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"duration"			"5"
+		}
+		"03"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"tickrate"			"1"
+		}
+		"04"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"TotalDmg"			"800"
+		}
+	}
+}
+
+"megacreep_ancient_golem_burn_far"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"MaxLevel"						"1"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+	"BaseClass"						"ability_lua"
+	"AbilityTextureName"			"custom/megacreep_ancient_golem_burn_far"
+	"ScriptFile"					"creeps/abilities/megacreep_golem/megacreep_ancient_golem_burn_far" 	
+	
+	"precache"
+	{
+		"particle"	"particles/units/heroes/hero_jakiro/jakiro_dual_breath_fire.vpcf"
+	}
+
+	"AbilityCastRange"				"2000"
+	"AbilityCastPoint"				"0.1"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"10"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"contact_damage"	           	"300"
+		}	
+		"02"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"wave_speed"	               	"1200"
+		}
+		"03"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"wave_width"	               	"300"
+		}
+		"04"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"distance"	         	      	"2000"
+		}
+	}
+}
+
+"megacreep_ancient_golem_meteor_rain"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"MaxLevel"						"1"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"BaseClass"						"ability_lua"
+	"AbilityTextureName"			"custom/megacreep_ancient_golem_meteor_rain"
+	"ScriptFile"					"creeps/abilities/megacreep_golem/megacreep_ancient_golem_meteor_rain" 
+	
+	"precache"
+	{
+		"particle"	"particles/units/heroes/heroes_underlord/underlord_firestorm_pre.vpcf"
+	}
+
+	"AbilityCastRange"				"800"
+	"AbilityCastPoint"				"0.1"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"10"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"damage"	           			"700"
+		}	
+		"02"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"radius"	               		"500"
+		}
+	}
+}
+
+"megacreep_ancient_golem_fire_fist"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"MaxLevel"						"1"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass"						"ability_lua"
+	"AbilityTextureName"			"custom/megacreep_ancient_golem_fire_fist"
+	"ScriptFile"					"creeps/abilities/megacreep_golem/megacreep_ancient_golem_fire_fist" 
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"hit_damage"	        		"120"
+		}	
+	}
+}

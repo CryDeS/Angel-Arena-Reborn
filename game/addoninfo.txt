@@ -1,0 +1,45 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	maps = 
+	[
+		"map_5x5",
+	]
+	IsPlayable = 1
+	CheckAFKPlayers = 0
+	PenaltiesEnabled = 1
+	EnablePickRules = 1
+	Default_Keys = 
+	[
+		{
+			Key = "scrolllock"
+			Command = "aa_debug_exec_scrollock"
+			Name = "aa_debug_exec_scrollock"
+		},
+		{
+			Key = "home"
+			Command = "aa_debug_exec_mouse"
+			Name = "aa_debug_exec_mouse"
+		},
+	]
+	map_options = 
+	[
+		{
+			MaxPlayers = 10
+			map = "map_5x5"
+		},
+	]
+	HideInTools = false
+	IsTemplate = false
+	DefaultMap = "map_5x5"
+	DisableIK = false
+	EventGame = false
+	hero_picker = 
+	{
+	}
+	HeroGuidesSupported = true
+	ForceDefaultGuide = false
+	MinimalPrecache = false
+	MinPlayers = 1
+	MaxPlayers = 10
+	TeamCount = -1
+}

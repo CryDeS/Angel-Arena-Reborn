@@ -1,0 +1,67 @@
+"item_recipe_material_projector"
+{
+	"AbilityTextureName" 			"item_recipe_material_projector"
+	
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1542"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"2800"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_material_projector"
+	"ItemRequirements"
+	{
+		"01"						"item_blessed_essence"
+	}
+}
+
+"item_material_projector"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1543"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "material_projector"
+	"ScriptFile"					"items/material_projector/material_projector"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"5400"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_damage"			"10"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_stats"			"15"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_hp"				"400"
+		}
+	}
+}

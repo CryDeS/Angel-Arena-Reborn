@@ -1,0 +1,84 @@
+"angel_arena_grace"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+	"AbilityTextureName"			"custom/angel_arena_grace"
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"900"
+	"AbilityCastPoint"				"0.2"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"16.0"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100 120 140 160 180 200 220"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"heal"					"500 800 1000 1200 1400 1850 3000"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"300"
+		}
+	}
+
+	"precache"
+	{
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts"
+		"particle"	"particles/units/heroes/hero_omniknight/omniknight_purification.vpcf"
+		"particle"	"particles/units/heroes/hero_omniknight/omniknight_purification_hit.vpcf"
+		"particle"	"particles/units/heroes/hero_omniknight/omniknight_purification_cast.vpcf"
+
+	}
+
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"	"Hero_Omniknight.Purification"
+			"Target"		"TARGET"
+		}
+
+		"FireEffect"
+		{
+			"Target"			"TARGET"
+			"EffectName"		"particles/units/heroes/hero_omniknight/omniknight_purification.vpcf"
+			"EffectAttachType"	"follow_origin"
+			"ControlPoints"
+			{
+				"00"	"0 0 0"
+				"01"	"%radius %radius %radius"
+			}
+		}
+		
+		"FireEffect"
+		{
+			"Target"			"TARGET"
+			"EffectName"		"particles/units/heroes/hero_omniknight/omniknight_purification_cast.vpcf"
+			"EffectAttachType"	"follow_origin"
+		}
+
+		"Heal"
+		{
+			"Target" 		"TARGET"
+			"HealAmount"	"%heal"
+		}
+	}
+}

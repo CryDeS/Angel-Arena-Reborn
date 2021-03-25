@@ -1,0 +1,136 @@
+"item_recipe_dark_edge"
+{
+	"AbilityTextureName" 				"item_recipe_dark_edge"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1241"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"800"
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_dark_edge"
+	"ItemRequirements"
+	{
+		"01"						"item_mozaius_blade;item_amber_knife;item_boss_soul"
+	}
+}
+
+"item_dark_edge"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1242"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"BaseClass"						"item_lua"
+
+	"ScriptFile"					"items/dark_edge/item_dark_edge"
+	"AbilityTextureName"			"dark_edge"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+	"FightRecapLevel"				"1"
+
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"24.0"
+	"AbilitySharedCooldown"			"amber_knife"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"150"
+	"ItemCost"						"13700"
+	"ItemShopTags"					"damage;attack_speed;movespeed;hard_to_tag"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"sb;invis;shadow blade;dark edge;edge"
+	"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+	"precache"
+	{
+		"soundfile"					"soundevents/items/dark_edge.vsndevts"
+		"particle"					"particles/econ/items/dazzle/dazzle_ti9/dazzle_shadow_wave_ti9_crimson_impact_damage.vpcf"
+		"particle"					"particles/generic_hero_status/status_invisibility_start.vpcf"
+		"particle"					"particles/generic_gameplay/generic_lifesteal.vpcf"
+		"particle"					"particles/econ/items/chaos_knight/chaos_knight_ti9_weapon/chaos_knight_ti9_weapon_crit_tgt.vpcf"
+	}
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"160"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attack_speed"	"60"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_stats"			"55"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_hp"				"1000"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"windwalk_duration"		"16.0"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"windwalk_movement_speed"	"30"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"windwalk_fade_time"	"0.1"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"windwalk_bonus_damage"	"500"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"backstab_reduction"	"60"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"backstab_duration"		"7.5"
+		}
+		"11"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"decrease_heal_pct"		"30"
+		}
+		"12"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"attack_cd"				"0.75"
+		}
+		"13"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"attack_delay"			"0.1"
+		}
+		"14"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"lifesteal"				"25"
+		}
+	}
+}

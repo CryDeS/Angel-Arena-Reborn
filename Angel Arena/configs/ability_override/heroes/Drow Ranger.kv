@@ -1,0 +1,258 @@
+"drow_ranger_frost_arrows"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"625"
+	"AbilityCastPoint"				"0.0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"0.0"
+	"AbilityDuration"				"1.5"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"15 17 20 22 25 27 30"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"frost_arrows_movement_speed"	"-20 -35 -40 -45 -50 -55 -60"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"damage"						"30 41 53 65 76 88 100"
+		}
+	}
+}
+
+
+//=================================================================================================================
+// Ability: Drow Ranger Wave of Silence
+//=================================================================================================================
+"drow_ranger_wave_of_silence"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"900"
+	"AbilityCastPoint"				"0.4"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"16"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"90 110 130 150 170 200 220"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"wave_speed"		"2000.0"
+		}
+		"02"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"wave_width"		"250"
+		}
+		"03"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"silence_duration"	"3.0 3.5 4.0 4.5 5.0 5.5 6.0"
+			"LinkedSpecialBonus"	"special_bonus_unique_drow_ranger_4"
+		}
+		"04"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"knockback_distance_max"	"350"
+		}
+		"05"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"knockback_duration"		"0.6"
+		}
+		"06"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"knockback_height"		"0"
+		}
+	}
+}
+
+//=================================================================================================================
+// Ability: Drow Ranger's Trueshot Aura
+//=================================================================================================================
+"drow_ranger_trueshot"
+{
+	"MaxLevel"						"7"
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"0"
+	"AbilityCastPoint"				"0"
+	"AbilityCooldown"				"70 60 50 40 30 20 10"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+            "var_type"					     "FIELD_FLOAT"
+            "trueshot_ranged_damage"	 	 "50 60 70 80 90 100 120"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"						"1200"
+		}
+	}
+}
+
+//=================================================================================================================
+// Ability: Drow Ranger's Marksmanship
+//=================================================================================================================
+"drow_ranger_marksmanship"
+{
+	"MaxLevel"								"7"
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+        "01"
+        {
+            "var_type"						"FIELD_INTEGER"
+            "chance"	                    "15"
+            "LinkedSpecialBonus"		"special_bonus_unique_drow_ranger_3"
+        }
+        "02"
+        {
+            "var_type"						"FIELD_INTEGER"
+            "bonus_damage"					"20"
+            "CalculateSpellDamageTooltip"	"0"
+        }
+        "03"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"agility_multiplier"			"25 29 33 37 41 45 50"
+		}
+		"04"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"agility_range"					"1350"
+		}
+        "05"
+        {
+            "var_type"						"FIELD_INTEGER"
+            "split_count_scepter"			"2"
+            "RequiresScepter"		        "1"
+        }
+        "06"
+        {
+            "var_type"						"FIELD_INTEGER"
+            "scepter_range"					"400"
+            "RequiresScepter"				"1"
+        }
+        "07"
+        {
+            "var_type"						"FIELD_INTEGER"
+            "damage_reduction_scepter"		"35"
+            "RequiresScepter"		        "1"
+            "CalculateSpellDamageTooltip"	"0"
+        }
+        "08"
+        {
+            "var_type"						"FIELD_INTEGER"
+            "disable_range"		            "400"
+        }
+	}
+}
+
+
+"drow_ranger_multishot"
+{
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"FightRecapLevel"				"1"
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+	"AbilityChannelTime"			"2.5"
+
+	// Time
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"20 19 18 17 16 15 14"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"50 60 70 80 90 120 150"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"wave_count"				"3"
+		}			
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"arrow_count_per_wave"				"4"
+		}	
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"arrow_damage_pct"			"100 125 145 160 175 200 225"
+			"LinkedSpecialBonus"		"special_bonus_unique_drow_ranger_1"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"arrow_slow_duration"		"1.5 2.0 2.5 3.0 3.5 4.0 4.5"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"arrow_width"					"90"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"arrow_speed"					"1200"
+		}
+		"07"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"arrow_range_multiplier"	"2"
+		}
+		"08"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"arrow_angle"				"50"
+        }
+	}
+	"AbilityCastAnimation"		"ACT_DOTA_CHANNEL_ABILITY_3"
+}

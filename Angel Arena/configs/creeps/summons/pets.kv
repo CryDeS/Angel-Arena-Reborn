@@ -1,0 +1,242 @@
+	"npc_aa_ancient_hulk"
+	{
+		// General
+		//
+		"BaseClass"					"npc_dota_creature"	
+		"Model"						"models/creeps/lane_creeps/creep_radiant_hulk/creep_radiant_ancient_hulk.vmdl"	// Model.
+		"SoundSet"	"Hero_Omniknight"
+		"GameSoundsFile"  "soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts"
+	
+		"ModelScale"				"1.0"
+		"Level"						"50"
+		"CanBeDominated" 			"0" 
+		"IsAncient"					"1"
+		"ConsideredHero"			"1"
+		
+		// Abilities
+		//----------------------------------------------------------------
+		
+		"Ability1"					"pet_ancient_hulk_hammer"		// Ability 1.
+		"Ability2"					"pet_ancient_hulk_blink"			// Ability 2.
+		"Ability3"					"pet_ancient_hulk_desolation"			// Ability 3.
+		"Ability4"					"pet_ancient_hulk_invis"			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"60"			// Physical protection.
+		"MagicalResistance"			"50"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"500"		// Damage range min.
+		"AttackDamageMax"			"800"		// Damage range max.
+
+		"AttackRate"				"1.0"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"160"		// Range within a target can be attacked.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			""			// Speed of projectile.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"2000"		// Experience earn.
+		"BountyGoldMin"				"1500"		// Gold earned min.
+		"BountyGoldMax"				"1500"		// Gold earned max.
+
+		// Bounds
+		"HealthBarOffset"           "300"		
+		"RingRadius"                "90"
+		"BoundsHullName"            "DOTA_HULL_SIZE_HERO"
+		
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"450"		// Speed
+		"MovementTurnRate"			"0.8" 
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"20000"		// Base health.
+		"StatusHealthRegen"			"60.0"		// Health regeneration rate.
+		"StatusMana"				"800"			// Base mana.
+		"StatusManaRegen"			"10"			// Mana regeneration rate.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_GOODGUYS"			// Team name.
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1000"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
+		
+		"HasInventory"				"0"
+	}
+	
+	"npc_aa_ancient_mage"
+	{
+		// General
+		//
+		"BaseClass"					"npc_dota_creature"	
+		"Model"						"models/creeps/lane_creeps/creep_radiant_ranged/radiant_ranged_mega.vmdl"
+		"SoundSet"					"Creep_Good_Range"
+	
+		"ModelScale"				"1.2"
+		"Level"						"50"
+		"CanBeDominated" 			"0" 
+		"IsAncient"					"1"
+		"ConsideredHero"			"1"
+		
+		// Abilities
+		//----------------------------------------------------------------
+		
+		"Ability1"					"pet_ancient_mage_silence"		// Ability 1.
+		"Ability2"					"pet_ancient_hulk_blink"			// Ability 2.
+		"Ability3"					"pet_ancient_mage_astral"			// Ability 3.
+		"Ability4"					"pet_ancient_mage_heal"			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"55"			// Physical protection.
+		"MagicalResistance"			"60"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"800"		// Damage range min.
+		"AttackDamageMax"			"1000"		// Damage range max.
+
+		"AttackRate"				"0.7"		// Speed of attack.
+		"AttackAnimationPoint"		"0.5"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"600"		// Range within a target can be acquired.
+		"AttackRange"				"500"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_goodguy.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"900"		// Speed of projectile.
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"2000"		// Experience earn.
+		"BountyGoldMin"				"1500"		// Gold earned min.
+		"BountyGoldMax"				"1500"		// Gold earned max.
+
+		// Bounds
+		"HealthBarOffset"           "300"		
+		"RingRadius"                "90"
+		"BoundsHullName"            "DOTA_HULL_SIZE_HERO"
+		
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"420"		// Speed
+		"MovementTurnRate"			"0.8" 
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"15000"		// Base health.
+		"StatusHealthRegen"			"200.0"		// Health regeneration rate.
+		"StatusMana"				"2000"			// Base mana.
+		"StatusManaRegen"			"40"			// Mana regeneration rate.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_GOODGUYS"			// Team name.
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1000"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
+		
+		"HasInventory"				"0"
+	}
+	
+	"npc_aa_ancient_wolf"
+	{
+		// General
+		//
+		"BaseClass"					"npc_dota_creature"	
+		"Model"						"models/items/lycan/ultimate/alpha_trueform9/alpha_trueform9.vmdl"
+		"SoundSet"					"Lycan_Wolf"
+	
+		"ModelScale"				"1.0"
+		"Level"						"50"
+		"CanBeDominated" 			"0" 
+		"IsAncient"					"1"
+		"ConsideredHero"			"1"
+		
+		// Abilities
+		//----------------------------------------------------------------
+		
+		"Ability1"					"pet_ancient_wolf_vampire"		// Ability 1.
+		"Ability2"					"pet_ancient_hulk_blink"			// Ability 2.
+		"Ability3"					"alpha_wolf_command_aura"			// Ability 3.
+		"Ability4"					"pet_ancient_hulk_invis"			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"70"			// Physical protection.
+		"MagicalResistance"			"40"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"1200"		// Damage range min.
+		"AttackDamageMax"			"1400"		// Damage range max.
+
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.5"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"200"		// Range within a target can be acquired.
+		"AttackRange"				"100"		// Range within a target can be attacked.
+		"ProjectileModel"			"" // Particle system model for projectile.
+		"ProjectileSpeed"			"900"		// Speed of projectile.
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"400"		// Experience earn.
+		"BountyGoldMin"				"1500"		// Gold earned min.
+		"BountyGoldMax"				"1500"		// Gold earned max.
+
+		// Bounds
+		"HealthBarOffset"           "300"		
+		"RingRadius"                "90"
+		"BoundsHullName"            "DOTA_HULL_SIZE_HERO"
+		
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"480"		// Speed
+		"MovementTurnRate"			"0.8" 
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"35000"		// Base health.
+		"StatusHealthRegen"			"20.0"		// Health regeneration rate.
+		"StatusMana"				"500"			// Base mana.
+		"StatusManaRegen"			"10"			// Mana regeneration rate.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_GOODGUYS"			// Team name.
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1000"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
+		
+		"HasInventory"				"0"
+	}
+	

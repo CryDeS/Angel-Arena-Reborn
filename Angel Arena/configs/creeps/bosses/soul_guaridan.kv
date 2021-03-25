@@ -1,0 +1,84 @@
+"npc_aa_soul_guardian" 
+{
+	"BaseClass" 					"npc_dota_creature"
+	"Model" 						"models/heroes/omniknight/omniknight.vmdl"
+	"SoundSet"						"Hero_Omniknight"
+	"GameSoundsFile"  				"soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts"
+	"vscripts"						"creeps/boss/soul_guardian/soul_guardian_ai.lua"
+	
+	"ModelScale" 					"2.0"
+	"Level" 						"100"
+	"IsNeutralUnitType"            	"0"
+	"IsAncient" 					"1"
+	"CanBeDominated" 				"0"
+	"UseNeutralCreepBehavior"   	"0" 
+	
+	"Ability1" 						"soul_guardian_heroes_ring"
+	"Ability2" 						"soul_guardian_heavy_strike"
+	"Ability3" 						"soul_guardian_pure_heal"
+	"Ability4" 						"soul_guardian_damage_steal"
+	"Ability5" 						"soul_guardian_holy_rage"
+	"Ability6" 						"keymaster_dodge_mastery"
+	"Ability7" 						""
+	"Ability8" 						""
+	 
+	"ArmorPhysical" 				"35"
+	"MagicalResistance" 			"25"
+	"DisableResistance"            	"100.0"
+	
+	"AutoAttacksByDefault"			"0"
+	
+	"AttackCapabilities" 			"DOTA_UNIT_CAP_MELEE_ATTACK"
+	"AttackDamageMin" 				"100"
+	"AttackDamageMax" 				"100"
+	"AttackRate" 					"0.4"
+	"AttackAnimationPoint" 			"0.7" 
+	"AttackAcquisitionRange" 		"1"
+	"AttackRange" 					"190"
+	"ProjectileModel" 				""
+	"ProjectileSpeed" 				""
+	"HealthBarOffset"           	"300"
+	"RingRadius"                	"110"
+	"BoundsHullName"            	"DOTA_HULL_SIZE_HERO"
+	
+	"BountyXP" 						"2800"
+	"BountyGoldMin" 				"3000"
+	"BountyGoldMax" 				"3000"
+	 
+	"MovementCapabilities" 			"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed" 				"450"
+	"MovementTurnRate" 				"0.8"
+
+	"StatusHealth" 					"30000"
+	"StatusHealthRegen" 			"180"
+	"StatusMana" 					"8000"
+	"StatusManaRegen" 				"120"
+	 
+	"TeamName"						"DOTA_TEAM_NEUTRALS"
+	"UnitRelationshipClass"			"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	  
+	"VisionDaytimeRange" 			"1200"
+	"VisionNighttimeRange" 			"1200"
+	
+	"precache"
+	{
+		"model" 					"models/heroes/omniknight/omniknight.vmdl"
+		"model" 					"models/heroes/omniknight/cape.vmdl"
+		"model" 					"models/heroes/omniknight/bracer.vmdl"
+		"model" 					"models/items/omniknight/winged_helmet/winged_helmet.vmdl"
+		"model" 					"models/items/omniknight/guardofbasilius_weapon/guardofbasilius_weapon.vmdl"
+		"model" 					"models/heroes/omniknight/head.vmdl"
+	}
+
+	"Creature"
+	{
+		"AttachWearables"
+		{
+			"Wearable1"		{	"ItemDef"		"43"		} 
+			"Wearable2" 	{	"ItemDef"		"13"		} 
+			"Wearable3"		{	"ItemDef"		"4581"		} 
+			"Wearable4"		{	"ItemDef"		"6587"		} 
+			"Wearable5"		{	"ItemDef"		"45"		} 
+		}
+	}
+}

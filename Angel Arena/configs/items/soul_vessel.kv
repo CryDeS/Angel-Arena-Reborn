@@ -1,0 +1,226 @@
+	"item_recipe_soul_vessel"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1251"						
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     "item_datadriven"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"130"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_soul_vessel"
+		"ItemRequirements"
+		{
+			"01"						"item_urn_of_shadows;item_dagon"
+		}
+	}
+
+	"item_soul_vessel"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1252"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"ItemBaseLevel"					"2"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"soul_vessel"
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"14"
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.0"
+		
+		"ItemRequiresCharges"			"1"
+		"ItemDisplayCharges"			"1"
+		"ItemPermanent"					"1"
+		"ItemInitialCharges"			"0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125"
+		"ItemCost"						"3725" //2720 + 2275 + 130 + 875
+		"ItemShopTags"					"regen_mana;str;boost_health"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"urn of shadows; soul; soul vessel; vessel"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemShareability"				"ITEM_PARTIALLY_SHAREABLE"
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_regen"			"2.2"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stats"			"12"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"soul_per_kill"			"2"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"800"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"heal_const"			"600"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"heal_pct"				"5"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_const"			"400"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage_pct"			"5"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"buff_attack"			"30"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"debuff_attack"			"-18"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"buff_mvspd"			"12"
+			}
+			"12"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"debuff_mvspd"			"-18"
+			}
+			"13"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"4.0"
+			}
+		}
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"		"items/soul_vessel.lua"
+				"Function"			"OnSpellStart"
+				
+				"FriendModifier"	"modifier_soul_vessel_buff"
+				"FriendHealConst"	"%heal_const"
+				"FriendHealPct"		"%heal_pct"
+				
+				"EnemyModifier"		"modifier_soul_vessel_debuff"
+				"EnemyDamageConst"	"%damage_const"
+				"EnemyDamagePct"	"%damage_pct"
+			}
+			
+			"SpendCharge"
+			{
+			}   
+		}
+	
+		"Modifiers"
+		{
+			"modifier_soul_vessel_passive"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Purgable"	"0"
+				
+				"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{	
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" 				"%bonus_stats"	
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" 				"%bonus_stats"	
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" 				"%bonus_stats"	
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"				"%mana_regen"
+				}
+			}
+			
+			"modifier_soul_vessel_passive_kill"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Purgable"	"0"
+				
+				"OnKill"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"items/soul_vessel.lua"
+						"Function"			"OnKill"
+						"ChargePerKill"		"%soul_per_kill"
+					}
+				}
+			}
+			
+			"modifier_soul_vessel_buff"
+			{
+				"Passive"		"0"
+				"IsHidden"		"0"
+				"Purgable"		"1"
+				"IsBuff"		"1"
+				"Duration"		"%duration"
+				
+				"TextureName"	"custom/soul_vessel"
+				
+				"EffectName"			"particles/items2_fx/urn_of_shadows_heal.vpcf"
+				"EffectAttachType"		"follow_origin"
+			
+				"Properties"
+				{	
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE_UNIQUE" 		"%buff_mvspd"
+					"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"			"%buff_attack"
+				}
+			}
+			
+			"modifier_soul_vessel_debuff"
+			{
+				"Passive"		"0"
+				"IsHidden"		"0"
+				"Purgable"		"1"
+				"IsDebuff"		"1"
+				
+				"TextureName"	"custom/soul_vessel"
+				
+				"Duration"		"%duration"
+				
+				"EffectName"			"particles/items2_fx/urn_of_shadows_damage.vpcf"
+				"EffectAttachType"		"follow_origin"
+			
+				"Properties"
+				{	
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE_UNIQUE" 		"%debuff_mvspd"
+					"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"			"%debuff_attack"
+				}
+			}
+		}
+	}

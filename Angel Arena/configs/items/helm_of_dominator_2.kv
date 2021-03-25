@@ -1,0 +1,112 @@
+"item_recipe_helm_of_the_dominator_2"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"633"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1600"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_helm_of_the_dominator_2"
+	"ItemRequirements"
+	{
+		"01"						"item_helm_of_the_dominator;item_ultimate_orb"
+	}
+}
+
+//=================================================================================================================
+// Helm of the Dominator
+//=================================================================================================================
+"item_helm_of_the_dominator_2"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"635"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"700"
+	"AbilityCastPoint"				"0.0"
+	"AbilityCooldown"				"45.0"
+	"MaxUpgradeLevel"				"2"
+	"ItemBaseLevel"					"2"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"0"
+	"ItemCost"						"6000"
+	"ItemShopTags"					"damage;armor;unique;hard_to_tag"
+	"ItemQuality"					"artifact"
+	"ItemAliases"					"hotd;helm of the dominator"
+	"ShouldBeSuggested"				"1"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_stats"			"20"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"8"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_regen"			"8"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"health_min"			"1800"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"speed_base"			"425"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bounty_gold"			"200"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"creep_bonus_damage"			"50"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"creep_bonus_hp_regen"			"12"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"creep_bonus_mp_regen"			"4"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"creep_bonus_armor"			"4"
+		}
+		"11"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"model_scale"			"20"
+		}
+	}
+}

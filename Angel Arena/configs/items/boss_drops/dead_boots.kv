@@ -1,0 +1,139 @@
+"item_recipe_dead_boots"
+{
+		"AbilityTextureName" 				"recipe"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1275"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_datadriven"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_dead_boots"
+	"ItemRequirements"
+	{
+		"01"						"item_dead_boots_dummy"
+	}
+}
+
+"item_dead_boots"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1125"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "dead_boots"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1200"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_speed"			"60"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"6"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_hp_regen"		"20"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_stats"			"16"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_passive_dead_boots"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+			"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%bonus_armor"
+				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"			"%bonus_hp_regen"
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"				"%bonus_stats"
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"			"%bonus_stats"
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"			"%bonus_stats"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"			"%bonus_speed"
+			}		
+		}
+	}
+}
+
+"item_dead_boots_dummy"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1274"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "dead_boots"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1200"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"0"
+
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_speed"			"100"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"6"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_hp_regen"		"20"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_stats"			"16"
+		}
+	}
+}

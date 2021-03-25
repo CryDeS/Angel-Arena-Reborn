@@ -1,0 +1,63 @@
+"npc_dota_hero_monkey_king"													"Forgotten Hero"
+
+"DOTA_Tooltip_Ability_forgotten_hero_herofall"								"Herofall"
+"DOTA_Tooltip_Ability_forgotten_hero_herofall_Description"					"Hero jumps to selected point, and when him falls he dealing damage and stuns enemies in small range."
+"DOTA_Tooltip_Ability_forgotten_hero_herofall_damage"						"DAMAGE:"
+"DOTA_Tooltip_Ability_forgotten_hero_herofall_aoe_radius"					"FALL RADIUS:"
+"DOTA_Tooltip_Ability_forgotten_hero_herofall_stun_duration"				"STUN DURATION:"
+"DOTA_Tooltip_Ability_forgotten_hero_herofall_abilitycastrange"				"JUMP RRANGE:"
+"DOTA_Tooltip_Ability_forgotten_hero_herofall_speed"						"JUMP SPEED:"
+"DOTA_Tooltip_Ability_forgotten_hero_herofall_height"						"JUMP HEIGHT:"
+
+"DOTA_Tooltip_modifier_forgotten_hero_herofall"								"Herofall Jump"
+"DOTA_Tooltip_modifier_forgotten_hero_herofall_debuff"						"Herofal Stun"
+
+"DOTA_Tooltip_Ability_forgotten_hero_breach"								"Breach"
+"DOTA_Tooltip_Ability_forgotten_hero_breach_Description"					"Hero disappears into another dimenison and gets additional movement speed. Any attack remove Breach Effect."
+"DOTA_Tooltip_Ability_forgotten_hero_breach_duration"						"DURATION:"
+"DOTA_Tooltip_Ability_forgotten_hero_breach_bonus_ms"						"%BONUS MOVEMENT SPEED:"
+"DOTA_Tooltip_Ability_forgotten_hero_breach_fade_time"						"FADE TIME:"
+
+"DOTA_Tooltip_modifier_forgotten_hero_breach"								"Breach"
+"DOTA_Tooltip_modifier_forgotten_hero_breach_Description"					"In anothe rdimension. Grants %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%  bonus movement speed."
+
+"DOTA_Tooltip_Ability_forgotten_hero_meditation"							"Meditation"
+"DOTA_Tooltip_Ability_forgotten_hero_meditation_Description"				"Hero meditate and regeneretate him health."
+"DOTA_Tooltip_Ability_forgotten_hero_meditation_duration"					"DURATION:"
+"DOTA_Tooltip_Ability_forgotten_hero_meditation_hp_regen"					"%HEALTH RESTORE:"
+
+"DOTA_Tooltip_modifier_forgotten_hero_meditation"							"Meditation Restoration"
+"DOTA_Tooltip_modifier_forgotten_hero_meditation_buff"						"Meditation Damage"
+"DOTA_Tooltip_modifier_forgotten_hero_meditation_buff_Description"			"Grants %dMODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE%% bonus damage."
+
+"DOTA_Tooltip_Ability_forgotten_hero_combat_mastery"						"Combat Mastery"
+"DOTA_Tooltip_Ability_forgotten_hero_combat_mastery_Description"			"Every attack decreasing target armor. Attacks on real hero increase owner damage."
+"DOTA_Tooltip_Ability_forgotten_hero_combat_mastery_disarmor"				"DISARMOR::"
+"DOTA_Tooltip_Ability_forgotten_hero_combat_mastery_disarmor_duration"		"DISARMOR DURATION:"
+"DOTA_Tooltip_Ability_forgotten_hero_combat_mastery_bonus_damage_per_hero"	"BONUS DAMAGE FOR HERO:"
+"DOTA_Tooltip_Ability_forgotten_hero_combat_mastery_bonus_damage_duration"	"BONUS DAMAGE DURATION:"
+
+"DOTA_Tooltip_modifier_forgotten_hero_combat_mastery_damage"				"Combat Mastery Damage"
+"DOTA_Tooltip_modifier_forgotten_hero_combat_mastery_damage_Description"	"Grants %dMODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE%% bonus damage."
+"DOTA_Tooltip_modifier_forgotten_hero_combat_mastery_disarmor"				"Combat Mastery Disarmor"
+"DOTA_Tooltip_modifier_forgotten_hero_combat_mastery_disarmor_Description"	"Armor decreased for a %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%%"
+
+"DOTA_Tooltip_Ability_forgotten_hero_spirit_releash"						"Spirit Releash"
+"DOTA_Tooltip_Ability_forgotten_hero_spirit_releash_Description"			"Hero releash ancient spirit that deal massive damage on contact with enemy."
+"DOTA_Tooltip_Ability_forgotten_hero_spirit_releash_damage"					"DAMAGE:"
+"DOTA_Tooltip_Ability_forgotten_hero_spirit_releash_abilitycastrange"		"SPIRIT RANGE:"
+"DOTA_Tooltip_Ability_forgotten_hero_spirit_releash_projectile_speed"		"SPIRIT SPEED:"
+
+"DOTA_Tooltip_modifier_forgotten_hero_spirit_releash_debuff"				"Spirit Releash Stun"
+
+"DOTA_Tooltip_Ability_forgotten_hero_talent_herofall_range_bonus"			"+{s:value} to Herofall castrange"
+"DOTA_Tooltip_Ability_forgotten_hero_talent_herofall_attack"				"Herofall apply attack"
+"DOTA_Tooltip_Ability_forgotten_hero_talent_breach_crits"					"Critical Hit when leave Breach"
+"DOTA_Tooltip_Ability_forgotten_hero_talent_breach_crits_Description"		"Leave from Breach grants hero for {s:value}% critical damage"
+"DOTA_Tooltip_Ability_forgotten_hero_talent_breach_duration"				"+{s:value} for Breach duration"
+"DOTA_Tooltip_Ability_forgotten_hero_talent_meditation_invis"				"Meditation grants invisibility"
+"DOTA_Tooltip_Ability_forgotten_hero_talent_meditation_damage_buff"			"+{s:damage} damage after Meditation"
+
+"DOTA_Tooltip_Ability_forgotten_hero_talent_meditation_damage_buff_Description"			"+{s:damage} damage after full channel Meditation for a {s:duration} seconds"
+"DOTA_Tooltip_Ability_forgotten_hero_talent_spirit_releash_stun"			"Spirit Releash stuns enemy for a {s:value} seconds"
+"DOTA_Tooltip_Ability_forgotten_hero_talent_spirit_releash_cd_decrease"		"-{s:value} Spirit Releash cooldown"

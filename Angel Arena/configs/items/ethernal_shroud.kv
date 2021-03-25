@@ -1,0 +1,76 @@
+"item_recipe_eternal_shroud"
+{
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1100"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_eternal_shroud"
+	"ItemRequirements"
+	{
+		"01"						"item_voodoo_mask;item_hood_of_defiance"
+	}
+}
+
+//=================================================================================================================
+// Eternal Shroud
+//=================================================================================================================
+"item_eternal_shroud"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"30.0"
+	"AbilityManaCost"				"50"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"3250"
+	"ItemShopTags"					"regen_health;magic_resist"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"eternal shroud;es"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	"ShouldBeSuggested"				"1"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_spell_resist"	"20"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_health_regen"	"8.5"
+		}			
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"barrier_block"			"400"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"barrier_duration"		"12.0"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"hero_lifesteal"		"20"
+		}			
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"creep_lifesteal"		"4"
+		}	
+	}
+}

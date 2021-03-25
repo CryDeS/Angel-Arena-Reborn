@@ -1,0 +1,108 @@
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"megacreep_warrior_rage_lua"
+{
+    // General
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+            "BaseClass"					    "ability_lua"
+            "AbilityTextureName"			"custom/megacreep_warrior_rage_lua"
+            "ScriptFile"					"creeps/abilities/npc_aa_megacreep_warrior/megacreep_warrior_rage_lua"
+            "MaxLevel"                      "1"
+
+            // Time
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilityCooldown"				"20"
+
+            // Special
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilitySpecial"
+            {
+                "01"
+                {
+                   "var_type"			    "FIELD_INTEGER"
+                   "rage_duration"		    "4"
+                }
+
+                "02"
+                {
+                    "var_type"			    "FIELD_INTEGER"
+                    "bonus_resist_pct"    "50"
+                }
+
+            }
+}
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"megacreep_warrior_aura_lua"
+{
+    // General
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+            "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+            "BaseClass"					    "ability_lua"
+            "AbilityTextureName"			"custom/megacreep_warrior_aura_lua"
+            "ScriptFile"					"creeps/abilities/npc_aa_megacreep_warrior/megacreep_warrior_aura_lua"
+            "MaxLevel"                      "1"
+
+            // Special
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilitySpecial"
+            {
+                "01"
+                {
+                   "var_type"			    "FIELD_INTEGER"
+                   "aura_radius"		    "500"
+                }
+                "02"
+                {
+                   "var_type"			    "FIELD_INTEGER"
+                   "disarmor_start"		    "4"
+                }
+                "03"
+                {
+                   "var_type"			    "FIELD_INTEGER"
+                   "time_tick_minute"		"5"
+                }
+                "04"
+                {
+                   "var_type"			    "FIELD_INTEGER"
+                   "disarmor_per_tick"		"1"
+                }
+            }
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"megacreep_warrior_passive_rage_lua"
+{
+    // General
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            "BaseClass"					    "ability_lua"
+            "AbilityTextureName"			"custom/megacreep_warrior_passive_rage_lua"
+            "ScriptFile"					"creeps/abilities/npc_aa_megacreep_warrior/megacreep_warrior_passive_rage_lua"
+            "MaxLevel"                      "1"
+
+            // Special
+            //-------------------------------------------------------------------------------------------------------------
+            "AbilitySpecial"
+            {
+                "01"
+                {
+                   "var_type"			    "FIELD_INTEGER"
+                   "duration"		        "6"
+                }
+                "02"
+                {
+                   "var_type"			    "FIELD_INTEGER"
+                   "bonus_damage_per_stack"	"5"
+                }
+            }
+}

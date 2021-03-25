@@ -1,0 +1,76 @@
+"itembuilds"
+{
+	"author"		"Valve"
+	"hero"			"npc_dota_hero_jakiro"
+	"Title"			"Recommended items for Jakiro"
+	
+	"Items"
+	{		
+		"#DOTA_Item_Build_Starting_Items"
+		{
+			"item"		"item_courier"
+			"item"		"item_tango"
+			"item"		"item_clarity"
+			"item"		"item_clarity"
+			"item"		"item_magic_stick"
+			"item"		"item_enchanted_mango"
+		}
+		
+		"#DOTA_Item_Build_Early_Game"
+		{	
+			"item"		"item_magic_wand"
+			"item"		"item_arcane_boots"
+			"item"		"item_cyclone"
+			"item"		"item_tome_lvlup"
+			"item"		"item_veil_of_discord"
+		}
+		
+		"#DOTA_Item_Build_Mid_Items"
+		{
+			"item"		"item_plague_staff"
+			"item"		"item_ultimate_scepter"
+			"item"		"item_guardian_greaves"
+			"item"		"item_power_treads_3"
+			"item"		"item_octarine_core"
+			"item"		"item_rod_of_atos"
+			"item"		"item_refresher"
+			"item"		"item_slice_amulet"
+		}
+		
+		"#DOTA_Item_Build_Late_Items"
+		{
+			"item"		"item_octarine_core_2"
+			"item"		"item_sheepstick"
+			"item"		"item_charon"
+			"item"		"item_static_amulet"
+			"item"		"item_angels_greaves"
+			"item"		"item_recovery_orb"
+			"item"		"item_tome_int_3"
+			"item"		"item_tome_int_6"
+			"item"		"item_tome_int_60"
+			
+		}
+		
+		"#DOTA_Item_Build_Other_Items"
+		{
+			"item"		"item_bloodstone"
+			"item"		"item_shivas_guard"
+			"item"		"item_necronomicon_3"
+			"item"		"item_orchid"
+			"item"		"item_blink"
+			"item"		"item_aether_lens"
+			"item"		"item_ethereal_blade"
+			"item"		"item_dagon_5"
+			"item"		"item_rubick_dagon"
+			"item"		"item_guardian_greaves"
+			"item"		"item_silver_edge"
+			"item"		"item_hurricane_pike"
+			"item"		"item_sphere"
+			"item"		"item_lotus_orb"
+			"item"		"item_glimmer_cape"
+			"item"		"item_rod_of_atos"
+			"item"		"item_helm_of_the_dominator"
+			
+		}
+	}
+}

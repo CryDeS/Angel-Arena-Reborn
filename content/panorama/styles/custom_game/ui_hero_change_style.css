@@ -1,0 +1,566 @@
+.Main
+{
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+#CBlock
+{
+	horizontal-align: center;
+	vertical-align: center;
+	flow-children: down;
+	width: 562px;
+	height:637px;
+	background-image: url("file://{images}/custom_game/hero_change_interface/background.png");
+	background-size: 100% 100%;
+	background-position: 100% 100%;
+}
+
+#CBlock.unvisible
+{
+	opacity:0.0;
+	margin-top:-4000px;
+}
+
+#CBlock.visible
+{
+	opacity:1.0;
+	margin-top:0px;
+}
+
+
+#Line_1
+{
+	margin-top:  40px;
+	width: 562px;
+	padding-left:110px;
+	horizontal-align: center;
+	//overflow: squish scroll;
+}
+
+#Line_2
+{
+	margin-top:  40px; 
+	width: 562px;
+	padding-left:110px;
+	horizontal-align: center;
+}
+
+#Line_3
+{
+	margin-top:  40px;
+	width: 562px;
+	padding-left:110px;
+	horizontal-align: center;
+}
+
+#Line_4
+{
+	margin-top:  40px;
+	width:562px;
+	height:80px;
+	padding-left:110px;
+	//overflow: squish scroll;
+	horizontal-align: center;
+	vertical-align: center;
+	
+	
+
+}
+
+#LR_PANEL
+{
+	margin-top:  0px;
+	width: 562px;
+	horizontal-align: center;
+}
+
+#bt_left_style
+{
+	horizontal-align: center;
+	margin-left: -211px; /* 75 + button_width*/
+}
+
+#bt_right_style
+{
+	horizontal-align: center;
+	margin-right: -211px; /* 75 + button_width*/
+}
+
+/*LINE 5 */
+
+
+#bt_left
+{
+	horizontal-align: center;
+	margin-top:34px;
+	margin-left:-48px;
+	width:		 40px;
+	height:      41px;
+	background-image: url("file://{images}/custom_game/hero_change_interface/button_left.png");
+	background-size: 100% 100%;
+}
+
+#bt_left:active 
+{
+	opacity: 0.4;
+}
+
+
+#bt_right
+{
+	horizontal-align: center;
+	margin-top:34px;
+	margin-left:100px;
+	width:		 40px;
+	height:      41px;
+	background-image: url("file://{images}/custom_game/hero_change_interface/button_right.png");
+	background-size: 100% 100%;
+}
+
+#bt_right:active 
+{
+	opacity: 0.4;
+}
+
+#list_text
+{
+	horizontal-align: center;
+	vertical-align: center;
+	margin-top:34px;
+	margin-left:0px;
+
+	font-size:24px;
+	font-weight:bold;
+	color: #AAAAAA;
+	horizontal-align: center;
+	vertical-align: center;
+	text-align:center;
+	vertical-align:center;
+}
+
+#bt_close
+{
+	horizontal-align: right;
+	margin-top:-25px;
+	margin-right:40px;
+	width:		 40px;
+	height:      41px;
+	background-image: url("file://{images}/custom_game/hero_change_interface/button_close.png");
+	background-size: 100% 100%;
+}
+
+#bt_close:active 
+{
+	opacity: 0.4;
+}
+
+#title_text
+{
+	horizontal-align: center;
+	margin-top:40px;
+	font-size:24px;
+	font-weight:bold;
+	color: #AAAAAA;
+	horizontal-align: center;
+	vertical-align: center;
+	text-align:center;
+	vertical-align:center;
+}
+
+/*LINE 1-------------------------------------------------*/
+#bt_1_av
+{
+	margin-left: 4px;
+	margin-top: -15px;
+	width:		 134px;
+	height:      51px;
+	//margin-left:210px;
+}
+	
+#bt_1_av_border
+{
+	width:		 134px;
+	height:      51px;
+	background-image: url("file://{images}/custom_game/hero_change_interface/portrait_border.png");
+}
+
+#bt_id1
+{
+	margin-top:34px;
+	flow-children: down;
+	width:		 141px;
+	height:      39px;
+	background-image: url("file://{images}/custom_game/hero_change_interface/button_change.png");
+	background-size: 100% 100%;
+	border-width:4px; 
+	//margin-left:210px;
+	border-color: #AAAAAA90;
+	border-radius: 4px 4px 4px 4px / 4px 4px 4px 4px;
+	box-shadow: fill #FFFF0000 2px 2px 2px 2px;
+}
+
+#bt_id1:active 
+{
+	border-width:0px; 
+	border-color: #AAAAAA90;
+	border-radius: 0px 0px 0px 0px / 0px 0px 0px 0px;
+	box-shadow: fill #FFFF0000 0px 0px 0px 0px;
+	opacity:0.7;
+	
+}
+#bt_1_text
+{
+	font-size:14px;
+	font-weight:bold;
+	color: #AAAAAA;
+	horizontal-align: center;
+	vertical-align: center;
+	text-align:center;
+	vertical-align:center;
+}
+
+#bt_2_av
+{
+	margin-left: 4px;
+	margin-top: -15px;
+	width:		 134px;
+	//margin-left:210px;
+	height:      51px;
+}
+	
+#bt_2_av_border
+{
+	width:		 134px;
+	height:      51px;
+	background-image: url("file://{images}/custom_game/hero_change_interface/portrait_border.png");
+}
+
+#bt_id2
+{
+	margin-top:34px;
+	flow-children: down;
+	width:		 141px;
+	height:      39px;
+	background-image: url("file://{images}/custom_game/hero_change_interface/button_change.png");
+	background-size: 100% 100%;
+	border-width:4px; 
+	//margin-left:210px;
+	border-color: #AAAAAA90;
+	border-radius: 4px 4px 4px 4px / 4px 4px 4px 4px;
+	box-shadow: fill #FFFF0000 2px 2px 2px 2px;
+}
+
+#bt_id2:active 
+{
+	border-width:0px; 
+	border-color: #AAAAAA90;
+	border-radius: 0px 0px 0px 0px / 0px 0px 0px 0px;
+	box-shadow: fill #FFFF0000 0px 0px 0px 0px;
+	opacity:0.7;
+}
+#bt_2_text
+{
+	font-size:14px;
+	font-weight:bold;
+	color: #AAAAAA;
+	horizontal-align: center;
+	vertical-align: center;
+	text-align:center;
+	vertical-align:center;
+}
+
+/*LINE 2 ----------------------------------------*/
+
+#bt_3_av
+{
+	margin-top: -15px;
+	margin-left: 4px;
+	width:		 134px;
+	height:      51px;
+}
+	
+#bt_3_av_border
+{
+	width:		 134px;
+	height:      51px;
+	background-image: url("file://{images}/custom_game/hero_change_interface/portrait_border.png");
+}
+
+#bt_id3
+{
+	margin-top:34px;
+	flow-children: down;
+	width:		 141px;
+	height:      39px;
+	background-image: url("file://{images}/custom_game/hero_change_interface/button_change.png");
+	background-size: 100% 100%;
+	border-width:4px; 
+	border-color: #AAAAAA90;
+	border-radius: 4px 4px 4px 4px / 4px 4px 4px 4px;
+	box-shadow: fill #FFFF0000 2px 2px 2px 2px;
+}
+
+#bt_id3:active 
+{
+	border-width:0px; 
+	border-color: #AAAAAA90;
+	border-radius: 0px 0px 0px 0px / 0px 0px 0px 0px;
+	box-shadow: fill #FFFF0000 0px 0px 0px 0px;
+	opacity:0.7;
+}
+#bt_3_text
+{
+	font-size:14px;
+	font-weight:bold;
+	color: #AAAAAA;
+	horizontal-align: center;
+	vertical-align: center;
+	text-align:center;
+	vertical-align:center;
+}
+
+#bt_4_av
+{
+	margin-top: -15px;
+	margin-left: 4px;
+	width:		 134px;
+	height:      51px;
+}
+	
+#bt_4_av_border
+{
+	width:		 134px;
+	height:      51px;
+	background-image: url("file://{images}/custom_game/hero_change_interface/portrait_border.png");
+}
+
+#bt_id4
+{
+	margin-top:34px;
+	flow-children: down;
+	width:		 141px;
+	height:      39px;
+	background-image: url("file://{images}/custom_game/hero_change_interface/button_change.png");
+	background-size: 100% 100%;
+	border-width:4px; 
+	border-color: #AAAAAA90;
+	border-radius: 4px 4px 4px 4px / 4px 4px 4px 4px;
+	box-shadow: fill #FFFF0000 2px 2px 2px 2px;
+}
+
+#bt_id4:active 
+{
+	opacity:0.7;
+	border-width:0px; 
+	border-color: #AAAAAA90;
+	border-radius: 0px 0px 0px 0px / 0px 0px 0px 0px;
+	box-shadow: fill #FFFF0000 0px 0px 0px 0px;
+}
+#bt_4_text
+{
+	font-size:14px;
+	font-weight:bold;
+	color: #AAAAAA;
+	horizontal-align: center;
+	vertical-align: center;
+	text-align:center;
+	vertical-align:center;
+}
+
+/*LINE 3 -------------------------- */
+
+#bt_5_av
+{
+	margin-top: -15px;
+	margin-left: 4px;
+	width:		 134px;
+	height:      51px;
+}
+	
+#bt_5_av_border
+{
+	width:		 134px;
+	height:      51px;
+	background-image: url("file://{images}/custom_game/hero_change_interface/portrait_border.png");
+}
+
+#bt_id5
+{
+	margin-top:34px;
+	flow-children: down;
+	width:		 141px;
+	height:      39px;
+	background-image: url("file://{images}/custom_game/hero_change_interface/button_change.png");
+	background-size: 100% 100%;
+	border-width:4px; 
+	border-color: #AAAAAA90;
+	border-radius: 4px 4px 4px 4px / 4px 4px 4px 4px;
+	box-shadow: fill #FFFF0000 2px 2px 2px 2px;
+}
+
+#bt_id5:active 
+{
+	opacity:0.7;
+	border-width:0px; 
+	border-color: #AAAAAA90;
+	border-radius: 0px 0px 0px 0px / 0px 0px 0px 0px;
+	box-shadow: fill #FFFF0000 0px 0px 0px 0px;
+}
+#bt_5_text
+{
+	font-size:14px;
+	font-weight:bold;
+	color: #AAAAAA;
+	horizontal-align: center;
+	vertical-align: center;
+	text-align:center;
+	vertical-align:center;
+}
+
+#bt_6_av
+{
+	margin-top: -15px;
+	margin-left: 4px;
+	width:		 134px;
+	height:      51px;
+}
+	
+#bt_6_av_border
+{
+	width:		 134px;
+	height:      51px;
+	background-image: url("file://{images}/custom_game/hero_change_interface/portrait_border.png");
+}
+
+#bt_id6
+{
+	margin-top:34px;
+	flow-children: down;
+	width:		 141px;
+	height:      39px;
+	background-image: url("file://{images}/custom_game/hero_change_interface/button_change.png");
+	background-size: 100% 100%;
+	border-width:4px; 
+	border-color: #AAAAAA90;
+	border-radius: 4px 4px 4px 4px / 4px 4px 4px 4px;
+	box-shadow: fill #FFFF0000 2px 2px 2px 2px;
+}
+
+#bt_id6:active 
+{
+	opacity:0.7;
+	border-width:0px; 
+	border-color: #AAAAAA90;
+	border-radius: 0px 0px 0px 0px / 0px 0px 0px 0px;
+	box-shadow: fill #FFFF0000 0px 0px 0px 0px;
+}
+#bt_6_text
+{
+	font-size:14px;
+	font-weight:bold;
+	color: #AAAAAA;
+	horizontal-align: center;
+	vertical-align: center;
+	text-align:center;
+	vertical-align:center;
+}
+
+/*LINE 4 -------------------------- */
+
+#bt_7_av
+{
+	margin-top: -15px;
+	margin-left: 4px;
+	width:		 134px;
+	height:      51px;
+}
+	
+#bt_7_av_border
+{
+	width:		 134px;
+	height:      51px;
+	background-image: url("file://{images}/custom_game/hero_change_interface/portrait_border.png");
+}
+
+#bt_id7
+{
+	margin-top:34px;
+	flow-children: down;
+	width:		 141px;
+	height:      39px;
+	background-image: url("file://{images}/custom_game/hero_change_interface/button_change.png");
+	background-size: 100% 100%;
+	border-width:4px; 
+	border-color: #AAAAAA90;
+	border-radius: 4px 4px 4px 4px / 4px 4px 4px 4px;
+	box-shadow: fill #FFFF0000 2px 2px 2px 2px;
+}
+
+#bt_id7:active 
+{
+	opacity:0.7;
+	border-width:0px; 
+	border-color: #AAAAAA90;
+	border-radius: 0px 0px 0px 0px / 0px 0px 0px 0px;
+	box-shadow: fill #FFFF0000 0px 0px 0px 0px;
+}
+#bt_7_text
+{
+	font-size:14px;
+	font-weight:bold;
+	color: #AAAAAA;
+	horizontal-align: center;
+	vertical-align: center;
+	text-align:center;
+	vertical-align:center;
+}
+
+#bt_8_av
+{
+	margin-top: -15px;
+	margin-left: 4px;
+	width:		 134px;
+	height:      51px;
+}
+	
+#bt_8_av_border
+{
+	width:		 134px;
+	height:      51px;
+	background-image: url("file://{images}/custom_game/hero_change_interface/portrait_border.png");
+}
+
+#bt_id8
+{
+	margin-top:34px;
+	flow-children: down;
+	width:		 141px;
+	height:      39px;
+	background-image: url("file://{images}/custom_game/hero_change_interface/button_change.png");
+	background-size: 100% 100%;
+	border-width:4px; 
+	border-color: #AAAAAA90;
+	border-radius: 4px 4px 4px 4px / 4px 4px 4px 4px;
+	box-shadow: fill #FFFF0000 2px 2px 2px 2px;
+}
+
+#bt_id8:active 
+{
+	opacity:0.7;
+	border-width:0px; 
+	border-color: #AAAAAA90;
+	border-radius: 0px 0px 0px 0px / 0px 0px 0px 0px;
+	box-shadow: fill #FFFF0000 0px 0px 0px 0px;
+}
+#bt_8_text
+{
+	font-size:14px;
+	font-weight:bold;
+	color: #AAAAAA;
+	horizontal-align: center;
+	vertical-align: center;
+	text-align:center;
+	vertical-align:center;
+}
+

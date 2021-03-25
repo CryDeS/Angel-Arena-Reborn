@@ -1,0 +1,17 @@
+"DOTA_Tooltip_ability_item_shard_joe_black"									"Joe Black's Katar Shard"
+"DOTA_Tooltip_ability_item_shard_joe_black_Description"						"<h1>Active: Absorb</h1>Reducing caster incoming damage."
+"DOTA_Tooltip_ability_item_shard_joe_black_all_stats"						"+$all"
+"DOTA_Tooltip_ability_item_shard_joe_black_armor"				            "+$armor"
+"DOTA_Tooltip_ability_item_shard_joe_black_mag_resist_pct"				    "%+$spell_resist"
+"DOTA_Tooltip_ability_item_shard_joe_black_damage_abs_pct"				    "%DAMAGE REDUCE:"
+"DOTA_Tooltip_ability_item_shard_joe_black_duration"				        "DURATION:"
+
+"DOTA_Tooltip_ability_item_shard_joe_black_dummy"							"Joe Black's Katar Shard"
+"DOTA_Tooltip_ability_item_shard_joe_black_dummy_Description"				"<h1>Active: Absorb</h1>Reducing caster incoming damage."
+"DOTA_Tooltip_ability_item_shard_joe_black_dummy_all_stats"					"+$all"
+"DOTA_Tooltip_ability_item_shard_joe_black_dummy_armor"				        "+$armor"
+"DOTA_Tooltip_ability_item_shard_joe_black_dummy_mag_resist_pct"			"%+$spell_resist"
+"DOTA_Tooltip_ability_item_shard_joe_black_dummy_damage_abs_pct"			"%DAMAGE REDUCE:"
+"DOTA_Tooltip_ability_item_shard_joe_black_dummy_duration"				    "DURATION:"
+
+"DOTA_Tooltip_modifier_item_shard_joe_black_active"		                    "DAMAGE REDUCED"

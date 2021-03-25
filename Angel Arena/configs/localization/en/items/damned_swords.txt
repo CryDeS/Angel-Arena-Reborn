@@ -1,0 +1,11 @@
+"DOTA_Tooltip_Ability_item_damned_swords"      						"Damned Swords"
+"DOTA_Tooltip_Ability_item_damned_swords_Description"    			"<h1>Passive: Damned Hit</h1> With every attack owner has chance %maim_chance%%  to apply a maim to enemy that deal %maim_damage% magical damage and slow attack speed for %maim_decrease_as% and movespeed for %maim_decrease_ms%%."
+"DOTA_Tooltip_Ability_item_damned_swords_bonus_damage"    			"+$damage"
+"DOTA_Tooltip_Ability_item_damned_swords_bonus_str"     			"+$str"
+"DOTA_Tooltip_Ability_item_damned_swords_bonus_agi"    				"+$agi"
+"DOTA_Tooltip_Ability_item_damned_swords_bonus_ms"    				"%+$move_speed"
+"DOTA_Tooltip_Ability_item_damned_swords_bonus_as"  				"+$attack"
+
+"DOTA_Tooltip_Ability_item_damned_swords_lore"						"Forget deep underground with power of ancient rune and mighty curse, that swords brings them owner a glory in battle and bitterness of defeat to them enemies."
+
+"DOTA_Tooltip_modifier_damned_swords_debuff"       					"Damned Hit"

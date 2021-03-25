@@ -1,0 +1,74 @@
+"npc_aa_huntess_owl_unit"
+{
+	// General
+	//----------------------------------------------------------------
+	"Model"						"models/items/beastmaster/hawk/legacy_of_the_nords_legacy_of_the_nords_owl/legacy_of_the_nords_legacy_of_the_nords_owl.vmdl"	// Model.
+	"BaseClass"					"npc_dota_venomancer_plagueward"
+	"IsAncient"					"1"
+	"Level"						"1"
+	"CanBeDominated" 			"0"
+
+
+	// Abilities
+	//----------------------------------------------------------------
+	"Ability1"					""	   
+	"Ability2"					""	
+	"Ability3"					""			
+	"Ability4"					""			             
+	
+	// Armor
+	//----------------------------------------------------------------
+	"ArmorPhysical"				"5"			// Physical protection.
+	"MagicalResistance"				"100"		// Magical protection.  // this should be 33, switch it back once we implement Resistant Skin
+
+    // Attack
+    //----------------------------------------------------------------
+    "AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"			// Type of attack - melee, ranged, etc.
+    "AttackDamageMin"			"0"			// Damage range min.
+    "AttackDamageMax"			"0"			// Damage range max.
+    "AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+    "AttackRate"				"1"			// Speed of attack.
+    "AttackAnimationPoint"		"0.5"		// Normalized time in animation cycle to attack.
+    "AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
+    "AttackRange"				"500"		// Range within a target can be attacked.
+    "ProjectileModel"			"" // Particle system model for projectile.
+    "ProjectileSpeed"			"900"		// Speed of projectile.
+
+	// Bounds
+	//----------------------------------------------------------------
+	"HealthBarOffset"			"1"
+	"RingRadius"                "90"
+    "BoundsHullName"            "DOTA_HULL_SIZE_HERO"
+
+	// Bounty
+	//----------------------------------------------------------------
+	"BountyXP"					"100"		// Experience earn.
+	"BountyGoldMin"				"150"		// Gold earned min.
+	"BountyGoldMax"				"150"		// Gold earned max.
+
+	// Movement
+	//----------------------------------------------------------------
+    "MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"			// Type of locomotion - ground, air
+    "MovementSpeed"				"500"		// Speed
+    "MovementTurnRate"			"0.5"		// Turning rate.
+
+    // Status
+    //----------------------------------------------------------------
+    "StatusHealth"				"99"	    // Base health.
+    "StatusHealthRegen"			"0"			// Health regeneration rate.
+    "StatusMana"				"0"			// Base mana.
+    "StatusManaRegen"			"0"			// Mana regeneration rate.
+
+	// Vision
+	//----------------------------------------------------------------
+	"VisionDaytimeRange"		"1200"		// Range of vision during day light.
+	"VisionNighttimeRange"		"1200"		// Range of vision at night time.
+
+    // Team
+    //----------------------------------------------------------------
+    "TeamName"					"DOTA_TEAM_GOODGUYS"			// Team name.
+    "CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+    "CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+    "UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+    "HasInventory"				"0"
+}

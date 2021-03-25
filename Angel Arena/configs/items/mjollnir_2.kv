@@ -1,0 +1,224 @@
+"item_recipe_mjollnir_2"
+{
+	"AbilityTextureName" 				"item_recipe_mjollnir_2"
+	"BaseClass"						"item_recipe_arcane_boots"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1148"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1600"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_mjollnir_2"
+	"ItemRequirements"
+	{
+		"01"						"item_mjollnir;item_maelstrom;"
+	}
+}
+
+"item_mjollnir_2"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1149"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"BaseClass"						"item_mjollnir"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"ItemBaseLevel"					"2"
+	"AbilityTextureName"			"mjollnir_2"
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"1000"
+	"AbilityCastPoint"				"0.0"
+	"AbilityCooldown"				"35.0"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"50"
+	"ItemCost"						"10200"
+	"ItemShopTags"					"damage;attack_speed;unique"
+	"ItemQuality"					"artifact"
+	"ItemAliases"					"mjollnir"
+	"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"24 120"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attack_speed"	"80 150"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"static_duration"		"15.0 18.0"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"static_chance"			"20 22"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"static_strikes"		"4 8"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"static_damage"			"200 410"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"static_primary_radius"	"600 600"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"static_seconary_radius"	"900 900"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"static_radius"			"900 900"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"static_cooldown"		"1.0 1.0"
+		}
+		"11"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"chain_chance"			"25 25"
+		}
+		"12"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"chain_damage"			"150 325"
+		}
+		"13"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"chain_strikes"			"12 18"
+		}
+		"14"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"chain_radius"			"900 900"
+		}
+		"15"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"chain_delay"			"0.25 0.25"
+		}
+		"16"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"chain_cooldown"		"0 0"
+		}
+	}
+}
+
+"item_mjollnir"
+{
+	"ItemBaseLevel"	"1"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"24 120"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attack_speed"	"80 150"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"static_duration"		"15.0 18.0"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"static_chance"			"20 22"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"static_strikes"		"4 8"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"static_damage"			"200 410"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"static_primary_radius"	"600 600"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"static_seconary_radius"	"900 900"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"static_radius"			"900 900"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"static_cooldown"		"1.0 1.0"
+		}
+		"11"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"chain_chance"			"25 25"
+		}
+		"12"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"chain_damage"			"150 325"
+		}
+		"13"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"chain_strikes"			"12 18"
+		}
+		"14"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"chain_radius"			"900 900"
+		}
+		"15"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"chain_delay"			"0.25 0.25"
+		}
+		"16"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"chain_cooldown"		"0 0"
+		}
+	}
+}

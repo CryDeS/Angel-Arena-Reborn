@@ -1,0 +1,92 @@
+"item_angels_sword"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1224"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityTextureName"	        "angels_sword"
+	
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"		"sounds/items/pipe.vsnd"		
+		"particle"		"particles/units/heroes/hero_medusa/medusa_mana_shield.vpcf"		
+	}
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"4000"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"AbilityCastPoint"				"0.0"
+	"AbilityCooldown"				"12.0"
+	
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"150"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"sheild_duration"		"5"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"Target"		"CASTER"
+			"EffectName"	"DOTA_Item.Pipe.Activate"
+		}
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_active_angels_sword"
+			"Target" 		"CASTER"
+			"Duration"		"%sheild_duration"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_passive_angels_sword"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+			
+			"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"			"%bonus_damage"
+			}		
+		}
+		
+		"modifier_active_angels_sword"
+		{
+			"Passive"	"0"
+			"IsHidden"	"0"
+			"IsBuff"	"1"
+			
+			"TextureName" "custom/angels_sword"
+			
+			"EffectName"		"particles/units/heroes/hero_medusa/medusa_mana_shield.vpcf"
+			"EffectAttachType"	"follow_origin"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_MAGICAL"	"1"
+			}		
+		}
+	}
+}

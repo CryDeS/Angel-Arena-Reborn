@@ -1,0 +1,306 @@
+//=================================================================================================================
+// Morphling: Waveform
+//=================================================================================================================
+"morphling_waveform"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"1200"
+	"AbilityCastPoint"				"0.25"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"12.0"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"125 205 325 425 480 540 620"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"75 95 115 125 135 145 150"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"speed"					"1250"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"width"					"200"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"AbilityCharges"		""
+			"LinkedSpecialBonus"	"special_bonus_unique_morphling_6"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"abilitycastrange"		""
+			"LinkedSpecialBonus"	"special_bonus_unique_morphling_1"	
+		}
+	}
+}
+
+//=================================================================================================================
+// Morphling: Adaptive Strike
+//=================================================================================================================
+"morphling_adaptive_strike_agi"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"700"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"10"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"75"		
+
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"damage_base"					"100 140 180 220 260 300 340"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"damage_min"					"1"
+			"CalculateSpellDamageTooltip"	"0"
+		}
+		"03"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"damage_max"					"3"
+			"CalculateSpellDamageTooltip"	"0"
+		}
+		"04"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"projectile_speed"				"1150"
+		}
+		
+		"05"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"shared_cooldown"				"0"
+		}
+	}
+}
+
+"morphling_adaptive_strike_str"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"MaxLevel"						"7"
+	"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+	"FightRecapLevel"				"1"
+	"AbilitySound"					"Hero_Morphling.AdaptiveStrike"
+	"LinkedAbility"					"morphling_adaptive_strike_agi"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"700"
+	"AbilityCastPoint"				"0.25"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"10"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"75"		
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityModifierSupportValue"	"0.3"	// Primarily about the damage
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"stun_min"						"1.25"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"stun_max"						"1.25 1.5 1.75 2.0 2.5 3.0 3.5"
+		}
+		"03"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"knockback_min"					"100"
+		}
+		"04"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"knockback_max"					"300"
+		}
+		"05"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"projectile_speed"				"1150"
+		}
+		"06"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"shared_cooldown"				"0"
+		}
+	}
+}
+
+"morphling_morph"
+{
+	"MaxLevel"						"7"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attributes"		"10 12 14 16 18 20 22"
+		}
+	}
+}
+
+//=================================================================================================================
+// Morphling: Morph (Agility Gain)
+//=================================================================================================================
+"morphling_morph_agi"
+{
+	//"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"MaxLevel"						"7"
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"0.0"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"points_per_tick"		"1"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"morph_cooldown"		"0.5 0.3 0.25 0.15 0.1 0.07 0.04"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attributes"		"10 12 14 16 18 20 22"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"morph_rate_tooltip"	"2 3 4 6 10 14 25"
+		}
+	}
+}
+
+//=================================================================================================================
+// Morphling: Morph (Strength Gain)
+//=================================================================================================================
+"morphling_morph_str"
+{
+	//"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"MaxLevel"						"7"
+	// Time		
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"points_per_tick"		"1"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"morph_cooldown"		"0.5 0.3 0.25 0.15 0.1 0.07 0.04"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attributes"		"10 12 14 16 18 20 22"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"morph_rate_tooltip"	"2 3 4 6 10 14 25"
+		}
+	}
+}
+
+"morphling_replicate"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"700"
+	"AbilityCastPoint"				"0.25"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_6"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"90 85 80 75 70 65 60"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"50 75 100 125 150 175 200"		
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"duration"						"20 22 24 26 28 30 32"
+			"LinkedSpecialBonus"		"special_bonus_unique_morphling_8"
+		}
+		
+		"02"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"scepter_manacost_reduction" "50"
+			"RequiresScepter"			"1"
+		}
+		"03"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"scepter_cast_range_bonus"        "600"
+			"RequiresScepter"			"1"
+		}
+	}
+}

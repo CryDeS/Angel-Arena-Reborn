@@ -1,0 +1,39 @@
+"item_force_staff"
+{
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"700"
+	"AbilityCastPoint"				"0.0"
+	"AbilityCooldown"				"14.0"
+	"AbilitySharedCooldown"			"force"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"25"
+	"ItemCost"						"2225"
+	"ItemShopTags"					"int;damage;attack_speed;hard_to_tag"
+	"ItemQuality"					"rare"
+	"ItemAliases"					"fs;force staff"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_intellect"		"10"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health_regen"	"10"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"push_length"			"800"
+		}
+	}
+}

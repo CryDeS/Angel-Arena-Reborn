@@ -1,0 +1,135 @@
+"item_recipe_shard_huntress"
+{
+	"AbilityTextureName" 				"item_recipe_shard_huntress"
+	
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1703"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_shard_huntress"
+	"ItemRequirements"
+	{
+		"01"						"item_shard_huntress_dummy"
+	}
+}
+
+"item_shard_huntress"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1325"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+	"AbilityTextureName"	        "shard_huntress"
+	"ScriptFile"					"items/shards_for_repick/shard_huntress/item_shard_huntress"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"15.0"
+	"AbilityManaCost"               "100"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemStackable"					"0"
+	"ItemBaseLevel"					"1"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "0"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"AbilitySpecial"
+	{
+        "01"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "all_stats"	            "25"
+        }
+        "02"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "damage"	            "50"
+        }
+        "03"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "movespeed"	   			"25"
+        }
+        "04"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "attackspeed"			"50"
+        }
+        "05"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "duration"				"4"
+        }        
+	}
+}
+"item_shard_huntress_dummy"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1702"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+	"AbilityTextureName"	        "shard_huntress"
+	"ScriptFile"					"items/shards_for_repick/shard_huntress/item_shard_huntress"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"15.0"
+	"AbilityManaCost"               "100"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemStackable"					"0"
+	"ItemBaseLevel"					"1"
+	
+	"ItemKillable"                  "0"
+	"ItemSellable"                  "0"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"0"
+
+	"AbilitySpecial"
+	{
+        "01"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "all_stats"	            "25"
+        }
+        "02"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "damage"	            "200"
+        }
+        "03"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "movespeed"	   			"25"
+        }
+        "04"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "attackspeed"			"200"
+        }
+        "05"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "duration"				"4"
+        }        
+	}
+}

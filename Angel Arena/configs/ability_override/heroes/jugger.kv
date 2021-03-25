@@ -1,0 +1,179 @@
+//=================================================================================================================
+// Ability: Juggernaut Blade Dance
+//=================================================================================================================
+"juggernaut_blade_dance"
+{
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"MaxLevel"					"7"
+	"AbilityUnitDamageType"		"DAMAGE_TYPE_PHYSICAL"	
+	"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_YES"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"blade_dance_crit_chance"	"10 14 16 18 20 24 28"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"blade_dance_crit_mult"		"200"
+		}
+	}
+}
+
+//=================================================================================================================
+// Ability: Juggernaut Blade Fury
+//=================================================================================================================
+"juggernaut_blade_fury"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"0"
+	"AbilityCastPoint"				"0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"16"
+	"AbilityDuration"				"5.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100"		
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					    "FIELD_FLOAT"
+			"blade_fury_damage_tick"	    "0.2"
+			"CalculateSpellDamageTooltip"	"0"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"blade_fury_radius"			"250"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"blade_fury_damage"			"50 80 90 100 120 160 180"
+			"LinkedSpecialBonus"		"special_bonus_unique_juggernaut_3"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"5.0"
+			"LinkedSpecialBonus"		"special_bonus_unique_juggernaut"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"damage_pct_tooltip"		"50"
+			"CalculateSpellDamageTooltip" "0"
+		}
+		"06"
+		{
+			"var_type"					    "FIELD_FLOAT"
+			"damage_pct"				    "10"
+			"CalculateSpellDamageTooltip"   "0"
+		}
+	}
+}
+
+//=================================================================================================================
+// Ability: Juggernaut Healing Ward
+//=================================================================================================================
+"juggernaut_healing_ward"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"350"
+	"AbilityCastPoint"				"0.3"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"45.0"
+	"AbilityDuration"				"25.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"120 125 130 135 155 175 180"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"healing_ward_heal_amount"	"2 3 4 5 6 7 8"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"healing_ward_aura_radius"	"500"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"healing_ward_movespeed_tooltip"	"420"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"healing_ward_duration_tooltip"		"25"
+		}
+	}
+}
+
+
+"juggernaut_omni_slash"
+{
+		// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"60.0"
+	"AbilityManaCost"				"200 250 280 350 375 450 480"
+	"MaxLevel"						"7"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"attack_rate_multiplier"	"2"
+		}
+        "02"
+        {
+            "var_type"					    "FIELD_INTEGER"
+            "bonus_damage"				    "40 60 80 100 120 150 200"
+            "CalculateSpellDamageTooltip"	"0"
+        }
+		"03"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"bonus_attack_speed"			"40"
+			"CalculateSpellDamageTooltip"	"0"
+		}
+        "04"
+        {
+            "var_type"					"FIELD_FLOAT"
+            "duration"					"3.0 3.3 3.6 3.9 4.4 4.9 5.5"
+            "LinkedSpecialBonus"		"special_bonus_unique_juggernaut_2"
+        }
+        "05"
+        {
+            "var_type"					"FIELD_INTEGER"
+            "omni_slash_radius"			"425"
+        }
+	}	
+}

@@ -1,0 +1,73 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf21:version{7a150ecc-d865-438f-ad53-5963fe1a2720} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_nInitialParticles = 1
+	m_flConstantRadius = 0.0
+	m_ConstantColor = [ 4, 32, 6, 255 ]
+	m_nConstantSequenceNumber = 1
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_RampScalarLinearSimple"
+			m_Rate = 70.0
+			m_nField = "5"
+		},
+		{
+			_class = "C_OP_EndCapTimedDecay"
+		},
+	]
+	m_Initializers = 
+	[
+		{
+			_class = "C_INIT_StatusEffect"
+			m_flDetail2Scale = 1.0
+			m_flColorWarpIntensity = 1.0
+			m_flDetail2BlendFactor = 0.5
+			m_nDetail2Combo = "DETAIL_2_COMBO_ADD_SELF_ILLUM"
+			m_flEnvMapIntensity = 0.0
+			m_flAmbientScale = 0.5
+			m_flRimLightScale = 0.0
+			m_flSpecularScale = 0.0
+			m_flSpecularExponent = 20.0
+			m_flReflectionsTintByBaseBlendToNone = 0.25
+			m_flMetalnessBlendToFull = 1.0
+			m_specularColor = [ 76, 234, 199, null ]
+			m_rimLightColor = [ 0, 0, 0, null ]
+		},
+	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 0.0, 0.0, 0.0 ]
+					m_angOffset = [ null, null, null ]
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_Renderers = 
+	[
+		{
+			_class = "C_OP_RenderStatusEffect"
+			m_pTextureColorWarp = resource:"materials/models/heroes/statuseffects/colorwarp_inversion.vtex"
+			m_pTextureDetail2 = resource:"materials/particle/web/web.vtex"
+			m_pTextureSpecularWarp = resource:"materials/models/heroes/statuseffects/colorwarp_icechrome.vtex"
+			m_bCannotBeRefracted = false
+			m_nOpEndCapState = 0
+		},
+	]
+	m_nBehaviorVersion = 9
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/huntress/huntress_hunting_spirit/huntress_hunting_spirit_blur.vpcf"
+		},
+	]
+}

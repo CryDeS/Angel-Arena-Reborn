@@ -1,0 +1,106 @@
+"item_recipe_soul_merchant"
+{
+	"AbilityTextureName" 				"item_recipe_soul_merchant"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1503"
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1930"
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_soul_merchant"
+	"ItemRequirements"
+	{
+		//400 + 2100 + 1100
+		"01"						"item_knight_talisman;item_demon_edge;item_vitality_booster"
+	}
+}
+
+"item_soul_merchant"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1502"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+	"AbilityTextureName"	        "soul_merchant"
+	"ScriptFile"					"items/soul_merchant/item_soul_merchant"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"20.0"
+	"AbilityManaCost"               "200"
+    "AbilityCastRange"              "950"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"4580"
+	"ItemStackable"					"0"
+	"ItemBaseLevel"					"1"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"AbilitySpecial"
+	{
+	    //Stats
+		"01"
+		{
+			"var_type"				 "FIELD_INTEGER"
+			"bonus_int"       		 "10"
+		}
+		"02"
+        {
+            "var_type"				 "FIELD_INTEGER"
+            "bonus_str"       		 "15"
+        }
+        "03"
+        {
+            "var_type"				 "FIELD_INTEGER"
+            "bonus_agi"       		 "20"
+        }
+		"04"
+        {
+            "var_type"				 "FIELD_INTEGER"
+            "bonus_damage"       	 "50"
+        }
+		"05"
+        {
+            "var_type"				 "FIELD_INTEGER"
+            "bonus_health"       	 "350"
+        }
+        //Active
+        "06"
+        {
+            "var_type"				 "FIELD_INTEGER"
+            "duration_debuff"	     "5"
+        }
+        "07"
+		{
+			"var_type"				 "FIELD_INTEGER"
+			"destroy_bind_range"	 "1000"
+		}
+        "08"
+		{
+			"var_type"				 "FIELD_INTEGER"
+			"slow_percent"	         "60"
+		}
+        "09"
+		{
+			"var_type"				 "FIELD_INTEGER"
+			"reduce_total_heal_pct"  "70"
+		}
+	}
+}

@@ -1,0 +1,109 @@
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+"demon_archer_buff_attack_range"
+{
+    // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_RANGED_ONLY"
+        "BaseClass"					    "ability_lua"
+        "AbilityTextureName"			"custom/demon_archer_buff_attack_range"
+        "ScriptFile"					"creeps/abilities/npc_aa_creep_demon_archer/demon_archer_buff_attack_range"
+        "MaxLevel"                      "1"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"				"1000"
+
+        // Time
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"				"15"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"				"FIELD_INTEGER"
+                "bonus_attack_range"    "1200"
+            }
+            "02"
+            {
+                "var_type"				"FIELD_INTEGER"
+                "duration"             	"4"
+            }
+        }
+}
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"demon_archer_aura"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+    "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+    "BaseClass"					    "ability_lua"
+    "AbilityTextureName"			"custom/demon_archer_aura"
+    "ScriptFile"					"creeps/abilities/npc_aa_creep_demon_archer/demon_archer_aura"
+    "MaxLevel"                      "1"
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"			            "FIELD_INTEGER"
+            "bonus_damage_for_range_hero"	"20"
+        }
+        "02"
+        {
+            "var_type"			"FIELD_INTEGER"
+            "radius"	    	"99999"
+        }
+    }
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"demon_archer_runaway"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"					    "ability_lua"
+    "MaxLevel"                      "1"
+
+    "AbilityTextureName"			"custom/demon_archer_runaway"
+    "ScriptFile"					"creeps/abilities/npc_aa_creep_demon_archer/demon_archer_runaway"
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"			    "FIELD_INTEGER"
+            "duration"	            "2"
+        }
+        "02"
+        {
+            "var_type"		    	"FIELD_INTEGER"
+            "bonus_movespeed"	    "200"
+        }
+        "03"
+        {
+            "var_type"		    	"FIELD_INTEGER"
+            "cooldown"	            "8"
+        }
+    }
+}
+

@@ -1,0 +1,52 @@
+"item_poor_mans_shield"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"71"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"Model"							"models/props_gameplay/neutral_box.vmdl"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"
+	"ItemShopTags"					"agi;block"
+	"ItemQuality"					"common"
+	"ItemAliases"					"pms;poor man's shield"
+	"ItemPurchasable"				"0"
+	"ItemIsNeutralDrop"				"0"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+
+	"AbilityCooldown"				"6.0"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_agility"			"5"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_block_melee"	"30"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_block_ranged"	"20"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"block_chance"			"50"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"block_chance_hero"		"100"
+		}			
+	}
+}

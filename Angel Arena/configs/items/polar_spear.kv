@@ -1,0 +1,74 @@
+"item_recipe_polar_spear"
+{
+	"AbilityTextureName" 				"item_recipe_polar_spear"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1302"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"100"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_polar_spear"
+	"ItemRequirements"
+	{ //2240 + 600 + 900
+		"01"						"item_staff_of_wizardry;item_point_booster;"
+	}
+}
+
+"item_polar_spear"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"								"1303"
+	"BaseClass"							"item_lua"
+	"AbilityTextureName" 				"polar_spear"
+	"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_BOTH | DOTA_UNIT_TARGET_TEAM_CUSTOM"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitDamageType"			    "DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				    "SPELL_IMMUNITY_ENEMIES_NO"
+	"ItemDeclarations"					"DECLARE_PURCHASES_TO_TEAMMATES"
+	"ScriptFile"						"items/polar_spear/item_polar_spear.lua"
+	
+	"ItemQuality"						"rare"
+	"ItemDroppable" 					"1"
+	"ItemCastOnPickup"					"0"
+	"ItemKillable"						"1"
+	"ItemPurchasable"					"1"
+	"ItemSellable"						"1"
+	"ItemCost"							"2300"
+	"ItemStackable"						"0"
+	
+	"AbilityCastPoint"					"0.0"
+	"AbilityCooldown"					"18.0"
+	"AbilityCastRange"					"600"
+	"AbilityManaCost"					"50"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_int"					"22"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_hp"					"425"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_mana"				"250"
+		}
+	}
+}

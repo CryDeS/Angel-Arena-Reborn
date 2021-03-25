@@ -1,0 +1,96 @@
+"item_recipe_sacred_butterfly"
+{
+	"AbilityTextureName" 			"item_recipe_sacred_butterfly"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1170"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1200"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_sacred_butterfly"
+	"ItemRequirements"
+	{
+		"01"						"item_butterfly;item_butterfly"
+	}
+}
+
+"item_sacred_butterfly"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1171"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "sacred_butterfly"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"12950"
+	"ItemStackable"					"0"
+	
+	"ItemPermanent"					"0"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+	
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_agi"				"70"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_dmg"				"60"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_evasion"			"35"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attackspeed"		"60"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_mvspd_pct"		"10"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_sacred_butterfly"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+			"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" 		"%bonus_agi"
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_dmg"
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%bonus_attackspeed"
+				"MODIFIER_PROPERTY_EVASION_CONSTANT"			"%bonus_evasion"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%bonus_mvspd_pct"			
+			}
+		}
+	}
+}

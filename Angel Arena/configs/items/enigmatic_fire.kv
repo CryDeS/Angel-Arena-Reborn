@@ -1,0 +1,102 @@
+"item_recipe_enigmatic_fire"
+{
+	"AbilityTextureName" 				"item_recipe_enigmatic_fire"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1560"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_enigmatic_fire"
+	"ItemRequirements"
+	{
+		"01"						"item_enigmatic_fire_dummy"
+	}
+}
+
+"item_enigmatic_fire"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1561"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BUILDING"
+	"AbilityTextureName"	        "enigmatic_fire"
+	"ScriptFile"					"items/enigmatic_fire/enigmatic_fire.lua"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"60.0"
+	"AbilityManaCost"				"250"
+	"AbilityCastRange"				"300"
+	"AbilityCastPoint"				"0.2"
+	"AbilityChannelTime" 			"10.0"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"channel_tooltip"		"10.0"
+		}
+	}
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1000"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+	
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+	
+	"ItemAliases"					"enigmatic;fire;obelisk;repair"
+	
+	"ItemStackable"					"1"
+	"ItemPermanent"					"0"
+	"ItemInitialCharges"			"100"
+}
+
+"item_enigmatic_fire_dummy"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1362"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "enigmatic_fire"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"channel_tooltip"		"10.0"
+		}
+	}
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1000"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"0"
+}

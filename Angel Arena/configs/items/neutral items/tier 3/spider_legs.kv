@@ -1,0 +1,47 @@
+"item_spider_legs"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"326"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"10.0"
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"
+	"ItemIsNeutralDrop"				"0"
+	"ItemPurchasable"				"0"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+
+	"Model"							"models/props_gameplay/neutral_box.vmdl"
+	
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_movement_speed"	"31"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"turn_rate"				"30"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_movement_speed_active"	"24"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"			"3"
+		}			
+	}
+}

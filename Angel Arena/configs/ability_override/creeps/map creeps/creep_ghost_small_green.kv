@@ -1,0 +1,136 @@
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"ghost_small_green_wind" // Активная: Ускоряет всех в радиусе 650 на 40% мувспида на 3 секунды, кд 22 секунды
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityTextureName"			"custom/ghost_small_green_wind"
+	"ScriptFile"					"creeps/abilities/ghost_small_green_wind.lua"
+	
+	"MaxLevel"						"1"
+	
+	"precache"
+	{
+		"soundfile"					"sounds/items/item_drum.vsnd" // DOTA_Item.DoE.Activate
+	}
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"22.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"125"
+	"AbilityCastAnimation"			"0.3"
+	"AbilityCastRange"				"650"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"radius"					"650.0"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_movespeed"			"40"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"3"
+		}
+	}
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"ghost_small_green_nature" // Активная: Дает бафф на +50 атакспида и 8 брони на юнита с кд в 18 секунд, длительность 4 секунды
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityTextureName"			"custom/ghost_small_green_nature"
+	"ScriptFile"					"creeps/abilities/ghost_small_green_nature.lua"
+	
+	"MaxLevel"						"1"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"18.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"150"
+	"AbilityCastAnimation"			"0.3"
+	"AbilityCastRange"				"600"
+	"AbilityDuration"				"4.0"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"bonus_attack_speed"		"50"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"bonus_armor"				"8.0"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"4"
+		}
+	}
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"ghost_small_green_aura" // Пассивная: аура скорости атаки на 40 в радиусе 700
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"custom/ghost_small_green_aura"
+	"ScriptFile"					"creeps/abilities/ghost_small_green_aura.lua"
+	
+	"MaxLevel"						"1"
+	"AbilityCastRange"				"700"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"radius"					"700.0"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_attack_speed"		"40"
+		}
+	}
+}

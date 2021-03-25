@@ -1,0 +1,268 @@
+"satan_breath"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"				   
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"	   
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"custom/satan_breath"
+	"MaxLevel"						"7"
+	"ScriptFile"					"heroes/satan/satan_breath.lua"
+	
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts"
+		"particle"		"particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire.vpcf"
+	}
+
+	"AbilityCastRange"				"600"
+	"AbilityCastPoint"				"0.0 0.0 0.0 0.0 0.0 0.0 0.0"
+	"AbilityCooldown"				"22.0"
+	
+	"AbilityManaCost"				"250 300 350 400 450 500 550"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"start_radius"			"150"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"end_radius"			"250"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"range"					"650"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"speed"					"1050"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage"				"40 50 60 65 70 75 80"
+			"LinkedSpecialBonus"	"satan_special_bonus_breath_damage"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"creep_multipler"		"30"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"3.0"
+		}		
+		"08"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"think_time"			"0.1"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"tick_count"			"30"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_from_str"		"5"
+		}
+	}
+}
+
+
+"satan_might"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/satan/satan_might/satan_might.lua"
+	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	"custom/satan_might"
+	"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+	"MaxLevel"				"7"
+	
+	"precache"
+	{
+		"particle" 			"particles/units/heroes/hero_doom_bringer/doom_bringer_devour.vpcf"
+	}
+	
+	"AbilityCooldown"		"10 9 8 7 6 5 4"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"chance"			"10 12 14 15 16 18 20"
+		}
+		"02"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"stun_duration"		"1.0"
+		}
+		"03"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"radius"			"300"
+		}
+	}
+}
+
+"satan_trade"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"heroes/satan/satan_bloody_trade/satan_trade.lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"SpellDispellableType"			"SPELL_DISPELLABLE_NO"				   
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"custom/satan_trade"
+	"MaxLevel"						"7"
+	
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts"
+		"particle"			"particles/units/heroes/hero_doom_bringer/doom_bringer_devour.vpcf"
+		"particle"			"particles/units/heroes/hero_doom_bringer/doom_infernal_blade_impact.vpcf"
+	}
+	
+	"AbilityCastPoint"				"0.4"
+	"AbilityCooldown"				"60.0"
+	"AbilityManaCost"				"250"	
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"health_lose"			"20"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_get"			"20 22 25 30 32 35 37"
+			"LinkedSpecialBonus"	"satan_special_bonus_trade_damage"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"12"
+			"LinkedSpecialBonus"	"satan_special_bonus_trade_duration"
+		}
+	}
+}
+
+"satan_overpain"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"heroes/satan/satan_overpain/satan_overpain.lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"SpellDispellableType"			"SPELL_DISPELLABLE_NO"				   
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"custom/satan_overpain"
+	"MaxLevel"						"7"
+	
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"particle"					"particles/econ/items/monkey_king/arcana/fire/monkey_king_spring_fire_base.vpcf"
+		"particle"					"particles/econ/items/legion/legion_fallen/legion_fallen_press_owner.vpcf"
+	}
+	"AbilityCastPoint"				"0.2"
+	"AbilityCooldown"				"30.0 28.0 26.0 24.0 20.0 18.0 16.0"
+	"AbilityManaCost"				"200 300 400 500 600 700 800 900"	
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"duration"			"4.8"
+		}
+		"02"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"damage_decrease"	"-50"
+		}
+		"03"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"hp_regen"			"5"
+		}
+	}
+}
+
+"satan_curse"
+{
+// General
+	//-------------------------------------------------------------------------------------------------------------
+	"MaxLevel"						"7"
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"custom/satan_curse"
+	"ScriptFile"					"heroes/satan/satan_curse.lua" 
+
+	"precache"
+	{
+		"soundfile"	"soundevents/voscripts/game_sounds_vo_doom_bringer.vsndevts"
+		"particle"	"particles/units/heroes/hero_shadow_demon/shadow_demon_demonic_purge_debuff.vpcf"
+	}
+	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"720"
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"60"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"200 400 600 800 1000 1200 1400"	
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"duration"		"3 3.5 4 4.5 5 5.5 6"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_INTEGER"
+			"slow"			"-10000"
+		}
+	}
+}

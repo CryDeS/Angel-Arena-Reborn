@@ -1,0 +1,75 @@
+"item_recipe_mage_slayer"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"600"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_mage_slayer"
+	"ItemRequirements"
+	{
+		"01"						"item_cloak;item_blade_of_alacrity;item_claymore"
+	}
+}
+
+//=================================================================================================================
+// Mage Slayer
+//=================================================================================================================
+"item_mage_slayer"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"3400"
+	"ItemShopTags"					"hard_to_tag"
+	"ItemQuality"					"rare"
+	"ItemAliases"					"mage slayer;ms"
+	"ShouldBeInitiallySuggested"	"1"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_magical_armor"	"20"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_magical_armor_illusion"	"20"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_agility"			"20"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"20"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"spell_amp_debuff"		"35"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"		"4"
+		}
+	}
+}

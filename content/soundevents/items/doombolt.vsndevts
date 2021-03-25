@@ -1,0 +1,50 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Item_DoomBolt.Cast = 
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/clinkz/searing_arrow.vsnd",
+		]
+		volume = "2.000000"
+		pitch = "0.7"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.250000"
+	}
+	
+	Item_DoomBolt.Hit = 
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phantom_assassin/stifling_dagger_target.vsnd",
+		]
+		volume = "2.000000"
+		pitch = "0.70000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.250000"
+	}
+	
+	Item_DoomBolt.Crit = 
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/mars/shield_crit.vsnd",
+		]
+		volume = "1.000000"
+		pitch = "0.50000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.250000"
+	}
+}

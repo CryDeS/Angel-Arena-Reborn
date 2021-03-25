@@ -1,0 +1,90 @@
+"summons_attack_magical"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	
+	"AbilityTextureName"			"custom/summons_attack_magical"
+	"MaxLevel"						"1"
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"dmg_to_magical"	"25"
+		}
+	}
+	
+	// Data driven
+	//-------------------------------------------------------------------------------------------------------------
+	"Modifiers"
+	{
+		"modifier_summons_attack_magical"
+		{
+			"Passive"						"1"
+			"IsHidden"						"1"
+			"IsPurgable"					"0"
+
+			"OnAttackLanded"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"creeps/abilities/summons_attack.lua"
+					"Function"			"DamageMagical"
+					"Damage"			"%dmg_to_magical"
+				}	
+			}
+		}
+	}
+}
+
+
+"summons_attack_lycan_wolfs"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+
+	"AbilityTextureName"			"custom/summons_attack_magical"
+	"MaxLevel"						"1"
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"dmg_to_magical"	"15"
+		}
+	}
+
+	// Data driven
+	//-------------------------------------------------------------------------------------------------------------
+	"Modifiers"
+	{
+		"modifier_summons_attack_magical"
+		{
+			"Passive"						"1"
+			"IsHidden"						"1"
+			"IsPurgable"					"0"
+
+			"OnAttackLanded"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"creeps/abilities/summons_attack_lycan_wolfs.lua"
+					"Function"			"DamageMagical"
+					"Damage"			"%dmg_to_magical"
+				}
+			}
+		}
+	}
+}

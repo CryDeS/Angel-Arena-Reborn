@@ -1,0 +1,18 @@
+"DOTA_Tooltip_ability_item_shard_huntress"						"Huntress' Bow Shard"
+"DOTA_Tooltip_ability_item_shard_huntress_Description"			"<h1>Active: Tailwind</h1>Grants hero additional attack speed and movement speed."
+"DOTA_Tooltip_ability_item_shard_huntress_all_stats"			"+$all"
+"DOTA_Tooltip_ability_item_shard_huntress_damage"				"+$damage"
+"DOTA_Tooltip_ability_item_shard_huntress_movespeed"			"+$move_speed"
+"DOTA_Tooltip_ability_item_shard_huntress_attackspeed"			"+$attack"
+"DOTA_Tooltip_ability_item_shard_huntress_duration"				"DURATION:"
+
+"DOTA_Tooltip_ability_item_shard_huntress_dummy"				"Huntress' Bow Shard"
+"DOTA_Tooltip_ability_item_shard_huntress_dummy_Description"	"<h1>Active: Tailwind</h1>Grants hero additional attack speed and movement speed."
+"DOTA_Tooltip_ability_item_shard_huntress_dummy_all_stats"		"+$all"
+"DOTA_Tooltip_ability_item_shard_huntress_dummy_damage"			"+$damage"
+"DOTA_Tooltip_ability_item_shard_huntress_dummy_movespeed"		"+$move_speed"
+"DOTA_Tooltip_ability_item_shard_huntress_dummy_attackspeed"	"+$attack"
+"DOTA_Tooltip_ability_item_shard_huntress_dummy_duration"		"DURATION:"
+
+
+"DOTA_Tooltip_modifier_item_shard_huntress_buff"				"Tail Wind"

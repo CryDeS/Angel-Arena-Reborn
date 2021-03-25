@@ -1,0 +1,84 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf27:version{36c3961f-02a4-4c52-bf8f-6e3147d7d142} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 0.0, 0.0, 0.0 ]
+					m_angOffset = [ 0.0, 0.0, 0.0 ]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 0.0, 0.0, 0.0 ]
+					m_angOffset = [ 0.0, 0.0, 0.0 ]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 2
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 0.0, 0.0, 0.0 ]
+					m_angOffset = [ 0.0, 0.0, 0.0 ]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 3
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 0.0, 0.0, 0.0 ]
+					m_angOffset = [ 0.0, 0.0, 0.0 ]
+					m_entityName = "self"
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/heroes/dark_willow/dark_willow.vmdl"
+				m_nModSpecificData = 640
+				m_sequenceName = "idle"
+				m_hitboxSetName = "default"
+			}
+		},
+	]
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/heroes/forgotten_hero/breach/breach_smoke.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/heroes/forgotten_hero/breach/breach_ember.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/heroes/forgotten_hero/breach/breach_under_light.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/heroes/forgotten_hero/breach/breach_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/heroes/forgotten_hero/breach/breach_start_ember.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/heroes/forgotten_hero/breach/breach_start_smoke.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/heroes/forgotten_hero/breach/breach_wisp_parent.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/heroes/forgotten_hero/breach/breach_start_flash.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/heroes/forgotten_hero/breach/breach_charge.vpcf"
+			m_flDelay = 2.0
+		},
+		{
+			m_ChildRef = resource:"particles/heroes/forgotten_hero/breach/breach_embers.vpcf"
+			m_flDelay = 2.0
+		},
+	]
+	m_nBehaviorVersion = 10
+}

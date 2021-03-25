@@ -1,0 +1,42 @@
+"ability_shrine_restore"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"BaseClass"					    "ability_lua"
+	"AbilityTextureName"			"custom/ability_shrine_restore"
+	"ScriptFile"					"buildings/shrine/ability_shrine_restore"
+	"MaxLevel"                      "1"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+		   "var_type"			    "FIELD_INTEGER"
+		   "aura_radius"		    "700"
+		}
+		"02"
+		{
+			"var_type"			    "FIELD_INTEGER"
+			"health_regen_const"    "10"
+		}
+		"03"
+		{
+			"var_type"			    "FIELD_INTEGER"
+			"mana_regen_const"      "10"
+		}
+		"04"
+		{
+			"var_type"			    "FIELD_INTEGER"
+			"health_regen_pct"      "3"
+		}
+		"05"
+		{
+			"var_type"			    "FIELD_INTEGER"
+			"mana_regen_pct"        "5"
+		}
+	}
+}

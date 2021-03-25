@@ -1,0 +1,298 @@
+.CaptainsModeMainPanelRoot
+{
+	width:100%;
+	height:100%;
+}
+
+#CaptainsModeMainPanel
+{
+	border: 2px solid #45454530;
+	width:95%;
+	height:100%;
+	horizontal-align:center;
+	flow-children:right;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+	background-color: gradient( radial, 50% 50%, 0% 0%, 80% 80%, from( #45454530 ), to( #101012F0 ) );
+}
+
+#HeroContainer
+{
+	margin-top:4%;
+	border: 2px solid #151515FF;
+	horizontal-align: left;
+	vertical-align: top;
+	width:706px; 
+	margin-left:2%;
+	flow-children:down;
+	background-color: gradient( radial, 50% 50%, 0% 0%, 80% 80%, from( #454545A0 ), to( #101012F0 ) );
+}
+
+#RadiantHeroes
+{
+	margin-top:8%;
+	horizontal-align: left;
+	vertical-align: top;
+	margin-left:2%;
+	flow-children:right;
+	width:25%;
+	height:60%;
+}
+
+#DireHeroes
+{
+	margin-left:2%;
+	margin-top:8%;
+	flow-children:right;
+	horizontal-align: left;
+	vertical-align: top;
+	width:25%;
+	height:60%;
+}
+
+
+.BanList
+{
+	margin-left:20px;
+	flow-children:down;
+	vertical-align:center;
+	height:100%;
+}
+
+.PickList
+{
+	horizontal-align:center;
+	vertical-align:center;
+	width:65%;
+	height:80%;
+	flow-children: down;
+	padding-top:10%;
+}
+
+.BanHeroIcon
+{
+	margin-top:10px;
+	border: 3px solid #505050FF;
+	saturation: 1;
+}
+
+.Row
+{
+	margin-top:3%;
+	margin-left:9%;
+	horizontal-align:center;
+	flow-children: right;
+}
+
+.HeroIcon
+{
+	width: 100px;
+	height:57.6px;
+	background-repeat: repeat;
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+	background-image:url("s2r://panorama/images/items/emptyitembg_png.vtex");
+	opacity:0.9;
+}
+
+.HeroIcon4x3
+{
+	width: 64px;
+	height: 32px;
+	background-repeat: repeat;
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+	background-image:url("s2r://panorama/images/items/emptyitembg_png.vtex");
+	opacity:0.9;
+}
+
+.HeroIconSmall
+{
+	width: 76.8px;
+	height:43.2px;
+	border: 1px solid black;
+}
+
+.HeroIconSmallDisabled
+{
+	saturation: 0.0;
+}
+
+.PickHeroIcon
+{
+	border: 3px solid #505050FF;
+	margin: 0px 10px 0px 0px;
+	horizontal-align:center;
+
+}
+
+.HeroBlock
+{
+	margin-top:5%;
+	width:100%;
+	flow-children:right-wrap;
+
+}
+
+#BecomeCaptainText
+{
+	vertical-align:center;
+	horizontal-align:center;
+	font-size:20px;
+	color:#FAFAFA;
+}
+
+.CaptainName
+{
+	horizontal-align:center;
+	margin-left:18px;
+	font-size:20px;
+	color:white;
+}
+
+#BecomeCaptain
+{
+	border: 5px solid #00000080;
+	width:18%;
+	margin-left:-34%;
+	vertical-align:bottom;
+	margin-bottom:18%;
+	background-repeat: repeat;
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+	//background-color: gradient( radial, 50% 50%, 0% 0%, 80% 80%, from( #45454530 ), to( #101012F0 ) );
+	background-image:url("s2r://panorama/images/red_large_off_png.vtex");
+	
+	height:8%;
+}
+
+#BecomeCaptain:active
+{
+	margin-top:7%;
+	margin-left:-33.9%;
+}
+
+#BecomeCaptain:hover
+{
+	opacity:0.7;
+}
+
+#BanHero
+{
+	border: 5px solid #00000080;
+	width:24%;
+	margin-left:-34%;
+	vertical-align:bottom;
+	margin-bottom:18%;
+	background-repeat: repeat;
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+	//background-color: gradient( radial, 50% 50%, 0% 0%, 80% 80%, from( #45454530 ), to( #101012F0 ) );
+	background-image:url("s2r://panorama/images/red_large_off_png.vtex");
+	
+	height:8%;
+}
+
+#BanHero:active
+{
+	margin-top:7%;
+	margin-left:-33.9%;
+}
+
+#BanHero:hover
+{
+	opacity:0.7;
+}
+
+#SelectHero
+{
+	border: 5px solid #00000080;
+	width:24%;
+	margin-left:-34%;
+	vertical-align:bottom;
+	margin-bottom:18%;
+	background-repeat: repeat;
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+	//background-color: gradient( radial, 50% 50%, 0% 0%, 80% 80%, from( #45454530 ), to( #101012F0 ) );
+	background-image:url("s2r://panorama/images/gray_button_off_png.vtex");
+	
+	height:8%;
+}
+
+#SelectHero:active
+{
+	margin-top:7%;
+	margin-left:-33.9%;
+}
+
+#SelectHero:hover
+{
+	opacity:0.7;
+}
+
+#PickHero
+{
+	border: 5px solid #00000080;
+	width:24%;
+	margin-left:-34%;
+	vertical-align:bottom;
+	margin-bottom:18%;
+	background-repeat: repeat;
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+	//background-color: gradient( radial, 50% 50%, 0% 0%, 80% 80%, from( #45454530 ), to( #101012F0 ) );
+	background-image:url("s2r://panorama/images/gray_button_off_png.vtex");
+	height:8%;
+}
+
+#PickHero:active
+{
+	margin-top:7%;
+	margin-left:-33.9%;
+}
+
+#PickHero:hover
+{
+	opacity:0.7;
+}
+
+.NowStageBan
+{
+	border: 3px solid #FF000080;
+}
+
+
+.NowStagePick
+{
+	border: 3px solid #00FF0080;
+}
+
+.ButtonText
+{
+	vertical-align:center;
+	horizontal-align:right;
+	margin-right:30px;
+	font-size:20px;
+	color:#FAFAFA;		
+}
+
+.HeroIconFree
+{
+	width: 100px;
+	height:57.6px;
+}
+
+.BlockedHero
+{
+	wash-color:#FF0000FA;
+}
+
+.AntiBugClass
+{
+	margin-top: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 1.0;
+}

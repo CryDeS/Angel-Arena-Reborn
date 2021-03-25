@@ -1,0 +1,419 @@
+	"travaler_kraken"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"				"tidehunter_kraken_shell"
+		"MaxLevel"				"1"
+		"AbilityTextureName"	"custom/travaler_kraken"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_reduction"		"0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_cleanse"		"200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage_reset_interval"	"6.0"
+			}
+		}
+	}
+	
+	"travaler_manaburn"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"		
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"BaseClass"						"antimage_mana_break"
+		"MaxLevel"						"1"
+		"AbilityTextureName"			"custom/travaler_manaburn"
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage_per_burn"		"0.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_per_hit"			"160"
+			}
+		}
+	}
+	
+	"travaler_stun"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"MaxLevel"						"1"
+		"AbilityTextureName"			"custom/travaler_stun"
+		
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.2"
+		
+		"AbilityCooldown"				"13.0"
+		"AbilityDuration"				"2.0"
+		
+		"precache"
+		{
+			"particle"		"particles/econ/items/earthshaker/egteam_set/hero_earthshaker_egset/earthshaker_echoslam_start_f_egset.vpcf"
+			"particle"		"particles/units/heroes/hero_earthshaker/earthshaker_echoslam_start_c.vpcf"
+			"particle"		"particles/status_fx/status_effect_faceless_chronosphere.vpcf"
+		}
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_pct"				"45"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"2.0"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"600"
+			}
+		}
+		
+		"OnSpellStart"
+		{
+			"ActOnTargets"
+			{
+				"Target"
+				{
+					"Center" "CASTER"
+					"Radius" "%radius"
+					"Teams" "DOTA_UNIT_TARGET_TEAM_ENEMY" 
+					"Types" "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+				}
+				"Action"    
+				{
+					"RunScript"
+					{
+						"ScriptFile"			"items/funcs/damage_pct.lua"
+						"Function"				"DealDamageOfMaxHealth"
+						"damage_pct"			"%damage_pct"
+						"Target"				"TARGET"
+					}
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_travaler_stun"
+						"Target"		"TARGET"
+						"Duration"		"%duration"
+					}
+				}
+				
+			}
+			"FireEffect"
+			{
+				"EffectName"        "particles/units/heroes/hero_earthshaker/earthshaker_echoslam_start_c.vpcf"
+				"EffectAttachType"  "follow_origin"
+				"Target"            "CASTER"
+				"Radius"			"%radius"
+			}
+			
+			"FireEffect"
+			{
+				"EffectName"        "particles/econ/items/earthshaker/egteam_set/hero_earthshaker_egset/earthshaker_echoslam_start_f_egset.vpcf"
+				"EffectAttachType"  "follow_origin"
+				"Target"            "CASTER"
+				"Radius"			"%radius"
+			}
+			
+		}
+		"Modifiers"
+		{
+			"modifier_travaler_stun"
+			{
+				"IsHidden"	"0"
+				"IsPassive"	"0"
+				"IsPurgable"	"1"
+				"IsDebuff"	"1"
+			
+				"EffectName"	"particles/generic_gameplay/generic_stunned.vpcf"
+				"EffectAttachType"	"follow_overhead"
+
+				"StatusEffectName"		"particles/status_fx/status_effect_faceless_chronosphere.vpcf"
+				"StatusEffectPriority"	"1"
+			
+				"States"
+				{
+					"MODIFIER_STATE_STUNNED"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_FROZEN"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+	
+	"travaler_bash"
+	{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityTextureName"			"custom/travaler_bash"
+	"MaxLevel"						"1"
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"chance"				"10"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bash_time"				"2"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"crit"					"500"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_pct"			"20"
+		}
+	}
+
+	"precache"
+	{
+		"particle"		"particles/status_fx/status_effect_faceless_chronosphere.vpcf"
+	}
+
+	"Modifiers"
+	{
+		"modifier_travaler_bash_passive"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+
+			"OnAttackStart"
+			{
+				"RemoveModifier"
+				{
+					"ModifierName"	"modifier_travaler_bash_crit"
+					"Target"		"CASTER"
+				}
+
+				"Random"
+				{
+					"Chance"		"%chance"
+					"PseudoRandom"	"DOTA_PSEUDO_RANDOM_JUGG_CRIT"
+					
+					"OnSuccess"
+					{
+						"ApplyModifier"
+						{
+							"ModifierName"	"modifier_travaler_bash_crit"
+							"Target"		"CASTER"
+						}
+						"RunScript"
+						{
+							"ScriptFile"			"items/funcs/damage_pct.lua"
+							"Function"				"DealDamageOfMaxHealth"
+							"damage_pct"			"%damage_pct"
+							"Target"				"TARGET"
+						}
+						"ApplyModifier"
+						{
+							"ModifierName"	"modifier_travaler_bash_stun"
+							"Target"		"TARGET"
+							"Duration"		"%bash_time"
+						}
+					}
+				}
+			}
+		}
+
+		"modifier_travaler_bash_crit"
+		{
+			"IsHidden"	"1"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE" "%crit"
+			}
+
+			"OnAttackLanded"
+			{
+				"RemoveModifier"
+				{
+					"ModifierName"	"modifier_travaler_bash_crit"
+					"Target"		"CASTER"
+				}
+			}
+		}
+		
+		"modifier_travaler_bash_stun"
+		{
+			"IsHidden"	"0"
+			"IsPassive"	"0"
+			"IsPurgable"	"1"
+			"IsDebuff"	"1"
+		
+			"EffectName"	"particles/generic_gameplay/generic_stunned.vpcf"
+			"EffectAttachType"	"follow_overhead"
+
+			"StatusEffectName"		"particles/status_fx/status_effect_faceless_chronosphere.vpcf"
+			"StatusEffectPriority"	"1"
+			
+			"States"
+			{
+				"MODIFIER_STATE_STUNNED"	"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_FROZEN"		"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+	}
+}
+
+"travaler_fury"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityTextureName"			"custom/travaler_fury"
+	"MaxLevel"						"1"
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		//less 75% hp kill illusions
+		//less 50%
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attack"			"650"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_aspeed"			"250"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_bat"				"0.7"
+		}
+		//less 25%
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_reducion"		"-45"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_travaler_fury_passive"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+			"ThinkInterval"  "2.0"
+
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"			"creeps/boss/travaler.lua"
+					"Function"				"CheckHealth"
+					"modifier_70"			"modifier_travaler_fury_70_pct"
+					"modifier_50"			"modifier_travaler_fury_50_pct"
+					"modifier_25"			"modifier_travaler_fury_25_pct"
+				}
+			}
+		}
+		
+		"modifier_travaler_fury_70_pct"
+		{
+			"Passive"	"0"
+			"IsHidden"	"1"
+			
+			"Aura" 					"modifier_travaler_anti_illusion_aura"
+			"Aura_Radius" 			"1400"
+			"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+			"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+			"Aura_ApplyToCaster" 	"0"
+			
+		}
+		
+		"modifier_travaler_anti_illusion_aura"
+		{
+			"Passive"	"0"
+			"IsHidden"	"1"
+			
+			"OnAttackStart"
+			{
+				"RunScript"
+				{
+					"ScriptFile"			"creeps/boss/travaler.lua"
+					"Function"				"CheckIlussion"
+				}
+			}
+			
+		}
+		
+		"modifier_travaler_fury_50_pct"
+		{
+			"Passive"	"0"
+			"IsHidden"	"1"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_attack"
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%bonus_aspeed"
+				"MODIFIER_PROPERTY_BASE_ATTACK_TIME_CONSTANT"	"%bonus_bat"
+			}
+			"States"
+			{
+				"MODIFIER_STATE_CANNOT_MISS"			"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+		
+		"modifier_travaler_fury_25_pct"
+		{
+			"Passive"	"0"
+			"IsHidden"	"1"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE" "%damage_reducion"
+			}
+		}
+		
+	}
+}

@@ -1,0 +1,255 @@
+"bristleback_viscous_nasal_goo"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"900"
+	"AbilityCastPoint"				"0.1"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"1.5"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"25"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"goo_speed"				"1000"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"goo_duration"			"5.0"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"base_armor"			"2"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"armor_per_stack"		"1 1.4 1.8 2.2 2.4 2.6 3.0"
+			"LinkedSpecialBonus"	"special_bonus_unique_bristleback_4"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"base_move_slow"		"20"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"move_slow_per_stack"	"7"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"stack_limit"			"4"
+			"LinkedSpecialBonus"	"special_bonus_unique_bristleback"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"goo_duration_creep"			"10.0"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius_scepter"				"900"
+			"RequiresScepter"	"1"
+		}
+	}
+}
+
+//=================================================================================================================
+// Bristleback: Quill Spray
+//=================================================================================================================
+"bristleback_quill_spray"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"700"
+	"AbilityCastPoint"				"0.0"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"3.0 3.0 3.0 3.0 3.0 3.0 3.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"45"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"540"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"quill_base_damage"		"28.0 32.0 34.0 38.0 42.0 48.0 54.0"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"quill_stack_damage"	"19.0 21.0 23.0 25.0 28.0 30.0 32.0"
+			"LinkedSpecialBonus"	"special_bonus_unique_bristleback_2"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"quill_stack_duration"	"14.0"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"max_damage"			"50000.0"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"projectile_speed"		"2400"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_by_str"			"2"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_by_str_hero"	"2"
+		}
+	}
+}
+
+//=================================================================================================================
+// Bristleback: Bristleback
+//=================================================================================================================
+"bristleback_bristleback"
+{
+	"MaxLevel"								"7"
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"side_damage_reduction"			"18 22 24 27 29 31 35"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"back_damage_reduction"			"30 32 34 36 38 40 45"
+		}
+		"03"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"side_angle"					"110"
+		}
+		"04"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"back_angle"					"70"
+		}
+		"05"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"quill_release_threshold"		"400 375 350 325 300 275 250"
+		}
+	}
+}
+
+//=================================================================================================================
+// Bristleback: Warpath
+//=================================================================================================================
+"bristleback_warpath"
+{
+	"MaxLevel"								"7"
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDuration"						"10.0"
+			
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"damage_per_stack"				"30 33 36 39 42 45 48"
+			"LinkedSpecialBonus"			"special_bonus_unique_bristleback_3"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"move_speed_per_stack"			"3"
+		}
+		"03"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"stack_duration"				"30.0"
+		}
+		"04"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"max_stacks"					"3 4 5 6 7 8 9"
+		}
+	}
+}
+
+"bristleback_hairball"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+	"MaxLevel"						"1"
+	"FightRecapLevel"				"1"
+	"IsGrantedByShard"			    "1"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"1500"
+	"AbilityCastPoint"				"0.1"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+	
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"10"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"projectile_speed"		"1200"
+		}
+	}
+}

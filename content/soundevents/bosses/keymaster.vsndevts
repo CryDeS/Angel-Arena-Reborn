@@ -1,0 +1,197 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Boss_Keymaster.Howl.Cast = 
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/arc_warden/tempest_double.vsnd",
+		]
+		volume = "2.000000"
+		pitch = "0.70000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.50000"
+	}
+	
+	Boss_Keymaster.Bite.Cast =
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/pudge/dismember_blood1.vsnd",
+			"sounds/weapons/hero/pudge/dismember_blood2.vsnd",
+			"sounds/weapons/hero/pudge/dismember_blood3.vsnd",
+		]
+		volume = "1.500000"
+		pitch = "1.00000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.50000"
+	}
+	
+	Boss_Keymaster.Bite.Kill =
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/obsidian_destroyer/astral_imprison_stop.vsnd",
+		]
+		volume = "5.000000"
+		pitch = "0.70000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.50000"
+	}
+	
+	Boss_Keymaster.DamnedSouls.Hit = 
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/lifestealer/rage.vsnd",
+		]
+		volume = "3.000000"
+		pitch = "2.0000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.50000"
+		stop_at_time = "1"
+	}
+	
+	Boss_Keymaster.ShadowSupport.Cast =
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/items/dota_item_blade_mail.vsnd",
+		]
+		volume = "1.000000"
+		pitch = "1.00000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.50000"
+	}
+	
+	Boss_Keymaster.ShadowSupport.Damage =
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/items/blade_mail_damage.vsnd",
+		]
+		volume = "0.750000"
+		pitch = "1.00000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.50000"
+	}
+	
+	Boss_Keymaster.DamnedSouls.Cast =
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/lich/dark_ritual.vsnd",
+		]
+		volume = "2.000000"
+		pitch = "1.50000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.50000"
+	}
+	
+	Boss_Keymaster.DamnedSouls.DestroyEffect =
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/crystal_maiden/freeze_explosion01.vsnd",
+		]
+		volume = "1.2500000"
+		pitch = "0.30000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.50000"
+	}
+	
+	Boss_Keymaster.DamnedSouls.Launch =
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/lich/chain_frost_cast.vsnd",
+		]
+		volume = "3.000000"
+		pitch = "1.500000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.50000"
+	}
+	
+	Boss_Keymaster.DamnedSouls.Hit =
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/lich/impact01.vsnd",
+		]
+		volume = "1.000000"
+		pitch = "1.200000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.50000"
+	}
+	
+	Boss_Keymaster.Interception.Cast =
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phantom_assassin/blur_cast.vsnd",
+		]
+		volume = "2.000000"
+		pitch = "0.500000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.50000"
+	}
+	
+	Boss_Keymaster.Interception.End =
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phantom_assassin/blur_break.vsnd",
+		]
+		volume = "2.000000"
+		pitch = "2.00000"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.50000"
+	}
+}

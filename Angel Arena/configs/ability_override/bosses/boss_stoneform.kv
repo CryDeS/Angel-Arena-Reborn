@@ -1,0 +1,95 @@
+"modifier_boss_stoneform_passive"
+{
+	"BaseClass"					"ability_datadriven"
+	//"AbilityTextureName"		"custom/modifier_boss_stoneform_passive"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	
+	"AbilityCooldown"			"15.0"
+	
+	"MaxLevel"					"7"
+	
+	"precache"
+	{
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts"
+		"particle"	"particles/status_fx/status_effect_chemical_rage.vpcf"
+		"particle"	"particles/status_fx/status_effect_earth_spirit_petrify.vpcf"
+	}
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"attack_count"		"3"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_boss_stoneform_passive"
+		{
+			"Passive"		"1"
+			"IsHidden"		"1"
+			"IsPurgable"	"0"
+			
+			"ThinkInterval"  "1.0"
+
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"scripts/vscripts/creeps/boss/stone_form.lua"
+					"Function"			"IntervalThink"
+				}
+			}
+			
+			"OnTakeDamage"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"scripts/vscripts/creeps/boss/stone_form.lua"
+					"Function"			"OnTakeDamagePASSIVE"
+					"Damage"			"%attack_damage"
+				}
+			}
+		}
+		
+		"modifier_boss_stoneform_regen"
+		{
+			"Passive"		"0"
+			"IsHidden"		"1"
+			"IsPurgable"	"0"
+			
+			"StatusEffectName"		"particles/status_fx/status_effect_earth_spirit_petrify.vpcf"
+			"StatusEffectPriority"	"5"
+			
+			"OnTakeDamage"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"scripts/vscripts/creeps/boss/stone_form.lua"
+					"Function"			"OnTakeDamage"
+					"Damage"			"%attack_damage"
+				}
+			}
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PHYSICAL"	"1"
+				"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_MAGICAL"	"1"
+				"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PURE"		"1"
+				"MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"		"1"
+			}
+			"States"
+			{
+				"MODIFIER_STATE_STUNNED"				"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_MAGIC_IMMUNE"			"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_FROZEN"					"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_LOW_ATTACK_PRIORITY"	"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_NO_HEALTH_BAR"			"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_LOW_ATTACK_PRIORITY"	"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+	}
+}

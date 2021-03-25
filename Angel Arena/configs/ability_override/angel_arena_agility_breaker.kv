@@ -1,0 +1,67 @@
+"angel_arena_agility_breaker"
+{
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"custom/angel_arena_agility_breaker"
+
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"			"3"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_agi"					"2 3 4 5 6 7 8"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"tick_time"					"3"
+		}
+	}
+	
+	"OnUpgrade"
+	{
+		"RunScript"
+		{
+			"ScriptFile"		"heroes/pa/agility_breaker.lua"
+			"Function"			"OnUpgrade"
+			"ModifierName"		"modifier_angel_arena_agility_stack"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_angel_arena_agility_passive"
+		{
+			"isBuff"	"1"
+			"IsHidden"	"1"
+			"Passive"	"1"
+			"ThinkInterval"  "%tick_time"
+
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"heroes/pa/agility_breaker.lua"
+					"Function"			"OnIntervalThink"
+					"ModifierName"		"modifier_angel_arena_agility_stack"
+				}
+			}
+		}
+		
+		"modifier_angel_arena_agility_stack"
+		{
+			"isBuff"	"1"
+			"IsHidden"	"0"
+			"Passive"	"0"
+			"Attributes" 		        "MODIFIER_ATTRIBUTE_PERMANENT"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"		"%bonus_agi"
+			}
+		}
+	}	
+}

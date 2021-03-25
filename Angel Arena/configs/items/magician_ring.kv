@@ -1,0 +1,106 @@
+"item_recipe_magician_ring"
+{
+	"AbilityTextureName" 				"item_recipe_magician_ring"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1307"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"125"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_magician_ring"
+	"ItemRequirements"
+	{
+									// sage mask(325) + Ring of health(850) + recipe(125)
+		"01"						"item_sobi_mask;item_ring_of_health;"
+	}
+}
+
+"item_magician_ring"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"								"1306"
+	"BaseClass"							"item_lua"
+	"AbilityTextureName" 				"magician_ring"
+	"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"ItemDeclarations"					"DECLARE_PURCHASES_TO_TEAMMATES"
+	"ScriptFile"						"items/magician_ring/item_magician_ring.lua"
+	
+	"ItemQuality"						"common"
+	"ItemDroppable" 					"1"
+	"ItemCastOnPickup"					"0"
+	"ItemKillable"						"1"
+	"ItemPurchasable"					"1"
+	"ItemSellable"						"1"
+	"ItemCost"							"1300"
+	"ItemStackable"						"0"
+	
+	"AbilityCastRange"					"800"
+	//"AbilityCooldown"					"1.0"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"bonus_manaregen"			"2.0"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_armor"				"1"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_hp_regen"			"10"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"bonus_cast_range"			"175"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"aura_radius"				"800"
+		}
+		
+		// stacks !
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"cooldown_reduce"			"1.5625"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"stack_per_kill"			"4"
+		}
+		"07"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"stack_per_assist"			"2"
+		}
+		"08"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"max_stacks"				"16"
+		}		
+		"08"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"tooltip_max_cd"			"25"
+		}	
+	}
+}

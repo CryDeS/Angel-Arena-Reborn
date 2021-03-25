@@ -1,0 +1,140 @@
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"golem_small_silence" // Активная: Дает сайленс врагу на 4 сек, кд 16 секунд 
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"custom/golem_small_silence"
+	"ScriptFile"					"creeps/abilities/golems/golem_small_silence.lua"
+	
+	"precache"
+	{
+		"particle"			"particles/generic_gameplay/generic_silenced.vpcf"
+	}
+	
+	"MaxLevel"						"1"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"16.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"175"
+	"AbilityCastAnimation"			"0.2"
+	"AbilityCastRange"				"600"
+	"AbilityDuration"				"4.0"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"4.0"
+		}
+	}
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"golem_small_heal" // Активная: Дает +250хп и +150 маны выбранному юниту 
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityTextureName"			"custom/golem_small_heal"
+	"ScriptFile"					"creeps/abilities/golems/golem_small_heal.lua"
+	
+	"MaxLevel"						"1"
+
+	"precache"
+	{
+		"soundfile"					"soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts"
+		"particle"					"particles/units/heroes/hero_omniknight/omniknight_purification.vpcf"
+		"particle"					"particles/units/heroes/hero_omniknight/omniknight_purification_hit.vpcf"
+		"particle"					"particles/units/heroes/hero_omniknight/omniknight_purification_cast.vpcf"
+	}
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"8.0"
+
+	"AbilityCastPoint"				"0.3"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"75"
+	
+	"AbilityCastRange"				"700"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"health"					"250"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"mana"						"150"
+		}
+	}
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"golem_small_aura" // Аура: Дает в ауре хп реген +8хп/сек и +75% маны/сек, аура радиус 500
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AURA | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityTextureName"			"custom/golem_small_aura"
+	"ScriptFile"					"creeps/abilities/golems/golem_small_aura.lua"
+	
+	"MaxLevel"						"1"
+
+	"AbilityCastRange"				"500"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"hp_regen"					"8.0"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"mana_regen"				"5.0"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"radius"					"500"
+		}
+	}
+}

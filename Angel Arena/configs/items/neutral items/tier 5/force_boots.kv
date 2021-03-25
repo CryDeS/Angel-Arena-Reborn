@@ -1,0 +1,45 @@
+"item_force_boots"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"291"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH | DOTA_UNIT_TARGET_TEAM_CUSTOM"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_CUSTOM"
+	
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"4.0"
+	"AbilityManaCost"				"75"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"
+	"ItemIsNeutralDrop"				"0"
+	"ItemPurchasable"				"0"
+
+	"Model"							"models/props_gameplay/neutral_box.vmdl"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_movement_speed"	"100"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"push_length"			"800"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"push_duration"			"0.65"
+		}
+	}
+}

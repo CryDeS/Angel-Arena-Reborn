@@ -1,0 +1,134 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_ForgottenHero.Herofall.Cast = 
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/monkey_king/spring_channel.vsnd",
+		]
+		volume = "2.000000"
+		pitch = "1.0"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.250000"
+	}
+	
+	Hero_ForgottenHero.Herofall.Hit = 
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/monkey_king/spring_impact.vsnd",
+		]
+		volume = "2.000000"
+		pitch = "1.0"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.250000"
+	}
+	
+	Hero_ForgottenHero.Breach.Cast = 
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/dark_willow/shadow_realm_attack.vsnd",
+		]
+		volume = "2.000000"
+		pitch = "1.0"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.250000"
+	}
+	
+	Hero_ForgottenHero.Breach.End = 
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/dark_willow/shadow_realm_damage.vsnd",
+		]
+		volume = "2.000000"
+		pitch = "1.0"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.250000"
+	}
+	
+	Hero_ForgottenHero.Meditation.Start = 
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/arc_warden/rune_forge.vsnd",
+		]
+		volume = "2.000000"
+		pitch = "1.7"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.250000"
+	}
+	
+	Hero_ForgottenHero.Meditation.End = 
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/monkey_king/fur_army_end.vsnd",
+		]
+		volume = "2.000000"
+		pitch = "0.7"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.250000"
+	}
+	
+	Hero_ForgottenHero.SpiritReleash.Start = 
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			//"sounds/weapons/hero/phoenix/icarus_dive.vsnd",
+			"sounds/weapons/hero/invoker/deafening_blast_ti6.vsnd",
+		]
+		volume = "2.000000"
+		pitch = "1.2"
+		delay	= "0.0"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.250000"
+		spread_radius = "450.000000"
+		stop_at_time = 2.5000000
+	}
+	
+	Hero_ForgottenHero.SpiritReleash.Hit = 
+	{
+		type = "dota_update_default"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/drow_ranger/marksmanship_target.vsnd",
+		]
+		volume = "1.000000"
+		pitch = "1.0"
+		pitch_rand_min = "-0.050000"
+		pitch_rand_max = "0.050000"
+		soundlevel = "81.000000"
+		mixgroup = "Weapons"
+		volume_fade_out = "0.250000"
+	}
+}

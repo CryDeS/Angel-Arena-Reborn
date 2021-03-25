@@ -1,0 +1,117 @@
+"item_recipe_sphere_2"
+{
+	"AbilityTextureName" 				"item_recipe_sphere_2"
+	
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1290"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_sphere_2"
+	"ItemRequirements"
+	{
+		"01"						"item_sphere;item_sphere"
+	}
+}
+
+
+"item_sphere_2"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1291"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"BaseClass"						"item_sphere"
+	"AbilityTextureName"			"sphere_2"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	"FightRecapLevel"				"1"
+	"ItemBaseLevel"					"2"
+	
+	"AbilityCastRange"				"700"
+	"AbilityCooldown"				"12.0"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"9600"
+	"ItemShopTags"					"regen_health;regen_mana;str;agi;int;hard_to_tag"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"ls;linken's sphere"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	"AbilitySharedCooldown"			"linken_sphere"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_all_stats"		"15 45"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health_regen"	"6 25"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_mana_regen"		"8 16"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"block_cooldown"		"13 12"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"cast_range_tooltip"	"700 700"
+		}
+	}
+}
+
+"item_sphere"
+{
+	"AbilitySharedCooldown"			"linken_sphere"
+	"ItemBaseLevel"					"1"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_all_stats"		"15 45"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health_regen"	"6 25"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_mana_regen"		"8 16"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"block_cooldown"		"13 12"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"cast_range_tooltip"	"700 700"
+		}
+	}
+}

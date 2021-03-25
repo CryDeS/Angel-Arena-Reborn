@@ -1,0 +1,106 @@
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"zombie_walking_devouring"
+{
+// General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+        "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "BaseClass"					    "ability_lua"
+        "AbilityTextureName"			"custom/zombie_walking_devouring"
+        "ScriptFile"					"creeps/abilities/npc_aa_creep_zombie_walking/zombie_walking_devouring"
+        "MaxLevel"                      "1"
+
+        "AbilityChannelTime"			"2.0"
+        "AbilityCastRange"				"150"
+        "AbilityCooldown"				"10"
+        "AbilityManaCost"				"50"
+
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"				"FIELD_INTEGER"
+                "damage"                "150"
+            }
+            "02"
+            {
+                "var_type"				"FIELD_FLOAT"
+                "interval"              "1.0"
+            }
+        }
+}
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"zombie_walking_aura_damage"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_TOGGLE"
+    "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "BaseClass"					    "ability_lua"
+    "AbilityTextureName"			"custom/zombie_walking_aura_damage"
+    "ScriptFile"					"creeps/abilities/npc_aa_creep_zombie_walking/zombie_walking_aura_damage"
+    "MaxLevel"                      "1"
+    "AbilityCooldown"				"1"
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"			"FIELD_INTEGER"
+            "damage_per_second"	"50"
+        }
+        "02"
+        {
+            "var_type"			"FIELD_INTEGER"
+            "radius"	    	"300"
+        }
+        "03"
+        {
+             "var_type"			"FIELD_FLOAT"
+             "time_rate_sec"	"1.0"
+        }
+
+    }
+}
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"zombie_walking_heal_for_death"
+{
+// General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "BaseClass"					    "ability_lua"
+        "AbilityTextureName"			"custom/zombie_walking_heal_for_death"
+        "ScriptFile"					"creeps/abilities/npc_aa_creep_zombie_walking/zombie_walking_heal_for_death"
+        "MaxLevel"                      "1"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+               "var_type"			     "FIELD_INTEGER"
+               "heal_per_hero_death_pct" "20"
+            }
+            "02"
+            {
+               "var_type"			     "FIELD_INTEGER"
+               "radius"	                 "600"
+            }
+        }
+}

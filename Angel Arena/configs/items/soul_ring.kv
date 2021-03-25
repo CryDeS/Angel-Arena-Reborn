@@ -1,0 +1,57 @@
+// Recipe: Soul Ring
+//=================================================================================================================
+"item_recipe_soul_ring"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"							"177"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+    "Model"							"models/props_gameplay/recipe.vmdl"
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"						"20"
+    "ItemShopTags"					""
+
+    // Recipe
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemRecipe"					"1"
+    "ItemResult"					"item_soul_ring"
+    "ItemRequirements"
+    {
+        "01"						"item_ring_of_regen;item_belt_of_strength"
+    }
+}
+"item_soul_ring"
+{
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_strength"		"12"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"2"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"health_sacrifice"		"220"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"mana_gain"				"300"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"				"10"
+		}
+	}
+}

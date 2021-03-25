@@ -1,0 +1,85 @@
+"item_heart"
+{
+	"ItemBaseLevel"					"1"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_strength"		"40 140"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"300 800"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"health_regen_pct"		"5 7"
+		}
+	}
+}
+
+"item_recipe_heart_2"
+{
+	"AbilityTextureName" 			"item_recipe_heart_2"
+	"BaseClass"						"item_recipe_arcane_boots"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1137"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1200"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_heart_2"
+	"ItemRequirements"
+	{
+		"01"						"item_heart;item_heart"
+	}
+}
+
+"item_heart_2"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1138"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass"						"item_heart"
+	"ItemBaseLevel"					"2"
+	"AbilityTextureName"			"heart_2"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"10800"
+	"ItemShopTags"					"str;regen_health;health_pool"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"hot;heart of tarrasque"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_strength"		"40 80"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"300 600"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"health_regen_pct"		"5 7"
+		}
+	}
+}

@@ -1,0 +1,57 @@
+"npc_aa_keymaster_radiant"											"Keymaster"
+"npc_aa_keymaster_dire"												"Keymaster"
+"on_boss_die_keymaster"												"Someone kill the <font color='#58ACFA'>Keymaster</font>!"
+
+"DOTA_Tooltip_Ability_keymaster_howl"								"Master Howl"
+"DOTA_Tooltip_Ability_keymaster_howl_Description"					"Stuns and silences around enemies."
+"DOTA_Tooltip_Ability_keymaster_howl_abilitycastrange"				"RADIUS:"
+"DOTA_Tooltip_Ability_keymaster_howl_stun_duration"					"STUN DURATION:"
+"DOTA_Tooltip_Ability_keymaster_howl_silence_duration"				"SILENCE DURATION:"
+
+"DOTA_Tooltip_modifier_keymaster_howl_silence"						"Master Howl Silence"
+"DOTA_Tooltip_modifier_keymaster_howl_stun"							"Master Howl Stun"
+
+"DOTA_Tooltip_Ability_keymaster_bite"								"Master Bite"
+"DOTA_Tooltip_Ability_keymaster_bite_Description"					"Bite selected target, dealing massive damage, and killing unit when him health less than thresshold. Decreasing target armor and outcoming damage."
+"DOTA_Tooltip_Ability_keymaster_bite_damage"						"DAMAGE:"
+"DOTA_Tooltip_Ability_keymaster_bite_kill_limit_pct"				"%DAMAGE THRESSHOLD:"
+"DOTA_Tooltip_Ability_keymaster_bite_disarmor"						"ARMOR DECREASE:"
+"DOTA_Tooltip_Ability_keymaster_bite_damage_reduction"				"%DAMAGE REDUCING:"
+"DOTA_Tooltip_Ability_keymaster_bite_debuff_duration"				"DEBUFF DURATION:"
+
+"DOTA_Tooltip_modifier_keymaster_bite"								"Master Wound"
+
+"DOTA_Tooltip_Ability_keymaster_shadow_support"						"Master in Shadows"
+"DOTA_Tooltip_Ability_keymaster_shadow_support_Description"			"Keymaster is returning incoming damage as pure."
+"DOTA_Tooltip_Ability_keymaster_shadow_support_return_damage"		"%DAMAGE RETURN:"
+"DOTA_Tooltip_Ability_keymaster_shadow_support_duration"			"DURATION:"
+
+"DOTA_Tooltip_modifier_keymaster_shadow_support"					"Master damage return"
+
+"DOTA_Tooltip_Ability_keymaster_damned_souls"						"Master Damned Souls"
+"DOTA_Tooltip_Ability_keymaster_damned_souls_Description"			"After cast Keymaster starts launch energy projectiles into nearby enemy that deal damage and decreasing target attack speed."
+"DOTA_Tooltip_Ability_keymaster_damned_souls_abilitycastrange"		"RADIUS:"
+"DOTA_Tooltip_Ability_keymaster_damned_souls_interval"				"PROJECTILE INTERVAL:"
+"DOTA_Tooltip_Ability_keymaster_damned_souls_soul_count"			"PROJECTILE COUNT:"
+"DOTA_Tooltip_Ability_keymaster_damned_souls_projectile_speed"		"PROJECTILE SPEED:"
+"DOTA_Tooltip_Ability_keymaster_damned_souls_damage"				"DAMAGE:"
+"DOTA_Tooltip_Ability_keymaster_damned_souls_damage_from_lost_hp"	"DAMAGE FROM MISSING HEALTH:"
+"DOTA_Tooltip_Ability_keymaster_damned_souls_attack_speed_debuff"	"ATTACK SPEED SLOW:"
+"DOTA_Tooltip_Ability_keymaster_damned_souls_debuff_duration"		"DEBUFF DURATION:"
+
+"DOTA_Tooltip_modifier_keymaster_damned_souls"						"Master Damned Souls"
+"DOTA_Tooltip_modifier_keymaster_damned_souls_debuff"				"Masted Damned Souls Debuff"
+
+"DOTA_Tooltip_Ability_keymaster_interception"						"Master Interception"
+"DOTA_Tooltip_Ability_keymaster_interception_Description"			"Keymaster starts regenerate. Regenerations is decreased by another heroes around Keymaster."
+"DOTA_Tooltip_Ability_keymaster_interception_abilitycastrange"		"RADIUS:"
+"DOTA_Tooltip_Ability_keymaster_interception_duration"				"DURATION:"
+"DOTA_Tooltip_Ability_keymaster_interception_hp_regen_pct"			"%HP REGENERATION:"
+"DOTA_Tooltip_Ability_keymaster_interception_hp_regen_decrease"		"%REGENERATION DECREASE PER HERO:"
+
+"DOTA_Tooltip_modifier_keymaster_interception"						"Master Interception"
+
+"DOTA_Tooltip_Ability_keymaster_dodge_mastery"						"Dodge Mastery"
+"DOTA_Tooltip_Ability_keymaster_dodge_mastery_Description"			"Boss ignores all damage that was recived from a far range.\Boss increase himself attack speed for every missing health pct."
+"DOTA_Tooltip_Ability_keymaster_dodge_mastery_abilitycastrange"		"ALLOW DAMAGE RADIUS:"
+"DOTA_Tooltip_Ability_keymaster_dodge_mastery_aspeed_per_hp_pct"	"ATTACK SPEED FOR MISSING HEALTH PERCENT:"

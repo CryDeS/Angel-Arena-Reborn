@@ -1,0 +1,38 @@
+"item_greater_faerie_fire"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"299"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"	
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"
+	"ItemIsNeutralDrop"				"0"
+	"ItemPurchasable"				"0"
+	"ItemInitialCharges"			"9"
+	"ItemPermanent"					"0"
+	"AbilityCooldown"				"10.0"
+	"IsTempestDoubleClonable"		"0"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+
+	"Model"							"models/props_gameplay/neutral_box.vmdl"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"250"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"hp_restore"			"1000"
+		}
+	}
+}

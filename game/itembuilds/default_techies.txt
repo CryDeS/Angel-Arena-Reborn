@@ -1,0 +1,63 @@
+"itembuilds"
+{
+	"author"		"Valve"
+	"hero"			"npc_dota_hero_techies"
+	"Title"			"Recommended items for Techies"
+	
+	"Items"
+	{		
+		"#DOTA_Item_Build_Starting_Items"
+		{
+			"item"		"item_ring_of_regen"
+			"item"		"item_smoke_of_deceit"
+			"item"		"item_faerie_fire"
+			"item"		"item_tpscroll"
+			"item"		"item_clarity"
+			"item"		"item_clarity"
+			"item"		"item_clarity"
+		}
+		
+		"#DOTA_Item_Build_Early_Game"
+		{	
+			"item"		"item_soul_ring"
+			"item"		"item_arcane_boots"
+			"item"		"item_polar_spear"
+			"item"		"item_ghost"
+		}
+		
+		"#DOTA_Item_Build_Mid_Items"
+		{
+			"item"		"item_force_staff"
+			"item"		"item_ultimate_scepter"
+		}
+		
+		"#DOTA_Item_Build_Late_Items"
+		{
+			"item"		"item_octarine_core_2"
+			"item"		"item_sheepstick"
+			"item"		"item_charon"
+		}
+		
+		"#DOTA_Item_Build_Other_Items"
+		{
+			"item"		"item_bloodstone"
+			"item"		"item_shivas_guard"
+			"item"		"item_necronomicon_3"
+			"item"		"item_orchid"
+			"item"		"item_blink"
+			"item"		"item_aether_lens"
+			"item"		"item_ethereal_blade"
+			"item"		"item_dagon_5"
+			"item"		"item_rubick_dagon"
+			"item"		"item_guardian_greaves"
+			"item"		"item_silver_edge"
+			"item"		"item_hurricane_pike"
+			"item"		"item_sphere"
+			"item"		"item_lotus_orb"
+			"item"		"item_glimmer_cape"
+			"item"		"item_rod_of_atos"
+			"item"		"item_helm_of_the_dominator"
+			
+		}
+	}
+}

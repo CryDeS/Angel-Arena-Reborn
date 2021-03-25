@@ -1,0 +1,42 @@
+"item_ceremonial_robe"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"676"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"
+	"ItemIsNeutralDrop"				"0"
+	"ItemPurchasable"				"0"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+
+	"Model"							"models/props_gameplay/neutral_box.vmdl"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_mana"			"350"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"aura_radius"			"1200"
+		}		
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"status_resistance"		"20"
+		}	
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"magic_resistance"		"20"
+		}		
+	}
+}

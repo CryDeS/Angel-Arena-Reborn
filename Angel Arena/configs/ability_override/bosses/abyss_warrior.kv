@@ -1,0 +1,304 @@
+// link two targets, link deal damage to both units
+"abyss_warrior_death_link"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"custom/abyss_warrior_death_link"
+	"ScriptFile"					"creeps/boss/abyss_warrior/abyss_warrior_death_link" 
+	
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+	
+	"MaxLevel"						"1"
+	
+	"precache"
+	{
+		"soundfile"					"soundevents/game_sounds_heroes/game_sounds_warlock.vsndevts"
+		"particle" 					"particles/econ/items/warlock/warlock_ti10_head/warlock_ti_10_fatal_bonds_cast.vpcf"
+		"particle" 					"particles/econ/wards/warlock/ward_warlock/warlock_ambient_ward_explosion.vpcf"
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"800"
+	"AbilityCastPoint"				"0.5"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"8.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"250"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"link_radius"			"600"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_pct"			"100"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"link_duration"			"4.0"
+		}
+	}
+}
+
+// pull selected unit, if unit has lesser health - kill unit, else silence and disarm unit
+"abyss_warrior_domination"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"AbilityTextureName"			"custom/abyss_warrior_domination"
+	"ScriptFile"					"creeps/boss/abyss_warrior/abyss_warrior_domination" 
+	
+	"AbilityCastAnimation"			"ACT_DOTA_VERSUS"
+	
+	"MaxLevel"						"1"
+	
+	"precache"
+	{
+		"soundfile"					"soundevents/game_sounds_heroes/game_sounds_warlock.vsndevts"
+		"particle" 					"particles/units/heroes/hero_silencer/silencer_last_word_disarm.vpcf"
+		"particle" 					"particles/units/heroes/hero_demonartist/demonartist_engulf_disarm/items2_fx/heavens_halberd_debuff.vpcf"
+		"particle" 					"particles/units/heroes/hero_oracle/oracle_fatesedict_disarm_ovrhead_burst.vpcf"
+		"particle" 					"particles/units/heroes/hero_oracle/oracle_purifyingflames_head_core.vpcf"
+		"particle" 					"particles/units/heroes/hero_oracle/oracle_fortune_aoe.vpcf"
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"800"
+	"AbilityCastPoint"				"0.5"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"7.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"250"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"pull_speed"			"650"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"kill_limit_pct"		"20"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"disable_duration"		"3"
+		}
+	}
+}
+
+// charged attack deal additional damage that stun all enemies in aoe. every stunned enemy gives linken sphere effect
+"abyss_warrior_charged_attack"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"		
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"BaseClass"						"ability_lua"
+	"MaxLevel"						"1"
+	"AbilityTextureName"			"custom/abyss_warrior_charged_attack"
+	"ScriptFile"					"creeps/boss/abyss_warrior/abyss_warrior_charged_attack" 
+	
+	"AbilityCooldown"				"12"
+	
+	"precache"
+	{
+		"soundfile"					"soundevents/game_sounds_items.vsndevts"
+		"soundfile"					"soundevents/game_sounds_heroes/game_sounds_warlock.vsndevts"
+		"particle" 					"particles/econ/items/warlock/warlock_ti10_head/warlock_ti_10_fatal_bonds_cast.vpcf"
+		"particle" 					"particles/econ/wards/warlock/ward_warlock/warlock_ambient_ward_explosion.vpcf"
+		"particle" 					"particles/econ/items/ogre_magi/ogre_magi_arcana/ogre_magi_arcana_stunned_symbol.vpcf"
+		"particle" 					"particles/items_fx/immunity_sphere.vpcf"
+		"particle" 					"particles/items_fx/immunity_sphere_buff.vpcf"
+	}
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage"				"800"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"stun_duration"			"2.5"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"radius"				"350"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"spellblock_duration"	"7.0"
+		}
+	}
+}
+
+// purge all debuffs every #X seconds
+"abyss_warrior_fallen_hero"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"BaseClass"						"ability_lua"
+	"MaxLevel"						"1"
+	"AbilityTextureName"			"custom/abyss_warrior_fallen_hero"
+	"ScriptFile"					"creeps/boss/abyss_warrior/abyss_warrior_fallen_hero" 
+	
+	"AbilityCooldown"				"3"
+	
+	"precache"
+	{
+		"particle" 					"particles/econ/items/ember_spirit/ember_spirit_ashes/ember_spirit_ashes_weapon_blur.vpcf"
+	}
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+	}
+}
+
+// for every 5% losed health get X attack speed and Y hp/reg. After all death got +W% health and damage
+"abyss_warrior_immortal"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass"						"ability_lua"
+	"MaxLevel"						"1"
+	"AbilityTextureName"			"custom/abyss_warrior_immortal"
+	"ScriptFile"					"creeps/boss/abyss_warrior/abyss_warrior_immortal" 
+		
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"hp_loss_pct"			"5.0"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"attack_speed"			"50"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"hp_reg"				"6"
+		}
+	}
+}
+
+// activation absorb all damage, regenerate health, and after duration stun all aroud for
+//  a little time and heal self for taken damage
+"abyss_warrior_ethereal_charge"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"BaseClass"						"ability_lua"
+	"MaxLevel"						"1"
+	"AbilityTextureName"			"custom/abyss_warrior_ethereal_charge"
+	"ScriptFile"					"creeps/boss/abyss_warrior/abyss_warrior_ethereal_charge" 
+	
+	"AbilityCooldown"				"12"
+	
+	"AbilityCastAnimation"			"ACT_DOTA_TELEPORT"
+	
+	"precache"
+	{
+		"particle" 					"particles/econ/items/warlock/warlock_ti10_head/warlock_ti_10_fatal_bonds_cast.vpcf"
+		"particle" 					"particles/econ/items/dragon_knight/dk_ti8_awakening/dk_ti8_awakening_dragon_2_ambient_gem_top_base.vpcf"
+		"particle" 					"particles/units/heroes/hero_dragon_knight/dragon_knight_elder_dragon_fire_explosion.vpcf"
+		"soundfile" 				"soundevents/game_sounds_heroes/game_sounds_warlock.vsndevts"
+	}
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"hp_regen_pct"			"7.0"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"stun_duration"			"0.7"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"stun_aoe"				"500"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"active_duration"		"3.0"
+		}
+	}
+}
+
+// that is used for status effect particle
+"abyss_warrior_hidden"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	"BaseClass"						"ability_lua"
+	"MaxLevel"						"1"
+	"ScriptFile"					"creeps/boss/abyss_warrior/abyss_warrior_hidden" 
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+	}
+}

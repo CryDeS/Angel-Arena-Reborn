@@ -1,0 +1,8 @@
+<root>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/neutral_slot.js" />
+	</scripts>
+	
+	<Panel hittest="false">
+	</Panel>
+</root>

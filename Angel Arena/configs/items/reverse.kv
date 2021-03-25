@@ -1,0 +1,107 @@
+"item_recipe_reverse"
+{
+	"AbilityTextureName" 				"item_recipe_reverse"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1254"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1200"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_reverse"
+	"ItemRequirements"
+	{
+		"01"						"item_phase_boots_3;item_boss_soul;item_angels_sword"
+	}
+}
+
+"item_reverse"
+{
+	"ID"							"1255"
+	"BaseClass"						"item_lua"
+	"AbilityTextureName"			"reverse"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+	"ScriptFile"					"items/reverse/item_reverse"
+
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"12.0"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"25010"
+	"ItemShopTags"					"damage;move_speed;hard_to_tag"
+	"ItemQuality"					"common"
+	"ItemAliases"					"phase boots; reverse; speed;movespeed"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+	"ItemBaseLevel"					"4"
+	"AbilitySharedCooldown"			"phase_boots"
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+        "01"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "bonus_movement_speed"	"45 50 55 60"
+        }
+        "02"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "bonus_damage"	        "200"
+        }
+        "03"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "damage_block_melee"	"0"
+        }
+        "04"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "damage_block_ranged"	"0"
+        }
+        "05"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "block_chance"			"0"
+        }
+        "06"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "phase_movement_speed"  "24 26 28 32"
+        }
+        "07"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "phase_movement_speed_range"  "20 22 24 28"
+        }
+        "08"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "phase_duration"		"3.0 3.5 4.0 4.5"
+        }
+        "09"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "bonus_attack_speed"	"0"
+        }
+        "10"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "bonus_armor"			"3 5 7 10"
+        }
+		"11"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"speed_limit_tooltip"	"1000"
+		}
+	}
+
+}

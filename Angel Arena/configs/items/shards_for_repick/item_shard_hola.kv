@@ -1,0 +1,134 @@
+"item_recipe_shard_hola"
+{
+	"AbilityTextureName" 				"item_recipe_shard_hola"
+	
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1700"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_shard_hola"
+	"ItemRequirements"
+	{
+		"01"						"item_shard_hola_dummy"
+	}
+}
+
+"item_shard_hola_dummy"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1701"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+	"AbilityTextureName"	        "shard_hola"
+	"ScriptFile"					"items/shards_for_repick/shard_hola/item_shard_hola"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"15.0"
+	"AbilityManaCost"               "120"
+	"AbilityCastRange"				"1200"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemStackable"					"0"
+	"ItemBaseLevel"					"1"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "0"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"0"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"heal_const"			"1500"
+		}
+        //Stats
+        "02"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "health_regen"	        "10.0"
+        }
+        "03"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "all_stats"	            "25"
+        }
+        "04"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "health"	            "1000"
+        }
+	}
+}
+"item_shard_hola"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1521"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+	"AbilityTextureName"	        "shard_hola"
+	"ScriptFile"					"items/shards_for_repick/shard_hola/item_shard_hola"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"15.0"
+	"AbilityManaCost"               "120"
+	"AbilityCastRange"				"1200"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"500"
+	"ItemStackable"					"0"
+	"ItemBaseLevel"					"1"
+	
+	"ItemKillable"                  "0"
+	"ItemSellable"                  "0"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"heal_const"			"1500"
+		}
+        //Stats
+        "02"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "health_regen"	        "10.0"
+        }
+        "03"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "all_stats"	            "25"
+        }
+        "04"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "health"	            "1000"
+        }
+	}
+}

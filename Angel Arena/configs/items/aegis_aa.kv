@@ -1,0 +1,74 @@
+"item_aegis_aa"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"								"1256"
+	"BaseClass"							"item_datadriven"
+	"AbilityTextureName" 				"item_aegis"
+	"Model"								"models/props_gameplay/aegis.vmdl"
+	"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"ItemDeclarations"					"DECLARE_PURCHASES_TO_TEAMMATES"
+	
+
+	"ItemQuality"						"epic"
+	"ItemDroppable" 					"1"
+	"ItemCastOnPickup"					"0"
+	"ItemKillable"						"1"
+	"ItemPurchasable"					"0"
+	"ItemSellable"						"0"
+	
+	"AbilityCooldown"					"300"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"reincarnate_time"			"3"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"disappear_time"			"420"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"disappear_time_tooltip"	"7"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"				"items/aegis.lua"
+			"Function"					"OnAegisPickup"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_aegis_tooltip"
+		{
+			"Passive"					"0"
+			"IsHidden"					"0"
+			"IsBuff"					"1"
+			"IsPurgable"				"0"
+			
+			"Duration"					"%disappear_time"
+
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"items/aegis.lua"
+					"Function"			"OnAegisEnd"
+				}
+			}
+		}
+
+	}
+}

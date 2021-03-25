@@ -1,0 +1,283 @@
+"forgotten_hero_herofall"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"BaseClass"						"ability_lua"
+	"AbilityTextureName"			"custom/forgotten_hero_herofall"
+	"ScriptFile"					"heroes/forgotten_hero/forgotten_hero_herofall" 
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+	
+	"MaxLevel"						"7"
+		
+	"precache"
+	{
+		"soundfile"					"soundevents/heroes/forgotten_hero.vsndevts"
+		"particle"					"particles/econ/items/monkey_king/arcana/fire/mk_arcana_spring_jump_trail.vpcf"
+		"particle"					"particles/econ/items/monkey_king/arcana/fire/monkey_king_spring_arcana_fire.vpcf"
+		"particle"					"particles/units/heroes/hero_monkey_king/monkey_king_spring_cast_spiral_arm_b.vpcf"
+		"particle"					"particles/econ/items/ogre_magi/ogre_magi_arcana/ogre_magi_arcana_stunned_symbol.vpcf"
+	}
+	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"800"
+	"AbilityCastPoint"				"0.3"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"13"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100 120 140 160 180 200 220"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage"				"125 200 250 300 350 475 625"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"aoe_radius"			"300"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"stun_duration"			"1.0"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"abilitycastrange"		""
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"speed"					"600"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"height"				"250"
+		}
+	}
+}
+
+"forgotten_hero_breach"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+	"AbilityTextureName"			"custom/forgotten_hero_breach"
+	"ScriptFile"					"heroes/forgotten_hero/forgotten_hero_breach" 
+
+	"MaxLevel"						"7"
+		
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"					"soundevents/heroes/forgotten_hero.vsndevts"
+		"particle"					"particles/status_fx/status_effect_dark_willow_shadow_realm.vpcf"
+		"particle"					"particles/heroes/forgotten_hero/breach/breach_start.vpcf"
+	}
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"18"
+	"AbilityCastPoint"				"0.0"
+	"AbilityManaCost"				"125"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"2.5"
+			"LinkedSpecialBonus"	"forgotten_hero_talent_breach_duration"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_ms"				"15 20 25 30 35 45 50"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"fade_time"				"0.3"
+		}
+	}
+}
+
+"forgotten_hero_meditation"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+	"AbilityTextureName"			"custom/forgotten_hero_meditation"
+	"ScriptFile"					"heroes/forgotten_hero/forgotten_hero_meditation" 
+	"AbilityCastAnimation"			"ACT_DOTA_VICTORY_START"
+	 
+	"MaxLevel"						"7"
+		
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"					"soundevents/heroes/forgotten_hero.vsndevts"
+		"particle"					"particlesparticles/heroes/forgotten_hero/meditation/streaks.vpcf"
+		"particle"					"particles/units/heroes/hero_monkey_king/monkey_king_quad_tap_overhead.vpcf"
+		"particle"					"particles/units/heroes/hero_monkey_king/monkey_king_spring_cast_rays.vpcf"
+		"particle"					"particles/econ/items/monkey_king/ti7_weapon/mk_ti7_golden_immortal_weapon_ambient.vpcf"
+	}
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"21 20 19 18 17 16 15"
+	"AbilityCastPoint"				"0.0"
+	"AbilityManaCost"				"125"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"5.0"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"hp_regen"				"5.0"
+		}
+	}
+}
+
+
+"forgotten_hero_combat_mastery"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"custom/forgotten_hero_combat_mastery"
+	"ScriptFile"					"heroes/forgotten_hero/forgotten_hero_combat_mastery" 
+
+	"MaxLevel"						"7"
+		
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"particle"					"particles/econ/items/phoenix/phoenix_solar_forge/phoenix_solar_forge_ambient.vpcf"
+		"particle"					"particles/econ/items/witch_doctor/wd_ti10_immortal_weapon_gold/wd_ti10_immortal_ambient_gold_haze.vpcf"
+	}
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"0"
+	"AbilityCastPoint"				"0"
+	"AbilityManaCost"				"0"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"disarmor"				"2"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"disarmor_duration"		"3 3.25 3.5 3.75 4 4.25 4.5"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_damage_per_hero"	"5 10 15 20 25 30 35"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_damage_duration"	"5 5.5 6 6.5 7 7.5 8"
+		}
+	}
+}
+
+"forgotten_hero_spirit_releash"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"MaxLevel"						"7"
+	"BaseClass"						"ability_lua"
+	"AbilityTextureName"			"custom/forgotten_hero_spirit_releash"
+	"ScriptFile"					"heroes/forgotten_hero/forgotten_hero_spirit_releash" 
+	"AbilityCastAnimation"			"ACT_DOTA_MK_FUR_ARMY"
+	 
+	"precache"
+	{
+		"soundfile"					"soundevents/heroes/forgotten_hero.vsndevts"
+		"particle"					"particles/econ/items/ogre_magi/ogre_magi_arcana/ogre_magi_arcana_stunned_symbol.vpcf"
+		"particle"					"particles/heroes/forgotten_hero/spirit_releash/spirit_releash.vpcf"
+	}
+	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"1600"
+	"AbilityCastPoint"				"0.5"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"45"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"150 200 250 300 350 400 450"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage"				"500 550 600 700 800 900 1000"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"abilitycastrange"		""
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"projectile_speed"		"1600"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"projectile_width"		"250"
+		}
+	}
+}

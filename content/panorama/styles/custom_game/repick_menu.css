@@ -1,0 +1,272 @@
+.Root {
+	horizontal-align: center;
+	vertical-align: center;
+	width: 100%;
+	height: 100%;
+}
+
+#MainRepickMenu {
+	horizontal-align: center;
+	vertical-align: center;
+	background-color: #000000bb;
+	width: 1200px;
+	height: 50%;
+
+	border-radius: 4px 4px 4px 4px / 4px 4px 4px 4px;
+	box-shadow: fill #ffff0000 4px 4px 4px 4px;
+}
+
+.HeroBlockHolder {
+	margin-left: 0px;
+	vertical-align: center;
+	width: 225px;
+	height: 94%;
+	background-color: #111111fa;
+
+	margin-left: 10px;
+	border-radius: 4px 4px 4px 4px / 4px 4px 4px 4px;
+	border: 1px solid #141516ff;
+	box-shadow: fill #ffff0000 2px 2px 2px 2px;
+}
+
+#HeroBlock {
+	vertical-align: center;
+	width: 100%;
+	flow-children: right-wrap;
+}
+
+.HeroPortrait {
+	width: 71px;
+	height: 94px;
+
+	margin: 18px;
+
+	saturation: 0.7;
+}
+
+#HeroName {
+	horizontal-align: center;
+	color: #fffffffa;
+	font-size: 38;
+	margin-top: 10px;
+}
+
+#HeroAbilities {
+	margin-top: 10px;
+	flow-children: right;
+	horizontal-align: center;
+	height: 72px;
+	max-width: 100%;
+
+	padding: 3px 3px 3px 3px;
+	box-shadow: #cccccc02 0px 0px 0px 0px;
+	background-color: #cccccc02;
+	border-radius: 1px 1px 1px 1px / 1px 1px 1px 1px;
+	border-color: #cccccc02;
+}
+
+.AbilityImage {
+	border: 1px solid #0101010f;
+	border-radius: 1px 1px 1px 1px / 1px 1px 1px 1px;
+	//border-radius: 50% / 50%;
+
+	width: 64px;
+	height: 64px;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+.HeroPortraitSelected {
+	box-shadow: #ffff0030 0px 0px -1px 2px;
+
+	brightness: 1;
+	saturation: 1;
+}
+
+.StatRow {
+	margin-top: 10px;
+	flow-children: down;
+	horizontal-align: center;
+	width: 100%;
+}
+
+.StatRowContent {
+	margin-top: 10px;
+	height: 32px;
+	flow-children: right;
+	horizontal-align: center;
+}
+
+.BaseLabel {
+	color: #fffffffa;
+	font-size: 26;
+	vertical-align: center;
+}
+
+.StatLabel {
+	margin-left: 8px;
+	horizontal-align: left;
+}
+
+.AttImage {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+
+	width: 32px;
+	height: 32px;
+	margin-right: 4px;
+	horizontal-align: left;
+}
+
+.DummyRow {
+	horizontal-align: center;
+	vertical-align: center;
+	flow-children: right;
+}
+
+.HealtRow {
+	background-color: gradient(
+		linear,
+		0% 0%,
+		0% 100%,
+		from(#1a3d1a),
+		color-stop(0.2, #67a163),
+		color-stop(0.5, #187019),
+		to(#175d17)
+	);
+	border-radius: 4px;
+	width: 100%;
+}
+
+.ManaRow {
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(#6a90ba), color-stop(0.4, #144b91), to(#2e5187));
+	border-radius: 4px;
+	width: 100%;
+}
+
+#HealthRegen {
+	color: #3ed038;
+}
+
+#ManaRegen {
+	color: #83c2fe;
+}
+
+.CenteredRow {
+	horizontal-align: center;
+}
+
+#AttStrengthImage {
+	background-image: url("s2r://panorama/images/primary_attribute_icons/primary_attribute_icon_strength_psd.vtex");
+}
+
+#AttAgilityImage {
+	background-image: url("s2r://panorama/images/primary_attribute_icons/primary_attribute_icon_agility_psd.vtex");
+}
+
+#AttIntellectImage {
+	background-image: url("s2r://panorama/images/primary_attribute_icons/primary_attribute_icon_intelligence_psd.vtex");
+}
+
+.MainAttributeImage {
+	border: 2px solid #aaaa00ff;
+	border-radius: 50% / 50%;
+	brightness: 2;
+	saturation: 1.3;
+}
+
+.MovespeedImage {
+	background-image: url("s2r://panorama/images/hud/reborn/icon_speed_psd.vtex");
+}
+
+.DamageImage {
+	background-image: url("s2r://panorama/images/hud/reborn/icon_damage_psd.vtex");
+}
+
+.BaseAttackTimeImage {
+	background-image: url("s2r://panorama/images/hud/reborn/icon_attack_speed2_psd.vtex");
+}
+
+.ArmorImage {
+	background-image: url("s2r://panorama/images/hud/reborn/icon_armor_psd.vtex");
+}
+
+#HeroInfo {
+	horizontal-align: right;
+	padding-right: 10px;
+	padding-left: 10px;
+	height: 100%;
+	background-color: #111111ff;
+	flow-children: down;
+
+	border-radius: 4px 4px 4px 4px / 4px 4px 4px 4px;
+}
+
+#PreviewHolder {
+	position: -6% 0px 0px;
+	horizontal-align: center;
+	width: 600px;
+	height: 100%;
+}
+
+#Preview {
+	width: 100%;
+	height: 100%;
+	opacity-mask: url("s2r://panorama/images/masks/softedge_box_irregular_png.vtex");
+}
+
+#PickButton {
+	width: 350px;
+	height: 60px;
+
+	horizontal-align: center;
+	vertical-align: center;
+	margin-top: 52%;
+	margin-right: 5%;
+	flow-children: none;
+	background-size: 100%;
+	border-radius: 4px;
+	border: 3px solid rgba(0, 0, 0, 0.2);
+	box-shadow: fill rgba(0, 0, 0, 1) -4px 0px 10px 8px;
+}
+.CantPickButton {
+	background-image: url("s2r://panorama/images/red_large_off_png.vtex");
+}
+.CanPickButton {
+	background-image: url("s2r://panorama/images/backgrounds/background_play_button_2x_png.vtex");
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(#045713ff), to(#04470aff));
+}
+
+.CanPickButton:hover {
+	brightness: 1.6;
+	box-shadow: fill #00ff0006 0px 0px 10px 0px;
+}
+
+.CanPickButton:active {
+	brightness: 1.7;
+	box-shadow: fill #00ff000f 0px 0px 20px 0px;
+	sound: "ui_topmenu_activate";
+}
+
+#PickButtonLabel {
+	margin-top: 5px;
+	font-size: 19px;
+	height: 22px;
+	text-overflow: shrink;
+	color: #f2f2f2;
+	align: center center;
+	text-shadow: rgba(0, 0, 0, 0.9) 0px 1px 3px 2;
+}
+
+#PickShard {
+	width: 48px;
+	height: 100%;
+	background-color: #ff00ff00;
+	horizontal-align: right;
+	vertical-align: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	brightness: 1.5;
+	saturation: 1.1;
+}

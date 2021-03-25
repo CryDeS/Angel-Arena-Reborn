@@ -1,0 +1,88 @@
+"boss_possessed_demon" 
+{
+	"BaseClass" 				"npc_dota_creature"
+	
+	"Model" 					"models/heroes/doom/doom.vmdl"
+	"SoundSet"					"Hero_DoomBringer"
+	"GameSoundsFile"  			"soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts"
+	"IdleSoundLoop"				"Hero_DoomBringer.IdleLoop"
+	"vscripts"					"creeps/boss/possessed/possessed_ai.lua"
+	
+	"ModelScale" 				"1.8" 
+	"Level" 					"100" 
+	"IsNeutralUnitType"			"0"
+	"IsAncient" 				"1"
+	"CanBeDominated" 			"0"
+	"UseNeutralCreepBehavior"  	"0" 
+	"AutoAttacksByDefault"		"0"
+	
+	"AbilityLayout"				"7"
+	"Ability1" 					"possessed_magma_trails"
+	"Ability2" 					"possessed_devil_stomp"
+	"Ability3" 					"possessed_hellshield"
+	"Ability4" 					"possessed_fallen_sword"
+	"Ability5" 					"possessed_rebel"
+	"Ability6" 					"possessed_curse"
+	"Ability7" 					"keymaster_dodge_mastery"
+	"Ability8" 					""
+	 
+	"ArmorPhysical" 			"0" 
+	"MagicalResistance" 		"25"
+	
+	"AttackCapabilities" 		"DOTA_UNIT_CAP_MELEE_ATTACK"
+	"AttackDamageMin" 			"0"
+	"AttackDamageMax" 			"0"
+	"AttackRate" 				"0.7" 
+	"AttackAnimationPoint" 		"0.7" 
+	"AttackAcquisitionRange" 	"300" 
+	"AttackRange" 				"240" 
+	"ProjectileModel" 			"" 
+	"ProjectileSpeed" 			""
+	"HealthBarOffset"           "500"		
+	"RingRadius"                "140"
+	"BoundsHullName"            "DOTA_HULL_SIZE_HUGE"
+	
+	"BountyXP" 					"0"
+	"BountyGoldMin" 			"0"
+	"BountyGoldMax" 			"0"
+	 
+	"MovementCapabilities" 		"DOTA_UNIT_CAP_MOVE_GROUND" 
+	"MovementSpeed" 			"450"
+	"MovementTurnRate" 			"0.8"
+
+	"StatusHealth" 				"35000"
+	"StatusHealthRegen" 		"240"
+	"StatusMana"				"40000"
+	"StatusManaRegen" 			"120"
+	
+	"ProjectileModel" 			"particles/base_attacks/ranged_tower_bad.vpcf"
+	"ProjectileSpeed" 			"1500"
+	
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	  
+	"VisionDaytimeRange" 		"1200"
+	"VisionNighttimeRange" 		"1200" 
+	
+	"precache"
+	{
+		"model" "models/heroes/doom/doom.vmdl"
+		"model" "models/items/doom/fallen_sword/fallen_sword.vmdl"
+		"model" "models/items/doom/eternal_fire_back/eternal_fire_back.vmdl"
+		"model" "models/items/doom/eternal_fire_shoulders/eternal_fire_shoulders.vmdl"
+		"model" "models/items/doom/eternal_fire_helmet/eternal_fire_helmet.vmdl"
+		"model" "models/items/doom/eternal_fire_belt/eternal_fire_belt.vmdl"
+	}
+
+	"Creature"
+	{
+		"AttachWearables"
+		{
+			"Wearable1"		{	"ItemDef"		"5447"		} 
+			"Wearable2" 	{	"ItemDef"		"6502"		} 
+			"Wearable3"		{	"ItemDef"		"6505"		} 
+			"Wearable4"		{	"ItemDef"		"6504"		} 
+			"Wearable5"		{	"ItemDef"		"6503"		} 
+		}
+	}
+}

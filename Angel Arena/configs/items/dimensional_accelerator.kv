@@ -1,0 +1,36 @@
+"item_dimensional_accelerator"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1526"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "dimensional_accelerator"
+	"ScriptFile"					"items/dimensional_accelerator/dimensional_accelerator"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1600"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"ItemQuality"					"common"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_range"	"125"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_as"				"30"
+		}
+	}
+}

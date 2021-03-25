@@ -1,0 +1,82 @@
+//=================================================================================================================
+// Recipe: Lotus Orb
+//=================================================================================================================
+"item_recipe_lotus_orb"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"
+	"ItemShopTags"					""
+
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_lotus_orb"
+	"ItemRequirements"
+	{
+		"01"						"item_pers;item_platemail;item_energy_booster"
+	}
+}
+
+//=================================================================================================================
+// Lotus Orb
+//=================================================================================================================
+"item_lotus_orb"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+
+	"AbilityCooldown"				"15.0"
+	"AbilityCastRange"				"900"
+	"AbilityManaCost"				"75"
+
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"4000"
+	"ItemShopTags"					"regen_health;regen_mana;str;agi;int;hard_to_tag"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"ls;lotus orb"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+	"ShouldBeSuggested"				"1"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"		    "20"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_health_regen"	"8.5"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_mana_regen"		"4.0"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_mana"			"500"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"active_duration"		"6"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"cast_range_tooltip"		"1000"
+		}
+	}
+}

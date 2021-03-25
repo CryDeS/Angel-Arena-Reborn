@@ -1,0 +1,69 @@
+"item_throwing_daggers"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"								"1520"
+	"BaseClass"							"item_lua"
+	"AbilityTextureName" 				"throwing_daggers_1"
+	"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_BOTH"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitDamageType"			    "DAMAGE_TYPE_PHYSICAL"
+	"SpellImmunityType"				    "SPELL_IMMUNITY_ENEMIES_YES"
+	"ItemDeclarations"					"DECLARE_PURCHASES_TO_TEAMMATES"
+	
+	"ItemShareability"					"ITEM_FULLY_SHAREABLE_STACKING"
+	
+	"ScriptFile"						"items/throwing_daggers/throwing_daggers.lua"
+	
+	"IsTempestDoubleClonable"			"0"
+	"ItemDroppable" 					"1"
+	"ItemCastOnPickup"					"0"
+	"ItemKillable"						"1"
+	"ItemPurchasable"					"1"
+	"ItemSellable"						"1"
+	"ItemCost"							"30"
+	"ItemStackable"						"1"
+	"ItemStackableMax"					"3"
+	"ItemInitialCharges"				"1"
+	"ItemStockMax"						"9"
+	"ItemStockInitial"					"2"
+	"ItemStockTime"						"15.0"
+	
+	"AbilityCastPoint"					"0.0"
+	"AbilityCooldown"					"4.0"
+	"AbilityCastRange"					"600"
+	"AbilityManaCost"					"0"
+	
+	"precache"
+	{
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_phantom_assassin.vsndevts"
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_riki.vsndevts"
+		"soundfile" "sounds/weapons/hero/riki/tricks_of_the_trade.vsnd"
+		"soundfile" "sounds/weapons/hero/phantom_assassin/stifling_dagger_target.vsnd"
+		"particle" "particles/econ/events/ti5/blink_dagger_end_lvl2_ti5.vpcf"
+		"particle" "particles/econ/events/ti6/blink_dagger_end_ti6_lvl2.vpcf"
+		"particle" "particles/throwing_daggers/throwing_daggers.vpcf"
+		"particle" "particles/throwing_daggers/throwing_daggers_vampire.vpcf"
+	}
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_attack_speed"		"4"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"throw_speed"				"1400"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"throw_damage"				"100"
+		}
+	}
+}

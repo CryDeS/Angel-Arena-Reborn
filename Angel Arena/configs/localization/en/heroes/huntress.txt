@@ -1,0 +1,65 @@
+"npc_dota_hero_mirana"												"Huntress"
+
+//===========================================================================================
+"DOTA_Tooltip_ability_huntress_aim_shot"							"Aim Shot"
+"DOTA_Tooltip_ability_huntress_aim_shot_Description"				"On activate allow Huntress attack with 100% critical hits, incresing Huntress attack range but decreasing base attack time."
+"DOTA_Tooltip_ability_huntress_aim_shot_crit_damage_pct"	        "%DAMGE:"
+"DOTA_Tooltip_ability_huntress_aim_shot_bonus_attack_range"	        "BONUS ATTACK RANGE:"
+"DOTA_Tooltip_ability_huntress_aim_shot_bat_value_tooltip"	        "BAT DECREASING:"
+"DOTA_Tooltip_modifier_huntress_aim_shot"	                        "Aim Shot"
+"DOTA_Tooltip_ability_huntress_aim_shot_Lore"				        "Somewhen Huntress was learning to main hunt rule: one arrow - one dead. Moving to battlefield Huntress don't forget that old lession."
+
+"DOTA_Tooltip_ability_huntress_aim_shot_bonus_crit_tallent"         "+{s:value}%  Aim Shot critical damage"
+"DOTA_Tooltip_ability_huntress_aim_shot_bonus_bat_tallent"          "-{s:value} BAT penalty from Aim Shot"
+
+//===========================================================================================
+
+"DOTA_Tooltip_ability_huntress_owl"							        "Summon Owl"
+"DOTA_Tooltip_ability_huntress_owl_Description"				        "Huntress summon Owl to selected tree. Own have small vision, true strike and grants true strike to all allies in range."
+"DOTA_Tooltip_ability_huntress_owl_radius"	                        "RADIUS:"
+"DOTA_Tooltip_ability_huntress_owl_max_owl"				            "MAX OWLS:"
+"DOTA_Tooltip_ability_huntress_owl_health"				            "OWN HEALTH:"
+"DOTA_Tooltip_huntress_owl_modifier_current_value"	                "Owl Count"
+"DOTA_Tooltip_ability_huntress_owl_Lore"				            "Huntress personal Owl helps to scout around area in battle."
+
+"npc_aa_huntess_owl_unit"									        "Owl Huntress"
+"DOTA_Tooltip_modifier_huntress_owl_aura_true_strike_effect_lua"	"Accurate Shots"
+"DOTA_Tooltip_ability_huntress_huntress_owl_radius_aura_tallent"    "+{s:value} to Huntress Owl vision range"
+"DOTA_Tooltip_ability_huntress_huntress_owl_invisible_tallent"      "Huntress Owl gets invisibility"
+
+//===========================================================================================
+"DOTA_Tooltip_ability_huntress_crippling_arrow"						"Crippling Arrow"
+"DOTA_Tooltip_ability_huntress_crippling_arrow_Description"			"Huntress attacks slow enemy target and can root enemy."
+"DOTA_Tooltip_ability_huntress_crippling_arrow_slow_pct"	        "%SLOW:"
+"DOTA_Tooltip_ability_huntress_crippling_arrow_duration_slow"	    "SLOW DURATION:"
+"DOTA_Tooltip_ability_huntress_crippling_arrow_chance_root"	        "%ROOT CHANCE:"
+"DOTA_Tooltip_ability_huntress_crippling_arrow_duration_root"	    "ROOT DURATION:"
+"DOTA_Tooltip_modifier_huntress_crippling_arrow_root"	            "Rooted"
+"DOTA_Tooltip_modifier_huntress_crippling_arrow_slow"	            "Slowed"
+"DOTA_Tooltip_ability_huntress_crippling_arrow_Lore"				"When Huntress meat one of driad in the hunt, driad suggest enchant Huntress arrows for on conditional that Huntress never come back to that forest."
+
+"DOTA_Tooltip_ability_huntress_crippling_arrow_chance_tallent"     "+{s:value}% to root chance of Crippling Arrow"
+"DOTA_Tooltip_ability_huntress_crippling_arrow_duration_tallent"   "+{s:value} to root duration of Crippling Arrow"
+
+//===========================================================================================
+"DOTA_Tooltip_ability_huntress_hunting_spirit"						"Hunting Spirit"
+"DOTA_Tooltip_ability_huntress_hunting_spirit_Description"			"Huntress movement speed is increased and she can move throught trees.\nWhen ability is active <font color='#229917'>Aim Shot</font> don't decrease base attack time.\n<font color='#ffef27'>Azrael's Crossbow</font> granting Huntress new ability Curse Arrow"
+"DOTA_Tooltip_ability_huntress_hunting_spirit_duration"	            "DURATION:"
+"DOTA_Tooltip_ability_huntress_hunting_spirit_bonus_movespeed_pct"	"%BONUS MOVEMENT SPEED:"
+"DOTA_Tooltip_ability_huntress_hunting_spirit_Lore"				    "Main battle law is concentration and calmness. That merits allow any hunter move faster. Huntress honed that skills for mastery, and that why someone calls she a Hunting Spirit."
+
+"DOTA_Tooltip_modifier_huntress_hunting_spirit"	                    "Hunting Spirit"
+
+"DOTA_Tooltip_ability_huntress_hunting_spirit_heavy_arrow_tallent"              "Heavy Arrows"
+"DOTA_Tooltip_ability_huntress_hunting_spirit_heavy_arrow_tallent_Description"  "When Hunting Spirit is active, Crippling Arrow applies stun to target instead root, but stun duration is decreased for {s:value}% "
+
+"DOTA_Tooltip_ability_huntress_hunting_spirit_status_resist_tallent"            "Hunting Spirit grants {s:value}%  status resistance."
+
+//===========================================================================================
+"DOTA_Tooltip_ability_huntress_curse_arrow"						"Curse Arrow"
+"DOTA_Tooltip_ability_huntress_curse_arrow_Description"			"Launch cursed arrow that purges all positive effects from target for all duration. Duration depends of channel time.\n\nPurge type: strong"
+"DOTA_Tooltip_ability_huntress_curse_arrow_min_duration"	    "MIN DURATION:"
+"DOTA_Tooltip_ability_huntress_curse_arrow_max_duration"		"MAX DURATION:"
+
+"DOTA_Tooltip_modifier_huntress_curse_arrow"				"Curse Arrow"
+"DOTA_Tooltip_modifier_huntress_curse_arrow_Description"	"You are cursed and lose all buffs"

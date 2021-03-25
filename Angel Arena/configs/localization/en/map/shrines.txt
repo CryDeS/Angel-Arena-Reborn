@@ -1,0 +1,13 @@
+"npc_aa_bulding_shrine_radiant"										"Shrine"
+"npc_aa_bulding_shrine_dire"										"Shrine"
+
+"DOTA_Tooltip_ability_ability_shrine_restore"						"Restoration"
+"DOTA_Tooltip_ability_ability_shrine_restore_Description"			"Restore health and mana all neary units."
+"DOTA_Tooltip_ability_ability_shrine_restore_aura_radius"			"RADIUIS:"
+"DOTA_Tooltip_ability_ability_shrine_restore_health_regen_const"	"HEALTH REGEN:"
+"DOTA_Tooltip_ability_ability_shrine_restore_mana_regen_const"		"MANA REGEN:"
+"DOTA_Tooltip_ability_ability_shrine_restore_health_regen_pct"		"%HEALTH REGEN:"
+"DOTA_Tooltip_ability_ability_shrine_restore_mana_regen_pct"		"%MANA REGEN:"
+
+"DOTA_Tooltip_modifier_ability_shrine_restore_effect"				"Restoration"
+"DOTA_Tooltip_modifier_ability_shrine_restore_effect_Description"	"Health and mana are restoring."

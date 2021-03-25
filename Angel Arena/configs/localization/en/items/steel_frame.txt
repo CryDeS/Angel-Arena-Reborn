@@ -1,0 +1,4 @@
+"DOTA_Tooltip_Ability_item_steel_frame"								"Steel Frame"
+"DOTA_Tooltip_Ability_item_steel_frame_bonus_damage"				"+$damage"
+"DOTA_Tooltip_Ability_item_steel_frame_bonus_as"					"+$attack"
+"DOTA_Tooltip_Ability_item_steel_frame_lore"						"That steel frame usually was used for fortification of items."

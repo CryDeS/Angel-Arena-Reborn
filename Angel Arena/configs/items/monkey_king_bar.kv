@@ -1,0 +1,41 @@
+"item_monkey_king_bar"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"monkey_king_bar"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"5400"
+	"ItemShopTags"					"damage;attack_speed;hard_to_tag"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"mkb;monkey king bar"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{			
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"52"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attack_speed"	"66"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_chance"			"70"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_chance_damage"	"75"
+		}
+	}
+}

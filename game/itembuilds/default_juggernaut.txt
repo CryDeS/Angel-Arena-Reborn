@@ -1,0 +1,49 @@
+"itembuilds"
+{
+	"author"		"Valve"
+	"hero"			"npc_dota_hero_juggernaut"
+	"Title"			"Recommended items for jUGGERNAUT"
+	
+	"Items"
+	{		
+		"#DOTA_Item_Build_Starting_Items"
+		{
+			"item"		"item_tango"
+			"item"		"item_iron_talon"
+
+		}
+
+		"#DOTA_Item_Build_Early_Game"
+		{
+			"item"		"item_tranquil_boots"
+			"item"		"item_bfury"
+			"item"		"item_butterfly"
+			"item"		"item_satanic"
+			"item"		"item_desolator"
+			"item"		"item_potion_immune"
+
+		}
+
+		"#DOTA_Item_Build_Mid_Items"
+		{
+			"item"		"item_black_king_bar"
+			"item"		"item_sacred_butterfly"
+			"item"		"item_satanic"
+			"item"		"item_skadi_2"
+			"item"		"item_angels_desolators"
+			"item"		"item_bfury_2"
+
+		}
+
+		"#DOTA_Item_Build_Late_Items"
+		{
+			"item"		"item_demons_fury"
+			"item"		"item_reverse"
+			"item" 		"item_rebels_sword"
+			"item" 		"item_kings_bar"
+			"item"		"item_dark_edge"
+			"item"		"item_abyssal_blade_2"
+
+		}
+	}
+}

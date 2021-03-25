@@ -1,0 +1,130 @@
+"item_recipe_kings_bar"
+{
+		"AbilityTextureName" 				"item_recipe_kings_bar"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1144"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"	
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_kings_bar"
+	"ItemRequirements"
+	{
+		"01"						"item_possessed_sword;item_monkey_king_bar;item_black_king_bar"
+	}
+}
+
+"item_kings_bar"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1145"
+	"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	"AbilityTextureName"	        "kings_bar"
+	"AbilityCastPoint"				"0.0"
+	"AbilityCooldown"				"60.0"
+	"AbilitySharedCooldown"			"items_magic_immune"
+		
+	"precache"
+	{
+		"soundfile"					"soundevents/game_sounds_items.vsndevts"
+	}
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"17175"
+	"ItemStackable"					"0"
+	
+	"ItemPermanent"					"0"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+	
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"100"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_aspeed"			"100"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"				"8"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_kings_bar_magic_immune_active"
+			
+			"Target" 
+			{
+				"Center"	"CASTER"
+				"Flags" 	"DOTA_UNIT_TARGET_FLAG_NONE | DOTA_UNIT_TARGET_FLAG_OUT_OF_WORLD | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+			}
+			"Duration"		"%duration"
+		}
+        "RunScript"
+		{
+			"ScriptFile"			"items/kings_bar.lua"
+			"Function"				"KingsBar_purge"
+		}       
+	}
+	
+	"Modifiers"
+	{
+		"modifier_passive_kings_bar"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+			"IsPurgable"	"0"
+			"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" 			"%bonus_damage"		
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" 		"%bonus_aspeed"		
+			}
+			"States"
+			{
+				"MODIFIER_STATE_CANNOT_MISS"			"MODIFIER_STATE_VALUE_ENABLED"
+			}				
+		}
+		
+		"modifier_kings_bar_magic_immune_active"
+		{
+			"Passive"	"0"
+			"IsHidden"	"0"
+			
+			"TextureName" 		"custom/kings_bar"
+			
+			"EffectName"            	"particles/items_fx/black_king_bar_avatar.vpcf"
+			"EffectAttachType"      	"PATTACH_ABSORIGIN"
+			
+			"States"
+			{
+				"MODIFIER_STATE_MAGIC_IMMUNE"	"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+	}
+}

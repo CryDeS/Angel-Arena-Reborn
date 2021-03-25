@@ -1,0 +1,101 @@
+"lich_vampire"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityTextureName"			"custom/lich_vampire"
+	
+	"MaxLevel"						"7"
+
+	"AbilityCastRange"				"700"
+	"AbilityCastPoint"				"0.4"
+	"AbilityCooldown"				"25"
+	"AbilityManaCost"				"150"		
+	
+	"AoERadius"             		"300"
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"lifesteal"					"25 27 29 31 33 35 40"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"10"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"					"300"
+		}
+	}
+	
+	"precache"
+	{
+		"particle"	"particles/status_fx/status_effect_frost_lich.vpcf"
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
+	}
+	
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"	"Ability.DarkRitual"
+			"Target" 		"CASTER"
+		}
+		"ActOnTargets"
+		{
+			"Target"
+			{
+				"Center"  	"POINT"
+				"Radius" 	"%radius"
+				"Teams" 	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+			}
+		
+			"Action"    
+			{
+				"ApplyModifier"
+				{
+					"ModifierName"  "modifier_lich_vampire_active"
+					"Target"		"TARGET"
+					"Duration"		"%duration"
+				}
+				"FireSound"
+				{
+					"EffectName"	"Ability.DarkRitual"
+					"Target" 		"TARGET"
+				}
+			}
+		}
+		
+	}
+	"Modifiers"
+	{	
+		"modifier_lich_vampire_active"
+		{
+			"Passive"			"0"
+			"IsBuff"			"1"
+			"IsPurgable"		"1"
+			"IsHidden"			"0"
+	
+			"StatusEffectName"		"particles/status_fx/status_effect_frost_lich.vpcf"
+			"StatusEffectPriority"	"10"
+			
+			"OnDealDamage"
+			{
+				"Lifesteal"
+				{
+					"Target" 				"ATTACKER"
+					"LifestealPercent"		"%lifesteal"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,178 @@
+"centaur_hoof_stomp"
+{
+	"MaxLevel"						"7"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.5"
+	"AbilityCooldown"				"13.0"
+	"AbilityManaCost"				"70"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"radius"						"315"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"stun_duration"					"2.0"
+			"LinkedSpecialBonus"			"special_bonus_unique_centaur_2"
+		}
+		"03"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"stomp_damage"					"120 140 200 250 300 400 435"
+		}
+		"04"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"damage_pct"					"50.0"
+			"CalculateSpellDamageTooltip"		"0"
+		}
+	}
+}
+
+//=================================================================================================================
+// Centaur Warchief: Double Edge
+//=================================================================================================================
+"centaur_double_edge"
+{
+    "MaxLevel"                       "7"
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"				"5.0"
+    "AbilityCastRange"				"175"
+    "AbilityCastPoint"				"0.4"
+
+    //------------------------------------------------------------------------------
+    "AbilityManaCost"				"0"
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"						"FIELD_INTEGER"
+            "edge_damage"					"125 175 235 310 365 455 560"
+        }
+        "02"
+        {
+            "var_type"						"FIELD_INTEGER"
+            "strength_damage"				"75"
+            "LinkedSpecialBonus"			"special_bonus_unique_centaur_4"
+        }
+        "03"
+        {
+            "var_type"						"FIELD_INTEGER"
+            "radius"						"300"
+        }
+    }
+    "AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+}
+//=================================================================================================================
+// Centaur Warchief: Return (Retaliate)
+//=================================================================================================================
+"centaur_return"
+{
+    "MaxLevel"                      "7"
+
+    // Time
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"				"20"
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"					"FIELD_INTEGER"
+            "return_damage"				"30 45 50 65 85 110 150"
+            "LinkedSpecialBonus"			"special_bonus_unique_centaur_3"
+        }
+        "02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"return_damage_str"			"20 25 30 35 40 45 50"
+		}
+        "03"
+        {
+            "var_type"					"FIELD_INTEGER"
+            "aura_radius"				"1200"
+        }
+    }
+}
+//=================================================================================================================
+// Centaur: Stampede
+//=================================================================================================================
+"centaur_stampede"
+{
+	"MaxLevel"						"7"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"90.0 85.0 80.0 75.0 70.0 65.0 60.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100"
+
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"duration"			"3.75 3.9 4.1 4.2 4.5 5.0 5.5"
+			"LinkedSpecialBonus"			"special_bonus_unique_centaur_7"
+		}
+		"02"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"base_damage"		"0"
+		}
+		"03"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"strength_damage"	"2.0 2.2 2.4 2.6 2.8 3.0 3.2"
+			"CalculateSpellDamageTooltip"		"1"
+		}
+		"04"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"slow_duration"		"1.5"
+		}
+		"05"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"radius"			"125"
+		}
+		"06"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"slow_movement_speed"			"100"
+		}
+		"07"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"damage_reduction"	"60"
+			"RequiresScepter"	"1"
+		}
+		"08"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"damage_reduction_tooltip_scepter"	"60"
+			"RequiresScepter"	"1"
+
+		}
+	}
+}

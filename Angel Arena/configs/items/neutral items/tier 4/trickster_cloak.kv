@@ -1,0 +1,41 @@
+"item_trickster_cloak"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"571"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"
+	"ItemIsNeutralDrop"				"0"
+	"ItemPurchasable"				"0"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"15.0"
+
+	"Model"							"models/props_gameplay/neutral_box.vmdl"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"evasion"				"35"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"magic_resistance"		"35"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"			"6"
+		}			
+	}
+}

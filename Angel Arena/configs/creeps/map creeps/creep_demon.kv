@@ -1,0 +1,134 @@
+"npc_aa_creep_demon_warrior" 
+{
+	"BaseClass" 			"npc_dota_creep_neutral" 
+	"Model" 				"models/creeps/item_creeps/i_creep_necro_warrior/necro_warrior.vmdl"
+
+	"precache"
+	{
+		"model"				"models/creeps/item_creeps/i_creep_necro_warrior/necro_warrior.vmdl"
+	}
+
+	"SoundSet" 				"n_creep_Melee"
+	"GameSoundsFile"  		"soundevents/game_sounds_creeps.vsndevts" 
+	"ModelScale" 			"0.7"
+	"Level"				 	"1" 
+	"IsNeutralUnitType"		"1"
+	"CanBeDominated" 		"1" 
+
+	"Ability1" 				"demon_warrior_rupture"
+	"Ability2"				"demon_warrior_souls_per_death"
+	"Ability3" 				"demon_warrior_invisible"
+	"Ability4" 				""
+	"Ability5" 				"" 
+	"Ability6" 				"" 
+	"Ability7" 				"" 
+	"Ability8" 				"" 
+	
+	"ArmorPhysical" 		"1" 
+	"MagicalResistance" 	"25" 
+
+	"AttackCapabilities"	"DOTA_UNIT_CAP_MELEE_ATTACK"
+	"ProjectileModel"		""
+	"ProjectileSpeed" 		"0" 
+
+	"AttackDamageMin" 		"0" 
+	"AttackDamageMax" 		"0" 
+	"AttackRate" 			"1.0" 
+	"AttackAnimationPoint" 	"0.3" 
+	"AttackAcquisitionRange" 	"300" 
+	"AttackRange" 			"175" 
+
+	"BountyXP" 				"0" 
+	"BountyGoldMin"			"0" 
+	"BountyGoldMax" 		"0" 
+
+	"MovementCapabilities" 	"DOTA_UNIT_CAP_MOVE_GROUND" 
+	"MovementSpeed" 		"325" 
+	"MovementTurnRate" 		"0.8" 
+
+	"StatusHealth" 			"100" 
+	"StatusHealthRegen" 	"1.2" 
+	"StatusMana" 			"5000" 
+	"StatusManaRegen" 		"0" 
+
+	"TeamName"				"DOTA_TEAM_NEUTRALS"							// Team name.
+	"CombatClassAttack"		"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"		"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+	"UnitRelationshipClass"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	"VisionDaytimeRange" 	"800" 
+	"VisionNighttimeRange" 	"800" 
+	
+	"RingRadius"			"50"
+	"HealthBarOffset"		"160"
+
+	"HasInventory" 			"0" 
+}
+"npc_aa_creep_demon_archer" 
+{
+	"BaseClass" 			"npc_dota_creep_neutral" 
+	"Model" 				"models/creeps/item_creeps/i_creep_necro_archer/necro_archer.vmdl"
+
+	"precache"
+	{
+		"model"				"models/creeps/item_creeps/i_creep_necro_archer/necro_archer.vmdl"
+	}
+
+	"SoundSet" 				"n_creep_Ranged"
+	
+	"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"GameSoundsFile"  		"soundevents/game_sounds_creeps.vsndevts" 
+	"ModelScale" 			"0.6"
+	"Level"				 	"1" 
+	"IsNeutralUnitType"		"1"
+	"CanBeDominated" 		"1" 
+
+	"Ability1" 				"demon_archer_buff_attack_range"
+	"Ability2"				"demon_archer_aura"
+	"Ability3" 				"demon_archer_runaway"
+	"Ability4" 				""
+	"Ability5" 				"" 
+	"Ability6" 				"" 
+	"Ability7" 				"" 
+	"Ability8" 				"" 
+	
+	"ArmorPhysical" 		"1" 
+	"MagicalResistance" 	"25" 
+
+	"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"ProjectileModel"		"particles/items2_fx/necronomicon_archer_projectile.vpcf"
+	"ProjectileSpeed" 		"1200" 
+
+	"AttackDamageMin" 		"0" 
+	"AttackDamageMax" 		"0" 
+	"AttackRate" 			"1.0" 
+	"AttackAnimationPoint" 	"0.3" 
+	"AttackAcquisitionRange" 	"1000" 
+	"AttackRange" 			"750" 
+
+	"BountyXP" 				"0" 
+	"BountyGoldMin"			"0" 
+	"BountyGoldMax" 		"0" 
+
+	"MovementCapabilities" 	"DOTA_UNIT_CAP_MOVE_GROUND" 
+	"MovementSpeed" 		"325" 
+	"MovementTurnRate" 		"0.8" 
+
+	"StatusHealth" 			"100" 
+	"StatusHealthRegen" 	"1.2" 
+	"StatusMana" 			"5000" 
+	"StatusManaRegen" 		"0" 
+
+	"TeamName"				"DOTA_TEAM_NEUTRALS"							// Team name.
+	"CombatClassAttack"		"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"		"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+	"UnitRelationshipClass"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	"VisionDaytimeRange" 	"800" 
+	"VisionNighttimeRange" 	"800" 
+	
+	"RingRadius"			"50"
+	"HealthBarOffset"		"150"
+
+	"HasInventory" 			"0" 
+}

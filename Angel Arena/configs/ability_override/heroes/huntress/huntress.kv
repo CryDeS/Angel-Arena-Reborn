@@ -1,0 +1,214 @@
+"huntress_aim_shot"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "BaseClass"					    "ability_lua"
+    "AbilityTextureName"			"custom/huntress_aim_shot"
+    "ScriptFile"					"heroes/huntress/huntress_aim_shot/huntress_aim_shot"
+    "MaxLevel"                      "7"
+    "AbilityCooldown"				"10"
+    "AbilityManaCost"				"50 75 100 125 150 175 200"
+	
+	"precache"
+	{
+		"particle"					"particles/huntress/huntress_aim_shot/huntress_aim_shot.vpcf"
+		"soundfile"					"soundevents/heroes/huntress.vsndevts"
+	}
+	
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"			    "FIELD_INTEGER"
+            "crit_damage_pct"	    "150 175 200 225 250 275 300"
+            "LinkedSpecialBonus"	"huntress_aim_shot_bonus_crit_tallent"
+        }
+        "02"
+        {
+            "var_type"			    "FIELD_INTEGER"
+            "bonus_attack_range"    "50 75 100 125 150 175 200"
+        }
+        "03"
+        {
+            "var_type"			    "FIELD_FLOAT"
+            "set_bat_value"	        "3.0 3.1 3.2 3.3 3.4 3.5 3.6"
+            "LinkedSpecialBonus"	"huntress_aim_shot_bonus_bat_tallent"
+        }
+        "04"
+        {
+            "var_type"			    "FIELD_FLOAT"
+            "bat_value_tooltip"	    "-1.3 -1.4 -1.5 -1.6 -1.7 -1.8 -1.9"
+        }
+    }
+}
+
+"huntress_owl"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+    "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE"
+    "BaseClass"					    "ability_lua"
+    "AbilityTextureName"			"custom/angel_arena_huntress_owl"
+    "ScriptFile"					"heroes/huntress/huntress_owl/huntress_owl"
+    "MaxLevel"                      "7"
+    "AbilityCooldown"				"20"
+
+    "AbilityCastRange"				"600"
+
+    "AbilityManaCost"				"30 50 70 90 110 130 150"
+
+	"precache"
+	{
+		"particle"					"particles/huntress/huntress_owl/huntress_owl_unit_effect.vpcf"
+		"soundfile"					"soundevents/heroes/huntress.vsndevts"
+	}
+	
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "max_owl"             	"3"
+        }
+        "02"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "health"             	"3"
+        }
+        "03"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "radius"             	"700 750 800 850 900 950 1000"
+            "LinkedSpecialBonus"	"huntress_huntress_owl_radius_aura_tallent"
+        }
+    }
+}
+
+"huntress_crippling_arrow"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass"						"ability_lua"
+	"AbilityTextureName"			"custom/huntress_crippling_arrow"
+	"ScriptFile"					"heroes/huntress/huntress_crippling_arrow/huntress_crippling_arrow"
+	"MaxLevel"                    	"7"
+ 	"AbilityCooldown"				"1"
+	
+	"precache"
+	{
+		"particle"					"particles/units/heroes/hero_lone_druid/lone_druid_bear_entangle_body.vpcf"
+		"particle"					"particles/generic_gameplay/generic_stunned.vpcf"
+	}
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+		{
+		"01"
+		{
+			"var_type"			    "FIELD_INTEGER"
+			"slow_pct"		        "15 17 19 22 25 29 35"
+		}
+		"02"
+		{
+			"var_type"			    "FIELD_FLOAT"
+			"duration_slow"         "3.0"
+		}
+		"03"
+		{
+			"var_type"			    "FIELD_INTEGER"
+			"chance_root"           "10 11 12 14 16 18 20"
+			"LinkedSpecialBonus"	"huntress_crippling_arrow_chance_tallent"
+		}
+		"04"
+		{
+			"var_type"			    "FIELD_FLOAT"
+			"duration_root"         "1.0"
+			"LinkedSpecialBonus"	"huntress_crippling_arrow_duration_tallent"
+		}
+	}
+ }
+ 
+"huntress_hunting_spirit"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"BaseClass"						"ability_lua"
+	"AbilityTextureName"			"custom/huntress_hunting_spirit"
+	"ScriptFile"					"heroes/huntress/huntress_hunting_spirit/huntress_hunting_spirit"
+	"MaxLevel"                     	"7"
+	"AbilityCooldown"				"45"
+	"AbilityManaCost"				"100 150 200 250 300 350 400"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+
+	"precache"
+	{
+		"particle"					"particles/huntress/huntress_hunting_spirit/huntress_hunting_spirit.vpcf"
+		"particle"					"particles/huntress/huntress_hunting_spirit/huntress_hunting_spirit_reincarnation.vpcf"
+		"soundfile"					"soundevents/heroes/huntress.vsndevts"
+	}
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+		{
+		"01"
+		{
+			"var_type"			    "FIELD_FLOAT"
+			"duration"		        "8.0 8.5 9.0 9.5 10.0 10.5 12.0"
+		}
+		"02"
+		{
+			"var_type"			    "FIELD_INTEGER"
+			"bonus_movespeed_pct"   "17 19 21 24 27 30 35"
+		}
+	}
+}
+"huntress_curse_arrow"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+	"BaseClass"						"ability_lua"
+	"AbilityTextureName"			"custom/huntress_curse_arrow"
+	"ScriptFile"					"heroes/huntress/huntress_curse_arrow/huntress_curse_arrow"
+	"MaxLevel"                     	"1"
+	"RequiredLevel"					"1"
+	"AbilityCooldown"				"25"
+	"AbilityManaCost"				"170"
+	"AbilityChannelTime"			"2.0"
+	"AbilityCastRange"				"1000"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			    "FIELD_FLOAT"
+			"min_duration"		    "1.5"
+		}
+		"02"
+		{
+			"var_type"			    "FIELD_INTEGER"
+			"max_duration"   		"4.5"
+		}
+		"03"
+		{
+			"var_type"			    "FIELD_INTEGER"
+			"projectile_speed"   	"1500"
+		}		
+	}
+	"AbilityCastAnimation" 		"ACT_DOTA_CAST_ABILITY_2"
+}

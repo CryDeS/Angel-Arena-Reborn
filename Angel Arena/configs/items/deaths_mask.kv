@@ -1,0 +1,162 @@
+"item_recipe_deaths_mask"
+{
+	"AbilityTextureName" 				"item_recipe_deaths_mask"
+	
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1126"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1000"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_deaths_mask"
+	"ItemRequirements"
+	{
+		"01"						"item_vladmir;item_boss_soul"
+	}
+}
+
+"item_deaths_mask"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1127"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "deaths_mask"
+	"AbilityCastRange"				"1250"
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"7175"
+	"ItemStackable"					"0"
+	
+	"ItemPermanent"					"0"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_regen"			"30"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_stats"			"30"
+		}
+		
+		//aura
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"1200"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"lifesteal"				"22"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_percent"		"50"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"15"
+		}
+
+	}
+	
+	"Modifiers"
+	{
+		"modifier_deaths_mask_passive"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+			"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"				"%bonus_stats"
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"			"%bonus_stats"
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"			"%bonus_stats"			
+				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"			"%bonus_regen"
+			}
+		}
+		
+		"modifier_deaths_mask_aura"
+		{
+			"Passive"	"0"
+			"IsHidden"	"0"
+			"TextureName" "custom/deaths_mask"
+			"OnDealDamage"
+			{
+				"Lifesteal"
+				{
+					"Target" 			"ATTACKER"
+					"LifestealPercent"	"%lifesteal"
+				}
+			}
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%bonus_armor"
+				"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"			"%damage_percent"
+
+			}
+		}
+		
+		"modifier_deaths_mask_aura_self"
+		{
+			"Passive"		"1"
+			"IsPurgable"	"0"
+			"IsHidden"		"0"
+			"TextureName"	 "custom/deaths_mask"
+			
+			"OnDealDamage"
+			{
+				"Lifesteal"
+				{
+					"Target" 			"ATTACKER"
+					"LifestealPercent"	"%lifesteal"
+				}
+			}
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%bonus_armor"
+				"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"			"%damage_percent"
+
+			}
+		}
+		"modifier_deaths_mask_aura_emitter"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+			
+			"Aura" 					"modifier_deaths_mask_aura"
+			"Aura_Radius" 			"%radius"
+			"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+			"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			"Aura_ApplyToCaster" 	"0"
+		}
+	}
+}

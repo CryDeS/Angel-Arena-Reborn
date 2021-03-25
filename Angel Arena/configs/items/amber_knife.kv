@@ -1,0 +1,86 @@
+"item_recipe_amber_knife"
+{
+	"AbilityTextureName" 				"item_recipe_amber_knife"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1546"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"700"
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_amber_knife"
+	"ItemRequirements"
+	{
+		"01"						"item_cursed_orb;item_health_gel"
+	}
+}
+
+"item_amber_knife"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1547"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+	"AbilityTextureName"	        "amber_knife"
+	"ScriptFile"					"items/amber_knife/amber_knife"
+	
+	"AbilitySharedCooldown"			"amber_knife"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"2600"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+		
+	"ItemQuality"					"common"
+
+	"AbilityCooldown"				"18.0"
+	
+	"precache"
+	{
+		"soundfile"					"soundevents/items/amber_knife.vsndevts"
+		"particle"					"particles/econ/items/dazzle/dazzle_ti9/dazzle_shadow_wave_ti9_crimson_impact_damage.vpcf"
+		"particle"					"particles/generic_hero_status/status_invisibility_start.vpcf"
+	}
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_stats"			"15"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_health"			"250"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"invis_duration"		"7.5"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"invis_damage"			"150"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"invis_fadetime"		"0.2"
+		}
+	}
+}

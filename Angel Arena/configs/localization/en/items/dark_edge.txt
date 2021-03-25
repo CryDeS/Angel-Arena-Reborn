@@ -1,0 +1,19 @@
+"DOTA_Tooltip_Ability_item_dark_edge"								"Dark Edge"
+"DOTA_Tooltip_ability_item_dark_edge_Description"					"<h1> Active: Shadow Walk </h1> Makes you invisible until the duration ends, or until you attack or cast a spell. While invisible, you move %windwalk_movement_speed%%% faster and can move through units.  Attacking to end the invisibility will deal %windwalk_bonus_damage% bonus damage to the target, disable their passive abilities, and reduce their damage output and incoming heal.\n<h1>Passive: Echo Attack</h1> Second attack every %attack_delay% for melee heroes with %attack_cd% seconds cooldown.\n<h1>Passive: Dark Vamprie</h1> Restores the owner of %lifesteal%%  health from damage dealt."
+"DOTA_Tooltip_ability_item_dark_edge_bonus_damage"					"+$damage"
+"DOTA_Tooltip_ability_item_dark_edge_bonus_attack_speed"			"+$attack"
+"DOTA_Tooltip_ability_item_dark_edge_bonus_hp"						"+$health"
+"DOTA_Tooltip_ability_item_dark_edge_bonus_stats"					"+$all"
+"DOTA_Tooltip_ability_item_dark_edge_windwalk_duration"				"INVISIBLITY DURATION:"
+"DOTA_Tooltip_ability_item_dark_edge_backstab_reduction"			"%• DAMAGE DECREASING:"
+"DOTA_Tooltip_ability_item_dark_edge_backstab_duration"				"• DEBUFF DURATION:"
+
+"DOTA_Tooltip_ability_item_dark_edge_Lore"							"That horrible weapon is best friend for top assassins of Burning Legion."
+"DOTA_Tooltip_ability_item_dark_edge_Note0"							"Attack from Shadow Walk cannot miss."
+"DOTA_Tooltip_ability_item_dark_edge_Note1"							"Debuffs from Shadow Walk doe not pierce spell immunity."
+"DOTA_Tooltip_ability_item_dark_edge_Note2"							"Echo Attack applies attack modifiers."
+
+"DOTA_Tooltip_modifier_dark_edge_debuff"							"Dark Edge Debuff"
+"DOTA_Tooltip_modifier_dark_edge_debuff_Description"				"Passive abilities is disable, damage reduced by %dMODIFIER_PROPERTY_TOTALDAMAGEOUTGOING_PERCENTAGE%, incoming heal decreased by %dMODIFIER_PROPERTY_HEAL_AMPLIFY_PERCENTAGE_TARGET%%"
+
+"DOTA_Tooltip_modifier_dark_edge_invis"								"Dark Edge Shadow Walk"

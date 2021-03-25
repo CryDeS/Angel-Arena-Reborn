@@ -1,0 +1,266 @@
+"pet_ancient_mage_silence"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"MaxLevel"						"1"
+	"AbilityTextureName"			"custom/pet_ancient_mage_silence"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"1000"
+	"AbilityCastPoint"				"0.0"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"20.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"180"
+
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"slow_percent"			"-75"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"				"6"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_take_damage"		"35"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"ApplyModifier"
+		{
+			"Target"		"TARGET"
+			"ModifierName"	"modifier_pet_ancient_mage_silence"
+			"Duration"		"%duration"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_pet_ancient_mage_silence"
+		{
+			"Passive"	"0"
+			"IsHidden"	"0"
+			"IsDebuff"	"1"
+			"IsPurgable"	"1"
+			"Purgable"	"1"
+			"EffectName"	"particles/generic_gameplay/generic_silence.vpcf"
+			"EffectAttachType"	"follow_overhead"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" 		"%slow_percent"		
+				"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE" 		"%bonus_take_damage"
+			}
+			
+			"States"
+			{
+				"MODIFIER_STATE_SILENCED"							"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+	}
+}
+
+"pet_ancient_mage_astral"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_OTHER"//"DOTA_UNIT_TARGET_CUSTOM" //Awful Valve-hack to let it target Nether Ward and Tombstone
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"custom/pet_ancient_mage_astral"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"700"
+	"AbilityCastPoint"				"0.2"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"12.0"
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"160"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_spell_damage_pct"	"-50"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_movement_speed"		"-50"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"3.5"
+		}
+	}
+
+	"precache"
+	{
+		"particle" 	"particles/units/heroes/hero_pugna/pugna_decrepify.vpcf"
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts"
+	}
+
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"	"Hero_Pugna.Decrepify"
+			"Target" 		"TARGET"
+		}
+		
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_pet_ancient_mage_astral"
+			"Target" 		"TARGET"
+			"Duration"		"%duration"
+		}
+
+	}
+
+	"Modifiers"
+	{
+		"modifier_pet_ancient_mage_astral"
+		{
+			"IsDebuff"			"1"
+			"IsPurgable"	"1"
+			"Purgable"	"1"
+			"EffectName"		"particles/units/heroes/hero_pugna/pugna_decrepify.vpcf"
+			"EffectAttachType"	"follow_origin"
+	
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_DECREPIFY_UNIQUE" "%bonus_spell_damage_pct"
+			    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%bonus_movement_speed" 
+			}
+
+			"States"
+			{
+				"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_ATTACK_IMMUNE"	"MODIFIER_STATE_VALUE_ENABLED"
+			}			
+		}
+	}
+}
+
+"pet_ancient_mage_heal"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+	"AbilityTextureName"			"custom/pet_ancient_mage_heal"
+	"MaxLevel"						"1"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"1000"
+	"AbilityCastPoint"				"0.2"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"12.0"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"300"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"heal"					"1000"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"heal_pct"				"20"
+		}
+	}
+
+	"precache"
+	{
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts"
+		"particle"	"particles/units/heroes/hero_omniknight/omniknight_purification.vpcf"
+		"particle"	"particles/units/heroes/hero_omniknight/omniknight_purification_hit.vpcf"
+		"particle"	"particles/units/heroes/hero_omniknight/omniknight_purification_cast.vpcf"
+
+	}
+
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"	"Hero_Omniknight.Purification"
+			"Target"		"TARGET"
+		}
+
+		"FireEffect"
+		{
+			"Target"			"TARGET"
+			"EffectName"		"particles/units/heroes/hero_omniknight/omniknight_purification.vpcf"
+			"EffectAttachType"	"follow_origin"
+			"ControlPoints"
+			{
+				"00"	"0 0 0"
+				"01"	"200 200 200"
+			}
+		}
+		
+		"FireEffect"
+		{
+			"Target"			"TARGET"
+			"EffectName"		"particles/units/heroes/hero_omniknight/omniknight_purification_cast.vpcf"
+			"EffectAttachType"	"follow_origin"
+		}
+
+		"Heal"
+		{
+			"Target" 		"TARGET"
+			"HealAmount"	"%heal"
+		}
+		"RunScript"
+		{
+			"ScriptFile"			"lib/heal.lua"
+			"Function"				"HealPct"
+			"HealPct"				"%heal_pct"
+		}
+	}
+}

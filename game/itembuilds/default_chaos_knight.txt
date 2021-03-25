@@ -1,0 +1,51 @@
+"itembuilds"
+{
+	"author"		"Valve"
+	"hero"			"npc_dota_hero_chaos_knight"
+	"Title"			"Recommended items for cHAOS_kHIGHT"
+	
+	"Items"
+	{		
+		"#DOTA_Item_Build_Starting_Items"
+		{
+
+			"item"		"item_tango"
+			"item"		"item_iron_talon"
+
+		}
+
+		"#DOTA_Item_Build_Mid_Items"
+		{
+			"item"		"item_tranquil_boots"
+			"item"		"item_bfury"
+			"item"		"item_heart"
+			"item"		"item_potion_immune"
+			"item"		"item_recipe_manta"
+			"item"		"item_assault"
+			"item"		"item_armlet"
+
+		}
+
+		"#DOTA_Item_Build_Mid_Items"
+		{
+			"item"		"item_heart_2"
+			"item"		"item_amaliels_cuirass"
+			"item"		"item_manta_2"
+			"item"		"item_skadi_2"
+			"item"		"item_angels_desolators"
+			"item"		"item_bfury_2"
+
+		}
+
+		"#DOTA_Item_Build_Late_Items"
+		{
+			"item"		"item_demons_fury"
+			"item"		"item_snake_boots"
+			"item" 		"item_rebels_sword"
+			"item" 		"item_kings_bar"
+			"item"		"item_dark_edge"
+			"item"		"item_deaths_mask"
+
+		}
+	}
+}

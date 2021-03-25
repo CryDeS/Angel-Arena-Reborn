@@ -1,0 +1,47 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf27:version{36c3961f-02a4-4c52-bf8f-6e3147d7d142} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_nBehaviorVersion = 10
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/bosses/soul_guardian/soul_guardian_holy_rage/soul_guardian_holy_rage_g.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/bosses/soul_guardian/soul_guardian_holy_rage/soul_guardian_holy_rage_c.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/bosses/soul_guardian/soul_guardian_holy_rage/soul_guardian_holy_rage_e.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/bosses/soul_guardian/soul_guardian_holy_rage/soul_guardian_holy_rage_d.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/bosses/soul_guardian/soul_guardian_holy_rage/soul_guardian_holy_rage_hands.vpcf"
+		},
+	]
+	m_nMaxParticles = 0
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 0.0, 0.0, 0.0 ]
+					m_angOffset = [ 0.0, 0.0, 0.0 ]
+					m_entityName = "self"
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/heroes/phantom_assassin/phantom_assassin.vmdl"
+				m_nModSpecificData = 137
+				m_sequenceName = "phantom_assassin_idle_alt1_anim"
+				m_hitboxSetName = "default"
+			}
+		},
+	]
+	m_flNoDrawTimeToGoToSleep = 1.0
+}

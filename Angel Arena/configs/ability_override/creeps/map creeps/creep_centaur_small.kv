@@ -1,0 +1,129 @@
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"npc_aa_creep_centaur_small_disarmor_lua"
+{
+// General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "BaseClass"					    "ability_lua"
+        "AbilityTextureName"			"custom/npc_aa_creep_centaur_small_disarmor_lua"
+        "ScriptFile"					"creeps/abilities/npc_aa_creep_centaur_small/npc_aa_creep_centaur_small_disarmor_lua"
+        "MaxLevel"                      "1"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+               "var_type"			    "FIELD_INTEGER"
+               "duration"		        "5"
+            }
+            "02"
+            {
+               "var_type"			    "FIELD_INTEGER"
+               "cooldown"           	"0.5"
+            }
+            "03"
+            {
+               "var_type"			    "FIELD_INTEGER"
+               "disarmor_per_stack"     "5"
+            }
+            "04"
+            {
+               "var_type"			    "FIELD_INTEGER"
+               "chance_pct"             "30"
+            }
+        }
+}
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"npc_aa_creep_centaur_small_up_ms_lua"
+{
+// General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+        "BaseClass"					    "ability_lua"
+        "AbilityTextureName"			"custom/npc_aa_creep_centaur_small_up_ms_lua"
+        "ScriptFile"					"creeps/abilities/npc_aa_creep_centaur_small/npc_aa_creep_centaur_small_up_ms_lua"
+        "MaxLevel"                      "1"
+
+        // Time
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"				"9"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"				"50"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+               "var_type"			    "FIELD_INTEGER"
+               "radius"		            "600"
+            }
+
+            "02"
+            {
+                "var_type"			    "FIELD_INTEGER"
+                "bonus_movespeed_pct"   "25"
+            }
+            "03"
+            {
+                "var_type"			    "FIELD_INTEGER"
+                "duration"              "3"
+            }
+        }
+}
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"npc_aa_creep_centaur_small_net_lua"
+{
+// General
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+    "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "BaseClass"					    "ability_lua"
+    "AbilityTextureName"			"custom/npc_aa_creep_centaur_small_net_lua"
+    "ScriptFile"					"creeps/abilities/npc_aa_creep_centaur_small/npc_aa_creep_centaur_small_net_lua"
+    "MaxLevel"                      "1"
+
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"				"800"
+
+    // Time
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"				"9"
+
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityManaCost"				"10"
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "duration"             	"2.2"
+        }
+        "02"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "speed"              	"800"
+        }
+    }
+}

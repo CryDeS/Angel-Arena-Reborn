@@ -1,0 +1,257 @@
+"arc_warden_flux"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"900"
+	"AbilityCastPoint"				"0.3"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCharges"             	"2"
+    "AbilityChargeRestoreTime"   	"14"
+    "AbilityCooldown"            	""
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"75 85 95 105 115 125 135"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"duration"						"6.0"
+			"LinkedSpecialBonus"			"special_bonus_unique_arc_warden_2"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"damage_per_second"				"30 45 60 75 90 105 130"
+		}
+		"03"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"search_radius"					"300"
+		}
+		"04"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"think_interval"				"0.5"
+		}
+		"05"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"move_speed_slow_pct"			"25"
+		}
+		"06"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"abilitycastrange"				""
+			"LinkedSpecialBonus"			"special_bonus_unique_arc_warden_5"
+		}
+	}
+}
+
+//=================================================================================================================
+// Arc Warden: Magnetic Field
+//=================================================================================================================
+"arc_warden_magnetic_field"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"14"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"120"
+	
+	// Cast Range
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"900"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"					"325"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"3.5 4.0 4.5 5.0 5.5 6.0 6.5"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"attack_speed_bonus"		"60 70 80 90 100 120 150"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"evasion_chance"			"100"
+		}
+	}
+}
+	
+//=================================================================================================================
+// Arc Warden: Spark Wraith
+//=================================================================================================================
+"arc_warden_spark_wraith"
+{
+	"MaxLevel"						"7"
+	
+	"AbilityCastRange"				"1800"
+	"AbilityCastPoint"				"0.1"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"4.5"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100 110 120 130 140 150 160"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"radius"						"400"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"activation_delay"				"2.0"
+		}			
+		"03"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"duration"						"50.0"
+		}
+		"04"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"wraith_speed"					"600"
+		}
+		"05"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"spark_damage"					"150 200 280 320 380 450 500"
+			"LinkedSpecialBonus"			"special_bonus_unique_arc_warden"
+		}
+		"06"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"think_interval"				"0.2"
+		}
+		"07"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"wraith_vision_radius"			"400"
+		}  
+		"08"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"wraith_vision_duration"		"3.34"
+		}
+		"09"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"ministun_duration"				"0.4 0.5 0.6 0.7 0.8 0.9 1.0"
+		}
+	}
+}
+
+//=================================================================================================================
+// Arc warden: Tempest Double
+//=================================================================================================================
+"arc_warden_tempest_double"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+	"AbilityManaCost"				"200 170 140 100 70 30 0"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"62 60 59 58 57 56 55"
+
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"20.0"
+			"LinkedSpecialBonus"		"special_bonus_unique_arc_warden_6"
+		}
+        "02"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "bounty"				"180 240 300 500 600 700 1000"
+        }
+	}
+}
+
+"arc_warden_scepter"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"7854"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+	"FightRecapLevel"				"1"
+	"MaxLevel"						"1"
+	"IsGrantedByScepter"			"1"
+	"HasScepterUpgrade"				"1"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.15"
+	"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_4"
+	"AbilityCastGestureSlot"		"DEFAULT"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"75"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"tooltip_scepter_cooldown"	"75"
+			"RequiresScepter"			"1"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"tooltip_scepter_manacost"	"100"
+			"RequiresScepter"			"1"
+		}
+	}
+}

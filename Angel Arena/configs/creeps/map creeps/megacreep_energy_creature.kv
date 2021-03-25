@@ -1,0 +1,71 @@
+// -createhero npc_aa_megacreep_energy_creature enemy
+"npc_aa_megacreep_energy_creature" 
+{
+	"BaseClass" 			"npc_dota_creature" 
+	
+	"Model" 				"models/items/terrorblade/knight_of_foulfell_demon/knight_of_foulfell_demon.vmdl"
+	"vscripts"				"creeps/ai/megacreep_energy_creature/ai_main.lua"
+
+	"precache"
+	{
+		"model"				"models/items/terrorblade/knight_of_foulfell_demon/knight_of_foulfell_demon.vmdl"
+	}
+	
+	"SoundSet" 				"n_creep_Melee"
+	"GameSoundsFile"  		"soundevents/game_sounds_creeps.vsndevts" 
+	"ModelScale" 			"0.7"
+	"Level"				 	"1" 
+	"IsNeutralUnitType"		"1"
+	"IsAncient"				"1"
+	"CanBeDominated" 		"1"
+
+	"AbilityLayout"			"4"
+	"Ability1" 				"megacreep_energy_creature_shock_blast"
+	"Ability2"				"megacreep_energy_creature_flash"
+	"Ability3" 				"megacreep_energy_creature_passive"
+	"Ability4" 				"megacreep_energy_creature_buff"
+	"Ability5" 				"" 
+	"Ability6" 				"" 
+	"Ability7" 				"" 
+	"Ability8" 				"" 
+	
+	"ArmorPhysical" 		"1" 
+	"MagicalResistance" 	"25" 
+
+	"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
+	"ProjectileModel"		"particles/units/heroes/hero_razor/razor_base_attack.vpcf"
+	"ProjectileSpeed" 		"2000" 
+
+	"AttackDamageMin" 		"0" 
+	"AttackDamageMax" 		"0" 
+	"AttackRate" 			"1.0" 
+	"AttackAnimationPoint" 	"0.3" 
+	"AttackAcquisitionRange" "725" 
+	"AttackRange" 			"525" 
+
+	"BountyXP" 				"0" 
+	"BountyGoldMin"			"0" 
+	"BountyGoldMax" 		"0" 
+
+	"MovementCapabilities" 	"DOTA_UNIT_CAP_MOVE_GROUND" 
+	"MovementSpeed" 		"365" 
+	"MovementTurnRate" 		"0.4" 
+
+	"StatusHealth" 			"100" 
+	"StatusHealthRegen" 	"1.2" 
+	"StatusMana" 			"5000" 
+	"StatusManaRegen" 		"0" 
+
+	"TeamName"				"DOTA_TEAM_NEUTRALS"							// Team name.
+	"CombatClassAttack"		"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"		"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+	"UnitRelationshipClass"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	"VisionDaytimeRange" 	"800" 
+	"VisionNighttimeRange" 	"800" 
+	
+	"RingRadius"			"100"
+	"HealthBarOffset"		"200"
+
+	"HasInventory" 			"0" 
+}

@@ -1,0 +1,85 @@
+"item_recipe_talisman_of_ambition"
+{
+	"AbilityTextureName" 				"item_recipe_talisman_of_ambition"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1311"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"100"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_talisman_of_ambition"
+	"ItemRequirements"
+	{
+		// 400 + 250 + 175 + 50
+		"01"						"item_agile_wand;item_ring_of_protection;item_wind_lace"
+	}
+}
+
+"item_talisman_of_ambition"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1310"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+	"AbilityTextureName"	        "talisman_of_ambition"
+	"ScriptFile"					"items/talisman_of_ambition/talisman_of_ambition.lua"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"8.0"
+	"AbilityCastRange"				"1200"
+	"AbilityCastPoint"				"0.0"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"925"
+	"ItemStackable"					"0"
+	"ItemBaseLevel"					"1"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"1"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_agility"			"18"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_movespeed"		"25"
+		}
+		
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"3.0"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"evasion"				"50"
+		}
+	}
+}

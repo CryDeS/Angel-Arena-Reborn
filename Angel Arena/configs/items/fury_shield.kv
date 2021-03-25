@@ -1,0 +1,80 @@
+"item_recipe_fury_shield"
+{
+	"AbilityTextureName" 				"item_recipe_fury_shield"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1309"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"255"
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_fury_shield"
+	"ItemRequirements"
+	{ //165 + 400
+		"01"						"item_cursed_orb;"
+	}
+}
+
+"item_fury_shield"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1308"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"ScriptFile"					"items/fury_shield/item_fury_shield.lua"
+	"AbilityTextureName"	        "fury_shield"
+	
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"particle"		"particles/status_fx/status_effect_forcestaff.vpcf"		
+	}
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1155"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"AbilityCastPoint"				"0.0"
+	"AbilityCooldown"				"7.5"
+	"AbilityManaCost"				"25"
+	
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_stats"			"15"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"active_bonus_aspeed"	"75"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"block_damage"			"30"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"shield_duration"		"3"
+		}
+	}
+}

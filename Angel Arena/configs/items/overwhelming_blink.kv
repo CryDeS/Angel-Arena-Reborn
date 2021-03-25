@@ -1,0 +1,96 @@
+"item_recipe_overwhelming_blink"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1750"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_overwhelming_blink"
+	"ItemRequirements"
+	{
+		"01"						"item_blink*;item_reaver"
+	}
+}
+
+"item_overwhelming_blink"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"0"
+	"AbilityCastPoint"				"0.0"
+	"AbilityCooldown"				"15.0"
+	"AbilityManaCost"				"0"
+	"AbilitySharedCooldown"			"blink"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"6800"
+	"ItemShopTags"					"teleport"
+	"ItemQuality"					"component"
+	"ItemAliases"					"blink dagger"
+	//"SideShop"						"1"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	"ShouldBeSuggested"				"1"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"blink_range"			"1200"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"blink_damage_cooldown"	"3.0"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"blink_range_clamp"		"960"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_strength"		"25"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"		"800"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"movement_slow"		"50"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"attack_slow"		"50"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"		"6"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_pct"		"100"
+		}
+	}
+}

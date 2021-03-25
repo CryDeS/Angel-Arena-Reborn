@@ -1,0 +1,329 @@
+﻿"keymaster_howl"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"custom/keymaster_howl"
+	"ScriptFile"					"creeps/boss/keymaster/keymaster_howl" 
+	
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+	
+	"MaxLevel"						"1"
+	
+	"precache"
+	{
+		"soundfile"					"soundevents/bosses/keymaster.vsndevts"
+		"particle" 					"particles/units/heroes/hero_drow/drow_silence_ice.vpcf"
+		"particle" 					"particles/units/heroes/hero_silencer/silencer_curse.vpcf"
+		"particle" 					"particles/econ/items/ogre_magi/ogre_magi_arcana/ogre_magi_arcana_stunned_orbit.vpcf"
+		"particle" 					"particles/econ/items/silencer/silencer_ti6/silencer_last_word_status_ti6_ring_end.vpcf"
+		"particle" 					"particles/econ/items/dazzle/dazzle_ti9/dazzle_shadow_wave_ti9_crimson_impact_damage_flash.vpcf"
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"400"
+	"AbilityCastPoint"				"0.5"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"12.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"250"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"abilitycastrange"		""
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"stun_duration"			"2.0"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"silence_duration"		"4.0"
+		}
+	}
+}
+
+"keymaster_bite"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"AbilityTextureName"			"custom/keymaster_bite"
+	"ScriptFile"					"creeps/boss/keymaster/keymaster_bite" 
+	
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+	
+	"MaxLevel"						"1"
+	
+	"precache"
+	{
+		"soundfile"					"soundevents/bosses/keymaster.vsndevts"
+		"particle" 					"particles/econ/items/bloodseeker/bloodseeker_eztzhok_weapon/bloodseeker_bloodbath_eztzhok.vpcf"
+		"particle" 					"particles/econ/items/ogre_magi/ogre_ti8_immortal_weapon/ogre_ti8_immortal_bloodlust_buff.vpcf"
+		"particle" 					"particles/econ/items/medusa/medusa_ti10_immortal_tail/medusa_ti10_impact_blood.vpcf"
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"350"
+	"AbilityCastPoint"				"0.2"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"7.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"250"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage"				"650"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"kill_limit_pct"		"20"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"disarmor"				"10"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_reduction"		"40"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"debuff_duration"		"4.0"
+		}
+	}
+}
+
+"keymaster_shadow_support"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"BaseClass"						"ability_lua"
+	"MaxLevel"						"1"
+	"AbilityTextureName"			"custom/keymaster_shadow_support"
+	"ScriptFile"					"creeps/boss/keymaster/keymaster_shadow_support" 
+	
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+	
+	"AbilityCastRange"				"0"
+	"AbilityCastPoint"				"0.1"
+	"AbilityCooldown"				"10"
+	"AbilityManaCost"				"250"
+	
+	
+	"precache"
+	{
+		"soundfile"					"soundevents/bosses/keymaster.vsndevts"
+		"particle" 					"particles/items_fx/blademail.vpcf"
+		"particle" 					"particles/econ/items/nyx_assassin/nyx_ti9_immortal/nyx_ti9_carapace_crimson_hit_blood.vpcf"
+	}
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"return_damage"			"70"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"3.0"
+		}
+	}
+}
+
+"keymaster_damned_souls"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	
+	"BaseClass"						"ability_lua"
+	"MaxLevel"						"1"
+	"AbilityTextureName"			"custom/keymaster_damned_souls"
+	"ScriptFile"					"creeps/boss/keymaster/keymaster_damned_souls" 
+	
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+	"AbilityCastPoint"				"0.1"
+	"AbilityCastRange"				"700"
+	"AbilityCooldown"				"11"
+	
+	"precache"
+	{
+		"soundfile"					"soundevents/bosses/keymaster.vsndevts"
+		"particle"					"particles/bosses/keymaster/damned_souls/damned_soul.vpcf"
+		"particle"					"particles/units/heroes/hero_abaddon/abaddon_frost_slow.vpcf"
+		"particle"					"particles/econ/courier/courier_trail_orbit/courier_trail_orbit.vpcf"
+		"particle"					"particles/econ/items/outworld_devourer/od_ti8/od_ti8_santies_eclipse_area_beams.vpcf"
+		"particle"					"particles/econ/items/outworld_devourer/od_shards_exile/od_shards_exile_prison_end.vpcf"
+		"particle"					"particles/econ/items/ancient_apparition/aa_blast_ti_5/ancient_apparition_ice_blast_initial_explode_ti5.vpcf"
+		"particle"					"particles/econ/items/ancient_apparition/aa_blast_ti_5/ancient_apparition_ice_blast_sphere_final_explosion_smoke_ti5.vpcf"
+	}
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"abilitycastrange"		""
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"interval"				"1"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"soul_count"			"3"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"projectile_speed"		"600"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage"				"250"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_from_lost_hp"	"10"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"attack_speed_debuff"	"250"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"debuff_duration"		"2.5"
+		}
+	}
+}
+
+"keymaster_interception"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"BaseClass"						"ability_lua"
+	"MaxLevel"						"1"
+	"AbilityTextureName"			"custom/keymaster_interception"
+	"ScriptFile"					"creeps/boss/keymaster/keymaster_interception" 
+	
+	"AbilityCastRange"				"600"
+	"AbilityCastPoint"				"0.3"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+	"AbilityCooldown"				"8"
+	
+	"precache"
+	{
+		"soundfile"					"soundevents/bosses/keymaster.vsndevts"
+		"particle"					"particles/econ/items/wraith_king/wraith_king_ti6_bracer/wraith_king_ti6_hellfireblast_debuff.vpcf"
+		"particle"					"particles/econ/events/fall_major_2015/teleport_start_fallmjr_2015_l_flash.vpcf"
+	}
+	
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"abilitycastrange"		""
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"3.5"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"hp_regen_pct"			"10.0"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"hp_regen_decrease"		"2.0"
+		}
+	}
+}
+
+"keymaster_dodge_mastery"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass"						"ability_lua"
+	"MaxLevel"						"1"
+	"AbilityTextureName"			"custom/keymaster_dodge_mastery"
+	"ScriptFile"					"creeps/boss/keymaster/keymaster_dodge_mastery" 
+	
+	"AbilityCastRange"				"700"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"abilitycastrange"		""
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"aspeed_per_hp_pct"		"7"
+		}
+	}
+}

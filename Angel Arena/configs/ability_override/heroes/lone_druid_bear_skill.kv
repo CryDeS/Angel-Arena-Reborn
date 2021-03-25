@@ -1,0 +1,108 @@
+"separation_of_souls_bear"
+{
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+	"AbilityTextureName"			"custom/separation_of_souls_bear"
+	
+	"FightRecapLevel"				"1"
+	"MaxLevel"						"1"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"bonus_attack"				"30.0"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"bonus_armor"				"45.0"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"bonus_aspeed"				"30.0"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_sos_bear_passive"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"IsBuff"			"1"
+			
+			"ThinkInterval" 		 "2"
+			
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"scripts/vscripts/heroes/lone_druid/separation_of_souls.lua"
+					"Function"			"OnIntervalThink"
+					"modifier_attack"	"modifier_sos_bear_attack"
+					"modifier_armor"	"modifier_sos_bear_armor"
+					"modifier_aspeed"	"modifier_sos_bear_aspeed"
+					
+					"bonus_attack_pct"	"%bonus_attack"
+					"bonus_armor_pct"	"%bonus_armor"
+					"bonus_aspeed_pct"	"%bonus_aspeed"
+				}
+			}
+			
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"scripts/vscripts/heroes/lone_druid/separation_of_souls.lua"
+					"Function"			"OnDestroy"
+					"modifier_attack"	"modifier_sos_bear_attack"
+					"modifier_armor"	"modifier_sos_bear_armor"
+					"modifier_aspeed"	"modifier_sos_bear_aspeed"
+				}
+			}
+		}
+
+		
+		"modifier_sos_bear_attack"
+		{
+			"Passive"					"0"
+			"IsHidden"					"1"
+			"IsDebuff"					"1"
+			"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"				"10"	
+			}
+		}
+		
+		"modifier_sos_bear_armor"
+		{
+			"Passive"					"0"
+			"IsHidden"					"1"
+			"IsDebuff"					"1"
+			"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"				"1"	
+			}
+		}
+		
+		"modifier_sos_bear_aspeed"
+		{
+			"Passive"					"0"
+			"IsHidden"					"1"
+			"IsDebuff"					"1"
+			"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"				"10"	
+			}
+		}
+	}
+}

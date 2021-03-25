@@ -1,0 +1,189 @@
+//=================================================================================================================
+// Bounty Hunter: Shuriken Toss
+//=================================================================================================================
+"bounty_hunter_shuriken_toss"
+{
+	"MaxLevel"						"7"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"600"
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.3 0.3 0.3"
+	"AbilityCooldown"				"6"
+	"AbilityManaCost"				"125"
+		
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"125 200 255 320 400 485 520"
+			"LinkedSpecialBonus"	"special_bonus_unique_bounty_hunter_2"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"speed"					"1000 1000 1000 1000 1000 1000 1000"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bounce_aoe"			"600"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"ministun"			"0.1"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"scepter_cast_range"	"650"
+			"RequiresScepter"		"1"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"scepter_cooldown"		"4.5"
+			"RequiresScepter"		"1"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_pct"			"100"
+			"CalculateSpellDamageTooltip" "0"
+		}
+	}
+}
+
+//=================================================================================================================
+// Bounty Hunter: Jinada
+//=================================================================================================================
+"bounty_hunter_jinada"
+{
+	"MaxLevel"						"7"
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"6 5.5 5.0 4.5 4.0 3.5 3.0"
+		
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+        "01"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "bonus_damage"			"40 66 93 120 146 173 200"
+			"LinkedSpecialBonus"	"special_bonus_unique_bounty_hunter_4"
+        }
+        "02"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "gold_steal"			"20 30 40 50 60 80 100"
+            "LinkedSpecialBonus"		"special_bonus_unique_bounty_hunter"
+        }
+	}
+}	
+
+//=================================================================================================================
+// Bounty Hunter: Wind Walk
+//=================================================================================================================
+"bounty_hunter_wind_walk"
+{
+	"MaxLevel"						"7"
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"15.0"
+	"AbilityCastPoint"				"0.0"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"50 75 100 125 150 175 200"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"15.0 17.0 22.0 35.0 45.0 55.0 60.0"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"fade_time"					"1.0 0.75 0.5 0.25 0.2 0.15 0.1"
+		}
+        "03"
+        {
+            "var_type"					"FIELD_INTEGER"
+            "slow"				        "15 20 25 30 35 40 45"
+        }
+        "04"
+        {
+            "var_type"					"FIELD_FLOAT"
+            "slow_duration"				"3"
+        }
+	}
+}
+
+//=================================================================================================================
+// Bounty Hunter: Track
+//=================================================================================================================
+"bounty_hunter_track"
+{
+	"MaxLevel"						"7"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"1400"
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.3 0.3 0.3"
+	"AbilityCooldown"				"4"
+	"AbilityManaCost"				"50 75 100 125 150 175 200"
+		
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				  "FIELD_INTEGER"
+			"target_crit_multiplier"  "140 150 160 170 180 190 200"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_gold_radius"		"925"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_gold_self"		"350 450 525 775 950 1200 1850"
+			"LinkedSpecialBonus"	"special_bonus_unique_bounty_hunter_3"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_gold"			"275 350 450 590 850 980 1400"
+			"LinkedSpecialBonus"	"special_bonus_unique_bounty_hunter_3"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"30.0"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"gold_steal"			"0.3 0.4 0.5 0.6 0.7 0.8 0.9"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_move_speed_pct"	"20"
+		}
+	}
+}

@@ -1,0 +1,186 @@
+"item_recipe_awful_mask"
+{
+		"AbilityTextureName" 				"recipe"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1273"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_datadriven"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_awful_mask"
+	"ItemRequirements"
+	{
+		"01"						"item_awful_mask_dummy"
+	}
+}
+
+"item_awful_mask"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1113"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "awful_mask"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"4850"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"ItemQuality"					"common"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"32"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"2"	
+			
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_str"				"20"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"200"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"lifesteal"				"22"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_passive_awful_mask_lifesteal"
+		{
+			"Passive"	"0"
+			"IsHidden"	"1"
+			
+			"OnDealDamage"
+			{
+				"Lifesteal"
+				{
+					"Target" 			"ATTACKER"
+					"LifestealPercent"	"%lifesteal"
+				}
+				"RemoveModifier"
+				{
+					"ModifierName"  "modifier_passive_awful_mask_lifesteal"
+					"Target"		"ATTACKER"
+				}
+			}
+		}
+		
+		"modifier_passive_awful_mask"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+			"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
+
+			"Orb"
+			{
+				"Priority"			"DOTA_ORB_PRIORITY_ABILITY"
+			}
+
+			"OnOrbFire"
+			{
+				"ApplyModifier"
+				{
+					"ModifierName"  "modifier_passive_awful_mask_lifesteal"
+					"Target"		"CASTER"
+				}
+			}
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" 		"%bonus_str"
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%bonus_armor"
+				"MODIFIER_PROPERTY_HEALTH_BONUS"				"%bonus_health"
+			}
+			
+		}
+	}
+}
+
+"item_awful_mask_dummy"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1272"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "awful_mask"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"4850"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"0"
+
+	"ItemQuality"					"common"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"32"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"10"	
+			
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_str"				"20"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"200"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"lifesteal"				"22"
+		}
+	}
+}

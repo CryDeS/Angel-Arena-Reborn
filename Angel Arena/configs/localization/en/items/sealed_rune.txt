@@ -1,0 +1,6 @@
+"DOTA_Tooltip_Ability_item_sealed_rune"							"Sealed Rune"
+"DOTA_Tooltip_Ability_item_sealed_rune_lore"					"Sealed elder rune which true usage is shrouded in mystery."
+"DOTA_Tooltip_Ability_item_sealed_rune_bonus_damage"			"+$damage"
+"DOTA_Tooltip_Ability_item_sealed_rune_bonus_as"				"+$attack"
+"DOTA_Tooltip_Ability_item_sealed_rune_bonus_agi"				"+$agi"
+"DOTA_Tooltip_Ability_item_sealed_rune_bonus_str"				"+$str"

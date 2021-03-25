@@ -1,0 +1,354 @@
+"earth_spirit_boulder_smash"
+{
+	"MaxLevel"						"7"
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"150"
+	"AbilityCastPoint"				"0.01"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"10.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"80"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"200"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"rock_search_aoe"		"200"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"rock_damage"			"100 150 200 250 325 375 400"
+		}
+        "04"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "move_slow"				"40 50 60 70 80 90 100"
+        }
+        "05"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "duration"			    "2.0"
+        }
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"speed"					"900"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"unit_distance"			"700"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"rock_distance"			"1200.0"
+		}			
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"remnant_smash_radius_tooltip"			"200"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_pct"			"100"
+			"CalculateSpellDamageTooltip" "0"
+		}
+	}
+}
+
+//=================================================================================================================
+// Earth Spirit: Rolling Boulder
+//=================================================================================================================
+"earth_spirit_rolling_boulder"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"3000"
+	"AbilityCastPoint"				"0.01"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"16.0 14.0 12.0 10.0 8.0 6.0 4.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"50"
+
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"150"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"speed"					"850"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"rock_speed"			"1400"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"distance"				"600.0"
+			"LinkedSpecialBonus"	"special_bonus_unique_earth_spirit_4"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"rock_distance"			"1200.0"
+			"LinkedSpecialBonus"	"special_bonus_unique_earth_spirit_4"
+			"LinkedSpecialBonusField"		"value2"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"delay"					"0.6"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage"				"100 110 120 130 140 150 160"
+			"LinkedSpecialBonus"	"special_bonus_unique_earth_spirit"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"stun_duration"			"0.4 0.6 0.8 1.0 1.4 1.8 2.2"
+            "LinkedSpecialBonus"	"special_bonus_unique_earth_spirit_3"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"rock_bonus_duration"	"1.0"
+		}
+	}
+}
+
+
+//=================================================================================================================
+// Earth Spirit: Geomagnetic Grip
+//=================================================================================================================
+"earth_spirit_geomagnetic_grip"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"1400"
+	"AbilityCastPoint"				"0.01"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"13"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"180"
+		}
+        "02"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "rock_damage"			"110 180 240 300 340 380 420"
+        }
+        "03"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "duration"			    "2"
+            "LinkedSpecialBonus"	"special_bonus_unique_earth_spirit_5"
+        }
+        "04"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "pull_units_per_second_heroes"		"600"
+        }
+        "05"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "pull_units_per_second"		"1000"
+        }
+        "06"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "speed"					"800"
+        }
+        "07"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "total_pull_distance"		"1400"
+        }
+	}
+}
+
+//=================================================================================================================
+// Earth Spirit: Stone Caller
+//=================================================================================================================
+"earth_spirit_stone_caller"
+{
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"1200"
+	"AbilityCastPoint"				"0.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"0"
+
+	"AbilityCharges"				"8"
+	"AbilityChargeRestoreTime"		"15"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"60.0"
+		}
+	}
+}
+
+//=================================================================================================================
+// Earth Spirit: Petrify ( scepter ability )
+//=================================================================================================================
+"earth_spirit_petrify"
+{
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"500"
+	"AbilityCastPoint"				"0.5"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"duration"		"3"
+			"RequiresScepter"	"1"
+		}
+
+		"02"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"damage"	"300"
+			"RequiresScepter"	"1"
+		}
+
+		"03"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"aoe"		"300"
+			"RequiresScepter"	"1"
+		}
+	}
+}
+
+//=================================================================================================================
+// Earth Spirit: Magnetize
+//=================================================================================================================
+"earth_spirit_magnetize"
+{
+	"MaxLevel"						"7"
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"500"
+	"AbilityCastPoint"				"0.01"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"60.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100 150 200 250 300 400 500"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"cast_radius"			"500"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_per_second"		"85 140 195 250 305 360 415"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_duration"			"6.0"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"rock_search_radius"			"500"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"rock_explosion_radius"			"600"
+		}			
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_interval"			"1.0"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"rock_explosion_delay"			"8.0"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"silence_duration"			"5.0"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"slow_duration"			"2.0"
+		}
+	}
+}

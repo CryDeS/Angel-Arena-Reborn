@@ -1,0 +1,100 @@
+"item_recipe_plague_staff"
+{
+	"AbilityTextureName" 				"item_recipe_plague_staff"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1301"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1500"	
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_plague_staff"
+	"ItemRequirements"
+	{ //2240 + 600 + 900
+		"01"						"item_veil_of_discord;item_talisman_of_mastery;item_energy_booster"
+	}
+}
+
+"item_plague_staff"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"								"1300"
+	"BaseClass"							"item_lua"
+	"AbilityTextureName" 				"plague_staff"
+	"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"ItemDeclarations"					"DECLARE_PURCHASES_TO_TEAMMATES"
+	"ScriptFile"						"items/plague_staff/plague_staff.lua"
+	
+	"ItemQuality"						"rare"
+	"ItemDroppable" 					"1"
+	"ItemCastOnPickup"					"0"
+	"ItemKillable"						"1"
+	"ItemPurchasable"					"1"
+	"ItemSellable"						"1"
+	"ItemCost"							"5015"
+	"ItemStackable"						"0"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_int"					"25"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_str"					"6"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_agi"					"6"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_armor"				"3"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_damage"				"12"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_hpregen"				"8"
+		}
+		"07"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_mana"				"300"
+		}
+		"08"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_spellamp"			"4"
+		}
+		"08"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"chance"					"20"
+		}
+		"08"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"magical_crit"				"200"
+		}
+	}
+}

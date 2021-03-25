@@ -1,0 +1,261 @@
+"lina_dragon_slave"
+{
+	"MaxLevel" "7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"800"
+	"AbilityCastPoint"				"0.45 0.45 0.45 0.45 0.3 0.3 0.3"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"8.5"
+	"AbilityDuration"				"0.6875 0.6875 0.6875 0.6875 0.6875 0.6875 0.6875"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"150 180 220 320 380 400 450"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100 115 130 145 155 165 180"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"dragon_slave_speed"		"1200"
+		}
+		
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"dragon_slave_width_initial"	"275"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"dragon_slave_width_end"		"200"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"dragon_slave_distance"			"1075"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"damage_pct"				"100"		
+		}
+	}
+}
+
+//=================================================================================================================
+// Ability: Lina Light Strike Array
+//=================================================================================================================
+"lina_light_strike_array"
+{
+	"MaxLevel" 						"7"
+	"AbilityCastRange"				"625"
+	"AbilityCastPoint"				"0.45"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"14 13 12 11 10 9 8"
+	"AbilityDuration"				"2.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100 110 120 130 140 150 160"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"light_strike_array_aoe"	"225"
+		}
+		
+		"02"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"light_strike_array_delay_time"	"0.5"
+		}
+					
+		"03"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"light_strike_array_stun_duration"	"2.0"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"light_strike_array_damage"	"120 180 240 280 320 360 480"
+			"LinkedSpecialBonus"		"special_bonus_unique_lina_3"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"damage_pct"				"100"
+		}
+	}
+}
+
+//=================================================================================================================
+// Ability: Lina's Fiery Soul
+//=================================================================================================================
+"lina_fiery_soul"
+{
+	"MaxLevel"		"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDuration"				"12"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"fiery_soul_attack_speed_bonus"	"20 30 40 55 70 85 100"
+			"LinkedSpecialBonus"			"special_bonus_unique_lina_2"				
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"fiery_soul_move_speed_bonus"	"5 6 7 8 9 10 11"
+			"LinkedSpecialBonus"			"special_bonus_unique_lina_2"	
+			"LinkedSpecialBonusField"		"value2"			
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"fiery_soul_max_stacks"		"3"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"fiery_soul_stack_duration"		"12"
+		}
+	}
+}
+
+//=================================================================================================================
+// Ability: Lina Laguna Blade
+//=================================================================================================================
+"lina_laguna_blade"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"900"
+	"AbilityCastPoint"				"0.45"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"70.0 60.0 50.0 40.0 35.0 30.0 25.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"280 320 480 520 650 750 875"
+
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"damage"						"450 600 750 900 1000 1100 1200"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"cast_range_scepter"			"900"
+		}
+		"03"
+		{
+			"var_type"					    "FIELD_FLOAT"
+			"damage_delay"				    "0.25"
+			"CalculateSpellDamageTooltip"	"0"
+		}
+		"04"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"scepter_width"					"125"
+		}
+		"05"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"damage_pct"					"350"
+			"CalculateSpellDamageTooltip" 	"0"
+		}
+	}
+}
+
+"lina_fire_shield"
+{
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"MaxLevel"						"7"
+	"AbilityTextureName"			"custom/lina_fire_shield-1"
+	"ScriptFile"	                "heroes/lina/lina_fire_shield/lina_fire_shield"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0"
+	"AbilityManaCost"				"125"
+
+	// Time
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"20 19.5 18 18.5 18 17.5 17"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"2.5"
+			"LinkedSpecialBonus"	"lina_special_bonus_fire_shield"
+		}
+		"02"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "damage_reduction_pct"	"100"
+        }
+        "03"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "radius"        		"600"
+        }
+	}
+}
+
+"lina_special_bonus_fire_shield"
+{
+	"BaseClass"						"special_bonus_unique_earth_spirit"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"1.0"
+		}
+	}
+}

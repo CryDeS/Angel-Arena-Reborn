@@ -1,0 +1,98 @@
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"zombie_lying_passive_slow"
+{
+ // General
+         //-------------------------------------------------------------------------------------------------------------
+         "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+         "BaseClass"					"ability_lua"
+         "AbilityTextureName"			"custom/zombie_lying_passive_slow"
+         "ScriptFile"					"creeps/abilities/npc_aa_creep_zombie_lying/zombie_lying_passive_slow"
+         "MaxLevel"                      "1"
+
+         // Special
+         //-------------------------------------------------------------------------------------------------------------
+         "AbilitySpecial"
+         {
+             "01"
+             {
+                "var_type"			    "FIELD_INTEGER"
+                "slow_pct"		        "15"
+             }
+             "02"
+             {
+                "var_type"			    "FIELD_FLOAT"
+                "duration"		        "3.5"
+             }
+         }
+ }
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"zombie_lying_passive_boost_movespeed"
+{
+ // General
+         //-------------------------------------------------------------------------------------------------------------
+         "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+         "BaseClass"					"ability_lua"
+         "AbilityTextureName"			"custom/zombie_lying_passive_boost_movespeed"
+         "ScriptFile"					"creeps/abilities/npc_aa_creep_zombie_lying/zombie_lying_passive_boost_movespeed"
+         "MaxLevel"                      "1"
+
+         // Special
+         //-------------------------------------------------------------------------------------------------------------
+         "AbilitySpecial"
+         {
+             "01"
+             {
+                "var_type"			    "FIELD_INTEGER"
+                "need_hp_pct"		    "50"
+             }
+             "02"
+             {
+                "var_type"			    "FIELD_FLOAT"
+                "bonus_movespeed_pct"   "50"
+             }
+         }
+ }
+
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+"zombie_walking_jump"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"BaseClass"							"ability_lua"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityTextureName"			    "custom/zombie_walking_jump"
+    "ScriptFile"					    "creeps/abilities/npc_aa_creep_zombie_lying/zombie_walking_jump"
+    "MaxLevel"                          "1"
+
+	"AbilityCooldown"					"5.0"
+	"AbilityCastRange"					"450"
+	"AbilityManaCost"					"50"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage"					"200"
+		}
+		"02"
+        {
+            "var_type"					"FIELD_INTEGER"
+            "speed"					    "40"
+        }
+	}
+}

@@ -1,0 +1,105 @@
+"item_recipe_static_amulet"
+{
+	"AbilityTextureName" 				"item_recipe_static_amulet"
+	
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1181"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"2000"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_static_amulet"
+	"ItemRequirements"
+	{
+		"01"						"item_slice_amulet;item_boss_soul"
+	}
+}
+
+"item_static_amulet"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1182"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityTextureName"	        "static_amulet"
+	"ScriptFile"					"items/static_amulets/item_static"
+	"AbilityCastRange"				"800"
+	// Stats	
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"16740"
+	"ItemStackable"					"0"
+	
+	"ItemBaseLevel"					"2"
+	"ItemPermanent"					"0"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+	
+	"AbilityManaCost"				"250"
+	"AbilityCooldown"               "20"
+	"AbilityCastPoint"				"0.0"
+	"AbilityCastRange"				"900"
+	"AbilityCastRangeBuffer"		"1100"
+	"AbilityCastAnimation" 			"ACT_RESET"
+	"AbilitySharedCooldown"			"static_amulet"
+		
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"10 20"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_int"				"25 84"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_stats"			"4 24"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"spell_amplify_by_cast"	"10.0 15.0"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"buff_duration"			"4.0 4.0"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"debuff_duration"		"3.5 4.5"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"debuff_speed"			"1200 1600"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"cast_range"			"600 900"
+		}
+	}
+}

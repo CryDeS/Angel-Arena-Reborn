@@ -1,0 +1,66 @@
+"npc_hero_shadowsong"
+{													
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"override_hero" 			"npc_dota_hero_antimage"
+		"Team"						"Bad"
+
+
+		// Abilities
+		//-------------------------------------------------------------------------------------------------------------
+		"Ability1"					"shadowsong_magic_fire"
+		"Ability2"					"shadowsong_absorption"
+		"Ability3"					"angel_arena_death_aura"
+		"Ability4"					"generic_hidden"
+		"Ability5"					"generic_hidden"
+		"Ability6"					"shadowsong_dark_reflection"
+		
+		"Ability10"					"shadowsong_talent_magic_fire_aoe"
+		"Ability11"					"shadowsong_talent_magic_fire_cd_decrease"
+		"Ability12"					"shadowsong_special_bonus_absorbtion"
+		"Ability13"					"shadowsong_special_bonus_absorbtion_kill_bonus"
+		"Ability14"					"shadowsong_special_bonus_reflection_teammate"
+		"Ability15"					"shadowsong_special_bonus_reflection_magic_immune"
+		"Ability16"					"special_bonus_cleave_100"
+		"Ability17"					"special_bonus_armor_15"
+		// Armor
+		//-------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"				"0"										// Physical protection.
+
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"29"									// Damage range min.
+		"AttackDamageMax"			"34"									// Damage range max.	
+		
+		"AttackRate"				"1.7"									// Speed of attack.
+		"AttackAnimationPoint"		"0.3"										// Normalized time in animation cycle to attack.
+		
+		"AttackAcquisitionRange"	"620"									// Range within a target can be acquired.
+		"AttackRange"				"150"									// Range within a target can be attacked.
+		
+		"ProjectileModel"			""										// Particle system model for projectile.
+		"ProjectileSpeed"			"1200"										// Speed of projectile.
+
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"25"									// Base strength
+		"AttributeStrengthGain"		"2.3"									// Strength bonus per level.
+		"AttributeBaseAgility"		"18"									// Base agility
+		"AttributeAgilityGain"		"2.9"									// Agility bonus per level.
+		"AttributeBaseIntelligence"	"15"									// Base intelligence
+		"AttributeIntelligenceGain"	"2.0"									// Intelligence bonus per level.
+		
+		"StatusHealth" "100" 
+		//"StatusHealthRegen" "1.2" 
+		//"StatusMana" "150" 
+		//"StatusManaRegen" "1.0" 
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementSpeed"				"300"									// Speed.
+		"MovementTurnRate"			"0.5"									// Turning rate.
+		
+		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+		"HealthBarOffset"			"140"
+}

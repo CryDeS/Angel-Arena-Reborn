@@ -1,0 +1,51 @@
+"item_vambrace"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1021"
+	"ItemShopTags"					"damage;int;agi;str"
+	"ItemQuality"					"common"
+	"ItemAliases"					"bracer"
+	"ItemCost"						"0"
+	"ItemIsNeutralDrop"				"0"
+	"ItemPurchasable"				"0"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+
+	"Model"							"models/props_gameplay/neutral_box.vmdl"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_primary_stat"		"25"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_secondary_stat"			"10"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_spell_amp"		"20"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_magic_resistance"	"10"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_attack_speed"	"45"
+		}
+	}
+}

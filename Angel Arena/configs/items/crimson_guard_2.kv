@@ -1,0 +1,197 @@
+"item_recipe_crimson_guard_2"
+{
+		"AbilityTextureName" 				"item_recipe_crimson_guard_2"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1281"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"4200"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_crimson_guard_2"
+	"ItemRequirements"
+	{
+		"01"						"item_crimson_guard;item_crimson_guard"
+	}
+}
+
+"item_crimson_guard_2"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1280"		
+	"BaseClass"						"item_crimson_guard"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityTextureName"			"crimson_guard_2"
+	"ItemBaseLevel"					"2"
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"20.0"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"11300"
+	"ItemShopTags"					"armor;boost_armor;regen_health;block;health_pool"
+	"ItemQuality"					"epic"
+	"ItemAlertable"					"1"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"250 750"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health_regen"	"8 25"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_all_stats"		"2 20"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"5 20"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"block_damage_melee"	"32 120"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"block_damage_ranged"	"16 75"
+		}		
+
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"block_chance"			"50 90"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_aoe_armor"		"2 15"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"				"10 10"
+		}		
+		"10"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_aoe_radius"		"900 900"
+		}		
+		"11"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"block_damage_melee_active"	"55 250"
+		}
+		"12"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"block_damage_ranged_active"	"55 250"
+		}		
+		"13"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"block_chance_active"			"100 100"
+		}	
+	}
+}
+
+//=================================================================================================================
+// Crimson Guard
+//=================================================================================================================
+"item_crimson_guard"
+{
+	"ItemBaseLevel"					"1"
+	
+	"AbilityCooldown"				"20.0"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"250 750"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health_regen"	"8 25"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_all_stats"		"2 10"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"5 20"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"block_damage_melee"	"32 82"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"block_damage_ranged"	"16 82"
+		}		
+
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"block_chance"			"50 90"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_aoe_armor"		"2 15"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"	"10 10"
+		}		
+		"10"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_aoe_radius"		"900 900"
+		}		
+		"11"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"block_damage_melee_active"	"55 250"
+		}
+		"12"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"block_damage_ranged_active"	"55 250"
+		}		
+		"13"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"block_chance_active"			"100 100"
+		}	
+	}
+}

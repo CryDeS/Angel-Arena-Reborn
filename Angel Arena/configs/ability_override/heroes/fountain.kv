@@ -1,0 +1,25 @@
+"angel_arena_fountain"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+    "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+    "BaseClass"					    "ability_lua"
+	"AbilityTextureName"			"custom/angel_arena_fountain"
+	"ScriptFile"                    "creeps/fountain/angel_arena_fountain"
+	"MaxLevel"						"1"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					        "FIELD_INTEGER"
+			"radius_aura"				        "1200"
+		}
+		"02"
+        {
+            "var_type"					        "FIELD_FLOAT"
+            "resist_percent_fountain"			"50.0"
+        }
+	}
+}

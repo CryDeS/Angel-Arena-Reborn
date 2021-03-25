@@ -1,0 +1,38 @@
+"angel_arena_revenge"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	"custom/angel_arena_revenge"
+	"MaxLevel"				"7"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"reduce_percent"		"8 10 15 16 18 22 25"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_revenge"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+
+			"OnTakeDamage"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"scripts/vscripts/heroes/jubei/revenge.lua"
+					"Function"		"takedamage"
+					"Damage"		"%attack_damage"
+					"Attacker"		"ATTACKER"
+				}		
+			}
+		}
+	}
+}
