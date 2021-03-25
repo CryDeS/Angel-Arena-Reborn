@@ -102,8 +102,9 @@
 	<Panel>
 		<CustomUIElement type="Hud" 		layoutfile="file://{resources}/layout/custom_game/duel_ui.xml" />
 		<CustomUIElement type="Hud" 		layoutfile="file://{resources}/layout/custom_game/neutral_item_slot.xml" />
-		<CustomUIElement type="GameInfo" 	layoutfile="file://{resources}/layout/custom_game/game_info.xml" />
+<!--		<CustomUIElement type="GameInfo" 	layoutfile="file://{resources}/layout/custom_game/game_info.xml" />-->
 		<CustomUIElement type="Hud" 		layoutfile="file://{resources}/layout/custom_game/repick_menu.xml" />
+		<CustomUIElement type="Hud" 		layoutfile="file://{resources}/layout/custom_game/captains_mode/captains_mode.xml" />
 
 		<!--<CustomUIElement type="HeroSelection" 		layoutfile="file://{resources}/layout/custom_game/game_info.xml" /> -->
 		

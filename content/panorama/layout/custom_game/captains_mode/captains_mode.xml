@@ -1,0 +1,123 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c"/>
+		<include src="file://{resources}/layout/custom_game/captains_mode/captains_mode.css" />
+	</styles>
+
+	<scripts>
+		<include src="file://{resources}/layout/custom_game/captains_mode/captains_mode_const.js" />
+		<include src="file://{resources}/layout/custom_game/captains_mode/utils.js" />
+		<include src="file://{resources}/layout/custom_game/captains_mode/captains_mode.js" />
+		<include src="s2r://panorama/scripts/hud/dota_hud_pregame.vjs_c" />
+	</scripts>
+
+	<snippets>
+		<snippet name="HeroButton">
+			<Panel class="HeroButton">
+				<Panel id="HeroBackground"/>
+				<DOTAHeroImage id="HeroImage" class="HeroImage" scaling="stretch-to-fit-x-preserve-aspect" heroimagestyle="portrait" />
+				<Panel id="HeroOverlay" hittest="false"/>
+			</Panel>
+		</snippet>
+		<snippet name="PlayerTopBar">
+			<Panel class="PlayerTopBar">
+				<Panel id="TopBarHeroBackground">
+					<DOTAHeroImage id="HeroTopBar" heroimagestyle="landscape">
+						<Panel id="PlayerColor">
+							<Panel id="PlayerColorOverlay"/>
+						</Panel>
+					</DOTAHeroImage>
+					<Image id="CaptainIcon" src="s2r://panorama/images/status_icons/captain_overlay_psd.vtex"/>
+				</Panel>
+				<DOTAUserName id="PlayerName" steamid="local"/>
+			</Panel>
+		</snippet>
+		<snippet name="Stage">
+			<Panel class="Stage">
+				<Panel id="RadiantChoose">
+					<Panel class="Separator"/>
+					<DOTAHeroImage class="StageHeroChoose" heroimagestyle="landscape"/>
+				</Panel>
+				<Panel id="StageNumbers">
+					<Label id ="FirstStageNumber" class="StageNumber First"/>
+					<Label id ="SecondStageNumber" class="StageNumber Second"/>
+				</Panel>
+				<Panel id="DireChoose">
+					<Panel class="Separator"/>
+					<DOTAHeroImage class="StageHeroChoose" heroimagestyle="landscape">
+						<Label class="StageHeroText StageHeroText_Choose" text="Выбор"/>
+						<Label class="StageHeroText StageHeroText_Ban" text="Запрет"/>
+					</DOTAHeroImage>
+				</Panel>
+			</Panel>
+		</snippet>
+	</snippets>
+	
+	<Panel class="CaptainsModeRoot" hittest="true">
+		<DOTAScenePanel id="CaptainsModeBG" map="backgrounds/pregame_phase" renderdeferred="false" rendershadows="false" camera="camera_1" hittest="false" particleonly="true"/> 
+		<Panel id="CaptainsModeWrap">
+			<Panel id="CaptainsModeTopBar">
+				<Panel id="TimerRoot">
+					<Label id="CM_Time" text="0:23"/>
+					<Label id="CM_Text" text="Captains Mode"/>
+					<Panel id="AdditionalTimeRoot">
+						<Panel id="AdditionalTimeRadiant" class="AdditionalTimeTeam">
+							<Label id="AdditionalTimeRadiant_Text" text="Доп.Время"/>
+							<Label id="AdditionalTimeRadiant_Value" text="2:10"/>
+						</Panel>
+						<Panel id="AdditionalTimeDire" class="AdditionalTimeTeam">
+							<Label id="AdditionalTimeDire_Text" text="Доп.Время"/>
+							<Label id="AdditionalTimeDire_Value" text="1:10"/>
+						</Panel>
+					</Panel>
+					<Label id="CM_Description" text="КРАЙДЕС ЛОХ ЗАБАНИТ ПУДЖИКА"/>
+				</Panel>
+				<Panel id="RadiantPlayers"/>
+				<Panel id="DirePlayers"/>
+			</Panel>
+			<Panel id="CaptainsModeMain">
+				<Panel id="CaptainsModeHeroesRoot">
+					<Panel class="HeroesWrap">
+						<Panel class="HeroesHeader">
+							<Image class="HeroesIcon" src="s2r://panorama/images/primary_attribute_icons/mini_primary_attribute_icon_strength_psd.vtex"/>
+							<Label class="HeroesHeaderText" text="#DOTA_Hero_Selection_STR"/>
+						</Panel>
+						<Panel id="HeroesStrList" class="HeroList"/>
+					</Panel>
+					<Panel class="HeroesWrap">
+						<Panel class="HeroesHeader">
+							<Image class="HeroesIcon" src="s2r://panorama/images/primary_attribute_icons/mini_primary_attribute_icon_agility_psd.vtex"/>
+							<Label class="HeroesHeaderText" text="DOTA_Hero_Selection_AGI"/>
+						</Panel>
+						<Panel id="HeroesAgiList" class="HeroList"/>
+					</Panel>
+					<Panel class="HeroesWrap">
+						<Panel class="HeroesHeader">
+							<Image class="HeroesIcon" src="s2r://panorama/images/primary_attribute_icons/mini_primary_attribute_icon_intelligence_psd.vtex"/>
+							<Label class="HeroesHeaderText" text="DOTA_Hero_Selection_INT"/>
+						</Panel>
+						<Panel id="HeroesIntList" class="HeroList"/>
+					</Panel>
+				</Panel>
+				<Panel id="CaptainsModeStages">
+					<Panel id="StagesHeader">
+						<Label class="StagesHeaderText radiant" html="true" text="#MD_The_Radiant"/>
+						<Label class="StagesHeaderText dire" html="true" text="#MD_The_Dire"/>
+					</Panel>
+					<Panel id="StagesRoot"/>
+					<Button id="StagesButton">
+						<DOTAHeroImage id="StagesButton_Hero" heroimagestyle="landscape" heroname="npc_dota_hero_abaddon"/>
+						<Label class="StagesButton_Text StagesButton_Description" id="StagesButton_Choose" text="Choose"/>
+						<Label class="StagesButton_Text StagesButton_Description" id="StagesButton_Ban" text="Ban"/>
+						<Label class="StagesButton_Text" id="StagesButton_HeroName"/>
+					</Button>
+				</Panel>
+			</Panel>
+		</Panel>
+
+		<Panel id="HeroCardMovieRoot" hittest="false" hittestchildren="false">
+			<DOTAHeroMovie id="HeroCardMovie" class="VideoPanel" heroname="npc_dota_hero_pudge" controls="none" repeat="true" autoplay="onload"/>
+			<Label id="HeroMovieName" text="Pudge"/>
+		</Panel>
+	</Panel>
+</root>
