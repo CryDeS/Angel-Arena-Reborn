@@ -19,3 +19,6 @@
 /game/network_measurement.txt
 /game/rich_presence_persistent_data.txt
 /game/server_log.txt
+
+*.code_workspace
+*.bat
