@@ -208,22 +208,13 @@ function CheckModifiers(player)
     if not player then return end
     local hero = player:GetAssignedHero()
 
-    if hero then
-        local pos = hero:GetPlayerCursorPosition()
-        local focus = _GetNearestUnitUnderPoint(pos, 100)
+    MouseCursor:OnNearestUnit(player, function(unit)
+        force_print_player(player, "Unit '", unit:GetUnitName(), "' modifiers:")
 
-        if focus then
-            hero = focus
+        for i = 0, unit:GetModifierCount() - 1 do
+            force_print_player( player, " |->", unit:GetModifierNameByIndex(i) )
         end
-    end
-
-    if not hero then return end
-
-    force_print_player(player, "Unit '", hero:GetUnitName(), "' modifiers:")
-
-    for i = 0, hero:GetModifierCount() - 1 do
-        force_print_player( player, " |->", hero:GetModifierNameByIndex(i) )
-    end
+    end)
 end
 
 function CheckSkills(player)
