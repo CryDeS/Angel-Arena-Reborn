@@ -1,5 +1,4 @@
 creep_bear_big_clap_silence_lua = class({})
-LinkLuaModifier("modifier_silence", "some_modifiers/modifier_silence", LUA_MODIFIER_MOTION_NONE )
 
 function creep_bear_big_clap_silence_lua:OnSpellStart()
         local radius = self:GetSpecialValueFor( "radius" )

@@ -1,7 +1,5 @@
 golem_big_throw_rock = golem_big_throw_rock or class({})
 
-LinkLuaModifier("modifier_stun", "some_modifiers/modifier_stun", LUA_MODIFIER_MOTION_NONE)
-
 function golem_big_throw_rock:OnSpellStart()
 	self.duration = self:GetSpecialValueFor("stun_duration")
 	self.damage = self:GetSpecialValueFor("damage")
@@ -20,7 +18,7 @@ end
 
 function golem_big_throw_rock:OnProjectileHit(hTarget, vLocation)
     if hTarget ~= nil and (not hTarget:IsInvulnerable()) and (not hTarget:TriggerSpellAbsorb(self)) then
-        hTarget:AddNewModifier(self:GetCaster(), self, "modifier_stun", { duration = self.duration })
+        hTarget:AddNewModifier(self:GetCaster(), self, "modifier_stunned", { duration = self.duration })
 
         local info = {
             victim = hTarget,
