@@ -41,14 +41,12 @@ function KeyExec:Init()
 		if not player then return end
 
 		local hero = player:GetAssignedHero()
-
 		if not hero then return end
 
-		local cursorPos = hero:GetPlayerCursorPosition()
-
-		if cursorPos then
-			hero:SetAbsOrigin( cursorPos )
-		end
+		MouseCursor:OnCursorPosition(player:GetPlayerID(), function(position)
+			if not hero or hero:IsNull() then return end
+			FindClearSpaceForUnit(hero, position, true)
+		end)
 	end)
 
 	--OnDebugTeleport

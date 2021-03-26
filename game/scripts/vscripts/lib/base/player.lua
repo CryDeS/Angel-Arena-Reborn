@@ -9,7 +9,6 @@
 	PlayerResource:SetAbandoned(playerid)
 	PlayerResource:GetAllHeroes()
 	PlayerResource:GetHeroes(iTeamNumber)
-	PlayerResource:GetCursorPosition(playerid)
 	PlayerResource:RegisterOnAbandonedCallback(callback)
 	PlayerResource:ClearOnAbandonedCallbacks()
 
@@ -48,23 +47,13 @@ function PlayerResource:__InitCustomPlayerResource()
 	self.__internal__["playerid_info"] = {
 		["connection_times"] = {}
 	}
-
-	self.__internal__["players_cursor_positions"] = {}
 	
-	CustomGameEventManager:RegisterListener("UpdatedCursorPosition", Dynamic_Wrap(self, '__OnUpdateCursorPos'))
-
 	self.__internal__.userIDs = self.__internal__.userIDs or {} -- tbl[playerid] = userid 
 
 	Timers:CreateTimer(1.0, function() 
 		PlayerResource:__Tick() 
 		return 1.0 
 		end)
-end 
-
-function PlayerResource:__OnUpdateCursorPos(event)
-	local pid = event["PlayerID"]
-	local vec = Vector( tonumber(event["cursorPosition"]["0"]), tonumber(event["cursorPosition"]["1"]), tonumber(event["cursorPosition"]["2"]))
-	PlayerResource.__internal__["players_cursor_positions"][ pid ] = vec
 end 
 
 function PlayerResource:RegisterOnAbandonedCallback(callback)
@@ -80,11 +69,7 @@ function PlayerResource:_TriggerOnAbandoned(playerid)
 		callback({ playerid = playerid })
 	end 
 end 
-
-function PlayerResource:GetCursorPosition(playerid) 
-	return self.__internal__["players_cursor_positions"][playerid] or Vector(0,0,0)
-end 
-
+	 
 function PlayerResource:IsDisconnected(playerid)
 	local val = (PlayerResource:GetConnectionState(playerid) == DOTA_CONNECTION_STATE_DISCONNECTED )
 
