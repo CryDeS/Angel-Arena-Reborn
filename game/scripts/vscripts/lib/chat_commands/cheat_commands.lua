@@ -103,95 +103,51 @@ function Commands:remmod(player, arg)
 	hero:RemoveModifierByName(modifierName)
 end 
 
-local function get_hero_under_cursor(player)
-	local hero = player:GetAssignedHero()
-
-	if hero then
-        local pos = hero:GetPlayerCursorPosition()
-
-        local newHero = _GetNearestUnitUnderPoint(pos, 100)
-        
-        if newHero then 
-        	hero = newHero 
-        end
-    end
-
-    return hero
-end
-
 function Commands:create_dummy(player, arg)
-	local hero = player:GetAssignedHero()
-	local target = CreateUnitByName( "npc_dota_hero_target_dummy", hero:GetPlayerCursorPosition(), true, nil, nil, hero:GetOpposingTeamNumber() )
-	target:SetAbilityPoints( 0 )
-	target:SetControllableByPlayer( hero:GetPlayerOwnerID(), false )
-	target:Hold()
-	target:SetIdleAcquire( false )
-	target:SetAcquisitionRange( 0 )
+	if not player then return end
+	MouseCursor:OnCursorPosition(player:GetPlayerID(), function(position)
+		-- double check cause call time is unknown, player might abandon
+		if not player then return end
+		local hero = player:GetAssignedHero()
+		local target = CreateUnitByName( "npc_dota_hero_target_dummy", position, true, nil, nil, hero:GetOpposingTeamNumber() )
+		target:SetAbilityPoints( 0 )
+		target:SetControllableByPlayer( hero:GetPlayerOwnerID(), false )
+		target:Hold()
+		target:SetIdleAcquire( false )
+		target:SetAcquisitionRange( 0 )
+	end)
 end
 
 
 function Commands:str(player, arg)
 	if not player then return end
-	local hero = player:GetAssignedHero()
-
-	if hero then
-		local pos = hero:GetPlayerCursorPosition()
-		local focus = _GetNearestUnitUnderPoint(pos, 100)
-
-		if focus then
-			hero = focus
-		end
-	end
-
-	if not hero then return end
-
-	hero:SetBaseStrength( tonumber(arg[1]) )
-	hero:CalculateStatBonus( true )
+	MouseCursor:OnNearestUnit(player, function(unit)
+		unit:SetBaseStrength( tonumber(arg[1]) )
+		unit:CalculateStatBonus( true )
+	end)
 end 
 
 function Commands:agi(player, arg)
 	if not player then return end
-	local hero = player:GetAssignedHero()
-
-	if hero then
-		local pos = hero:GetPlayerCursorPosition()
-		local focus = _GetNearestUnitUnderPoint(pos, 100)
-
-		if focus then
-			hero = focus
-		end
-	end
-
-	if not hero then return end
-
-	hero:SetBaseAgility( tonumber(arg[1]) )
-	hero:CalculateStatBonus( true )
+	MouseCursor:OnNearestUnit(player, function(unit)
+		unit:SetBaseAgility( tonumber(arg[1]) )
+		unit:CalculateStatBonus( true )
+	end)
 end 
 
 function Commands:int(player, arg)
 	if not player then return end
-	local hero = player:GetAssignedHero()
-
-	if hero then
-		local pos = hero:GetPlayerCursorPosition()
-		local focus = _GetNearestUnitUnderPoint(pos, 100)
-
-		if focus then
-			hero = focus
-		end
-	end
-
-	if not hero then return end
-
-	hero:SetBaseIntellect( tonumber(arg[1]) )
-	hero:CalculateStatBonus( true )
+	MouseCursor:OnNearestUnit(player, function(unit)
+		unit:SetBaseIntellect( tonumber(arg[1]) )
+		unit:CalculateStatBonus( true )
+	end)
 end 
 
 function Commands:rmana(player, arg)
-	local hero 			= get_hero_under_cursor(player) 
-	if not hero then return end
-	
-	hero:ReduceMana( tonumber(arg[1]) )
+	if not player then return end
+	MouseCursor:OnNearestUnit(player, function(unit)
+		unit:ReduceMana( tonumber(arg[1]) )
+	end) 	
 end
 
 function Commands:nofog(player, arg)

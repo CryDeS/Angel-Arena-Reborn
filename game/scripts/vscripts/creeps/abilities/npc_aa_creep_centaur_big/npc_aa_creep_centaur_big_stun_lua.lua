@@ -1,5 +1,4 @@
 npc_aa_creep_centaur_big_stun_lua = class({})
-LinkLuaModifier("modifier_stun", "some_modifiers/modifier_stun", LUA_MODIFIER_MOTION_NONE)
 
 function npc_aa_creep_centaur_big_stun_lua:OnSpellStart()
     local radius = self:GetSpecialValueFor( "radius" )
@@ -13,7 +12,7 @@ function npc_aa_creep_centaur_big_stun_lua:OnSpellStart()
     if #enemies > 0 then
         for _,enemy in pairs(enemies) do
             if enemy ~= nil and ( not enemy:IsMagicImmune() ) and ( not enemy:IsInvulnerable() ) then
-                enemy:AddNewModifier( self:GetCaster(), self, "modifier_stun", { duration = duration } )
+                enemy:AddNewModifier( self:GetCaster(), self, "modifier_stunned", { duration = duration } )
                 local info = {
                     victim = enemy,
                     attacker = self:GetCaster(),

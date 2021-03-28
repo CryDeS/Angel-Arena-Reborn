@@ -71,28 +71,21 @@ function FixRecomendedItems()
 	$.Schedule(10, FixRecomendedItems)
 }
 
-function UpdateCursorPosition()
-{
-	var cursorPosition = GameUI.GetScreenWorldPosition( GameUI.GetCursorPosition() );
-	GameEvents.SendCustomGameEventToServer("UpdatedCursorPosition", {
-        cursorPosition:cursorPosition,
-        PlayerID: Players.GetLocalPlayer()
-      })
-}
-function Tick() 
-{
-	UpdateCursorPosition();
-	$.Schedule(0.01, Tick);
+function SendCursorPosition(event) {
+	const cursorPosition = GameUI.GetScreenWorldPosition(GameUI.GetCursorPosition());
+	GameEvents.SendCustomGameEventToServer("MouseCursor:CursorPositionReport", {
+		cursorPosition: cursorPosition,
+		event_id: event.event_id
+	})
 }
 
 (function()
 {
 	find_element()
-	listener = CustomNetTables.SubscribeNetTableListener( "gold", SetGold )	
+	listener = CustomNetTables.SubscribeNetTableListener("gold", SetGold)
+	GameEvents.Subscribe("MouseCursor:RequestCursorPosition", SendCursorPosition)
 	SetGold()
 	FixRecomendedItems()
-	
-	Tick();
 })();
 
 

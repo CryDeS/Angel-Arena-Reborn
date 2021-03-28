@@ -1,5 +1,4 @@
 windwing_big_stun_lua = class({})
-LinkLuaModifier("modifier_stun", "some_modifiers/modifier_stun", LUA_MODIFIER_MOTION_NONE)
 
 function windwing_big_stun_lua:OnSpellStart()
     self.duration = self:GetSpecialValueFor("duration")
@@ -19,7 +18,7 @@ end
 
 function windwing_big_stun_lua:OnProjectileHit(hTarget, vLocation)
     if hTarget ~= nil and (not hTarget:IsInvulnerable()) and (not hTarget:TriggerSpellAbsorb(self)) then
-        hTarget:AddNewModifier(self:GetCaster(), self, "modifier_stun", { duration = self.duration })
+        hTarget:AddNewModifier(self:GetCaster(), self, "modifier_stunned", { duration = self.duration })
         local info = {
             victim = hTarget,
             attacker = self:GetCaster(),

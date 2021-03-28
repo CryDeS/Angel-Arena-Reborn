@@ -4,7 +4,6 @@
 	unit:IsPlayerAbandoned()		-- short-cut, if no player owner - return false
 	unit:IsPlayerConnected()		-- short-cut, if no player owner - return false
 	unit:IsPlayerDisconnected()		-- short-cut, if no player owner - return false 
-	unit:GetPlayerCursorPosition()
 ]]
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
@@ -35,12 +34,4 @@ function CDOTA_BaseNPC:IsPlayerDisconnected()
     if not playerid or not PlayerResource:IsValidPlayerID(playerid) then return false end -- no player owner -> no disconnected
 
     return PlayerResource:IsDisconnected(playerid) 
-end 
-
-function CDOTA_BaseNPC:GetPlayerCursorPosition()
-    local playerid = self:GetPlayerOwnerID()
-
-    if not playerid or not PlayerResource:IsValidPlayerID(playerid) then return Vector(0,0,0) end
-
-    return PlayerResource:GetCursorPosition(playerid) 
 end 
