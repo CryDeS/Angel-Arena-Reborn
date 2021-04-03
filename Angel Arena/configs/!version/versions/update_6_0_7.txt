@@ -402,3 +402,6 @@ Fixes:
  - Possessed Demon skill casting
  - Lone Druid spirit bear and bandoline blade, mozaius blade, dark edge
  - Charon ultimate and damage into one target
+ - Chat size on pick screen fixed
+ - Dark edge localization
+ - Add cheat command '-spawn_bosses' ( or -sb shortcut ) to respawn bosses that dead now

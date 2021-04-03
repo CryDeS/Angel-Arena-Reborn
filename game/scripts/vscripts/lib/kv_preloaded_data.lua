@@ -7,6 +7,7 @@ function PreloadCache:_init()
 		print("[PreloadCache] Load KV '" .. path .."'")
 
 		local data = LoadKeyValues(path)
+
 		data['Version'] = nil
 		
 		return data

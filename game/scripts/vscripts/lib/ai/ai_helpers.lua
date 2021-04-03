@@ -66,7 +66,7 @@ function AIHelpers:IsCastable( ability, unit )
 
 	local targetType = ability:GetAbilityTargetType()
 
-	if targetType == DOTA_UNIT_TARGET_NONE then return end
+	if targetType == DOTA_UNIT_TARGET_NONE then return true end
 
 	local bCastable = bit.band(unitTypeBits, targetType) == targetType
 

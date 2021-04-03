@@ -14,11 +14,6 @@ Cheat lobby commands
 
 Commands = Commands or class({})
 
-require('lib/attentions')
-require('lib/utils')
-require('lib/duel/duel_controller')
-require("lib/spawners/creep_spawner")
-
 function Commands:is_cheats( player, arg )
 	force_print("Cheats enable state is:", GameRules:IsCheatMode())
 end 
@@ -28,6 +23,12 @@ end
 if not GameRules:IsCheatMode() then 
 	return 
 end 
+
+require('lib/attentions')
+require('lib/utils')
+require('lib/duel/duel_controller')
+require("lib/spawners/creep_spawner")
+require('lib/boss/boss_spawner')
 
 function Commands:duel_start(player, arg)
 	DuelController:StartDuel()
@@ -74,6 +75,16 @@ function Commands:disable_creeps_spawn(player, arg)
 	CreepSpawner:SetEnable(false) 
 end 
 
+function Commands:spawn_bosses( player, arg )
+	BossSpawner:ForBossClass(function(boss)
+		if BossSpawner:IsBossAlive(boss.name) then return end
+
+		BossSpawner:SpawnBoss(boss)
+	end)
+end
+
+Commands.sb = Commands.spawn_bosses
+
 function Commands:enable_creeps_spawn(player, arg)
 	CreepSpawner:SetEnable(true) 
 end 
@@ -88,7 +99,7 @@ end
 
 function Commands:dev(player, arg)
 	local hero 			= player:GetAssignedHero()
-	hero:SetBaseIntellect( 10000 )
+	hero:SetBaseIntellect( 1 ) -- :kekw:
 	hero:SetBaseAgility( 10000 )
 	hero:SetBaseStrength( 10000 )
 	hero:CalculateStatBonus( true )

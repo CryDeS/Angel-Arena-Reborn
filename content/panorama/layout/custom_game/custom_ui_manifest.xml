@@ -54,6 +54,7 @@
 					DisableElement(pregame, "AvailableItemsContainer");
 					DisableElement(pregame, "StrategyTabTopRow");
 					DisableElement(pregame, "AvailableItemsContainer");
+					DisableElement(pregame, "FriendsAndFoes");
 					EnableElement(pregame, "Header");
 
 					var tempPanel = pregame.FindChildTraverse("BottomPanels")

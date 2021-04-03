@@ -41,6 +41,12 @@ function BossSpawner:Init()
 	self.inited = true
 end
 
+function BossSpawner:ForBossClass(functor)
+	for _, boss in pairs(self.bossClasses) do
+		if functor(boss) then return end
+	end
+end
+
 function BossSpawner:OnGameStart()
 	if not self.inited then return end
 
@@ -68,19 +74,34 @@ function BossSpawner:CheckSpawn(boss, firstTime)
 	print("[BossSpawner] Boss", boss.name, "spawning after", spawnDelay, "seconds")
 
 	local timer = Timers:CreateTimer( spawnDelay, function()
-		print("OnSpawning boss", boss.name)
-		local unit = boss:Spawn()
-		
-		unit:AddNewModifier(unit, nil, "modifier_boss_power", { duration = -1 })
-
-		unit.IsAngelArenaBoss = true
-		
-		self.bossCurrent[unit] = boss
-		self.currentSpawning[boss] = nil
-		print("OnSpawning boss end", boss.name)
+		self:_RemoveTimer(boss, true)
+		self:SpawnBoss(boss)
 	end)
 
 	self.currentSpawning[boss] = timer
+end
+
+function BossSpawner:_RemoveTimer(boss)
+	local wasTimer = self.currentSpawning[boss]
+	
+	if wasTimer then
+		Timers:RemoveTimer(wasTimer)
+
+		self.currentSpawning[boss] = nil
+	end
+end
+
+function BossSpawner:SpawnBoss(boss)
+	self:_RemoveTimer(boss, true)
+
+	local unit = boss:Spawn()
+		
+	unit:AddNewModifier(unit, nil, "modifier_boss_power", { duration = -1 })
+
+	unit.IsAngelArenaBoss = true
+	
+	self.bossCurrent[unit] = boss
+	self.currentSpawning[boss] = nil
 end
 
 function BossSpawner:IsBoss(unit)
