@@ -1,5 +1,0 @@
-Hero Changes:
- Charon:
-  - Fixed 4 skill (damage to solo target only)
- Huntress:
-  - 3 skill cooldown changed from 0s to 1s

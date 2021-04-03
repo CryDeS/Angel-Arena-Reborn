@@ -75,7 +75,7 @@ function mod:OnAttackLanded(params)
 
 	if target:IsBuilding() then return end
 	
-	if parent:IsRealHero() and not parent:IsRangedAttacker() and MeleeSecondAttack:CanSecondAttack(parent) then
+	if not parent:IsIllusion() and not parent:IsRangedAttacker() and MeleeSecondAttack:CanSecondAttack(parent) then
 		local cd = self.attackCd * parent:GetCooldownReduction()
 
 		parent:AddNewModifier(parent, ability, "modifier_mozaius_blade_cd", { duration = cd })

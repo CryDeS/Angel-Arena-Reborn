@@ -23,6 +23,7 @@ local admin_ids = {
     [73911256] = 1, -- cry
     [104356809] = 1, -- Sheodar
     [136098003] = 1, -- homie
+    [144780201] = 1, -- cyberpunk
 }
 
 function IsAdmin(player)
@@ -76,7 +77,6 @@ function Commands:setTimerLimit(player,arg)
     if not limit then return end
 
     Timers._timeLimit = limit
-
 end
 
 function Commands:get_output(player, arg)

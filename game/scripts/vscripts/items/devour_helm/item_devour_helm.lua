@@ -36,7 +36,7 @@ function ability:GetCastFilter(hTarget)
 			return UF_FAIL_CUSTOM, "#dota_hud_error_cant_cast_enemy_hero"
 		end
 	else
-		if not hTarget:IsCreep() and not hTarget:IsHero() and not hTarget:IsConsideredHero() then
+		if not hTarget:IsCreep() and not hTarget:IsHero() and not hTarget:IsConsideredHero() or hTarget:IsAncient() then
 			return UF_FAIL_CUSTOM, "#dota_hud_error_cast_only_hero_and_creeps"
 		end
 

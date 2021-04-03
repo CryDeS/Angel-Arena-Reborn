@@ -62,7 +62,7 @@ function mod:OnAttackLanded(params)
 
 	if not ability then return end
 
-	if not parent:IsRealHero() or parent:IsRangedAttacker() then return end
+	if parent:IsIllusion() or parent:IsRangedAttacker() then return end
 
 	if not target:IsAlive() or not parent:IsAlive() then return end
 

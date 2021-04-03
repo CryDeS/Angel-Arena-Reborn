@@ -6,7 +6,7 @@
 	]
 	IsPlayable = 1
 	CheckAFKPlayers = 0
-	PenaltiesEnabled = 1
+	PenaltiesEnabled = 0
 	EnablePickRules = 1
 	Default_Keys = 
 	[

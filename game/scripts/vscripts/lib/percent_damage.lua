@@ -28,6 +28,7 @@ function PercentDamage:_init()
 
 	local MagicalDamageFromMainAtt = {
 		"dazzle_shadow_wave",
+		"tiny_toss",
 		"lina_dragon_slave",
 		"lina_light_strike_array",
 		"lina_laguna_blade",

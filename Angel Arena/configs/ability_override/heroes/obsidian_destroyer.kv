@@ -1,4 +1,4 @@
-4//=================================================================================================================
+//=================================================================================================================
 // Obsidian Destroyer: Arcane Orb
 //=================================================================================================================
 "obsidian_destroyer_arcane_orb"
@@ -17,13 +17,13 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"mana_pool_damage_pct"	"6.0 6.5 7.0 7.5 8.0 8.5 9.0"
+			"mana_pool_damage_pct"	"6 7 8 9 10 11 12"
 			"LinkedSpecialBonus"	"special_bonus_unique_outworld_devourer"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"mana_cost_percentage"	"5"
+			"mana_cost_percentage"	"3 3.5 4 4.5 5 5.5 6.0"
 		}
 	}
 }	
@@ -95,48 +95,7 @@
 }	
 
 //=================================================================================================================
-// Obsidian Destroyer: Essence Aura
-//=================================================================================================================
-"obsidian_destroyer_essence_aura"
-{
-	"MaxLevel" 					"7"
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"radius"			"1000 1200 1400 1800 2000 2500 2800"
-		}
-		"02"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"bonus_mana"	    "75 150 225 300 400 600 700"
-		}
-		"03"
-		{
-			"var_type"			"FIELD_FLOAT"
-			"restore_amount"	"10 15 20 25 28 30 32"
-		}
-		"04"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"restore_chance"	"50"
-		}
-		"05"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"intelligence_bonus"	"4"
-		}
-		"06"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"intelligence_duration"	"30"
-		}
-	}
-}
-//=================================================================================================================
-	// Obsidian Destroyer: Equilibrium (Essence Flux)
+// Obsidian Destroyer: Equilibrium (Essence Flux)
 //=================================================================================================================
 "obsidian_destroyer_equilibrium"
 {
@@ -144,7 +103,7 @@
     //-------------------------------------------------------------------------------------------------------------
     "MaxLevel"                      "7"
 
-   "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
     "SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 
@@ -168,17 +127,7 @@
 		"02"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"mana_restore"		"14 15 16 17 18 19 20"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"mana_capacity_steal"	"5 7 9 11 13 15 17"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"mana_capacity_duration"	"30 40 50 60 70 80 90"
+			"mana_restore"		"35 40 45 50 55 60 65"
 		}
     }
 }

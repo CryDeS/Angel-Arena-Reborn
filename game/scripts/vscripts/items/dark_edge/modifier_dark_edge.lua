@@ -79,7 +79,7 @@ function mod:OnAttackLanded(params)
 
 	if not target:IsAlive() or not parent:IsAlive() then return end
 
-	if parent:IsRealHero() and not parent:IsRangedAttacker() and MeleeSecondAttack:CanSecondAttack(parent) then
+	if not parent:IsIllusion() and not parent:IsRangedAttacker() and MeleeSecondAttack:CanSecondAttack(parent) then
 		local cd = self.attackCd * parent:GetCooldownReduction()
 
 		parent:AddNewModifier(parent, ability, "modifier_dark_edge_cd", { duration = cd })

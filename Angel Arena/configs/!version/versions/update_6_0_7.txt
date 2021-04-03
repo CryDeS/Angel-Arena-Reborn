@@ -1,0 +1,404 @@
+Hero changes:
+ Arc Warden:
+  - Rune forge cooldown changed from 75 to 60
+  - Base Damage changed from 25-35 to 35-40
+  - Base agility changed from 16 to 26
+  - 2 skill bonus attack speed changed from 60/70/80/90/100/120/150 to 70/80/90/100/110/120/150
+  
+ Ancient Apparation:
+  - 2 skill slow changed from 25/29/33/37/41/45/50% to 18/20/22/24/26/28/30%
+  - Ultimate damage changed from 12.5/22/32/41/52/64/75 to15/25/40/75/90/110/150
+  
+ Axe:
+  - 2 skill damage from str changed from 20% to 25%
+  - 3 skill damage from attack changed from 1 to 1/1.1/1.2/1.3/1.4/1.5/1.6
+  
+ Abyssal Underlord:
+  - 1 skill radius changed from 400 to 550
+  - 2 skill cooldown changed from 25/24/21/20/18/16/15 to 15
+  - 3 skill radius changed from 1000 to 1200
+  
+ Batrider:
+  - Agility per level changed from 2.2 to 2.8
+  - Strength per level chagned from 2.4 to 3.0
+  - Base damage changed from 14-18 to 34-38
+
+ Beastmaster:
+  - 1 skill cooldown changed from 19/18/17/16/15/14/13 to 12
+  - 3 skill boar health changed from 200/300/400/500 to 400/600/800/1000
+  
+ Bristleback:
+  - 1 skill slow changed from 20% to 10%
+  - 2 skill stack damage changed from 19/21/23/25/28/30/32 to 22/24/28/30/32/34/38
+  - 2 skill base damage changed from 28/32/34/38/42/48/54 to 30/34/36/40/42/48/56
+  
+ Broodmother:
+  - 1 skill damage changed from 125/225/275/325/350/400/450 to 125/225/300/350/375/450/575
+  - 2 skill health regen changed from 2/4/6/8/16/20/36 to 35/40/45/50/55/60/70
+  - 3 skill duration changed from 2 to 4
+  
+ Bounty Hunter:
+  - 1 skill manacost changed from 125 to 70/75/80/85/90/95/100
+  - 2 skill cooldown changed from 6/5.5/5/4.5/4/3.5/3 to 3
+  - 3 skill fade time changed from 1.0/0.75/0.5/0.25/0.2/0.15/0.1 to 0.3
+  - 3 skill manacost changed from 50/75/100/125/150/175/200 to 50
+  - 3 skill slow changed from 15/20/25/30/35/40/45% to 30%
+  - 3 skill slow duration changed from 3 to 3/3.2/3.4/3.6/3.8/4.0/4.2
+  - Base armor changed from 0 to 2
+  - Base strength changed from 26 to 21
+  - Base agility changed from 21 to 26
+  - Agility per level changed from 2.9 to 3.2
+  - Intellect per level changed from 2.4 to 1.8
+  
+ Centaur Warrunner:
+  - 1 skill damage changed from 120/140/200/250/300/400/435 to 120/180/225/300/350/450/535
+  - 2 skill strength damage changed from 75% to 100%
+  - Strength per level chagned from 3 to 4
+  
+ Clinkz:
+  - Ultimate bonus damage changed from 6% to 12/13/14/15/16/17/18%
+  - Ultimate bonus health changed from 30/35/40/45/50/55/60% to 30/40/50/60/70/80/90%
+  
+ Clockwerk:
+  - 2 skill damage changed from 80/140/180/220/310/400/520 to 100/150/200/250/325/450/575
+  - 2 skill manaburn changed from 40/80/100/120/160/250/350 to 80/100/140/180/220/280/350
+  - Ultimate radius changed from 2000 to 2500
+  
+ Chen:
+  - 1 skill cooldown changed from 6 to 9/8.5/8/7.5/7/6.5/6
+  - 1 skill manacost changed from 50/100/150/200/250/300/350 to 75/90/110/130/150/175/200
+  - Ultimate heal changed from 700/1200/1800/2200/2400/3200/4200 to 400/500/750/900/1000/1250/1500
+  - Ultimate cast point changed from 0.3/0.25/0.2/0.15/0.1/0.05/0.0 to 0.1
+  - Ultimate cooldown changed from 30 to 40/38/36/34/32/30/28
+  - Talent for ultimate -20sec cd changed to -6sec cooldown
+  
+ Charon:
+  - Ultimate cooldown changed from 50 to 75
+  
+ Grimstroke:
+  - 3 skill max damage changed from 100/166/233/300/366/433/500 to 250/300/350/400/500/550/600
+  - 3 skill bonus movespeed changed from 20/24/28/32/36/40/44% to 20%
+  - 3 skill stun duration changed from 1.5/1.8/2.1/2.4/2.7/3.1/3.5 to 1.5
+  - Ultimate cooldown changed from 60 to 50
+  
+ Darkseer:
+  - Base strength changed from 2.8 to 3.2
+  - Base intellect changed from 2.9 to 3.4
+  - Base move speed changed from 300 to 310
+  - Base armor changed from 0 to 1
+  - 1 skill cooldown changed from 20 to 18
+  - 1 skill radius changed from 250/300/325/350/425/450/475 to 400/425/450/475/500/525/550
+  - 2 skill cooldown changed from 12 to 10
+  
+ Dragon Knight:
+  - 3 skill bonus armor changed from 3/6/8/12/14/16/18 to 5/10/15/20/25/30/35
+  - Ultimate cooldown changed from 75 to 70
+  
+ Drow Ranger:
+  - 1 skill manacost changed from 15/17/20/22/25/27/30 to 15
+  - 3 skill cooldown changed from 20/19/18/17/16/15/14 to 14
+  - 3 skill manacost changed from 50/60/70/80/90/120/150 to 50/60/70/80/90/100/110
+  - 3 skill arrow range multiplier changed from 2 to 3
+  
+ Disruptor:
+  - Ultimate cooldown changed from 90/80/70/60/50/40/35 to 60
+  - Ultimate damage max changed from 250/300/350/400/450/500/550 to 250/325/375/475/550/650/750
+  - Ultimate manacost changed from 125/175/225/400/560/780/900 to 125/150/175/200/225/250/300
+  
+ Enigma:
+  - Ultimate cooldown changed from 75 to 80
+  
+ Viper:
+  - 1 skill cooldown changed from 2/1.7/1.5/1.3/1/0.5/0 to 0
+  - 3 skill damage changed from 10/15/20/25/35/50/55 to 15/25/40/55/75/90/100
+  - 3 skill damage from agi changed from 25% to 35%
+  - Ultimate cooldown changed from 70/50/40/30/20/19/18 to 35
+  
+ Nature Prophet:
+  - 2 skill cooldown changed from 45/40/35/30/25/20/10 to 30/27/25/22/20/15/10
+  - 2 skill manacost changed from 95 to 100
+  - 2 skill cast point changed from 2.0 to 2.5
+  
+ Nightstalker:
+  - 1 skill manacost changed from 80/90/100/110/120/130/140 to 50/60/70/80/90/100/110
+  
+ Nyx Assassin:
+  - 2 skill cooldown changed from 28/20/16/12/10/8/5 to 12/11/10/9/8/7/6 
+  
+ Huskar:
+  - Ultimate cooldown changed from 12 to 16
+  - Ultimate slow changed from 40/50/60/70/80/90/100% to 30/35/40/45/50/55/60%
+ 
+ Huntress:
+  - 3 skill cooldown changed from 0s to 1s
+  
+ Earthshaker:
+  - 1 skill stun duration changed from 1/1.25/1.5/1.75/2/2.1/2.25 to 2
+  - 1 skill cooldown changed from 15 to 14
+  - Ultimate cooldown changed from 90/80/70/60/58/55/50 to 60
+  - Ultimate echo damage changed from 90/120/160/180/200/220/240 to 100/140/180/200/250/280/300
+  
+ Elder Titan:
+  - 1 skill damage changed from 100/150/200/250/300/350/400 to 100/150/225/300/350/450/500
+  - 1 skill sleep duration changed from 2/3/4/5/5/5/5 to 2/2.5/3/3.5/4/4.5/5
+  
+ Fireblade:
+  - Ultimate cast time changed from 0.5 to 0.15
+  
+ Gun Joe:
+  - 3 skill bonus attack speed changed from 20/40/60/80/100/120/140 to 40/60/80/100/120/140/160
+  - Ultimate damage frm attack changed from 70/80/90/100/110/120/130% to 100/105/110/115/120/125/130%
+  - Base strength changed from 20 to 22
+  - Base agility changed from 20 to 25
+  - Bonus strength changed from 2.5 to 2.6
+  - Bonus agility per level changed from 2.5 to 2.9
+  
+ Sven:
+  - 2 skill cleave damage changed from 25/30/40/50/60/70/75% to 40/50/60/70/80/90/100%
+  
+ Skywrath Mage:
+  - 1 skill int multiplier changed from 0.8 to 1.0
+  - 3 skill cast point changed from 0.2 to 0.0
+  
+ Slardar:
+  - Ultimate cooldown changed from 10 to 7
+  
+ Shadow Fiend:
+  - 1/2/3 manacost changed from 75 to 90
+  
+ Shadow Song:
+  - 1 skill status resistance decrease changed from 5% to 7.5%
+  - 2 skill damage changed from 25/35/45/55/65/75/85 to 35/45/55/65/75/85/95
+  - 2 skill bonus duration per hero changed from 3 to 10
+  - 2 skill bonus duration per creep changed from 1 to 2.5
+  - Base agility changed from 18 to 24
+  - Agility per level changed from 2.9 to 2.8
+  - Strength per level changed from 2.3 to 3.0
+  - Base armor changed from 0 to 1
+  - Base health regen chagned from 2.5 to 5
+  - Base health changed from 100 to 200
+  - Base move speed changed from 300 to 305
+  
+ Shadow Demon:
+  - 3 skill stack damage changed from 29/32/42/52/62/72/82 to 30/35/45/60/70/80/90
+  
+ Storm Spirit:
+  - 1 skill manacost changed from 100 to 50/60/70/80/90/100/110
+  - 2 skill manacost changed from 100/110/120/130/140/150/160 to 80/90/100/110/120/130/140
+  - 2 skill duration changed from 1.0/1.5/2.0/2.4/2.6/2.8/3 to 2.0/2.2/2.3/2.5/2.6/2.7/3
+  - 3 skill AOE changed from 275 to 300
+  - 3 skill damage from intellect changed from 35% to 45%
+  - Ultimate manacost per distance changed from 1.5 to 1.47
+  - Electric Rave cooldown changed from 20 to 12
+  
+ Spectre:
+  - Desolate damage changed from 50/55/60/65/70/75/80 to 25/35/45/55/65/75/85
+  - Ultimate cooldown changed from 90 to 100
+  - Ultimate bonus damage for illusion changed from 200% to 250%
+  
+ Spike:
+  - Talent for bonus damage by killed creeps damage changed from 5 to 2
+ 
+ Spirit Breaker:
+  - Bonus strength per level changed from 3.2 to 3.5
+  
+ Lich:
+  - Ultimate cooldown changed from 45 to 55
+  
+ Lone Druid:
+  - Bear separation of souls damage changed from 30% to 50%
+  - Bonus agility per level changed from 2.9 to 3.2
+  - Health regen changed from 0.3 to 3.3
+  
+ Luna:
+  - Ultimate with scepter hit count to one target now same as hit count
+  
+ Lycan:
+  - 1 skill cooldown changed from 15 to 12
+  - 3 skill bonus hp regen changed from 15/20/25/30/35/40/45 to 20/25/30/35/40/45/50
+  - 3 skill bonus damage changed from 15/25/35/40/52/65/70% to 40/50/60/70/80/90/100%
+  - Ultimate cooldown changed from 75 to 70
+  
+ Templar Assassin:
+  - Ultimate fade time changed from 2/2/2/1.5/1/0.5/0 to 0.5
+ 
+ Techies:
+  - 1 skill charges changed from 3 to 2
+  - 1 skill manacost changed from 30/40/50/60/70/80/90 to 90/100/110/120/130/140/150
+  - Sign cooldown changed from 160 to 60
+  - Sign duration changed from 180 to 50
+  - Sign radius changed from 200 to 300
+  - Ultimate cast point changed from 0.8/0.75/0.7/0.65/0.6/0.55/0.5 to 0.5
+  - Attack range changed from 900 to 1200
+  
+ Timbersaw:
+  - Base strength changed from 22 to 26
+  - 1 skill damage changed from 100/150/200/250/300/350/400 to 125/175/275/325/400/450/525
+  
+ Tiny:
+  - 2 skill damage from main stat changed from 0% to 75%
+  - Base strength changed from 24 to 30
+  
+ Tinker:
+  - 1 skill duration creep changed from 6 to 1
+  
+ Treant Protector:
+  - 2 skill damage changed from 25/35/45/58/72/85/100 to 35/50/75/90/110/125/150
+  - 3 skill radius changed from 1600 to global
+  - 4 skill radius changed form 125 to 150
+  - 4 skill cooldown changed from 10 to 3
+  - 4 skill heal amplify changed from 0 to 40%
+  - Ultimate radius changed from 675 to 800
+  - Ultimate damage from strength to creep changed from 400% to 100%
+ 
+ Troll Warlord:
+  - 1 skill bonus armor changed from 1/1/2/2/3/3/4 to 1/2/3/4/5/6/7
+  - 3 skill bonus attack speed changed from 3 to 7
+  
+ Tusk:
+  - 1 skill damage changed from 100/150/200/250/320/380/425 to 100/175/250/300/350/425/525
+  - 1 skill manacost changed from 100/105/110/115/125/132/140 to 70/75/80/85/90/95/100
+  - Base strength changed from 22 to 24
+  - Intellect per level changed from 1.5 to 1.8
+  - Base armor changed from 0 to 2
+  
+ Omniknight:
+  - 1 skill heal/damage changed from 110/160/220/300/340/390/450 to 120/160/250/300/375/425/550
+  
+ Outworld Devouver:
+  - 1 skill damage from manapool changed from 6/6.5/7/7.5/8/8.5/9% to 6/7/8/9/10/11/12%
+  - 1 skill manacost changed from 5% to 3/3.5/4/4.5/5/5.5/6%
+  - 3 skill mana restore changed from 14/15/16/17/18/19/20% to 35/40/45/50/55/60/65%
+  - Base agility changed from 16 to 25
+  - Intellect per level changed from 3 to 3.5
+  
+ Phanthom Lancer:
+  - 2 skill cooldown changed from 18 to 15
+  - 3 skill range changed from 700 to 850
+  
+ Riki:
+  - Bonus agi per level changed from 1.8 to 2.6 
+  
+ Reaver Lord:
+  - 2 skill cooldown changed from 16/14/12/10/8/6/5 to 11/10/9/8/7/6/5
+  - 2 skill manacost changed from 20/30/40/50/60/70/80 to 60/70/80/90/100/110/120
+  
+ Puck:
+  - Bonus int per level changed from 2.8 to 3.8
+  - 2 skill damage changed from 110/140/180/220/350/420/500 to 150/200/250/300/350/450/550
+
+ Venomancer:
+  - 2 skill damage changed from 25/40/47/60/70/75/80 to 25/40/60/80/100/120/140
+  - 2 skill hp regen reduction changed from 0% to 20%
+  - Ultimate manacost changed from 200/300/400/600/800/1000/1500 to 150/200/250/300/350/400/450
+  - Ultimate duration changed from 8 to 10
+  
+ Queen of Pain:
+  - 1 skill duration changed from 3.0 to 4.0
+  - 1 skill cooldown changed from 16/14/12/8/6/5/4 to 10/9/8/7/6/5/4
+  - Base strength changed from 16 to 20
+  - Strength per level changed from 1.8 to 2.4
+  - Ultimate damage changed from 360/450/560/675/800/900/1000 to 400/525/625/825/925/1000/1250
+  - Ultimate damage with scepter changed from 400/525/600/725/875/950/1150 to 525/625/825/925/1000/1250/1400
+  
+ Ursa:
+  - 3 skill damage changed from 5/10/15/20/25/30/35 to 10/15/20/25/30/35/40
+  
+ Undying:
+  - Tombstone radius changed from 750 to 800
+
+ Warlock:
+  - 2 skill cooldown changed from 16 to 14
+  - 3 skill cast point changed from 0.5/0.4/0.3/0.2/0.1/0.05/0.05 to 0.05
+  
+ Windrunner:
+  - 3 skill cooldown changed from 20/18/17/16/14/13/12 to 12
+  - Base strength changed from 18 to 20
+  - Base intellect changed from 18 to 22
+  
+ Wisp:
+  - 2 skill damage from strength changed from 20% to 40%
+  
+ Zeus:
+  - 1 skill damage changed from 85/100/125/165/185/200/225 to 100/125/150/175/200/250/300
+  - Nimbus cooldown changed from 50 to 45
+ 
+Item changes:
+ Amber Knife:
+  - Recipe cost changed from 700 to 200
+  
+ Damned Eye:
+  - Bonus all stats changed from 10 to 14
+  
+ Devour Helm:
+  - Can't be used to dominate ancient creeps
+  
+ Enigmatic Fire:
+  - Cooldown changed from 60 to 10
+  
+ Manta style 1/2/3:
+  - Bonus str changed from 10/26/75 to 10/20/40
+  - Bonus agi changed from 26/56/100 to 20/40/60
+  - Bonus int changed from 10/26/65 to 10/20/40
+
+ Paladin Sword:
+  - Heal amplification changed from 35% to 50%
+  
+ Psychic Headband:
+  - Bonus intellect changed from 15% to 25%
+
+ Plague Staff:
+  - Bonus spell amp changed from 4% to 10%
+  
+ Pipe of Insight:
+  - Barrier radius changed from 900 to 1200
+  
+ Mekasm:
+  - Heal changed from 250 to 300
+  - Manacost changed from 225 to 150
+  
+ Chipped Vest:
+  - Damage to hero changed from 40 to 60
+  - Damage to creep changed from 20 to 60
+  - Health regen changed from 3.5 to 5
+  
+ Ocean Heart:
+  - All stats changed from 5 to 4
+  - Health regen changed from 30 to 40
+  - Mana regen changed from 15 to 20
+  
+ Clumsy Net:
+  - Bonus all stats changed from 20 to 22
+  
+ Titan Sliver:
+  - Bonus base damage changed from 50% to 45%
+  
+ Gleipnir:
+  - Chain damage changed from 160 to 250
+  - Chain cooldown changed from 0.2 to 0.01
+  - Bonus intellect changed from 20 to 40
+  - Bonus strength changed from 12 to 15
+  - Bonus agility changed from 12 to 20
+  - Active damage changed from 220 to 500
+  - Bonus damage changed from 30 to 50
+  
+Other changes:
+ - Penalties disabled until Valve fix disconnect-bug
+ - Demon warrior creep rupture  damage changed from 80 to 40
+ - Beast creep stack gold changed:
+  -   1 lvl from 108-124 to 114-130
+  -   5 lvl from 132-140 to 140-150
+  -  10 lvl from 140-156 to 160-180
+  -  15 lvl from 160-172 to 200-220
+  -  20 lvl from 176-200 to 220-240
+  -  25 lvl from 200-220 to 260-280
+  -  40 lvl from 240-252 to 280-300
+  -  60 lvl from 256-268 to 300-320
+  -  80 lvl from 280-308 to 320-340
+  - 100 lvl from 360-368 to 400-500
+  
+Fixes:
+ - Hoodwink 1 skill fixed
+ - Possessed Demon skill casting
+ - Lone Druid spirit bear and bandoline blade, mozaius blade, dark edge
+ - Charon ultimate and damage into one target
