@@ -164,7 +164,7 @@ Hero changes:
   - Ultimate cooldown changed from 10 to 7
   
  Shadow Fiend:
-  - 1/2/3 manacost changed from 75 to 90
+  - 1/2/3 manacost changed from 90 to 75
   
  Shadow Song:
   - 1 skill status resistance decrease changed from 5% to 7.5%
