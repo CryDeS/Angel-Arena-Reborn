@@ -1,0 +1,2 @@
+Fixed:
+ - Rikimaru base strength

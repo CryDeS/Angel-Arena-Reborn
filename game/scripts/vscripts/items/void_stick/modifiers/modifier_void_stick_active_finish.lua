@@ -36,7 +36,6 @@ end
 
 --------------------------------------------------------------------------------
 function modifier_void_stick_active_finish:OnCreated(kv)
-    print(1)
     self.after_cast_mana_regen = self:GetAbility():GetSpecialValueFor("after_cast_mana_regen")
     self.after_cast_reduce_manacost_pct = self:GetAbility():GetSpecialValueFor("after_cast_reduce_manacost_pct")
 end
