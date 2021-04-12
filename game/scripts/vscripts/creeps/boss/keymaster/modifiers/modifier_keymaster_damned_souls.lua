@@ -1,37 +1,43 @@
 modifier_keymaster_damned_souls = modifier_keymaster_damned_souls or class({})
 local mod = modifier_keymaster_damned_souls
 
-function mod:IsHidden() 		return false end
-function mod:IsPurgable() 		return false end
-function mod:DestroyOnExpire() 	return true end
-function mod:IsPurgeException() return false end
+function mod:IsHidden() 			return false end
+function mod:IsPurgable() 			return false end
+function mod:DestroyOnExpire() 		return true end
+function mod:IsPurgeException() 	return false end
+function mod:GetEffectName() 		return "particles/econ/courier/courier_trail_orbit/courier_trail_orbit.vpcf" end
+function mod:GetEffectAttachType() 	return PATTACH_ABSORIGIN_FOLLOW end
 
-function mod:OnDestroy()
-	if not IsServer() then return end
+if not IsServer() then return end
 
+function mod:ReleaseProjectiles()
 	if self.timer ~= nil then
 		Timers:RemoveTimer(self.timer)
 		self.timer = nil
 	end
 
+	-- Crydes: Deleting projectile cause dota crash(but when projectile is still flying - there is no crash. i dont know wtf that)
 	for proj, _ in pairs(self.projs) do
-		ProjectileManager:DestroyTrackingProjectile(proj)
+		--ProjectileManager:DestroyTrackingProjectile(proj)
 	end
 
 	self.projs = {}
+end
+
+function mod:OnDestroy()
+	self:ReleaseProjectiles()
 
 	local parent = self:GetParent()
 
 	if not parent or parent:IsNull() then return end
 
-	parent:EmitSound( "Boss_Keymaster.DamnedSouls.DestroyEffect")
-
-	ParticleManager:CreateParticle( "particles/econ/items/outworld_devourer/od_ti8/od_ti8_santies_eclipse_area_beams.vpcf", PATTACH_ABSORIGIN_FOLLOW, parent )
+	if parent:IsAlive() then
+		parent:EmitSound( "Boss_Keymaster.DamnedSouls.DestroyEffect")
+		ParticleManager:CreateParticle( "particles/econ/items/outworld_devourer/od_ti8/od_ti8_santies_eclipse_area_beams.vpcf", PATTACH_ABSORIGIN_FOLLOW, parent )
+	end
 end
 
 function mod:OnCreated(kv)
-	if not IsServer() then return end
-
 	if not self or self:IsNull() then return end
 
 	local ability = self:GetAbility()
@@ -170,12 +176,4 @@ function mod:OnHit(hTarget)
 			end
 		end)
 	end
-end
-
-function mod:GetEffectName()
-	return "particles/econ/courier/courier_trail_orbit/courier_trail_orbit.vpcf"
-end
-
-function mod:GetEffectAttachType()
-	return PATTACH_ABSORIGIN_FOLLOW
 end
