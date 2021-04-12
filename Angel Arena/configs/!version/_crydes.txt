@@ -1,2 +1,3 @@
 Fixed:
  - Rikimaru base strength
+ - Crash with keymaster
