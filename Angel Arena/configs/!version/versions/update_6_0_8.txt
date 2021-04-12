@@ -1,0 +1,164 @@
+Hero changes:
+ Broodmother:
+  - Spawn Spiderlings Cooldown changed from 10 to 7
+  - Spawn Spiderlings Debuff duration changed from 3 to 20
+  - Spawn Spiderlings Impact damage changed from 125 225 300 350 375 450 575 to 150 275 400 525 650 775 900
+  - Insatiable Hunger Manacost changed from 100 150 200 250 300 350 400 to 50 65 80 95 110 125 140
+  - Insatiable Hunger Bonus damage changed from 100 150 200 225 250 375 400 to 40 60 80 100 120 140 160
+  - Insatiable Hunger Lifesteal changed from 60 70 80 90 115 130 150 to 50 60 70 80 90 100 110
+  - Insatiable Hunger Duration changed from 14 to 8 9 10 11 12 13 14
+  - Silken Bola Manacost changed from 50 to 50 60 70 80 90 100 110
+  - Silken Bola Movement speed slow rescaled from dota params to 25 30 35 40 45 50 55
+  - Silken Bola Duration changed from dota params to 6
+  - Silken Bola Impact damage changed from dota params to 150 200 250 300 350 400 450
+  - Silken Bola Bonus magical attack damage changed from dota params 15 20 25 30 35 40 45
+  - Silken Bola Miss chance changed from dota params to 40%
+
+ Centaur Warrunner:
+  - Hoof Stomp Radius changed from 315 to 330
+
+ Death Prophet:
+  - Spirit Siphon Percent damage changed from 4 to 2.3 2.6 2.9 3.1 3.4 3.7 4
+  - 25 lvl talent changed from -20s cooldown spirit siphon to -10s cooldown spirit siphon
+  
+ Faceless Void:
+  - Time Dilation Cooldown slow changed from 100% to 60%
+  - Time Dilation Damage per stack changed from dota params to 30 40 50 60 70 80 90
+  
+ Invoker:
+  - Chaos Meteor Cooldown changed from 20 to 30
+  - Chaos Meteor Land time changed from 1.3 to 1.13
+  
+ Lifestealer:
+  - Feast Damage percent changed from dota params to 1.1 1.6 2.1 2.6 3.1 3.6 4.1
+  - Open Wounds Cooldown changed from 25 to 13
+
+ Lina:
+  - Laguna Blade Cooldown changed from 70.0 60.0 50.0 40.0 35.0 30.0 25.0 to 70.0 65.0 60.0 55.0 50.0 45.0 40.0
+  - 25 lvl talent changed from -25s cooldown laguna blade to -15s cooldown laguna blade
+ 
+ Night Stalker:
+  - Dark Ascencion Cooldown changed from 75 to 50
+  - Dark Ascencion Duration changed from 15 to 20
+  - 25 lvl talent changed from -60s cooldown Dark Ascencion to -15s cooldown Dark Ascencion
+  
+ Oracle:
+  - Fortunes End Cooldown changed from 6 to 8
+  - Fates Edict Cooldown changed from 12 to 13
+  - Purifying Flames Cooldown changed from 2.25 to 2.75
+  - False Promise Cooldown changed from 60 to 70
+ 
+ Riki:
+  - Tricks Of The Trade damage from attack changed from 75 to 60
+  - Tricks Of The Trade damage from agility changed from dota params to 50 60 70 80 90 100 110
+  
+ Shadow Demon:
+  - Demonic Purge Cooldown changed From 50 to 40
+  - 25 lvl talent changed from -30s cooldown Demonic Purge to -10s cooldown Demonic Purge
+  
+ Techies:
+  - Blast Off Self damage changed from 10 to 25
+  - 25 lvl talent changed from +50 mines movement speed to +60 mines movement speed
+  
+ Timbersaw:
+  - Timber Chain Speed changed from 1300 1417 1533 1650 1767 1883 2000 to 2600
+  - Chakram Cast time changed from 0.3 to 0.15
+  
+ Tinker:
+  - Defense Matrix Status resist changed from 40 to 50
+
+ Troll Warlord:
+  - Rampage Cooldown changed from dota params to 55
+  - Rampage Manacost changed from dota params to 195
+  
+ Viper:
+  - Posion Attack Damage changed from 15 20 25 30 38 45 52 to 10 15 20 25 30 35 40
+  - Posion Attack Magic resist decrease changed from 3 4 5 6 7 8 9 to 2 3 4 5 6 7 8
+
+ Gun Joe:
+  - Calibrated Shot Attack multiplier changed from 100 105 110 115 120 125 130 to 130 135 140 145 150 155 160
+  - Calibrated Shot Bonus attack range changed from 1000 to 700
+
+ Mars:
+  - Base Strength changed from 23 to 25
+  - Base Intelligence changed from 17 to 20
+   
+Item changes: 
+ Necronomicon 1,2,3:
+  - Deleted
+  
+ Abyssal Blade 1&2:
+  - Overwhelm Cast range changed from 500 to 150
+  - Overwhelm Duration changed from 1 to 2
+
+ Death Shield:
+  - Craft changed from Vanguard + Recipe to Vanguard + Fury Shield + Recipe
+ 
+ Vanguard:
+  - Craft changed from Vitality Booster + Ring Of Health + Fury Shield to Vitality Booster + Ring Of Health
+
+ Force Staff:
+  - Bonus Hp Regen (10) changed to Bonus Health (150)
+  
+ Headdress:
+  - Bonus All Stats (2) changed to Bonus Hp Regen (2)
+
+ Hurricane Pike:
+  - Bonus Hp Regen (15) changed to Bonus Health (200)
+  
+ Tome Of Knowledge:
+  - Cooldown changed from 5 to 0
+  
+ Mage Slayer:
+  - Recipe cost changed from 600 to 400
+
+ Rebels Sword:
+  - Now does not drop from possessed demon
+  - Now crafts from Corrupted Skull + Sealed Rune + Boss Soul + Recipe (1200)
+  - Now grants: +50 Attack damage; +25 All stats; +20 Bonus attack speed; 8 Disarmor percent; 4 Disarmor constant; 40 Disarmor percent cap; 3 Disarmor duration.
+  
+ Vampire Fangs:
+  - Attack lifesteal changed from 15 to 18
+  - Spell lifesteal changed from 15 to 18
+  
+ Paladin Sword:
+  - Bonus spell lifesteal changed from 8% to 33%
+  
+Other changes:
+ - Dawnbreaker added
+ - Hoodwink scepter and shard added
+ - Slark shard
+ - Water Rune added on 2nd and 4th minutes
+ 
+Fixed:
+ - Underlord 1 skill
+ - Bane ultimate
+ - Batrider 1 skill
+ - Beastmaster 1 skill
+ - Brewmaster 1 skill
+ - Broodmother 3 skill
+ - Dark Willow 3 skill
+ - Grimstroke 1&2 skill
+ - Hoodwink 1 skill
+ - Jakiro 3 skill & ultimate
+ - Kunkka 1&2 skill
+ - Lich 1&2 skill
+ - Lifestealer 3 skill
+ - Lina ultimate
+ - Lycan 1 skill
+ - Puck 2 skill 
+ - Riki 2 skill
+ - Rubick 1 skill
+ - Shadow Shaman 2 skill
+ - Sven 2&3 skill
+ - Templar Assassin 3 skill
+ - Timbersaw 3 skill
+ - Tinker 2 skill
+ - Tiny 3 skill
+ - Treant 3 skill
+ - Ursa ultimate
+ - Warlock 1, 2, 3 skill
+ - Wraith King 1 skill
+ - Flicker
+ - Rikimaru base strength
+ - Crash with keymaster
