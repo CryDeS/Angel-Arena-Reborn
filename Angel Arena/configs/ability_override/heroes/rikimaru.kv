@@ -78,13 +78,10 @@
 		}
 		"03"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"max_charges"				"2"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"charge_restore_time"		"15"
+			"var_type"						"FIELD_FLOAT"
+			"AbilityChargeRestoreTime"		""
+			"LinkedSpecialBonus"			"special_bonus_unique_riki_9"
+			"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_SUBTRACT"
 		}
 	}
 }
@@ -148,21 +145,26 @@
 		"03"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"damage_pct"				"75"
+			"damage_pct"				"60"
 		}
 		"04"
+		{
+				"var_type"				"FIELD_INTEGER"
+				"agility_pct"			"50 60 70 80 90 100 110"
+		}
+		"05"
 		{
 			"var_type"					"FIELD_FLOAT"
 			"scepter_duration"			"4.0"
 			"RequiresScepter"			"1"
 		}
-		"05"
+		"06"
 		{
 			"var_type"					"FIELD_INTEGER"
 			"scepter_attacks"			"6 7 9 10 12 13 15"
 			"RequiresScepter"			"1"
 		}
-		"06"
+		"07"
 		{
 			"var_type"					"FIELD_INTEGER"
 			"scepter_cast_range"		"800"

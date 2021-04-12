@@ -34,6 +34,7 @@
 		{
 			"var_type"					"FIELD_INTEGER"
 			"count"						"6"
+			"LinkedSpecialBonus"		"special_bonus_unique_warlock_9"
 		}
 		"02"
 		{
@@ -77,9 +78,6 @@
     "AbilityChargeRestoreTime"   	"14"
     "AbilityCooldown"            	""
 
-	// Damage.
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"45 55 75 95 120 150 180"
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
@@ -95,18 +93,19 @@
 	{
 		"01"
 		{
-			"var_type"					"FIELD_FLOAT"
-			"duration"					"6.0"
+			"var_type"					"FIELD_INTEGER"
+			"damage"					"45 55 75 95 120 150 180"
+			"LinkedSpecialBonus"		"special_bonus_unique_warlock_7"
 		}
 		"02"
 		{
 			"var_type"					"FIELD_FLOAT"
-			"tick_interval"				"1.0"
+			"duration"					"6.0"
 		}
 		"03"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"range_tooltip"				"500"
+			"var_type"					"FIELD_FLOAT"
+			"tick_interval"				"1.0"
 		}
 	}
 }	
@@ -149,8 +148,8 @@
 		}
 		"02"
 		{
-			"var_type"				"FIELD_FLOAT"
-			"slow_rate_duration"	"6.5 5.8 5.0 4.2 3.5 2.8 2.0"
+			"var_type"				"FIELD_INTEGER"
+			"slow_per_second"		"12 14 17 19 23 25 27"
 		}
 		"03"
 		{

@@ -19,10 +19,8 @@ function modifier_rebels_sword_passive:OnCreated( kv )
     if not ability then return end
 
     self.bonus_damage           = ability:GetSpecialValueFor("bonus_damage")
-    self.bonus_armor            = ability:GetSpecialValueFor("bonus_armor")
     self.bonus_all_stats        = ability:GetSpecialValueFor("bonus_all_stats")
     self.bonus_attack_speed     = ability:GetSpecialValueFor("bonus_attack_speed")
-    self.bonus_health           = ability:GetSpecialValueFor("bonus_health")
 
     if IsServer() then 
         self.disarmor               = ability:GetSpecialValueFor("disarmor")          / 100
@@ -40,12 +38,10 @@ function modifier_rebels_sword_passive:DeclareFunctions() return
 {
     -- Properties
     MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
-    MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS,
     MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,
     MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
     MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,
     MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,
-    MODIFIER_PROPERTY_HEALTH_BONUS,
 
     -- Events
     MODIFIER_EVENT_ON_ATTACK_LANDED,
@@ -53,12 +49,10 @@ function modifier_rebels_sword_passive:DeclareFunctions() return
 end
 
 function modifier_rebels_sword_passive:GetModifierPreAttack_BonusDamage(kv)     return self.bonus_damage;       end 
-function modifier_rebels_sword_passive:GetModifierPhysicalArmorBonus(kv)        return self.bonus_armor;        end 
 function modifier_rebels_sword_passive:GetModifierBonusStats_Strength(kv)       return self.bonus_all_stats;    end 
 function modifier_rebels_sword_passive:GetModifierBonusStats_Agility(kv)        return self.bonus_all_stats;    end 
 function modifier_rebels_sword_passive:GetModifierBonusStats_Intellect(kv)      return self.bonus_all_stats;    end 
-function modifier_rebels_sword_passive:GetModifierAttackSpeedBonus_Constant(kv) return self.bonus_attack_speed; end 
-function modifier_rebels_sword_passive:GetModifierHealthBonus(kv)               return self.bonus_health;       end 
+function modifier_rebels_sword_passive:GetModifierAttackSpeedBonus_Constant(kv) return self.bonus_attack_speed; end  
 
 --------------------------------------------------------------------------------
 
