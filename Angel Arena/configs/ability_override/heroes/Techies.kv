@@ -307,7 +307,7 @@
 		"04"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"hp_cost"					"10"
+			"hp_cost"					"25"
 		} 
 		"05"
 		{
@@ -356,6 +356,28 @@
 			"var_type"					"FIELD_INTEGER"
 			"value"						"8"
 			"ad_linked_ability"			"techies_suicide"
+		}
+	}
+}
+// Ability: Special Bonus
+//=================================================================================================================
+"special_bonus_unique_techies_4"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"60"
+			"ad_linked_ability"			"multi_linked_or_ability"				   // multi_linked_or_ability means one of the abilities (not all) listed under linked_ad_abilities needs to be present for the talent to be valid.
+			"linked_ad_abilities"		"techies_land_mines techies_stasis_trap techies_remote_mines"
 		}
 	}
 }

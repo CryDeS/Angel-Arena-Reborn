@@ -163,7 +163,7 @@
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"70.0 60.0 50.0 40.0 35.0 30.0 25.0"
+	"AbilityCooldown"				"70.0 65.0 60.0 55.0 50.0 45.0 40.0"
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
@@ -178,6 +178,7 @@
 		{
 			"var_type"						"FIELD_INTEGER"
 			"damage"						"450 600 750 900 1000 1100 1200"
+			"LinkedSpecialBonus"			"special_bonus_unique_lina_5"
 		}
 		"02"
 		{
@@ -256,6 +257,28 @@
 		{
 			"var_type"					"FIELD_INTEGER"
 			"value"						"1.0"
+		}
+	}
+}
+//=================================================================================================================
+// Ability: Special Bonus
+//=================================================================================================================
+"special_bonus_unique_lina_6"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"value"						"15"
+			"ad_linked_ability"			"lina_light_laguna_blade"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 		}
 	}
 }

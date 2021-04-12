@@ -148,6 +148,8 @@ function AngelArena:InitGameMode()
 	GameRules:SetShowcaseTime(0.0)
 	GameRules:SetTreeRegrowTime(180)
 	GameRules:SetUseBaseGoldBountyOnHeroes(true)
+	GameMode:SetBountyRuneSpawnInterval(120.0)
+	GameRules:SetRuneSpawnTime(120)
 	for i = 0, 11 do
 		GameMode:SetRuneEnabled(i, true)
 	end
@@ -285,14 +287,22 @@ function AngelArena:OnAbandoned(arg)
 end
 
 function AngelArena:ModifierRuneSpawn(keys)
+	function Almostequal(value1, value2, epsilon)
+		return math.abs(value1 - value2) < epsilon
+	end
 	local rune_type = keys.rune_type
-
+	
 	if rune_type == 5 then return true end
 
 	local runes = { 0, 1, 2, 3, 4, 6 }
 
-	keys.rune_type = runes[RandomInt(1, #runes)]
-
+	local Dotatime = GameRules:GetDOTATime(false, false)
+	if Almostequal(120, Dotatime, 1) or Almostequal(240, Dotatime, 1) then 
+		keys.rune_type = 7
+	else
+		keys.rune_type = runes[RandomInt(1, #runes)]	
+	end
+	print (Dotatime)
 	return true
 end
 
