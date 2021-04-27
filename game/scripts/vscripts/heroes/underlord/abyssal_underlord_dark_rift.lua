@@ -1,17 +1,40 @@
 abyssal_underlord_dark_rift = class({})
+LinkLuaModifier("modifier_dark_rift_charges", "heroes/underlord/modifier_dark_rift_charges", LUA_MODIFIER_MOTION_NONE)
 
-function abyssal_underlord_dark_rift:IsHiddenWhenStolen() 		return false end
+function abyssal_underlord_dark_rift:IsHiddenWhenStolen() return false end
 
-function abyssal_underlord_dark_rift:GetAOERadius( ... )
+function abyssal_underlord_dark_rift:GetAOERadius()
 	return self:GetSpecialValueFor("radius")
+end
+
+function abyssal_underlord_dark_rift:GetIntrinsicModifierName()
+	return "modifier_dark_rift_charges"
+end
+
+function abyssal_underlord_dark_rift:CastFilterResultLocation(location)
+	if self:GetCaster():HasScepter() and self.dark_rift_mod and not self.dark_rift_mod:IsNull() then
+		if self.dark_rift_mod:GetStackCount() == 0 then
+			return UF_FAIL_CUSTOM
+		end
+	end
+	return UF_SUCCESS
+end
+
+function abyssal_underlord_dark_rift:GetCustomCastErrorLocation(location)
+	return "#dota_hud_error_no_charges"
 end
 
 function abyssal_underlord_dark_rift:OnSpellStart()
 	local caster = self:GetCaster()
 	local vPoint = self:GetCursorPosition()
 
-	local radius 			= self:GetSpecialValueFor("radius")
-	local teleport_delay	= self:GetSpecialValueFor("teleport_delay")
+	local radius 		= self:GetSpecialValueFor("radius")
+	local teleport_delay
+	if caster:HasScepter() then
+		teleport_delay	= self:GetSpecialValueFor("scepter_teleport_delay")
+	else
+		teleport_delay	= self:GetSpecialValueFor("teleport_delay")
+	end
 
 	local part_name 		= "particles/units/heroes/heroes_underlord/abbysal_underlord_darkrift_ambient.vpcf"
 	local point_part_name 	= "particles/units/heroes/heroes_underlord/abyssal_underlord_darkrift_target.vpcf"
@@ -51,4 +74,8 @@ function abyssal_underlord_dark_rift:OnSpellStart()
 			return nil
 		end 
 	end)
+
+	if caster:HasScepter() then
+		self.dark_rift_mod:SpendCharge()
+	end
 end
