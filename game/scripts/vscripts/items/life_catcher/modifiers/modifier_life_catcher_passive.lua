@@ -22,6 +22,7 @@ function mod:OnCreated( kv )
 	self.bonusHpReg = ability:GetSpecialValueFor("bonus_hpregen")
 	self.bonusMpReg = ability:GetSpecialValueFor("bonus_manaregen")
 	self.bonusDmg 	= ability:GetSpecialValueFor("bonus_damage")
+	self.bonusSpellAmp = ability:GetSpecialValueFor("spell_amp")
 
 	self:CommonInitDamageToExp( ability )
 end
@@ -37,6 +38,8 @@ function mod:DeclareFunctions() return
 	MODIFIER_PROPERTY_MANA_REGEN_CONSTANT,
 
 	MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
+
+	MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE,
 
 	MODIFIER_EVENT_ON_TAKEDAMAGE,
 }
@@ -75,3 +78,6 @@ end
 function mod:GetModifierPreAttack_BonusDamage( params )
 	return self.bonusDmg
 end 
+function mod:GetModifierSpellAmplify_Percentage( params )
+	return self.bonusSpellAmp
+end

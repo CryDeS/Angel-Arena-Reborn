@@ -4,7 +4,7 @@
 :: Please, configure you DOTA 2 PATH parent directory
 :: DOTA_PATH=D:\Games\Steam\steamapps\common\dota 2 beta\
 
-set DOTA_PATH=
+set DOTA_PATH=E:\SteamLibrary\steamapps\common\dota 2 beta
 set ADDON_NAME=angel_arena_reborn
 
 ::

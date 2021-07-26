@@ -1,3 +1,4 @@
 "DOTA_Tooltip_Ability_item_wisdom_shard"							"Wisdom Shard"
 "DOTA_Tooltip_Ability_item_wisdom_shard_bonus_int"					"+$int"
+"DOTA_Tooltip_Ability_item_wisdom_shard_bonus_spellamp"            "%+$spell_amp"
 "DOTA_Tooltip_Ability_item_wisdom_shard_lore"						"Scepter shard of old forgotten wizard."

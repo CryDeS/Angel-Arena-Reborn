@@ -16,10 +16,11 @@ function mod:OnCreated( kv )
 	if not ability then return end
 
 	self.bonusDamage = ability:GetSpecialValueFor("bonus_damage")
-	self.bonusAs 	 = ability:GetSpecialValueFor("bonus_as")
+	self.bonusHealth = ability:GetSpecialValueFor("bonus_health")
 	self.bonusStats  = ability:GetSpecialValueFor("bonus_stats")
 	self.bonusHpReg  = ability:GetSpecialValueFor("bonus_hpreg")
 	self.bonusMpReg  = ability:GetSpecialValueFor("bonus_mpreg")
+	self.bonusSpellAmp = ability:GetSpecialValueFor("bonus_spell_amp")
 	
 	self:CommonInitDamageToExp( ability )
 end
@@ -31,10 +32,11 @@ function mod:DeclareFunctions() return
 	MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT,
 	MODIFIER_PROPERTY_MANA_REGEN_CONSTANT,
 	MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
-	MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,
+	MODIFIER_PROPERTY_HEALTH_BONUS,
 	MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,
 	MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
 	MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,
+	MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE,
 
 	MODIFIER_EVENT_ON_TAKEDAMAGE,
 }
@@ -62,10 +64,6 @@ function mod:GetModifierBonusStats_Strength( params )
 	return self.bonusStats
 end
 
-function mod:GetModifierAttackSpeedBonus_Constant( params )
-	return self.bonusAs
-end
-
 function mod:GetModifierConstantHealthRegen( params )
 	return self.bonusHpReg
 end
@@ -74,5 +72,13 @@ function mod:GetModifierConstantManaRegen( params )
 	return self.bonusMpReg
 end
 
+function mod:GetModifierSpellAmplify_Percentage( params )
+	return self.bonusSpellAmp
+end
+function mod:GetModifierHealthBonus ( params )
+	return self.bonusHealth
+end
+
 mod.GetModifierBonusStats_Agility 	= mod.GetModifierBonusStats_Strength
 mod.GetModifierBonusStats_Intellect = mod.GetModifierBonusStats_Strength
+print ("Hello")

@@ -18,7 +18,7 @@
 	"ItemResult"					"item_soul_stone"
 	"ItemRequirements"
 	{
-		"01"						"item_steel_frame;item_life_catcher"
+		"01"						"item_health_gel;item_life_catcher"
 	}
 }
 
@@ -46,7 +46,7 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"4600"
+	"ItemCost"						"4200"
 	"ItemStackable"					"0"
 	"ItemBaseLevel"					"1"
 	
@@ -68,75 +68,81 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"bonus_damage"			"50"
+			"bonus_damage"			"30"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"bonus_stats"			"20"
+			"bonus_stats"			"10"
 		}
+		
 		"03"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"bonus_as"				"30"
-		}
-		"04"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"bonus_hpreg"			"10"
 		}
-		"05"
+		"04"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"bonus_mpreg"			"5"
 		}
 		
-		"06"
+		"05"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"abilitycastrange"		""
 		}
-		"07"
+		"06"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"damage"				"300"
 		}
-		"08"
+		"07"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"mainstat_to_dmg"		"250"
 		}
-		"09"
+		"08"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"projectile_speed"		"1200"
 		}
 		
 		// Dmg to exp 
-		"10"
+		"09"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"damage_to_exp_ranged"	"15"
 		}
-        "11"
+        "10"
         {
             "var_type"				"FIELD_FlOAT"
             "damage_to_exp_melee" 	"20"
         }
-		"12"
+		"11"
 		{
 			"var_type"				"FIELD_INTEGER"
 			"min_exp_ranged"		"48"
 		}
-		"13"
+		"12"
         {
             "var_type"				"FIELD_FlOAT"
             "min_exp_melee"			"60"
         }
-		"14"
+		"13"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"exp_cooldown"			"2"
+		}
+		"14"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_spell_amp"				"10"
+		}
+		"15"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_health"			"500"
 		}
 	}
 }
