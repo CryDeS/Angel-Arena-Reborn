@@ -50,6 +50,7 @@
 		{
 			"var_type"						"FIELD_INTEGER"
 			"burn_damage"					"3.0"
+			"LinkedSpecialBonus"			"special_bonus_unique_underlord_4"
 			"CalculateSpellDamageTooltip"			"0"
 		}
 		"07"
@@ -145,6 +146,7 @@
 		{
 			"var_type"						"FIELD_INTEGER"
 			"damage_reduction_pct"			"18 26 28 34 36 38 42"
+			"LinkedSpecialBonus"			"special_bonus_unique_underlord_3"
 		}
 		"03"
 		{
@@ -225,8 +227,14 @@
 			"var_type"						"FIELD_FLOAT"
 			"scepter_teleport_delay"		"1.5 1.25 1.1 1.0 0.75 0.6 0.5"
 			"RequiresScepter"				"1"
-		}
 		"04"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"scepter_health_bonus"			"1000 1500 2000"
+			"RequiresScepter"				"1"
+		}
+		}
+		"05"
 		{
 			"var_type"						"FIELD_INTEGER"
 			"max_charges"					"2"
@@ -234,3 +242,44 @@
 		}
 	}
 }
+//=================================================================================================================
+	// Abyssal Underlord: Fiend's Gate
+	//=================================================================================================================
+	"abyssal_underlord_dark_portal"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"865"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN |DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING "
+		"FightRecapLevel"				"1"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilitySound"					"Hero_Undying.Tombstone"
+		"MaxLevel"						"1"
+		"IsGrantedByScepter"			"1"
+		"HasScepterUpgrade"				"1"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"6000"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"30.0"
+			}	
+		}
+	}
