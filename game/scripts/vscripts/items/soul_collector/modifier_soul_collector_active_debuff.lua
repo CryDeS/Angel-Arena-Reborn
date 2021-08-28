@@ -8,7 +8,7 @@ function mod:IsHidden()         return false end
 function mod:IsPurgable()       return false end
 function mod:DestroyOnExpire()  return true end
 function mod:IsPurgable()       return false end
-function mod:IsPurgeException() return false end
+function mod:IsPurgeException() return true end
 function mod:RemoveOnDeath()    return true end
 
 function mod:OnCreated(kv)

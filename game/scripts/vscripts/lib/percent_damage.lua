@@ -27,6 +27,9 @@ function PercentDamage:_init()
 	PercentDamage:ListenAbilityCallback("pudge_rot", 							PudgeRot)
 
 	local MagicalDamageFromMainAtt = {
+		"invoker_tornado",
+		"invoker_sun_strike",
+		"invoker_deafening_blast",
 		"dazzle_shadow_wave",
 		"tiny_toss",
 		"lina_dragon_slave",

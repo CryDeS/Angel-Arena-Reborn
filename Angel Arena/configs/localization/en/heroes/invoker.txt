@@ -1,0 +1,3 @@
+"DOTA_Tooltip_ability_invoker_sun_strike_damage_pct"				"%DAMAGE FROM INT:"
+"DOTA_Tooltip_ability_invoker_tornado_damage_pct"				"%DAMAGE FROM INT:"
+"DOTA_Tooltip_ability_invoker_deafening_blast_damage_pct"			"%DAMAGE FROM INT:"

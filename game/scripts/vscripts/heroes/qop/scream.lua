@@ -9,7 +9,4 @@ function Damage(event)
 	local damage_total = caster:GetIntellect()*damage_pct + damage_const
 	ApplyDamage({ victim = target, attacker = caster, damage = damage_total, damage_type = DAMAGE_TYPE_MAGICAL, ability = event.ability }) 
 
-	if caster:HasTalent("special_bonus_unique_queen_of_pain_2") then
-		target:AddNewModifier(caster, event.ability, "modifier_queenofpain_scream_of_pain_fear", { duration = caster:GetTalentSpecialValueFor( "special_bonus_unique_queen_of_pain_2" )})
-	end 
 end
