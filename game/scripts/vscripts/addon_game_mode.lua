@@ -44,7 +44,7 @@ local armor_table = require('creeps/armor_table_summon') -- armor to units
 local MP_REGEN_PER_INT = 0.4
 
 RESPAWN_MODIFER = 0.135
-GOLD_PER_TICK = 5
+GOLD_PER_TICK = 4
 
 KILL_LIMIT = 100
 
@@ -87,6 +87,7 @@ local forbidden_items_for_clones = {
 
 local illusion_bug_crash =
 {
+	["npc_dota_hero_dawnbreaker"] = 1,
 	["npc_dota_hero_visage"] = 1,
 	["npc_dota_hero_weaver"] = 1,
 }
