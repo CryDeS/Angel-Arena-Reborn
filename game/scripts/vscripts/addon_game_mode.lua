@@ -157,11 +157,12 @@ function AngelArena:InitGameMode()
 	--GameRules:SetRuneSpawnTime(120)
 
 	GameRules:SetCustomGameEndDelay(1)
-	GameRules:GetGameModeEntity():SetFountainPercentageHealthRegen(7)
-	GameRules:GetGameModeEntity():SetFountainPercentageManaRegen(10)
-	GameRules:GetGameModeEntity():SetFountainConstantManaRegen(20)
-	GameRules:GetGameModeEntity():SetUseCustomHeroLevels(true)
-	GameRules:GetGameModeEntity():SetCustomXPRequiredToReachNextLevel(Constants.XP_PER_LEVEL_TABLE)
+	GameMode:SetFountainPercentageHealthRegen(7)
+	GameMode:SetFountainPercentageManaRegen(10)
+	GameMode:SetFountainConstantManaRegen(20)
+	GameMode:SetUseCustomHeroLevels(true)
+	GameMode:SetCustomXPRequiredToReachNextLevel(Constants.XP_PER_LEVEL_TABLE)
+	GameMode:SetFreeCourierModeEnabled( true )
 	--GameMode:SetTopBarTeamValuesVisible(false)
 	GameMode:SetBuybackEnabled(true)
 	GameMode:SetStashPurchasingDisabled(false)
@@ -894,15 +895,6 @@ function AngelArena:OnGameStateChange()
 							end
 						end
 
-						if hero then
-							local cr = CreateUnitByName("npc_dota_courier", courier_spawn[team]:GetAbsOrigin(), true, nil, hero, team)
-
-							cr:AddNewModifier(cr, nil, "modifier_courier", {duration = -1})
-
-							TeamHelper:ApplyForPlayers(team, function(tempPlayerID)
-								cr:SetControllableByPlayer(tempPlayerID, true)
-							end)
-						end
 					end
 					return nil
 				end
