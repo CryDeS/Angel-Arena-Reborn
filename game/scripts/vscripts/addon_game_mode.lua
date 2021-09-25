@@ -862,6 +862,7 @@ function AngelArena:OnGameStateChange()
 
 	if GameRules:State_Get() == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
 		if not is_game_start then
+			GameRules:SetTimeOfDay( 0.251 )
 			CreepSpawner:StartSpawning()
 			BossSpawner:OnGameStart()
 
