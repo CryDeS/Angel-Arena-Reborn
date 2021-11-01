@@ -450,6 +450,17 @@ function AngelArena:OrderFilter(event)
 		if unit and target == unit and ability:GetName() == "rubick_spell_steal" then
 			return UF_FAIL_DISABLE_HELP
 		end
+
+		if target:HasAbility("keymaster_dodge_mastery") then
+			local bannedAbilities = {
+				"item_force_staff",
+				"item_hurricane_pike"
+			}
+
+			for _,ban in ipairs(bannedAbilities) do
+				if ability:GetName() == ban then return false end
+			end
+		end
 	end
 
 	return true
