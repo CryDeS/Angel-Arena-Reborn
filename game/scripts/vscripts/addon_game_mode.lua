@@ -174,7 +174,7 @@ function AngelArena:InitGameMode()
 	GameRules:SetSameHeroSelectionEnabled(false)
 	GameRules:SetCustomGameAllowMusicAtGameStart( true )
 	GameRules:SetStartingGold(625)
-	GameRules:SetCustomGameBansPerTeam(2)
+	GameRules:SetCustomGameBansPerTeam(5)
 	GameRules:SetCreepSpawningEnabled( false )
 
 	-- AttributeDerivedStats
