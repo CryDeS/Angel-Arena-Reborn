@@ -31,6 +31,12 @@ function mod:DeclareFunctions() return
 }
 end
 
+function mod:CheckState() return
+{
+	[MODIFIER_STATE_CANNOT_BE_MOTION_CONTROLLED] = true
+}
+end
+
 function mod:GetMultiplier()
 	local parent = self:GetParent()
 
