@@ -15,6 +15,7 @@ function mod:OnCreated(kv)
 	if not ability then return end
 
 	self.bonusInt = ability:GetSpecialValueFor("bonus_int")
+	self.bonusSpellAmp = ability:GetSpecialValueFor("bonus_spellamp")
 end
 
 mod.OnRefresh = mod.OnCreated
@@ -22,9 +23,13 @@ mod.OnRefresh = mod.OnCreated
 function mod:DeclareFunctions() return
 {
 	MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,
+	MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE
 }
 end
 
 function mod:GetModifierBonusStats_Intellect()
 	return self.bonusInt
 end
+function mod:GetModifierSpellAmplify_Percentage()
+	return self.bonusSpellAmp
+end	

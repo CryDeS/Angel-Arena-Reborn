@@ -10,7 +10,6 @@
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCooldown"				"10 9 8 7 6 5 4"
-	"AbilityDuration"				"4.0"
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
@@ -29,7 +28,8 @@
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"duration_damage"		"50 55 60 75 95 120 150"
+			"duration_damage"		"35 45 55 70 85 105 130"
+
 		}
 		"03"
 		{
@@ -46,6 +46,17 @@
 			"var_type"				"FIELD_FLOAT"
 			"damage_interval"		"1.0"
 		}
+		"07"
+		{
+				"var_type"				"FIELD_INTEGER"
+				"duration_heal"		"10 15 20 30 40 50 65"
+		}
+		"08"
+		{
+				"var_type"				"FIELD_FLOAT"
+				"duration"		"5"
+				"LinkedSpecialBonus"		"special_bonus_unique_queen_of_pain_4"
+		}
 	}
 }
 
@@ -57,9 +68,8 @@
 	"MaxLevel"						"7"
 	"AbilityCastPoint"				"0.33 0.33 0.33 0.33 0.33 0.33 0.33"
 
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"15.0 14.0 13.0 10.0 8.0 7.0 6.0"
+	
+
 	
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
@@ -79,6 +89,12 @@
 		{
 			"var_type"				"FIELD_INTEGER"
 			"min_blink_range"		"200"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"AbilityCooldown"		"15.0 14.0 13.0 10.0 8.0 7.0 6.0"
+			"LinkedSpecialBonus"	"special_bonus_unique_queen_of_pain_6"
 		}
 	}
 }
@@ -109,14 +125,10 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastRange"				"0"
 	"AbilityCastPoint"				"0.0 0.0 0.0 0.0 0.0 0.0 0.0"
-
+	
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCooldown"				"9.0"
-
-	// Damage.
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"120 215 295 380 420 480 520"
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
@@ -137,6 +149,12 @@
 			"projectile_speed"		"900"
 		}
 		"03"
+		{
+				"var_type"				"FIELD_INTEGER"
+				"damage"		"120 215 295 380 420 480 520"
+				"LinkedSpecialBonus" "special_bonus_unique_queen_of_pain_2"
+		}
+		"04"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"damage_pct"			"125"
@@ -190,10 +208,11 @@
 			"Target" 		"TARGET"
 			"ScriptFile"    "heroes/qop/scream.lua"
 			"Function"      "Damage"
-			"dmg_const"		"%AbilityDamage"
+			"dmg_const"		"%damage"
 			"dmg_pct"		"%damage_pct"
 		}
 	}
+	
 }
 
 //=================================================================================================================
@@ -249,7 +268,7 @@
 		"06"
 		{
 			"var_type"			"FIELD_FLOAT"
-			"cooldown_scepter"	"35"
+			"cooldown_scepter"	"30"
 			"RequiresScepter"		"1"
 		}
 		"07"
@@ -270,3 +289,43 @@
         }
 	}
 }
+"special_bonus_unique_queen_of_pain_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6856"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"200"
+				"ad_linked_ability"			"queenofpain_scream_of_pain"				
+			}
+		}
+	}
+"special_bonus_unique_queen_of_pain_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"751"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"2"
+				"ad_linked_ability"			"queenofpain_blink"				
+			}
+		}
+	}
