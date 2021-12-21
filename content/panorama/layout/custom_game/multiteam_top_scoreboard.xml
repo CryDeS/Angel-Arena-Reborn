@@ -1,6 +1,6 @@
 <root>
 	<styles>
-		<include src="s2r://panorama/styles/dotastyles.css" />
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
 		<include src="s2r://panorama/styles/custom_game/multiteam_top_scoreboard.css" />
 		<include src="s2r://panorama/styles/custom_game/shared_scoreboard_styles.css" />
 		<include src="s2r://panorama/styles/custom_game/scoreboard_timer.css" />
@@ -56,4 +56,3 @@
 		</Panel>
 	</Panel>
 </root>
-

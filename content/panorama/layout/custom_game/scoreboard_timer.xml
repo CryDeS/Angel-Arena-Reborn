@@ -1,6 +1,6 @@
 <root>
 	<styles>
-		<include src="s2r://panorama/styles/dotastyles.css" />
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
 		<include src="s2r://panorama/styles/custom_game/scoreboard_timer.css" />
 	</styles>
 	<scripts>
@@ -10,4 +10,3 @@
 		<Label id="Timer" text="--:--" onactivate="OnTimerClick()"/>
 	</Panel>
 </root>
-
