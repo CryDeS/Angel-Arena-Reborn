@@ -1,0 +1,275 @@
+"venomancer_venomous_gale"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"800"
+	"AbilityCastPoint"				"0.0 0.0 0.0 0.0 0.0 0.0 0.0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"15.0"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"125"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"7.0"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"strike_damage"			"50 75 90 110 140 150 180"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"tick_damage"			"20 40 60 80 100 120 140"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"tick_interval"			"1"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"movement_slow"			"-50 -50 -50 -50 -50 -50 -50"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"150"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"speed"					"1200 1200 1200 1200 1200 1200 1200"
+		}
+	}
+}
+
+//=================================================================================================================
+// Venomancer: Poison Sting
+//=================================================================================================================
+"venomancer_poison_sting"
+{
+	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"venomancer_poison_sting"
+	"MaxLevel"						"7"
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"6.0"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage"					"12 20 30 40 50 60 70"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"movement_speed"			"-11 -12 -13 -14 -15 -16 -17"
+			"LinkedSpecialBonus"		"special_bonus_unique_venomancer_2"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"hp_regen_reduction"		"20"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"dmg_pct"					"25"
+		}			
+	}
+}
+
+//=================================================================================================================
+// Venomancer: Plague Ward
+//=================================================================================================================
+"venomancer_plague_ward"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"550"
+	"AbilityCastPoint"				"0.3"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"5.0 4.5 4.0 3.5 3.0 2.5 2.0"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"20 40 60 80 100 120 140"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"40.0"
+			"LinkedSpecialBonus"		"special_bonus_unique_venomancer_7"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"ward_hp_tooltip"		"70 100 140 180 220 260 300"
+			"LinkedSpecialBonus"	"special_bonus_unique_venomancer"
+			"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"ward_damage_tooltip"	"12 24 36 48 60 85 110"
+			"LinkedSpecialBonus"	"special_bonus_unique_venomancer"
+			"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
+		}
+	}
+}
+
+//=================================================================================================================
+// Venomancer: Poison Nova
+//=================================================================================================================
+"venomancer_poison_nova"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0 0.0 0.0 0.0 0.0 0.0 0.0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"60.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"150 250 350 450 550 650 750"
+
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"					"600"
+			"LinkedSpecialBonus"		"special_bonus_unique_venomancer_6"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"start_radius"				"255 255 255"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"10"
+			"LinkedSpecialBonus"		"special_bonus_unique_venomancer_4"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"damage"					"1.5 1.7 1.9 2.1 2.3 2.5 2.7"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"cooldown_scepter"			"40.0"
+			"RequiresScepter"		"1"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration_scepter"			"18"
+			"LinkedSpecialBonus"		"special_bonus_unique_venomancer_4"
+            "RequiresScepter"		    "1"
+		}
+		"07"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"damage_scepter"			"1.9 2.1 2.3 2.5 2.7 2.9"
+			"RequiresScepter"		    "1"
+		}
+		"08"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"speed"						"500"
+		}
+		"09"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"base_damage"				"65 100 135 170 205 240 275"
+		}
+	}
+}
+
+"venomancer_ward_cleave"
+{
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityTextureName"			"custom/venomancer_ward_cleave"
+	"MaxLevel"						"1"
+	
+	"precache"
+	{
+		"particle"			"particles/units/heroes/hero_sven/sven_spell_great_cleave.vpcf"
+	}
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"300.0"
+		}
+		
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"cleave_percent"		"100"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_venomancer_ward_cleave"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+
+			"OnAttackLanded"
+			{
+				"CleaveAttack"
+				{
+					"CleavePercent"		"%cleave_percent"
+					"CleaveRadius"		"%radius"
+					"CleaveEffect"		"particles/units/heroes/hero_sven/sven_spell_great_cleave.vpcf"
+				}
+			}
+		}
+	}
+}

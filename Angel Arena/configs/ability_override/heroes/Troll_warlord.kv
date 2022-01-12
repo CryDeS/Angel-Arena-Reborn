@@ -1,0 +1,328 @@
+"troll_warlord_berserkers_rage"
+{
+	"MaxLevel"						"7"
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.2 0.2 0.2 0.2 0.2 0.2 0.2"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_hp"				"0"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_move_speed"		"15 20 25 30 35 40 45"
+			"LinkedSpecialBonus"		"special_bonus_unique_troll_warlord_2"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"3 4 5 6 7 8 9"
+			"LinkedSpecialBonus"		"special_bonus_unique_troll_warlord"
+		}
+		"04"
+		{	
+			"var_type"				"FIELD_INTEGER"
+			"bonus_range"			"350"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"base_attack_time"		"1.5"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"ensnare_chance"		"10 11 12 13 14 15 17"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"ensnare_duration"		"1.5"
+		}
+	}
+}
+
+//=================================================================================================================
+// Troll Warlord: Whirling Axes (Ranged)
+//=================================================================================================================
+"troll_warlord_whirling_axes_ranged"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"900"
+	"AbilityCastPoint"				"0.2"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"14"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"50"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"axe_width"					"100"
+		}
+		
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"axe_speed"					"1500.0"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"axe_range"					"1500.0"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"axe_damage"				"100 160 220 280 340 400 460"
+			"LinkedSpecialBonus"		"special_bonus_unique_troll_warlord_3"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"axe_slow_duration"			"3.0 3.75 4.5 5.25 5.3 5.5 6.0"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"movement_speed"			"30"
+		}
+		"07"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"axe_spread"				"70"
+		}
+		"08"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"axe_count"					"64"
+		}
+	}
+}
+
+//=================================================================================================================
+// Troll Warlord: Whirling Axes Melee
+//=================================================================================================================
+"troll_warlord_whirling_axes_melee"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"12.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"50 50 50 50 50 50 50"
+
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage"					"75 125 175 200 225 250 325"
+			"LinkedSpecialBonus"		"special_bonus_unique_troll_warlord_3"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"hit_radius"				"100"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"max_range"					"450.0"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"axe_movement_speed"		"1250"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"blind_duration"			"4"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"blind_pct"					"15 20 25 30 35 40 45"
+		}
+		"07"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"whirl_duration"			"3.0"
+		}
+	}
+}
+
+//=================================================================================================================
+// Troll Warlord: Fervor
+//=================================================================================================================
+"fervor_aa"
+{
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"troll_warlord_fervor"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+	"ScriptFile"	                "heroes/troll_warlord/fervor/fervor_aa"
+	
+	"MaxLevel"						"7"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"attack_speed"			"6 8 10 12 14 16 18"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage"				"5"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"3"
+		}
+	}
+}
+
+"troll_warlord_battle_trance"
+{
+    "MaxLevel"                      "7"
+
+    // Time
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"				"70"
+
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityManaCost"				"150"
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"			"FIELD_FLOAT"
+            "trance_duration"	"6.0"
+			"LinkedSpecialBonus"		"special_bonus_unique_troll_warlord_7"
+        }
+        "02"
+        {
+            "var_type"			"FIELD_INTEGER"
+            "lifesteal"			"40 45 50 55 60 65 75"
+        }
+        "03"
+        {
+            "var_type"			"FIELD_INTEGER"
+            "attack_speed"		"50 90 120 180 250 350 400"
+        }
+        "04"
+        {
+            "var_type"			"FIELD_INTEGER"
+            "movement_speed"	"20 25 30 35 40 45 50"
+        }
+        "05"
+        {
+            "var_type"			"FIELD_INTEGER"
+            "range"				"900"
+        }
+		"06"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"scepter_cooldown"	"30"
+			"RequiresScepter"	"1"
+		}
+		"07"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"scepter_duration_enemies"	"4.5"
+			"RequiresScepter"	"1"
+		}
+		"08"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"scepter_cast_range_tooltip"	"525"
+			"RequiresScepter"	"1"
+		}
+    }
+}
+//=================================================================================================================
+// Troll Warlord: Rampage (shard upgrade)
+//=================================================================================================================
+"troll_warlord_rampage"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+	"MaxLevel"						"1"
+	
+	"IsShardUpgrade"				"1"
+	"IsGrantedByShard"				"1"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+	"AbilityCastGestureSlot"		"DEFAULT"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"55"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"195"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"attack_speed"				"70"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"status_resistance"				"25"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"				"5"
+		}
+	}
+}
