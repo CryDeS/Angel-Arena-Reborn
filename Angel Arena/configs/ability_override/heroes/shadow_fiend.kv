@@ -1,0 +1,415 @@
+//=================================================================================================================
+// Ability: Nevermore Shadowraze #1
+//=================================================================================================================
+"nevermore_shadowraze1"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.4"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"10"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"75"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"shadowraze_damage"	"80 115 150 185 220 255 290"
+			"LinkedSpecialBonus"	"special_bonus_unique_nevermore_2"	
+		}
+		"02"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"shadowraze_radius"	"250"		
+		}
+		"03"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"shadowraze_range"	"200"
+		}
+		"04"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"shadowraze_cooldown"	"3"
+		}
+		"05"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"stack_bonus_damage" "40 50 60 70 80 90 100"
+			"CalculateSpellDamageTooltip"	"0"
+		}
+		"06"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"duration"	"6"
+		}
+		"07"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"damage_by_attack"				"0.8"
+		}
+	}
+}
+
+//=================================================================================================================
+// Ability: Nevermore Shadowraze #2
+//=================================================================================================================
+"nevermore_shadowraze2"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.4"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"10"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	
+	"AbilityManaCost"				"75"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"shadowraze_damage"		"80 115 150 185 220 255 290"
+			"LinkedSpecialBonus" 	"special_bonus_unique_nevermore_2"	
+		}
+		"02"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"shadowraze_radius"	"250"		
+		}
+		"03"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"shadowraze_range"	"450"
+		}
+		"04"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"shadowraze_cooldown"	"3"
+		}
+		"05"
+		{
+			"var_type"			            "FIELD_INTEGER"
+			"stack_bonus_damage"            "40 50 60 70 80 90 100"
+			"CalculateSpellDamageTooltip"	"0"
+		}
+		"06"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"duration"	"4"
+		}
+		"07"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"damage_by_attack"				"0.8"
+		}
+	}
+}
+
+//=================================================================================================================
+// Ability: Nevermore Shadowraze #3
+//=================================================================================================================
+"nevermore_shadowraze3"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.4"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"10"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"75"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"shadowraze_damage"	"80 115 150 185 220 255 290"
+			"LinkedSpecialBonus" "special_bonus_unique_nevermore_2"	
+		}
+		"02"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"shadowraze_radius"	"250"		
+		}
+		"03"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"shadowraze_range"	"700"
+		}
+		"04"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"shadowraze_cooldown"	"3"
+		}
+		"05"
+		{
+			"var_type"			            "FIELD_INTEGER"
+			"stack_bonus_damage"            "40 50 60 70 80 90 100"
+			"CalculateSpellDamageTooltip"	"0"
+		}
+		"06"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"duration"	"4"
+		}
+		"07"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"damage_by_attack"				"0.8"
+		}
+	}
+}
+
+//=================================================================================================================
+// Ability: Nevermore Necromastery
+//=================================================================================================================
+"nevermore_necromastery"
+{
+	"MaxLevel"							"7"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"necromastery_damage_per_soul"	"3"
+			"CalculateSpellDamageTooltip"	"0"
+			"LinkedSpecialBonus"			"special_bonus_unique_nevermore_1"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"necromastery_max_souls"		"10 13 16 20 23 26 30"
+			"LinkedSpecialBonus"			"special_bonus_unique_nevermore_4"
+		}
+		"03"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"necromastery_soul_release"		"0.7"
+		}
+		"04"
+		{
+			"var_type"						    "FIELD_INTEGER"
+			"necromastery_max_souls_scepter"    "15 20 25 30 35 40 45"
+			"RequiresScepter"			        "1"
+		}
+	}
+}
+
+//=================================================================================================================
+// Ability: Presence of the Dark Lord
+//=================================================================================================================
+"nevermore_dark_lord"
+{
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"nevermore_dark_lord"
+	"MaxLevel"						"7"
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"900"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"presence_armor_reduction"		"-3 -4 -5 -6 -7 -8 -9"
+			"LinkedSpecialBonus"			"special_bonus_unique_nevermore_5"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"presence_radius"				"1200"
+		}
+		"03"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"disarmor_percent"				"5 7 9 11 13 15 17"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_passive_dark_lord_aura_emitter"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+			"IsPurgable"	"0"
+			
+			"Aura" 					"modifier_passive_dark_lord_aura"
+			"Aura_Radius" 			"%presence_radius"
+			"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+			"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+			"Aura_ApplyToCaster" 	"0"
+		}
+		
+		"modifier_passive_dark_lord_aura"
+		{
+			"IsHidden"		"1"
+			"Passive"		"0"
+			
+			"ThinkInterval" 		"0.5"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"heroes/nevermore/dark_lord.lua"
+					"Function"			"Disarmor"
+					"ModifierName"		"modifier_passive_dark_lord_disarmor"
+					"Disarmor_const"	"%presence_armor_reduction"
+					"Disarmor_pct"		"%disarmor_percent"
+				}
+			}
+		}
+		
+		"modifier_passive_dark_lord_disarmor"
+		{
+			"IsDebuff"	"1"
+			"Passive"	"0"
+			"IsHidden"	"0"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"-1"
+			}
+			
+			"ThinkInterval" 		"0.2"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"heroes/nevermore/dark_lord.lua"
+					"Function"			"CheckAura"
+					"ModifierName"		"modifier_passive_dark_lord_aura"
+					"ModifierRemove"	"modifier_passive_dark_lord_disarmor"
+				}
+			}
+		}
+		
+	}
+}
+
+//=================================================================================================================
+// Ability: Nevermore Requiem of Souls
+//=================================================================================================================
+"nevermore_requiem"
+{
+	"MaxLevel"						"7"
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.9"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"85"
+	"AbilityDuration"				"5.0 5.0 5.0 5.0 5.0 5.0 5.0"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"85 100 115 125 140 165 200"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"150 175 200 400 600 800 1000"
+
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"requiem_radius"	"975"		
+		}
+		"02"
+		{
+			"var_type"			    "FIELD_INTEGER"
+			"requiem_reduction_ms"	"-25"
+		}
+		"03"
+		{
+			"var_type"				    "FIELD_INTEGER"
+			"requiem_slow_duration"	    "1.0"
+			"LinkedSpecialBonus"		"special_bonus_unique_nevermore_6"
+		}
+		"04"
+		{
+			"var_type"				    "FIELD_INTEGER"
+			"requiem_slow_duration_max"	"1.0"
+			"LinkedSpecialBonus"		"special_bonus_unique_nevermore_6"
+			"LinkedSpecialBonusField"	"value2"
+		}
+		"05"
+		{
+			"var_type"		        	"FIELD_INTEGER"
+			"requiem_reduction_radius"	"700"
+		}
+		"06"
+		{
+			"var_type"		        	"FIELD_INTEGER"
+			"requiem_soul_conversion"	"1"
+		}
+		"07"
+		{
+			"var_type"			        "FIELD_INTEGER"
+			"requiem_line_width_start"	"75 100 125 125 125 125 125"
+		}
+		"08"
+		{
+			"var_type"			        "FIELD_INTEGER"
+			"requiem_line_width_end"	"400 425 450 450 450 450 450"
+		}
+		"09"
+		{
+			"var_type"			    "FIELD_INTEGER"
+			"requiem_line_speed"	"800"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"soul_death_release"	"0.5"
+		}
+		"11"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"requiem_heal_pct_scepter"	"50"
+			"RequiresScepter"			"1"
+		}
+		"12"
+		{
+			"var_type"					    "FIELD_FLOAT"
+			"requiem_damage_pct_scepter"	"50"
+			"RequiresScepter"			    "1"
+            "CalculateSpellDamageTooltip"	"0"
+		}
+	}
+}
