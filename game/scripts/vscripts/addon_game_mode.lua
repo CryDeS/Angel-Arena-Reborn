@@ -44,7 +44,7 @@ local armor_table = require('creeps/armor_table_summon') -- armor to units
 local MP_REGEN_PER_INT = 0.4
 
 RESPAWN_MODIFER = 0.135
-GOLD_PER_TICK = 5
+GOLD_PER_TICK = 4
 
 KILL_LIMIT = 100
 
@@ -87,6 +87,7 @@ local forbidden_items_for_clones = {
 
 local illusion_bug_crash =
 {
+	["npc_dota_hero_dawnbreaker"] = 1,
 	["npc_dota_hero_visage"] = 1,
 	["npc_dota_hero_weaver"] = 1,
 }
@@ -157,11 +158,12 @@ function AngelArena:InitGameMode()
 	--GameRules:SetRuneSpawnTime(120)
 
 	GameRules:SetCustomGameEndDelay(1)
-	GameRules:GetGameModeEntity():SetFountainPercentageHealthRegen(7)
-	GameRules:GetGameModeEntity():SetFountainPercentageManaRegen(10)
-	GameRules:GetGameModeEntity():SetFountainConstantManaRegen(20)
-	GameRules:GetGameModeEntity():SetUseCustomHeroLevels(true)
-	GameRules:GetGameModeEntity():SetCustomXPRequiredToReachNextLevel(Constants.XP_PER_LEVEL_TABLE)
+	GameMode:SetFountainPercentageHealthRegen(7)
+	GameMode:SetFountainPercentageManaRegen(10)
+	GameMode:SetFountainConstantManaRegen(20)
+	GameMode:SetUseCustomHeroLevels(true)
+	GameMode:SetCustomXPRequiredToReachNextLevel(Constants.XP_PER_LEVEL_TABLE)
+	GameMode:SetFreeCourierModeEnabled( true )
 	--GameMode:SetTopBarTeamValuesVisible(false)
 	GameMode:SetBuybackEnabled(true)
 	GameMode:SetStashPurchasingDisabled(false)
@@ -172,7 +174,7 @@ function AngelArena:InitGameMode()
 	GameRules:SetSameHeroSelectionEnabled(false)
 	GameRules:SetCustomGameAllowMusicAtGameStart( true )
 	GameRules:SetStartingGold(625)
-	GameRules:SetCustomGameBansPerTeam(2)
+	GameRules:SetCustomGameBansPerTeam(5)
 	GameRules:SetCreepSpawningEnabled( false )
 
 	-- AttributeDerivedStats
@@ -860,6 +862,7 @@ function AngelArena:OnGameStateChange()
 
 	if GameRules:State_Get() == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
 		if not is_game_start then
+			GameRules:SetTimeOfDay( 0.251 )
 			CreepSpawner:StartSpawning()
 			BossSpawner:OnGameStart()
 
@@ -894,15 +897,6 @@ function AngelArena:OnGameStateChange()
 							end
 						end
 
-						if hero then
-							local cr = CreateUnitByName("npc_dota_courier", courier_spawn[team]:GetAbsOrigin(), true, nil, hero, team)
-
-							cr:AddNewModifier(cr, nil, "modifier_courier", {duration = -1})
-
-							TeamHelper:ApplyForPlayers(team, function(tempPlayerID)
-								cr:SetControllableByPlayer(tempPlayerID, true)
-							end)
-						end
 					end
 					return nil
 				end

@@ -1,0 +1,11 @@
+Item changes:
+ Soul Collector:
+  - Heal decreasing changed from 100% to 75%
+  
+Fixes:
+ - Repick menu
+ - Many heroes bugs
+ - Force staff & bossess
+ - Ban phases fixed
+ - Troll Warlord & Bossess fixed
+ - Day/Night cycles

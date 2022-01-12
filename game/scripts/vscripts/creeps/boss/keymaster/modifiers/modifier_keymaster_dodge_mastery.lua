@@ -31,6 +31,12 @@ function mod:DeclareFunctions() return
 }
 end
 
+function mod:CheckState() return
+{
+	[MODIFIER_STATE_CANNOT_BE_MOTION_CONTROLLED] = true
+}
+end
+
 function mod:GetMultiplier()
 	local parent = self:GetParent()
 
@@ -63,6 +69,10 @@ function mod:OnTakeDamage( params )
 	local damage = params.damage
 
 	if not attacker or (attacker:GetAbsOrigin() - parent:GetAbsOrigin()):Length() > self.radius then
+		if attacker:HasModifier("modifier_fervor_aa_effect") then
+			attacker:RemoveModifierByName("modifier_fervor_aa_effect")
+		end
+
 		parent:SetHealth( parent:GetHealth() + damage )
 	end
 

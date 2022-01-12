@@ -6,6 +6,14 @@
 		<include src="file://{resources}/scripts/custom_game/repick_menu.js" />
 	</scripts>
   
+	<snippets>
+		<snippet name="HeroIcon">
+			<Panel class="HeroPortrait">
+				<DOTAHeroMovie style="width:100%;height:100%;" hittest="true" />
+			</Panel>
+		</snippet>
+	</snippets>
+
 	<Panel class="Root" hittest="false">
 		<Panel id="CustomRoot" class="Root" hittest="true" onactivate="OnClose()" oncontextmenu="OnClose()">
 			<Panel class="Precache" style="visibility:collapse;">
@@ -79,7 +87,7 @@
 			-->
 			
 			<Panel id="PickButton" class="CantPickButton" hittest="true" onactivate="PickHero()">
-				<Panel id="PickShard"/>
+				<Panel id="PickShard" onmouseout="DOTAHideAbilityTooltip()"/>
 				<Label id="PickButtonLabel" text="Repick hero" hittest="false"/>
 			</Panel>
 		</Panel>

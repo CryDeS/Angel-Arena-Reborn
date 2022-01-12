@@ -1,0 +1,215 @@
+Heroes:
+Beastmaster:
+ - Wild Axes manacost changed from 90 to 90/100/110/120/130/140/150
+ - Wild Axes debuff duration changed from 20 to 15
+ - WIld Axes cast range changed from 1400 to 1200
+ - Wild Axes damage changed from 80/100/125/175/220/260/280 to  80/100/125/175/190/215/240
+ - Call The Wild Boar damage changed from 14/26/38/50 to 20/35/50/70
+ 
+Brewmaster:
+ - Drunken Brawler multiplier changed from 2 to 3 
+ 
+Charon:
+ - Last Word slow increased from 0.2%/0.25%/0.3%/0.35%/0.4%/0.45%/0.5 to 0.4%/0.45%/0.5%/0.55%/0.6%/0.65%/0.7%
+ - Collapse cast point reduced from 0.5 to 0.3
+ - Collapse damage per mana burn increased from 1.2 to 1.5
+ - Collapse cooldown reduced from 75 to 70
+ 
+Dark Seer:
+ - Wall of Replica coldown changed from 35 to 60
+ - Wall of Replica duration changed from 15 to 18
+ 
+Gun Joe:
+ - Calibrated Shot cast point increased from 0 to 1.0
+ - Calibrated Shot bonus attack range reduced from 700 to 600
+ - Calibrated Shot speed reduced from 2500 to 2200
+ 
+Huntress:
+ - Status resist talent changed from 35 to 10
+ - Crippling Arrow duration talent changed from 1 to 0.5
+ - Owl vision changed from 700/750/800/850/900/950/1000 to 700
+ - Crrippling Arrow duration changed from 1 to 0.75
+ - Hunting Spirit coldown changed from 45 to 60
+ - Hunting Spirit manacost changed from 100/150/200/250/300/350/400 to 200/250/300/350/400/500/600
+ - Hunting Spirit movespeed bonus changed from 17/19/21/24/27/30/35 to 20
+
+Invoker:
+ - Alacrity atack speed changed from 30/40/50/60/70/80/90/100 to 20/30/40/50/60/70/80/90
+ - Alacrity atack damage changed from 50/60/70/80/90/100/120/140 to 20/35/50/60/70/90/100/120
+ - Exort damage changed from 7/10/14/18/22/26/30 to 4/7/10/14/16/18/22
+ - Sun Strike damage changed from 175/250/275/325/450/550/575/600 to 100/140/175/250/275/325/430/520
+ - Sun Strike now have damage from  main attribute 
+ - Tornado now have damage from main attribute
+ - Deafening Blast now have damage from main attribute 
+ - Forge Spirit Melting Strike armor removed changed from 2 to 1
+ 
+Joe Black:
+ - Song heal talent changed from 3 to 10
+ - Face Of Death damage changed from 200/300/400/500/600/700/800 to 250/325/400/550/675/900/1100
+ - Protection coldown changed from 32 to 24
+ - Protection duration changed from 5 to 7
+ - Protection damage reduction changed from - 18/- 20/- 22/- 24/- 26/- 28/- 30 to - 25/- 30/- 34/- 37/- 40/- 42/- 45
+ - Sleep coldown changed from 35 to 18
+ 
+Lycan:
+ - Howl disarmor changed from 4/5/7/9/11/13/15 to 3/4/5/6/7/10/12
+ - Howl duration changed from 5/6/7/8/9/10/11 to 8
+ - Feral Impulse damage changed from 30/35/40/45/50/60/70 to 25/30/35/40/45/50/55
+ - Feral Impulse health regen changed from 14/21/28/35/42/49/56 to 10/15/20/25/30/37/42
+ - Summon Wolves damage to magical reduced from 15% to 10%
+ - Shapeshift crit chance changed from 30 to 25
+ 
+Magnus:
+ - Skewer coldown changed from 8 to 13.0/12.5/12.0/11.5/11.0/10.5/10.0
+ 
+Naga Siren:
+ - Siren Song coldown changed from 60/55/50/45/40/37/35 to 90/85/80/75/70/65/60
+ - Siren Song radius changed from 1000 to 800/900/1000/1050/1100/1150/1200
+ 
+Obsidian Destroyer:
+ - Astral Imprisonment prison duration changed from 4 to 1.5/1.8/2.2/2.3/2.7/3.2/4.0
+ - Astral Imprisonment aghanims charges restore changed from 12 to 14
+ - Astral Imprisonment manasteal changed from 14/16/18/20/22/24/26 to 15
+ 
+Phantom Assassin:
+ - Stifling Dagger damage changed from 80/83/85/88/90/95/100 to 60/65/70/75/80/85/90
+ - Stifling Dagger cast range changed from 800 to 600/700/800/900/1000/1100/1200
+ - Phantom Strike manacost changed from 80 to 80/90/100/110/120/130/140
+ - Death Mark damage per attack changed from 10 to 5
+ - Death Mark max attack changed from 5 to 8
+ - Death Mark max damage percent changed from 50 to 40
+ - Death Mark bonus agility changed from 2/3/4/5/6/7/8 to 4/5/6/7/8/9/10
+ - Death Mark manacost changed from 50/65/80/95/110/125/140 to 90 
+ - Coup de Grace crit damage changed from 300/325/350/375/400/425/450 to 200/250/275/300/350/450/500
+ 
+Shadow Fiend:
+ - Shadowraze damage increased from 75/85/95/105/115/125/135 to 80/115/150/185/220/255/290
+ - Shadowraze stack damage increased from 35/45/50/55/60/65/70 to 40/50/60/70/80/90/100
+ - Shadowraze duration increased from 4 to 6
+ - Shadowraze damage by attack increased from 0.5 to 0.8
+ - Presense of the Dark Lord armor reduction changed from -1/-2/-3/-4/-5/-6/-7 to -2/-3/-4/-5/-6/-7/-8
+ 
+Techies:
+ - Blast Off talent increased coldown changed from 8 to 5
+ 
+Troll Warlord:
+ - Berserker's Rage BAT increased from 1.4 to 1.5
+ - Berserker's Rage ensnare duration increased from 1.2 to 1.5
+ - Fervor attack speed changed from 8 to 6/8/10/12/14/16/18
+ - Fervor attack damage changed from 7/12/19/24/29/34/40 to 5
+ - Fervor attack duration changed from 3 to 4
+ 
+Riki:
+ - Smoke Screen coldown changed from 10 to 13
+ - Blink Strike manacost changed from 50 to 50/60/70/80/90/100/110
+ - Triks Of The Trade agility multiplier changed from 50/60/70/80/90/100/110 to 60
+ - Cloak And Dagger damage per agility changed from 1.0/1.1/1.2/1.3/1.4/1.5/1.6 to 0.8/0.9/1.0/1.1/1.2/1.3/1.4
+ 
+Venomancer:
+ - Plague ward hp changed from 75/125/175/225/275/350/425 to 75/100/150/200/250/350/425
+ - Plague ward damage changed from 15/30/45/75/60/90/110 to 12/24/36/48/60/85/110
+
+Item Changes:
+ - Rebels recipe cost changed from 1200 to 3000
+ - Soul Collector now it is dispellable with strong dispel 
+ - Soul Stone hp changed from 500 to 200
+ - Tome of Lvl cost changed from 900 to 1250
+ 
+Other changes:
+ - Gold Per tick changed from 5 to 4
+ - Keymaster drop boss souls changed from 1 to 2
+ - Soul Guardian hp changed from 15000 to 25000
+ - Abyss Warrior hp changed from 15000 to 25000
+ - Possesed Demon hp changed from 20000 to 30000
+ - Keymaster hp changed from 15000 to 20000
+ - Abyss Warrior drop boss soul changed from 2 to 1
+ 
+Fixed:
+ - Sand King 2 skill
+ - Sand King 3 skill
+ - Drow Ranger 2 skill
+ - Drow Ranger 3 skill
+ - Earthshaker 3 skill 
+ - Juggernaut 1 skill
+ - Shadow Fiend 6 skill 
+ - Shadow Shaman 1 skill 
+ - Razor 1 skill
+ - Razor 2 skill
+ - Sven 1 skill 
+ - Slardar 2 skill
+ - Slardar 4 skill 
+ - Tidehunter 1 skill
+ - Tidehunter 2 skill 
+ - Tidehunter 4 skill
+ - Windrunner 2 skill 
+ - Lich 3 skill 
+ - Lich 5 skill
+ - Witch Doctor 2 skill 
+ - Tinker 1 skill 
+ - Tinker 3 skill 
+ - Queen of Pain 3 skill
+ - Faceless Void 1 skill
+ - Faceless Void 3 skill 
+ - Faceless Void 4 skill
+ - Viper 2 skill 
+ - Luna 2 skill 
+ - Luna 3 skill 
+ - Luna 4 skill 
+ - Clockwerk 2 skill
+ - Leshrac 4 skill
+ - Lifestealer 1 skill
+ - Clinkz 1 skill
+ - Huskar 1 skill
+ - Huskar 4 skill
+ - Night Stalker 5 skill
+ - Bounty Hunter 3 skill
+ - Weaver 3 skill 
+ - Chen 3 skill
+ - Chen 4 skill 
+ - Spectre 1 skill 
+ - Ancient Apparition 1 skill
+ - Gyrocopter 3 skill
+ - Alchemist 2 skill
+ - Silenser 1 skill
+ - Silenser 3 skill
+ - Lycan 1 skill
+ - Chaos Knight 2 skill
+ - Chaos Knight 3 skill
+ - Chaos Knight 4 skill
+ - Treant Protector 2 skill
+ - Undying 1 skill
+ - Nyx Assassin 3 skill
+ - Naga Siren 3 skill
+ - Troll Warlord 1 skill
+ - Magnus 2 skill
+ - Timbersaw 4 skill 
+ - Abaddon 3 skill
+ - Legion Commander 1 skill
+ - Earth Spirit 1 skill
+ - Earth Spirit 5 skill
+ - Queen of Pain 3 skill 
+ - Underlord 1 skill
+ - Underlord 3 skill
+ - Pangolier 1 skill
+ - Dark Willow 2 skill
+ - Mars 2 skill
+ - Mars 3 skill
+ - Void Spirit 1 skill
+ - Snapfier 1 skill
+ - Hoodwink 1 skill
+ - Dawnbreaker 1 skill 
+ - Dawnbreaker 2 skill
+ - Dawnbreaker 3 skill
+ - Dawnbreaker 4 skill
+ - Winter Wyvern 1 skill
+ - Winter Wyvern 2 skill
+ - Winter Wyvern 3 skill
+ - Arc Warden 1 skill
+ - Arc Warden 2 skill
+ - Venomancer 4 skill
+ - Tusk 3 skill 
+ - Queen Of Pain 3 skill
+ - Dawnbreaker illisions crash
+ - Courier Fixed
+ - Huntress infinite Owl's fixed
+ 
