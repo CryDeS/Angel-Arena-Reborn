@@ -1,0 +1,104 @@
+"item_recipe_amaliels_cuirass"
+{
+		"AbilityTextureName" 				"item_recipe_amaliels_cuirass"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1103"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"4375"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_amaliels_cuirass"
+	"ItemRequirements"
+	{
+		"01"						"item_assault"
+	}
+}
+
+"item_amaliels_cuirass"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1104"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "amaliels_cuirass"
+	"ScriptFile"                    "items/amaliels_cuirass/item_amaliels_cuirass"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"7750"
+	"ItemStackable"					"0"
+	
+	"ItemPermanent"					"0"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"15"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_aspeed"			"40"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"500"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_stats"			"10"
+		}
+		
+		//aura
+		
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor_aura"		"12"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_aspeed_aura"		"60"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"friend_radius"			"1200"
+		}
+		//aura disarm
+		
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"disarmor_aura"			"-10"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"enemy_radius"			"1200"
+		}
+	}
+}
