@@ -1,0 +1,261 @@
+//=================================================================================================================
+// Necrolyte: Death Pulse
+//=================================================================================================================
+"necrolyte_death_pulse"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"MaxLevel"						"7"
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"0"
+	"AbilityCastPoint"				"0.0 0.0 0.0 0.0 0.0 0.0 0.0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"6.0 5.9 5.7 5.5 5.4 5.2 5.0"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"135 215 285 325 385 435 520"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"85 95 105 125 145 165 185"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"area_of_effect"		"525"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"heal"					"100 170 240 310 380 450 520"
+			"LinkedSpecialBonus"	"special_bonus_unique_necrophos_4"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"projectile_speed"		"400"
+		}
+		"04"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"health_regen"		"2 3 4 5 7 9 12"
+		}		
+		"05"
+		{
+			"var_type"		"FIELD_INTEGER"
+			"mana_regen"	"2 4 6 8 10 12 14"
+		}	
+		"06"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"regen_duration"		"7"
+		}			
+		"07"
+		{
+			"var_type"		"FIELD_INTEGER"
+			"hero_multiplier" "6"
+		}
+	}
+}
+
+//=================================================================================================================
+// Ability: Necrolyte's Heartstopper Aura
+//=================================================================================================================
+"necrolyte_heartstopper_aura"
+{
+	"MaxLevel"					"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"800"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"aura_radius"		"800"		// If you change this, also change the AbilityCastRange above
+		}
+		"02"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"aura_damage"		"2.0 2.3 2.7 3.0 3.3 3.7 4.0"
+			"LinkedSpecialBonus"		"special_bonus_unique_necrophos_2"
+		}
+		"03"
+        {
+            "var_type"		"FIELD_FLOAT"
+            "health_regen"	"3 5 7 9 11 13 16"
+        }
+        "04"
+        {
+            "var_type"		"FIELD_FLOAT"
+            "mana_regen"	"2 4 6 8 10 12 14"
+        }
+		"05"
+		{
+			"var_type"		"FIELD_INTEGER"
+			"hero_multiplier" "6"
+		}
+        "06"
+        {
+            "var_type"		"FIELD_FLOAT"
+            "regen_duration"		"9"
+        }
+		"07"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"scepter_multiplier"		"1.5"
+			"RequiresScepter"		"1"
+		}
+	}
+}
+
+//=================================================================================================================
+// Ability: Necrolyte's Sadist
+//=================================================================================================================
+"necrolyte_sadist"
+{
+	"MaxLevel"					"7"
+	"AbilityCastPoint"				"0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"25"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"50"
+	
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"duration"		"3 3.5 4 4.25 4.5 4.75 5.0"
+		}				
+		"02"
+		{
+			"var_type"		"FIELD_INTEGER"
+			"heal_bonus"	"50"
+		}			
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"movement_speed"		"12 16 20 24 28 32 36"
+			"LinkedSpecialBonus"	"special_bonus_unique_necrophos_3"
+		}			
+		"04"
+		{
+			"var_type"		"FIELD_INTEGER"
+			"slow_aoe"		"600"
+		}		
+		"05"
+		{
+			"var_type"		"FIELD_INTEGER"
+			"bonus_damage" "-20"
+		}
+		"06"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"cooldown_scepter"		"15" 
+			"RequiresScepter"		"1"
+		} 	
+	}
+}
+
+//=================================================================================================================
+// Ability: Necrolyte's Reaper's Scythe
+//=================================================================================================================
+"necrolyte_reapers_scythe"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.5 0.5 0.5 0.5 0.5 0.5 0.5"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"50"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"200 300 400 500 600 700 800"
+	
+	// Cast Range
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"700"
+
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"damage_per_health"			"0.5 0.55 0.60 0.65 0.7 0.75 0.8"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"stun_duration"				"1.5 1.5 1.5 1.5 1.5 1.5 1.5"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"respawn_constant"		"0"
+		}
+	}
+}
+
+"necrolyte_death_seeker"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+	"MaxLevel"						"1"
+	"FightRecapLevel"				"1"
+	"IsGrantedByShard"              "1"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"900"
+	"AbilityCastPoint"				"0.2"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+	
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"14"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"150"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"projectile_multiplier"		"125"
+		}
+	}
+}

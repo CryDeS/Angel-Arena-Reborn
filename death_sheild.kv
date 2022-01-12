@@ -1,0 +1,91 @@
+"item_recipe_death_shield"
+{
+	"AbilityTextureName" 				"item_recipe_death_shield"
+	
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1128"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"2200"
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_death_shield"
+	"ItemRequirements"
+	{
+		"01"						"item_vanguard;item_fury_shield;"
+	}
+}
+
+"item_death_shield"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							"1129"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "death_shield"
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	"ItemCost"						"4665"
+	"ItemStackable"					"0"
+	
+	"ItemPermanent"					"0"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"800"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_hpregen"			"40"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"block_damage"			"80"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_defence"			"-20"
+		}
+	}
+
+	
+	"Modifiers"
+	{
+		"modifier_deaths_sheild_passive_uniq"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_HEALTH_BONUS"									"%bonus_health"
+				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"							"%bonus_hpregen"
+				"MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK" 						"%block_damage"		
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"							"%bonus_armor"
+				"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"						"%bonus_defence"
+			}
+		}
+	}
+}

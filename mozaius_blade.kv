@@ -1,0 +1,121 @@
+"item_recipe_mozaius_blade"
+{
+	"AbilityTextureName" 				"item_recipe_mozaius_blade"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1544"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1000"
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_mozaius_blade"
+	"ItemRequirements"
+	{
+		"01"						"item_bandoline_blade;item_vampire_claw;item_material_projector"
+	}
+}
+
+"item_mozaius_blade"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1545"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityTextureName"	        "mozaius_blade"
+	"ScriptFile"					"items/mozaius_blade/mozaius_blade"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"10300"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+	"ItemInitialCharges"			"0"
+	"ItemDisplayCharges"			"1"
+	"ItemRequiresCharges"			"1"
+		
+	"ItemQuality"					"common"
+
+	"AbilityCooldown"				"35.0"
+	
+	"precache"
+	{
+		"soundfile"					"soundevents/items/mozaius_blade.vsndevts"
+		"particle"					"particles/generic_gameplay/generic_lifesteal.vpcf"
+		"particle"					"particles/units/heroes/hero_bloodseeker/bloodseeker_bloodritual_explode.vpcf"
+		"particle"					"particles/econ/items/chaos_knight/chaos_knight_ti9_weapon/chaos_knight_ti9_weapon_crit_tgt.vpcf"
+	}
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_damage"			"60"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_as"				"30"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_stats"			"20"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_hp"				"400"
+		}
+		
+		"05"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"charges_for_attack_creep"	"1"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"charges_for_attack_hero"	"2"
+		}
+		"07"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"max_charges"				"20"
+		}
+		"08"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"heal_per_charge"			"65"
+		}
+		
+		"09"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"attack_delay"				"0.1"
+		}
+		"10"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"attack_cd"					"1.5"
+		}
+		
+		"11"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"lifesteal"					"25"
+		}
+	}
+}
