@@ -1,0 +1,246 @@
+"medusa_split_shot"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.4 0.4 0.4 0.4 0.4 0.4 0.4"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"damage_modifier"				"-25 -20 -15 -10 -5 0 5"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"damage_modifier_tooltip"		"75 80 85 90 95 100 105"
+		}
+		"03"
+		{	
+			"var_type"						"FIELD_INTEGER"
+			"arrow_count"					"3"
+			"LinkedSpecialBonus"			"special_bonus_unique_medusa_2"
+		}
+		"04"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"split_shot_bonus_range"		"100"
+		}
+	}
+}
+
+//=================================================================================================================
+// Medusa: Mystic Snake
+//=================================================================================================================
+"medusa_mystic_snake"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"800"
+	"AbilityCastPoint"				"0.4"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"11.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"140 150 160 170 180 190 210"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"475"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"snake_jumps"			"3 4 5 6 7 8 9"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"jump_delay"			"0.25"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"snake_damage"			"100 160 200 250 300 350 400"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"snake_mana_steal"		"10 15 20 22 23 24 25"
+			"LinkedSpecialBonus"	"special_bonus_unique_medusa_3"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"snake_scale"			"45"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"initial_speed"			"800"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"return_speed"			"800"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"stone_form_scepter_base"		"1.0"
+			"RequiresScepter"	"1"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"stone_form_scepter_increment"		"0.3"
+			"RequiresScepter"	"1"
+		}
+	}
+}
+
+//=================================================================================================================
+// Medusa: Mana Shield
+//=================================================================================================================
+"medusa_mana_shield"
+{
+	"MaxLevel"						"7"
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityTextureName"			"medusa_mana_shield"
+	"ScriptFile"					"heroes/medusa/medusa_mana_shield"
+		
+	"AbilityCastPoint"				"0.4"
+
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts"
+		"particle"			"particles/units/heroes/hero_medusa/medusa_mana_shield.vpcf"
+		"particle"			"particles/units/heroes/hero_medusa/medusa_mana_shield_cast.vpcf"
+		"particle"			"particles/units/heroes/hero_medusa/medusa_mana_shield_end.vpcf"
+		"particle"			"particles/units/heroes/hero_medusa/medusa_mana_shield_impact.vpcf"
+	}
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_per_mana"		"0.9 1.0 1.1 1.2 1.4 1.6 1.8"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"absorption_pct"	    "60"
+		}
+	}
+}
+
+//=================================================================================================================
+// Medusa: Stone Gaze
+//=================================================================================================================
+"medusa_stone_gaze"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.4"
+	"AbilityCastRange"				"1000"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"70.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"200"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"	
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"					"1000"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"6.0"
+			"LinkedSpecialBonus"		"special_bonus_unique_medusa"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"slow"						"50"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"stone_duration"			"3.0"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"face_duration"				"2.00"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"vision_cone"				"0.08715"		// 85 degree cone
+		}
+		"07"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_physical_damage"		"16 20 24 28 32 36 40"
+		}
+	}
+}
+
+"medusa_cold_blooded"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"701"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+	"MaxLevel"						"1"
+	"FightRecapLevel"				"1"
+	"IsGrantedByShard"				"1"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"6"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"damage"		"0"
+		}
+	}
+}
