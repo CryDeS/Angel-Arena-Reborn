@@ -1,0 +1,128 @@
+"item_recipe_heavy_crossbow"
+{
+	"AbilityTextureName" 				"item_recipe_heavy_crossbow"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1533"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"2350"
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_heavy_crossbow"
+	"ItemRequirements"
+	{
+		"01"						"item_doombolt;item_dimensional_accelerator"
+	}
+}
+
+"item_heavy_crossbow"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1534"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+	"AbilityTextureName"	        "heavy_crossbow"
+	"ScriptFile"					"items/heavy_crossbow/heavy_crossbow"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"18.0"
+	"AbilityManaCost"				"220"
+	"AbilityCastRange"				"650"
+	"AbilityCastPoint"				"0.0"
+	"AbilitySharedCooldown"			"item_heavy_crossbow"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"7500"
+	"ItemStackable"					"0"
+	"ItemBaseLevel"					"1"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"precache"
+	{
+		"soundfile"					"soundevents/items/heavy_crossbow.vsndevts"
+		"particle"					"particles/generic_gameplay/generic_lifesteal.vpcf"
+		"particle"					"particles/econ/events/ti10/high_five/high_five_impact_burst.vpcf"
+		"particle"					"particles/units/heroes/hero_dark_willow/dark_willow_willowisp_base_attack.vpcf"
+		"particle"					"particles/econ/items/ogre_magi/ogre_magi_arcana/ogre_magi_arcana_stunned_symbol.vpcf"
+		"particle"					"particles/econ/items/chaos_knight/chaos_knight_ti9_weapon/chaos_knight_ti9_weapon_crit_tgt.vpcf"
+	}
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_damage"			"50"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_stats"			"12"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_as"				"50"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_range"	"150"
+		}
+		
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"abilitycastrange"		""
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"stun_duration"			"0.5"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage"				"250"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"attack_to_dmg"			"225"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"projectile_speed"		"1500"
+		}
+		
+		"10"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"crit_chance"			"20"
+		}
+		"11"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"crit_damage"			"200"
+		}
+	}
+}
