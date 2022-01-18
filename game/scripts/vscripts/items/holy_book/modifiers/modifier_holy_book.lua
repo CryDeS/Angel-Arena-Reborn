@@ -18,8 +18,9 @@ function mod:OnCreated(kv)
 	if not ability then return end
 
 	self.bonusDamage = ability:GetSpecialValueFor("bonus_damage")
-	self.bonusInt    = ability:GetSpecialValueFor("bonus_int")
+	self.bonusAgi    = ability:GetSpecialValueFor("bonus_agi")
 	self.bonusStr    = ability:GetSpecialValueFor("bonus_str")
+	self.bonusAs     = ability:GetSpecialValueFor("bonus_as")
 
 	if not IsServer() then return end
 
@@ -35,7 +36,8 @@ function mod:DeclareFunctions() return
 {
 	MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
 	MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,
-	MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,
+	MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
+	MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,
 	MODIFIER_EVENT_ON_ATTACK_LANDED, -- RangedSplashModifier handle event automaticly if we dont handle it.
 }
 end
@@ -44,10 +46,14 @@ function mod:GetModifierPreAttack_BonusDamage()
 	return self.bonusDamage
 end
 
-function mod:GetModifierBonusStats_Intellect()
-	return self.bonusInt
+function mod:GetModifierBonusStats_Agility()
+	return self.bonusAgi
 end
 
 function mod:GetModifierBonusStats_Strength()
 	return self.bonusStr
+end
+
+function mod:GetModifierAttackSpeedBonus_Constant()
+	return self.bonusAs
 end

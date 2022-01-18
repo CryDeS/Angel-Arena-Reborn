@@ -1,0 +1,45 @@
+"item_ascetic_cap"
+{
+	//General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"825"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"
+	"ItemIsNeutralDrop"				"1"
+	"ItemPurchasable"				"0"
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"30.0"
+	"AbilityManaCost"				"0"
+	"Model"							"models/props_gameplay/neutral_box.vmdl"
+		
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"status_resistance"  	"40"
+		}	
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"		    "250"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"		        "3"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"hp_regen"		        "10"
+		}
+	}
+}

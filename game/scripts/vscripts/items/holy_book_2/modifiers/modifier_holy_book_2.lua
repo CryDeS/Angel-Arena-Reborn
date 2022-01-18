@@ -23,6 +23,7 @@ function mod:OnCreated(kv)
 	self.bonusAgi    = ability:GetSpecialValueFor("bonus_agi")
 	self.bonusAs     = ability:GetSpecialValueFor("bonus_as")
 	self.bonusHpReg  = ability:GetSpecialValueFor("bonus_hp_regen")
+	self.bonusMpReg  = ability:GetSpecialValueFor("bonus_mpreg")
 
 	if not IsServer() then return end
 
@@ -42,6 +43,7 @@ function mod:DeclareFunctions() return
 	MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
 	MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,
 	MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT,
+	MODIFIER_PROPERTY_MANA_REGEN_CONSTANT,
 	MODIFIER_EVENT_ON_ATTACK_LANDED, -- RangedSplashModifier handle event automaticly if we dont handle it.
 }
 end
@@ -68,4 +70,8 @@ end
 
 function mod:GetModifierConstantHealthRegen()
 	return self.bonusHpReg
+end
+
+function mod:GetModifierConstantManaRegen()
+	return self.bonusMpReg 
 end

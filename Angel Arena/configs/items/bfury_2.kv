@@ -10,7 +10,7 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"1750"
+	"ItemCost"						"500"
 	"ItemShopTags"					"int"
 	
 	// Recipe
@@ -19,7 +19,7 @@
 	"ItemResult"					"item_bfury_2"
 	"ItemRequirements"
 	{
-		"01"						"item_bfury;item_ultimate_orb"
+		"01"						"item_bfury;item_sealed_rune;item_cursed_orb"
 	}
 }
 
@@ -54,15 +54,19 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_agility"			"20"
+			"bonus_agility"			"30"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_str"				"20"	
+			"bonus_str"				"30"	
 			
 		}
 		"03"
+		{
+		    "var_type"              "FIELD_INTEGER"
+		    "bonus_intellect"       "10"
+		}
 		{
 			"var_type"				"FIELD_INTEGER"
 			"bonus_speed"			"16"
@@ -70,7 +74,7 @@
 		"04"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_attack_speed"	"20"
+			"bonus_attack_speed"	"50"
 		}
 		"05"
 		{
@@ -95,7 +99,7 @@
 		"09"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"curse_attackspeed"		"-20"
+			"curse_attackspeed"		"-60"
 		}
 		"10"
 		{
@@ -120,12 +124,12 @@
 		"14"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"quelling_bonus"		"160"
+			"quelling_bonus"		"75"
 		}
 		"15"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"quelling_bonus_ranged"	"125"
+			"quelling_bonus_ranged"	"75"
 		}	
 	}
 	"OnSpellStart"
@@ -189,7 +193,8 @@
 			{
 				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" 				"%bonus_str"
 				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"				"%bonus_damage"
-				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" 				"%bonus_agility"		
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" 				"%bonus_agility"
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		        "%bonus_intellect"
 				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE_UNIQUE" 	"%bonus_speed"		
 				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" 			"%bonus_attack_speed"	
 				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"				"%health_regen"

@@ -55,83 +55,87 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_agility"			"76"
+			"bonus_agility"			"85"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_str"				"76"	
-			
+			"bonus_str"				"85"	
 		}
 		"03"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_speed"			"25"
+			"var_type"              "FIELD_INTEGER"
+			"bonus_intellect"       "40"
 		}
 		"04"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_attack_speed"	"100"
+			"bonus_speed"			"25"
 		}
 		"05"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_damage"			"175"
+			"bonus_attack_speed"	"100"
 		}
 		"06"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"curse_chance"			"25"
+			"bonus_damage"			"175"
 		}
 		"07"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"curse_duration"		"5"
+			"curse_chance"			"25"
 		}
 		"08"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"curse_slow"			"-32"
+			"curse_duration"		"5"
 		}
 		"09"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"curse_attackspeed"		"-350"
+			"curse_slow"			"-32"
 		}
 		"10"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"cleave"				"42"
+			"curse_attackspeed"		"-250"
 		}
 		"11"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"cleave_radius"			"300"
+			"cleave"				"42"
 		}
 		"12"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"health_regen"			"16"
+			"cleave_radius"			"300"
 		}
 		"13"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"health_regen"			"50"
+		}
+		"14"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"mp_regen"				"6.5"
 		}
-		"14"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"quelling_bonus"		"165"
-		}
 		"15"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"quelling_bonus_ranged"	"130"
-		}	
+			"quelling_bonus"		"100"
+		}
 		"16"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"disarmor"				"-14"
+			"quelling_bonus_ranged"	"100"
+		}	
+		"17"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"disarmor"				"-17"
 		}
 	}
 	"OnSpellStart"
@@ -195,7 +199,8 @@
 			{
 				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" 				"%bonus_str"
 				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"				"%bonus_damage"
-				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" 				"%bonus_agility"		
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" 				"%bonus_agility"
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		        "%bonus_intellect"
 				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE_UNIQUE" 	"%bonus_speed"		
 				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" 			"%bonus_attack_speed"	
 				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"				"%health_regen"

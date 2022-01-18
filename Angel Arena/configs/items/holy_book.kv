@@ -10,7 +10,7 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"1500"	
+	"ItemCost"						"1300"	
 	"ItemShopTags"					"artifacts"
 	
 	// Recipe
@@ -19,7 +19,7 @@
 	"ItemResult"					"item_holy_book"
 	"ItemRequirements"
 	{
-		"01"						"item_consumption_orb;item_wisdom_shard;item_wisdom_shard;item_knight_talisman;item_knight_talisman"
+		"01"						"item_consumption_orb;item_agile_wand;item_knight_talisman;item_steel_frame"
 	}
 }
 
@@ -40,7 +40,7 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"3600"
+	"ItemCost"						"4000"
 	"ItemStackable"					"0"
 	"ItemBaseLevel"					"1"
 	
@@ -55,24 +55,29 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_damage"			"20"
+			"bonus_damage"			"35"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_str"				"12"
+			"bonus_str"				"10"
 		}
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_int"				"22"
+			"bonus_agi"				"10"
 		}
-		"04"
+		"04"	
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_as"				"30"
+		}
+		"05"
 		{
 			"var_type"				"FIELD_INTEGER"
 			"splash_radius"			"450"
 		}
-		"05"
+		"06"
 		{
 			"var_type"				"FIELD_INTEGER"
 			"splash_pct"			"25"
@@ -100,7 +105,7 @@
 	"ItemResult"					"item_holy_book_2"
 	"ItemRequirements"
 	{
-		"01"						"item_holy_book;item_restoration_bracer;item_sealed_rune"
+		"01"						"item_holy_book;item_restoration_bracer;item_sealed_rune;item_cursed_orb"
 	}
 }
 
@@ -136,12 +141,12 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_damage"			"45"
+			"bonus_damage"			"60"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_as"				"120"
+			"bonus_as"				"90"
 		}
 		"03"
 		{
@@ -151,19 +156,23 @@
 		"04"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_int"				"30"
+			"bonus_int"				"10"
 		}
 		"05"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_agi"				"25"
+			"bonus_agi"				"30"
 		}
 		"06"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"bonus_hp_regen"		"6.0"
+			"bonus_hp_regen"		"10.0"
 		}
 		"07"
+		{
+			"var_type"              "FIELD_FLOAT"
+			"bonus_mpreg"           "5.0"
+		}
 		{
 			"var_type"				"FIELD_INTEGER"
 			"splash_radius"			"450"

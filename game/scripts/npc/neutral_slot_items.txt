@@ -102,4 +102,12 @@
 	"item_ex_machina"					"1"
 	"item_apex"							"1"
 	"item_dimensional_doorway"			"1"
+        "item_force_field"                                      "1"
+        "item_ascetic_cap"                                      "1"
+        "item_heavy_blade"                                      "1"
+        "item_paintball"                                        "1"
+        "item_black_powder_bag"                                 "1"
+        "item_misericorde"                                      "1"
+        "item_unstable_wand"                                    "1"
+        "item_pogo_stick"                                       "1"
 }
