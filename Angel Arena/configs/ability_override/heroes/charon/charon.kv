@@ -1,0 +1,245 @@
+"charon_soul_drain"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"BaseClass"					    "ability_lua"
+	"AbilityTextureName"			"custom/charon/charon_soul_drain"
+	"ScriptFile"					"heroes/charon/charon_soul_drain/charon_soul_drain"
+	"MaxLevel"                      "7"
+
+	"AbilityCastPoint"				"0.3"
+	"AbilityCastRange"				"600"
+	"AbilityCooldown"				"14"
+	"AbilityManaCost"				"100 110 120 130 140 150 160"
+
+	"precache"
+	{
+		"soundfile"					"soundevents/heroes/charon.vsndevts"
+		"particle"					"particles/charon/charon_soul_drain/charon_soul_drain.vpcf"
+		"particle"					"particles/generic_gameplay/generic_stunned.vpcf"
+	}
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"range_tooltip"         "600"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration_tooltip"      "4.0"
+			"LinkedSpecialBonus"	"charon_soul_drain_cast_time_fast_bonus_const_tallent"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"manaburn"              "4 4.5 5 5.5 6 6.5 7"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"manaburn_pct"          "0.3 0.375 0.45 0.525 0.6 0.675 0.75"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"manaburn_tooltip"      "40 45 50 55 60 65 70"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"manaburn_pct_tooltip"  "3.0 3.75 4.5 5.25 6.0 6.75 7.5"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage"                "5 7.5 10 12.5 15 17.5 20"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_pct"            "0"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_tooltip"        "50 75 100 125 150 175 200"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_pct_tooltip"    "0"
+		}
+		"11"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"interval"              "0.1"
+		}
+	}
+}
+
+"charon_last_word"
+{
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+    "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+    "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "BaseClass"					    "ability_lua"
+    "AbilityTextureName"			"custom/charon/charon_last_word"
+    "ScriptFile"					"heroes/charon/charon_last_word/charon_last_word"
+    "MaxLevel"                      "7"
+
+	"precache"
+	{
+		"soundfile"					"soundevents/heroes/charon.vsndevts"
+		"particle"					"particles/charon/charon_overload/charon_overload.vpcf"
+	}
+	
+    "AbilitySpecial"
+    {
+        "01"
+        {
+           "var_type"			    "FIELD_INTEGER"
+           "radius"		            "600 640 680 720 760 800 840"
+        }
+        "02"
+        {
+            "var_type"			    "FIELD_FLOAT"
+            "slow_for_mana_pct"     "0.4 0.45 0.5 0.55 0.6 0.65 0.7"
+            "LinkedSpecialBonus"	"charon_last_word_bonus_slow_per_mana_tallent"
+        }
+    }
+}
+
+"charon_overload"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"BaseClass"					    "ability_lua"
+	"AbilityTextureName"			"custom/charon/charon_overload"
+	"ScriptFile"					"heroes/charon/charon_overload/charon_overload"
+	"MaxLevel"                      "7"
+
+	"AbilityCastRange"				"1000"
+	"AbilityCooldown"				"10"
+
+	"AbilityCastPoint"				"0.3"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_constant"       "100 140 180 230 280 340 410"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_for_mana_pct"   "10 15 20 25 30 35 40"
+		}
+		"03"
+		{
+			"var_type"				        "FIELD_FLOAT"
+			"mana_cost_pct"                 "10 15 20 25 30 35 40"
+			"LinkedSpecialBonus"	        "charon_overload_manacost_reduction_percent_tallent"
+			"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"projectile_speed"      "5000"
+		}
+	}
+}
+"charon_collapse"
+{
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+    "AbilityType"			        "DOTA_ABILITY_TYPE_ULTIMATE"
+    "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+    "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+    "BaseClass"					    "ability_lua"
+    "AbilityTextureName"			"custom/charon/charon_collapse"
+    "ScriptFile"					"heroes/charon/charon_collapse/charon_collapse"
+    "MaxLevel"                      "7"
+    //"AbilityCastRange"              "800"
+    "AbilityManaCost"				"150 200 250 300 350 450 600"
+    "AbilityCooldown"				"70"
+
+	"AbilityCastPoint"				"0.5"
+		
+	"precache"
+	{
+		"soundfile"					"soundevents/heroes/charon.vsndevts"
+		"particle"					"particles/charon/charon_collapse/charon_collapse_1.vpcf"
+		"particle"					"particles/charon/charon_collapse/charon_collapse_2.vpcf"
+		"particle"					"particles/charon/charon_collapse/charon_collapse_3.vpcf"
+		"particle"					"particles/charon/charon_collapse/charon_collapse_4.vpcf"
+		"particle"					"particles/charon/charon_collapse/charon_collapse_5.vpcf"
+		"particle"					"particles/charon/charon_collapse/charon_collapse_6.vpcf"
+		"particle"					"particles/charon/charon_collapse/charon_collapse_8.vpcf"
+		"particle"					"particles/charon/charon_collapse/charon_collapse_11.vpcf"
+	}
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"radius"				"500"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"manaburn_min"	        "4 5 6 7 8 9 10"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"manaburn_max"	        "12 15 18 21 24 27 30"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_per_mana_burn"	"1.2"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration_inside"	    "2.5 3.0 3.5 4.0 4.5 5.0 5.5"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration_outside"		"0.3"
+		}
+		"07"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "radius_out"		    "500"
+        }
+        "08"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "tick_time_mana_burn"	"0.1"
+        }
+	}
+}
