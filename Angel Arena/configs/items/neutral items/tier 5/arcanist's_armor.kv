@@ -1,0 +1,55 @@
+"item_force_field"
+{
+	//General
+	//.............................................................................................................................
+	"ID"                             "829"                                                      // unique ID number for this item.  Do not change this once established or it will invalidate collected stats.           
+    "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+    // Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"0"
+	"ItemIsNeutralDrop"				"1"
+	"ItemPurchasable"				"0"
+	"Model"							"models/props_gameplay/neutral_box.vmdl"
+		
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"30.0"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_aoe_radius"		"1200"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_aoe_armor"       "5"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"self_armor"			"5"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"self_mres"				"20"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_aoe_mres"		"20"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"active_reflection_pct"	"35"
+		}
+		
+	}
+}
