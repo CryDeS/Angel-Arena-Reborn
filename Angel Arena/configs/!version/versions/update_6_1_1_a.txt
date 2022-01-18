@@ -1,0 +1,80 @@
+Elder Titan
+ -Echo Stomp cast time reduced from 1.0 to 0.9
+ -Echo Stomp initial stun uration reduced from 0.65 to 0.5
+ -Echo Stomp wake damage limit increased from 50/100/150/200/300/400/500 to 80/150/230/310/400/520/650
+ -Astral Spirit damage creeps increased from 3/6/9/12/18/20/22 to 5/9/14/20/25/30
+ -Astral Spirit damage heroes increased from 10/20/30/40/50/60/70 to 15/25/35/45/60/80/100
+ -Earth Splitter max levels increased from 4 to 7
+ -Earth Splitter manacost changed from 175/175/175/175 to 125/150/175/200/225/250/300
+ -Earth Splitter crack width increased from 300 to 315
+ -Earth Splitter slow percent changed from 30%/40%/50%/60% to 30%/35%/40%/45%/50%/55%/60%
+ -Earth Splitter slow duration changed from 3/4/5/6 to 3/3.5/4/4.5/5/5.5/6
+Tinker
+ -Rearm no longer refresh seer stone
+ 
+Items:
+
+Added new neutral items:
+-Arconist's Armor
+-Ascetic's Cape
+-Blast Rig
+-Brigand's Blades
+-Fae Grenade
+-Pig Pole
+-Tumbler's Toy
+-Witchbane
+
+Battle Fury
+ -bonus damage reduced from 75 to 50
+ -bonus health regen reduced from 30 to 20
+ -quelling bonus ranged/melee heroes reduced from 160%/125% to 50%/50%
+Battle Fury 2
+ -now grants 10 intellect
+ -changed recipe from "battle fury + ultimate orb + recipe" to "battle fury + sealed rune + cursed orb + recipe"
+ -recipe cost reduced from 1750 to 500
+ -curse attackspeed changed from -20 to -60
+ -quelling bonus ranged/melee heroes reduced from 160%/125% to 75%/75%
+Burning Blades
+ -bonus movespeed reduced from 25% to 23%
+ -bonus status resist reduced from 20% to 15%
+ -disarmor changed from -12 to -14
+ -maim decrease movespeed changed from -35% to -30%
+ -maim decrease attackspeed changed from -250 to -200
+Burning Book
+ -bonus strength reduced from 86 to 80
+ -bonus agility reduced from 81 to 80 
+ -bonus intellect increased from 35 to 50
+ -bonus status resist reduced from 25% to 20%
+ -maim damage reduced from 225 to 150
+ -disarmor changed from -12 to -17
+Damned Swords
+ -bonus strength reduced from 46 to 35
+ -bonus agility reduced from 46 to 35
+ -maim chance reduced from 25% to 20%
+ -maim decrease movespeed changed from 25% to 20%
+ -maim decrease attackspeed changed from 100 to 75
+Demons Fury
+ -now grants 40 intellect
+ -bonus strength increased from 76 to 85
+ -bonus agility increased from 76 to 85
+ -curse attackspeed changed from -350 to -250
+ -health regen increased from 16 to 50
+ -quelling bonus ranged/melee heroes reduced from 160%/125% to 100%/100%
+ -disarmor changed from -14 to -17
+Holy Book
+ -now grants 35 damage, 30 attackspeed, 10 agility and 10 strength
+ -changed recipe from "consumption orb + wisdom shard + wisdom shard + knight talisman + knight talisman + recipe" to "consumption orb + agile wand + knight talisman + steel frame"
+ -recipe cost reduced from 1500 to 1300
+Holy Book 2
+ -now grants 60 damage, 90 attackspeed, 30 strength, 30 agility, 10 intellect, 10 hp regen and 5 mp regen
+ -changed recipe from "holy book + restoration bracer + item sealed rune + recipe" to "holy book + restoration bracer + sealed rune + cursed orb + recipe"
+ Illusionist Cape
+  -outgoing damage reduced from 100% to 50%
+  -incoming damage increased from 100% to 150%
+ Restoration Bracer
+ -now grants 3.0 hp regen and 1.5 mana regen
+ -item cost increased from 300 to 350
+ Shiva's Guard 2
+  -hp regen degen aura changed from -25% to -35%
+ Thied Eye 
+ -has been removed
