@@ -1,0 +1,109 @@
+"item_recipe_damned_swords"
+{
+	"AbilityTextureName" 				"item_recipe_damned_swords"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1123"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1600"
+	"ItemShopTags"					""
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_damned_swords"
+	"ItemRequirements"
+	{
+		"01"						"item_mystical_sword;item_sealed_rune"
+	}
+}
+
+"item_damned_swords"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_lua"
+	"ID"							"1124"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "damned_swords"
+	"ScriptFile"					"items/damned_swords/damned_swords"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"8000"
+	"ItemStackable"					"0"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"ItemQuality"					"common"
+	
+	"precache"
+	{
+		"soundfile"					"soundevents/items/damned_swords.vsndevts"
+		"particle"					"particles/items2_fx/sange_maim.vpcf"
+	}
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"50"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_as"				"40"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_ms"				"20"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_agi"				"35"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_str"				"35"	
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"maim_chance"			"20"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"maim_damage"			"100"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"maim_duration"			"3"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"maim_decrease_ms"		"20"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"maim_decrease_as"		"75"
+		}
+	}
+}

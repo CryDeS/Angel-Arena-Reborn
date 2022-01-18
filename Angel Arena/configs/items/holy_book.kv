@@ -1,0 +1,186 @@
+"item_recipe_holy_book"
+{
+	"AbilityTextureName" 				"item_recipe_holy_book"
+	
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1139"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1300"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_holy_book"
+	"ItemRequirements"
+	{
+		"01"						"item_consumption_orb;item_agile_wand;item_knight_talisman;item_steel_frame"
+	}
+}
+
+"item_holy_book"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1140"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityTextureName"	        "holy_book"
+	"ScriptFile"					"items/holy_book/holy_book"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"4000"
+	"ItemStackable"					"0"
+	"ItemBaseLevel"					"1"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"35"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_str"				"10"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_agi"				"10"
+		}
+		"04"	
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_as"				"30"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"splash_radius"			"450"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"splash_pct"			"25"
+		}
+	}
+}
+
+"item_recipe_holy_book_2"
+{
+		"AbilityTextureName" 				"recipe"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1200"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_datadriven"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"600"
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_holy_book_2"
+	"ItemRequirements"
+	{
+		"01"						"item_holy_book;item_restoration_bracer;item_sealed_rune;item_cursed_orb"
+	}
+}
+
+"item_holy_book_2"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_lua"
+	"ID"							"1201"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityTextureName"	        "holy_book_2"
+	"ScriptFile"					"items/holy_book_2/holy_book_2"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"8100"
+	"ItemStackable"					"0"
+	"ItemBaseLevel"					"2"
+	
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"60"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_as"				"90"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_str"				"30"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_int"				"10"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_agi"				"30"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_hp_regen"		"10.0"
+		}
+		"07"
+		{
+			"var_type"              "FIELD_FLOAT"
+			"bonus_mpreg"           "5.0"
+		}
+		{
+			"var_type"				"FIELD_INTEGER"
+			"splash_radius"			"450"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"splash_pct"			"25"
+		}
+	}
+}
