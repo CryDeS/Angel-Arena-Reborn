@@ -11,7 +11,7 @@ Installing:
 4. You are excellent, and ready to create any modifications.
 
 Main PR Rules:
- - Balance PR can't be declined without explanations
+ - Balance PR can be declined without explanations
  - Keep project code-style (just look at some project files and I think you will get it )
  - Don't make a mega-commit with large changes. Just create a several step-in-step commits.
  - If there is not exists subject of commit(i.e fixing a typo or another small change) you can use commit message with one dot( i.e "." )
