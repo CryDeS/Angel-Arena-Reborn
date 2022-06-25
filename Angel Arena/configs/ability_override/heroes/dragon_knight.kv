@@ -142,171 +142,190 @@
 // Dragon Knight: Elder Dragon Form
 //=================================================================================================================
 "dragon_knight_elder_dragon_form"
-{
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"65.0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"100 200 300"		
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5229"							// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES_ENEMIES_NO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_DragonKnight.ElderDragonForm"
+        "HasScepterUpgrade"             "1"
+
+		"AbilityDraftUltShardAbility"		"dragon_knight_fireball"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_INVALID"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"65"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 200 300"		
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.35"	// Attacks are primarily about the damage
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_FLOAT"
-			"duration"					"35.0"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"bonus_movement_speed"		"25"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"bonus_attack_range"		"372 372 372 400"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"bonus_attack_damage"		"0"
-		}	
-		"05"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"corrosive_breath_damage"	"30 45 65 90"
-		}
-		"06"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"corrosive_breath_duration"		"5.0 5.0 5.0"
-		}
-		"07"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"splash_radius"					"250 325 400"
-		}
-		"08"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"splash_damage_percent"			"75 75 75 100"
-			"LinkedSpecialBonus"			"special_bonus_unique_dragon_knight_6"
-		}
-		"09"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"frost_bonus_movement_speed"	"-30 -30 -30"
-			"LinkedSpecialBonus"			"special_bonus_unique_dragon_knight_5"
-		}
-		"10"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"frost_bonus_attack_speed"		"-90 -90 -90 -150"
-			"LinkedSpecialBonus"			"special_bonus_unique_dragon_knight_5"
-		}
-		"11"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"frost_duration"				"3.0"
-		}
-		"12"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"frost_aoe"						"300"
-		}	
-		"13"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"magic_resistance"			"0 0 0 40"
-		}
-		"14"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"model_scale"				"0 0 0 30"
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"35"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_movement_speed"		"25"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_attack_range"		"372 372 372 400"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_attack_damage"		"0"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"corrosive_breath_damage"	"30 45 65 90"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"corrosive_breath_duration"	"5.0"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_radius"				"250 325 400"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_damage_percent"		"75 75 75 100"
+				"LinkedSpecialBonus"			"special_bonus_unique_dragon_knight_6"
+			}
+			"09"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"frost_bonus_movement_speed"	"-30 -30 -30"
+				"LinkedSpecialBonus"			"special_bonus_unique_dragon_knight_5"
+			}
+			"10"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"frost_bonus_attack_speed"		"-90 -90 -90 -150"
+				"LinkedSpecialBonus"			"special_bonus_unique_dragon_knight_5"
+			}
+			"11"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"frost_duration"				"3.0"
+			}
+			"12"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"frost_aoe"					"300"
+			}
+			"13"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"magic_resistance"			"0 0 0 40"
+			}
+			"14"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"model_scale"				"0 0 0 30"
+			}
+			
 		}
 	}
-}
-"dragon_knight_frost_breath"
-{
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Dragon Knight: Frost Breath
+	//=================================================================================================================
+	"dragon_knight_frost_breath"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5232"							// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"bonus_movement_speed"		"-30"
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_movement_speed"		"-30"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_attack_speed"		"-20"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"3.0"
+			}
 		}
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"bonus_attack_speed"		"-90"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"duration"					"3.0"
-		}
-	}
-}
-
-"dragon_knight_fireball"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"MaxLevel"						"1"
-	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN  | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-	"FightRecapLevel"				"1"
-	"MaxLevel"						"1"
-	"IsGrantedByShard"				"1"
-	
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1400"
-	"AbilityCastPoint"				"0.2"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"20"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"150"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	}	
+	//=================================================================================================================
+	// Dragon Knight: Fireball
+	//=================================================================================================================
+	"dragon_knight_fireball"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"660"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"MaxLevel"						"1"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN  | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"1"
+		"IsGrantedByShard"			"1"
+		
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"			"FIELD_INTEGER"
-			"radius"			"450"
-		}
-		"02"
-		{
-			"var_type"			"FIELD_INTEGER"
+			"radius"			"350"
 			"damage"			"150"
-		}
-		"03"
-		{
-			"var_type"			"FIELD_FLOAT"
-			"duration"			"10.0"
-		}
-		"04"
-		{
-			"var_type"			"FIELD_FLOAT"
+			"duration"			"8.0"
 			"burn_interval"			"0.5"
+			"linger_duration"			"2"
+			"dragon_form_cast_range"	"1400"
+			"melee_cast_range"			"600"
 		}
-	}
-	"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
-}	
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_5"
+	}	

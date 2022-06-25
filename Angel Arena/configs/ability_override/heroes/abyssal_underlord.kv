@@ -1,249 +1,161 @@
-//=================================================================================================================
-// Abyssal Underlord: Firestorm
-//=================================================================================================================
 "abyssal_underlord_firestorm"
-{
-	"MaxLevel"						"7"
-	"AbilityCastPoint"				"0.3"
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"12"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"100 110 120 130 140 150 160"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5613"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+        "HasShardUpgrade"               "1"
+
+		"AbilityCastRange"				"600 625 650 675 675 675 675"
+		"AbilityCastPoint"				"0.3"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"7"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 110 120 130 140 150 160"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"						"FIELD_INTEGER"
-			"radius"						"550"
-			"LinkedSpecialBonus"			"special_bonus_unique_underlord_8"
+				"AbilityCooldown"
+				{
+					"value"	"12.0"
+					"special_bonus_unique_underlord_5"	"-4"
+				}
+				"radius"					
+				{
+					"value"					"550"
+					"special_bonus_unique_underlord_8"	"+100"
+				}
+				"wave_duration"					
+				{
+					"value"	"7.0"
+					"special_bonus_unique_underlord_7"	"+2"
+				}
+				"wave_count"					"4"
+				"wave_damage"					"30 55 80 105 130 155 180"
+				"wave_interval"					"1.0"
+				"burn_damage"					
+				{
+					"value"					"3"
+					"special_bonus_unique_underlord_4"	"+1"
+				}
+				"burn_interval"					"1.0"
+				"burn_duration"					"2.0"
+				"can_target_units"
+				{
+					"special_bonus_shard"	"+1"
+				}
+				"shard_wave_count_bonus"	
+				{
+					"special_bonus_shard"	"+3"
+				}
+				"shard_wave_interval_reduction"	
+				{
+					"special_bonus_shard"	"+25"
+				}
 		}
-		"02"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"wave_duration"					"7.0"
-			"LinkedSpecialBonus"			"special_bonus_unique_underlord_7"
-		}		
-		"03"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"wave_count"					"4"
-			"LinkedSpecialBonus"			"special_bonus_unique_underlord_7"
-		}
-		"04"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"wave_damage"					"30 55 80 105 130 155 180"
-			"LinkedSpecialBonus"			"special_bonus_unique_underlord_2"
-		}
-		"05"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"wave_interval"					"1.0"
-		}
-		"06"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"burn_damage"					"3.0"
-			"LinkedSpecialBonus"			"special_bonus_unique_underlord_4"
-			"CalculateSpellDamageTooltip"			"0"
-		}
-		"07"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"burn_interval"					"1.0"
-		}
-		"08"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"burn_duration"					"2.0"
-		}
-		"09"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"first_wave_delay"				"0.9"
-		}
-		"10"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"building_damage"				"33"
-		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
-}
 
-//=================================================================================================================
-// Abyssal Underlord: Pit of Malice
-//=================================================================================================================
-"abyssal_underlord_pit_of_malice"
-{
-	"MaxLevel"						"7"
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"15"
-	"AbilityCastPoint"				"0.2"
-	
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"100 115 130 145 160 175 190"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Abyssal Underlord: Pit of Malice
+	//=================================================================================================================
+	"abyssal_underlord_pit_of_malice"
 	{
-		"01"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"radius"						"275"
-			"LinkedSpecialBonus"			"special_bonus_unique_underlord_6"
-		}
-		"02"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"pit_duration"					"7.0"
-		}		
-		"03"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"pit_interval"					"3.6"
-		}
-		"04"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"pit_damage"					"0"
-		}
-		"05"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"ensnare_duration"				"1.0 1.2 1.4 1.5 1.6 1.7 2.1"
-			"LinkedSpecialBonus"			"special_bonus_unique_underlord"
-		}
-	}
-}
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5614"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_AbyssalUnderlord.PitOfMalice"
 
-//=================================================================================================================
-// Abyssal Underlord: Atrophy Aura
-//=================================================================================================================
-"abyssal_underlord_atrophy_aura"
-{
-	"MaxLevel"						"7"
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1200"
-	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"radius"						"1200"
-		}
-		"02"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"damage_reduction_pct"			"18 26 28 34 36 38 42"
-			"LinkedSpecialBonus"			"special_bonus_unique_underlord_3"
-		}
-		"03"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"bonus_damage_from_creep"		"15"
-		}
-		"04"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"bonus_damage_from_hero"		"30 50 70 90 110 130 150"
-		}
-		"05"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"bonus_damage_duration"			"30.0 35.0 40.0 45.0 50.0 55.0 60.0"
-		}
-		"06"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"bonus_damage_duration_scepter"		"70 80 90 100 110 120 130"
-			"RequiresScepter"	"1"
-		}
-		"07"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"permanent_bonus"				"2 3 4 5 7 9 11"
-			"LinkedSpecialBonus"			"special_bonus_unique_underlord_3"
-		}
-	}
-}
+		"AbilityCastRange"				"675"
+		"AbilityCastPoint"				"0.2"
+		"FightRecapLevel"				"1"
 
-//=================================================================================================================
-// Abyssal Underlord: Dark Rift
-//=================================================================================================================
-"abyssal_underlord_dark_rift"
-{
-	"BaseClass"						"ability_lua"
-	"ScriptFile"					"heroes/underlord/abyssal_underlord_dark_rift"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
-	"AbilityTextureName"			"abyssal_underlord_dark_rift"
-	"AbilityCastRange"				"0"
-	"AbilityCastPoint"				"0.1"
-	
-	"HasScepterUpgrade"				"1"
-
-	"MaxLevel"						"7"
-	
-	"precache"
-	{
-		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_abyssal_underlord.vsndevts"
-		"particle"			"particles/units/heroes/heroes_underlord/abbysal_underlord_darkrift_ambient.vpcf"
-		"particle"			"particles/units/heroes/heroes_underlord/abyssal_underlord_darkrift_target.vpcf"
-	}
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"30.0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"75 150 225 325 480 625 725"
-
-	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"radius"						"450"
-		}
-		"02"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"teleport_delay"				"3.0 2.5 2.2 2.0 1.5 1.2 1.0"
-		}
-		"03"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"scepter_health_bonus"			"1000 1500 2000"
-			"RequiresScepter"				"1"
-		}
+		"HasScepterUpgrade"				"1"
+		"MaxLevel"						"7"
 		
-		"04"
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 115 130 145 160 175 190"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"						"FIELD_FLOAT"
-			"scepter_teleport_delay"		"1.5 1.25 1.1 1.0 0.75 0.6 0.5"
-			"RequiresScepter"				"1"
+			"radius"
+			{
+				"value"					"275"
+				"special_bonus_unique_underlord_6"	"+75"
+			}
+
+			"pit_duration"					"7.0"
+			"pit_interval"					"3.6"
+			"pit_damage"					"0"
+			"ensnare_duration"
+			{
+				"value"	"1.0 1.2 1.3 1.4 1.5 1.6 1.7"
+				"special_bonus_unique_underlord" "+0.65"
+			}
+			"speed_bonus"
+			{
+				"special_bonus_scepter" "+40"
+			}
 		}
-		"05"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"max_charges"					"2"
-			"RequiresScepter"				"1"
-		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
-}
-//=================================================================================================================
+
+	//=================================================================================================================
+	// Abyssal Underlord: Atrophy Aura
+	//=================================================================================================================
+	"abyssal_underlord_atrophy_aura"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5615"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"	
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+
+		"AbilityValues"
+		{
+			"radius"						"1200"
+			"damage_reduction_pct"
+			{
+				"value"		"18 26 28 34 36 38 42"
+				"special_bonus_unique_underlord_3"	"+15"
+			}
+			"bonus_damage_from_creep"		"15"
+			"bonus_damage_from_hero"		"30 50 70 90 110 130 150"
+			"bonus_damage_duration"			"30.0 35.0 40.0 45.0 50.0 55.0 60.0"
+			"bonus_shared_by_allies_pct"
+			{
+				"special_bonus_unique_underlord_9"	"+50"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
 	// Abyssal Underlord: Fiend's Gate
 	//=================================================================================================================
 	"abyssal_underlord_dark_portal"
@@ -251,19 +163,19 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"865"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN |DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING "
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING "
+		"AbilityType"						"DOTA_ABILITY_TYPE_ULTIMATE"
 		"FightRecapLevel"				"1"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"AbilitySound"					"Hero_Undying.Tombstone"
-		"MaxLevel"						"1"
-		"IsGrantedByScepter"			"1"
+		"MaxLevel"						"7"
 		"HasScepterUpgrade"				"1"
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
 		"AbilityCastGestureSlot"		"DEFAULT"
-		"AbilityCastRange"				"6000"
-		"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.3 0.3 0.3"
+		"AbilityCastRange"				"10000"
+		"AbilityCastPoint"				"0.3"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -275,12 +187,44 @@
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"duration"				"30.0"
-			}	
+				"duration"				"20.0"
+				"damage_reduction"		"5 10 15 20 20 25 30"
+				"bonus_ms"				"5 10 15 20 20 25 30"
+				"buff_duration"			"5.0 5.5 6.5 7.0 7.5 8.0 8.5"
+				"minimum_distance"		"2000"
+				"spawn_pit_on_cast"
+				{
+					"special_bonus_scepter"	"+1"
+				}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Underlord Portal Warp
+	//=================================================================================================================
+	"abyssal_underlord_portal_warp"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"842"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NOASSIST | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_CHANNEL | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_IGNORE_SILENCE | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"IsCastableWhileHidden"			"1"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityCastAnimation"			"ACT_DOTA_GENERIC_CHANNEL_1"
+		"AbilityChannelTime"			"2.5"
+		"MaxLevel"						"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"300"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+
+			"animation_rate"		"0.8"
+			"stop_distance"			"100"
 		}
 	}

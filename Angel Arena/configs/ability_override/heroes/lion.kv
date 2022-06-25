@@ -1,219 +1,254 @@
-"lion_impale"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"MaxLevel"			"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"600"
-	"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.3 0.3 0.3"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"12.0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"100 120 145 170 180 200 250"
-	
-	// Damage.
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"120 180 260 310 380 455 575"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Lion: Impale
+	//=================================================================================================================
+	"lion_impale"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5044"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Lion.Impale"
+		"MaxLevel"						"7"
+		
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.3"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 120 145 170 180 200 250"
+		
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"100 120 145 170 180 200 250"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"			"FIELD_INTEGER"
-			"width"				"125 125 125 125 125 125 125"
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"width"				"125"
+			}
+			"02"
+			{	
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"2"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"length_buffer"		"325"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"speed"				"1600 1600 1600 1600 2000 2200 2400"
+			}
 		}
-		"02"
-		{	
-			"var_type"			"FIELD_FLOAT"
-			"duration"			"2.0"
-		}
-		"03"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Lion: Voodoo
+	//=================================================================================================================
+	"lion_voodoo"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5045"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Lion.Voodoo"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"500"
+		"AbilityCastPoint"				"0 0 0 0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30.0 26.0 24.0 22.0 18.0 16.0 14.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125 150 175 200 220 240 260"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"			"FIELD_INTEGER"
-			"length_buffer"		"325"
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"2.5 2.75 2.9 3.0 3.2 3.4 3.6"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movespeed"					"120"
+			}
 		}
-		"04"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Lion: Mana Drain
+	//=================================================================================================================
+	"lion_mana_drain"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5046"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+
+        "HasShardUpgrade"               "1"
+        "MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1500"
+		"AbilityCastPoint"				"0.3"
+		"AbilityChannelTime"				"5.1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20.0 17.0 15.0 13.0 10.0 7.0 5.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"10"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"5.0"	// better then the mana cost implies
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"			"FIELD_INTEGER"
-			"speed"				"1600 1600 1600 1600 2000 2200 2400"
+				"duration"					"5.0"
+				"mana_per_second"			
+				{
+					"value"		"30 50 80 100 120 180 220"
+					"special_bonus_unique_lion_5"	"+50"
+				}
+				"break_distance"			
+				{
+					"value"	"1600"
+					"special_bonus_shard"		"+400"	
+				}
+				"tick_interval"				"0.1"
+				"movespeed"			
+				{
+					"value"				"25 27 29 31 33 36 38"
+					"special_bonus_unique_lion_6"	"+15"
+				}
+				"shard_bonus_break_distance"			//OBSOLETE
+				{
+					"value"	"400"
+					"RequiresShard"				"1"
+				}	
+				"shard_bonus_targets"			
+				{
+					"value"		"2"
+					"RequiresShard"				"1"
+				}						
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Lion: Finger of Death
+	//=================================================================================================================
+	"lion_finger_of_death"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5047"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Lion.FingerOfDeath"
+
+		"HasScepterUpgrade"			"1"
+		"MaxLevel"						"7"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60 55 50 45 40 35 30"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"60 55 50 45 40 35 30"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// Modifier just delays damage
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"damage"					
+				{
+					"value"				"400 500 600 700 800 900 1000"
+					"special_bonus_scepter"		"+100"
+				}
+				"damage_per_kill"			
+				{
+					"value"				"40"
+					"special_bonus_unique_lion_8"	"+20"
+					"CalculateSpellDamageTooltip"	"0"
+				}
+				"grace_period"				"3"
+				"damage_delay"				
+				{
+					"value"				"0.25"
+					"CalculateSpellDamageTooltip"	"0"
+				}
+				"cooldown_scepter"			
+				{
+					"value"	"20.0"
+					"RequiresScepter"			"1"
+				}
+				"splash_radius_scepter"		
+				{
+					"value"		"325"
+					"RequiresScepter"			"1"
+				}
 		}
 	}
-}
-
-//=================================================================================================================
-// Lion: Voodoo
-//=================================================================================================================
-"lion_voodoo"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"MaxLevel"						"7"
-	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"500"
-	"AbilityCastPoint"				"0"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"30.0 26.0 24.0 22.0 18.0 16.0 14.0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"125 150 175 200 220 240 260"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"duration"					"2.5 2.75 2.9 3.0 3.2 3.4 3.6"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"movespeed"					"120"
-		}
-	}
-}
-
-//=================================================================================================================
-// Lion: Mana Drain
-//=================================================================================================================
-"lion_mana_drain"
-{
-	"MaxLevel"						"7"
-	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1500"
-	"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.2 0.1 0.0"
-	"AbilityChannelTime"			"5.1"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"20.0 17.0 15.0 13.0 10.0 7.0 5.0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"10 10 10 10 10 10 10"
-
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"duration"					"5.0"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"mana_per_second"			"30 50 80 100 120 180 220"
-			"LinkedSpecialBonus"			"special_bonus_unique_lion_5"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"break_distance"			"1600"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"tick_interval"				"0.1"
-		}
-		"05"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"movespeed"					"25 27 29 31 33 36 38"
-			"LinkedSpecialBonus"			"special_bonus_unique_lion_6"
-		}
-	}
-}
-
-//=================================================================================================================
-// Lion: Finger of Death
-//=================================================================================================================
-"lion_finger_of_death"
-{
-	"MaxLevel"						"7"
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1000"
-	"AbilityCastPoint"				"0.3"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"60 55 50 45 40 35 30"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"200 320 450 580 640 780 850"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"damage"					"400 500 600 700 800 900 1000"
-			"LinkedSpecialBonus"			"special_bonus_unique_lion_3"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"damage_scepter"			"600 700 800 900 1000 1100 1200"
-			"LinkedSpecialBonus"		"special_bonus_unique_lion_3"
-			"RequiresScepter"			"1"
-		}
-        "03"
-        {
-            "var_type"					    "FIELD_INTEGER"
-            "damage_per_kill"			    "40"
-            "LinkedSpecialBonus"			"special_bonus_unique_lion_8"
-			"CalculateSpellDamageTooltip"	"0"
-        }
-		"04"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"grace_period"				"3"
-		}		
-		"05"
-		{
-			"var_type"					    "FIELD_FLOAT"
-			"damage_delay"				    "0.25"
-			"CalculateSpellDamageTooltip"	"0"
-		}
-		"06"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"cooldown_scepter"			"20.0"
-			"RequiresScepter"			"1"
-		}
-		"07"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"splash_radius_scepter"		"325"
-			"RequiresScepter"			"1"
-		}
-		"08"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"damage_pct"				"300"
-			"CalculateSpellDamageTooltip" "0"
-		}
-	}
-}

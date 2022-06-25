@@ -101,38 +101,36 @@
 // Chaos Knight: Chaos Strike
 //=================================================================================================================
 "chaos_knight_chaos_strike"
-{
-	"MaxLevel"							"7"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
 	{
-		"01"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"chance"					"30"
-			"LinkedSpecialBonus"		"special_bonus_unique_chaos_knight_5"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"crit_min"					"150"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"crit_max"					"190 220 250 280 310 350 400"
-		}			
-		"04"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"lifesteal"					"30 35 40 45 50 55 60"
-			"LinkedSpecialBonus"		"special_bonus_unique_chaos_knight_6"
-		}	
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5428"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilitySound"					"Hero_ChaosKnight.ChaosStrike"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"chance"				
+				{
+						"value"				"25"
+						"LinkedSpecialBonus"		"special_bonus_unique_chaos_knight_5"
+				}
+				"crit_min"				"150"
+				"crit_max"				"170 190 220 250 290 320 350"
+				"lifesteal"					
+				{
+					"value"					"25 30 35 40 45 50 55"
+					"LinkedSpecialBonus"		"special_bonus_unique_chaos_knight_6"
+				}
+
+				"creep_multiplier"					"1.5"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
-}
 
 
 //=================================================================================================================

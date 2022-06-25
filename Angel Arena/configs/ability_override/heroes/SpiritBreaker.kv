@@ -192,60 +192,59 @@
 // Spirit Breaker: Nether Strike
 //=================================================================================================================
 "spirit_breaker_nether_strike"
-{
-	"MaxLevel"						"7"
-	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"1.2"
-	"AbilityCastRange"				"700"
-	"AbilityCastRangeBuffer"		"500"
-
-	// Time			
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"60 55 51 47 43 39 35"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"150 250 350 450 550 650 750"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5356"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Spirit_Breaker.NetherStrike.Begin"
+
+        "HasShardUpgrade"               "1"
+        "MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"1.2"
+		"AbilityCastRange"				"700"
+		"AbilityCastRangeBuffer"		"500"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time			
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60 55 51 47 43 39 35"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150 250 350 450 550 650 750"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"				"FIELD_INTEGER"
 			"damage"				"250 300 350 450 550 750 800"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"fade_time"				"1.0 1.0 1.0 1.0 1.0 1.0 1.0"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"cast_range_scepter"	"850"
-			"RequiresScepter"			"1"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bash_radius_scepter"	"250"
-			"RequiresScepter"			"1"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"cooldown_scepter"		"24"
-			"RequiresScepter"			"1"
-		}
-		"06"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"damage_pct"			"200 225 250 275 300 325 350"
-			"CalculateSpellDamageTooltip" "0"
+			"fade_time"				"1.0"
+			"shard_bonus_damage"	
+			{
+				"value"				"200"
+				"RequiresShard"		"1"
+			}
+			"shard_break_duration"
+			{
+				"value"				"4.0"
+				"RequiresShard"		"1"
+			}
+			"shard_spell_immune_duration"
+			{
+				"value"				"2.0"
+				"RequiresShard"		"1"
+			}
 		}
 	}
-}

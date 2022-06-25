@@ -69,83 +69,94 @@
 // Faceless Void: Time Lock
 //=================================================================================================================
 "faceless_void_time_lock"
-{
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-	"AbilityTextureName"			"faceless_void_time_lock"
-	
-	"MaxLevel"						"7"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
 	{
-		"01"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"duration"				"0.2"
-			"LinkedSpecialBonus"	"special_bonus_unique_faceless_void_8"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"duration_creep"		"1.0"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"chance_pct"			"10 12 14 16 18 20 22"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_damage"			"30 40 50 60 70 80 90"
-			"LinkedSpecialBonus"	"special_bonus_unique_faceless_void_3"
-		}
-	}
-}
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5184"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"AbilitySound"					"Hero_FacelessVoid.TimeLockImpact"
+		"MaxLevel"						"7"
 
-"faceless_void_time_dilation"
-{
-	"MaxLevel"						"7"
-	"AbilityCastPoint"				"0.1"
-	"AbilityCooldown"				"20 19 18 17 16 15 14"
-	"AbilityManaCost"				"50"	
-	
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportBonus"		"25"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"radius"				"750"
+				"duration"				
+				{
+					"value"			"0.2"
+					"LinkedSpecialBonus"	"special_bonus_unique_faceless_void_8"
+				}
+				"duration_creep"		"2.0"
+				"chance_pct"			"10 12 14 16 18 20 22"
+				"bonus_damage"			
+				{
+					"value"				"30 40 50 60 70 80 90"
+					"LinkedSpecialBonus"	"special_bonus_unique_faceless_void_3"
+				}
+				"delay"			"0.4"
 		}
-		"02"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"duration"				"3 4 5 6 7 8 9"
-		}					
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"slow"					"4 6 8 9 10 12 14"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"cooldown_percentage"	"60"
-		}			
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage_per_stack"		"30 40 50 60 70 80 90"
-			"LinkedSpecialBonus" "special_bonus_unique_faceless_void_6"
-		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
-}
+
+	//=================================================================================================================
+	// Faceless Void: Time Dilation
+	//=================================================================================================================
+	"faceless_void_time_dilation"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5691"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_FacelessVoid.TimeDilation.Cast"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityCastPoint"				"0.1"
+		"AbilityCooldown"				"20 19 18 17 16 15 14"
+		"AbilityManaCost"				"50"
+		"MaxLevel"						"7"
+				
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"750"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"3 4 5 6 7 8 9"
+			}					
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow"					"4 6 8 9 10 12 14"
+			}			
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_percentage"	"60"
+			}			
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_per_stack"	"30 40 50 60 70 80 90"
+				"LinkedSpecialBonus" "special_bonus_unique_faceless_void_6"
+				"DamageTypeTooltip"		"DAMAGE_TYPE_MAGICAL"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
 
 //=================================================================================================================
 // Faceless Void: Chronosphere

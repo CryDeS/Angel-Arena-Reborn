@@ -1,189 +1,241 @@
 "legion_commander_overwhelming_odds"
-{
-	"MaxLevel"						"7"
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"12"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1000"
-	"AbilityCastPoint"				"0.3"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"100 100 100 100 100 100 100"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{			
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage"				"60 80 100 120 160 200 220"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage_per_unit"		"20 30 40 50 60 70 80"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage_per_hero"		"40 50 70 90 100 110 120"
-			"LinkedSpecialBonus"	"special_bonus_unique_legion_commander_4"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"illusion_dmg_pct"		"25"
-			"CalculateSpellDamageTooltip"	"1"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_speed_creeps"		"3"
-		}
-		"06"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_speed_heroes"		"9"
-		}
-		"07"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"duration"				"7.0"
-		}
-		"08"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"radius"				"400"
-			"LinkedSpecialBonus"	"special_bonus_unique_legion_commander_2"
-		}
-	}
-}
-
-//=================================================================================================================
-// Legion Commander: Press the Attack
-//=================================================================================================================
-"legion_commander_press_the_attack"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"700"
-	"AbilityCastPoint"				"0.05"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"16.0 15.5 15.0 14.5 14.0 13.5 13.0"
-	
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"100"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
 	{
-		"01"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"duration"				"5.0"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5595"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_LegionCommander.Overwhelming.Location"
+		"HasShardUpgrade"				"1"
+		"MaxLevel"						"7"
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.3"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{			
+				"damage"				"60 80 100 120 160 200 220"
+				"damage_per_unit"		"20 30 40 50 60 70 80"
+				"damage_per_hero"		
+				{
+					"value"				"40 50 70 90 100 110 120"
+					"LinkedSpecialBonus"	"special_bonus_unique_legion_commander_4"
+				}
+				"illusion_dmg_pct"		
+				{
+					"value"				"25"
+					"CalculateSpellDamageTooltip"	"1"
+				}
+				"bonus_speed_creeps"		"3"
+				"bonus_speed_heroes"		"9"
+				"duration"				"7.0"
+				"radius"				
+				{
+					"value"		"400"
+					"LinkedSpecialBonus"	"special_bonus_unique_legion_commander_2"
+				}
+				"armor_per_creep"	
+				{
+					"value" 				"0.5"
+					"RequiresShard"				"1"
+				}
+				"armor_per_hero"	
+				{
+					"value" 				"4"
+					"RequiresShard"  		"1"
+				}
+				"shard_duration"	
+				{	
+					"value" 				"15"
+					"RequiresShard"		"1"
+				}
 		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"attack_speed"			"60 80 100 120 140 150 160"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"hp_regen"				"50 70 90 120 160 180 200"
-		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
-}
 
-//=================================================================================================================
-// Legion Commander: Moment of Courage
-//=================================================================================================================
-"legion_commander_moment_of_courage"
-{
-	"MaxLevel"						"7"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"1.5 1.2 1.0 0.8 0.5 0.3 0.15"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Legion Commander: Press the Attack
+	//=================================================================================================================
+	"legion_commander_press_the_attack"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5596"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_LegionCommander.PressTheAttack"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.05"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16.0 15.5 15.0 14.5 14.0 13.5 13.0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"3.0"	// Value much higher than cost.
+
+
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"trigger_chance"			"20"
-			"LinkedSpecialBonus"        "special_bonus_unique_legion_commander_3"																	
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"attack_speed"			"60 80 100 120 140 150 160"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hp_regen"				"50 70 90 120 160 180 200"
+			}
 		}
-		"02"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Legion Commander: Moment of Courage
+	//=================================================================================================================
+	"legion_commander_moment_of_courage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5597"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilitySound"					"Hero_LegionCommander.Courage"
+		"MaxLevel"						"7"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"1.5 1.2 1.0 0.8 0.5 0.3 0.15"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"					"FIELD_FLOAT"
+			"trigger_chance"			
+			{
+				"value"				"20"
+				"LinkedSpecialBonus"        "special_bonus_unique_legion_commander_3"																	
+			}
 			"buff_duration"				"1.0"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
 			"hp_leech_percent"			"25 30 35 40 45 50 60"
+			
 		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
-}
 
-//=================================================================================================================
-// Legion Commander: Duel
-//=================================================================================================================
-"legion_commander_duel"
-{
-	"MaxLevel"						"7"
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"180"
-	"AbilityCastPoint"				"0.3"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"60 59 58 57 55 53 50"
-	
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"100"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Legion Commander: Duel
+	//=================================================================================================================
+	"legion_commander_duel"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5598"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_LegionCommander.Duel"
+		"MaxLevel"						"7"
+
+		"HasScepterUpgrade"			"1"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"180"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60 59 58 57 55 53 50"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"3.0"	// Value much higher than cost.
+
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"				"FIELD_FLOAT"
-			"duration"				"4.0 4.5 4.75 5.0 5.5 6.0 6.5"
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"4.0 4.5 4.75 5.0 5.5 6.0 6.5"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration_scepter"		"4.75 5.5 6.25 6.75 7.0 7.5 8.0"
+				"RequiresScepter"	"1"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"reward_damage"			"25 36 47 58 70 80 90"
+				"LinkedSpecialBonus"	"special_bonus_unique_legion_commander"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"victory_range"			"600"
+			}
+			"05"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"scepter_damage_reduction_pct"			"50"
+				"RequiresScepter"						"1"
+			}
+			"06"
+			{
+				"var_type"								"FIELD_FLOAT"
+				"scepter_cooldown_reduction"			"20.0"
+				"RequiresScepter"						"1"
+			}
 		}
-		"02"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"duration_scepter"		"4.75 5.5 6.25 6.75 7.0 7.5 8.0"
-			"RequiresScepter"	"1"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"reward_damage"			"25 36 47 58 70 80 90"
-			"LinkedSpecialBonus"	"special_bonus_unique_legion_commander"
-		}
-        "04"
-        {
-            "var_type"				"FIELD_INTEGER"
-            "victory_range"			"600"
-        }
 	}
-}

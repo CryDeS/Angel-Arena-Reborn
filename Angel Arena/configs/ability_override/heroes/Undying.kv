@@ -255,54 +255,69 @@
 // Undying: Flesh Golem
 //=================================================================================================================
 "undying_flesh_golem"
-{
-    "MaxLevel"						"7"
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"40"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"200 300 350 400 450 500 600"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
 	{
-        "01"
-        {
-            "var_type"					"FIELD_INTEGER"
-            "slow"						"30 35 40 45 50 55 60"
-        }
-        "02"
-        {
-            "var_type"					"FIELD_INTEGER"
-            "damage_amp"				"20 24 28 32 36 40 45"
-        }
-		"03"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5447"							// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Undying.FleshGolem"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"HasShardUpgrade"				"1"
+		"MaxLevel"						"7"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200 300 350 400 450 500 600"		
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_FLOAT"
-			"slow_duration"				"4"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"str_percentage"			"30 35 40 45 50 55 60"
-		}
-		"05"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"duration"					"25"
-		}
-		"06"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"movement_bonus"			"25 30 35 40 45 50 55"
-		}
-		"07"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"scepter_cooldown"			"40"
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"slow"						"30 35 40 45 50 55 60"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_amp"				"20 24 28 32 36 40 45"
+				"DamageTypeTooltip"			"DAMAGE_TYPE_NONE"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"slow_duration"					"4"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"str_percentage"			"30 35 40 45 50 55 60"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"25"
+			}	
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_bonus"			"25 30 35 40 45 50 55"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"shard_cooldown_reduction"			"20"
+				"RequiresShard"				"1"
+			}
 		}
 	}
-}
