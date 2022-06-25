@@ -1,0 +1,104 @@
+Hero changes:
+ Abaddon:
+  - 1 skill self damage changed from 30/35/40/45/50/55/60 to 50
+  - 2 skill cast point changed from 0.452 to 0.3
+  - 2 skill duration changed from 13 to 15
+  - 3 skill movement speed changed from 25 to 15/17/19/21/23/25/25
+
+ Abyssal Underlord:
+  - 2 skill root duration 1.0/1.2/1.4/1.5/1.6/1.7/2.1 to 1.0/1.2/1.3/1.4/1.5/1.6/1.7
+
+ Alchemist:
+  - Shard skill Berserk Potion bonus ms 0 to 30
+
+ Ancient Àpparation:
+  - 2 skill shard damage changed from 40 to 150
+  - 2 skill shard attack speed slow changed from 20 to 50
+
+ Dragon Knight:
+  - Fireball damage changed from 75 to 150
+
+ Furion:
+  - 1 skill Cooldown changed from 14/13/12/11/10/9/8 to 15
+  - 3 skill treant health changed from 550/650/750/850/950/1050/1150 to 550/600/650/700/750/850/1100
+  - 3 skill treant damage changed from 45/55/65/75/85/95/105 to 25/30/45/55/60/65/105
+  - 4 skill Cooldown changed from 50 to 65
+
+ Huskar:
+  - 4 skill health damage changed from 45 to 20/22/25/27/33/36/45
+
+ Chaos Knight:
+  - 3 skill crit chance changed from 30 to 25
+  - 3 skill crit max changed from 190/220/250/280/310/350/400 to 170/190/220/250/290/320/350
+  - 3 skill lifesteal changed from 30/35/40/45/50/55/60 to 25/30/35/40/45/50/55
+
+ Crystal Maiden's:
+  - 3 skill mana per cast 10/15/20/25/30/35/40
+  
+ Centaur:
+  - 1 skill stun duration changed from 2.0 to 2.0/2.1/2.2/2.3/2.4/2.5/2.6
+
+ Dawnbreaker:
+  - 4 skill damage of pulsation changed from 30/50/70/80/90/100/110 to 50/75/100/125/150/175/200
+  - 4 skill heal of pulsation changed from 50/70/90/110/130/150/170 to 50/75/100/125/150/175/200
+  - 4 skill damage changed from 130/160/190/220/250/280/310 to 200/300/400/500/600/700/800
+
+ Medusa:
+  - Cold Blooded Cooldown changed from 6 to 10
+
+ Marci:
+  - 4 skill Cooldown changed from 110/100/90/80/70/60/50 to 80/75/70/65/60/55/50
+  - 4 skill between flurries changed from 1.75 to 1.55/1.50/1.45/1.40/1.35/1.30/1.25
+  - 4 skill attack Stacks changed from 3/4/5/6/7/8/9 to 4/5/6/7/8/9/10
+  - talent 25lvl silence duration changed from 1.5sec to 0.5sec
+
+ Primal Beast:
+  - Added to Angel Arena
+
+ Techies:
+  - Added techies skill frm dota
+
+ Undying:
+  - 4 skill Cooldown changed from 40 to 60
+  - Shard Cooldown ultimate changed from 35 to 20
+
+Item changes:
+ Tome of heroes:
+  - Stack start game 5
+  - Delay before the start of the game 600sec
+  - Max stack 40
+  - Cooldown stack 20sec
+  - Cost changed from 1250 to 1500
+
+ Ethereal Blade:
+  - Craft changed from Ghost scepter + Recipe to Mystic staff + Ghost scepter + Recipe
+
+ Gem:
+  - Cast range changed from 300 to 500
+  - Active skill radius changed from 300 to 500
+  - Duration active skill changed from 4 to 8
+  - Cooldown active skill changed from 12 to 30
+
+Bosses:
+ Keymaster:
+  - Now ignores terrain
+  - Movement speed changed from 365 to 400
+
+Creeps:
+ Satyr hand:
+  - 3 skill magic amplify changed from 50 to 20
+
+Fixes:
+ - Storm Spirit 1 skill damage fixed
+ - Earth Spirit ultimate fixed
+ - Elder Titan ultimate fixed
+ - Abyssal Underlord ultimate fixed
+ - Omniknight 3 skill and ultimate fixed
+ - Pudge 3 skill fixed
+ - Templar Assassin 3 skill fixed
+ - Shadow Fiend aghanim fixed
+ - Hoodwink shard skill fixed
+ - Morphlimg 1 skill fixed
+ - Swift blink range fixed
+ - Overwhelming blink range fixed
+ - Arcane blink range fixed
