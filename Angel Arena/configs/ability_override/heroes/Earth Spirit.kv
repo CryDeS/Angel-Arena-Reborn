@@ -288,70 +288,87 @@
 // Earth Spirit: Magnetize
 //=================================================================================================================
 "earth_spirit_magnetize"
-{
-	"MaxLevel"						"7"
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"500"
-	"AbilityCastPoint"				"0.01"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"60.0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"100 150 200 250 300 400 500"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5612"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_EarthSpirit.Magnetize.Cast"
+
+		"AbilityDraftPreAbility"		"earth_spirit_stone_caller"
+		"AbilityDraftUltScepterAbility" "earth_spirit_petrify"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_6"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"500"
+		"AbilityCastPoint"				"0.01"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 150 200 250 300 400 500"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"cast_radius"			"500"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage_per_second"		"85 140 195 250 305 360 415"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"damage_duration"			"6.0"
-			"LinkedSpecialBonus"	"special_bonus_unique_earth_spirit_6"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"rock_search_radius"			"500"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"rock_explosion_radius"			"600"
-		}			
-		"06"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"damage_interval"			"1.0"
-		}
-		"07"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"rock_explosion_delay"			"8.0"
-		}
-		"08"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"silence_duration"			"5.0"
-		}
-		"09"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"slow_duration"			"2.0"
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cast_radius"			"500"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_per_second"			"85 140 195 250 305 360 415"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage_duration"			"6.0"
+				"LinkedSpecialBonus"	"special_bonus_unique_earth_spirit_6"
+				"DamageTypeTooltip"		"DAMAGE_TYPE_NONE"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"rock_search_radius"			"400"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"rock_explosion_radius"			"600"
+			}			
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage_interval"			"1.0"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"rock_explosion_delay"			"8.0"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"silence_duration"			"5.0"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"slow_duration"			"2.0"
+			}
 		}
 	}
-}

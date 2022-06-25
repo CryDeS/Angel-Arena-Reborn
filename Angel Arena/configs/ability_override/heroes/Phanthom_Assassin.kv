@@ -1,176 +1,257 @@
-"phantom_assassin_stifling_dagger"
-{
-	"MaxLevel"						"7"
+//=================================================================================================================
+	// Phantom Assassin: Fan of Knives ( shard ability )
+	//=================================================================================================================
+	"phantom_assassin_fan_of_knives"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"662"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"IsGrantedByShard"			"1"
+		"AbilitySound"					"Ability.Torrent"
 
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"600 700 800 900 1000 1100 1200"
-	"AbilityCastPoint"				"0.3"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.15"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"pct_health_damage_initial"			"12"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"pct_health_damage"			"2"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"degen"			"-50"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"		"3"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"			"550"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_speed"			"650"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Phantom Assassin's Stifling Dagger
+	//=================================================================================================================
+	"phantom_assassin_stifling_dagger"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5190"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_PhantomAssassin.Dagger.Cast"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600 700 800 900 1000 1100 1200"
+		"AbilityCastPoint"				"0.3"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"6"
 	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"6"
-	"AbilityDuration"				"1.5 2.0 2.5 3.0 3.5 4.0 4.5"
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"30"
 
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"30"
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"move_slow"					"-50"
+				"dagger_speed"			"1200"
+				"duration"			"1.5 2.0 2.5 3.0 3.5 4.0 4.5"
+				"base_damage"			"100"
+				"attack_factor"
+				{
+					"value"				"-20 -17 -15 -12 -10 -5 0"
+					"special_bonus_unique_phantom_assassin_5"	"+20"
+				}
+				"attack_factor_tooltip"	
+				{
+					"value"				"60 65 70 75 80 85 90"
+					"special_bonus_unique_phantom_assassin_5"	"+20"
+					"DamageTypeTooltip"			"DAMAGE_TYPE_PHYSICAL"
+				}
 
-	// Special	
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"move_slow"				"-50"
 		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"dagger_speed"			"1200"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"duration"				"1.5 2.0 2.5 3.0 3.5 4.0 4.5"
-			"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_5"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"base_damage"			"100"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"attack_factor"			"-20 -17 -15 -12 -10 -5 0"
-		}
-		"06"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"attack_factor_tooltip"	"60 65 70 75 80 85 90"
-		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
-}
-
-//=================================================================================================================
-// Ability: Phantom Assassin's Phantom Strike
-//=================================================================================================================
-"phantom_assassin_phantom_strike"
-{
-	"MaxLevel"						"7"
 	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1000"
-	"AbilityCastPoint"				"0.3"
+	//=================================================================================================================
+	// Ability: Phantom Assassin's Phantom Strike
+	//=================================================================================================================
+	"phantom_assassin_phantom_strike"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5191"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CUSTOM"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_PhantomAssassin.Strike.Start"
+		"MaxLevel"						"7"
 
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"8"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.3"
 
-	// Duration
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDuration"				"3"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"80 90 100 110 120 130 140"
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"8"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"80 90 100 110 120 130 140"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"70 100 130 160 190 220 250"
+			}
+			
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"6"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"abilitycastrange"			""
+				"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_6"				
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"AbilityCharges"		""
+				"LinkedSpecialBonus"	"special_bonus_unique_phantom_assassin_9"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
 	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Ability: Phantom Assassin's Blur
+	//=================================================================================================================
+	"phantom_assassin_blur"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5192"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+        "HasScepterUpgrade" 		    "1"
+        "MaxLevel"							"7"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40 38 36 34 32 30 28"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.4"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_attack_speed"	"70 100 130 160 190 220 250"
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_evasion"				"15 20 25 30 35 40 45"
+				"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_3"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"			"25"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"				"600"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"fade_duration"			"0.0"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"scepter_cooldown"			"16"
+				"RequiresScepter"		"1"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"scepter_fade_duration"			"0.75"
+				"RequiresScepter"		"1"
+			}
 		}
-        "02"
-        {
-            "var_type"				"FIELD_FLOAT"
-            "duration"				"6.0"
-        }
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"abilitycastrange"			""
-			"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_6"				
-		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
-}
 
-//=================================================================================================================
-// Ability: Phantom Assassin's Blur
-//=================================================================================================================
-"phantom_assassin_blur"
-{
-	"MaxLevel"							"7"
-
-	"AbilityCooldown"					"40 38 36 34 32 30 28"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"bonus_evasion"				"15 20 25 30 35 40 45"
-			"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_3"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"duration"					"25"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"radius"					"600"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"fade_duration"				"0.0"
-		}
-		"05"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"scepter_cooldown"			"16"
-			"RequiresScepter"			"1"
-		}
-	}
-}
-
-//=================================================================================================================
-// Ability: Phantom Coup de Grace
-//=================================================================================================================
-"phantom_assassin_coup_de_grace"
-{
-	"MaxLevel"							"7"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"crit_chance"				"15"
-			"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_2"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"crit_bonus"				"200 250 275 300 350 450 500"
-			"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_4"
-		}
-	}
-}
-
-"phantom_assassin_death_mark"
+	"phantom_assassin_death_mark"
 {
 	"BaseClass"						"ability_lua"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -220,65 +301,39 @@
         }
 	}
 }
-
-"phantom_assassin_fan_of_knives"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
-	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-	"MaxLevel"						"1"
-	"FightRecapLevel"				"1"
-	"IsGrantedByShard"				"1"
-	"AbilitySound"					"Ability.Torrent"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0.15"
-	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
 	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"15"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"125"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Ability: Phantom Coup de Grace
+	//=================================================================================================================
+	"phantom_assassin_coup_de_grace"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5193"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilitySound"					"Hero_PhantomAssassin.CoupDeGrace"
+
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		"AbilityDraftUltShardAbility"		"phantom_assassin_fan_of_knives"
+		"MaxLevel"							"7"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"						"FIELD_FLOAT"
-			"pct_health_damage_initial"		"12"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"pct_health_damage"		"2"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"degen"					"-50"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"duration"				"3"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"radius"				"550"
-		}
-		"06"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"projectile_speed"		"650"
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"crit_chance"				"15"
+				"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_2"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"crit_bonus"				"200 250 275 300 350 450 500"
+			}
 		}
 	}
-}

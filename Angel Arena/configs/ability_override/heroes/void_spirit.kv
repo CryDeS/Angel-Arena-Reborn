@@ -225,70 +225,51 @@
 // Void Spirit: Astral Step
 //=================================================================================================================
 "void_spirit_astral_step"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0.2"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"80 90 100 120 140 160 180"
-
-	"AbilityCharges"				"2"
-	"AbilityChargeRestoreTime"		"15"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
 	{
-		"01"
+		// General
+ 	//-------------------------------------------------------------------------------------------------------------
+		"ID"							"7705"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_VoidSpirit.AstralStep.Start"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"
+		"AbilityCharges"		"2"
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"80 90 100 120 140 160 180"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"radius"				"170"
+				"radius"				"170"
+				"AbilityChargeRestoreTime"	
+				{
+					"value"			"15"
+					"special_bonus_unique_void_spirit_1"	"-4"
+				}
+				"min_travel_distance"	"200"
+				"max_travel_distance"	"800"
+				"pop_damage_delay"		
+				{
+					"value"	"1.25"
+					"DamageTypeTooltip"		"DAMAGE_TYPE_NONE"
+				}
+				"pop_damage"			"200 300 400 500 600 700 800"
+				"movement_slow_pct"		"40 45 50 60 65 70 80"
 		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"AbilityCharges"		""
-			"LinkedSpecialBonus"	"special_bonus_unique_void_spirit_9"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"AbilityChargeRestoreTime"	""
-			"LinkedSpecialBonus"	"special_bonus_unique_void_spirit_1"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"min_travel_distance"	"200"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"max_travel_distance"	"800"
-		}
-		"06"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"pop_damage_delay"		"1.25"
-		}
-		"07"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"pop_damage"			"200 300 400 500 600 700 800"
-		}
-		"08"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"movement_slow_pct"		"40 45 50 60 65 70 80"
-		}
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
 	}
-	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
-}

@@ -1,297 +1,273 @@
 //=================================================================================================================
-// Riki: Smoke Screen
-//=================================================================================================================
-"riki_smoke_screen"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"550"
-	"AbilityCastPoint"				"0.4"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"13"
-	"AbilityDuration"				"6"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"75 80 85 90 100 115 125"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	// Riki: Sleeping Dart ( scepter ability )
+	//=================================================================================================================
+	"riki_poison_dart"
 	{
-		"01"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"radius"					"275 295 300 310 315 320 325"
-			"LinkedSpecialBonus"		"special_bonus_unique_riki_7"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"duration"					"6"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"miss_rate"					"70"
-		}
-	}
-}
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"550"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"IsGrantedByShard"              "1"
 
-"riki_blink_strike"
-{
-	"MaxLevel"						"7"
-	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"700"
-	"AbilityCastPoint"				"0.4"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"2"
-	"AbilityCharges"				"2"
-	"AbilityChargeRestoreTime"		"15"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
 		
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"50 60 70 80 90 100 110"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"abilitycastrange"			""
-			"LinkedSpecialBonus"		"special_bonus_unique_riki_3"
+			"duration"		"3"
+			"damage"		"150"
+			"movement_slow"		"30"
+			"debuff_duration"		"4"
+			"projectile_speed"		"1600"
+			"wake_damage_limit"		"200"
 		}
-		"02"
+	}
+	
+	//=================================================================================================================
+	// Riki: Smoke Screen
+	//=================================================================================================================
+	"riki_smoke_screen"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5142"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilitySound"					"Hero_Riki.Smoke_Screen"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"550"
+		"AbilityCastPoint"				"0.4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"13"
+		"AbilityDuration"				"6"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75 80 85 90 100 115 125"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"					"FIELD_INTEGER"
+				"radius"
+				{
+					"value"	"275 295 300 310 315 320 325"
+					"LinkedSpecialBonus"		"special_bonus_unique_riki_7"
+				}
+				"duration"					"6"
+				"miss_rate"					"70"
+		}
+		
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	//=================================================================================================================
+	// Riki: Blink Strike
+	//=================================================================================================================
+	"riki_blink_strike"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5143"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CUSTOM"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilitySound"					"Hero_Riki.Blink_Strike"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"2"
+		"AbilityCharges"				"2"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50 60 70 80 90 100 110"
+		
+		// Special
+		"AbilityValues"
+		{
+			
 			"bonus_damage"				"100 140 200 220 280 300 350"
+			"AbilityChargeRestoreTime"
+			{
+				"value"							"15"
+				"special_bonus_unique_riki_9" "-4"				
+			}
+			"slow"	
+			{
+				"value" "0.2 0.4 0.6 0.8"
+				"special_bonus_unique_riki_2" "+0.3"
+			}
 		}
-		"03"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"AbilityChargeRestoreTime"		""
-			"LinkedSpecialBonus"			"special_bonus_unique_riki_9"
-			"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_SUBTRACT"
-		}
+		
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
-}
-
-//=================================================================================================================
-// Riki: Backstab
-//=================================================================================================================
-"riki_permanent_invisibility"
-{
-	"MaxLevel"								"7"
 	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Riki: Backstab
+	//=================================================================================================================
+	"riki_backstab"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5144"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+
+		"AbilityDraftUltShardAbility"		"riki_poison_dart"
+		"MaxLevel"								"7"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"						"FIELD_FLOAT"
-			"fade_delay"					"4.0 3.5 3.0 2.5 2.0 1.5 1.0"
+				"damage_multiplier"				
+				{
+					"value"		"0.8 0.9 1.0 1.1 1.2 1.3 1.4"
+					"LinkedSpecialBonus"		"special_bonus_unique_riki_1"
+					"CalculateSpellDamageTooltip"	"0"
+					"DamageTypeTooltip"			"DAMAGE_TYPE_NONE"
+				}
+			
+				"backstab_angle"				"105"
+				"fade_delay"					"4 3.5 3 3.5 2 1.5 1.0"
 		}
-		"02"
-        {
-            "var_type"					    "FIELD_FLOAT"
-            "movement_speed"				"15 18 21 25 28 31 35"
-        }
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
-}
-
-"riki_tricks_of_the_trade"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"400"
-	"AbilityCastPoint"				"0.3"
-	"AbilityChannelTime"			"3.0"
-	"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
-	"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
-
-	// Ability Data
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"18 17 16 15 14 13 12"
-	"AbilityManaCost"				"80 90 101 112 123 134 145"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"radius"					"450"
-			"LinkedSpecialBonus"		"special_bonus_unique_riki_4"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"attack_count"				"4 5 6 7 8 9 10"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"damage_pct"				"60"
-		}
-		"04"
-		{
-				"var_type"				"FIELD_INTEGER"
-				"agility_pct"			"60"
-		}
-		"05"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"scepter_duration"			"4.0"
-			"RequiresScepter"			"1"
-		}
-		"06"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"scepter_attacks"			"6 7 9 10 12 13 15"
-			"RequiresScepter"			"1"
-		}
-		"07"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"scepter_cast_range"		"800"
-			"RequiresScepter"			"1"
-		}
-	}
-}
-
-
-
-//=================================================================================================================
-// Riki: Backstab
-//=================================================================================================================
-"riki_backstab"
-	{
-	"MaxLevel"						"7"
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
-	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-	"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"damage_multiplier"				"0.8 0.9 1.0 1.1 1.2 1.3 1.4"
-			"LinkedSpecialBonus"		"special_bonus_unique_riki_1"
-			"CalculateSpellDamageTooltip"	"0"
-		}
-		"02"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"backstab_angle"				"105"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"fade_delay"					"4 3.5 3 3.5 2 1.5 1.0"
-		}
-	}
-	"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
-}
-
-"special_bonus_unique_riki_6"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"ID"					"347"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"value"						"3"
-			"ad_linked_ability"			"riki_tricks_of_the_trade"
-		}
-	}
-}
-
-"riki_poison_dart"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
-	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-	"MaxLevel"						"1"
-	"FightRecapLevel"				"1"
-	"IsGrantedByShard"              "1"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1200"
-	"AbilityCastPoint"				"0.2"
-	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
 	
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"20"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"125"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Riki: Backstab
+	//=================================================================================================================
+	"riki_permanent_invisibility"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"316"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"MaxLevel"								"7"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"			"FIELD_FLOAT"
-			"duration"			"3"
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"fade_delay"					"4.0 3.5 3.0 2.5 2.0 1.5 1.0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_speed"			"15 18 21 25 28 31 35"
+			}
 		}
-		"02"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Riki: Tricks of the Trade
+	//=================================================================================================================
+	"riki_tricks_of_the_trade"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5145"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"HasScepterUpgrade"				"1"
+		"AbilitySound"					"Hero_Riki.TricksOfTheTrade.Cast"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.3"
+		"AbilityChannelTime"			"3.0"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
+
+		// Ability Data
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"18 17 16 15 14 13 12"
+		"AbilityManaCost"				"80 90 101 112 123 134 145"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"			"FIELD_INTEGER"
-			"movement_slow"		"25"
-		}
-		"03"
-		{
-			"var_type"			"FIELD_FLOAT"
-			"debuff_duration"	"4"
-		}
-		"04"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"projectile_speed"	"1600"
-		}
-		"05"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"damage"			"600"
+				"radius"
+				{
+					"value"		"450"
+					"LinkedSpecialBonus"		"special_bonus_unique_riki_4"
+				}
+				"attack_count"	"4 5 6 7 8 9 10"
+				"damage_pct"	"60"
+				"agility_pct"	"60"
+				"scepter_duration"				
+				{
+					"value"			"4"
+					"RequiresScepter"		"1"
+				}
+				"scepter_attacks"
+				{
+					"value"		"6 7 9 10 12 13 15"
+					"RequiresScepter"		"1"
+				}
+				"scepter_cast_range"
+				{
+					"value"		"800"
+					"RequiresScepter"		"1"
+				}
+				"dispel"
+				{
+					"value"				"0"
+					"special_bonus_unique_riki_5"	"+1"
+				}
 		}
 	}
-}
