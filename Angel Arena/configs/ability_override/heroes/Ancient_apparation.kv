@@ -1,251 +1,254 @@
-"ancient_apparition_cold_feet"
-{
-	"MaxLevel"						"7"
-	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"650 675 700 725 750 775 800"
-	"AbilityCastPoint"				"0.01 0.01 0.01 0.01 0.01 0.01 0.01"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"10.0"
-	"AbilityDuration"				"4.0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"100"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	"ancient_apparition_cold_feet"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5345"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Ancient_Apparition.ColdFeetCast"
+		"MaxLevel"						"7"
+	
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_COLD_FEET"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"650 675 700 725 750 775 800"
+		"AbilityCastPoint"				"0.01 0.01 0.01 0.01 0.01 0.01 0.01"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10"
+		"AbilityDuration"				"4.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.5"	// Does two modifiers 
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"				"FIELD_FLOAT"
 			"damage"				"45 65 85 105 125 145 165 "
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"break_distance"		"700"
-			"LinkedSpecialBonus"	"special_bonus_unique_ancient_apparition_1"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_FLOAT"
+			"break_distance"
+			{
+				"value"		"700"
+				"special_bonus_unique_ancient_apparition_1"	"+200"
+			}
 			"stun_duration"			"2.0 2.2 2.4 2.6 2.8 3.0 3.4"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"AbilityCharges"		""
-			"LinkedSpecialBonus"	"special_bonus_unique_ancient_apparition_1"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage_pct"			"50"
+			"area_of_effect"
+			{
+				"value"			"0"
+				"special_bonus_unique_ancient_apparition_6"			"+450"
+			}
+
 		}
 	}
-}
 
-//=================================================================================================================
-// Ancient Apparition: Ice Vortex
-//=================================================================================================================
-"ancient_apparition_ice_vortex"
-{
-	"MaxLevel"						"7"
-	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1500 1500 1500 1500 1500 1500 1500"
-	"AbilityCastPoint"				"0.01 0.01 0.01 0.01 0.01 0.01 0.01"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"5.0"
-	"AbilityDuration"				"10"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"80 90 100 110 120 130 140"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Ancient Apparition: Ice Vortex
+	//=================================================================================================================
+	"ancient_apparition_ice_vortex"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5346"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilitySound"					"Hero_Ancient_Apparition.IceVortexCast"
+
+        "HasShardUpgrade"               "1"
+        "MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_ICE_VORTEX"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"1500"
+		"AbilityCastPoint"				"0.01 0.01 0.01 0.01 0.01 0.01 0.01"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDuration"				"10"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"80 90 100 110 120 130 140"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"				"FIELD_INTEGER"
+			"AbilityCooldown"
+			{
+				"value"					"5"
+				"special_bonus_unique_ancient_apparition_3"			"-2"
+			}
 			"radius"				"350"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"drag_speed"			"50 66 83 100 116 133 150"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"movement_speed_pct"	"-18 -20 -22 -24 -26 -28 -30"
-			"LinkedSpecialBonus"	"special_bonus_unique_ancient_apparition_4"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"spell_resist_pct"		"-15 -17 -18 -20 -22 -25 -30"
-			"LinkedSpecialBonus"	"special_bonus_unique_ancient_apparition_4"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"vision_aoe"			"200"
-		}
-		"06"
-		{
-			"var_type"				"FIELD_INTEGER"
+			"drag_speed"	"50 66 83 100 116 133 150"
+			"movement_speed_pct"
+			{
+				"value"	"-18 -20 -22 -24 -26 -28 -30"
+				"special_bonus_unique_ancient_apparition_4"	"-5"
+			}
+			"spell_resist_pct"
+			{
+				"value"		"-15 -17 -18 -20 -22 -25 -30"
+				"special_bonus_unique_ancient_apparition_4"	"-5"
+				"DamageTypeTooltip"		"DAMAGE_TYPE_MAGICAL"
+			}
+			"vision_aoe"		"200 200 200 200"
 			"vortex_duration"		"10"
+			"shard_dps"
+			{
+				"value"		"150"
+				"RequiresShard"			"1"
+			}
+			"shard_attack_speed_reduction"
+			{
+				"value"					"50"
+				"RequiresShard"			"1"
+			}
 		}
 	}
-}
 
-//=================================================================================================================
-// Ancient Apparition: Chilling Touch
-//=================================================================================================================
-"ancient_apparition_chilling_touch"
-{
-	"MaxLevel"						"7"
-    // Time
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"6.0 5.6 5.2 4.8 4.4 4.0 3.0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"50 55 60 65 70 75 80"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Ancient Apparition: Chilling Touch
+	//=================================================================================================================
+	"ancient_apparition_chilling_touch"
 	{
-        "01"
-        {
-            "var_type"				"FIELD_INTEGER"
-            "damage"				"50 85 120 160 180 200 230"
-            "LinkedSpecialBonus"		"special_bonus_unique_ancient_apparition_2"
-        }
-        "02"
-        {
-            "var_type"				"FIELD_INTEGER"
-            "slow"					"100"
-        }
-        "03"
-        {
-            "var_type"				"FIELD_FLOAT"
-            "duration"				"0.5"
-        }
-        "04"
-        {
-            "var_type"				"FIELD_INTEGER"
-            "attack_range_bonus"	"250"
-        }
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5347"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_Ancient_Apparition.ChillingTouchCast"
+
+		"HasScepterUpgrade"			"1"
+		"MaxLevel"						"7"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage"
+			{
+				"value"				"50 85 120 160 180 200 230"
+				"special_bonus_unique_ancient_apparition_2"		"+80"
+			}
+			"slow"					"100"
+			"duration"				"0.5"
+			"attack_range_bonus"
+			{
+				"value"				"250"
+				"special_bonus_unique_ancient_apparition_7"		"+200"
+			}
+			"AbilityManaCost"
+			{
+				"value"										"50 55 60 65 70 75 80"
+				"special_bonus_scepter"						"-50%"
+			}
+			"AbilityCooldown"				
+			{
+				"value"			"6.0 5.6 5.2 4.8 4.4 4.0 3.0"
+				"special_bonus_scepter"						"-100%"
+			}
+		}
 	}
-}
 
-//=================================================================================================================
-// Ancient Apparition: Ice Blast
-//=================================================================================================================
-"ancient_apparition_ice_blast"
-{
-	"MaxLevel"						"7"
-	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0.01 0.01 0.01 0.01 0.01 0.01 0.01"
-	"AbilityCastRange"				"0"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"40.0"
-	
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"125 150 175 200 225 250 325" 
-	
-	// Damage.
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"250 350 450 520 680 820 980"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Ancient Apparition: Ice Blast
+	//=================================================================================================================
+	"ancient_apparition_ice_blast"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5348"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Ancient_Apparition.IceBlast.Target"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.01 0.01 0.01"
+		"AbilityCastRange"				"0"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40.0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125 150 175 200 225 250 325" 
+		
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"250 350 450 520 680 820 980"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"radius_min"			"275 275 275 275 275 275 275"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"radius_grow"			"50.0 50.0 50.0 50.0 50.0 50.0 50.0"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"radius_max"			"1000 1000 1000 1000 1000 1000 1000"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"path_radius"			"275 275 275 275 275 275 275"
-		}
-		"05"
-		{	
-			"var_type"				"FIELD_FLOAT"
+			"radius_min"			"275"
+			"radius_grow"			"50.0"
+			"radius_max"			"1000"
+			"path_radius"			"275"
 			"frostbite_duration"	"7.0 7.5 8.0 8.5 9.0 10.0 11.0"
-		}
-		"06"
-		{	
-			"var_type"				"FIELD_FLOAT"
 			"dot_damage"			"15 25 40 75 90 110 150"
-		}
-		"07"
-		{	
-			"var_type"				"FIELD_INTEGER"
 			"speed"					"1500 1600 1700 1800 1900 2000 2200"
-		}
-		"08"
-		{	
-			"var_type"				"FIELD_FLOAT"
-			"kill_pct"				"9.0 10.0 10.5 10.0 11.0 11.5 12.0"
-			"LinkedSpecialBonus"	"special_bonus_unique_ancient_apparition_5"
-		}
-		"09"
-		{
-			"var_type"				"FIELD_INTEGER"
+			"kill_pct"
+			{	
+				"value"				"9.0 10.0 10.5 10.0 11.0 11.5 12.0"
+				"special_bonus_unique_ancient_apparition_5"	"+6"
+			}
 			"target_sight_radius"	"500 500 500 500 500 500 500"
 		}
-		"10"
-		{	
-			"var_type"				"FIELD_FLOAT"
-			"frostbite_duration_scepter"	"18"
-			"RequiresScepter"			"1"
-		}
 	}
-}
 
-//=================================================================================================================
-// Ancient Apparition: Ice Blast Release
-//=================================================================================================================
-"ancient_apparition_ice_blast_release"
-{
+	//=================================================================================================================
+	// Ancient Apparition: Ice Blast Release
+	//=================================================================================================================
+	"ancient_apparition_ice_blast_release"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5349"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"						"1"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0 0 0 0 0 0 0"
+ 		"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_4"
 
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0 0 0 0 0 0 0"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"1.0 1.0 1.0 1.0 1.0 1.0 1.0"
-}
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"1.0 1.0 1.0 1.0 1.0 1.0 1.0"
+	}

@@ -1,226 +1,304 @@
-"oracle_fortunes_end"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"850"
-	"AbilityCastPoint"				"0"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"8"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"130"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+//=================================================================================================================
+	// Oracle: Fortune's End
+	//=================================================================================================================
+	"oracle_fortunes_end"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5637"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_CHANNEL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Oracle.FortunesEnd.Target"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"850"
+		"AbilityCastPoint"				"0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"8"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"130"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_FLOAT"
-			"channel_time"					"2.5"
-			"LinkedSpecialBonus"	"special_bonus_unique_oracle_7"
-			"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_SUBTRACT"
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"channel_time"					"2.5"
+				"LinkedSpecialBonus"	"special_bonus_unique_oracle_7"
+				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_SUBTRACT"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"120 150 220 280 360 420 520"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bolt_speed"				"1200"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"minimum_purge_duration"	"0.5"
+				"LinkedSpecialBonus"	"special_bonus_unique_oracle_2"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"maximum_purge_duration"	"2.5"
+				"LinkedSpecialBonus"	"special_bonus_unique_oracle_2"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"300"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"scepter_bonus_range"					"500"
+				"RequiresScepter"	"1"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"scepter_bonus_radius"					"150"
+				"RequiresScepter"	"1"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"scepter_stun_percentage"	"50"
+				"RequiresScepter"	"1"
+			}
 		}
-		"02"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Oracle: Fate's Edict
+	//=================================================================================================================
+	"oracle_fates_edict"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5638"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_Oracle.FatesEdict.Cast"
+		"MaxLevel"						"7"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.2 0.1 0.0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"17 14 11 8"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"damage"					"120 150 220 280 360 420 520"
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"3.0 3.5 4.0 4.5 5.0 5.5 6.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"magic_damage_resistance_pct_tooltip"				"100"
+			}
 		}
-		"03"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Oracle: Purifying Flames
+	//=================================================================================================================
+	"oracle_purifying_flames"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5639"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY | DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"	
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Oracle.PurifyingFlames.Damage"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"550"
+		"AbilityCastPoint"				"0.3"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"2.75"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"70 85 100 115 130 145 160"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"bolt_speed"				"1200"
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"90 180 270 320 360 380 400"
+			}			
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"heal_per_second"		"9.9 19.8 29.7 39.6 42.0 48.0 60.0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"total_heal_tooltip"	"99 198 297 396 420 480 600"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"9.0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"tick_rate"				"1.0"
+			}
 		}
-		"04"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	} 
+
+	//=================================================================================================================
+	// Oracle: False Promise
+	//=================================================================================================================
+	"oracle_false_promise"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5640"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilitySound"					"Hero_Oracle.FalsePromise.Cast"
+		"MaxLevel"						"7"
+
+        "HasShardUpgrade"               "1"
+
+		"HasScepterUpgrade"				"1"
+		"AbilityDraftUltScepterAbility"		"oracle_rain_of_destiny"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_6"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"70"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 160 220 280 340 400 460"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_FLOAT"
-			"minimum_purge_duration"	"0.5"
-			"LinkedSpecialBonus"	"special_bonus_unique_oracle_2"
-		}
-		"05"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"maximum_purge_duration"	"2.5"
-			"LinkedSpecialBonus"		"special_bonus_unique_oracle_2"
-		}
-		"06"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"radius"					"300"
-		}
-		"07"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"scepter_bonus_range"					"500"
-			"RequiresScepter"	"1"
-		}
-		"08"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"scepter_bonus_radius"					"150"
-			"RequiresScepter"	"1"
-		}
-		"09"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"scepter_stun_percentage"	"50"
-			"RequiresScepter"	"1"
-		}
-		"10"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"damage_pct"				"100"
-			"CalculateSpellDamageTooltip" "0"
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"4.5 4.7 5.0 5.5 6.0 6.5 7.0"
+				"LinkedSpecialBonus"	"special_bonus_unique_oracle"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"radius"				"1000"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"shard_fade_time"				"0.15"
+				"RequiresShard"						"1"
+			}
+			
 		}
 	}
-}
-
-//=================================================================================================================
-// Oracle: Fate's Edict
-//=================================================================================================================
-"oracle_fates_edict"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"700"
-	"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.2 0.1 0.0"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"13.0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"0"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Oracle: Rain of Destiny
+	//=================================================================================================================
+	"oracle_rain_of_destiny"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"932"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"IsGrantedByScepter"			"1"
+		"MaxLevel"						"1"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastRange"				"650"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"300"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"				"FIELD_FLOAT"
-			"duration"				"3.0 3.5 4.0 4.5 5.0 5.5 6.0"
+				"radius"				"650"
+				"duration"				"10"
+				"damage"				"100"
+				"tick_rate"				"1.0"
+				"heal_amp"				"100"
 		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"magic_damage_resistance_pct_tooltip"				"100"
-		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
 	}
-}
-
-//=================================================================================================================
-// Oracle: Purifying Flames
-//=================================================================================================================
-"oracle_purifying_flames"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"550"
-	"AbilityCastPoint"				"0.3"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"2.75"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"70 85 100 115 130 145 160"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage"				"90 180 270 320 360 380 400"
-		}			
-		"02"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"heal_per_second"		"9.9 19.8 29.7 39.6 42.0 48.0 60.0"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"total_heal_tooltip"	"99 198 297 396 420 480 600"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"duration"				"9.0"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"tick_rate"				"1.0"
-		}
-		"06"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"cooldown_scepter"		"1.0"
-			"RequiresScepter"	"1"
-		}
-		"07"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"castpoint_scepter"		"0.0"
-			"RequiresScepter"	    "1"
-		}
-		"08"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"damage_pct"			"40"
-			"CalculateSpellDamageTooltip" "0"
-		}
-	}
-} 
-
-//=================================================================================================================
-// Oracle: False Promise
-//=================================================================================================================
-"oracle_false_promise"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1000"
-	"AbilityCastPoint"				"0.3"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"70"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"100 160 220 280 340 400 460"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"duration"				"4.5 4.7 5.0 5.5 6.0 6.5 7.0"
-			"LinkedSpecialBonus"	"special_bonus_unique_oracle"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"radius"				"1000"
-		}
-	}
-}

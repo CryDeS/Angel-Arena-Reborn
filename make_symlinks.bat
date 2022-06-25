@@ -4,7 +4,7 @@
 :: Please, configure you DOTA 2 PATH parent directory
 :: DOTA_PATH=D:\Games\Steam\steamapps\common\dota 2 beta\
 
-set DOTA_PATH=
+set DOTA_PATH=D:\Steam game\steamapps\common\dota 2 beta\
 set ADDON_NAME=angel_arena_reborn
 
 ::
@@ -32,3 +32,4 @@ mklink /d /j "%SOURCE_GAME_PATH%" "%DOTA_GAME_PATH%"
 mklink /d /j "%SOURCE_CONTENT_PATH%" "%DOTA_CONTENT_PATH%" 
 
 echo Done, symlinks created
+pause

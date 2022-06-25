@@ -1,266 +1,364 @@
-//=================================================================================================================
-// Huskar: Inner Fire
-//=================================================================================================================
-"huskar_inner_fire"
-{
-    // General
-    //-------------------------------------------------------------------------------------------------------------
-    "ID"							"7300"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-    "SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-    "MaxLevel"                      "7"
-
-    // Casting
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityCastRange"				"400"
-    "AbilityCastPoint"				"0.2"
-
-    // Time
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityCooldown"				"18 17 16 15 14 13 12"
-
-    // Cost
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityManaCost"				"75 100 125 150 175 200 225"
-
-    // Special
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-        "01"
-        {
-            "var_type"				"FIELD_INTEGER"
-            "damage"				"100 155 210 265 350 500 650"
-        }
-        "02"
-        {
-            "var_type"				"FIELD_INTEGER"
-            "radius"				"400"
-        }
-        "03"
-        {
-            "var_type"				"FIELD_FLOAT"
-            "disarm_duration"		"1.6 1.9 2.2 2.5 2.8 3.4 4.0"
-            "LinkedSpecialBonus"			"special_bonus_unique_huskar_3"
-        }
-        "04"
-        {
-            "var_type"				"FIELD_INTEGER"
-            "knockback_distance"	"450"
-        }
-        "05"
-        {
-            "var_type"				"FIELD_FLOAT"
-            "knockback_duration"	"0.6"
-        }
-    }
-    "AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
-}
-
-"huskar_inner_vitality"
-{
-	"MaxLevel"				   		"7"
-	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"800"
-	"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.3 0.3 0.3"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"22"
-	"AbilityDuration"				"16 16 16 16 16 16 16"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"170 170 170 170 170 170 170"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Huskar: Inner Vitality
+	//=================================================================================================================
+	"huskar_inner_vitality"
 	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"heal"					"20"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"attrib_bonus"			"0.05 0.1 0.15 0.20 0.30 0.40 0.50"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"hurt_attrib_bonus"		"0.1 0.35 0.45 0.55 0.6 0.7 0.8"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"hurt_percent"			"0.20"
-		}
-		"05"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"tooltip_attrib_bonus"			"5 10 15 20 30 40 50"
-		}
-		"06"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"tooltip_hurt_attrib_bonus"		"10 35 45 55 60 70 80"
-		}
-	}
-}	
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5271"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"	
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"					   
+		"AbilitySound"					"Hero_Huskar.Inner_Vitality"
+		"MaxLevel"				   		"7"
 
-//=================================================================================================================
-// Huskar: Burning Spear
-//=================================================================================================================
-"huskar_burning_spear"
-{
-	"MaxLevel"						"7"
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"500"
-	"AbilityCastPoint"				"0.0 0.0 0.0 0.0  0.0 0.0 0.0"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.3"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"22"
+		"AbilityDuration"				"16"
 
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"0.0 0.0 0.0 0.0 0.0 0.0 0.0"
-	"AbilityDuration"				"8"
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"170"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// already gets credit for the healing
 
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"0"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"						"FIELD_FLOAT"
-			"health_cost"					"1.8 2.1 2.4 2.7 3.0 3.3 3.6"
-		}
-		"02"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"burn_damage"					"15 20 25 30 35 40 45"
-			"LinkedSpecialBonus"			"special_bonus_unique_huskar_2"
-		}
-	}
-}
-
-//=================================================================================================================
-// Huskar: Berserker's Blood
-//=================================================================================================================
-"huskar_berserkers_blood"
-{
-	"MaxLevel"								"7"
-			
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"maximum_attack_speed"			"196 224 252 280 340 380 420"
-		}
-		"02"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"maximum_health_regen"			"40 60 90 110 130 150 170"
-			"LinkedSpecialBonus"			"unique_huskar_6"
-		}
-		"03"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"hp_threshold_max"				"10"
-		}
-	}
-}
-
-//=================================================================================================================
-// Huskar: Life Break
-//=================================================================================================================
-"huskar_life_break"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.3 0.3 0.3"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"16"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"0 0 0 0 0 0 0"		
-	
-	// Cast Range
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"550"
-	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDuration"				"4 5 6 7 8 9 10"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"health_cost_percent"		"0.25"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"health_damage"				"0.45"
-			"LinkedSpecialBonus"		"special_bonus_unique_huskar"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"charge_speed"				"1000"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"tooltip_health_damage"		"45"
-			"LinkedSpecialBonus"		"special_bonus_unique_huskar"
-			"LinkedSpecialBonusField"		"value2"
-		}
-		"05"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"tooltip_health_cost_percent"		"25"
-			"CalculateSpellDamageTooltip"		"1"
-		}
-		"06"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"movespeed"					"-30 -35 -40 -45 -50 -55 -60"
-		}
-		"07"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"slow_durtion_tooltip"		"4 5 6 7 8 9 10"
-		}
-		"08"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"taunt_duration"			"3.0"
-			"RequiresScepter"			"1"
-		}
-		"09"
-		{
+			"01"
+			{
 				"var_type"				"FIELD_INTEGER"
+				"heal"					"20"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"attrib_bonus"			"0.05 0.1 0.15 0.20 0.30 0.40 0.50"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"hurt_attrib_bonus"		"0.1 0.35 0.45 0.55 0.6 0.7 0.8"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"hurt_percent"			"0.20"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"tooltip_attrib_bonus"			"5 10 15 20 30 40 50"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_hurt_attrib_bonus"		"10 35 45 55 60 70 80"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}	
+	//=================================================================================================================
+	// Huskar: Inner Fire
+	//=================================================================================================================
+	"huskar_inner_fire"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"7300"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"					
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"   
+		"AbilitySound"					"Hero_Huskar.Inner_Vitality"
+		"MaxLevel"                      "7"
+
+		"HasShardUpgrade"			"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.2"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"18 17 16 15 14 13 12"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75 100 125 150 175 200 225"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// already gets credit for the healing
+
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"100 155 210 265 350 500 650"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"400"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"disarm_duration"		"1.6 1.9 2.2 2.5 2.8 3.4 4.0"
+				"LinkedSpecialBonus"			"special_bonus_unique_huskar_3"
+
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"knockback_distance"	"450"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"knockback_duration"	"1"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"shard_cooldown_reduction"	"3.0"
+				"RequiresShard"				"1"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"shard_movement_slow_pct"	"40"
+				"RequiresShard"				"1"
+			}
+			"08"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"shard_hero_damage_heal_pct"	"50"
+				"RequiresShard"					"1"
+			}
+			"09"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"shard_creep_damage_heal_pct"	"10"
+				"RequiresShard"					"1"
+			}
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}	
+	
+	//=================================================================================================================
+	// Huskar: Burning Spear
+	//=================================================================================================================
+	"huskar_burning_spear"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5272"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilitySound"					"Hero_Huskar.Burning_Spear"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"health_cost"					"1.8 2.1 2.4 2.7 3.0 3.3 3.6"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"burn_damage"					"15 20 25 30 35 40 45"
+				"LinkedSpecialBonus"			"special_bonus_unique_huskar_2"
+			}		
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"duration"						"8"
+			}	
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+	//=================================================================================================================
+	// Huskar: Berserker's Blood
+	//=================================================================================================================
+	"huskar_berserkers_blood"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5273"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"								"7"
+				
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"maximum_attack_speed"			"196 224 252 280 340 380 420"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"maximum_health_regen"			"40 60 90 110 130 150 170"
+				"LinkedSpecialBonus"			"special_bonus_unique_huskar_6"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"maximum_magic_resist"			"10 12 15 17 20 22 25 "
+				"LinkedSpecialBonus"			"special_bonus_unique_huskar_6"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"hp_threshold_max"				"10"
+			}
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	
+	//=================================================================================================================
+	// Huskar: Life Break
+	//=================================================================================================================
+	"huskar_life_break"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5274"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"		
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Huskar.Life_Break"
+		"MaxLevel"						"7"
+
+		"HasScepterUpgrade"			"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"		
+		
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"550"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDuration"				"4 5 6 7 8 9 10"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"health_cost_percent"		"0.2 0.22 0.25 0.27 0.33 0.36 0.45"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"health_damage"				"0.2 0.22 0.25 0.27 0.33 0.36 0.45"
+				"LinkedSpecialBonus"		"special_bonus_unique_huskar"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"charge_speed"				"1000"
+			}
+			"04"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"tooltip_health_damage"				"20 22 25 27 33 36 45"
+				"LinkedSpecialBonus"		"special_bonus_unique_huskar"
+				"LinkedSpecialBonusField"		"value2"
+
+			}
+			"05"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"tooltip_health_cost_percent"		"20 22 25 27 33 36 45"
+				"CalculateSpellDamageTooltip"		"1"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movespeed"					"-30 -35 -40 -45 -50 -55 -60"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"slow_durtion_tooltip"		"4 5 6 7 8 9 10"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"taunt_duration"		"3.0"
+				"RequiresScepter"		"1"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
 				"cast_range_bonus"		"300"
 				"RequiresScepter"		"1"
+			}
 		}
 	}
-}

@@ -1,310 +1,383 @@
 //=================================================================================================================
-// Ability: Warlock's Fatal Bonds
-//=================================================================================================================
-"warlock_fatal_bonds"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0.1"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"25.0 25.0 25.0 25.0 25.0 25.0 25.0"
-
-	// Damage.
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"0 0 0 0 0 0 0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"120 120 120 120 120 120 120"		
-	
-	// Cast Range
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1000"
-
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	// Ability: Warlock's Fatal Bonds
+	//=================================================================================================================
+	"warlock_fatal_bonds"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5162"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Warlock.FatalBonds"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_FATAL_BONDS"
+		"AbilityCastRange"				"1000"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastPoint"				"0.1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"0 0 0 0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"120"		
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// only does damage
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"count"						"6"
-			"LinkedSpecialBonus"		"special_bonus_unique_warlock_9"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"damage_share_percentage"	"12 14 16 18 20 22 25"
-			"LinkedSpecialBonus"		"special_bonus_unique_warlock_5"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"duration"					"12 13 14 15 16 17 18"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"search_aoe"				"550"
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"count"						"6"
+				"LinkedSpecialBonus"		"special_bonus_unique_warlock_9"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_share_percentage"	"12 14 16 18 20 22 25"
+				"LinkedSpecialBonus"		"special_bonus_unique_warlock_5"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"12 13 14 15 16 17 18"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"search_aoe"				"550"
+			}
 		}
 	}
-}
-
-//=================================================================================================================
-// Ability: Warlock's Shadow Word
-//=================================================================================================================
-"warlock_shadow_word"
-{
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
-	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0.1"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCharges"             	"2"
-    "AbilityChargeRestoreTime"   	"14"
-    "AbilityCooldown"            	""
-
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"90 110 130 150 170 190 210"		
-	
-	// Cast Range
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"500 525 550 575 600 625 650"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Ability: Warlock's Shadow Word
+	//=================================================================================================================
+	"warlock_shadow_word"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5163"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Warlock.ShadowWordCastGood"
+        "HasShardUpgrade"               "1"
+        "MaxLevel"						"7"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"14"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"90 110 130 150 170 190 210"		
+		
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"500 525 550 575 600 625 650"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// Modifier just does damage/healing
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"damage"					"37 47 65 82 102 115 140"
-			"LinkedSpecialBonus"		"special_bonus_unique_warlock_7"
+				"damage"					
+				{
+					"value"				"37 47 65 82 102 115 140"
+					"LinkedSpecialBonus"		"special_bonus_unique_warlock_7"
+				}
+				"duration"					
+				{
+					"value"				"7.0"
+					"special_bonus_unique_warlock_8"	"+2"
+				}
+				"tick_interval"				"1.0"
+				"shard_aoe"					
+				{
+					"value"					"450"
+					"RequiresShard"			"1"
+				}
+				"shard_movement_speed_pct"					
+				{
+					"value"					"10"
+					"RequiresShard"			"1"
+				}						
 		}
-		"02"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}	
+	
+	//=================================================================================================================
+	// Ability: Warlock's Upheaval
+	//=================================================================================================================
+	"warlock_upheaval"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5164"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_AOE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_Warlock.Upheaval"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.05"
+		"AbilityChannelTime"			"16"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25 24 23 22 21 20 19"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"0 0 0 0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 110 120 130 140 150 160"	
+		
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_FLOAT"
-			"duration"					"7.0"
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aoe"					"650"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_per_second"	"12 14 17 19 23 25 27"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"3.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_slow"				"80"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aspd_per_second"	"10"
+			}
 		}
-		"03"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	
+	//=================================================================================================================
+	// Ability: Warlock's Rain of Chaos / Chaotic Offering
+	//=================================================================================================================
+	"warlock_rain_of_chaos"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5165"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"2"
+		"HasScepterUpgrade"			"1"
+		"AbilitySound"					"Hero_Warlock.RainOfChaos"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.5 0.5 0.5"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"75"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200 300 400 500 600 700 800"			
+		
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.5"	// Primarily about the summon
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_FLOAT"
-			"tick_interval"				"1.0"
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"golem_duration"			"45"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"stun_duration"				"0.8"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aoe"						"600"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_hp_tooltip"			"900 1000 1100 1200 1300 1400 1500"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_dmg_tooltip"			"75 90 105 115 125 150 180"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_armor_tooltip"		"6 9 12 18 24 28 32"
+				"LinkedSpecialBonus"		"special_bonus_unique_warlock_2"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_regen_tooltip"		"25 30 35 40 45 50 55"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"number_of_golems_scepter"	"2"
+				"RequiresScepter"		"1"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_hp_tooltip_scepter"	"675 900 1000 1100 1200 1300 1350"
+				"RequiresScepter"		"1"
+			}
+			"10"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_dmg_tooltip_scepter"	"56 75 94 105 110 120 150"
+				"RequiresScepter"		"1"
+			}
+			"11"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"hp_dmg_reduction_scepter"	"25"
+				"RequiresScepter"		"1"
+			}
+			"12"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bounty_reduction_scepter"	"50"
+				"RequiresScepter"		"1"
+			}
 		}
 	}
-}	
-
-//=================================================================================================================
-// Ability: Warlock's Upheaval
-//=================================================================================================================
-"warlock_upheaval"
-{
-	"MaxLevel"						"7"
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0.05"
-	"AbilityChannelTime"			"16.0"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"25 24 23 22 21 20 19"
-
-	// Damage.
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"0 0 0 0 0 0 0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"100 110 120 130 140 150 160"		
 	
-	// Cast Range
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1200"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Ability: Warlock's Golem Flaming Fists
+	//=================================================================================================================
+	"warlock_golem_flaming_fists"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5166"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"						"3"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"MaxLevel"						"7"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"				"FIELD_FLOAT"
-			"aoe"					"650 650 650 650 650 650 650"
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage"				"25 38 50 62 75 88 100"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"			"300"
+			}
 		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"slow_per_second"		"12 14 17 19 23 25 27"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"duration"				"3.0"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"max_slow"				"80"
-		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
-}
-
-//=================================================================================================================
-// Ability: Warlock's Rain of Chaos / Chaotic Offering
-//=================================================================================================================
-"warlock_rain_of_chaos"
-{
-	"MaxLevel"						"7"
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0.5"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"75"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"200 300 400 500 600 700 800"		
 	
-	// Cast Range
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1200"
-
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Ability: Warlock's Golem Permanent Immolation
+	//=================================================================================================================
+	"warlock_golem_permanent_immolation"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5167"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"						"3"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"MaxLevel"						"7"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_FLOAT"
-			"golem_duration"			"45"
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"300"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_damage"			"30 40 50 70 90 110 160"
+			}
 		}
-		"02"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"stun_duration"				"0.8"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"aoe"						"600"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"golem_hp_tooltip"			"900 1000 1100 1200 1300 1400 1500"
-		}
-		"05"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"golem_dmg_tooltip"			"75 90 105 115 125 150 180"
-		}
-		"06"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"golem_armor_tooltip"		"6 9 12 18 24 28 32"
-			"LinkedSpecialBonus"		"special_bonus_unique_warlock_2"
-		}
-		"07"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"golem_regen_tooltip"		"25 30 35 40 45 50 55"
-		}
-		"08"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"number_of_golems_scepter"	"2 2 2 2 2 2 2"
-			"RequiresScepter"		"1"
-		}
-		"09"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"golem_hp_tooltip_scepter"	"675 900 1000 1100 1200 1300 1350"
-			"RequiresScepter"		"1"
-		}
-		"10"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"golem_dmg_tooltip_scepter"	"56 75 94 105 110 120 150"
-			"RequiresScepter"		"1"
-		}
-		"11"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"hp_dmg_reduction_scepter"	"25"
-			"RequiresScepter"		"1"
-		}
-		"12"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"bounty_reduction_scepter"	"50"
-			"RequiresScepter"		"1"
-		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
-}
-
-//=================================================================================================================
-// Ability: Warlock's Golem Flaming Fists
-//=================================================================================================================
-"warlock_golem_flaming_fists"
-{
-	"MaxLevel"						"7"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage"				"25 38 50 62 75 88 100"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"radius"				"300 300 300 300 300 300 300"
-		}
-	}
-}
-
-//=================================================================================================================
-// Ability: Warlock's Golem Permanent Immolation
-//=================================================================================================================
-"warlock_golem_permanent_immolation"
-{
-	"MaxLevel"						"7"
-
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"aura_radius"			"300"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"aura_damage"			"30 40 50 70 90 110 160"
-		}
-	}
-}

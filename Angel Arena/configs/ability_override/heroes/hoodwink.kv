@@ -73,65 +73,46 @@
 // Hoodwink: Bushwhack
 //=================================================================================================================
 "hoodwink_bushwhack"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
-	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-	"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
-	"MaxLevel"						"7"
-	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1200"
-	"AbilityCastPoint"				"0.2"
-	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"14"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"90 100 110 120 130 140 150"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"8158"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"14"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"90 100 110 120 130 140 150"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"			"FIELD_INTEGER"
-			"trap_radius"		"325"
-		}
-		"02"
-		{
-			"var_type"			"FIELD_FLOAT"
-			"debuff_duration"	"1.3 1.6 1.9 2.2 2.3 2.4 2.5"
-		}
-		"03"
-		{
-			"var_type"			"FIELD_INTEGER"
+			"trap_radius"		
+			{
+				"value"		"325"
+				"special_bonus_unique_hoodwink_bushwhack_radius"	"+135"
+			}
+			"debuff_duration"		"1.3 1.6 1.9 2.2 2.3 2.4 2.5"
 			"projectile_speed"	"1000"
-		}
-		"04"
-		{
-			"var_type"			"FIELD_INTEGER"
 			"total_damage"		"110 180 270 360 420 520 600"
-		}
-		"05"
-		{
-			"var_type"			"FIELD_FLOAT"
 			"animation_rate"	"0.3"
-		}
-		"06"
-		{
-			"var_type"			"FIELD_INTEGER"
 			"visual_height"		"50"
 		}
 	}
-}
 
 
 //=================================================================================================================
