@@ -1,226 +1,334 @@
-// Zuus: Arc Lightning
 //=================================================================================================================
-"zuus_arc_lightning"
-{
-	"MaxLevel"						"7"
-	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"800"
-	"AbilityCastPoint"				"0.2"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"1.75"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"45 50 55 60 65 70 75"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	// Zeus: Heavenly Jump
+	//=================================================================================================================
+	"zuus_heavenly_jump"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"641"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"					"50 60 70 80 90 100 110"
+		"AbilityCooldown"					"25 20 15 10 10 10 10"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"arc_damage"			"100 125 150 175 200 250 300"
-			"LinkedSpecialBonus"	"special_bonus_unique_zeus_2"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"radius"				"700"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"jump_count"			"5 7 9 12 15 18 20"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"jump_delay"			"0.25"
+			"damage"					"100 150 200 250 300 350 400"
+			"hop_distance"				"500"
+			"hop_duration"		"0.5"
+			"hop_height"		"250"
+			"range"				"700 750 800 850 900 950 1000"
+			"duration"			"2" // 1.6 1.9 2.2 2.5
+			"move_slow"				"100"
+			"aspd_slow"				"100"
+			"cast_slow"			"50"
+			"targets"			
+			{
+				"value" "1"
+				"special_bonus_unique_zeus"	"+1"
+			}
 		}
 	}
-}
 
-//=================================================================================================================
-// Zuus: Lightning Bolt
-//=================================================================================================================
-"zuus_lightning_bolt"
-{
-	"MaxLevel"						"7"
-	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"700 725 750 775 800 825 850"
-	"AbilityCastPoint"				"0.4"
 
-	// Damage.
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"140 200 260 330 400 500 600"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"6.0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"75 95 115 135 160 200 240"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Zuus: Arc Lightning
+	//=================================================================================================================
+	"zuus_arc_lightning"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5110"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilitySound"					"Hero_Zuus.ArcLightning.Cast"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"850"
+		"AbilityCastPoint"				"0.2"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"1.75"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"45 50 55 60 65 70 75"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"true_sight_radius"		"750"
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"arc_damage"			"100 125 150 175 200 250 300"
+				"LinkedSpecialBonus"	"special_bonus_unique_zeus_2"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"700"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"jump_count"			"5 7 9 12 15 18 20"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"jump_delay"			"0.25"
+			}
 		}
-		"02"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	//=================================================================================================================
+	// Zuus: Lightning Bolt
+	//=================================================================================================================
+	"zuus_lightning_bolt"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5111"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Zuus.LightningBolt"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700 725 750 775 800 825 850"
+		"AbilityCastPoint"				"0.4"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"140 200 260 330 400 500 600"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"6.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75 95 115 135 160 200 240"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.1"	// just a ministun
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"sight_radius_day"		"750"
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"true_sight_radius"		"750"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"sight_radius_day"		"750"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"sight_radius_night"	"750"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"sight_duration"		"4.5"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spread_aoe"	"375"
+			}
 		}
-		"03"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+	//=================================================================================================================
+	// Zuus: Cloud
+	//=================================================================================================================
+	"zuus_cloud"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6325"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"IsGrantedByScepter"			"1"
+
+		"AbilitySound"					"Hero_Zuus.Cloud.Cast"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"45"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"300"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.1"	// just a ministun
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"sight_radius_night"	"750"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"sight_duration"		"4.5"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"spread_aoe"			"375"
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"cloud_duration"	"35"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"cloud_bolt_interval"	"2.25"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"cloud_radius"			"500"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"hits_to_kill_tooltip"		"8"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"creep_hits_to_kill_tooltip"		"16"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"cloud_bounty_tooltip"		"250"
+			}
 		}
 	}
-}
-
-"zuus_cloud"
-{
-	"AbilityCooldown"				"45"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"300"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"			"FIELD_FLOAT"
-			"cloud_duration"	"35"
-			"RequiresScepter"			"1"
-		}
-		"02"
-		{
-			"var_type"			"FIELD_FLOAT"
-			"cloud_bolt_interval"	"2.25"
-			"RequiresScepter"			"1"
-		}
-		"03"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"cloud_radius"			"500"
-			"RequiresScepter"			"1"
-		}
-		"04"
-        {
-            "var_type"					"FIELD_INTEGER"
-            "hits_to_kill_tooltip"		"8"
-            "RequiresScepter"			"1"
-        }
-        "05"
-        {
-            "var_type"					"FIELD_INTEGER"
-            "creep_hits_to_kill_tooltip"		"16"
-            "RequiresScepter"			"1"
-        }
-        "06"
-        {
-            "var_type"					"FIELD_INTEGER"
-            "cloud_bounty_tooltip"		"250"
-            "RequiresScepter"			"1"
-        }
-	}
-}
 	
-//=================================================================================================================
-// Zuus: Static Field
-//=================================================================================================================
-"zuus_static_field"
-{
-	"MaxLevel"						"7"
-
-	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1200"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Zuus: Static Field
+	//=================================================================================================================
+	"zuus_static_field"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5112"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"	
+		"AbilitySound"					"Hero_Zuus.StaticField"
+		"MaxLevel"						"1"
+		"IsGrantedByShard"			    "1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"					"FIELD_FLOAT"
-			"damage_health_pct"			"4.0 4.8 5.6 6.4 7.2 8.0 9.0"
-			"LinkedSpecialBonus"		"special_bonus_unique_zeus"
-			"CalculateSpellDamageTooltip" "0"
-			
+				"damage_health_pct"			
+				{
+					"value"	"9"
+					"CalculateSpellDamageTooltip"	"0"
+				}
 		}
 	}
-}
-
-//=================================================================================================================
-// Zuus: Thundergod's Wrath
-//=================================================================================================================
-"zuus_thundergods_wrath"
-{
-	"MaxLevel"						"7"
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0.4"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"75.0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"225 325 425 525 625 772 825"
 	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Zuus: Thundergod's Wrath
+	//=================================================================================================================
+	"zuus_thundergods_wrath"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5113"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Zuus.GodsWrath"
+
+		"HasScepterUpgrade"				"1"
+		"AbilityDraftUltScepterAbility"		"zuus_cloud"
+		"MaxLevel"						"7"
+	
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.4"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"75"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"225 325 425 525 625 772 825"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"sight_radius_day"		"500"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"sight_radius_night"	"500"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"sight_duration"		"3.0"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage"				"300 425 525 675 800 925 1050"
-			"LinkedSpecialBonus"	"special_bonus_unique_zeus_4"
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"sight_radius_day"		"500"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"sight_radius_night"	"500"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"sight_duration"		"3.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"300 425 525 675 800 925 1050"
+				"LinkedSpecialBonus"	"special_bonus_unique_zeus_4"
+			}
 		}
 	}
-}

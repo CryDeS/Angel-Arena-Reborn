@@ -1,207 +1,328 @@
-"gyrocopter_rocket_barrage"
-{
-	"MaxLevel"						"7"
-	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"0"
-	"AbilityCastPoint"				"0"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"7 6.5 6 5.8 5.6 5.5 5"
-	"AbilityDuration"				"3"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"25 38 50 62 75 88 100"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+//=================================================================================================================
+	// Gyrocopter: Rocket Barrage
+	//=================================================================================================================
+	"gyrocopter_rocket_barrage"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5361"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"7"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"7 6.5 6 5.8 5.6 5.5 5"
+		"AbilityDuration"				"3"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"25 38 50 62 75 88 100"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"radius"					"400"
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"400"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"rockets_per_second"		"12"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"rocket_damage"				"7 10 14 18 22 24 30" // "4 10 14 18 20 22 24"
+				"LinkedSpecialBonus"		"special_bonus_unique_gyrocopter_3"
+			}
 		}
-		"02"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}	
+
+	//=================================================================================================================
+	// Gyrocopter: Homing Missile
+	//=================================================================================================================
+	"gyrocopter_homing_missile"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5362"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"HasShardUpgrade"               "1"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1050"
+		"AbilityCastPoint"				"0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20 18 17 16 14 12 11"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"180 250 330 400 500 600 750"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"rockets_per_second"		"12"
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"hits_to_kill_tooltip"		"3"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"tower_hits_to_kill_tooltip"		"6"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"stun_duration"				"1.8 2 2.2 2.4 2.6 2.8 3.0"
+				"LinkedSpecialBonus"		"special_bonus_unique_gyrocopter_6"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"attack_speed_bonus_pct"	"400"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"min_damage"				"50"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"max_distance"				"1500"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"pre_flight_time"			"2.5"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"hero_damage"				"34"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"speed"						"500"
+			}
+			"10"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"acceleration"				"15"
+			}
+			"11"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"enemy_vision_time"			"4"
+			}	
+			"12"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"AbilityCharges"		""
+				"LinkedSpecialBonus"	"special_bonus_unique_gyrocopter_1"
+			}
+			"13"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"shard_delay"						"1.0"
+				"RequiresShard"				"1"
+			}
+			"14"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"shard_radius"				"725"
+				"RequiresShard"				"1"
+			}
 		}
-		"03"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+	//=================================================================================================================
+	// Gyrocopter: Flak Cannon
+	//=================================================================================================================
+	"gyrocopter_flak_cannon"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5363"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Gyrocopter.FlackCannon"
+		"HasScepterUpgrade"				"1"
+		"MaxLevel"						"7"
+
+		"AbilityCastPoint"				"0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50 60 70 80 90 100 110"
+
+		//Duration
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDuration"				"15"
+						
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"rocket_damage"				"4 10 14 18 20 22 24"
-			"LinkedSpecialBonus"		"special_bonus_unique_gyrocopter_3"
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"radius"						"1200"
+				"LinkedSpecialBonus"			"special_bonus_unique_gyrocopter_4"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"max_attacks"					"3 4 5 6 7 8 9"
+				"LinkedSpecialBonus"			"special_bonus_unique_gyrocopter_2"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"projectile_speed"				"900"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"fire_rate"						"1.5"
+				"RequiresScepter"				"1"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"scepter_radius"				"600"
+				"RequiresScepter"				"1"
+			}
 		}
-        "04"
-        {
-            "var_type"					"FIELD_INTEGER"
-            "duration_tooltip"			"3"
-        }
-		"05"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}	
+
+	//=================================================================================================================
+	// Gyrocopter: Call Down
+	//=================================================================================================================
+	"gyrocopter_call_down"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5364"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Gyrocopter.CallDown.Fire"
+		"MaxLevel"						"7"
+
+		
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+		"AbilityCastAnimation"			"ACT_INVALID"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"75"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_FLOAT"
-			"damage_pct"				"13"
-			"CalculateSpellDamageTooltip" "0"
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"slow_duration_first"		"2"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"slow_duration_second"		"4"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_first"				"350 450 550 720 820 1010 1080"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_second"				"200 250 300 350 450 600 800"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"slow_first"				"40"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"slow_second"				"60"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"600"
+			}			
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"range_scepter"					"0"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_second_scepter"		"175 225 375 485 850 1150 1400"
+			}
+			"10"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"missile_delay_tooltip"		"2"
+			}
 		}
 	}
-}	
-
-"gyrocopter_homing_missile"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1050"
-	"AbilityCastPoint"				"0.3"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"20 18 17 16 14 12 11"
-	
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"150"
-
-	// Damage.
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"180 250 330 400 500 600 750"
-}
-
-//=================================================================================================================
-// Gyrocopter: Flak Cannon
-//=================================================================================================================
-"gyrocopter_flak_cannon"
-{
-	"MaxLevel"						"7"
-
-	"AbilityCastPoint"				"0 0 0 0 0 0 0"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"25"
-	
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"50 60 70 80 90 100 110"
-
-	//Duration
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDuration"				"15"
-					
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"radius"						"1200"
-			"LinkedSpecialBonus"			"special_bonus_unique_gyrocopter_4"
-		}
-		"02"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"max_attacks"					"3 4 5 6 7 8 9"
-			"LinkedSpecialBonus"			"special_bonus_unique_gyrocopter_2"
-		}
-		"03"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"projectile_speed"				"900"
-		}
-		"04"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"fire_rate"						"1.5"
-			"RequiresScepter"				"1"
-		}
-		"05"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"scepter_radius"				"600"
-			"RequiresScepter"				"1"
-		}
-        "06"
-        {
-            "var_type"						"FIELD_INTEGER"
-            "duration_tooltip"				"15 15 15 15 15 15 15"
-        }
-	}
-}	
-
-//=================================================================================================================
-// Gyrocopter: Call Down
-//=================================================================================================================
-"gyrocopter_call_down"
-{
-	"MaxLevel"						"7"
-	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1000"
-	"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.3 0.3 0.3"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"75"
-	
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"125"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"slow_duration_first"		"2"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"slow_duration_second"		"4"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"damage_first"				"350 450 550 720 820 1010 1080"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"damage_second"				"200 250 300 350 450 600 800"
-		}
-		"05"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"slow_first"				"40"
-		}
-		"06"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"slow_second"				"60"
-		}
-		"07"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"radius"					"600"
-		}
-		"08"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"range_scepter"					"0"
-		}
-		"09"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"damage_second_scepter"		"175 225 375 485 850 1150 1400"
-		}
-	}
-}
