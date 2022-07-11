@@ -1,0 +1,196 @@
+Hero changes:
+ Huskar:
+  - 4 skill can no longer be used on bosses
+
+ Shadowsong:
+  - 4 skill can no longer be used on bosses
+
+ Chaos Knight:
+  - 2 skill can no longer be used on bosses
+  - 2 skill armor reduction changed form 6/7/9/11/12/14/16 to 6/7/8/9/10/11/12
+
+ Tinker:
+  - Warp Flare skill can no longer be used on bosses
+
+ Beastmaster:
+  - 2 skill max lvl changed from 4 to 7
+  - 2 skill boar max health changed from 300/450/600/750 to 300/400/500/600/700/800/900
+  - 2 skill boar movespeed changed form 320/330/340/350 to 320/330/340/350/360/370/380
+  - 2 skill Boar Poison movespeed slow changed form -10/-20/-30/-40 to -10/-15/-20/-25/-30/-35/-40
+  - 2 skill attack speed slow changed form -35/-50/-70/-120 to -35/-40/-45/-50/-60/-70/-120
+  - 2 skill cooldown changed from 25 to 40
+  - 3 skill max lvl changed from 4 to 7
+  - 3 skill hawk max health changed from 150/200/250/300 to 300
+  - 3 skill hawk movespeed changed form 300/340/380/420 to 420
+  - 3 skill hawk vision range changed form 600/700/800/900 to 750/775/800/825/850/875/900
+
+ Elder Titan:
+  - 4 skill damage changed from 65 to 30/35/40/45/50/55/60
+
+ Enigma:
+  - 2 skill eidolon hp changed form 250/350/450/550/850/950/1000 to 250/350/375/400/450/500/650
+  - 2 skill eidolon dmg changed form 25/35/45/55/65/75/90 to 20/30/40/50/60/70/80
+
+ Techies:
+  - 1 skill damage changed from 100/115/130/145/160/175/200 to 250/300/350/400/450/500/550
+  - 3 skill silence duration changed from 1/2/3/4/5/6/7 to 1/2/3/4/4/4/4
+  - 3 skill damage changed from 200/300/400/500/550/600/650 to 200/250/300/350/400/450/500
+  - 4 skill cooldown changed from 19/17/15 to 15
+  - 4 skill max stack changed from 3 to 8
+  - 4 skill damage changed from 200/300/400/500/575/625/675 to 350/450/550/660/750/850/950
+
+ Luna:
+  - 2 skill damage reduction percent changed from 10 to 35/30/25/20/20/20/20
+
+ Lifestealer:
+  - 1 skill duration changed from 3.0/3.5/4.0/4.5/5.0/6.0/7.0 to 3.0/3.5/4.0/4.5/5.0/5.5/6.0
+
+ Mars:
+  - 1 skill shard trail duration changed from 10 to 15
+  - 1 skill shard trail radius changed from 200 to 300
+  - 1 skill shard debuff duration changed from 2 to 3
+  - 4 skill cooldown changed from 40 to 60
+
+ Nature Prophet:
+  - 2 skill cooldown changed from 30/27/25/22/20/15/10 to 60/50/40/30/20/10/5
+  - 3 skill max_treants changed from 3/3/4/4/5/6/7 to 2/3/4/4/5/6/6
+  - 3 skill duration changed from 60 to 30
+  - 3 skill treant health changed from 550/600/650/700/750/850/1100 to 350/450/550/650/750/850/950
+  - 4 skill cooldown changed from 24 to 31/30/29/28/27/26/25/24
+
+ Necrolyte:
+  - 2 skill cooldown scepter changed from 15 to 20
+  - 2 skill heal percent bonus changed from 50 to 30
+
+ Ogre Magi:
+  - 25lvl right talent chance crit changed from 17 to 8
+
+ Omniknight:
+  - 3 skill base damage changed from 40/45/50/55/60/65/70 to 55/60/65/70/75/85/100
+  - 3 skill 25lvl left talent chance form 30 to 50
+  - 4 skill 15lvl left talent cooldown changed from 30 to 10
+  - 15lvl right talent changed form -2s cd Purification to 150 cast range
+
+ Gyrocopter:
+  - 1 skill damage chenged from 4/10/14/18/20/22/24 to 7/10/14/18/22/24/30
+
+ Clinkz:
+  - Burning Army max lvl changed from 1 to 7
+  - Burning Army duration changed from 20 to 14/15/16/17/18/19/20
+  - Burning Army attack rate changed form 1.5 to 2/1.9/1.8/1.7/1.6/1.5/1.4
+  - Burning Army damage percent changed from 100 to 30/35/40/45/50/55/60
+  - Burning Army count changed from 10 to 4/5/6/7/8/9/10
+  - Burning Army cooldown changed from 50 to 80
+
+ Faceless Void:
+  - 3 skill chance changed form 10/12/14/16/18/20/22 to 17
+
+ Fireblade:
+  - 1 skill cooldown changed from 12 to 20/19/18/17/16/15/14
+  - 2 skill cooldown changed from 8 to 10
+  - 3 skill cooldown silence chenged from 4 to 6
+
+ Phoenix:
+  - 4 skill stun duration changed from 1.5/1.7/2.0/2.5/2.7/3.0/3.2 to 2/2.5/3/3.5/4/4.5/5
+  - 4 skill max hero attack changed form 6/8/10/12/14/16/17 to 6/9/12/15/18/21/24
+  - 4 skill max hero attack scepter changed from 7/10/12/14/16/17/18 to 8/11/15/17/20/23/26
+
+ Slardar:
+  - 3 skill damage changed from 75/125/175/225/275/325/400 to 30/50/70/90/110/130/150
+  - 3 skill bash duration changed from 0.4/0.45/0.5/0.55/0.6/0.65/0.75 to 0.4
+
+ Silencer:
+  - 1 skill radius changed form 375 to 375/380/385/390/395/400/425
+  - 1 skill duration changed from 4 to 4/4.2/4.4/4.6/4.8/5.0/5.5
+
+ Satan:
+  - 2 skill stun duration changed from 1 to 0.5/0.5/0.6/0.6/0.7/0.7/0.8
+  - 3 skill health in damage changed from 20/22/25/30/32/35/37 to 15/17/19/21/23/25/30
+
+ Spectre:
+  - 1 skill cooldown changed from 16 to 20/19/18/17/16/16/16
+  - 1 skill buff duration changed from 4 to 2
+
+ Slark:
+  - 4 skill bonus hpregen changed from 3/4/5/5/6/7/8 to /3/4/4.5/5/5.5/6/6.5
+
+ Tusk:
+  - 4 skill 25lvl right talent chance crit changed from 12 to 8
+
+ Invoker:
+  - Sun Strike damage changed from 100/140/175/250/275/325/430/520 to 100/180/260/340/420/500/580/660
+  - Forge Spirit duration changed from 30 to 20/25/30/35/40/45/50/55
+  - Ice Wall slow changed form -25/-35/-45/-55/-70/-85/-100 to -20/-40/-60/-80/-100/-120/-140/-160
+
+ Huntress:
+  - 3 skill cooldown changed from 0 to 4
+  - 3 skill root duration changed from 0.75 to 0.6
+
+ Wisp:
+  - 4 skill cast delay changed from 2 to 3/2.8/2.6/2.4/2.2/2.0/1.5
+
+Bosses:
+ Possessed Demon:
+  - Now Ignores terrain
+  - Status mana changed from 20000 to 0
+  - Abilities no longer require mana
+
+ Abyss_warrior:
+  - Now Ignores terrain
+  - Status mana changed from 10000 to 0
+  - Abilities no longer require mana
+
+ Soul_guardian:
+  - Now Ignores terrain
+  - Status mana changed from 10000 to 0
+  - Abilities no longer require mana
+
+ Keymaster:
+  - Status mana changed from 10000 to 0
+  - Abilities no longer require mana
+
+Items:
+ Plague staff:
+  - Bonus int changed form 20 to 60
+  - Bonus str changed form 6 to 15
+  - Bonus agi chenged from 6 to 15
+  - Bonus armor caenged from 3 to 8
+  - Bonus damage changed from 12 to 20
+  - Bonus hpregen changed from 8 to 15
+  - Bonus mana changed from 300 to 500
+  - Chance crit changed from 20 to 25
+
+ Soul collector:
+  - Cooldown changed from 13 to 16
+  - Bonus agi changed from 40 to 25
+  - Spell amplifi changed from 35 to 20
+  - Damage changed from 900 to 500
+  - Recipe cost changed form 1250 to 1800
+
+ Tome of heroes:
+  - Stack start game changed from 5 to 0
+  - Delay before the start of the game changed from 600 to 720
+  - Max stack changed from 40 to 100
+  - Cooldown stack changed form 20 to 30
+  - Cost changed from 1500 to 1600
+
+Fixes:
+ - Mars 2 skill fixed
+ - Batrider all skills fixed
+ - Broodmother all skills fixed
+ - Techies 3 skill fixed
+ - Skywrath mage 3 skill fixed
+ - Night Stalker 25lvl left talent fixed
+ - Invoker all skills fixed
+ - Clockwerk all skills fixed
+ - Earthshaker all skills fixed
+ - Luna all skills fixed
+ - Spirit Berserker all skills fixed
+ - Ursa all skills fixed
+ - Wisp all skills fixed
+ - Zeus 3 skill fixed
+ - Razor all skills fixed
+ - Silenser all skills fixed
+ - Ninja_gear fixed
+ - Apex fixed
+ - Ring of aquila fixed
