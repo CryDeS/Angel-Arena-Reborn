@@ -74,6 +74,10 @@ local forbidden_ability_boss = {
 	["snapfire_spit_creep"] = 1,
 	["juggernaut_omni_slash"] = 1,
 	["snapfire_gobble_up"] = 1,
+	["chaos_knight_reality_rift"] = 1,
+	["huskar_life_break"] = 1,
+	["shadowsong_dark_reflection"] = 1,
+	["tinker_warp_grenade"] = 1,
 }
 
 local forbidden_items_for_clones = {

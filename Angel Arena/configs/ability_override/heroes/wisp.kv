@@ -1,254 +1,316 @@
-"wisp_tether"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0.001"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"12.0"
-	"AbilityDuration"				"12.0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"40"
-	
-	// Cast Range
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1400"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+//=================================================================================================================
+	// Wisp: Tether
+	//=================================================================================================================
+	"wisp_tether"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5485"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CUSTOM"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"LinkedAbility"					"wisp_tether_break"
+		 "MaxLevel"                      "7"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+ 		"AbilityCastAnimation"			"ACT_INVALID"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"40"
+		
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1400"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"radius"					"900 900 900 900 900 900 900"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"movespeed"					"9 10 11 12 13 14 15"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"latch_distance"			"700 700 700 700 700 700 700"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"latch_speed"				"1000 1000 1000 1000 1000 1000 1000"
-		}
-		"05"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"tether_heal_amp"			"0.65 0.8 0.9 1.0 1.1 1.3 1.5"
-		}
-		"06"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"self_bonus"				"0"
-		}
-		"07"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"slow"						"8 10 16 20 24 28 32"
-		}
-		"08"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"slow_duration"				"0.2"
+				"radius"					"900"
+				"movespeed"					
+				{
+					"value"				 "9 10 11 12 13 14 15"
+					"special_bonus_unique_wisp_3"	"+6"
+				}
+				"latch_distance"			"700"
+				"latch_speed"				"1000"
+				"tether_heal_amp"			"0.65 0.8 0.9 1.0 1.1 1.3 1.5"
+				"self_bonus"				"0"
+				"slow"				 "8 10 16 20 24 28 32"
+				"slow_duration"				"0.2"
+				"shard_bonus_spell_lifesteal"
+				{
+					"value"			"10"
+					"RequiresShard"	"1"
+				}
 		}
 	}
-}
 
-//=================================================================================================================
-// Wisp: Spirits
-//=================================================================================================================
-"wisp_spirits"
-{
-	"MaxLevel"						"7"
-	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"20.0 18.0 16.0 15.0 14.0 10.0 8.0"
-	"AbilityDuration"				"19.0 19.0 19.0 19.0 19.0 19.0 19.0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"120 130 140 150 160 170 180"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Wisp: Spirits
+	//=================================================================================================================
+	"wisp_spirits"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5486"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilitySound"					"Hero_Wisp.Spirits.Cast"
+		"MaxLevel"                      "7"
+        "HasScepterUpgrade"			"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+  		"AbilityCastAnimation"			"ACT_INVALID"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20.0 18.0 16.0 15.0 14.0 10.0 8.0"
+		"AbilityDuration"				 "19.0 19.0 19.0 19.0 19.0 19.0 19.0"
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				 "120 130 140 150 160 170 180"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"creep_damage"				"14 20 30 45 68 84 120"
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"creep_damage"				 "14 20 30 45 68 84 120"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"hero_damage"				 "30 45 60 75 90 105 120"
+				"LinkedSpecialBonus"		"special_bonus_unique_wisp"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"revolution_time"			"5.0"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"min_range"					"100"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"max_range"					"700"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"hero_hit_radius"			"70"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"explode_radius"			"300"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"hit_radius"				"150"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"spirit_movement_rate"		"250"
+			}
+			"10"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"spirit_duration"			"19.0"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spirit_amount"			"5"
+			}
+			"12"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"scepter_slow_pct"			"15"
+				"RequiresScepter"			"1"
+			}
+			"13"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"scepter_slow_duration"			"0.3"
+				"RequiresScepter"			"1"
+			}
 		}
-		"02"
+	}	
+
+	//=================================================================================================================
+	// Wisp: Overcharge
+	//=================================================================================================================
+	"wisp_overcharge"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5487"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+        "HasShardUpgrade"               "1"
+         "MaxLevel"                      "7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+   		"AbilityCastAnimation"			"ACT_INVALID"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"60 80 120 140 160 180 200"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"hero_damage"				"30 45 60 75 90 105 120"
-			"LinkedSpecialBonus"		"special_bonus_unique_wisp"
+				"bonus_attack_speed"		"40 70 80 100 120 140 160"
+				"bonus_spell_amp"		"10 12 14 16 18 20 22"
+				"hp_regen"			
+				{
+					"value"			"1.5 1.9 2.3 2.6 3.0 3.2 3.4 "
+					"special_bonus_unique_wisp_10"	"+0.2"
+				}
+				"duration"			"8"
+				"shard_bonus_spell_amp"
+				{
+					"value"			"10"
+					"RequiresShard"	"1"
+				}
+				"shard_bonus_spell_lifesteal"
+				{
+					"value"			"10"
+					"RequiresShard"	"1"
+				}
 		}
-		"03"
-        {
-            "var_type"					"FIELD_FLOAT"
-            "revolution_time"			"5.0 5.0 5.0 5.0 5.0 5.0 5.0"
-        }
-        "04"
+	}	
+
+	//=================================================================================================================
+	// Wisp: Relocate
+	//=================================================================================================================
+	"wisp_relocate"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5488"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Wisp.Relocate"
+		 "MaxLevel"                      "7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+ 		"AbilityCastAnimation"			"ACT_INVALID"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"75"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 150 200 250 300 350 400"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"min_range"					"100 100 100 100 100 100 100"
-		}
-		"05"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"max_range"					"700"
-			"LinkedSpecialBonus"		"special_bonus_unique_wisp_3"
-		}
-		"06"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"hero_hit_radius"			"70 70 70 70 70 70 70"
-		}
-		"07"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"explode_radius"			"300 300 300 300 300 300 300"
-		}
-		"08"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"hit_radius"				"150 150 150 150 150 150 150"
-		}
-		"09"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"spirit_movement_rate"		"250 250 250 250 250 250 250"
-		}
-		"10"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"spirit_duration"			"19.0 19.0 19.0 19.0 19.0 19.0 19.0"
-		}
-		"11"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"damage_pct"				"40"
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"cast_delay"				"3 2.8 2.6 2.4 2.2 2.0 1.5" //2
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"return_time"				"12.0"
+			}
 		}
 	}
-}	
 
-//=================================================================================================================
-// Wisp: Overcharge
-//=================================================================================================================
-"wisp_overcharge"
-{
-	"MaxLevel"						"7"
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0 0 0 0 0 0 0"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"20.0"
-	
-	"AbilityManaCost"				"60 80 120 140 160 180 200"
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Wisp: Tether
+	//=================================================================================================================
+	"wisp_tether_break"
 	{
-		"01"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"bonus_attack_speed"		"40 70 80 100 120 140 160"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"bonus_spell_amp"			"10 12 14 16 18 20 22"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"hp_regen"					"1.5 1.9 2.3 2.6 3.0 3.2 3.4 "
-		}
-		"04"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"duration"					"8"
-		}
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5489"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"LinkedAbility"					"wisp_tether"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+ 		"AbilityCastAnimation"			"ACT_INVALID"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"1.0"
 	}
-}	
 
-//=================================================================================================================
-// Wisp: Relocate
-//=================================================================================================================
-"wisp_relocate"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0 0 0 0 0 0 0"
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"75"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"100 150 200 250 300 350 400"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Wisp: Spirits In
+	//=================================================================================================================
+	"wisp_spirits_in"
 	{
-		"01"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"cast_delay"				"2.0"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"return_time"				"12.0"
-		}
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5490"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"MaxLevel"						"4"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+ 		"AbilityCastAnimation"			"ACT_INVALID"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"
 	}
-}
 
-//=================================================================================================================
-// Wisp: Tether
-//=================================================================================================================
-"wisp_tether_break"
-{
-	"MaxLevel"	"1"
+	//=================================================================================================================
+	// Wisp: Spirits Out
+	//=================================================================================================================
+	"wisp_spirits_out"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5493"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"MaxLevel"						"4"
 
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"1.0"
-}
-
-"wisp_spirits_in"
-{
-	"MaxLevel"	"7"
-}
-
-"wisp_spirits_out"
-{
-	"MaxLevel"	"7"
-}
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+ 		"AbilityCastAnimation"			"ACT_INVALID"
+	}

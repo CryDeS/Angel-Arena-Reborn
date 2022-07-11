@@ -1,61 +1,85 @@
 //=================================================================================================================
-// Marci: Dispose
-//=================================================================================================================
-"marci_grapple"
-{
-    "AbilityCooldown"				"16 15 14 13 12 11 10"
-    "AbilityManaCost"				"90"
-
-    "MaxLevel"                      "7"
-    
-    "AbilitySpecial"
+    // Marci: Dispose
+    //=================================================================================================================
+    "marci_grapple"
     {
-        "01"
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "ID"                            "8192"  // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_BOTH"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES_STRONG"
+        "FightRecapLevel"               "1"
+        "AbilitySound"                  "Hero_Marci.Grapple.Cast"
+        "MaxLevel"                      "7"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint"              "0.2"
+        "AbilityCastRange"              "175"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_5"
+        //"AbilityCastGestureSlot"      "DEFAULT"
+
+        // Time
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"              "16 15 14 13 12 11 10"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "90"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
         {
-            "var_type"			"FIELD_INTEGER"
-            "landing_radius"	"275"
-        }
-        "02"
-        {
-            "var_type"			"FIELD_FLOAT"
-            "air_duration"		"0.5"
-        }
-        "03"
-        {
-            "var_type"			"FIELD_INTEGER"
-            "air_height"		"150"
-        }
-        "04"
-        {
-            "var_type"			"FIELD_INTEGER"
-            "pull_offset"		"75"
-        }
-        "05"
-        {
-            "var_type"				"FIELD_INTEGER"
-            "throw_distance_behind"	"350"
-        }
-        "06"
-        {
-            "var_type"			"FIELD_INTEGER"
-            "pull_angle"		"230"
-        }
-        "07"
-        {
-            "var_type"				"FIELD_FLOAT"
-            "stun_duration"			"0.9 1.1 1.3 1.5 1.7 1.9 2.1"
-            "LinkedSpecialBonus"	"special_bonus_unique_marci_grapple_stun_duration"
-        }
-        "08"
-        {
-            "var_type"			"FIELD_INTEGER"
-            "impact_damage"		"70 120 170 220 320 470 520"
+            "01"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "landing_radius"    "275"
+            }
+            "02"
+            {
+                "var_type"          "FIELD_FLOAT"
+                "air_duration"      "0.5"
+            }
+            "03"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "air_height"        "150"
+            }
+            "04"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "pull_offset"       "75"
+            }
+            "05"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "throw_distance_behind" "300"
+            }
+            "06"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "pull_angle"        "230"
+            }
+            "07"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "stun_duration"        "0.9 1.1 1.3 1.5 1.7 1.9 2.1"
+                "LinkedSpecialBonus"    "special_bonus_unique_marci_grapple_stun_duration"
+            }
+            "08"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "impact_damage"     "70 120 170 220 320 470 520"
+            }
         }
     }
-}
 
-
-//=================================================================================================================
+    //=================================================================================================================
     // Marci: Unleashed
     //=================================================================================================================
     "marci_unleash"
@@ -78,7 +102,7 @@
 
         // Time     
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"               "80 75 70 65 60 55 50"
+        "AbilityCooldown"              "80 75 70 65 60 55 50"
 
         // Cost
         //-------------------------------------------------------------------------------------------------------------
@@ -88,17 +112,17 @@
         "AbilityValues"
         {
                 "duration"              "16"
-                "charges_per_flurry"    "4 5 6 7 8 9 10"
+                "charges_per_flurry"   "4 5 6 7 8 9 10"
                 "flurry_bonus_attack_speed" "700 975 1325 1650 1975 2400"
                 "time_between_flurries" "1.55 1.50 1.45 1.40 1.35 1.30 1.25"
                 "pulse_radius"          "800"
                 "pulse_debuff_duration" "2.0"
                 "pulse_damage"          "60 130 200 350 450 550 700"
                 "pulse_move_slow_pct"   "30.0"
-                "pulse_attack_slow_pct" "80.0"
+                "pulse_attack_slow_pct" "80"
                 "max_time_window_per_hit"   "1.0"
                 "bonus_movespeed"       "15"
-                "recovery_fixed_attack_rate"    "1.0"
+                "recovery_fixed_attack_rate"    "2.0"
                 "shard_push_length"     "300"
                 "scepter_cooldown_reduction"
                 {       
@@ -110,159 +134,149 @@
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_4"
     }
 
-
-//=================================================================================================================
-// Marci: Rebound
-//=================================================================================================================
-"marci_companion_run"
-{
-    "AbilityCastPoint"				"0.1"
-    "AbilityCastRange"				"800"
-    "AbilityCooldown"				"17 16 15 14 13 12 11"
-    "AbilityManaCost"				"100"
-
-    "MaxLevel"                      "7"
-
-    "AbilitySpecial"
+    //=================================================================================================================
+    // Marci: Rebound
+    //=================================================================================================================
+    "marci_companion_run"
     {
-        "01"
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "ID"                            "8235"  // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "FightRecapLevel"               "1"
+        "AbilitySound"                  "Hero_Marci.Rebound.Cast"
+        "HasShardUpgrade"               "1"
+         "MaxLevel"                      "7"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint"              "0.1"
+        "AbilityCastRange"              "800"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_2"
+
+        // Time
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"             "17 16 15 14 13 12 11"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "100"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
         {
-            "var_type"				"FIELD_INTEGER"
-            "move_speed"			"2000"
+                "move_speed"            "2000"
+                "min_jump_distance"     "450"
+                "max_jump_distance"     
+                {
+                    "value"             "800"
+                    "LinkedSpecialBonus"    "special_bonus_unique_marci_lunge_range"
+                }
+                "landing_radius"        "325"
+                "impact_damage"         
+                {
+                    "value"            "90 160 230 300 370 430 570"
+                    "LinkedSpecialBonus"    "special_bonus_unique_marci_lunge_damage"
+                }
+                "movement_slow_pct"     "30 35 40 45 50 55 60"
+                "debuff_duration"       "3.0"
+                "min_lob_travel_time"   "0.1"
+                "max_lob_travel_time"   "0.2"
+                "min_height_above_lowest"   "250.0"
+                "min_height_above_highest"  "200.0"
+                "min_acceleration"      "6000.0"
+                "max_acceleration"      "6000.0"
+                "vector_preview_radius" "100"
+                "ally_buff_duration"    "5.0"
+                "ally_movespeed_pct"    "35.0"
+                "impact_position_offset"    "64"
+                "target_abort_distance"     "700"
+                "scepter_heal"
+                {
+                    "value" "300"
+                    "RequiresScepter"   "1"
+                }
+                "scepter_armor"
+                {
+                    "value" "15"
+                    "RequiresScepter"   "1"
+                }
+
         }
-        "02"
+        
+    }
+
+    //=================================================================================================================
+    // Marci: Sidekick
+    //=================================================================================================================
+    "marci_guardian"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "ID"                            "8234"  // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "FightRecapLevel"               "1"
+        "AbilitySound"                  "Hero_Marci.Guardian.Applied"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "700"
+        "AbilityCastPoint"              "0.0"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_3"
+        "AbilityCastGestureSlot"        "DEFAULT"
+         "MaxLevel"                      "7"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "36 32 28 24 20 16 12"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "35"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
         {
-            "var_type"				"FIELD_INTEGER"
-            "min_jump_distance"		"450"
-        }
-        "03"
-        {
-            "var_type"				"FIELD_INTEGER"
-            "max_jump_distance"		"800"
-            "LinkedSpecialBonus"	"special_bonus_unique_marci_lunge_range"
-        }
-        "04"
-        {
-            "var_type"				"FIELD_INTEGER"
-            "landing_radius"		"325"
-        }
-        "05"
-        {
-            "var_type"				"FIELD_FLOAT"
-            "impact_damage"			"90 160 230 300 370 430 570"
-            "LinkedSpecialBonus"	"special_bonus_unique_marci_lunge_damage"
-        }
-        "06"
-        {
-            "var_type"				"FIELD_INTEGER"
-            "movement_slow_pct"		"30 35 40 45 50 55 60"
-        }
-        "07"
-        {
-            "var_type"				"FIELD_FLOAT"
-            "debuff_duration"		"3.0"
-        }
-        "08"
-        {
-            "var_type"				"FIELD_FLOAT"
-            "min_lob_travel_time"	"0.1"
-        }
-        "09"
-        {
-            "var_type"				"FIELD_FLOAT"
-            "max_lob_travel_time"	"0.2"
-        }
-        "10"
-        {
-            "var_type"					"FIELD_FLOAT"
-            "min_height_above_lowest"	"250.0"
-        }
-        "11"
-        {
-            "var_type"					"FIELD_FLOAT"
-            "min_height_above_highest"	"200.0"
-        }
-        "12"
-        {
-            "var_type"				"FIELD_FLOAT"
-            "min_acceleration"		"6000.0"
-        }
-        "13"
-        {
-            "var_type"				"FIELD_FLOAT"
-            "max_acceleration"		"6000.0"
-        }
-        "14"
-        {
-            "var_type"				"FIELD_INTEGER"
-            "vector_preview_radius"	"100"
-        }
-        "15"
-        {
-            "var_type"				"FIELD_FLOAT"
-            "ally_buff_duration"	"5.0"
-        }
-        "16"
-        {
-            "var_type"				"FIELD_FLOAT"
-            "ally_movespeed_pct"	"35.0"
-        }
-        "17"
-        {
-            "var_type"					"FIELD_INTEGER"
-            "impact_position_offset"	"64"
-        }
-        "18"
-        {
-            "var_type"					"FIELD_INTEGER"
-            "target_abort_distance"		"700"
+            "01"
+            {
+                "var_type"          "FIELD_FLOAT"
+                "buff_duration"     "6"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "lifesteal_pct"         "35 40 45 50 55 60 65"
+                "LinkedSpecialBonus"    "special_bonus_unique_marci_guardian_lifesteal"
+            }
+            "03"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "bonus_damage"     "20 35 50 65 90 135 200"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "bonus_attack_range"    "0"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nearest_ally_search_range" "700"
+            }
         }
     }
-}
 
-//=================================================================================================================
-// Marci: Sidekick
-//=================================================================================================================
-"marci_guardian"
-{
-    "AbilityCastRange"				"700"
-    "AbilityCastPoint"				"0.0"
-    "AbilityCooldown"				"36 32 28 24 20 16 12"
-    "AbilityManaCost"				"35"
-
-    "MaxLevel"                      "7"
-
-    "AbilitySpecial"
-    {
-        "01"
-        {
-            "var_type"			"FIELD_FLOAT"
-            "buff_duration"		"6"
-        }
-        "02"
-        {
-            "var_type"				"FIELD_FLOAT"
-            "lifesteal_pct"			"35 40 45 50 55 60 65"
-            "LinkedSpecialBonus"	"special_bonus_unique_marci_guardian_lifesteal"
-        }
-        "03"
-        {
-            "var_type"			"FIELD_INTEGER"
-            "bonus_damage"		"20 35 50 65 90 135 200"
-        }
-        "04"
-        {
-            "var_type"				"FIELD_INTEGER"
-            "bonus_attack_range"	"0"
-        }
-        "05"
-        {
-            "var_type"					"FIELD_INTEGER"
-            "nearest_ally_search_range"	"700"
-        }
-    }
-}
-//=================================================================================================================
+    //=================================================================================================================
     // Marci: Special Bonus
     //=================================================================================================================
     "special_bonus_unique_marci_lunge_ally_absorb"

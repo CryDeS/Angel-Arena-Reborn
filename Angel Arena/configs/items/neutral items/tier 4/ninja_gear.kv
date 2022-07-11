@@ -1,51 +1,31 @@
 "item_ninja_gear"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"ID"							"362"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-	
-	// Stats
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"25.0"
-				
-	// Item Info
-	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"0"
-	"ItemIsNeutralDrop"				"0"
-	"ItemPurchasable"				"0"
-	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
-
-	"Model"							"models/props_gameplay/neutral_box.vmdl"
-	
-	// Special	
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"362"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25.0"
+					
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"				"FIELD_INTEGER"
 			"bonus_agility"			"150"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
 			"passive_movement_bonus"		"35"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
 			"visibility_radius"		"1025"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_FLOAT"
 			"duration"				"35.0"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
 			"bonus_movement_speed"		"15"
 		}
 	}
-}

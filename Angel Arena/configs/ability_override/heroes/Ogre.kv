@@ -1,293 +1,490 @@
-"ogre_magi_fireblast"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"475"
-	"AbilityCastPoint"				"0.15"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"12"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"75 85 95 105 140 165 185"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+//=================================================================================================================
+	// Ogre Magi: Fireblast
+	//=================================================================================================================
+	"ogre_magi_fireblast"
 	{
-		"01"
-		{
-			"var_type"			"FIELD_FLOAT"
-			"stun_duration"		"1.5"
-		}
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5438"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"HasScepterUpgrade"				"0"
+		"AbilitySound"					"Hero_OgreMagi.Fireblast.Cast"
+		"MaxLevel"						"7"
 
-		"02"
-		{
-			"var_type"			"FIELD_FLOAT"
-			"multicast_delay"	"0.4"
-		}
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"475"
+		"AbilityCastPoint"				"0.15"
 		
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"fireblast_damage"		"105 170 225 280 320 380 425"
-			"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi_2"
-		}
-	}
-}
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12"
 
-//=================================================================================================================
-// Ogre Magi: Unrefined Fireblast ( scepter ability )
-//=================================================================================================================
-"ogre_magi_unrefined_fireblast"
-{
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"400"
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75 85 95 105 140 165 185"
+
+
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"stun_duration"		"1.5"
+			}
+
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"multicast_delay"	"0.4"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"fireblast_damage"		"105 170 225 280 320 380 425"
+				"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi_2"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
 	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Ogre Magi: Fire Shield ( shard ability ) ogre_magi_fire_shield
+	//=================================================================================================================
+	"ogre_magi_smash"
 	{
-		"01"
-		{
-			"var_type"			"FIELD_FLOAT"
-			"stun_duration"		"1.5"
-			"RequiresScepter"	"1"
-		}
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"648"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
 
-		"02"
-		{
-			"var_type"			"FIELD_FLOAT"
-			"multicast_delay"	"0.4"
-			"RequiresScepter"	"1"
-		}
+		"IsGrantedByShard"				"1"
 
-		"03"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"			"FIELD_FLOAT"
-			"scepter_mana"		"0.1"
-			"RequiresScepter"	"1"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"fireblast_damage"		"275"
-			"RequiresScepter"	    "1"
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"		"250"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"attacks"		"5"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"		"20"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"multicast_fireshield_aoe"			"1000"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_speed"		"1400"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage_absorb_pct"		"85"
+			}
 		}
 	}
-}
 
-//=================================================================================================================
-// Ogre Magi: Ignite
-//=================================================================================================================
-"ogre_magi_ignite"
-{
-	"MaxLevel"						"7"
+	//=================================================================================================================
+	// Ogre Magi: Unrefined Fireblast ( scepter ability )
+	//=================================================================================================================
+	"ogre_magi_unrefined_fireblast"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5466"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"IsGrantedByScepter"			"1"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"475"
+		"AbilityCastPoint"				"0.45"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"6"
 
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"700"
-	"AbilityCastPoint"				"0.1"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"15"
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"400"
+		
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"stun_duration"		"1.5"
+			}
 
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"95 105 115 125 140 180 220"
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"multicast_delay"	"0.4"
+			}
+
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"scepter_mana"		"35"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"fireblast_damage"		"275"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ogre Magi: Ignite
+	//=================================================================================================================
+	"ogre_magi_ignite"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5439"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_OgreMagi.Ignite.Cast"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700 800 900 1000"
+		"AbilityCastPoint"				"0.35"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"95 105 115 125 140 180 220"
+				
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"5"
+			}
+
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"burn_damage"		"32 52 65 100 120 130 150"
+				"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi_4"
+			}		
+
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"slow_movement_speed_pct"		"-20 -22 -24 -26 -28 -32 -36"
+			}
+
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_speed"		"1000"
+			}	
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"multicast_delay"	"0.4"
+			}	
+			"06"
+			{
+				"var_type"			"FIELD_INT"
+				"ignite_multicast_aoe"	"1400"
+			}				
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Ogre Magi: Bloodlust
+	//=================================================================================================================
+	"ogre_magi_bloodlust"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5440"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_OgreMagi.Bloodlust.Target"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.45"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"modelscale"		"10 15 20 25 29 32 35"
+			}	
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed"		"10 11 12 13 14 15 16"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"30 40 50 60 70 80 90"
+				"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"self_bonus"	"30 50 70 90 110 140 180"
+				"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"30"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"multicast_bloodlust_aoe"			"700"
+			}
 			
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Ogre Magi: Multicast
+	//=================================================================================================================
+	"ogre_magi_multicast"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5441"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityCastAnimation"			"ACT_INVALID"
+		"MaxLevel"						"7"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"			"FIELD_FLOAT"
-			"duration"			"5"
-		}
-		"02"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"burn_damage"		"32 52 65 100 120 130 150"
-			"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi_4"
-		}
-		"03"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"slow_movement_speed_pct"		"-20 -22 -24 -26 -28 -32 -36"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"projectile_speed"		"1000"
-		}	
-		"05"
-		{
-			"var_type"			"FIELD_FLOAT"
-			"multicast_delay"	"0.4"
-		}	
-		"06"
-		{
-			"var_type"			"FIELD_FLOAT"
-			"damage_pct"		"11"
-			"CalculateSpellDamageTooltip" "0"
-		}
-		"07"
-		{
-			"var_type"			"FIELD_FLOAT"
-			"damage_pct_creep"	"11 12 13 14 15 16 18"
-			"CalculateSpellDamageTooltip" "0"
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"multicast_2_times"		"40 45 50 55 60 62 65"
+			}
+
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"multicast_3_times"		"0 20 21 22 23 25 28"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"multicast_4_times"		"0 0 10 15 17 19 22"
+			}
 		}
 	}
-}
-
 //=================================================================================================================
-// Ogre Magi: Bloodlust
-//=================================================================================================================
-"ogre_magi_bloodlust"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"600"
-	"AbilityCastPoint"				"0.45"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"10"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"75"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_ogre_magi"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6183"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_FLOAT"
-			"modelscale"				"10 15 20 25 29 32 35"
-		}	
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"bonus_movement_speed"		"10 11 12 13 14 15 16"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"bonus_attack_speed"		"30 40 50 60 70 80 90"
-			"LinkedSpecialBonus"		"special_bonus_unique_ogre_magi"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"self_bonus"				"30 50 70 90 110 140 180"
-			"LinkedSpecialBonus"		"special_bonus_unique_ogre_magi"
-		}
-		"05"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"duration"					"30"
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"25"
+				"ad_linked_abilities"			"ogre_magi_bloodlust"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
 		}
 	}
-}
 
-//=================================================================================================================
-// Ogre Magi: Multicast
-//=================================================================================================================
-"ogre_magi_multicast"
-{
-	"MaxLevel"						"7"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_ogre_magi_2"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6707"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"				"FIELD_FLOAT"
-			"multicast_2_times"		"40 45 50 55 60 62 65"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"multicast_3_times"		"0 20 21 22 23 25 28"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"multicast_4_times"		"0 0 10 15 17 19 22"
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"240"
+				"ad_linked_abilities"			"ogre_magi_fireblast"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
 		}
 	}
-}
 
-"ogre_magi_smash"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
-	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-	"MaxLevel"						"1"
-	"FightRecapLevel"				"1"
-
-	"IsGrantedByShard"				"1"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"600"
-	"AbilityCastPoint"				"0.2"
-	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
-	
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"12"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"125"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_ogre_magi_3"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"7030"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"			"FIELD_INTEGER"
-			"damage"			"250"
-		}
-		"02"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"attacks"			"5"
-		}
-		"03"
-		{
-			"var_type"			"FIELD_FLOAT"
-			"duration"			"20"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"multicast_bloodlust_aoe"			"1000"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"projectile_speed"		"1400"
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"8"
+				"ad_linked_abilities"			"ogre_magi_fireblast"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
 		}
 	}
-}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_ogre_magi_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"403"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"16"
+				"ad_linked_abilities"			"ogre_magi_ignite"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_ogre_magi_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"801"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"1"
+				"ad_linked_abilities"			"ogre_magi_fireblast"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}

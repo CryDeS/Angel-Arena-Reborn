@@ -1,366 +1,586 @@
-"witch_doctor_paralyzing_cask"
-{
-	"MaxLevel"						"7"
-	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"700"
-	"AbilityCastPoint"				"0.35 0.35 0.35 0.35 0.35 0.35 0.35"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"12.0"
-
-	// Damage.
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"75 100 125 150 210 260 320"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"110 120 130 140 180 220 260"
-
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"hero_duration"			"1.0"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"creep_duration"		"5.0 5.0 5.0 5.0 5.0 5.0 5.0"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"hero_damage"			"50 75 100 125 150 175 200"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bounce_range"			"575 575 575 575 575 575 575"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bounces"				"4 5 6 7 8 9 10"
-		}
-		"06"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"speed"					"1000"
-		}
-		"07"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"bounce_delay"			"0.3"
-		}
-		"08"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bounces_tooltip"		"3 4 5 6 7 8 9"
-			"LinkedSpecialBonus"	"special_bonus_unique_witch_doctor_3"
-		}
-	}
-}
-
 //=================================================================================================================
+	// Witch Doctor: Paralyzing Cask
+	//=================================================================================================================
+	"witch_doctor_paralyzing_cask"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5138"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_WitchDoctor.Paralyzing_Cask_Cast"
+		"MaxLevel"                      "7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.35"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"110 120 130 140 180 220 260"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.5"	// Can have multiple bounces
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"hero_duration"			"1.0"
+				"creep_duration"		"5"
+				"base_damage"			"75 100 125 150 210 260 320"
+				"bounce_range"			"575"
+				"bounces"				
+				{ 
+					"value"					"4 5 6 7 8 9 10"
+					"special_bonus_unique_witch_doctor_3"			"+2"
+				}
+				"speed"					"1000"
+				"bounce_delay"			"0.3"
+				"bounce_bonus_damage"			"20 30 40 50 60 70 80"
+				"creep_damage_pct"		"200"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	//=================================================================================================================
 // Witch Doctor: Voodoo Restoration
 //=================================================================================================================
 "witch_doctor_voodoo_restoration"
 {
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"BaseClass"				"ability_datadriven"
-	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
-	"AbilityTextureName"	"witch_doctor_voodoo_restoration"
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "BaseClass"             "ability_datadriven"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+    "AbilityTextureName"    "witch_doctor_voodoo_restoration"
 
-	// Precache
-	//-------------------------------------------------------------------------------------------------------------
-	"precache"
+    // Precache
+    //-------------------------------------------------------------------------------------------------------------
+    "precache"
+    {
+        "particle"      "particles/units/heroes/hero_witchdoctor/witchdoctor_voodoo_restoration.vpcf"
+        "particle"      "particles/units/heroes/hero_witchdoctor/witchdoctor_voodoo_restoration_flame.vpcf"
+        "soundfile"     "sounds/weapons/hero/witch_doctor/voodoo_restoration.vsnd"
+        "soundfile"     "sounds/weapons/hero/witch_doctor/voodoo_restoration_loop.vsnd"
+        "soundfile"     "sounds/weapons/hero/witch_doctor/voodoo_restoration_off.vsnd"
+    }
+
+    "MaxLevel"                      "7"
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"               "0.0"
+
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityManaCost"               "0"     
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"                  "FIELD_INTEGER"
+            "mana_per_second"           "4 7 9 10 11 15 20"
+            "LinkedSpecialBonus"    "special_bonus_unique_witch_doctor_4"
+            "LinkedSpecialBonusOperation"   "SPECIAL_BONUS_MULTIPLY"
+            "LinkedSpecialBonusField"   "value"
+        }
+        "02"
+        {
+            "var_type"                  "FIELD_INTEGER"
+            "radius"                    "500"
+        }
+        "03"
+        {
+            "var_type"                  "FIELD_INTEGER"
+            "heal"                      "13 18 24 32 42 55 70"
+        }
+        "04"
+        {
+            "var_type"                  "FIELD_FLOAT"
+            "heal_interval"             "0.33"
+        }
+        "05"
+        {
+            "var_type"                  "FIELD_FLOAT"
+            "heal_percent"              "0.3 0.6 0.9 1.2 1.5 1.8 2.1"
+        }
+    }
+    
+    "OnToggleOn"
+    {
+        "ApplyModifier"
+        {
+            "ModifierName"  "modifier_voodoo_restoration_aura_emitter"
+            "Target"        "CASTER"
+        }
+        
+        "ApplyModifier"
+        {
+            "ModifierName"  "modifier_voodoo_restoration_hidden_heal"
+            "Target"        "CASTER"
+        }
+    }
+
+    "OnToggleOff"
+    {
+        "RemoveModifier"
+        {
+            "ModifierName"  "modifier_voodoo_restoration_aura_emitter"
+            "Target"        "CASTER"
+        }
+        "RemoveModifier"
+        {
+            "ModifierName"  "modifier_voodoo_restoration_hidden_heal"
+            "Target"        "CASTER"
+        }
+    }
+
+    "Modifiers"
+    {
+        "modifier_voodoo_restoration_hidden_heal"
+        {
+            "IsHidden"              "1"
+            
+            "ThinkInterval"     "%heal_interval"
+            "OnIntervalThink"
+            {
+                "SpendMana"
+                {
+                    "Mana"  "%mana_per_second"
+                }
+                
+                "RunScript"
+                {
+                    "ScriptFile"        "heroes/witch_doctor/voodoo_restoration.lua"
+                    "Function"          "Heal"
+                    "Target"            "CASTER"
+                }
+                        
+                "ActOnTargets"
+                {
+                    "Target"
+                    {
+                        "Center"    "CASTER"
+                        "Radius"    "%radius"
+                        "Teams"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY" 
+                        "Types"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+                    }
+
+                    "Action"
+                    {
+                        "RunScript"
+                        {
+                            "ScriptFile"        "heroes/witch_doctor/voodoo_restoration.lua"
+                            "Function"          "Heal"
+                        }
+                    }
+                }
+            }
+        }
+        
+        "modifier_voodoo_restoration_aura_emitter"
+        {
+            "IsHidden"              "1"
+            
+            "Aura"                  "modifier_voodoo_restoration_dummy"
+            "Aura_Radius"           "%radius"
+            "Aura_Teams"            "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+            "Aura_Types"            "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+        
+            "OnCreated"
+            {
+                "AttachEffect"
+                {
+                    "EffectName"        "particles/units/heroes/hero_witchdoctor/witchdoctor_voodoo_restoration_flame.vpcf"
+                    "EffectAttachType"  "follow_origin"
+                    "Target"            "CASTER"
+                    "ControlPoints"
+                    {
+                        "00" "0 0 0"
+                        "01" "%radius %radius %radius"
+                    }
+                }
+            
+                "AttachEffect"
+                {
+                    "Target"            "CASTER"
+                    "EffectName"        "particles/units/heroes/hero_witchdoctor/witchdoctor_voodoo_restoration_flame.vpcf"
+                    "EffectAttachType"  "follow_hitloc"
+                    "ControlPointEntities"
+                    {
+                        "CASTER" "attach_staff"
+                        "CASTER" "attach_staff"
+                        "CASTER" "attach_staff"
+                    }
+                }
+            }
+        }
+        
+        "modifier_voodoo_restoration_dummy"
+        {
+            "IsBuff"    "1"
+            "IsHidden"  "0"
+        }
+    }
+}
+	
+	//=================================================================================================================
+	// Witch Doctor: Maledict
+	//=================================================================================================================
+	"witch_doctor_maledict"
 	{
-		"particle"		"particles/units/heroes/hero_witchdoctor/witchdoctor_voodoo_restoration.vpcf"
-		"particle"		"particles/units/heroes/hero_witchdoctor/witchdoctor_voodoo_restoration_flame.vpcf"
-		"soundfile"		"sounds/weapons/hero/witch_doctor/voodoo_restoration.vsnd"
-		"soundfile"		"sounds/weapons/hero/witch_doctor/voodoo_restoration_loop.vsnd"
-		"soundfile"		"sounds/weapons/hero/witch_doctor/voodoo_restoration_off.vsnd"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5140"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_WitchDoctor.Maledict_Cast"
+		"MaxLevel"                      "7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"575"
+		"AbilityCastPoint"				"0.35"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"
+		"AbilityDuration"				"12.0"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"10 20 30 40 50 60 70"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"120"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"180"
+				"LinkedSpecialBonus"	"special_bonus_unique_witch_doctor_6"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_damage"				 "15 17 20 23 25 27 30"
+				"LinkedSpecialBonus"	"special_bonus_unique_witch_doctor_7"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_damage_threshold"	"100"
+			}			
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"ticks"						"3"
+				"LinkedSpecialBonusField"		"value2"
+			}			
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_5"
 	}
-
-	"MaxLevel"						"7"
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"0.0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"0"		
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	
+	//=================================================================================================================
+	// Witch Doctor: Death Ward
+	//=================================================================================================================
+	"witch_doctor_death_ward"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5141"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NO_INVIS | DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE | DOTA_UNIT_TARGET_FLAG_NOT_ATTACK_IMMUNE | DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_WitchDoctor.Death_WardBuild"
+		"MaxLevel"                      "7"
+
+		"HasShardUpgrade"			"1"
+		"HasScepterUpgrade"			"1"
+
+		"AbilityDraftUltShardAbility"		"witch_doctor_voodoo_switcheroo"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0.35"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"50.0"
+		"AbilityChannelTime"			"8.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"mana_per_second"			"4 7 9 10 11 15 20"
-			"LinkedSpecialBonus"	"special_bonus_unique_witch_doctor_4"
-			"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
-			"LinkedSpecialBonusField"	"value"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"radius"					"500"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"heal"						"13 18 24 32 42 55 70"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"heal_interval"				"0.33"
-		}
-		"05"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"heal_percent"				"0.3 0.6 0.9 1.2 1.5 1.8 2.1"
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"100 150 200 250 300 400 550"
+				"LinkedSpecialBonus"	"special_bonus_unique_witch_doctor_5"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"attack_range_tooltip"		"700"
+				"LinkedSpecialBonus"	"special_bonus_unique_witch_doctor_1"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bounce_radius"				"700"
+				"RequiresScepter"		"1"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"scepter_lifesteal"			"20"
+				"RequiresScepter"		"1"
+			}
 		}
 	}
 	
-	"OnToggleOn"
+	//=================================================================================================================
+	// Witch Doctor: Voodoo Switcheroo (Shard Ability)
+	//=================================================================================================================
+	"witch_doctor_voodoo_switcheroo"
 	{
-		"ApplyModifier"
-		{
-			"ModifierName"	"modifier_voodoo_restoration_aura_emitter"
-			"Target"		"CASTER"
-		}
-		
-		"ApplyModifier"
-		{
-			"ModifierName"	"modifier_voodoo_restoration_hidden_heal"
-			"Target"		"CASTER"
-		}
-	}
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"632"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"MaxLevel"						"1"
+		"IsGrantedByShard"				"1"
+	
 
-	"OnToggleOff"
-	{
-		"RemoveModifier"
-		{
-			"ModifierName"	"modifier_voodoo_restoration_aura_emitter"
-			"Target"		"CASTER"
-		}
-		"RemoveModifier"
-		{
-			"ModifierName"	"modifier_voodoo_restoration_hidden_heal"
-			"Target"		"CASTER"
-		}
-	}
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.1"
 
-	"Modifiers"
-	{
-		"modifier_voodoo_restoration_hidden_heal"
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"IsHidden"				"1"
-			
-			"ThinkInterval"		"%heal_interval"
-			"OnIntervalThink"
+			"01"
 			{
-				"SpendMana"
-				{
-					"Mana"	"%mana_per_second"
-				}
-				
-				"RunScript"
-				{
-					"ScriptFile"		"heroes/witch_doctor/voodoo_restoration.lua"
-					"Function"			"Heal"
-					"Target"			"CASTER"
-				}
-						
-				"ActOnTargets"
-				{
-					"Target"
-					{
-						"Center" 	"CASTER"
-						"Radius" 	"%radius"
-						"Teams" 	"DOTA_UNIT_TARGET_TEAM_FRIENDLY" 
-						"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
-					}
-
-					"Action"
-					{
-						"RunScript"
-						{
-							"ScriptFile"		"heroes/witch_doctor/voodoo_restoration.lua"
-							"Function"			"Heal"
-						}
-					}
-				}
+				"var_type"				"FIELD_FLOAT"
+				"duration"		"2"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"attack_speed_reduction"		"30"
 			}
 		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_witch_doctor_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5998"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		
-		"modifier_voodoo_restoration_aura_emitter"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"IsHidden"				"1"
-			
-			"Aura"					"modifier_voodoo_restoration_dummy"
-			"Aura_Radius"			"%radius"
-			"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-			"Aura_Types"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
-		
-			"OnCreated"
+			"01"
 			{
-				"AttachEffect"
-				{
-					"EffectName"		"particles/units/heroes/hero_witchdoctor/witchdoctor_voodoo_restoration_flame.vpcf"
-					"EffectAttachType"	"follow_origin"
-					"Target"			"CASTER"
-					"ControlPoints"
-					{
-						"00" "0 0 0"
-						"01" "%radius %radius %radius"
-					}
-				}
-			
-				"AttachEffect"
-				{
-					"Target"			"CASTER"
-					"EffectName"		"particles/units/heroes/hero_witchdoctor/witchdoctor_voodoo_restoration_flame.vpcf"
-					"EffectAttachType"	"follow_hitloc"
-					"ControlPointEntities"
-					{
-						"CASTER" "attach_staff"
-						"CASTER" "attach_staff"
-						"CASTER" "attach_staff"
-					}
-				}
+				"var_type"					"FIELD_INTEGER"
+				"value"				"100"
+				"ad_linked_abilities"			"witch_doctor_death_ward"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_witch_doctor_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6298"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		
-		"modifier_voodoo_restoration_dummy"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"IsBuff"	"1"
-			"IsHidden"	"0"
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"1.5"
+				"ad_linked_abilities"			"witch_doctor_voodoo_restoration"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
 		}
 	}
-}
 
-//=================================================================================================================
-// Witch Doctor: Maledict
-//=================================================================================================================
-"witch_doctor_maledict"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"525"
-	"AbilityCastPoint"				"0.35 0.35 0.35 0.35 0.35 0.35 0.25"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"20.0"
-	"AbilityDuration"				"12.0"
-
-	// Damage.
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"5 10 15 20 40 60 100"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"120 120 120 120 120 120 120"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_witch_doctor_3"
 	{
-		"01"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"radius"					"180"
-			"LinkedSpecialBonus"	"special_bonus_unique_witch_doctor_6"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"abilityduration"			""
-			"LinkedSpecialBonus"	"special_bonus_unique_witch_doctor_4"
-			"LinkedSpecialBonusField"		"value"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"bonus_damage"				"16 20 24 28 32 38 45"
-			"LinkedSpecialBonus"	"special_bonus_unique_witch_doctor_7"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"bonus_damage_threshold"	"100"
-		}			
-		"05"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"ticks"						"3"
-			"LinkedSpecialBonusField"		"value2"
-		}			
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6524"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+		
 	}
-}
 
-//=================================================================================================================
-// Witch Doctor: Death Ward
-//=================================================================================================================
-"witch_doctor_death_ward"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"900"
-	"AbilityCastPoint"				"0.35 0.35 0.35 0.35 0.35 0.35 0.35"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"50.0"
-	"AbilityChannelTime"			"8.0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"200"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_witch_doctor_4"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6995"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"damage"					"100 150 200 250 300 400 550"
-			"LinkedSpecialBonus"		"special_bonus_unique_witch_doctor_5"
-			"CalculateSpellDamageTooltip"	"0"
-		}
-		"02"
-        {
-            "var_type"					"FIELD_INTEGER"
-            "attack_range_tooltip"		"700"
-            "LinkedSpecialBonus"	    "special_bonus_unique_witch_doctor_1"
-        }
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"bounce_radius"				"700"
-			"RequiresScepter"		    "1"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"scepter_lifesteal"			"20"
-			"RequiresScepter"			"1"
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"0.75" 					
+				"ad_linked_abilities"			"witch_doctor_voodoo_restoration"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER" 
+				"value2"				"25"					
+				"ad_linked_abilities"			"witch_doctor_voodoo_restoration"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
 		}
 	}
-}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_witch_doctor_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6996"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"60"
+				"ad_linked_abilities"			"witch_doctor_death_ward"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_witch_doctor_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"417"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"75"
+				"ad_linked_abilities"			"witch_doctor_maledict"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_witch_doctor_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"555"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"20"
+				"ad_linked_abilities"			"witch_doctor_maledict"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}

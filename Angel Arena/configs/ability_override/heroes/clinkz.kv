@@ -1,262 +1,290 @@
 //=================================================================================================================
-// Clinkz: Strafe
-//=================================================================================================================
-"clinkz_strafe"
-{
-	"MaxLevel"						"7"
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"15.0"
-	"AbilityCastPoint"				"0.0 0.0 0.0 0.0 0.0 0.0 0.0"
-	"AbilityChannelTime"			"1.1 1.3 1.5 1.9 2.3 2.7 3.0"
-	
-	//Damage
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"60 70 80 90 100 110 120"
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"90 90 90 90 90 90 90"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	// Clinkz: Strafe
+	//=================================================================================================================
+	"clinkz_strafe"
 	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5259"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"MaxLevel"                      "7"
+	
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2"
+		"AbilityChannelTime"			"1.2 1.6 2.0 2.4"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityChannelAnimation"	"ACT_DOTA_CHANNEL_ABILITY_1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"
 		
-		"01"
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"90"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"wave_count"				"3 4 5 6 7 8 9"
-			"LinkedSpecialBonus"		"special_bonus_unique_clinkz_12"
+				"wave_count"
+				{
+					"value"			"3 4 5 6 7 8 9"
+					"LinkedSpecialBonus"		"special_bonus_unique_clinkz_12"
+				}
+				"range"	"750 800 850 900 950 1000 1050"             				
+				"damage_pct"	
+				{
+					"value"		"65"				
+					"special_bonus_unique_clinkz_4"	"+25"
+				}
+			
 		}
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"attack_speed_bonus_pct"	"90 120 150 180 210 240 270"
-			"LinkedSpecialBonus"		"special_bonus_unique_clinkz_7"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"range"						"750 800 850 900 950 1000 1050"				
-		}
-		"04"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"damage_pct"				"65"				
-		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
-}
 
-//=================================================================================================================
-// Clinkz: Searing Arrows
-//=================================================================================================================
-"clinkz_searing_arrows"
-{
-	"MaxLevel"						"7"
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"630"
-	"AbilityCastPoint"				"0.0 0.0 0.0 0.0 0.0 0.0 0.0"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"0.0 0.0 0.0 0.0 0.0 0.0 0.0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"8"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Clinkz: Searing Arrows
+	//=================================================================================================================
+	"clinkz_searing_arrows"
 	{
-		"01"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"damage_bonus"					"30 45 60 75 90 105 120"
-			"LinkedSpecialBonus"			"special_bonus_unique_clinkz_1"
-		}
-	}
-}
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5260"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"AbilitySound"					"Hero_Clinkz.SearingArrows.Impact"
+		 "MaxLevel"                      "7"
 
-"special_bonus_unique_clinkz_1"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"ID"					"6104"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"8"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"damage_bonus"					"30 45 60 75 90 105 120"
+				"LinkedSpecialBonus"			"special_bonus_unique_clinkz_1"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Clinkz: Wind Walk
+	//=================================================================================================================
+	"clinkz_wind_walk"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5261"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilitySound"					"Hero_Clinkz.WindWalk"
+		"MaxLevel"                      "7"
+
+        "HasShardUpgrade"               "1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"
+		"AbilityCastPoint"				"0.0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"value"						"60"
-			"ad_linked_ability"			"clinkz_searing_arrows"
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"20.0 25.0 30.0 35.0 40.0 45.0 50.0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"fade_time"					"0.6"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"move_speed_bonus_pct"		"70 100 130 160 190 220 250"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"shard_skeleton_count"		"2"
+				"RequiresShard"				"1"
+			}
 		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
-}
 
-//=================================================================================================================
-// Ability: Clinkz Burning Army
-//=================================================================================================================
-"clinkz_burning_army"
-{
-    // Time
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityCooldown"				"60"
-
-    // Cost
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityManaCost"				"250"
-
-    // Special
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-        "01"
-        {
-            "var_type"			"FIELD_INTEGER"
-            "range"				"1300"
-        }
-        "02"
-        {
-            "var_type"			"FIELD_FLOAT"
-            "duration"			"20"
-        }
-        "03"
-        {
-            "var_type"			"FIELD_INTEGER"
-            "count"				"10"
-        }
-        "04"
-        {
-            "var_type"			"FIELD_FLOAT"
-            "attack_rate"		"1.5"
-        }
-		"05"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"damage_percent"	"100"
-		}
-        "06"
-        {
-            "var_type"			"FIELD_FLOAT"
-            "spawn_interval"	"0.6"
-        }
-    }
-}
-
-//=================================================================================================================
-// Clinkz: Wind Walk
-//=================================================================================================================
-"clinkz_wind_walk"
-{
-	"MaxLevel"						"7"
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"20"
-	"AbilityCastPoint"				"0.0 0.0 0.0 0.0 0.0 0.0 0.0"
 	
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"75 75 75 75 75 75 75"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Ability: Clinkz Burning Army
+	//=================================================================================================================
+	"clinkz_burning_army"
 	{
-		"01"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"duration"					"20.0 25.0 30.0 35.0 40.0 45.0 50.0"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"fade_time"					"0.6"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"move_speed_bonus_pct"		"45"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"attack_speed_duration"		"4"
-			"LinkedSpecialBonus"		"special_bonus_unique_clinkz_2"
-		}
-		"05"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"attack_speed_bonus_pct"	"70 100 130 160 190 220 250"
-		}
-		"06"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"scepter_bonus"				"30"
-			"RequiresScepter"			"1"
-		}
-		"07"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"scepter_skeleton_count"	"2"
-			"RequiresScepter"			"1"
-		}
-		"08"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"scepter_bonus_tooltip"		"65"
-			"RequiresScepter"			"1"
-		}
-	}
-}
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"7319"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"IsGrantedByScepter"			"1"
+		"HasScepterUpgrade"				"1"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Clinkz.DeathPact"
+		"MaxLevel"                      "7"
 
-//=================================================================================================================
-// Clinkz: Death Pact
-//=================================================================================================================
-"clinkz_death_pact"
-{
-	"MaxLevel"						"7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		"AbilityCastPoint"				"0"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"80" // 60
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"250"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"range"			"1300"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"	"14 15 16 17 18 19 20"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"count"			"4 5 6 7 8 9 10"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"attack_rate"			"2 1.9 1.8 1.7 1.6 1.5 1.4"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_percent"	"30 35 40 45 50 55 60"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"spawn_interval"			"0.5"
+			}
+		}
+	}	
 
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"400"
-	"AbilityCastPoint"				"0.5 0.5 0.5 0.5 0.5 0.5 0.5"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"70.0"
-	
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"100 120 140 160 180 200 220"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Clinkz Scepter
+	//=================================================================================================================
+	"clinkz_scepter"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"7855"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST  | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"IsGrantedByScepter"			"1"
+		"HasScepterUpgrade"			"1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"7"
+	}
+	
+	//=================================================================================================================
+	// Clinkz: Death Pact
+	//=================================================================================================================
+	"clinkz_death_pact"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5262"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilitySound"					"Hero_Clinkz.DeathPact"
+		"AbilityDraftUltScepterAbility" "clinkz_burning_army"
+		"MaxLevel"                      "7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.5"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_6"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"70"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				 "100 120 140 160 180 200 220"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"				"FIELD_FLOAT"
-			"duration"				"40"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"health_gain_pct"		"30 40 50 60 70 80 90"
-			"LinkedSpecialBonus"			"special_bonus_unique_clinkz_8"
-		}
-		"03"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"damage_gain_pct"				"12 13 14 15 16 17 18"
-			"LinkedSpecialBonus"			"special_bonus_unique_clinkz_8"
-			"LinkedSpecialBonusField"		"value2"
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"40"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"health_gain_pct"		"30 40 50 60 70 80 90"
+				"LinkedSpecialBonus"			"special_bonus_unique_clinkz_8"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_gain_pct"		"12 13 14 15 16 17 18"
+			}
 		}
 	}
-}

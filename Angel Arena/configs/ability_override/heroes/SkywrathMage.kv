@@ -1,216 +1,309 @@
-"skywrath_mage_arcane_bolt"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"700"
-	"AbilityCastPoint"				"0.1 0.1 0.1 0.1 0.1 0.1 0.1"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"5.0 4.0 3.0 2.0 1.5 1.0 1.0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"70"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+//=================================================================================================================
+	// Skywrath Mage: Arcane Bolt
+	//=================================================================================================================
+	"skywrath_mage_arcane_bolt"
 	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bolt_speed"			"700"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bolt_vision"			"325"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"bolt_damage"			"100 120 140 160 180 200 240"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"int_multiplier"		"1.0"
-			"CalculateSpellDamageTooltip"		"1"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"vision_duration"		"3.34"
-		}
-	}
-}
-
-//=================================================================================================================
-// Skywrath Mage: Concussive Shot
-//=================================================================================================================
-"skywrath_mage_concussive_shot"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0.0 0.0 0.0 0.0 0.0 0.0 0.0"
-	"AbilityCastRange"				"1800"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"12"
-
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"110 110 110 110 110 110 110" 
-
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{ 
-		"01"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"launch_radius"		"1800"
-		}
-		"02"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"slow_radius"		"300"
-		}
-		"03"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"speed"				"800 800 800 800"
-		}
-		"04"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"damage"			"150 200 250 300 350 400 450"
-		}
-		"05"
-		{
-			"var_type"			"FIELD_FLOAT"
-			"slow_duration"		"4.0"
-		}
-		"06"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"movement_speed_pct"	"30 35 40 45 50 55 60"
-		}
-		"07"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"shot_vision"		"400"
-		}
-		"08"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"vision_duration"		"3.34"
-		}
-	}
-}
-
-//=================================================================================================================
-// Skywrath Mage: Ancient Seal
-//=================================================================================================================
-"skywrath_mage_ancient_seal"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"700"
-	"AbilityCastPoint"				"0.0"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"20"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"80 90 100 110 120 140 160"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"resist_debuff"			"-30 -35 -40 -45 -50 -55 -60"
-			"LinkedSpecialBonus"	"special_bonus_unique_skywrath_3"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"seal_duration"			"3.0 3.5 4.0 4.5 5.0 5.5 6.0"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"scepter_radius"		"700"
-			"RequiresScepter"	"1"
-		}
-	}
-}
-
-//=================================================================================================================
-// Skywrath Mage: Mystic Flare
-//=================================================================================================================
-"skywrath_mage_mystic_flare"
-{
-	"MaxLevel"						"7"
-	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1000"
-	"AbilityCastPoint"				"0.1 0.1 0.1 0.1 0.1 0.1 0.1"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"60 55 50 45 35 25 15"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"250 375 450 625 725 815 925"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5581"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_SkywrathMage.ArcaneBolt.Cast"
+		"HasScepterUpgrade"			"1"
+		"MaxLevel"						"7"
 		
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.1"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"5.0 4.0 3.0 2.0 1.5 1.0 1.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"70"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bolt_speed"			"700"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bolt_vision"			"325"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bolt_damage"			"100 120 140 160 180 200 240"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"int_multiplier"		"1.0"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"vision_duration"		"3.34"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"scepter_radius"		"700"
+				"RequiresScepter"	"1"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Skywrath Mage: Concussive Shot
+	//=================================================================================================================
+	"skywrath_mage_concussive_shot"
 	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"radius"				"220"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5582"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_SkywrathMage.ConcussiveShot.Cast"
+		"HasScepterUpgrade"			"1"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCastRange"				"1800"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"110" 
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{ 
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"launch_radius"		"1800"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"slow_radius"		"300"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"speed"				"800"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"150 200 250 300 350 400 450"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"slow_duration"		"4.0"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"movement_speed_pct"	"30 35 40 45 50 55 60"
+			}
+			"07"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shot_vision"		"400"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"vision_duration"		"3.34"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"scepter_radius"		"700"
+				"RequiresScepter"	"1"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"creep_damage_pct"		"75"
+			}
 		}
-		"02"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Skywrath Mage: Ancient Seal
+	//=================================================================================================================
+	"skywrath_mage_ancient_seal"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5583"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_SkywrathMage.AncientSeal.Target"
+		"HasScepterUpgrade"			"1"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"80 90 100 110 120 140 160"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"				"FIELD_FLOAT"
-			"duration"				"2.0"
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"resist_debuff"			"-30 -35 -40 -45 -50 -55 -60"
+				"LinkedSpecialBonus"	"special_bonus_unique_skywrath_3"
+				"DamageTypeTooltip"		"DAMAGE_TYPE_MAGICAL"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"seal_duration"			"3.0 3.5 4.0 4.5 5.0 5.5 6.0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"scepter_radius"		"700"
+				"RequiresScepter"	"1"
+			}
 		}
-		"03"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Skywrath Mage: Mystic Flare
+	//=================================================================================================================
+	"skywrath_mage_mystic_flare"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5584"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"2"
+		"MaxLevel"						"7"
+
+		"HasScepterUpgrade"			"1"
+		"HasShardUpgrade"			"1"
+
+		"AbilityDraftUltShardAbility" "skywrath_mage_shield_of_the_scion"
+		
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.1"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60 55 50 45 35 25 15"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"250 375 450 625 725 815 925"
+			
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"damage"				"800 1200 1400 1600 1850 1950 2200"
-			"LinkedSpecialBonus"	"special_bonus_unique_skywrath_5"
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"220"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"2.0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"800 1200 1400 1600 1850 1950 2200"
+				"LinkedSpecialBonus"	"special_bonus_unique_skywrath_5"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage_interval"		"0.1"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"scepter_radius"		"700"
+				"RequiresScepter"	"1"
+			}
 		}
-		"04"
+	}
+
+	//=================================================================================================================
+	// Skywrath Mage: Shield of the Scion (shard ability)
+	//=================================================================================================================
+	"skywrath_mage_shield_of_the_scion"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"833"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"IsGrantedByShard"				"1"
+		"MaxLevel"						"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"				"FIELD_FLOAT"
-			"damage_interval"		"0.1"
+			"stack_duration"			"35"
+			"bonus_intelligence"		"5"
+			"bonus_armor"				"1"
 		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"scepter_radius"		"700"
-			"RequiresScepter"	"1"
-		}
-    }
-}
+	}

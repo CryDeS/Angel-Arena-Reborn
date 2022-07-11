@@ -32,6 +32,7 @@ function modifier_huntress_crippling_arrow_stun:DeclareFunctions()
     return funcs
 end
 
+
 --------------------------------------------------------------------------------
 function modifier_huntress_crippling_arrow_stun:CheckState()
     local state = {
