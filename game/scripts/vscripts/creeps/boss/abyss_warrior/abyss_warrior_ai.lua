@@ -2,8 +2,8 @@ require('lib/timers')
 
 TICK_TIME 			= 0.5
 
-ENEMY_SEARCHING 	= 1150
-BACK_TO_SPAWN_RANGE	= ENEMY_SEARCHING + 50
+ENEMY_SEARCHING 	= 820 -- 1150
+BACK_TO_SPAWN_RANGE	= ENEMY_SEARCHING + 50 
 
 AbyssWarriorAI = AbyssWarriorAI or class({})
 

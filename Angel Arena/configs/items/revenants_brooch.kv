@@ -1,0 +1,69 @@
+//=================================================================================================================
+	// Recipe: revenants brooch
+	//=================================================================================================================
+	"item_recipe_revenants_brooch"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"910"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"3500" // 800	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_revenants_brooch"
+		"ItemRequirements"
+		{
+			"01"						"item_witch_blade;item_mystic_staff;item_boss_soul"
+		}
+	}
+	
+	//=================================================================================================================
+	// revenants brooch
+	//=================================================================================================================
+	"item_revenants_brooch"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"911"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"35" // 25
+		"AbilityCastPoint"				"0.0"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"300" 
+		"ItemCost"						"6200"
+		"ItemShopTags"					"int;hard_to_tag"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"staff;misery;sm"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{				
+				"bonus_intellect"		"60"  // 45				
+				"bonus_attack_speed"	"60"  // 40	
+				"bonus_armor"			"10"   // 8
+				"projectile_speed"		"300" 
+				"int_damage_multiplier"	"1"
+				"slow"	"30" 				  // 25
+				"slow_duration"	"4"
+				"mana_cost"				"100"
+				"damage_penalty"		"40"
+				"passive_cooldown"		"9"
+				"number_of_attacks"		"20" // 5
+				"active_duration"		"5" // 15 
+		}
+	}

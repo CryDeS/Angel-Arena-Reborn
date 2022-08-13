@@ -1,49 +1,45 @@
-"item_heavy_blade"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"ID"							"837"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
-	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-	"AbilitySound"					"Brewmaster_Storm.DispelMagic"
-	
-	"AbilityCastRange"				"500 500 500 500"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"20"
-	"AbilityCastPoint"				"0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"75 75 75 75"		
-
-	// Item Info
-	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"0"
-	"ItemIsNeutralDrop"				"1"
-	"ItemPurchasable"				"0"
-
-	// Stats
-	//-------------------------------------------------------------------------------------------------------------
-
-	"Model"							"models/props_gameplay/neutral_box.vmdl"
-		
-	// Special	
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+//=================================================================================================================
+	// Witchbane
+	//=================================================================================================================
+	"item_heavy_blade"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"837"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilitySound"					"Brewmaster_Storm.DispelMagic"
+		
+		"AbilityCastRange"				"500 500 500 500"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15" // 20
+		"AbilityCastPoint"				"0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75 75 75 75"		
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"0"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"radius"				"300"
-		}	
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage"				"0"
+				"radius"				"500" // 300
+				"damage"				"5" // 4
+				"attack_speed"			"50" // 20
 		}
 	}
-}

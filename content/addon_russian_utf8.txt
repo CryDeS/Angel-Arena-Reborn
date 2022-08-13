@@ -1136,7 +1136,21 @@
 		
 		"DOTA_Tooltip_modifier_strange_amulet_active"					"Strange Power"
 		"DOTA_Tooltip_modifier_strange_amulet_active_Description"		"Сила увеличена, и возвращает часть урона."
+
 		
+		"DOTA_Tooltip_Ability_item_nullifier_2"				"Nullifier"
+		"DOTA_Tooltip_Ability_item_recipe_nullifier_2"				"Рецепт: Nullifier"
+		"DOTA_Tooltip_ability_item_nullifier_2_Description"                     "<h1>Активная: Nullify</h1> Развеивает положительные эффекты с цели в момент применения и следующие %mute_duration% сек. Любая атака замедлит цель на %slow_pct%%%. Длительность замедления: %slow_interval_duration% сек.<br><br>Тип развеивания: <span class=\"GameplayValues GameplayVariable\">нормальное</span>"		
+		"DOTA_Tooltip_ability_item_nullifier_2_lore"                     "Опасное оружие, выкраденное из обратного измерения."		
+		"DOTA_Tooltip_ability_item_nullifier_2_bonus_damage"					"+$damage"
+		"DOTA_Tooltip_ability_item_nullifier_2_bonus_armor"				"+$armor"
+		"DOTA_Tooltip_ability_item_nullifier_2_bonus_regen"				"+$hp_regen"
+		"DOTA_Tooltip_modifier_item_nullifier_2_mute" 						"Nullifier"
+		"DOTA_Tooltip_modifier_item_nullifier_2_mute_Description" 			"С этого существа постоянно развеиваются положительные эффекты. Любая атака замедлит его."
+		"DOTA_Tooltip_modifier_item_nullifier_2_slow"							"Замедление от Nullifier"
+		"DOTA_Tooltip_modifier_item_nullifier_2_slow_Description"				"Передвижение замедлено на %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%"
+		
+
 		"DOTA_Tooltip_ability_item_bfury_2"								"Battle Fury"
 		"DOTA_Tooltip_ability_item_bfury_2_Description"					"Активируемая: Chop Tree — уничтожает выбранное дерево.\nПассивная: Greater Maim - дает шанс нанести врагу сильную травму которая замедлит его скорость передвижения и атаки.\nПассивная: Cleave - наносит процент от урона всем врагам в радиусе вокруг цели атаки. Не работает на героях с дальней атакой.\nПассивная: Quell — увеличивает урон от атак по юнитам, не являющимися героями, в зависимости от типа атаки владельца. Не увеличивает урон по Рошану."
 		"DOTA_Tooltip_ability_item_bfury_2_bonus_agility"				"+$agi"

@@ -1,7 +1,7 @@
 "DOTA_Tooltip_Ability_item_boss_soul"									"Boss Soul"
-"DOTA_Tooltip_Ability_item_boss_soul_Description"						"Can be obtained by killing any boss and can't be purchased in shop."
+"DOTA_Tooltip_Ability_item_boss_soul_Description"						"Can be obtained by killing any boss or can be purchased in shop."
 "DOTA_Tooltip_Ability_item_boss_soul_lore"								"Soul of mighty creature can be used for creating great artifacts."
 
 "DOTA_Tooltip_Ability_item_boss_soul_dummy"								"Boss Soul"
-"DOTA_Tooltip_Ability_item_boss_soul_dummy_Description"					"Can be obtained by killing any boss and can't be purchased in shop."
+"DOTA_Tooltip_Ability_item_boss_soul_dummy_Description"					"Can be obtained by killing any boss or can be purchased in shop."
 "DOTA_Tooltip_Ability_item_boss_soul_lore"								"Soul of mighty creature can be used for creating great artifacts."

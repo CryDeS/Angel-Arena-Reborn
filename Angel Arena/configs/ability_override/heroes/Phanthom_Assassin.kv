@@ -265,7 +265,7 @@
 	"AbilityCastRange"				"550 600 650 700 750 800 900"
 
 	"AbilityCooldown"				"20"
-	"AbilityManaCost"				"90"
+	"AbilityManaCost"				"150" // 90
 
 	"AbilitySpecial"
 	{
@@ -334,6 +334,30 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"crit_bonus"				"200 250 275 300 350 450 500"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_phantom_assassin_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6847"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"4" // 7
+				"ad_linked_abilities"			"phantom_assassin_coup_de_grace"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
