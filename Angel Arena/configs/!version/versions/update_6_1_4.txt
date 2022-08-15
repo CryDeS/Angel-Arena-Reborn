@@ -1,0 +1,527 @@
+Hero changes:
+ Abaddon:
+  - 4 skill cooldown changed from 50 to 65
+  - 4 skill scepter range changed from 1600 to 1000
+  - 4 skill threshold scepter changed from 700 to 1000
+
+ Axe:
+  - 4 skill damage changed from 250/350/450 to 250/350/450/550/650/850/1000
+
+ Bounty Hunter:
+  - 4 skill bonus gold self changed from 350/450/525/775/950/1200/1850 to 200/250/400/500/600/700/800
+  - 4 skill bonus gold changed from 275/350/450/590/850/980/1400 to 150/200/250/300/350/400/600
+
+ Chaos Knight:
+  - 1 skill cooldown changed from 10 to 12
+  - 2 skill cooldown changed from 8 to 10
+  - 2 skill lifesteal changed from 25/30/35/40/45/50/55 to 30
+  - 4 skill cooldown changed from 60 to 100/90/85/80/75/70/50
+  - 4 skill damage illusion percent changed from 80 to 80/83/86/89/92/95/100
+
+ Crystal Maiden:
+  - 1 skill damage changed from 165/230/300/370/440/520/620 to 120/200/280/360/440/520/600
+  - 1 skill cooldown changed from 9 to 10
+  - 1 skill radius changed from 325 to 300
+
+ Dark Willow:
+  - 1 skill root duration changed from 2.0/2.2/2.4/2.6/2.8/3.0/3.2 to 2
+  - 2 skill cooldown changed from 16 to 18
+  - 2 skill duration changed from 5 to 4
+  - 2 skill max damage duration changed from 4 to 3
+  - 2 skill damage changed from 200/250/320/390/460/530/600 to 150/180/210/240/270/300/330
+
+ Disruptor:
+  - 1 skill damage changed from 50/75/100/110/120/130/140 to 70/100/150/180/240/260/300
+  - 3 skill cooldown changed from 17 to 20
+  - 3 skill duration changed from 2.6/3.2/3.8/4.4/4.6/4.8/5.0 to 1.5/1.8/2.1/3/3.5/3.8/4.2
+  - 3 skill fromation time changed from 1.2/1.2/1.2/1.2/1.1/1.0/0.9 to 0.9
+  - 4 skill cooldown changed from 60 to 90
+  - 4 skill number of pulses changed from 20 to 30
+
+ Drow Ranger:
+  - 4 skill chance changed from 15 to 10
+  - 4 skill agility multiplier changed from 25/29/33/37/41/45/50 to 22/25/28/31/34/37/40
+  - 4 skill aghanim split count changed from 2 to 3
+  - 25 right talant chance changed from 12 to 5
+
+ Earthshaker:
+  - 2 skill damage_percentage changed from 300/350/400/450/500/550/600 to 250/300/350/400/450/500/550
+
+ Enigma:
+  - 4 skill cooldown changed from 80 to 110
+
+ Faceless Void:
+  - 1 skill cooldown changed from 12/11/10/9/8/7/6 to 12/11/10/9/8/8/8
+  - 4 skill cooldown changed from 75 to 110
+  - 4 skill radius changed from 475 to 390/400/410/420/430/440/450
+
+ Fireblade:
+  - 1 skill damage changed from 100/150/240/350/420/480/520 to 100/160/220/280/340/400/460
+  - 2 skill cooldown changed from 8 to 10
+  - 3 skill cooldown silence chenged from 6 to 10
+  - 4 skill damage changed from 300/450/550/750/850/950/1050 to 250/350/450/550/650/750/850
+  - 4 skill cooldown changed from 15 to 30/27/24/22/20/18/18
+
+ Grimstroke:
+  - 1 skill cooldown changed from 5 to 7
+  - 1 skill cast point changed from  0.8 to 0.8/0.7/0.6/0.5/0.4/0.4/0.4
+
+ Hola:
+  - Int per level changed from 8 to 4.5
+  - Base hp regen changed from 250 to 80
+
+ Huskar:
+  - Base bat changed from 1.6 to 1.7
+  - 1 skill cooldown changed from 18/17/16/15/14/13/12 to 20/19/18/17/16/15/14
+  - 1 skill damage changed from 100/155/210/265/350/500/650 to 100/150/200/250/300/350/400
+  - 1 skill disarm duration changed from 1.6/1.9/2.2/2.5/2.8/3.4/4.0 to 1.2/1.6/2.0/2.4/2.8/3.2/3.6
+  - 3 skill max attack speed changed from 196/224/252/280/340/380/420 to 160/200/240/280/320/360/400
+  - 3 skill max health changed from 40/60/90/110/130/150/170 to 30/50/70/90/110/130/150
+
+ Juggernaut:
+  - Base hp regen changed from 20 to 6
+
+ Invoker:
+  - EMP cooldown changed from 21 to 18
+  - EMP mana burned changed from 125/250/325/345/420/530/760/900 to 200/300/400/600/800/1000/1200
+
+ Legion Commander:
+  - 2 skill hp regen changed from 50/70/90/120/160/180/200 to 15/30/50/80/110/150/170
+
+ Lich:
+  - Strength per level changed from 4 to 2.7
+  - Int per level changed from 5 to 4
+  - Agility per level changed from 4 to 3
+
+ Lifestealer:
+  - 1 skill cooldown changed from 19 to 20
+  - 2 skill hp lifesteal percent changed from 1.5/1.8/2.1/2.4/2.7/3.0/3.3 to 1.0/1.3/1.6/2.0/2.4/2.7/3
+  - 2 skill hp damage percent changed from 1.1/1.3/1.5/1.7/1.9/2.1/2.3 to 0.7/1.0/1.2/1.4/1.6/1.8/2.0
+  - 4 skill cooldown changed from 30 to 50
+  - Open Wounds Cooldown changed from 13 to 20
+  - Open Wounds heal percent changed from 50 to 30
+
+ Lone Druid:
+  - 2 skill bonus attack speed changed from 35/50/66/82/98/114/130 to 20/30/40/50/60/70/80
+  - 2 skill lifesteal percent changed from 25/30/35/40/45/50/60 to 20 22/24/26/28/30/32
+  - 2 skill armor sharing changed from 8/10/12/14/16/18/20 to 10
+  - 3 skill shard duration changed from 5 to 4
+  - Spirit Bear Entangling Claws hero duration changed from 2 to 1.5
+
+ Luna:
+  - 3 skill bonus damage changed from 20/35/50/65/80/95/110 to 20/30/40/50/60/70/80
+  - 3 skill bonus night vision changed from 250/375/500/750/875/1000/1150 to 250/375/500/750/875/950/1000
+
+ Medusa:
+  - 1 skill damage reduction changed from -25/-20/-15/-10/-5/0/5 to -35/-30/-25/-23/-20/-16/-12
+  - 4 skill cooldown changed from 70 to 110/105/100/95/90/85/80
+  - 4 skill duration changed from 6 to 5.0/5.2/5.4/5.6/5.8/6/6.2
+  - 4 skill stone duration changed from 3 to 2.0/2.2/2.4/2.6/2.8/3.0/3.2
+  - 4 skill face duration changed from 2 to 3.0/2.8/2.6/2.4/2.2/2.0/1.8
+  - 4 skill bonus physical damage changed from 16/20/24/28/32/36/40 to 15/20/25/30/35/40/45
+
+ Marci:
+  - 3 skill lifesteal changed from 35/40/45/50/55/60/65 to 35
+  - 3 skill cooldown changed from 36/32/28/24/20/16/12 to 18/17/16/15/14/13/12
+  - 3 skill bonus damage changed from 20/35/50/65/90/135/200 to 20/35/50/65/90/135/150
+
+ Morphling:
+  - Base attack rate changed from 1.7 to 1.6
+  - Ultimate cooldown changed from 90/85/80/75/70/65/60 to 60
+
+ Naga Siren:
+  - 2 skill scepter cooldown changed from 6 to 10
+  - 4 skill shard hp regen changed from 16 to 10
+
+ Necrophos:
+  - 1 skill cooldown changed from 6.0/5.9/5.7/5.5/5.4/5.2/5.0 to 7.25/7.0/6.75/6.5/6.25/6.0/5.75/5.5
+  - 1 skill damage changed from 135/215/285/325/385/435/520 to 100/170/240/310/380/450/520
+  - 1 skill manacost changed from 85/95/105/125/145/165/185 to 70/90/110/130/150/170/190
+  - 1 skill heal changed from 100/170/240/310/380/450/520 to 80/140/200/260/320/380/440
+  - 3 skill aura damage percent changed from 2.0/2.3/2.7/3.0/3.3/3.7/4.0 to 2.0/2.2/2.4/2.6/2.8/3.0/3.2
+  - 4 skill cooldown changed from 50 to 80
+
+ Night Stalker:
+  - Night hanter removed
+  - Base bat changed from 1.7 to 1.6
+  - Base armor changed from -3 to 2
+  - 3 skill bonus attack speed changed from 45/60/75/90/120/140/160 to 40/60/80/100/120/140/160
+  - 3 skill shard radius changed from 125 to 400
+  - 4 skill cooldown changed from 50 to 75/70/65/60/55/50/50
+  - 4 skill bonus damage changed from 60/100/140/200/250/300/350 to 70/140/210/250/300/350/400
+
+ Nyx Assassin:
+  - 2 skill damage int changed from 4 to 3.5
+  - 4 skill damage changed from 100/175/225/300/325/400/450 to 300/400/500/600/700/800/900
+
+ Outworld Devouver:
+  - 2 skill cooldown changed from 12 to 15
+  - 2 skill scepter damage bonus changed from 140 to 250
+
+ Oracle:
+  - 2 skill cooldown changed from 17/14/11/8 to 10
+  - 3 skill cast point changed from 0.15 to 0.3
+  - 3 skill manacost changed from 70/85/100/115/130/145/160 to 50/60/70/80/90/100/110
+  - 4 skill cooldown changed from 70 to 80
+  - 4 skill duration changed from 4.5/4.7/5.0/5.5/6.0/6.5/7.0 to 5
+  - 4 skill cast range changed from 1000 to 1200
+
+ Omniknight:
+  - 3 skill bonus damage changed from 40/50/60/70/80/90/100 to 60/70/80/90/100/110/120
+  - 4 skill duration scepter changed from 7.5 to 6.5/6.75/7.0/7.25/7.5/7.75/8
+  - 25 left talant damage percent changed from 50 to 75
+
+ Pangolier:
+  - Base strength changed from 17 to 23
+  - 1 skill cooldown changed from 10 to 17
+  - 1 skill strikes changed from   6 to 5
+  - 2 skill damage reduction per hero changed from 20 to 15
+  - 3 skill chance changed from 17 to 10
+  - 3 skill duration changed from 2.0 2.5 3.0 3.5 4.0 4.5 5.0 to 1.5 1.7 2 2.3 2.6 2.9 3.3
+
+ Phanthom Assassin:
+  - death mark manacost changed from 90 to 150
+  - 25 right talant chance changed from 7 to 4
+
+ Primal Beast:
+  - 4 skill damage changed from 150/225/300/375/450/525/600 to 200/300/400/500/600/700/800
+
+ Riki:
+  - 1 skill cooldown changed from 13 to 19/18/17/16/15/14/13
+  - 1 skill radius changed from 275/295/300/310/315/320/325 to 280/290/300/310/320/330/340
+  - 1 skill miss rate changed from 70 to 35/40/45/50/55/60/80
+  - 3 skill cooldown changed from 18/17/16/15/14/13/12 to 18
+
+ Shadow Demon:
+  - 1 skill cooldown changed from 12 to 16
+  - 1 skill illusion duration changed from 6/7/8/9/10/11/12 to 6/7/8/9/10/10/10
+
+ Shadow Shaman:
+  - 1 skill damage changed from 90/120/150/180/220/260/290 to 150/250/350/400/450/500/550
+
+ Slark:
+  - 1 skill cooldown changed from 10/9/8/7/7/7/7 to 14/13/12/11/10/9/8
+  - 1 skill damage changed from 100/140/225/325/400/445/475 to 120/200/280/360/440/520/600
+  - 1 skill self damage changed from 30 to 20
+  - 2 skill cooldown changed from 11.5/11.0/10.5/10.0/9.5/9.0/to 14/13/12/11/10/9/8
+  - 2 skill damage changed from 40/50/60/70/80/90/100 to 40/60/80/100/120/140/160
+  - 2 skill distance changed from 900 to 720/750/780/810/840/870/900
+  - 2 skill duration changed from 2.5/2.7/2.9/3.1/3.3/3.5/3.7 to 2.2/2.4/2.6/2.8/3.0/3.2/3.4
+  - 2 skill aghanim charge restore time changed from 9 to 8
+  - 4 skill cooldown changed from 50 to 80/75/70/65/60/55/50
+
+ Spectre:
+  - 1 skill cast range changed from 2000 to 1300 1400 1500 1600 1700 1800 1900
+  - 1 skill manacost changed from 45 50 55 60 65 70 75 to 100
+  - Shard dagger damage changed from 300 to 700
+  - Shard dagger cooldown changed from 7 to 12
+  - 4 skill cooldown changed from 100 to 120
+
+ Storm Spirit:
+  - Ultimate manacost per distance changed from 1.47 to 1.3
+
+ Sven:
+  - 4 skill strength damage changed from 70/100/125/145/165/185/200 to 100/120/140/160/180/200/220
+
+ Treant:
+  - 4 skill cooldown changed from 60 to 80
+
+ Ursa:
+  - 1 skill cooldown changed from 12/11/10/9/8/7/6 to 12/11/10/9/8/8/8
+
+ Viper:
+  - 1 skill manacost changed from 30 to 15
+  - 2 skill radius changed from 300 to 300/320/340/360/380/390/400
+
+ Winter Wyvern:
+  - 1 skill damage percent changed from 7 to 3/4/5/6/7/7/7
+  - 1 skill aghanim mana cost changed from 50 to 50/60/80/100/150/200/300
+  - 4 skill cooldown changed from 50 to 70
+  - 4 skill cast range changed from 600 to 700/720/740/760/780/800/820
+  - 4 skill damage reduction changed from 70 to 100
+
+ Zeus:
+  - 3 skill cooldown changed from 25/20/15/10/10/10/10 to 17
+  - 3 skill slow duration changed from 1.6/1.9/2.2/2.5 to 2
+  - 3 skill move slow changed from 100 to 50/55/60/70/80/90/100
+  - 3 skill aspd slow changed from 100 to 50/55/60/70/80/90/100
+  
+ Neutral creeps:
+ Forest bear:
+  - 1 skill bonus attack speed changed from 100 to 50
+
+ Forest ogre:
+  - 3 skill bash chance changed from 25 to 5
+
+ Satyr head:
+  - 3 skill bash chance changed from 35 to 5
+
+ Mother wolf:
+  - 3 skill bonus damage changed from 60 to 35
+  
+Item changes:
+ Angels Greaves:
+  - Recipe cost changed from 1000 to 3000
+  - Bonus armor changed from 15 to 10
+
+ Armlet 2:
+  - Craft changed from armlet+armlet+recipe to armlet+armlet
+  - Bonus attack speed changed from 35 to 50
+  - Bonus armor changed from 15 to 12
+  - Bonus hp regen changed from 30 to 20
+  - Unholy bonus damage changed from 40 to 60
+  - Unholy bonus attack speed changed from 0 to 20
+  - Unholy bonus strength changed from 40 to 50
+  - unholy bonus armor changed from 5 to 8
+
+ Armlet 3:
+  - Bonus attack speed changed from 55 to 75
+  - Bonus armor changed from 35 to 18
+  - Bonus hp regen changed from 62 to 30
+  - Unholy bonus damage changed from 60 to 90
+  - Unholy bonus attack speed changed from 0 to 30
+  - unholy bonus armor changed from 5 to 12
+
+ Amber knife:
+  - Recipe cost changed from 200 to 1200
+  - Bonus hp changed from 250 to 350
+  - Invis duration changed from 7.5 to 10
+
+ Azrael crossbow:
+  - Recipe cost changed from 5000 to 5500
+  - Cooldown changed from 16 to 18
+  - Attack to dmg changed from 300 to 250
+
+ Boss soul:
+  - Ñan now be bought in the shop
+  - Delay before the start of the game 780sec
+  - Max stack 1
+  - Cooldown stack 300sec
+
+ Black King Bar:
+  - Cooldown changed from 70/65/60 to 60
+  - Duration changed from 9/8/7 to 8
+
+ Bottle:
+  - Cost changed from 675 to 500
+  - Heal restore changed from 200 to 250
+  - Mana restore changed from 125 to 175
+  - Restore time changed from 2.5 to 2
+
+ Burning butterfly:
+  - Cost changed from 1000 to 5000
+  - Bonus agility changed from 100 to 120
+
+ Blessed essence:
+  - Bonus stats changed from 10 to 12
+
+ Cursed orb:
+  - Cost changed from 900 to 700
+
+ Damned Eye:
+  - Recipe cost changed from 500 to 300
+  - Bonus all stats changed from 10 to 6
+
+ Devils helm:
+  - Bonus status resist changed from 15 to 10
+  - Disarmor changed from 10 to 12
+
+ Dark edge:
+  - Recipe cost changed from 800 to 2800
+  - Bonus damage changed from 120 to 100
+  - Bonus attack speed changed from 60 to 50
+  - Bonus stats changed from 55 to 50
+  - Bonus hp changed from 1000 to 900
+  - Bonus lifesteal changed from 25 to 30
+
+ Devour Helm:
+  - Cooldown changed from 10 to 15
+  - Cast range changed from 300 to 200
+  - Manacost changed from 100 to 250
+
+ Damned swords:
+  - Recipe cost changed from 1600 to 1200
+  - Bonus damage changed from 50 to 60
+  - Bonus aspd changed from 40 to 50
+  - Bonus agility changed from 35 to 45
+  - Maim damage changed from 100 to 70
+  - Maim decrease as changed from 75 to 60
+
+ Doombolt:
+  - Recipe cost changed from 1250 to 1500
+  - Cooldown changed from 18 to 22
+
+ Dimensional accelerator:
+  - Recipe cost changed from 1600 to 1850
+  - Bonus attack range changed from 125 to 150
+
+ Heavens halberd:
+  - Bonus strength changed from 20 to 25
+  - Hp regen amplify changed from 30 to 20
+
+ Heavens halberd 2:
+  - Bonus strength changed from 60 to 50
+  - Status resist changed from 25 to 30
+  - Hp regen amplify changed from 50 to 40
+
+ Heavy crossbow:
+  - Recipe cost changed from 2350 to 2850
+  - Cooldown changed from 18 to 20
+  - Attack to dmg changed from 225 to 200
+
+ Health gel:
+  - Bonus hp changed from 250 to 350
+
+ Material projector:
+  - Recipe cost changed from 2800 to 1500
+
+ Mozaius blade:
+  - Recipe cost changed from 1000 to 2300
+  - Bonus damage changed from 60 to 70
+  - Bonus stats changed from 20 to 25
+
+ Mystical sword:
+  - Recipe cost changed from 1000 to 1200
+  - Bonus damage changed from 30 to 35
+  - Bonus aspd changed from 20 to 30
+  - Maim decrease as changed from 50 to 40
+
+ Life catcher:
+  - Recipe cost changed from 225 to 150
+  - Damage to exp ranged changed from 10 to 15
+  - Damage to exp melee changed from 15 to 18
+
+ Lotus Orb:
+  - Cooldown changed from 15 to 20
+
+ Phase boots 2:
+  - Recipe cost changed from 1000 to 1500
+
+ Phase boots 3:
+  - Recipe cost changed from 2000 to 1500
+
+ Pipe:
+  - Cooldown changed from 30 to 25
+  - Barrier block changed from 400 to 500
+  - Duration changed from 12 to 14
+
+ Radiance 2:
+  - Recipe cost changed from 2500 to 4000
+
+ Radiance 3:
+  - Recipe cost changed from 3500 to 5000
+
+ Revenants brooch:
+  - Craft changed from witch blade + mystic staff + recipe to witch blade + mystic staff + boss soul + recipe
+  - Recipe cost changed from 800 to 3500
+  - Cooldown changed from 35 to 25
+  - Bonus intellect changed from 45 to 60
+  - Bonus attack speed changed from 40 to 60
+  - Bonus armor changed from 8 to 10
+  - Movement slow changed from 25 to 30
+  - Number of attacks changed from 5 to 20
+  - Active duration changed from 15 to 5
+
+ Reverse:
+  - Recipe cost changed from 1200 to 3000
+  - Craft changed from phase boots_3 + boss soul + angels sword + recipe to phase boots_3 + recipe
+
+ Satanic:
+  - Lifesteal percent changed from 25 to 30
+  - Duration changed from 4.5 to 6
+
+ Shiva's Guard 1/2:
+  - Aura radius changed from 1200/1200 to 1200/1400
+  - Bonus armor changed from 15/25 to 15/30
+  - Aura attack speed changed from -75/-75 to -75/-90
+  - Blast damage changed from 300/600 to 300/650
+  - Blast movespeed slow changed from -40/-40 to -30/-50
+  - Hp regen aura changed from 25/35 to 20/40
+
+ Slice amulet / Statick amulet:
+  - Bonus armor changed from 10/20 to 8/16
+  - Bonus itn changed from 25/84 to 25/64
+  - Spell amplify changed from 10/15 to 12/18
+
+ Snake boots:
+  - Recipe cost changed from 1000 to 2000
+  - Cooldown changed from 60 to 45
+  - Bonus speed changed from 100 to 130
+  - Bonus armor changed from 2 to 1
+  - Bonus stats changed from 20 to 5
+
+ Soul Stone:
+  - Recipe cost changed from 1400 to 1000
+  - Bonus hp changed from 200 to 350
+
+ Sealed rune:
+  - Recipe cost changed from 1400 to 1600
+
+ Linkin sphere 1/2:
+  - Bonus all stats changed from 15/45 to 20/40
+  - Bonus hp regen changed from 6/25 to 10/20
+
+ Talisman of ambition:
+  - Bonus agility changed from 18 to 10
+
+ Talisman of Mastery:
+  - Bonus attack changed from 2 to 1
+  - Bonus strength changed from 2 to 1
+  - Damage to exp ranged changed from 12 to 15
+  - Damage to exp melee changed from 15 to 18
+  - Cost changed from 375 to 300
+
+ Nullifier 2:
+  - Added to game
+
+Neutral items:
+ Bullwhip:
+  - Bonus hp regen changed from 15 to 10
+  - Bonus mana regen changed from 15 to 10
+
+ Pig pole:
+  - Cooldown changed from 25 to 10
+
+ Ocean Heart:
+  - Bonus water hp regen changed from 40 to 20
+
+ Clumsy Net:
+  - Cooldown changed from 12 to 18
+  - Bonus all stats changed from 22 to 16
+
+ Imp claw:
+  - Bonus damage changed from 50 to 30
+  - Cooldown changed from 3 to 5
+
+ Nether shawl:
+  - Bonus armor changed from -4 to -6
+
+ Pupils gift:
+  - Bonus secondary stats changed from 30 to 25
+
+ Blast rig:
+  Bonus armor changed from 7 to 12
+
+ Phychic headband:
+  - Push length changed from 600 to 800
+
+ Stormcrafter:
+  - Intervel damage changed from 3 to 2
+  - Cyclone duration changed from 0.75 to 1
+  - Bonus mana regen changed from 4 to 10
+
+ Witchbane:
+  - radius changed from 300 to 500
+  - Damage percent changed from 4 to 5
+  - Attack speed changed from 20 to 50
+  - Cooldown changed from 20 to 15
+
+ Ex Machina:
+  - Cooldown changed from 30 to 50
+  
+Fixes:
+ - Invoker tornado
+ - Lich 2 skill
+ - Pudge 1 skill
+ - Holy locket
+ - Zeuz 1 skill
