@@ -1,28 +1,3 @@
-"item_recipe_boss_soul"
-{
-	"AbilityTextureName" 				"item_recipe_boss_soul"
-	
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"ID"							"1538"						
-	"Model"							"models/props_gameplay/recipe.vmdl"
-	"BaseClass"                     "item_recipe_arcane_boots"
-	
-	// Item Info
-	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"0"	
-	"ItemShopTags"					""
-	
-	// Recipe
-	//-------------------------------------------------------------------------------------------------------------
-	"ItemRecipe"					"1"
-	"ItemResult"					"item_boss_soul"
-	"ItemRequirements"
-	{
-		"01"						"item_boss_soul_dummy"
-	}
-}
-
 "item_boss_soul"
 {       
 	// General
@@ -34,7 +9,7 @@
 	"ScriptFile"					"items/boss_soul/boss_soul"
 	"Model"							"models/props_items/bloodstone.vmdl"
 	
-	"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE" 
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
@@ -45,6 +20,11 @@
 	"ItemSellable"                  "0"
 	"ItemDroppable"                 "1"
 	"ItemPurchasable"				"1"
+	"ItemInitialStockTime"			"780" 
+
+	"ItemStockMax"					"1" 
+	"ItemStockInitial"				"0" 
+	"ItemStockTime"					"300" 
 
 	"ItemQuality"					"common"
 
@@ -53,29 +33,3 @@
 	}
 }
 
-"item_boss_soul_dummy"
-{       
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-    "BaseClass"						"item_lua"
-	"ID"							"1537"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	"AbilityTextureName"			"boss_soul_tooltip"
-	"ScriptFile"					"items/boss_soul/boss_soul"
-
-	// Item Info
-	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"10000"
-	"ItemStackable"					"0"
-	
-	"ItemKillable"                  "0"
-	"ItemSellable"                  "0"
-	"ItemDroppable"                 "1"
-	"ItemPurchasable"				"0"
-
-	"ItemQuality"					"common"
-
-	"AbilitySpecial"
-	{
-	}
-}

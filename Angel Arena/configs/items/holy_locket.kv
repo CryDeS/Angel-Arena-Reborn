@@ -1,77 +1,84 @@
-"item_holy_locket"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"ID"							"269"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
-
-	// Stats
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"500"
-	"AbilityCastPoint"				"0.0"	
-
-	// Item Info
-	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"2500"
-	"ItemQuality"					"rare"
-	"ActiveDescriptionLine"			"2"
-	"ShouldBeInitiallySuggested"	"1"
-
-	// Stats	
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"13.0"
-	"AbilitySharedCooldown"			"magicwand"
-
-	// Special	
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+//=================================================================================================================
+	// Recipe: Holy Locket
+	//=================================================================================================================
+	"item_recipe_holy_locket"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"268"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"475"	
+		"ItemShopTags"					""
+		
+		// Sound
+		//-------------------------------------------------------------------------------------------------------------			
+		"UIPickupSound"					"Item.PickUpRingShop"
+		"UIDropSound"					"Item.DropRingShop"
+		"WorldDropSound"				"Item.DropRingWorld"
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_holy_locket"
+		"ItemRequirements"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_health"			"250"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_mana"			"325"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"aura_health_regen"		"10"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"aura_radius"			"1200"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"heal_increase"			"35"
-		}
-		"06"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"max_charges"			"20"
-		}
-		"07"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"charge_radius"			"1200"
-		}
-		"08"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_all_stats"		"25"
-		}
-		"09"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"restore_per_charge"	"30"
+			"01"						"item_headdress;item_fluffy_hat;item_energy_booster;item_magic_wand"
 		}
 	}
-}
+	
+	//=================================================================================================================
+	// Holy Locket
+	//=================================================================================================================
+	"item_holy_locket"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"269"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"500"
+		"AbilityCastPoint"				"0.0"	
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2500"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"hl;holy locket"
+		"ActiveDescriptionLine"			"2"
+		"ShouldBeInitiallySuggested"	"1"
+
+		// Stats	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"13.0"
+		"AbilitySharedCooldown"			"magicwand"
+		"ActiveDescriptionLine"			"1"
+
+		
+		// Sound
+		//-------------------------------------------------------------------------------------------------------------			
+		"UIPickupSound"					"Item.PickUpRingShop"
+		"UIDropSound"					"Item.DropRingShop"
+		"WorldDropSound"				"Item.DropRingWorld"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"bonus_health"			"250"
+				"bonus_mana"			"325"
+				"aura_health_regen"	"10"
+				"aura_radius"	"1200"
+				"heal_increase"		"35"
+				"max_charges"			"20"
+				"charge_radius"			"1200"
+				"bonus_all_stats"		"25"
+				"restore_per_charge"	"30"
+				"charge_gain_timer"		"10"
+		}
+	}
