@@ -6,16 +6,10 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5218"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"AbilitySound"					"hero_viper.poisonAttack.Cast"
+		
 		"MaxLevel"						"7"
 
-        "HasShardUpgrade"               "1"
+
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -39,8 +33,16 @@
 		"AbilityValues"
 		{
 				"duration"						"2"
-				"damage"						"10 15 20 25 30 35 40"
-				"movement_speed"			"3 4 5 6 7 8 9"
+				"damage"						
+				{
+					"value"					"10 15 20 25 30 35 40"
+					"special_bonus_unique_viper_7"	"+25%"
+				}
+				"movement_speed"			
+				{
+					"value"					"3 4 5 6 7 8 9"
+					"special_bonus_unique_viper_7"	"+25%"
+				}
 				"magic_resistance"			
 				{
 					"value"			"2 3 4 5 6 7 8"
@@ -75,9 +77,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5219"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	
 		"MaxLevel"						"7"
 
 		// Casting
@@ -143,11 +143,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5220"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"AbilitySound"					"hero_viper.CorrosiveSkin"
+	
 		"MaxLevel"							"7"
 
 		// Stats
@@ -156,38 +152,32 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"duration"					"4.0"
+			"bonus_attack_speed"		"10 15 20 25 45 60 70"
+			"bonus_magic_resistance"	
 			{
-				"var_type"					"FIELD_FLOAT"
-				"duration"					"4.0"
+				"value"								"10 12 15 18 20 23 26"
+				"special_bonus_unique_viper_6"		"+12"
 			}
-			"02"
+			"damage"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"bonus_attack_speed"		"10 15 20 25 45 60 70"
-				"LinkedSpecialBonus"	"special_bonus_unique_viper_6"
-				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
+				"value"					"10 20 30 40 50 60 70"
+				"special_bonus_unique_viper_1"	"+13"
 			}
-			"03"
+			"max_range_tooltip"					"1400"
+			"effect_multiplier_distance"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"bonus_magic_resistance"	"10 12 15 18 20 23 26"
-				"LinkedSpecialBonus"	"special_bonus_unique_viper_6"
-				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
+				"value"						"500"
+				"RequiresScepter"		"1"
 			}
-			"04"
+			"effect_multiplier"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"damage"					"10 20 30 40 50 60 70"
-				"LinkedSpecialBonus"	"special_bonus_unique_viper_1"
+				"value"						"2"
+				"RequiresScepter"		"1"
 			}
-			"05"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"max_range_tooltip"					"1400"
-			}
+
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
@@ -200,91 +190,45 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5221"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"FightRecapLevel"				"2"
-		"AbilitySound"					"hero_viper.viperStrike"
+	
 		"MaxLevel"						"7"
 
 		"HasScepterUpgrade"			"1"
 
-		// Casting
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"500"
-		"AbilityCastPoint"				"0.3"
-		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
-		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"35"
+		
 	
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"125 175 250 380 450 550 750"
+		
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"duration"				"5"
+
+			"damage"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"duration"				"5"
+				"value"				"60 140 185 280 320 450 540"
+				"special_bonus_unique_viper_2"	"+80"
 			}
-			"02"
+			"bonus_movement_speed"	"-65"
+			"bonus_attack_speed"	"-45 -65 -85 -105 -125 -150 -175"
+			"AbilityCooldown"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"damage"				"60 140 185 280 320 450 540"
-				"LinkedSpecialBonus"	"special_bonus_unique_viper_2"
+				"value"				"35"
+				"special_bonus_unique_viper_8"		"-50%"
 			}
-			"03"
+			"AbilityManaCost"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_movement_speed"	"-65"
+				"value"				"125 175 250 380 450 550 750"
+				"special_bonus_unique_viper_8"		"-50%"
 			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"-45 -65 -85 -105 -125 -150 -175"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"mana_cost_scepter"		"250"
-				"RequiresScepter"		"1"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"cooldown_scepter"		"12"
-				"RequiresScepter"		"1"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"cast_range_scepter"	"900"
-				"RequiresScepter"		"1"
-			}
-			"08"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"projectile_speed"	"1200"
-			}	
-			"09"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"max_charges"			"2"
-			}
-			"10"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"charge_restore_time"	"30.0"
-			}
+			"projectile_speed"	"1200"
+			"max_charges"			"2"
+			"charge_restore_time"	"30.0"
+
 		}
 	}

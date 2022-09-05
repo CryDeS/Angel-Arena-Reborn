@@ -3,13 +3,6 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5585"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES_ENEMIES_NO"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Abaddon.DeathCoil.Cast"
 		"MaxLevel"						"7"
 
 
@@ -63,15 +56,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5586"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"	
-		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Abaddon.AphoticShield.Cast"
+	
 		"MaxLevel"						"7"
 
 		// Casting
@@ -112,11 +97,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5587"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		
-        "HasShardUpgrade"               "1"
+	
         "MaxLevel"						"7"
 	
 		// Special
@@ -135,7 +116,11 @@
 				"special_bonus_unique_abaddon_3" "-1"
 			}
 			"curse_duration"			"2.5"
-			"curse_slow"				"25 26 28 30 31 33 35"
+			"curse_slow"				
+			{
+				"value"									"15 30 45 60"
+				"special_bonus_unique_abaddon_6"		"+15"
+			}
 			"curse_attack_speed"		"40 60 80 100 120 140 200"
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -149,13 +134,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5588"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"FightRecapLevel"				"2"
-		"AbilitySound"					"Hero_Abaddon.BorrowedTime"
-		"HasShardUpgrade"				"0"
-		"HasScepterUpgrade"				"1"
+		
 		"MaxLevel"						"7"
 
 		// Casting
@@ -192,7 +171,7 @@
 				"value"								"1000" // 700
 				"RequiresScepter"					"1"
 			}
-			redirect_range_scepter
+			"redirect_range_scepter"
 			{
 				"value"								"1000" // 1600
 				"RequiresScepter"					"1"

@@ -265,39 +265,40 @@
 	}
 }
 
-"special_bonus_unique_shadow_demon_3"
-{
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Shadow Demon: Disseminate
+	//=================================================================================================================
+	"shadow_demon_disseminate"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1001"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"18"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.3"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 120 140 160 180 200 220"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"					"FIELD_FLOAT"
-			"value"						"0.75"
-			"ad_linked_ability"			"shadow_demon_shadow_poison"
+			"duration"						"6"
+			"damage_reflection_pct"	
+			{
+				"value"						"20 22 24 26 28 30 32"
+				"special_bonus_unique_shadow_demon_disseminate_damage"		"+10"
+			}
+			"radius"					"600"
 		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
-}
-//=================================================================================================================
-// Ability: Special Bonus
-//=================================================================================================================
-"special_bonus_unique_shadow_demon_9"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"value"						"10"
-			"ad_linked_ability"			"shadow_demon_demonic_purge"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		}
-	}
-}

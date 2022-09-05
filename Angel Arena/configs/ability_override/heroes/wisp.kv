@@ -6,12 +6,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5485"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CUSTOM"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"LinkedAbility"					"wisp_tether_break"
+		
 		 "MaxLevel"                      "7"
 
 
@@ -46,7 +41,11 @@
 				"latch_speed"				"1000"
 				"tether_heal_amp"			"0.65 0.8 0.9 1.0 1.1 1.3 1.5"
 				"self_bonus"				"0"
-				"slow"				 "8 10 16 20 24 28 32"
+				"slow"				
+				{
+					"value"			"15 25 35 45"
+					"special_bonus_unique_wisp_11"			"+15"
+				}
 				"slow_duration"				"0.2"
 				"shard_bonus_spell_lifesteal"
 				{
@@ -64,13 +63,9 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5486"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"AbilitySound"					"Hero_Wisp.Spirits.Cast"
+		
 		"MaxLevel"                      "7"
-        "HasScepterUpgrade"			"1"
+    
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -168,9 +163,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5487"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-        "HasShardUpgrade"               "1"
+	
          "MaxLevel"                      "7"
 
 		// Casting
@@ -219,11 +212,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5488"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Wisp.Relocate"
+	
 		 "MaxLevel"                      "7"
 
 		// Casting
@@ -256,61 +245,4 @@
 		}
 	}
 
-	//=================================================================================================================
-	// Wisp: Tether
-	//=================================================================================================================
-	"wisp_tether_break"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"5489"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"LinkedAbility"					"wisp_tether"
-
-		// Casting
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0"
- 		"AbilityCastAnimation"			"ACT_INVALID"
-
-		// Time		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"1.0"
-	}
-
-	//=================================================================================================================
-	// Wisp: Spirits In
-	//=================================================================================================================
-	"wisp_spirits_in"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"5490"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-		"MaxLevel"						"4"
-
-		// Casting
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0"
- 		"AbilityCastAnimation"			"ACT_INVALID"
-
-		// Time		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"0"
-	}
-
-	//=================================================================================================================
-	// Wisp: Spirits Out
-	//=================================================================================================================
-	"wisp_spirits_out"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"5493"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-		"MaxLevel"						"4"
-
-		// Casting
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0"
- 		"AbilityCastAnimation"			"ACT_INVALID"
-	}
+	

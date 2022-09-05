@@ -6,13 +6,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5162"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Warlock.FatalBonds"
+		
 		"MaxLevel"						"7"
 
 		// Casting
@@ -75,15 +69,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5163"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Warlock.ShadowWordCastGood"
-        "HasShardUpgrade"               "1"
+		
         "MaxLevel"						"7"
 
 
@@ -93,7 +79,6 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"14"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -114,7 +99,7 @@
 				"damage"					
 				{
 					"value"				"37 47 65 82 102 115 140"
-					"LinkedSpecialBonus"		"special_bonus_unique_warlock_7"
+					"LinkedSpecialBonus"	"special_bonus_unique_warlock_7"
 				}
 				"duration"					
 				{
@@ -131,7 +116,12 @@
 				{
 					"value"					"10"
 					"RequiresShard"			"1"
-				}						
+				}	
+				"AbilityCooldown"					
+				{
+					"value"										"14"
+					"special_bonus_unique_warlock_3"			"-4"
+				}					
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}	
@@ -144,10 +134,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5164"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_AOE"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"AbilitySound"					"Hero_Warlock.Upheaval"
+		
 		"MaxLevel"						"7"
 
 		// Casting
@@ -165,41 +152,28 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"100 110 120 130 140 150 160"	
+		"AbilityManaCost"				"100 110 120 130 140 150 160"		
 		
 		// Cast Range
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"1200"
-		
+
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"aoe"					
 			{
-				"var_type"				"FIELD_INTEGER"
-				"aoe"					"650"
+				"value"				"650"
+				"special_bonus_unique_warlock_upheaval_aoe"			"+75"
 			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"slow_per_second"	"12 14 17 19 23 25 27"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"duration"				"3.0"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"max_slow"				"80"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"aspd_per_second"	"10"
-			}
+			"slow_per_second"		"12 14 17 19 23 25 27"
+			"duration"				"3.0"
+			"max_slow"				"80"
+			"aspd_per_second"		"10"
+			"damage_per_second"		"10"
+			"max_damage"			"30 50 70 90 110 130 150"
+			"damage_tick_interval"	"1"
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
@@ -212,14 +186,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5165"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
-		"FightRecapLevel"				"2"
-		"HasScepterUpgrade"			"1"
-		"AbilitySound"					"Hero_Warlock.RainOfChaos"
+		
 		"MaxLevel"						"7"
 
 		// Casting
@@ -324,11 +291,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5166"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"MaxLevel"						"3"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		
 		"MaxLevel"						"7"
 		
 		// Special
@@ -357,11 +320,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5167"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"MaxLevel"						"3"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	
 		"MaxLevel"						"7"
 		
 		// Special

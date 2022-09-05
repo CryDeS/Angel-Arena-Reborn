@@ -1,74 +1,55 @@
-"bristleback_viscous_nasal_goo"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"900"
-	"AbilityCastPoint"				"0.1"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"1.5"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"25"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+//=================================================================================================================
+	// Bristleback: Viscous Nasal Goo
+	//=================================================================================================================
+	"bristleback_viscous_nasal_goo"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5548"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+	
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.1"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"1.5"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"25"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"				"FIELD_INTEGER"
 			"goo_speed"				"1000"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_FLOAT"
 			"goo_duration"			"5.0"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_FLOAT"
 			"base_armor"			"2"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"armor_per_stack"		"1 1.4 1.8 2.2 2.4 2.6 3.0"
-			"LinkedSpecialBonus"	"special_bonus_unique_bristleback_4"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
+			"armor_per_stack"
+			{
+				"value"		"1 1.4 1.8 2.2 2.4 2.6 3.0"
+				"special_bonus_unique_bristleback_4"	"+0.75"
+			}
 			"base_move_slow"		"17"
-		}
-		"06"
-		{
-			"var_type"				"FIELD_INTEGER"
 			"move_slow_per_stack"	"3 4 5 6 7 8 9"
-		}
-		"07"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"stack_limit"			"4"
-			"LinkedSpecialBonus"	"special_bonus_unique_bristleback"
-		}
-		"08"
-		{
-			"var_type"				"FIELD_FLOAT"
+			"stack_limit"
+			{
+				"value"			"4"
+				"special_bonus_scepter"	"+3"
+			}
 			"goo_duration_creep"			"10.0"
+			"AbilityCastRange"
+			{
+				"value"				"650"
+				"special_bonus_unique_bristleback_5"				"+150"
+			}
 		}
-		"09"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"radius_scepter"				"900"
-			"RequiresScepter"	"1"
-		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
-}
 
 //=================================================================================================================
 // Bristleback: Quill Spray
@@ -138,43 +119,36 @@
 	}
 }
 
-//=================================================================================================================
-// Bristleback: Bristleback
-//=================================================================================================================
-"bristleback_bristleback"
-{
-	"MaxLevel"								"7"
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Bristleback: Bristleback
+	//=================================================================================================================
+	"bristleback_bristleback"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5550"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"								"7"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"						"FIELD_INTEGER"
-			"side_damage_reduction"			"18 22 24 27 29 31 35"
+			"side_damage_reduction"
+			{
+				"value"													"18 22 24 27 29 31 35"
+				"special_bonus_unique_bristleback_6"					"+4"
+			}
+			"back_damage_reduction"
+			{
+				"value"			"30 32 34 36 38 40 45"
+				"special_bonus_unique_bristleback_6"						"+8"
+			}
+			"side_angle"							"110"
+			"back_angle"							"70"
+			"quill_release_threshold"				"325"
 		}
-		"02"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"back_damage_reduction"			"30 32 34 36 38 40 45"
-		}
-		"03"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"side_angle"					"110"
-		}
-		"04"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"back_angle"					"70"
-		}
-		"05"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"quill_release_threshold"		"325"
-		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
-}
 
 //=================================================================================================================
 // Bristleback: Warpath
@@ -217,15 +191,7 @@
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
-	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-	"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
-	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-	"MaxLevel"						"1"
-	"FightRecapLevel"				"1"
-	"IsGrantedByShard"			    "1"
+	
 
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------

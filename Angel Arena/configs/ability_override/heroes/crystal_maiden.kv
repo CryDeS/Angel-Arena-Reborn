@@ -3,13 +3,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5126"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Crystal.CrystalNova"
+		
 		"MaxLevel"						"7"
 
 		// Special
@@ -50,15 +44,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5127"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"hero_Crystal.frostbite"
+	
 		"MaxLevel"						"7"
 
 		// Stats
@@ -69,7 +55,11 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"AbilityCastRange"				"600"
+			"AbilityCastRange"				
+			{
+				"value"								"600"
+				"special_bonus_unique_crystal_maiden_frostbite_castrange" 		"+125"
+			}
 			"AbilityCastPoint"				"0.3"
 			"AbilityCooldown"				"10"
 			"AbilityManaCost"				"115 125 140 150 170 190 210"
@@ -99,22 +89,19 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5128"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+	
 		"MaxLevel"					"7"
 		
 		"AbilityValues"
 		{
-			"AbilityCastPoint"				"0.2"
-			"mana_regen"					"3 5 8 11 14 17 20"
-			"self_factor"					"2.0"
-			"mana_per_cast"		
+			"base_mana_regen"					
 			{
-				"value"										"10 15 20 25 30 35 40"
-				"special_bonus_unique_crystal_maiden_4"		"+20"
+				"value"					"3 5 8 11 14 17 20"
+				"special_bonus_unique_crystal_maiden_4" 	"+5"
 			}
-			"radius"			"1200"
+			"self_factor"					"4"
+			"proximity_bonus_factor"		"2"
+			"proximity_bonus_radius"		"1200"
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
@@ -126,12 +113,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5129"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"FightRecapLevel"				"2"
-		"AbilitySound"					"hero_Crystal.freezingField.wind"
+	
 		"MaxLevel"					"7"
 
 		"HasScepterUpgrade"				"1"
@@ -196,23 +178,3 @@
 		}
 	}
 
-	//=================================================================================================================
-	// Crystal Maiden: Freezing Field Stop
-	//=================================================================================================================
-	"crystal_maiden_freezing_field_stop"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"8032"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		
-		// Casting
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
-		"AbilityCastAnimation"			"ACT_INVALID"
-
-		// Time		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"1"
-	}

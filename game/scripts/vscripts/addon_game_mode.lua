@@ -2,11 +2,11 @@
 -----------------------------------------
 Creator: CryDeS
 If somebody read this, KILL ME PLEASE
+And Dunkan please
 -----------------------------------------
 ]]
 
 require('lib/utils')
-
 require('tp_s')
 require('lib/teleport')
 require('lib/duel/duel_controller')

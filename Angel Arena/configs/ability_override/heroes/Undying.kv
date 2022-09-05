@@ -1,64 +1,75 @@
-"undying_decay"
-{
-	"MaxLevel"						"7"
-	"AbilityCastRange"				"625"
-	"AbilityCastPoint"				"0.45"
-	"FightRecapLevel"				"1"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"13 12 11 10 9 8 7"
-	"AbilityDuration"				"14.0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"70 80 90 100 110 120 130"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Undying: Decay
+	//=================================================================================================================
+	"undying_decay"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"5442"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_UNDYING_DECAY"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"650"
+		"AbilityCastPoint"				"0.45"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"13 12 11 10 9 8 7"
+		"AbilityDuration"				"14"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"70 80 90 100 110 120 130"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"						"FIELD_INTEGER"
-			"decay_damage"					"20 60 100 140 180 240 280"
-			"LinkedSpecialBonus"			"special_bonus_unique_undying_8"
-		}
-		"02"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"str_steal"						"4"
-		}	
-		"03"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"decay_duration"				"25.0"
-			"LinkedSpecialBonus"			"special_bonus_unique_undying_4"
-		}
-		"04"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"radius"						"300"
-		}			
-		"05"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"str_scale_up"					"2"
-		}		
-		"06"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"str_steal_scepter"				"8"
-			"RequiresScepter"	"1"
-		}		
-		"07"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"damage_pct"					"130"
-			"CalculateSpellDamageTooltip" "0"
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"decay_damage"					"20 60 100 140 180 240 280"
+				"LinkedSpecialBonus"			"special_bonus_unique_undying_8"
+
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"str_steal"						"4"
+			}	
+			"03"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"decay_duration"				"25"
+				"LinkedSpecialBonus"			"special_bonus_unique_undying_4"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"radius"						"300"
+			}			
+			"05"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"str_scale_up"					"2"
+			}		
+			"06"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"str_steal_scepter"				"8"
+				"RequiresScepter"	"1"
+			}		
+			"07"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"creep_damage_multiplier"		"2.0"
+			}			
 		}
 	}
-}
+
 
 //=================================================================================================================
 // Undying: Soul Rip
@@ -259,15 +270,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5447"							// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"FightRecapLevel"				"2"
-		"AbilitySound"					"Hero_Undying.FleshGolem"
-		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
-		"HasShardUpgrade"				"1"
+		
 		"MaxLevel"						"7"
 
 		// Time		

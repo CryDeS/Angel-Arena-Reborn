@@ -6,18 +6,10 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5637"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_CHANNEL"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Oracle.FortunesEnd.Target"
+		
 		"MaxLevel"						"7"
 
-		// Casting
+			// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"850"
 		"AbilityCastPoint"				"0"
@@ -32,60 +24,30 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"channel_time"
 			{
-				"var_type"					"FIELD_FLOAT"
-				"channel_time"					"2.5"
-				"LinkedSpecialBonus"	"special_bonus_unique_oracle_7"
-				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_SUBTRACT"
+				"value"								"2.5"
+				"special_bonus_unique_oracle_7"		"-2.5"
 			}
-			"02"
+			"damage"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"damage"					"120 150 220 280 360 420 520"
+				"value"					"120 150 220 280 360 420 520"
+				"special_bonus_unique_oracle_fortunes_end_damage"		"+80"
 			}
-			"03"
+			"bolt_speed"				"1200"
+			"minimum_purge_duration"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"bolt_speed"				"1200"
+				"value"								"0.5"
+				"special_bonus_unique_oracle_2"		"+0.5"
 			}
-			"04"
+			"maximum_purge_duration"
 			{
-				"var_type"					"FIELD_FLOAT"
-				"minimum_purge_duration"	"0.5"
-				"LinkedSpecialBonus"	"special_bonus_unique_oracle_2"
+				"value"								"2.5"
+				"special_bonus_unique_oracle_2"		"+0.5"
 			}
-			"05"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"maximum_purge_duration"	"2.5"
-				"LinkedSpecialBonus"	"special_bonus_unique_oracle_2"
-			}
-			"06"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"radius"					"300"
-			}
-			"07"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"scepter_bonus_range"					"500"
-				"RequiresScepter"	"1"
-			}
-			"08"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"scepter_bonus_radius"					"150"
-				"RequiresScepter"	"1"
-			}
-			"09"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"scepter_stun_percentage"	"50"
-				"RequiresScepter"	"1"
-			}
+			"radius"								"300"
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
@@ -98,13 +60,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5638"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"AbilitySound"					"Hero_Oracle.FatesEdict.Cast"
+		
 		"MaxLevel"						"7"
 
 
@@ -147,15 +103,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5639"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY | DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"	
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Oracle.PurifyingFlames.Damage"
+		
 		"MaxLevel"						"7"
 
 		// Casting
@@ -212,19 +160,8 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5640"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"AbilitySound"					"Hero_Oracle.FalsePromise.Cast"
+		
 		"MaxLevel"						"7"
-
-        "HasShardUpgrade"               "1"
-
-		"HasScepterUpgrade"				"1"
-		"AbilityDraftUltScepterAbility"		"oracle_rain_of_destiny"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -272,11 +209,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"932"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"IsGrantedByScepter"			"1"
-		"MaxLevel"						"1"
+	
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"0.2"

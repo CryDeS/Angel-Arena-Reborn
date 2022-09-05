@@ -6,15 +6,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5102"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
-		"FightRecapLevel"				"1"
-		"HasScepterUpgrade"			"1"
-		"AbilitySound"					"Ability.SandKing_BurrowStrike"
+
 		"MaxLevel"						"7"
 
 		// Casting
@@ -34,38 +26,24 @@
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"burrow_width"		"150"
+			"burrow_duration"	
 			{
-				"var_type"			"FIELD_INTEGER"
-				"burrow_width"		"150"
+				"value"			"2.17"
+				"special_bonus_unique_sand_king_burrowstrike_stun"				"+0.3"
 			}
-			"02"
+			"burrow_speed"		"2000"
+			"burrow_anim_time"	"0.52"
+			"cast_range_scepter"
 			{
-				"var_type"			"FIELD_FLOAT"
-				"burrow_duration"	"2.17"
-			}
-			"03"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"burrow_speed"		"2000"
-			}
-			"04"
-			{
-				"var_type"			"FIELD_FLOAT"
-				"burrow_anim_time"	"0.52"
-			}
-			"05"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"cast_range_scepter"		"900"
+				"value"						"900"
 				"RequiresScepter"			"1"
 			}
-			"06"
+			"burrow_speed_scepter"
 			{
-				"var_type"			"FIELD_INTEGER"
-				"burrow_speed_scepter"		"3500"
+				"value"		"3500"
 				"RequiresScepter"			"1"
 			}
 		}
@@ -80,12 +58,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5103"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Ability.SandKing_SandStorm.start"
+		
 		"MaxLevel"						"7"
 
 		// Casting
@@ -140,11 +113,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5104"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"AbilitySound"					"Ability.SandKing_CausticFinale"
+	
 		"MaxLevel"							"7"
 
 		// Special
@@ -191,16 +160,9 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5105"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"FightRecapLevel"				"2"
-		"AbilitySound"					"Ability.SandKing_Epicenter"
+		
 		"MaxLevel"							"7"
 
-        "HasShardUpgrade"               "1"
 
 		// Time
 		//-------------------------------------------------------------------------------------------------------------

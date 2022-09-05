@@ -6,10 +6,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"641"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"FightRecapLevel"				"1"
+		
 		"MaxLevel"						"7"
 
 		// Casting
@@ -20,7 +17,7 @@
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"					"50 60 70 80 90 100 110"
-		"AbilityCooldown"					"17" // "25 20 15 10 10 10 10"
+		
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -40,6 +37,21 @@
 				"value" "1"
 				"special_bonus_unique_zeus"	"+1"
 			}
+			"AbilityCooldown"					
+			{
+				"value"				"17"
+				"special_bonus_unique_zeus_jump_cooldown"	"-4"	
+			}
+			"postjump_movespeed_duration"
+			{
+				"value"						"0"
+				"special_bonus_unique_zeus_jump_postjump_movespeed"		"+1.6"
+			}			
+			"postjump_movespeed"
+			{
+				"value"						"0"
+				"special_bonus_unique_zeus_jump_postjump_movespeed"		"+30"
+			}
 		}
 	}
 
@@ -52,12 +64,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5110"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"AbilitySound"					"Hero_Zuus.ArcLightning.Cast"
+		
 		"MaxLevel"						"7"
 
 		// Casting
@@ -110,13 +117,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5111"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Zuus.LightningBolt"
+		
 		"MaxLevel"						"7"
 
 		// Casting
@@ -182,14 +183,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"6325"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"MaxLevel"						"1"
-		"FightRecapLevel"				"1"
-		"IsGrantedByScepter"			"1"
-
-		"AbilitySound"					"Hero_Zuus.Cloud.Cast"
+		
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -255,12 +249,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5112"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"	
-		"AbilitySound"					"Hero_Zuus.StaticField"
-		"MaxLevel"						"1"
-		"IsGrantedByShard"			    "1"
+	
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------

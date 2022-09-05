@@ -1,152 +1,166 @@
-"slardar_sprint"
-{
-	"MaxLevel"						"7"
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"0"
-	"AbilityCastPoint"				"0.0 0.0 0.0 0.0 0.0 0.0 0.0"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"17"
-	
-	"AbilitySpecial"
-	{			
-		"01"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"bonus_speed"				"15 20 22 28 32 36 44"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"duration"					"16"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"river_speed"				"30"
-		}
-		"04"
-        {
-            "var_type"					"FIELD_INTEGER"
-            "puddle_regen"				"10 15 20 25 30 35 40"
-            "RequiresScepter"			"1"
-        }
-        "05"
-        {
-            "var_type"					"FIELD_INTEGER"
-            "puddle_armor"				"15 18 21 24 27 30 35"
-            "RequiresScepter"			"1"
-        }
-        "06"
-        {
-            "var_type"					"FIELD_INTEGER"
-            "puddle_status_resistance"	"20"
-            "RequiresScepter"			"1"
-        }
-        "07"
-        {
-            "var_type"					"FIELD_INTEGER"
-            "river_speed_tooltip"		"45 50 52 58 62 66 74"
-        }
-	}
-}	
-
 //=================================================================================================================
-// Ability: Slardar Slithereen Crush
-//=================================================================================================================
-"slardar_slithereen_crush"
-{
-	"MaxLevel"						"7"
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"0"
-	"AbilityCastPoint"				"0.35 0.35 0.35 0.35 0.35 0.35 0.35"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"8.0 8.0 8.0 8.0 8.0 8.0 8.0"
-	"AbilityDuration"				"1.6 1.9 2.2 2.3 2.4 2.5 2.6"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"80 95 105 115 135 145 155"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	// Ability: Slardar Guardian Sprint
+	//=================================================================================================================
+	"slardar_sprint"
 	{
-		"01"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"crush_radius"				"315"
-		}
-		"02"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"crush_extra_slow"				"-20"
-			"LinkedSpecialBonus"	"special_bonus_unique_slardar_8"
-			"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_SUBTRACT"
-		}
-		"03"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"crush_attack_slow_tooltip"		"-20"
-		}
-		"04"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"crush_extra_slow_duration"		"2.0"
-		}
-		"05"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"stun_duration"					"1.4 1.5 1.6 1.7 1.8 1.9 2.0"
-		}
-		"06"
-		{
-			"var_type"			"FIELD_FLOAT"
-			"puddle_duration"		"25"
-			"RequiresScepter"			"1"
-		}
-		"07"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"puddle_radius"		"850"
-			"RequiresScepter"			"1"
-		}
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5114"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		
-		"08"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"crush_damage"			"100 145 215 245 345 425 525"
-			"LinkedSpecialBonus"	"special_bonus_unique_slardar"
+		"MaxLevel"						"7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"25"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"17"
+		
+			"AbilityValues"
+		{			
+				"bonus_speed"					"15 20 22 28 32 36 44"
+				"duration"						"16"
+				"river_speed"					"30"
+				"puddle_regen"				
+				{
+					"value"						"10 15 20 25 30 35 40"
+					"special_bonus_scepter"		"+22"
+				}
+				"puddle_armor"				
+				{
+					"value"						"15 18 21 24 27 30 35"
+					"special_bonus_scepter"		"+11"
+				}
+				"puddle_status_resistance"			
+				{
+					"value"						"40"
+					"RequiresScepter"			"1"
+				}
+                "river_speed_tooltip"			"45 50 52 58 62 66 74"
 		}
-		"09"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}	
+	
+
+	//=================================================================================================================
+	// Slardar Scepter
+	//=================================================================================================================
+	"slardar_scepter"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"7864"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"5"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"20"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"						"FIELD_FLOAT"
-			"crush_damage"						"100 145 215 245 345 425 525"
-			"LinkedSpecialBonus"	        "special_bonus_unique_slardar"
-		}
-		"09"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"damage_pct"					"100"
-			"CalculateSpellDamageTooltip" "0"
 		}
 	}
-}
+	
+	//=================================================================================================================
+	// Ability: Slardar Slithereen Crush
+	//=================================================================================================================
+	"slardar_slithereen_crush"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5115"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+        "MaxLevel"						"7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.35 0.35 0.35 0.35"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"8"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"80 95 105 115 135 145 155"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.5"	// Applies multiple modifiers
+
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"crush_radius"				"350"
+				"crush_extra_slow"				
+				{
+					"value"	"-20"
+					"LinkedSpecialBonus"	"special_bonus_unique_slardar_8"
+					"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_SUBTRACT"
+				}
+				"crush_attack_slow_tooltip"		"-20"
+				"crush_extra_slow_duration"		"6"
+				"stun_duration"					
+				{
+					"value"															"1"
+					"special_bonus_unique_slardar_slithereen_crush_stun"			"+0.2"
+				}
+				"puddle_duration"		
+				{
+					"value"					"6"
+					"special_bonus_scepter"	"+19"
+				}
+				"puddle_radius"		
+				{
+					"value"				"250"
+					"special_bonus_scepter"	"+350"
+				}
+				"crush_damage"			
+				{
+					"value"					"100 145 215 245 345 425 525"
+					"LinkedSpecialBonus"	"special_bonus_unique_slardar"
+				}
+				"shard_amp_duration"			
+				{
+					"value"				"5.0"
+					"RequiresShard"					"1"
+				}
+				"shard_bonus_radius"			
+				{
+					"value"				"75"
+					"RequiresShard"					"1"
+				}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
 
 "slardar_bash"
 {
     // General
     //-------------------------------------------------------------------------------------------------------------
-    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
-    "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-    "SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
-    "AbilitySound"					"Hero_Slardar.Bash"
+   
     "MaxLevel"                      "7"
 
     // Special
@@ -181,15 +195,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5117"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Slardar.Amplify_Damage"
+	
 		"MaxLevel"						"7"
 
 		// Casting

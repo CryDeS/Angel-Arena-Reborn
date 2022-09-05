@@ -3,14 +3,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5345"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Ancient_Apparition.ColdFeetCast"
+		
 		"MaxLevel"						"7"
 	
 		// Casting
@@ -37,7 +30,11 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"damage"				"45 65 85 105 125 145 165 "
+			"damage"				
+			{
+				"value"		"45 65 85 105 125 145 165 "
+				"special_bonus_unique_ancient_apparition_8"	"+40"
+			}
 			"break_distance"
 			{
 				"value"		"700"
@@ -61,12 +58,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5346"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"AbilitySound"					"Hero_Ancient_Apparition.IceVortexCast"
-
-        "HasShardUpgrade"               "1"
+	
         "MaxLevel"						"7"
 
 		// Casting
@@ -129,14 +121,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5347"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"AbilitySound"					"Hero_Ancient_Apparition.ChillingTouchCast"
-
-		"HasScepterUpgrade"			"1"
+		
 		"MaxLevel"						"7"
 
 		// Time		
@@ -184,13 +169,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5348"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"FightRecapLevel"				"2"
-		"AbilitySound"					"Hero_Ancient_Apparition.IceBlast.Target"
+	
 		"MaxLevel"						"7"
 
 		// Casting
@@ -239,8 +218,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5349"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	
 		"MaxLevel"						"1"
 		
 		// Casting

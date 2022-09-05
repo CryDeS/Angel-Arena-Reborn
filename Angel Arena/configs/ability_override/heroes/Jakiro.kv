@@ -11,7 +11,7 @@
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"10.0 10.0 10.0 10.0 10.0 10.0 10.0"
+	"AbilityCooldown"				"10.0"
 	"AbilityDuration"				"5.0"
 
 	// Damage.
@@ -24,62 +24,37 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
+	"AbilityValues"
 		{
-			"var_type"				"FIELD_INTEGER"
 			"start_radius"			"200"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
 			"end_radius"			"250"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"range"					"750"
-			"LinkedSpecialBonus"	"special_bonus_unique_jakiro_5"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
+			"AbilityCastRange"
+			{
+				"value"							"750"
+				"special_bonus_unique_jakiro_2"	"+100%"
+			}
 			"speed"					"1050"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_FLOAT"
 			"fire_delay"			"0.3"
-		}
-		"06"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"burn_damage"			"16 24 28 36 45 62 72"
-			"LinkedSpecialBonus"	"special_bonus_unique_jakiro_2"
-		}
-		"07"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"slow_movement_speed_pct"	"-28 -32 -36 -40 -42 -46 -50"
-		}
-		"08"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"slow_attack_speed_pct"		"-28 -32 -36 -40 -42 -46 -50"
-		}
-		"09"
-		{
-			"var_type"				"FIELD_INTEGER"
+			"burn_damage"			
+			{
+				"value"							"16 24 28 36 45 62 72"
+				"special_bonus_unique_jakiro_2"	"+100%"
+			}
+			"slow_movement_speed_pct"	
+			{
+				"value"												"-28 -32 -36 -40 -42 -46 -50"
+				"special_bonus_unique_jakiro_dualbreath_slow"		"-10"
+			}
+
+			"slow_attack_speed_pct"
+			{
+				"value"												"-28 -32 -36 -40 -42 -46 -50"
+				"special_bonus_unique_jakiro_dualbreath_slow"		"-10"
+			}
 			"speed_fire"			"1050"
-		}
-		"10"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"damage_pct"			"25"
-			"CalculateSpellDamageTooltip" "0"
-		}
-	}		
+
+		}		
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"		
 }
 
 //=================================================================================================================
@@ -265,18 +240,7 @@
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
-	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_DEAD"
-	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-	"AbilitySound"					"Hero_Jakiro.LiquidFire"
-	"MaxLevel"						"1"
-	"FightRecapLevel"				"1"
-	"IsGrantedByShard"				"1"
-	"HasShardUpgrade"				"1"
+	
 
 	// Stats
 	//-------------------------------------------------------------------------------------------------------------

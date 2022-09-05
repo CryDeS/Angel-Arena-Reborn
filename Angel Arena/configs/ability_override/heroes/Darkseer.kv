@@ -63,21 +63,13 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5256"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Dark_Seer.Ion_Shield_Start"
+		
 
-        "HasScepterUpgrade"             "1"
         "MaxLevel"						"7"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"600"
+		"AbilityCastRange"				"800"
 		"AbilityCastPoint"				"0.4"
 		
 		// Time		
@@ -94,49 +86,37 @@
 			
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"radius"				"250"
-				"LinkedSpecialBonus"	"special_bonus_unique_dark_seer_5"
+			"radius"
+			{ 
+				"value"										"275"
+				"special_bonus_unique_dark_seer_5"			"+50"
 			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_per_second"		"22 30 38 46 54 62 70"
-				"LinkedSpecialBonus"	"special_bonus_unique_dark_seer"
+			"damage_per_second"		
+			{ 
+				"value"										"40 60 80 100 120 150"
+				"special_bonus_unique_dark_seer"			"+50"
 			}
-			"03"
+			"duration"				
 			{
-				"var_type"				"FIELD_FLOAT"
-				"duration"				"25"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"tick_interval"				"0.1"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"max_charges"			"2"
-				"RequiresScepter"		"1"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"scepter_bonus_duration"		"15"
-				"RequiresScepter"		"1"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"scepter_bonus_health"	"275" 
-				"RequiresScepter"		"1"
+				"value"										"16 18 20 22 24 28 30"
+				"special_bonus_unique_dark_seer_15"						"+15"
 			}
 
+			"tick_interval"									"0.15"
+
+			"AbilityCharges"			
+			{
+				"value"										"0"
+				"special_bonus_unique_dark_seer_14"						"+2"
+			}
+			"bonus_health"	
+			{
+				"value"										"0"
+				"special_bonus_unique_dark_seer_6"						"+500"
+			}
+			
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
@@ -145,39 +125,63 @@
 // Dark Seer: Surge
 //=================================================================================================================
 "dark_seer_surge"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"800"
-	"AbilityCastPoint"				"0.01"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"12.0"
-	
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"20 30 40 50 60 70 80"
-
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5257"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.01"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"20 30 40 50 60 70 80"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"2.5"	// Value much higher than manacost
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"				"FIELD_FLOAT"
-			"duration"				"4.0 4.5 5.0 5.5 6.0 6.5 7.5"
+			"duration"					"4.0 4.5 5.0 5.5 6.0 6.5 7.5"
+			"speed_boost"				"550"
+			"trail_radius"				
+			{
+				"value" 				"0"
+				"special_bonus_shard"			"+150"
+			}
+			"trail_duration"		
+			{
+				"value" 					"7"
+				"RequiresShard"			"1"
+			}
+			"trail_move_slow"		
+			{
+				"value" 					"-50"
+				"RequiresShard"			"1"
+			}
+			"trail_damage"			
+			{
+				"value" 					"35"
+				"RequiresShard"			"1"
+			}
+			"trail_damage_interval"		
+			{
+				"value" 				"0.5"
+				"RequiresShard"			"1"
+			}
 		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"speed_boost"			"550"
-		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
-}
 
 //=================================================================================================================
 // Dark Seer: Wall of Replica
@@ -206,7 +210,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"duration"				"18.0"
+			"duration"				"30"
 		}			
 		"02"
 		{
@@ -229,6 +233,7 @@
 			"var_type"				"FIELD_INTEGER"
 			"tooltip_replica_total_damage_incoming"	"300 300 300 300 300 300 300"
 			"CalculateSpellDamageTooltip"	"0"
+			"DamageTypeTooltip"		"DAMAGE_TYPE_NONE"
 		}				
 		"06"
 		{
@@ -243,7 +248,7 @@
 		"08"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"movement_slow"			"55"
+			"movement_slow"			"40 50 60 70 80 90 100"
 		}
 		"09"
 		{
@@ -260,61 +265,35 @@
 	}
 }
 
-"dark_seer_normal_punch"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
-	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-	"MaxLevel"						"1"
-	
-	"IsShardUpgrade"				"1"
-	"IsGrantedByShard"				"1"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"6"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+//=================================================================================================================
+	// Ability: Dark Seer: Normal Punch (Shard Ability)
+	//=================================================================================================================
+	"dark_seer_normal_punch"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"687"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"						"1"
+		
+		//"IsShardUpgrade"				"1"
+		"IsGrantedByScepter"				"1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"6"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"					"FIELD_FLOAT"
-			"max_stun"					"2.0"
+				"max_stun"					"2.25"
+				"recent_duration"			"3.0"
+				"max_distance"			"1500"
+				"knockback_distance"			"350"
+				"illusion_duration"			"5.0"
+				"max_damage"					"950"
+				"normal_punch_illusion_delay"   "0.25"
 		}
-		"02"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"recent_duration"			"3.0"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"max_distance"				"1500"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"knockback_distance"		"350"
-		}
-		"05"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"illusion_duration"			"5.0"
-		}
-		"06"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"max_damage"				"950"
-		}
-		"07"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"normal_punch_illusion_delay"   "0.7"
-		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
-	"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
-}

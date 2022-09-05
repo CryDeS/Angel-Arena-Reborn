@@ -6,15 +6,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"661"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"MaxLevel"						"1"
-		"FightRecapLevel"				"1"
-		"IsGrantedByShard"              "1"
+		
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -62,13 +54,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5158"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Necrolyte.DeathPulse"
-		"AbilityDraftShardAbility"    "necrolyte_death_seeker"
-		"HasShardUpgrade"	"1"
+		
 		"MaxLevel"						"7"
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -119,55 +105,38 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5159"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-
-		"HasScepterUpgrade"			"1"	
+		
 		"MaxLevel"					"7"
 		
 
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"aura_radius"			"800"		
+			"aura_damage"
 			{
-				"var_type"			"FIELD_INTEGER"
-				"aura_radius"			"800"		
-			}
-			"02"
-			{
-				"var_type"			"FIELD_FLOAT"
-				"aura_damage"		 "2.0 2.2 2.4 2.6 2.8 3.0 3.2" // "2.0 2.3 2.7 3.0 3.3 3.7 4.0"
-				"LinkedSpecialBonus"		"special_bonus_unique_necrophos_2"
+				"value"		"2.0 2.2 2.4 2.6 2.8 3.0 3.2" 
+				"special_bonus_unique_necrophos_2"		"+0.5"
 				"DamageTypeTooltip"	"DAMAGE_TYPE_NONE"
 			} 	
-			"03"
+			"health_regen"	"3 5 7 9 11 13 16"
+			"mana_regen"	"2 4 6 8 10 12 14"
+			"hero_multiplier" "6"
+			"regen_duration"		
 			{
-				"var_type"		"FIELD_FLOAT"
-				"health_regen"	"3 5 7 9 11 13 16"
-			}		
-			"04"
-			{
-				"var_type"		"FIELD_FLOAT"
-				"mana_regen"	"2 4 6 8 10 12 14"
-			}		
-			"05"
-			{
-				"var_type"		"FIELD_INTEGER"
-				"hero_multiplier" "6"
+				"value"						 "9"
+				"special_bonus_unique_necrophos_heartstopper_regen_duration"							"+2"
 			}
-			"06"
+			"scepter_multiplier"
 			{
-				"var_type"		"FIELD_FLOAT"
-				"regen_duration"		"9"
-			}		
-			"07"
-			{
-				"var_type"			"FIELD_FLOAT"
-				"scepter_multiplier"		"1.5" 
+				"value"					"1.5" 
 				"RequiresScepter"		"1"
-			} 	
+			} 
+			"heal_reduction_pct"
+			{
+				"value"					"0"
+				"special_bonus_unique_necrophos_5"		"+32"
+			}
+			
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
@@ -181,64 +150,46 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5160"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"AbilitySound"					"Hero_Necrolyte.SpiritForm.Cast"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-
-		"HasScepterUpgrade"			"1"
+		
 		"MaxLevel"					"7"
 
+		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"0"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"25"
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"50"
 		
 		
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"		"FIELD_FLOAT"
-				"duration"		"3 3.5 4 4.25 4.5 4.75 5.0"
-			}				
-			"02"
-			{
-				"var_type"		"FIELD_INTEGER"
-				"heal_bonus"	"30" 
+			"duration"		"3 3.5 4 4.25 4.5 4.75 5.0"
+			"heal_bonus"
+			{	
+				"value"			"30"
+				"special_bonus_unique_necrophos_sadist_heal_bonus"		"+15"
 			}			
-			"03"
+			"movement_speed"
 			{
-				"var_type"		"FIELD_INTEGER"
-				"movement_speed"			"12 16 20 24 28 32 36"
-				"LinkedSpecialBonus"		"special_bonus_unique_necrophos_3"
+				"value"			"12 16 20 24 28 32 36"
+				"special_bonus_unique_necrophos_3"		"+24"
 			}			
-			"04"
+			"slow_aoe"		"600"
+			"bonus_damage" "-40"
+			"AbilityCooldown"
 			{
-				"var_type"		"FIELD_INTEGER"
-				"slow_aoe"		"600"
-			}		
-			"05"
-			{
-				"var_type"		"FIELD_INTEGER"
-				"bonus_damage" "-20"
-			}
-			"06"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"cooldown_scepter"		"20" 
-				"RequiresScepter"		"1"
+				"value"						"25"
+				"special_bonus_scepter"		"-6" 
 			} 	
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
+	
 		
 	//=================================================================================================================
 	// Aether Form Stop
@@ -264,15 +215,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5161"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"		
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"FightRecapLevel"				"2"
-		"AbilitySound"					"Hero_Necrolyte.ReapersScythe.Target"
+	
 		"MaxLevel"						"7"
 
 		// Casting

@@ -163,109 +163,102 @@
 // Dark Willow: Bedlam
 //=================================================================================================================
 "dark_willow_bedlam"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------		
-	"AbilityCooldown"				"12"
-	
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"100 150 200 250 300 350 400"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"6340"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.		
+		
+		"MaxLevel"						"7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------		
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityCastGestureSlot"		"ABSOLUTE"
+
+		"AbilityCooldown"				"12"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 150 200 250 300 350 400"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"attack_damage"			"75 150 225 350 375 400 425"
-			"LinkedSpecialBonus"		"special_bonus_unique_dark_willow_4"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_FLOAT"
+			"attack_damage"			
+			{
+				"value"						"75 150 225 350 375 400 425"
+				"LinkedSpecialBonus"		"special_bonus_unique_dark_willow_4"
+			}
 			"attack_interval"		"0.25"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
 			"attack_radius"			"300"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
 			"attack_targets"			"1"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
 			"roaming_radius"			"200"
-		}
-		"06"
-		{
-			"var_type"				"FIELD_FLOAT"
 			"roaming_seconds_per_rotation"				"1.5"
-		}
-		"07"
-		{
-			"var_type"				"FIELD_FLOAT"
 			"roaming_duration"		"4.0"
+			"pierces_magic_immunity"
+			{
+				"value"		"0"
+				"special_bonus_unique_dark_willow_2" "+1"
+				
+			}
 		}
 	}
-}
+
 
 //=================================================================================================================
 // Dark Willow: Terrorize
 //=================================================================================================================
 "dark_willow_terrorize"
-{
-	"MaxLevel"						"7"
-
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"1000"
-	"AbilityCastPoint"				"0.8"
-	"AbilityCooldown"				"65"
-	
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"150"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"8340"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.		
+	
+		"MaxLevel"						"7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"1.0"
+		"AbilityCooldown"				"80"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 150 200 250 300 350 400"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"				"FIELD_FLOAT"
-			"destination_travel_speed"	"2000"
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"destination_travel_speed"	"2000"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"destination_radius"		"400"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"destination_status_duration"	"2.6 2.8 3.0 3.2 3.4 3.6 4"
+			}	
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"return_travel_speed"	"500"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"starting_height"		"300"
+			}	
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"telegraph_to_enemies"		"0"
+			}
 		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"destination_radius"		"400"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"destination_status_duration"	"4"
-			"LinkedSpecialBonus"		"special_bonus_unique_dark_willow_2"
-		}	
-		"04"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"return_travel_speed"	"500"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"starting_height"		"300"
-		}	
 	}
-
-	"AbilityDraftPreAbility"		"dark_willow_bedlam"
-}

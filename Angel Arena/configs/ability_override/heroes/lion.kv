@@ -6,14 +6,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5044"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Lion.Impale"
+		
 		"MaxLevel"						"7"
 		
 
@@ -22,9 +15,7 @@
 		"AbilityCastRange"				"600"
 		"AbilityCastPoint"				"0.3"
 		
-		// Time		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"12.0"
+		
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -32,31 +23,26 @@
 		
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"100 120 145 170 180 200 250"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"AbilityCooldown"	"12"
+
+			"damage"			
 			{
-				"var_type"			"FIELD_INTEGER"
-				"width"				"125"
+				"value"			"100 120 145 170 180 200 250"
+				"special_bonus_unique_lion_3"	"+65"
 			}
-			"02"
-			{	
-				"var_type"			"FIELD_FLOAT"
-				"duration"			"2"
-			}
-			"03"
+			"width"				"125"
+			"duration"			"2"
+			"length_buffer"		"325"
+			"speed"				"1600 1600 1600 1600 2000 2200 2400"
+			"pierces_immunity"
 			{
-				"var_type"			"FIELD_INTEGER"
-				"length_buffer"		"325"
-			}
-			"04"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"speed"				"1600 1600 1600 1600 2000 2200 2400"
+				"value"			"0"
+				"special_bonus_unique_lion_2"	"+1"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
@@ -70,23 +56,13 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5045"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Lion.Voodoo"
+	
 		"MaxLevel"						"7"
-
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"500"
 		"AbilityCastPoint"				"0 0 0 0"
 
-		// Time		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"30.0 26.0 24.0 22.0 18.0 16.0 14.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -94,18 +70,15 @@
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"AbilityCooldown"				
 			{
-				"var_type"					"FIELD_FLOAT"
-				"duration"					"2.5 2.75 2.9 3.0 3.2 3.4 3.6"
+				"value"				"30.0 26.0 24.0 22.0 18.0 16.0 14.0"
+				"special_bonus_unique_lion_5"	"-2"
 			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"movespeed"					"120"
-			}
+			"duration"					"2.5 2.75 2.9 3.0 3.2 3.4 3.6"
+			"movespeed"					"120"
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
@@ -118,15 +91,9 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5046"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-
-        "HasShardUpgrade"               "1"
-        "MaxLevel"						"7"
+		
+		"MaxLevel"						"7"
+       
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -165,7 +132,7 @@
 				"movespeed"			
 				{
 					"value"				"25 27 29 31 33 36 38"
-					"special_bonus_unique_lion_6"	"+15"
+					"special_bonus_unique_lion_6"	"+10"
 				}
 				"shard_bonus_break_distance"			//OBSOLETE
 				{
@@ -176,7 +143,12 @@
 				{
 					"value"		"2"
 					"RequiresShard"				"1"
-				}						
+				}		
+				"damage_pct"					
+				{
+					"value"					"0"		
+					"special_bonus_unique_lion_manadrain_damage"			"+150"
+				}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
@@ -189,16 +161,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5047"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"FightRecapLevel"				"2"
-		"AbilitySound"					"Hero_Lion.FingerOfDeath"
-
-		"HasScepterUpgrade"			"1"
+		
 		"MaxLevel"						"7"
 		
 		// Casting
