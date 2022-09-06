@@ -42,59 +42,48 @@
 // Ability: Drow Ranger Wave of Silence
 //=================================================================================================================
 "drow_ranger_wave_of_silence"
-{
-	"MaxLevel"						"7"
-	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"900"
-	"AbilityCastPoint"				"0.4"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"16"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"90 110 130 150 170 200 220"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5632"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0.4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"90 110 130 150 170 200 220"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"			"FIELD_FLOAT"
-			"wave_speed"		"2000.0"
+				"wave_speed"		"2000.0"
+				"wave_width"		
+				{
+					"value"			"250"
+					"LinkedSpecialBonus"	"special_bonus_unique_drow_ranger_4"
+				}
+				"silence_duration"	"3.0 3.5 4.0 4.5 5.0 5.5 6.0"
+				"knockback_distance_max"	"350"
+				"knockback_duration"		"0.6"
+				"knockback_height"		"0"
+				"wave_length"		"900"
+				"bonus_movespeed"		
+				{
+					"value"					"10"
+					"special_bonus_unique_drow_ranger_gust_selfmovespeed"		"+15"
+				}
 		}
-		"02"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"wave_width"		"250"
-			"LinkedSpecialBonus"	"special_bonus_unique_drow_ranger_4"
-		}
-		"03"
-		{
-			"var_type"			"FIELD_FLOAT"
-			"silence_duration"	"3.0 3.5 4.0 4.5 5.0 5.5 6.0"
-		}
-		"04"
-		{
-			"var_type"			"FIELD_FLOAT"
-			"knockback_distance_max"	"350"
-		}
-		"05"
-		{
-			"var_type"			"FIELD_FLOAT"
-			"knockback_duration"		"0.6"
-		}
-		"06"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"knockback_height"		"0"
-		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
-}
 
 //=================================================================================================================
 // Ability: Drow Ranger's Marksmanship
@@ -158,12 +147,7 @@
 
 "drow_ranger_multishot"
 {
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
-	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
-	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-	"FightRecapLevel"				"1"
+	
 	"MaxLevel"						"7"
 
 	// Casting

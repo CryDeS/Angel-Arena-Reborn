@@ -32,13 +32,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5028"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"FightRecapLevel"				"1"
-
-	    "HasShardUpgrade"               "1"
+		
 	    "MaxLevel"					"7"
 
 		// Casting
@@ -108,9 +102,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5029"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
-		"AbilitySound"					"Hero_Juggernaut.HealingWard.Cast"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+	
 		"MaxLevel"						"7"
 		
 		// Casting
@@ -132,10 +124,15 @@
 		"AbilityValues"
 		{
 				"healing_ward_heal_amount"	"2 3 4 5 6 7 8"
-				"healing_ward_aura_radius"	"500"
+				"healing_ward_aura_radius"	"400"
 				"healing_ward_movespeed_tooltip"	
 				{
 					"value"	"420"
+				}
+				"healing_ward_bonus_health"
+				{
+					"value"	"0"
+					"special_bonus_unique_juggernaut_2"	"+2"
 				}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
@@ -149,15 +146,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5030"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"FightRecapLevel"				"2"
+		
 		"MaxLevel"						"7"
 
 		"HasScepterUpgrade"			"1"
@@ -224,18 +213,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"419"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"MaxLevel"						"1"
-		"FightRecapLevel"				"1"
-		"IsGrantedByScepter"			"1"
-		"HasScepterUpgrade"				"1"
-
+	
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"550"

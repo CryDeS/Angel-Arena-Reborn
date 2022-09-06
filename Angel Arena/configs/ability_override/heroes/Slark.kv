@@ -6,15 +6,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"668"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"MaxLevel"						"1"
-		"FightRecapLevel"				"1"
-		"IsGrantedByShard"              "1"
+	
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -62,10 +54,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"729"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
-		"MaxLevel"						"1"
-		"FightRecapLevel"				"1"
-		"IsGrantedByShard"              "1"
+	
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -108,11 +97,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5494"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Slark.DarkPact.Cast"
+		
 		"MaxLevel"						"7"
 
 		// Casting
@@ -180,18 +165,13 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5495"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Slark.Pounce.Cast"
-		"HasScepterUpgrade"				"1"
+	
 		"MaxLevel"						"7"
 
+		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"14 13 12 11 10 9 8" //"11.5 11.0 10.5 10.0 9.5 9.0"
+		"AbilityCooldown"				"14 13 12 11 10 9 8"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -201,14 +181,14 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"pounce_damage"			"40 60 80 100 120 140 160" //"40 50 60 70 80 90 100"
-			"pounce_distance"		"720 750 780 810 840 870 900" //"900"
+			"pounce_damage"			"0"
+			"pounce_distance"		"720 750 780 810 840 870 900"
 			"pounce_speed"			"933.33"
 			"pounce_acceleration"	"7000.0"
-			"pounce_radius"			"95"
+			"pounce_radius"			"120"
 			"leash_duration"		
 			{
-				"value"			 "2.2 2.4 2.6 2.8 3.0 3.2 3.4" //"2.5 2.7 2.9 3.1 3.3 3.5 3.7"
+				"value"			"2.2 2.4 2.6 2.8 3.0 3.2 3.4"
 				"LinkedSpecialBonus"	"special_bonus_unique_slark"
 			}
 			"leash_radius"			"325"
@@ -219,7 +199,7 @@
 			}
 			"charge_restore_time"
 			{
-				"value"	"8" // 9
+				"value"	"8"
 				"RequiresScepter"	"1"
 			}
 			"pounce_distance_scepter"		
@@ -227,6 +207,7 @@
 				"value"		"1200"
 				"RequiresScepter"	"1"
 			}
+			"essence_stacks"	"1 2 3 4 5 6 7"
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
@@ -239,9 +220,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5496"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+	
 		"MaxLevel"						"7"
 
 		// Special
@@ -278,14 +257,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5497"							// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"FightRecapLevel"				"2"
-		"AbilitySound"					"Hero_Slark.ShadowDance"
-		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
-
-		"AbilityDraftUltShardAbility"		"slark_depth_shroud"
+	
 		"MaxLevel"						"7"
 
 		// Time		
@@ -308,10 +280,10 @@
 			}
 			"fade_time"					"0.0"
 			"bonus_movement_speed"		"24 28 32 36 40 45 50"
-			"bonus_regen_pct"			
+			"bonus_regen"			
 			{
-				"value"				"3 4 4.5 5 5.5 6 6.5" //"3 4 5 5 6 7 8"
-				"special_bonus_unique_slark_8"	"+1.5"
+				"value"				"60 90 120 150 180 210 240"
+				"special_bonus_unique_slark_8"	"+40"
 			}
 			"activation_delay"			"0.5"
 			"neutral_disable"			"2.0"

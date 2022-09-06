@@ -7,12 +7,7 @@
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CAN_SELF_CAST | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
-	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
-	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-	"FightRecapLevel"				"1"
+	
 	"MaxLevel"						"7"
 
 	// Casting
@@ -103,6 +98,12 @@
 			"var_type"					"FIELD_FLOAT"
 			"turn_rate"					"90"
 		}	
+		"16"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"shard_cast_point"			"0.1"
+			"RequiresShard"				"1"
+		}
 	}	
 }
 
@@ -114,11 +115,7 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-	"FightRecapLevel"				"1"
+
 	"MaxLevel" 						"7"
 
 	// Casting
@@ -218,7 +215,6 @@
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
 	"MaxLevel" 						"7"
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
@@ -252,9 +248,7 @@
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-	"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+
 	"MaxLevel"						"7"
 
 	// Casting
@@ -318,15 +312,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"7906"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"FightRecapLevel"				"1"
-		"LinkedAbility"					"dawnbreaker_land"
-		"HasScepterUpgrade"				"1"
+	
 		"MaxLevel"						"7"
 
 		// Casting
@@ -382,6 +368,7 @@
 				"value"			"60"
 				"RequiresScepter"			"1"
 			}
+			"airtime_scepter_movement_speed"				"200"
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
 		//"AbilityChannelAnimation"	"ACT_DOTA_CAST_ABILITY_4"

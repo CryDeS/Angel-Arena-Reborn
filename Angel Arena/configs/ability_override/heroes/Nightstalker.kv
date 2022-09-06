@@ -6,9 +6,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5275"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilitySound"					"Hero_Nightstalker.Void"
-        "HasScepterUpgrade"			"1"
+		
         "MaxLevel"						"7"
 
 		// Unit Targeting
@@ -66,9 +64,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5276"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Nightstalker.Trickling_Fear"
+		
 		"MaxLevel"						"7"
 
 		// Unit Targeting
@@ -104,9 +100,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5277"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-        "HasShardUpgrade"               "1"
+		
         "MaxLevel"									"7"
 
 		// Special
@@ -116,12 +110,17 @@
 			"bonus_movement_speed_pct_night"	
 			{
 				"value"			"20 25 30 35 40 45 50"
-				"special_bonus_unique_night_stalker_5" "+10"
+				"special_bonus_unique_night_stalker_5" "+0"
 			}
 			"bonus_attack_speed_night"			
 			{
 				"value"			"40 60 80 100 120 140 160"	//"45 60 75 90 120 140 160" 
 				"special_bonus_unique_night_stalker_2"	"+100"
+			}
+				"bonus_status_resist_night"			
+			{
+				"value"			"0"
+				"special_bonus_unique_night_stalker_hunter_status_resist"	"+15"
 			}
 			"shard_hp_restore_pct"
 			{
@@ -156,10 +155,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5278"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityType"                	"DOTA_ABILITY_TYPE_ULTIMATE"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"AbilitySound"					"Hero_Nightstalker.Darkness"
+	
 		"MaxLevel"						"7"
 
 		// Stats
@@ -185,122 +181,4 @@
 				"special_bonus_unique_night_stalker_3"	"+35"
 			}
 		}
-	}
-//=================================================================================================================
-// Ability: Special Bonus
-//=================================================================================================================
-"special_bonus_unique_night_stalker"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"					"6129"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"15"
-				"ad_linked_abilities"			"night_stalker_darkness"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
-		}
-	}
-//=================================================================================================================
-	// Ability: Special Bonus
-	//=================================================================================================================
-	"special_bonus_unique_night_stalker_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"					"6704"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"night_stalker_hunter_in_the_night"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		
-		
-	}
-
-	//=================================================================================================================
-	// Ability: Special Bonus
-	//=================================================================================================================
-	"special_bonus_unique_night_stalker_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"					"480"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"night_stalker_darkness"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		
-		
-	}
-
-	//=================================================================================================================
-	// Ability: Special Bonus
-	//=================================================================================================================
-	"special_bonus_unique_night_stalker_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"					"505"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"night_stalker_void"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		
-	}
-
-	//=================================================================================================================
-	// Ability: Special Bonus
-	//=================================================================================================================
-	"special_bonus_unique_night_stalker_5"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"					"503"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"night_stalker_hunter_in_the_night"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.		
-	}
-
-	//=================================================================================================================
-	// Ability: Special Bonus
-	//=================================================================================================================
-	"special_bonus_unique_night_stalker_6"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"					"799"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"value"				"5"
-				"ad_linked_abilities"			"night_stalker_crippling_fear"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
-		}
-	}
-
-	//=================================================================================================================
-	// Ability: Special Bonus
-	//=================================================================================================================
-	"special_bonus_unique_night_stalker_7"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"					"816"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ad_linked_abilities"			"night_stalker_darkness"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-		
-		
 	}

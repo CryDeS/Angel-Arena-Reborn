@@ -3,13 +3,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5007"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Axe.Berserkers_Call"
-
-		"HasScepterUpgrade"               "1"
+	
 		"MaxLevel"						"7"
 
 		// Casting
@@ -39,7 +33,11 @@
 				"value"							"300"
 				"special_bonus_unique_axe_2"	"+100"
 			}
-				"bonus_armor"			"50 60 70 80 90 100 110"
+			"bonus_armor"	
+			{
+				"value"							"50 60 70 80 90 100 110"
+				"special_bonus_unique_axe_7"	"+8"
+			}
 			"duration"				"2.0 2.2 2.4 2.8 3.0 3.2 3.4"
 			"scepter_cooldown_reduction"
 			{
@@ -60,14 +58,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5008"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Axe.Battle_Hunger"
+		
 		"MaxLevel"						"7"
 		
 		// Casting
@@ -114,6 +105,11 @@
 				{
 					"special_bonus_scepter"				"+7"
 				}
+				"speed_bonus"
+				{
+					"value"			"0"
+					"special_bonus_unique_axe_8"	"+10"
+				}
 		}		
 	}
 	
@@ -125,12 +121,9 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5009"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"AbilitySound"					"Hero_Axe.CounterHelix"
+		
 		"MaxLevel"						"7"
-        "HasShardUpgrade"               "1"
+    
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -180,15 +173,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5010"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"		
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"FightRecapLevel"				"2"
+	
 		"MaxLevel"						"7"
 
 

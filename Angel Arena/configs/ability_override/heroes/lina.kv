@@ -151,59 +151,83 @@
 // Ability: Lina Laguna Blade
 //=================================================================================================================
 "lina_laguna_blade"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"MaxLevel"						"7"
-	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"750"
-	"AbilityCastPoint"				"0.45"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"60.0 58.0 56.0 54.0 52.0 51.0 50.0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"280 320 480 520 650 750 875"
-
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5043"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"750"
+		"AbilityCastPoint"				"0.45"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"280 320 480 520 650 750 875"
+			
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// Modifier just delays damage
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"						"FIELD_INTEGER"
-			"damage"						"400 525 650 775 900 1025 1150"
-			"LinkedSpecialBonus"			"special_bonus_unique_lina_5"
-		}
-		"02"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"cast_range_scepter"			"350"
-		}
-		"03"
-		{
-			"var_type"					    "FIELD_FLOAT"
-			"damage_delay"				    "0.25"
-			"CalculateSpellDamageTooltip"	"0"
-		}
-		"04"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"scepter_width"					"125"
-		}
-		"05"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"damage_pct"					"300"
-			"CalculateSpellDamageTooltip" 	"0"
+			"damage"					"400 525 650 775 900 1025 1150"
+			"damage_delay"				"0.25"
+			"AbilityCooldown"
+			{
+				"value"								"60"
+				"special_bonus_unique_lina_6"		"-25"
+			}
+			"pierce_immunity"
+			{
+				"value"								"0"
+				"special_bonus_unique_lina_7"		"+1"
+			}
 		}
 	}
-}
+
+	//=================================================================================================================
+	// Ability: Lina Flame Cloak
+	//=================================================================================================================
+	"lina_flame_cloak"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"944"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25"
+		"AbilityCastPoint"				"0.0"
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"flame_cloak_duration"				"6"
+			"magic_resistance"					"35"
+			"spell_amp"							"30"
+			"visualzdelta"							"100"
+			"zchangespeed"							"350"					
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+		"AbilityCastGestureSlot"		"DEFAULT"
+	}
+
+
 
 "lina_fire_shield"
 {
@@ -257,28 +281,6 @@
 		{
 			"var_type"					"FIELD_INTEGER"
 			"value"						"1.0"
-		}
-	}
-}
-//=================================================================================================================
-// Ability: Special Bonus
-//=================================================================================================================
-"special_bonus_unique_lina_6"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"value"						"15"
-			"ad_linked_ability"			"lina_light_laguna_blade"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 		}
 	}
 }

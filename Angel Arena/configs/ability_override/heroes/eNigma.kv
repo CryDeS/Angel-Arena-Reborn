@@ -2,59 +2,63 @@
 // Enigma: Malefice
 //=================================================================================================================
 "enigma_malefice"
-{
-	"MaxLevel"						"7"
-	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"600"
-	"AbilityCastPoint"				"0.3"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"15.0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"110 130 150 160 170 180 200"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
 	{
-		"01"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"tick_rate"				"2.0"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"stun_duration"			"1.0"
-			"LinkedSpecialBonus"	"special_bonus_unique_enigma_6"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage"				"80 100 120 160 180 200 240"
-			"LinkedSpecialBonus"	"special_bonus_unique_enigma_5"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"duration"				"4.0"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"tooltip_stuns"			"3"
-			"LinkedSpecialBonus"	"special_bonus_unique_enigma_2"
-			"LinkedSpecialBonusField"	"value2"
-		}
-	}
-}
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5146"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+		"HasShardUpgrade"			"1"
 
-//=================================================================================================================
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"110 130 150 160 170 180 200"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.33"	// Applies multiple modifiers
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"tick_rate"				"2.0"
+			"stun_duration"
+			{
+				"value" 							"1.0"
+				"special_bonus_shard"		"+0.35"
+			}		
+			"damage"
+			{
+				"value"								"80 100 120 160 180 200 240"
+				"special_bonus_unique_enigma_5"		"+30"
+			}
+			"stun_instances"
+			{
+				"value"									"3"
+				"special_bonus_unique_enigma_2"			"+4"
+			}
+			"eidolon_spawns_per_tick"
+			{
+				"value"										"0"
+				"special_bonus_shard"						"+1"
+			}
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+
+	//=================================================================================================================
 // Enigma: Demonic Conversion
 //=================================================================================================================
 "enigma_demonic_conversion"
@@ -127,44 +131,56 @@
 		}
 	}
 }
+	
 
 //=================================================================================================================
 // Enigma: Midnight Pulse
 //=================================================================================================================
 "enigma_midnight_pulse"
-{
-	"MaxLevel"						"7"
-
-	"AbilityCooldown"				"16"
-	
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"95 110 125 140 175 195 225"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5148"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_MIDNIGHT_PULSE"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"95 110 125 140 175 195 225"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"radius"					"550"
-			"LinkedSpecialBonus"		"special_bonus_unique_enigma_9"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"damage_percent"			"5.0 5.5 6.0 6.5 7.0 7.5 8.0"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"duration"					"11"
-			"LinkedSpecialBonus"	"special_bonus_unique_enigma_8"
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"550"
+				"LinkedSpecialBonus"	"special_bonus_unique_enigma_9"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"damage_percent"			"5.0 5.5 6.0 6.5 7.0 7.5 8.0"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"11"
+				"LinkedSpecialBonus"	"special_bonus_unique_enigma_8"
+			}
 		}
 	}
-}
-
 //=================================================================================================================
 // Enigma: Black Hole
 //=================================================================================================================
@@ -173,15 +189,9 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5149"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"FightRecapLevel"				"2"
-
-		"HasShardUpgrade"			"1"
-		"HasScepterUpgrade"			"1"
+	
 		"MaxLevel"						"7"
+	
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -193,7 +203,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"110" // 80 
+		"AbilityCooldown"				"110"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -203,7 +213,12 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"damage"			"100 150 175 225 250 275 300"
+			"damage"			
+			{
+				"value"		"100 150 175 225 250 275 300"
+				"special_bonus_unique_enigma_6"	"+50"
+			}
+
 			"radius"			"420"
 			"pull_speed"			"40"
 			"tick_rate"				"0.1"
@@ -216,20 +231,20 @@
 				"value"					"7"
 				"RequiresScepter"		"1"
 			}
-			"shard_radius"	
+			"scepter_radius"	
 			{
 				"value"					"1200"
-				"RequiresShard"			"1"
+				"RequiresScepter"			"1"
 			}
-			"shard_drag_speed"			
+			"scepter_drag_speed"			
 			{
 				"value"					"175"
-				"RequiresShard"			"1"
+				"RequiresScepter"			"1"
 			}
-			"shard_pull_rotate_speed"	
+			"scepter_pull_rotate_speed"	
 			{
 				"value"					"0.1"
-				"RequiresShard"			"1"
+				"RequiresScepter"			"1"
 			}
 		}
 	}

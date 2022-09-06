@@ -6,14 +6,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "ID"                            "8192"  // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_BOTH"
-        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
-        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
-        "SpellDispellableType"          "SPELL_DISPELLABLE_YES_STRONG"
-        "FightRecapLevel"               "1"
-        "AbilitySound"                  "Hero_Marci.Grapple.Cast"
+      
         "MaxLevel"                      "7"
 
         // Casting
@@ -25,7 +18,7 @@
 
         // Time
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"              "16 15 14 13 12 11 10"
+        "AbilityCooldown"               "16 15 14 13 12 11 10"
 
         // Cost
         //-------------------------------------------------------------------------------------------------------------
@@ -33,49 +26,22 @@
         
         // Special
         //-------------------------------------------------------------------------------------------------------------
-        "AbilitySpecial"
+        "AbilityValues"
         {
-            "01"
-            {
-                "var_type"          "FIELD_INTEGER"
                 "landing_radius"    "275"
-            }
-            "02"
-            {
-                "var_type"          "FIELD_FLOAT"
                 "air_duration"      "0.5"
-            }
-            "03"
-            {
-                "var_type"          "FIELD_INTEGER"
                 "air_height"        "150"
-            }
-            "04"
-            {
-                "var_type"          "FIELD_INTEGER"
                 "pull_offset"       "75"
-            }
-            "05"
-            {
-                "var_type"              "FIELD_INTEGER"
                 "throw_distance_behind" "300"
-            }
-            "06"
-            {
-                "var_type"          "FIELD_INTEGER"
                 "pull_angle"        "230"
-            }
-            "07"
-            {
-                "var_type"              "FIELD_FLOAT"
-                "stun_duration"        "0.9 1.1 1.3 1.5 1.7 1.9 2.1"
-                "LinkedSpecialBonus"    "special_bonus_unique_marci_grapple_stun_duration"
-            }
-            "08"
-            {
-                "var_type"          "FIELD_INTEGER"
-                "impact_damage"     "70 120 170 220 320 470 520"
-            }
+                "debuff_duration"   "3.0"           
+                "impact_damage"     
+                {
+                    "value"         "70 120 170 220 320 470 520"
+                    "special_bonus_unique_marci_grapple_damage" "+60"
+                }
+                "movement_slow_pct"     "20 30 40 50"
+
         }
     }
 
@@ -87,22 +53,15 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "ID"                            "8198"  // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
-        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
-        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
-        "FightRecapLevel"               "2"
-        "AbilitySound"                  "Hero_Marci.Unleash.Cast"
-        "HasScepterUpgrade"             "1"
+       
          "MaxLevel"                      "7"
-
         // Casting
         //-------------------------------------------------------------------------------------------------------------
         "AbilityCastPoint"              "0.2"
 
         // Time     
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"              "80 75 70 65 60 55 50"
+        "AbilityCooldown"               "80 75 70 65 60 55 50"
 
         // Cost
         //-------------------------------------------------------------------------------------------------------------
@@ -112,7 +71,7 @@
         "AbilityValues"
         {
                 "duration"              "16"
-                "charges_per_flurry"   "4 5 6 7 8 9 10"
+                "charges_per_flurry"    "4 5 6 7 8 9 10"
                 "flurry_bonus_attack_speed" "700 975 1325 1650 1975 2400"
                 "time_between_flurries" "1.55 1.50 1.45 1.40 1.35 1.30 1.25"
                 "pulse_radius"          "800"
@@ -121,13 +80,22 @@
                 "pulse_move_slow_pct"   "30.0"
                 "pulse_attack_slow_pct" "80"
                 "max_time_window_per_hit"   "1.0"
-                "bonus_movespeed"       "15"
-                "recovery_fixed_attack_rate"    "2.0"
+                "bonus_movespeed"       
+                {
+                    "value"     "15"
+                    "special_bonus_unique_marci_unleash_speed"  "+15"
+                }
+                "recovery_fixed_attack_rate"    "1.55 1.50 1.45 1.40 1.35 1.30 1.25"
                 "shard_push_length"     "300"
                 "scepter_cooldown_reduction"
                 {       
                     "value"                 "10.0"
                     "RequiresScepter"       "1"
+                }
+                "dispel"            
+                {
+                    "value"         "0"
+                    "special_bonus_scepter" "+1"
                 }
         }
         
@@ -142,15 +110,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "ID"                            "8235"  // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
-        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
-        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
-        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
-        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
-        "FightRecapLevel"               "1"
-        "AbilitySound"                  "Hero_Marci.Rebound.Cast"
-        "HasShardUpgrade"               "1"
+        
          "MaxLevel"                      "7"
 
         // Casting
@@ -161,7 +121,6 @@
 
         // Time
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"             "17 16 15 14 13 12 11"
 
         // Cost
         //-------------------------------------------------------------------------------------------------------------
@@ -171,6 +130,12 @@
         //-------------------------------------------------------------------------------------------------------------
         "AbilityValues"
         {
+                "AbilityCooldown"               
+                {
+                    "value"     "17 16 15 14 13 12 11"
+                    "special_bonus_unique_marci_lunge_cooldown" "-3"
+                }
+                
                 "move_speed"            "2000"
                 "min_jump_distance"     "450"
                 "max_jump_distance"     
@@ -184,8 +149,11 @@
                     "value"            "90 160 230 300 370 430 570"
                     "LinkedSpecialBonus"    "special_bonus_unique_marci_lunge_damage"
                 }
-                "movement_slow_pct"     "30 35 40 45 50 55 60"
-                "debuff_duration"       "3.0"
+                "debuff_duration"
+                {
+                    "value"         "0.9 1.1 1.3 1.5 1.7 1.9 2.1"
+                    "special_bonus_unique_marci_grapple_stun_duration"  "+0.7"
+                }
                 "min_lob_travel_time"   "0.1"
                 "max_lob_travel_time"   "0.2"
                 "min_height_above_lowest"   "250.0"
@@ -194,7 +162,7 @@
                 "max_acceleration"      "6000.0"
                 "vector_preview_radius" "100"
                 "ally_buff_duration"    "5.0"
-                "ally_movespeed_pct"    "35.0"
+                "ally_movespeed_pct"    "35"
                 "impact_position_offset"    "64"
                 "target_abort_distance"     "700"
                 "scepter_heal"
@@ -211,7 +179,6 @@
         }
         
     }
-
     //=================================================================================================================
     // Marci: Sidekick
     //=================================================================================================================
@@ -220,12 +187,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "ID"                            "8234"  // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
-        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
-        "FightRecapLevel"               "1"
-        "AbilitySound"                  "Hero_Marci.Guardian.Applied"
+       
 
         // Casting
         //-------------------------------------------------------------------------------------------------------------
@@ -276,71 +238,7 @@
         }
     }
 
-    //=================================================================================================================
-    // Marci: Special Bonus
-    //=================================================================================================================
-    "special_bonus_unique_marci_lunge_ally_absorb"
-    {
-        // General
-        //-------------------------------------------------------------------------------------------------------------
-        "ID"                        "8236"  // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-        "AbilityType"               "DOTA_ABILITY_TYPE_ATTRIBUTES"
-        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"          "FIELD_FLOAT"
-                "value"             "160.0"
-                "ad_linked_abilities"           "marci_companion_run"               // this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-            }
-        }
-    }
-
-    //=================================================================================================================
-    // Marci: Special Bonus
-    //=================================================================================================================
-    "special_bonus_unique_marci_lunge_damage"
-    {
-        // General
-        //-------------------------------------------------------------------------------------------------------------
-        "ID"                        "8237"  // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-        "AbilityType"               "DOTA_ABILITY_TYPE_ATTRIBUTES"
-        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"          "FIELD_FLOAT"
-                "value"             "150.0"
-                "ad_linked_abilities"           "marci_companion_run"               // this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-            }
-        }
-    }
-
-    //=================================================================================================================
-    // Marci: Special Bonus
-    //=================================================================================================================
-    "special_bonus_unique_marci_grapple_stun_duration"
-    {
-        // General
-        //-------------------------------------------------------------------------------------------------------------
-        "ID"                        "8238"  // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-        "AbilityType"               "DOTA_ABILITY_TYPE_ATTRIBUTES"
-        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"          "FIELD_FLOAT"
-                "value"             "0.5"
-                "ad_linked_abilities"   "marci_grapple"             // this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-            }
-        }
-    }
 
     //=================================================================================================================
     // Marci: Special Bonus
@@ -360,116 +258,6 @@
                 "var_type"          "FIELD_FLOAT"
                 "value"             "3.5"
                 "ad_linked_abilities"           "marci_guardian"                // this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-            }
-        }
-    }
-
-    //=================================================================================================================
-    // Marci: Special Bonus
-    //=================================================================================================================
-    "special_bonus_unique_marci_unleash_flurry_crits"
-    {
-        // General
-        //-------------------------------------------------------------------------------------------------------------
-        "ID"                        "8240"  // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-        "AbilityType"               "DOTA_ABILITY_TYPE_ATTRIBUTES"
-        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"          "FIELD_FLOAT"
-                "value"             "150.0"
-                "ad_linked_abilities"           "marci_unleash"             // this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-            }
-        }
-    }
-
-    //=================================================================================================================
-    // Marci: Special Bonus
-    //=================================================================================================================
-    "special_bonus_unique_marci_unleash_pulse_lunge_refresh"
-    {
-        // General
-        //-------------------------------------------------------------------------------------------------------------
-        "ID"                        "8244"  // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-        "AbilityType"               "DOTA_ABILITY_TYPE_ATTRIBUTES"
-        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"          "FIELD_FLOAT"
-                "value"             "0.0"
-                "ad_linked_abilities"           "marci_unleash"             // this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-            }
-        }
-    }
-
-    //=================================================================================================================
-    // Marci: Special Bonus
-    //=================================================================================================================
-    "special_bonus_unique_marci_unleash_silence"
-    {
-        // General
-        //-------------------------------------------------------------------------------------------------------------
-        "ID"                        "8241"  // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-        "AbilityType"               "DOTA_ABILITY_TYPE_ATTRIBUTES"
-        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"          "FIELD_FLOAT"
-                "value"             "0.5" // duration
-                "ad_linked_abilities"           "marci_unleash"             // this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-            }
-        }
-    }
-
-    //=================================================================================================================
-    // Marci: Special Bonus
-    //=================================================================================================================
-    "special_bonus_unique_marci_guardian_lifesteal"
-    {
-        // General
-        //-------------------------------------------------------------------------------------------------------------
-        "ID"                        "8242"  // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-        "AbilityType"               "DOTA_ABILITY_TYPE_ATTRIBUTES"
-        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"          "FIELD_INTEGER"
-                "value"             "25"
-                "ad_linked_abilities"   "marci_guardian"                // this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-            }
-        }
-    }
-
-    //=================================================================================================================
-    // Marci: Special Bonus
-    //=================================================================================================================
-    "special_bonus_unique_marci_lunge_range"
-    {
-        // General
-        //-------------------------------------------------------------------------------------------------------------
-        "ID"                        "8243"  // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-        "AbilityType"               "DOTA_ABILITY_TYPE_ATTRIBUTES"
-        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"          "FIELD_INTEGER"
-                "value"             "200"
-                "ad_linked_abilities"           "marci_companion_run"               // this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
             }
         }
     }

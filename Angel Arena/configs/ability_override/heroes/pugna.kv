@@ -105,7 +105,7 @@
 }
 	
 	
-//=================================================================================================================
+	//=================================================================================================================
 	// Pugna: Nether Ward
 	//=================================================================================================================
 	"pugna_nether_ward"
@@ -113,12 +113,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5188"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.		
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT "		
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Pugna.NetherWard"
-		"HasShardUpgrade"			"1"
+	
 		"MaxLevel"						"7"
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -168,7 +163,7 @@
 			"06"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"spell_damage_reduction"	"5 7.5 10 12.5 15 17.5 20"
+				"spell_damage_reduction"	"0"
 				"DamageTypeTooltip"			"DAMAGE_TYPE_NONE"
 			}
 			"06"
@@ -181,66 +176,86 @@
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
 	
-//=================================================================================================================
-// Pugna: Life Drain
-//=================================================================================================================
-"pugna_life_drain"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"900 950 1000 1050 1100 1150 1200"
-	"AbilityCastPoint"				"0.2"
-	"AbilityChannelTime"			"12.0"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"15.0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"125 175 225 325 425 525 625"
-
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Pugna: Life Drain
+	//=================================================================================================================
+	"pugna_life_drain"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5189"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"						"7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900 950 1000 1050 1100 1150 1200"
+		"AbilityCastPoint"				"0.2"
+		"AbilityChannelTime"			"12.0"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125 175 225 325 425 525 625"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// All about the damage
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"					"FIELD_INTEGER"
-			"health_drain"				"200 225 250 300 325 375 400"
-			"CalculateSpellDamageTooltip"	"1"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"scepter_health_drain"			"300 350 400 450 500 550 600"
-			"RequiresScepter"		"1"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_FLOAT"
+			"health_drain"
+			{
+				"value"					"200 225 250 300 325 375 400"
+				"CalculateSpellDamageTooltip"	"1"
+			}
 			"tick_rate"					"0.25"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_INTEGER"
 			"drain_buffer"				"200"
-		}
-		"05"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"scepter_cooldown"			"0"
-			"RequiresScepter"		    "1"
-		}
-		"06"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"damage_pct"				"32"
-			"CalculateSpellDamageTooltip" "0"
+			"shard_damage_pct_from_ward"
+			{
+				"value"				"70"
+				"RequiresShard"		"1"
+			}
+			"bonus_heal_pct"
+			{
+				"value"					"0"
+				"special_bonus_unique_pugna_1"			"+20"
+			}
+			"spell_amp_drain_rate"
+			{
+				"value"						"0"
+				"special_bonus_scepter"		"+8"
+			}
+			"spell_amp_drain_max"
+			{
+				"value"						"0"
+				"special_bonus_scepter"		"+75"
+			}
+			"spell_amp_drain_rate_ward"
+			{
+				"value"						"0"
+				"special_bonus_scepter"		"+4"
+			}
+			"spell_amp_drain_duration"
+			{
+				"value"						"0"
+				"special_bonus_scepter"		"+8"
+			}			
+			"max_spell_amp_drain_pct"
+			{
+				"value"						"0"
+				"special_bonus_scepter"		"+100"
+			}	
+			"AbilityCooldown"				
+			{
+				"value"						"7"		
+				"special_bonus_scepter"		"-50%"
+			}
 		}
 	}
-}

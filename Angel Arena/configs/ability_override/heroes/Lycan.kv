@@ -6,10 +6,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5395"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilitySound"					"Hero_Lycan.SummonWolves"
-
-        "HasShardUpgrade"               "1"
+	
         "MaxLevel"						"7"
 
 		// Casting
@@ -67,16 +64,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"333"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
 		
-		"MaxLevel"						"3"
-		"FightRecapLevel"				"1"
-		"IsGrantedByScepter"			"1"
-		"HasScepterUpgrade"				"1"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -112,12 +100,8 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5396"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"AbilitySound"					"Hero_Lycan.Howl"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		
 		"MaxLevel"						"7"
-
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"0.3"
@@ -144,6 +128,11 @@
 				"value"		"30 33 36 40 43 46 50"
 				"special_bonus_unique_lycan_6"	"+20"
 			}
+			"total_attack_damage_reduction"		
+			{
+				"value"		"0"
+				"special_bonus_unique_lycan_5"	"+1"
+			}
 			"armor"			"3 4 5 6 7 10 12"
 			"radius"			"1500"
 		}
@@ -159,7 +148,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5397"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
 		"MaxLevel"						"7"
 		
 		// Casting
@@ -186,15 +175,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5398"							// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"FightRecapLevel"				"2"
-		"AbilitySound"					"Hero_Lycan.Shapeshift.Cast"
-		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
-
-		"HasScepterUpgrade"			"1"
-		"AbilityDraftUltScepterAbility"		"lycan_wolf_bite"
+	
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -226,78 +207,4 @@
 		}
 	}
 
-	//=================================================================================================================
-	// Lycan: Summon Wolves Critical Strike
-	//=================================================================================================================
-	"lycan_summon_wolves_critical_strike"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"5399"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"MaxLevel"						"1"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		
 	
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"maim_chance"				"20"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"maim_duration"					"4.0"
-			}
-			"03"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"maim_movement_speed"				"0"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"maim_attack_speed"				"30"
-			}
-			"05"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"maim_damage"				"40"
-			}
-		}
-		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
-	}
-
-	//=================================================================================================================
-	// Lycan Summon Wolves: Permanent Invisibility
-	//=================================================================================================================
-	"lycan_summon_wolves_invisibility"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"					"5500"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"fade_time"					"0.0 0.0 0.0"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"fade_delay"				"1.0"
-			}
-		}
-		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
-	}

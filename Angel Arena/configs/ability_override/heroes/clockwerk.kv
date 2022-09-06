@@ -7,12 +7,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"630"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
-		"MaxLevel"						"1"
-		"FightRecapLevel"				"1"
-		"IsGrantedByShard"  			"1"
-		"HasShardUpgrade"     			"1"
-		"AbilitySound"					"Hero_Rattletrap.Battery_Assault_Impact"
+	
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -61,13 +56,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"321"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"MaxLevel"						"1"
-		"FightRecapLevel"				"1"
-		"IsGrantedByScepter"			"1"
-		"HasScepterUpgrade"				"1"
-		"AbilitySound"					"Hero_Rattletrap.Battery_Assault_Impact"
+	
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -76,7 +65,7 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"60"
+		"AbilityCooldown"				"50"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -84,34 +73,22 @@
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"buff_duration"				"8"
-				
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"bonus_movement_speed"		"30"
-				
-			}
-			"03"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"bonus_attack_speed"		"200"
-				
-			}
-			"04"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"debuff_duration"		"4"
-				
-			}
+			"buff_duration"					"13"
+			"bonus_movement_speed"			"0"
+			"bonus_attack_speed"			"250"
+			"debuff_duration"				"3"
+			"hookshot_damage_bonus_pct"		"0"
+			"hookshot_radius_bonus_pct"		"50"
+			"hookshot_duration_bonus_pct"	"50"
+			"rocket_flare_interval"				"0.15"
+			"rocket_flare_offset_pct"		"125"
+			"rocket_flare_rockets"				"2"
+			"rocket_flare_cooldown"				"3"
 		}
 	}
+
 
 	//=================================================================================================================
 	// Rattletrap: Battery Assault
@@ -121,12 +98,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5237"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Rattletrap.Battery_Assault_Impact"
+		
 		"MaxLevel"                      "7"
 
 		// Time		
@@ -147,34 +119,24 @@
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"radius"			"275"
-			}
-			"02"
+			"radius"			"275"
+			"duration"					"10.5"
+			"interval"
 			{	
-				"var_type"					"FIELD_FLOAT"
-				"duration"					"10.5 10.5 10.5 10.5"
+				"value"								"0.7"
+				"special_bonus_unique_clockwerk"		"-0.25"
 			}
-			"03"
+			"damage"
 			{	
-				"var_type"			"FIELD_FLOAT"
-				"interval"			"0.7"
-				"LinkedSpecialBonus"		"special_bonus_unique_clockwerk"
+				"value"									"40 60 80 100 120 150"
+				"special_bonus_unique_clockwerk_3"		"+24"
 			}
-			"04"
-			{	
-				"var_type"			"FIELD_INTEGER"
-				"damage"			"20 32 36 41 48 54 65"
-				"LinkedSpecialBonus"		"special_bonus_unique_clockwerk_3"
-			}
+			"creep_damage_multiplier"					"2"
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
-		
 	//=================================================================================================================
 	// Rattletrap: Power Cogs
 	//=================================================================================================================
@@ -183,10 +145,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5238"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"AbilitySound"					"Hero_Rattletrap.Power_Cogs"
+	
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -204,33 +163,38 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-				"duration"			"5.0"
-				"damage"		"100 150 200 250 325 450 575"
-				"mana_burn"		
-				{
-					"value"				"80 100 140 180 220 280 350"
-					"LinkedSpecialBonus"		"special_bonus_unique_clockwerk_8"
-				}
-				"attacks_to_destroy"	
-				{
-					"value"					"3 4 5 6 7 8 9"
-					"LinkedSpecialBonus"		"special_bonus_unique_clockwerk_5"
-				}
-				"push_length"		"252"
-				"push_duration"		"0.85"
-				"cogs_radius"			"200"
-				"trigger_distance"			"170"
-				"extra_pull_buffer"			"-10"
-				"bonus_armor"		"0"
-				"leash"			
-				{
-					"value"			"0"
-					"special_bonus_unique_clockwerk_2"	"+1"
-				}
+			"duration"			"5.0"
+			"damage"		"100 150 200 250 325 450 575"
+			"mana_burn"		
+			{
+				"value"				"80 100 140 180 220 280 350"
+				"special_bonus_unique_clockwerk_8"		"+60"
+			}
+			"attacks_to_destroy"	
+			{
+				"value"					"3 4 5 6 7 8 9"
+				"special_bonus_unique_clockwerk_5"		"+2"
+			}
+			"push_length"		"300"
+			"push_duration"		"1"
+			"cogs_radius"			"215"
+			"trigger_distance"			"170"
+			"extra_pull_buffer"			"-10"
+			"bonus_armor"		"0"
+			"leash"			
+			{
+				"value"			"0"
+				"special_bonus_unique_clockwerk_2"	"+1"
+			}
+			"AbilityCooldown"				
+			{
+				"value"			"15"
+				"special_bonus_unique_clockwerk_9"		"-2"
+			}
+
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
-
 	//=================================================================================================================
 	// Rattletrap: Rocket Flare
 	//=================================================================================================================
@@ -239,11 +203,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5239"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Rattletrap.Rocket_Flare.Fire"
+		
 		"MaxLevel"                      "7"
 
 		// Casting
@@ -275,6 +235,11 @@
 				"speed"				"1750"
 				"vision_radius"		"600"
 				"damage"			"100 145 225 305 350 395 450"
+				"AbilityCooldown"				
+			{
+				"value"				"13"
+				"special_bonus_unique_clockwerk_7" "-2"
+			}
 		}
 		
 	}
@@ -287,18 +252,8 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5240"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
-		"FightRecapLevel"				"2"
-		"AbilitySound"					"Hero_Rattletrap.Hookshot.Fire"
-
-		"HasScepterUpgrade"			"1"
-		"AbilityDraftUltScepterAbility"		"rattletrap_overclocking"
-		"AbilityDraftUltShardAbility"		"rattletrap_jetpack"
-		"MaxLevel"                      "7"
+		
+			"MaxLevel"                      "7"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -344,11 +299,6 @@
 				"var_type"			"FIELD_INTEGER"
 				"damage"			"350 450 500 750 950 1100 1250"
 			}
-			"06"
-			{	
-				"var_type"			"FIELD_FLOAT"
-				"cooldown_scepter"	"12.0"
-				"RequiresScepter"			"1"
-			}
+			
 		}
 	}

@@ -6,9 +6,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"6344"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+	
 		"MaxLevel"						"7"
 
 		// Casting
@@ -84,14 +82,8 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"6461"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"FightRecapLevel"				"1"
-        "HasScepterUpgrade"			"1"
+		
         "MaxLevel"						"7"
-
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"0"
@@ -107,69 +99,28 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"damage"					"120 180 255 340 425 495 550"
+			"hero_stacks"			
 			{
-				"var_type"				"FIELD_INTEGER"
-				"damage"				"120 180 255 340 425 495 550"
-				"LinkedSpecialBonus"	"special_bonus_unique_pangolier_2"
+				"value"					"15"
+				"special_bonus_unique_pangolier_shield_crash_herostacks"		"+5"
 			}
-			"02"
+			"duration"				"4"
+			"radius"				"500"
+			"jump_duration"			"0.4"
+			"jump_duration_gyroshell"	"0.75"
+			"jump_height"			"250"
+			"jump_height_gyroshell"	"350"
+			"jump_horizontal_distance"	"225"
+			"rolling_thunder_cooldown"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"hero_stacks"			"15" // 20
+				"value"						"0"
+				"special_bonus_unique_pangolier_2"	"+2.5"
 			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"duration"				"4"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"radius"				"500"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"jump_duration"			"0.4"
-			}
-			"06"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"jump_duration_gyroshell"	"0.75"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"jump_height"			"250"
-			}
-			"08"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"jump_height_gyroshell"	"350"
-			}
-			"09"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"jump_horizontal_distance"	"225"
-			}
-			"10"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"rolling_thunder_cooldown"	"2.5"
-			}
-			"11"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"slow"	"30"
-			}
-			"12"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"slow_duration"	"3"
-			}
+			"slow"	"30"
+			"slow_duration"	"3"
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
@@ -182,9 +133,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"6346"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -222,19 +171,21 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"7307"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+	
 		"MaxLevel"                      "7"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-				"chance_pct"			"10" // 17
-				"duration"				"1.5 1.7 2 2.3 2.6 2.9 3.3" // "2.0 2.5 3.0 3.5 4.0 4.5 5.0"
-				"slow"			"20" // "45"
-				"armor"			"3 4 5 6 7 8 9"
+				"chance_pct"			"10" 
+				"duration"				"1.5 1.7 2 2.3 2.6 2.9 3.3" 
+				"slow"			"20" 
+				"armor"			
+				{
+				"value"					"3 4 5 6 7 8 9"
+				"special_bonus_unique_pangolier_luckyshot_armor"			"+3"
+				}
 		}
 		
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -248,14 +199,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"6343"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"FightRecapLevel"				"1"
-
-		"AbilityDraftUltShardAbility"		"pangolier_rollup"
+	
 		"MaxLevel"						"7"
 
 		// Casting
@@ -358,8 +302,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"6459"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		
 		"MaxLevel"						"7"
 
 		// Casting
@@ -377,13 +320,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"8027"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET |  DOTA_ABILITY_BEHAVIOR_HIDDEN  | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"MaxLevel"						"1"
-		"FightRecapLevel"				"1"
-		"IsGrantedByShard"				"1"
+	
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------

@@ -6,14 +6,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5462"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_NyxAssassin.Impale"
+	
 		"MaxLevel"						"7"
 
 		// Casting
@@ -73,11 +66,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5463"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_NyxAssassin.ManaBurn.Target"
+	
 		"MaxLevel"						"7"
 
 		// Unit Targeting
@@ -124,11 +113,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5464"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_NyxAssassin.SpikedCarapace"
+		
 		"MaxLevel"						"7"
 
 		// Stats		
@@ -142,43 +127,23 @@
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"reflect_duration"			
 			{
-				"var_type"					"FIELD_FLOAT"
-				"reflect_duration"			"2.25"
+				"value"			"2.25"
+				"special_bonus_unique_nyx_carapace_reflect_duration"			"+0.5"
 			}
-			"02"
+			"stun_duration"
 			{
-				"var_type"					"FIELD_FLOAT"
-				"stun_duration"				"1.0 1.2 1.6 1.8 1.9 2.0 2.2"
-				"LinkedSpecialBonus"	"special_bonus_unique_nyx_6"
+				"value"					"1.0 1.2 1.6 1.8 1.9 2.0 2.2"
+				"special_bonus_unique_nyx_6"	"+0.6"
 			}
-			"03"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"bonus_damage"				"0"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"bonus_armor"				"0"
-			}
-			"05"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"bonus_intellect"				"0"
-			}
-			"06"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"damage_reflect_pct"		"100"
-				"LinkedSpecialBonus"				"special_bonus_unique_nyx"
-			}
+			"damage_reflect_pct"				"100"
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
+
 
 	//=================================================================================================================
 	// Nyx Assassin: Vendetta
@@ -188,16 +153,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5465"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"FightRecapLevel"				"2"
-		"AbilitySound"					"Hero_NyxAssassin.Vendetta"
-		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_6"
-
-        "HasShardUpgrade"               "1"
+	
         "MaxLevel"						"7"
 
 		"AbilityDraftUltScepterAbility"		"nyx_assassin_burrow"
@@ -248,16 +204,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5666"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"MaxLevel"						"1"
-		"FightRecapLevel"				"1"
-		"IsGrantedByScepter"			"1"
-		"AbilitySound"					"Hero_NyxAssassin.Burrow.In"
-		"LinkedAbility"					"nyx_assassin_unburrow"
-		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
-
-		"HasScepterUpgrade"			"1"
+		
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -313,11 +260,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5673"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"MaxLevel"						"1"
-		"FightRecapLevel"				"1"
-		"LinkedAbility"					"nyx_assassin_burrow"
- 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------

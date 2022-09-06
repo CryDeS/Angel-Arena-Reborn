@@ -1,161 +1,183 @@
-"dragon_knight_breathe_fire"
-{
-	"MaxLevel"						"7"
-
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"600"
-	"AbilityCastPoint"				"0.0"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"7.0"
-	
-	// Damage.
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"125 200 250 325 425 550 600"
-	
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"70 90 110 130 140 150 160"
-	
-	// Special	
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+//=================================================================================================================
+	// Dragon Knight: Fireball
+	//=================================================================================================================
+	"dragon_knight_fireball"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"660"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"start_radius"			"150 150 150 150 150 150 150"
+			"radius"			"350"
+			"damage"			"150"
+			"duration"			"8.0"
+			"burn_interval"			"0.5"
+			"linger_duration"			"2"
+			"dragon_form_cast_range"	"1400"
+			"melee_cast_range"			"600"
 		}
-		"02"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_5"
+	}	
+
+	
+	//=================================================================================================================
+	// Dragon Knight: Breathe Fire
+	//=================================================================================================================
+	"dragon_knight_breathe_fire"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5226"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityCastPoint"				"0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"7"
+		
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"70 90 110 130 140 150 160"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"end_radius"			"250 250 250 250 250 250 250"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"range"					"750 750 750 750 750 750 750"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
+			"start_radius"			"150"
+			"end_radius"			"250"
+			"range"					"750"
+			"AbilityCastRange"			"600"	
 			"speed"					"1050"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"reduction"				"-15 -18 -21 -24 -27 -30 -35"
-			"LinkedSpecialBonus"	"special_bonus_unique_dragon_knight_3"
-		}
-		"06"
-		{
-			"var_type"				"FIELD_FLOAT"
+			"damage"							"125 200 250 325 425 550 600"
+			"reduction"
+			{
+				"value"				"-15 -18 -21 -24 -27 -30 -35"
+				"special_bonus_unique_dragon_knight_3"		"-30"
+			}
+			"dragon_form_bonus_pct"
+			{
+				"value"		"0"
+				"special_bonus_unique_dragon_knight_9"				"+75"
+			}
 			"duration"				"5"
 		}
-		"07"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage_pct"			"100"
-		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
-}
-
-"dragon_knight_dragon_tail"
-{
-	"MaxLevel"						"7"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"200"
-	"AbilityCastPoint"				"0.0 0.0 0.0 0.0 0.0 0.0 0.0"
 	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"15"
-
-	// Damage.
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"25 50 75 100 150 200 300"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"100 100 100 100 100 100 100"
-	
-	// Special	
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Dragon Knight: Dragon Tail
+	//=================================================================================================================
+	"dragon_knight_dragon_tail"
 	{
-		"01"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"stun_duration"			"1.5 1.75 2.0 2.25 2.5 2.75 3.0"
-			"LinkedSpecialBonus"	"special_bonus_unique_dragon_knight_2"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"dragon_cast_range"		"400"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"projectile_speed"		"1600"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage_pct"			"100"
-		}
-	}
-}
-
-//=================================================================================================================
-// Dragon Knight: Dragon Blood
-//=================================================================================================================
-"dragon_knight_dragon_blood"
-{
-	"MaxLevel"							"7"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5227"							// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"200"
+		"AbilityCastPoint"				"0.0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"
 	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"bonus_health_regen"		"10 20 30 40 50 60 70"
-			"LinkedSpecialBonus"		"special_bonus_unique_dragon_knight"
-			"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"bonus_armor"				"5 10 15 20 25 30 35"
-			"LinkedSpecialBonus"		"special_bonus_unique_dragon_knight"
-			"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
-		}
-	}
-}
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"25 50 75 100 150 200 300"
 
-//=================================================================================================================
-// Dragon Knight: Elder Dragon Form
-//=================================================================================================================
-"dragon_knight_elder_dragon_form"
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"stun_duration"			"1.5 1.75 2.0 2.25 2.5 2.75 3.0"
+				"LinkedSpecialBonus"		"special_bonus_unique_dragon_knight_2"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dragon_cast_range"			"400"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_speed"			"1600"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Dragon Knight: Dragon Blood
+	//=================================================================================================================
+	"dragon_knight_dragon_blood"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5228"							// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"							"7"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_health_regen"			"10 20 30 40 50 60 70"
+				"LinkedSpecialBonus"			"special_bonus_unique_dragon_knight"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_armor"					"5 10 15 20 25 30 35"
+				"LinkedSpecialBonus"			"special_bonus_unique_dragon_knight"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	
+	//=================================================================================================================
+	// Dragon Knight: Elder Dragon Form
+	//=================================================================================================================
+	"dragon_knight_elder_dragon_form"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5229"							// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES_ENEMIES_NO"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"FightRecapLevel"				"2"
-		"AbilitySound"					"Hero_DragonKnight.ElderDragonForm"
-        "HasScepterUpgrade"             "1"
+	
 
-		"AbilityDraftUltShardAbility"		"dragon_knight_fireball"
+	
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -167,7 +189,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"100 200 300"		
+		"AbilityManaCost"				"50"		
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -185,12 +207,12 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_movement_speed"		"25"
+				"bonus_movement_speed"		"25 30 35"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_attack_range"		"372 372 372 400"
+				"bonus_attack_range"		"350"
 			}
 			"04"
 			{
@@ -221,7 +243,7 @@
 			"09"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"frost_bonus_movement_speed"	"-30 -30 -30"
+				"frost_bonus_movement_speed"	"-40 -40 -40 -60"
 				"LinkedSpecialBonus"			"special_bonus_unique_dragon_knight_5"
 			}
 			"10"
@@ -233,7 +255,7 @@
 			"11"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"frost_duration"				"3.0"
+				"frost_duration"				"3.0 3.0 3.0"
 			}
 			"12"
 			{
@@ -284,48 +306,4 @@
 				"duration"					"3.0"
 			}
 		}
-	}	
-	//=================================================================================================================
-	// Dragon Knight: Fireball
-	//=================================================================================================================
-	"dragon_knight_fireball"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"					"660"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"MaxLevel"						"1"
-		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN  | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"FightRecapLevel"				"1"
-		"MaxLevel"						"1"
-		"IsGrantedByShard"			"1"
-		
-
-		// Casting
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.2"
-		
-		// Time		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"20"
-
-		// Cost
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"100"
-		
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityValues"
-		{
-			"radius"			"350"
-			"damage"			"150"
-			"duration"			"8.0"
-			"burn_interval"			"0.5"
-			"linger_duration"			"2"
-			"dragon_form_cast_range"	"1400"
-			"melee_cast_range"			"600"
-		}
-		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_5"
 	}	

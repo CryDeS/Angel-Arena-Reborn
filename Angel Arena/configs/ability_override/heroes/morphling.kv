@@ -6,11 +6,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5052"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Morphling.Waveform"
+	
 		"MaxLevel"						"7"
 
 		// Casting
@@ -57,17 +53,8 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5053"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Morphling.AdaptiveStrike"
-		"LinkedAbility"					"morphling_adaptive_strike_str"
+	
 		"MaxLevel"						"7"
-
-        "HasShardUpgrade"               "1"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -89,35 +76,21 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"						"FIELD_FLOAT"
 				"damage_base"					"70 105 140 175 210 245 280"
-			}
-			"02"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"damage_min"					"1"
-				"CalculateSpellDamageTooltip"	"0"
-			}
-			"03"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"damage_max"					"3"
-				"CalculateSpellDamageTooltip"	"0"
-			}
-			"04"
-			{
-				"var_type"						"FIELD_FLOAT"
+				"damage_min"					
+				{
+					"value"					"1"
+					"CalculateSpellDamageTooltip"	"0"
+				}
+				"damage_max"					
+				{
+					"value"				"3"
+					"CalculateSpellDamageTooltip"	"0"
+				}
 				"projectile_speed"					"1150"
-			}
-			"05"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"shared_cooldown"					"0"
-			}
+				"shared_cooldown"					"3"
 		}
 	}
 	
@@ -129,18 +102,8 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"7000"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Morphling.AdaptiveStrike"
-		"LinkedAbility"					"morphling_adaptive_strike_agi"
+	
 		"MaxLevel"						"7"
-
-		"HasShardUpgrade"               "1"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -162,38 +125,22 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"stun_min"						"1.25"
-			}
-			"02"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"stun_max"						"1.25 1.5 1.75 2.0 2.5 3.0 3.5"
-			}
-			"03"
-			{
-				"var_type"						"FIELD_INTEGER"
+				"stun_min"						
+				{
+					"value" "1.25"
+					"special_bonus_unique_morphling_10" "+1"
+				}
+				"stun_max"						
+				{
+					"value"	"1.25 1.5 1.75 2.0 2.5 3.0 3.5"
+					"special_bonus_unique_morphling_10"	"+1"
+				}
 				"knockback_min"					"100"
-			}
-			"04"
-			{
-				"var_type"						"FIELD_INTEGER"
 				"knockback_max"					"450"
-			}
-			"05"
-			{
-				"var_type"						"FIELD_FLOAT"
 				"projectile_speed"					"1150"
-			}
-			"06"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"shared_cooldown"					"0"
-			}
+				"shared_cooldown"					"3"
 		}
 	}
 	
@@ -210,12 +157,12 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"bonus_attributes"		
 			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_attributes"		"10 12 14 16 18 20 22"
+				"value"					"10 12 14 16 18 20 22"
+				"special_bonus_shard"					"+6"
 			}
 		}
 	}
@@ -228,40 +175,30 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5055"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
-		"LinkedAbility"					"morphling_morph_str"
-		"AbilityCastAnimation"			"ACT_INVALID"
+	
 		"MaxLevel"						"7"
-
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"0.0"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"points_per_tick"		"1"
+			"morph_cooldown"		"0.5 0.3 0.25 0.15 0.1 0.07 0.04"
+			"bonus_attributes"		
 			{
-				"var_type"				"FIELD_INTEGER"
-				"points_per_tick"		"1"
+				"value"					"10 12 14 16 18 20 22"
+				"special_bonus_shard"					"+6"
 			}
-			"02"
+			"morph_rate_tooltip"	"2 3 4 6 10 14 25"
+			"mana_cost"				"15"
+			"castable_while_stunned"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"morph_cooldown"		"0.5 0.3 0.25 0.15 0.1 0.07 0.04"
+				"value"	"0"
+				"special_bonus_shard"	"+1"
 			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_attributes"		"10 12 14 16 18 20 22"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"morph_rate_tooltip"	"2 3 4 6 10 14 25"
-			}
-			
 		}
 	}
 
@@ -273,41 +210,30 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5056"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
-		"LinkedAbility"					"morphling_morph_agi"
- 		"AbilityCastAnimation"			"ACT_INVALID"
- 		"MaxLevel"						"7"
-
+	
+		"MaxLevel"						"7"
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"0.0"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"points_per_tick"		"1"
+			"morph_cooldown"		"0.5 0.3 0.25 0.15 0.1 0.07 0.04"
+			"bonus_attributes"		
 			{
-				"var_type"				"FIELD_INTEGER"
-				"points_per_tick"		"1"
+				"value"					"10 12 14 16 18 20 22"
+				"special_bonus_shard"					"+6"
 			}
-			"02"
+			"morph_rate_tooltip"	"2 3 4 6 10 14 25"
+			"mana_cost"				"15"
+			"castable_while_stunned"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"morph_cooldown"		"0.5 0.3 0.25 0.15 0.1 0.07 0.04"
+				"value"	"0"
+				"special_bonus_shard"	"+1"
 			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_attributes"		"10 12 14 16 18 20 22"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"morph_rate_tooltip"	"2 3 4 6 10 14 25"
-			}
-		
-			
 		}
 	}
 	
@@ -319,13 +245,7 @@
 		// General
 		//-----------------------------------------------------------------
 		"ID"					"5057"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CUSTOM"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"AbilitySound"					"Hero_Morphling.Replicate"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+	
 		"MaxLevel"						"7"
 
         "HasScepterUpgrade"			"1"
@@ -390,10 +310,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5058"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"AbilityCastAnimation"			"ACT_INVALID"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -413,11 +330,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5674"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CUSTOM"
-		"MaxLevel"						"1"
-		"FightRecapLevel"				"1"
+		
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------

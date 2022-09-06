@@ -1,4 +1,5 @@
 function merge_table(tbl1, tbl2)
+	--print(tbl1, tbl2)
 	for k,v in pairs(tbl2) do
 		if type(v) == 'table' and tbl1[k] then
 			merge_table(tbl1[k], v)
