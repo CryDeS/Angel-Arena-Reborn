@@ -8,7 +8,7 @@
 "DOTA_Tooltip_ability_item_azrael_crossbow_bonus_stats"				"+$all"
 "DOTA_Tooltip_ability_item_azrael_crossbow_bonus_as"				"+$attack"
 "DOTA_Tooltip_ability_item_azrael_crossbow_bonus_hpreg"				"+$hp_regen"
-"DOTA_Tooltip_ability_item_azrael_crossbow_bonus_mpreg"				"+$mana_regen"
+"DOTA_Tooltip_Ability_item_azrael_crossbow_bonus_hp"				"+$health"
 "DOTA_Tooltip_ability_item_azrael_crossbow_bonus_attack_range"		"+$attack_range"
 
 "DOTA_Tooltip_ability_item_azrael_crossbow_projectile_speed"		"PROJECTILE SPEED:"

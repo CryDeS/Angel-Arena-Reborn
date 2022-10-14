@@ -16,6 +16,7 @@ function mod:OnCreated( kv )
 
 	self.bonusDamage 	  = ability:GetSpecialValueFor("bonus_damage")
 	self.bonusAs 	 	  = ability:GetSpecialValueFor("bonus_as")
+	self.hp 		 	  = ability:GetSpecialValueFor("bonus_hp")
 	self.bonusStats  	  = ability:GetSpecialValueFor("bonus_stats")
 	self.bonusAttackRange = ability:GetSpecialValueFor("bonus_attack_range")
 
@@ -44,6 +45,7 @@ function mod:DeclareFunctions() return
 {
 	MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
 	MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,
+	MODIFIER_PROPERTY_HEALTH_BONUS,
 	MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,
 	MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
 	MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,
@@ -66,6 +68,10 @@ mod.GetModifierBonusStats_Intellect = mod.GetModifierBonusStats_Strength
 
 function mod:GetModifierAttackSpeedBonus_Constant( params )
 	return self.bonusAs
+end
+
+function mod:GetModifierHealthBonus( params )
+	return self.hp
 end
 
 function mod:GetModifierAttackRangeBonus()

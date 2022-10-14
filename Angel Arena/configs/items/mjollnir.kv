@@ -1,0 +1,78 @@
+	//=================================================================================================================
+	// Recipe: Mjollnir
+	//=================================================================================================================
+	"item_recipe_mjollnir"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"157"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"300"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_mjollnir"
+		"ItemRequirements"
+		{
+			"01"						"item_maelstrom*;item_hyperstone"
+		}
+	}
+	
+	//=================================================================================================================
+	// Mjollnir
+	//=================================================================================================================
+	"item_mjollnir"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"158"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"30.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"
+		"ItemCost"						"5000"
+		"ItemShopTags"					"damage;attack_speed;unique"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"mjollnir"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_damage"			"30"
+			"bonus_attack_speed"	"90"
+			"static_duration"		"15.0"
+			"static_chance"			"25"
+			"static_strikes"		"4"
+			"static_damage"			"250"
+			"static_primary_radius"	"600"
+			"static_seconary_radius"	"900"
+			"static_radius"			"900"
+			"static_cooldown"		"1.0"
+			"chain_chance"			"35"
+			"chain_damage"			"200"
+			"chain_strikes"			"10"
+			"chain_radius"			"700"
+			"chain_delay"			"0.25"
+			"chain_cooldown"		"0.2"
+			"max_charges"			"0"
+			"chain_damage_per_charge"	"0"
+		}
+	}

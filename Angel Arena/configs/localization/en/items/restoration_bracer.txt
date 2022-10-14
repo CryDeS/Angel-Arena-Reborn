@@ -1,4 +1,5 @@
 "DOTA_Tooltip_Ability_item_restoration_bracer"							"Restoration Bracer"
 "DOTA_Tooltip_Ability_item_restoration_bracer_bonus_str"				"+$str"
 "DOTA_Tooltip_Ability_item_restoration_bracer_bonus_hp_regen"			"+$hp_regen"
+"DOTA_Tooltip_ability_item_restoration_bracer_bonus_mpreg"				"+$mana_regen"
 "DOTA_Tooltip_Ability_item_restoration_bracer_lore"						"Magical bracer of regeneration of junior druids."

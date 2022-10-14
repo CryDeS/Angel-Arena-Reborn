@@ -1,0 +1,81 @@
+//=================================================================================================================
+	// Recipe: Assault Cuirass
+	//=================================================================================================================
+	"item_recipe_assault"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"111"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1175"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_assault"
+		"ItemRequirements"
+		{
+			"01"						"item_platemail;item_hyperstone;item_buckler"
+		}
+	}
+	
+	//=================================================================================================================
+	// Assault Cuirass
+	//=================================================================================================================
+	"item_assault"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"112"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityCastRange"				"1200"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"5125"
+		"ItemShopTags"					"attack_speed;armor;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"ac;assault cuirass"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"30"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"10"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"1200"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_attack_speed"		"30"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_positive_armor"	"5"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_negative_armor"	"-5"
+			}			
+		}
+	}

@@ -20,10 +20,10 @@
 		
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"525"
-		"AbilityCastPoint"				"0.3"
+		"AbilityCastRange"				"600" 
+		"AbilityCastPoint"				"0.2" 
 		"AbilityCooldown"				"8"
-		"AbilityManaCost"				"50 60 70 80 90 100 110"
+		"AbilityManaCost"				"60 75 90 105 120 135 150" 
 			
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -35,16 +35,16 @@
 		{
 			"damage"			
 			{
-				"value"		"120 180 255 300 400 450 520"
-				"special_bonus_unique_night_stalker_4"	"+50"
+				"value"		"100 170 240 310 380 450 520" 
+				"special_bonus_unique_night_stalker_4"	"+70" 
 			}
-			"duration_day"			"2.0 2.2 2.4 2.6 2.8 3.0 3.2"
-			"duration_night"		"4.0 4.5 5.0 5.5 6.0 6.5 7.0"
+			"duration_day"			"3.0" 
+			"duration_night"		"4.0 4.4 4.8 5.2 5.6 6 6.4"
 			"movespeed_slow"		"-50"
 			"attackspeed_slow"		"-50"
 			"radius_scepter"		
 			{
-				"value"			"900"			
+				"value"			"900"		
 				"RequiresScepter"		"1"
 			}
 			"scepter_ministun"		
@@ -74,9 +74,9 @@
 		
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"300"
-		"AbilityCastPoint"				"0.3"
-		"AbilityCooldown"				"14" // 13
+		"AbilityCastRange"				"400" 
+		"AbilityCastPoint"				"0.2" 
+		"AbilityCooldown"				"16" 
 		"AbilityManaCost"				"100"
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 		"AbilityCastGestureSlot"		"DEFAULT"
@@ -86,8 +86,8 @@
 		"AbilityValues"
 		{
 			"duration_day"			"3.0"
-			"duration_night"		"4 4.5 5.0 5.2 5.4 5.8 6.0" //"5.0 5.2 5.6 6.2 6.5 6.8 7.0"
-			"radius"	"375"
+			"duration_night"		"4.0 4.4 4.8 5.2 5.6 6.0 6.4" 
+			"radius"	"400" 
 		}
 		
 	}
@@ -114,7 +114,7 @@
 			}
 			"bonus_attack_speed_night"			
 			{
-				"value"			"40 60 80 100 120 140 160"	//"45 60 75 90 120 140 160" 
+				"value"			"40 60 80 100 120 140 160" 
 				"special_bonus_unique_night_stalker_2"	"+100"
 			}
 				"bonus_status_resist_night"			
@@ -139,7 +139,7 @@
 			}
 			"shard_cast_range"
 			{
-				"value"				"400" // 125
+				"value"				"400" 
 				"RequiresShard"		"1"
 			}
 
@@ -163,7 +163,7 @@
 		"AbilityCastPoint"				"0.3"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
 
-		"AbilityCooldown"				"75 70 65 60 55 50 50" // 50
+		"AbilityCooldown"				"60" 
 		"AbilityManaCost"				"100 125 150 175 200 225 250"
 			
 		// Special
@@ -172,13 +172,61 @@
 		{
 			"duration"				
 			{
-				"value"			"20.0"
-				"special_bonus_unique_night_stalker_7"	"+8"
+				"value"			"25" 
+				"special_bonus_unique_night_stalker_7"	"+5" 
 			}
 			"bonus_damage"			
 			{
-				"value"			"70 140 210 250 300 350 400"  //"60 100 140 200 250 300 350"
-				"special_bonus_unique_night_stalker_3"	"+35"
+				"value"			"100 150 200 250 300 350 400"  
+				"special_bonus_unique_night_stalker_3"	"+50" 
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_night_stalker"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6129"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"20" 
+				"ad_linked_abilities"			"night_stalker_darkness"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_night_stalker_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"799"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"4" 
+				"ad_linked_abilities"			"night_stalker_crippling_fear"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}

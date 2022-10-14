@@ -1,39 +1,65 @@
-"item_force_staff"
-{
-	// Stats
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"700"
-	"AbilityCastPoint"				"0.0"
-	"AbilityCooldown"				"14.0"
-	"AbilitySharedCooldown"			"force"
-
-	// Item Info
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"25"
-	"ItemCost"						"2225"
-	"ItemShopTags"					"int;damage;attack_speed;hard_to_tag"
-	"ItemQuality"					"rare"
-	"ItemAliases"					"fs;force staff"
-	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-	
-	// Special	
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Recipe: Force Staff
+	//=================================================================================================================
+	"item_recipe_force_staff"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"101"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"750"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_force_staff"
+		"ItemRequirements"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_intellect"		"10"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_health"			"150"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"push_length"			"800"
+			"01"						"item_staff_of_wizardry;item_fluffy_hat"
 		}
 	}
-}
+
+	//=================================================================================================================
+	// Force Staff
+	//=================================================================================================================
+	"item_force_staff"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"102"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH | DOTA_UNIT_TARGET_TEAM_CUSTOM"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_CUSTOM"
+		"FightRecapLevel"				"1"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"15.0"
+		"AbilitySharedCooldown"			"force"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"
+		"ItemCost"						"2000"
+		"ItemShopTags"					"int;damage;attack_speed;hard_to_tag"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"fs;force staff"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"bonus_intellect"		"15"
+				"bonus_health"			"200"
+				"push_length"			"600"
+				"enemy_cast_range"		"850"
+		}
+	}

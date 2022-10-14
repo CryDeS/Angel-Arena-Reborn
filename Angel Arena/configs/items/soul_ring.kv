@@ -9,7 +9,7 @@
 
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
-    "ItemCost"						"20"
+    "ItemCost"						"25"
     "ItemShopTags"					""
 
     // Recipe
@@ -18,40 +18,23 @@
     "ItemResult"					"item_soul_ring"
     "ItemRequirements"
     {
-        "01"						"item_ring_of_regen;item_belt_of_strength"
+        "01"						"item_ring_of_protection;item_belt_of_strength"
     }
 }
 "item_soul_ring"
 {
+	// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25.0"
 
 	// Special	
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_strength"		"12"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_armor"			"2"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"health_sacrifice"		"220"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"mana_gain"				"300"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"duration"				"10"
+				"bonus_strength"		"10"
+				"bonus_armor"			"3"
+				"health_sacrifice"		"200"
+				"mana_gain"				"250"
+				"duration"				"15"
 		}
 	}
-}

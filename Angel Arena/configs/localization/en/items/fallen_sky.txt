@@ -1,0 +1,10 @@
+"DOTA_Tooltip_Ability_item_fallen_2_sky"									"Fallen Sky"
+"DOTA_Tooltip_Ability_item_recipe_fallen_sky_2"								"Recipe: Fallen Sky"
+
+"DOTA_Tooltip_Ability_item_fallen_sky_2_Description"                  		"<h1>Active: Fallen Sky 2</h1> Transform into a meteor that strikes down at the target area after %land_time% seconds in a %impact_radius% AoE, stunning enemies for %stun_duration% seconds and dealing impact damage. Continues to deal damage every %burn_interval% seconds to enemy units and buildings for %burn_duration% seconds.<BR><BR>Building Impact Damage: %impact_damage_buildings% <BR>Building Over Time Damage: %burn_dps_buildings% <BR><BR>Non-Building Impact Damage: %impact_damage_units% <BR>Non-Building Over Time Damage: %burn_dps_units%<BR><BR> Range: %abilitycastrange%"
+"DOTA_Tooltip_Ability_item_fallen_sky_2_bonus_strength"						"+$str"
+"DOTA_Tooltip_Ability_item_fallen_sky_2_bonus_intellect"					"+$int"
+"DOTA_Tooltip_Ability_item_fallen_sky_2_bonus_health_regen"					"+$hp_regen"
+"DOTA_Tooltip_Ability_item_fallen_sky_2_bonus_mana_regen"					"+$mana_regen"
+"DOTA_Tooltip_modifier_item_fallen_sky_2_burn"								"Fallen Sky"
+"DOTA_Tooltip_modifier_item_fallen_sky_2_burn_Description"					"Taking damage over time"

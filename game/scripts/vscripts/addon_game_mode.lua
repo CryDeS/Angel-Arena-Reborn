@@ -180,6 +180,9 @@ function AngelArena:InitGameMode()
 	GameRules:SetStartingGold(625)
 	GameRules:SetCustomGameBansPerTeam(5)
 	GameRules:SetCreepSpawningEnabled( false )
+	
+	
+
 
 	-- AttributeDerivedStats
 	--GameMode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_STRENGTH_MAGIC_RESISTANCE_PERCENT, 0)
@@ -220,6 +223,7 @@ function AngelArena:InitGameMode()
 	LinkLuaModifier("modifier_medical_tractate", 'modifiers/modifier_medical_tractate', LUA_MODIFIER_MOTION_NONE)
 	LinkLuaModifier("modifier_godmode", 'modifiers/modifier_godmode', LUA_MODIFIER_MOTION_NONE)
 	LinkLuaModifier("modifier_courier", 'modifiers/modifier_courier', LUA_MODIFIER_MOTION_NONE)
+	LinkLuaModifier("modifier_fountain_invulnerability", 'modifier_fountain_invulnerability', LUA_MODIFIER_MOTION_NONE)
 
 	if GameRules:IsCheatMode() then
 		require('lib/debug/keyexec')

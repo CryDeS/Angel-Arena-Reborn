@@ -1,114 +1,6 @@
 //=================================================================================================================
 // Recipe: Armlet
 //=================================================================================================================
-"item_recipe_armlet_3"
-{
-		"AbilityTextureName" 				"item_recipe_armlet_3"
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"ID"							"1289"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-	"Model"							"models/props_gameplay/recipe.vmdl"
-	"BaseClass"                     "item_recipe_arcane_boots"
-	
-	// Item Info
-	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"0"	
-	"ItemShopTags"					""
-	
-	// Recipe
-	//-------------------------------------------------------------------------------------------------------------
-	"ItemRecipe"					"1"
-	"ItemResult"					"item_armlet_3"
-	"ItemRequirements"
-	{
-		"01"						"item_armlet_2;item_armlet_2" // "item_armlet_2;item_armlet_2"
-	}
-}
-
-//=================================================================================================================
-// Armlet
-//=================================================================================================================
-"item_armlet_3"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"ID"							"1286"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
-	"ItemBaseLevel"					"3"
-	"BaseClass"                     "item_armlet"
-	"AbilityTextureName"			"armlet_3"
-	// Stats		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"0.0"
-
-	// Item Info
-	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"10520"
-	"ItemShopTags"					"damage;attack_speed;armor;regen_health;hard_to_tag"
-	"ItemQuality"					"epic"
-	"ItemAliases"					"armlet of mordiggian"
-	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-	
-	// Special	
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_damage"			"15 30 45"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_attack_speed"	 "25 50 75" //"25 35 55"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_armor"			 "6 12 18" // "7 15 35"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_health_regen"	 "10 20 30" //"9 30 62"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"unholy_bonus_damage"	"30 60 90" // "32 40 60"
-		}
-		"06"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"unholy_bonus_attack_speed"	 "10 20 30" // "0 0 0"
-		}
-		"07"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"unholy_bonus_strength"	 "25 50 75" // "25 40 75"
-		}
-		"08"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"unholy_bonus_armor"	  "4 8 12" // "5 5 5"
-		}
-		"09"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"unholy_health_drain_per_second"	 "40 80 120"
-		}	
-		"10"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"toggle_cooldown"		"0.036f"
-		}				
-	}
-}
-
-//=================================================================================================================
-// Recipe: Armlet
-//=================================================================================================================
 "item_recipe_armlet_2"
 {
 		"AbilityTextureName" 				"item_recipe_armlet_2"
@@ -163,47 +55,47 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_damage"			"15 30 45"
+			"bonus_damage"			"15 30"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_attack_speed"	 "25 50 75" //"25 35 55"
+			"bonus_attack_speed"	 "25 50"
 		}
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_armor"			 "6 12 18" // "7 15 35"
+			"bonus_armor"			 "6 12"
 		}
 		"04"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_health_regen"	 "10 20 30" //"9 30 62"
+			"bonus_health_regen"	 "5 10"
 		}
 		"05"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"unholy_bonus_damage"	"30 60 90" // "32 40 60"
+			"unholy_bonus_damage"	"35 70"
 		}
 		"06"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"unholy_bonus_attack_speed"	 "10 20 30" // "0 0 0"
+			"unholy_bonus_attack_speed"	 "15 30"
 		}
 		"07"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"unholy_bonus_strength"	 "25 50 75" // "25 40 75"
+			"unholy_bonus_strength"	 "25 50"
 		}
 		"08"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"unholy_bonus_armor"	  "4 8 12" // "5 5 5"
+			"unholy_bonus_armor"	  "4 8"
 		}
 		"09"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"unholy_health_drain_per_second"	 "40 80 120"
+			"unholy_health_drain_per_second"	 "45 90"
 		}	
 		"10"
 		{
@@ -223,47 +115,47 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_damage"			"15 30 45"
+			"bonus_damage"			"15 30"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_attack_speed"	 "25 50 75" //"25 35 55"
+			"bonus_attack_speed"	 "25 50"
 		}
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_armor"			 "6 12 18" // "7 15 35"
+			"bonus_armor"			 "6 12"
 		}
 		"04"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_health_regen"	 "10 20 30" //"9 30 62"
+			"bonus_health_regen"	 "5 10"
 		}
 		"05"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"unholy_bonus_damage"	"30 60 90" // "32 40 60"
+			"unholy_bonus_damage"	"35 70"
 		}
 		"06"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"unholy_bonus_attack_speed"	 "10 20 30" // "0 0 0"
+			"unholy_bonus_attack_speed"	 "15 30"
 		}
 		"07"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"unholy_bonus_strength"	 "25 50 75" // "25 40 75"
+			"unholy_bonus_strength"	 "25 50"
 		}
 		"08"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"unholy_bonus_armor"	  "4 8 12" // "5 5 5"
+			"unholy_bonus_armor"	  "4 8"
 		}
 		"09"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"unholy_health_drain_per_second"	 "40 80 120"
+			"unholy_health_drain_per_second"	 "45 90"
 		}	
 		"10"
 		{

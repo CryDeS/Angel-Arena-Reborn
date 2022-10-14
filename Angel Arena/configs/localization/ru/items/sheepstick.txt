@@ -1,0 +1,16 @@
+"DOTA_Tooltip_Ability_item_sheepstick_2"							"Scythe of Vyse 2"
+
+"DOTA_Tooltip_ability_item_sheepstick_2_Description"				"<h1>Активная: Hex</h1>Превращает цель в безобидную зверушку на %sheep_duration% сек. Жертва не может атаковать, применять способности или использовать предметы, а её базовая скорость падает до %sheep_movement_speed%.<br>Мгновенно уничтожает иллюзии.<br><br>Дальность применения: %abilitycastrange%"
+
+"DOTA_Tooltip_ability_item_sheepstick_2_Note0"						"Жертва имеет базовую скорость в %sheep_movement_speed%, но не теряет эффекты, дающие максимальную скорость."
+
+"DOTA_Tooltip_ability_item_sheepstick_2_Lore"						"Эту реликвию, что находится под стражей культа Вайз, жаждет заполучить любой маг."
+
+"DOTA_Tooltip_ability_item_sheepstick_2_bonus_strength"				"+$str"
+"DOTA_Tooltip_ability_item_sheepstick_2_bonus_agility"				"+$agi"
+"DOTA_Tooltip_ability_item_sheepstick_2_bonus_intellect"			"+$int"
+"DOTA_Tooltip_ability_item_sheepstick_2_bonus_mana_regen"			"+$mana_regen"
+//"DOTA_Tooltip_ability_item_sheepstick_2_sheep_duration"			"HEX DURATION:"
+		
+"DOTA_Tooltip_modifier_sheepstick_2_debuff"							"Освинован"
+"DOTA_Tooltip_modifier_sheepstick_2_debuff_Description"				"Вы — свинья. Вы не можете атаковать или использовать заклинания."

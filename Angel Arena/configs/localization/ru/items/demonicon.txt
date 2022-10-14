@@ -1,0 +1,6 @@
+"DOTA_Tooltip_Ability_item_demonicon_2"								"Book of the Dead"
+
+"DOTA_Tooltip_Ability_item_demonicon_2_Description"					"<h1>Активная: Greater Demonic Summoning</h1> Призывает 4 существ от Necronomicon 3 уровня, которые живут %summon_duration% сек. и имеют на 50% больше здоровья и урона."
+
+"DOTA_Tooltip_Ability_item_demonicon_2_bonus_intellect"				"+$int"
+"DOTA_Tooltip_Ability_item_demonicon_2_bonus_strength"				"+$str"

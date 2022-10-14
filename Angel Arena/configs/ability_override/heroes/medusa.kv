@@ -1,4 +1,4 @@
-//=================================================================================================================
+	//=================================================================================================================
 	// Medusa: Cold Blooded ( shard ability )
 	//=================================================================================================================
 	"medusa_cold_blooded"
@@ -10,7 +10,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"10"
+		"AbilityCooldown"				"15" 
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -33,7 +33,7 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.4"
+		"AbilityCastPoint"				"0.2" 
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -41,16 +41,16 @@
 		{
 				"damage_modifier"		
 				{
-					"value"		"-35 -30 -25 -23 -20 -16 -12" // "-25 -20 -15 -10 -5 0 5"
+					"value"		"-30 -27 -24 -21 -18 -15 -12" 
 					"special_bonus_unique_medusa_2"	"+12"
 				}
 				"damage_modifier_tooltip"		
 				{	
-					"value"			"65 70 75 77 80 84 88"
+					"value"			"70 73 76 79 82 85 88" 
 					"special_bonus_unique_medusa_2"	"+12"
 				}
-				"arrow_count"				"3"
-				"split_shot_bonus_range"		"100"
+				"arrow_count"				"4" 
+				"split_shot_bonus_range"		"90 100 110 120 130 140 150" 
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
@@ -71,30 +71,35 @@
 		"AbilityValues"
 		{
 			"AbilityCastRange"					"800"
-			"AbilityCastPoint"					"0.4"
-			"AbilityCooldown"					"10"
-			"AbilityManaCost"					"140 150 160 170 180 190 210"
-			"radius"							"475"
+			"AbilityCastPoint"					"0.2" 
+			"AbilityCooldown"					
+			{
+				"value"				"10"
+				"special_bonus_unique_medusa_5"					"-2"
+			}
+			"AbilityManaCost"					"130 140 150 160 170 180 190" 
+			"radius"							"450"
 			"snake_jumps"			
 			{
-				"value"							"3 4 5 6 7 8 9"
+				"value"							"2 3 4 5 6 7 8" 
 				"special_bonus_unique_medusa_3"	"+2"
 			}
-			"jump_delay"						"0.25"
-			"snake_damage"						"100 160 200 250 300 350 400"
-			"snake_mana_steal"					"10 15 20 22 23 24 25"
-			"snake_scale"						"45"
+			"jump_delay"						"0.2"
+			"snake_damage"						"100 150 200 250 300 350 400" 
+			"snake_damage_pct"					"0"
+			"snake_mana_steal"					"9 12 15 18 21 24 27" 
+			"snake_scale"						"35" 
 			"initial_speed"						"800"
 			"return_speed"						"800"
 			"stone_form_scepter_base"		
 			{
-				"value"							"0"
-				"special_bonus_scepter"			"+1.3"
+				"value"							"1.0" 
+				"RequiresScepter"				"1"
 			}
 			"stone_form_scepter_increment"		
 			{
-				"value"							"0"
-				"special_bonus_scepter"			"+0.2"
+				"value"							"0.2"
+				"RequiresScepter"				"1"
 			}
 			"movement_slow"						
 			{	
@@ -111,7 +116,7 @@
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
 	
-	//=================================================================================================================
+//=================================================================================================================
 // Medusa: Mana Shield
 //=================================================================================================================
 "medusa_mana_shield"
@@ -122,7 +127,7 @@
 	"AbilityTextureName"			"medusa_mana_shield"
 	"ScriptFile"					"heroes/medusa/medusa_mana_shield"
 		
-	"AbilityCastPoint"				"0.4"
+	"AbilityCastPoint"				"0.2" 
 
 	"precache"
 	{
@@ -133,20 +138,18 @@
 		"particle"			"particles/units/heroes/hero_medusa/medusa_mana_shield_impact.vpcf"
 	}
 	
-	"AbilitySpecial"
-	{
-		"01"
+	"AbilityValues"
 		{
-			"var_type"				"FIELD_FLOAT"
-			"damage_per_mana"		"0.9 1.0 1.1 1.2 1.4 1.6 1.8"
+			"damage_per_mana"		
+			{
+				"value"								"0.7 0.8 0.9 1.0 1.1 1.2 1.3"
+				"special_bonus_unique_medusa_6"		"+0.2" 
+			}
+			"absorption_pct"						"50" 
+			"bonus_mana"							"100 200 300 400 500 600 700"
 		}
-		"02"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"absorption_pct"	    "60"
-		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
-}
 
 	//=================================================================================================================
 	// Medusa: Stone Gaze
@@ -172,23 +175,26 @@
 		"AbilityValues"
 		{
 			"AbilityCastRange"					"1000"
-			"AbilityCooldown"					  "110 105 100 95 90 85 80" // "70"
-			"AbilityManaCost"					"200"
+			"AbilityCooldown"					  "105 100 95 90 85 80 75" 
+			"AbilityManaCost"					"150 200 250 300 350 400 450" 
 			"radius"							"1000"
 			"duration"
 			{
-				"value"							 "5.0 5.2 5.4 5.6 5.8 6 6.2" // "6"
+				"value"							 "6.0" 
 				"special_bonus_unique_medusa"	"+2"
 			}
 			"slow"								"50"
-			"stone_duration"					 "2.0 2.2 2.4 2.6 2.8 3.0 3.2" // "3.0"
-			"face_duration"						  "3.0 2.8 2.6 2.4 2.2 2.0 1.8" //"2.0"
+			"stone_duration"					 "2.5" 
+			"face_duration"						  "2.5"
 			"vision_cone"						"0.08715"		// 85 degree cone
 			"bonus_physical_damage"
 			{
-				"value"							   "15 20 25 30 35 40 45" // "16 20 24 28 32 36 40"
+				"value"							   "15 20 25 30 35 40 45" 
 				"DamageTypeTooltip"				"DAMAGE_TYPE_PHYSICAL"
 			}
 			"speed_boost"						"50"
 		}
 	}
+
+
+

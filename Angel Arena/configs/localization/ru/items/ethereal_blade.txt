@@ -1,0 +1,29 @@
+"DOTA_Tooltip_Ability_item_ethereal_blade_2"							"Ethereal Blade 2"
+"DOTA_Tooltip_Ability_item_recipe_ethereal_blade_2"						"Рецепт: Ethereal Blade 2"
+
+"DOTA_Tooltip_ability_item_ethereal_blade_2_Description"				"<h1>Активное: Ether Blast</h1> Придаёт цели бесплотный облик, который полностью защищает от физического урона, но не позволяет атаковать и увеличивает получаемый магический урон на %ethereal_damage_bonus%%%.<br><br>Если целью выбран противник, он также замедляется на %blast_movement_slow%%% и получает магический урон в размере %blast_agility_multiplier% * его основной атрибут + %blast_damage_base%.<br><br>Дальность применения: %abilitycastrange%<br>Длительность: %duration% сек."
+
+"DOTA_Tooltip_ability_item_ethereal_blade_2_Note0"						"Имеет общее время перезарядки с Ghost Scepter."
+"DOTA_Tooltip_ability_item_ethereal_blade_2_Note1"						"Существа в бесплотном облике получают на %ethereal_damage_bonus%%% больше магического урона."
+"DOTA_Tooltip_ability_item_ethereal_blade_2_Note3"						"Использование Town Portal Scroll или Boots of Travel не развеивает бесплотный облик."
+
+"DOTA_Tooltip_ability_item_ethereal_blade_2_bonus_agility"				"+$agi"
+"DOTA_Tooltip_ability_item_ethereal_blade_2_bonus_strength"				"+$str"
+"DOTA_Tooltip_ability_item_ethereal_blade_2_bonus_intellect"			"+$int"
+
+"DOTA_Tooltip_ability_item_ethereal_blade_2_spell_amp"					"%+к урону от заклинаний"
+"DOTA_Tooltip_ability_item_ethereal_blade_2_spell_lifesteal_amp"		"%+к усилению вампиризма от заклинаний"	
+"DOTA_Tooltip_ability_item_ethereal_blade_2_mana_regen_multiplier"		"%+к усилению восстановления маны"
+
+//"DOTA_Tooltip_ability_item_ethereal_blade_2_blast_movement_slow"		"%BLAST ENEMY MOVE SLOW:"		
+//"DOTA_Tooltip_ability_item_ethereal_blade_2_duration"					"BLAST ENEMY DURATION:"
+//"DOTA_Tooltip_ability_item_ethereal_blade_2_duration_ally"			"BLAST ALLY/SELF DURATION:"
+//"DOTA_Tooltip_ability_item_ethereal_blade_2_ethereal_damage_bonus"	"%INCREASED MAGIC DAMAGE:"
+
+"DOTA_Tooltip_ability_item_ethereal_blade_2_Lore"						"Этот мерцающий призрачный меч бьёт и и по физическому, и по магическому слою реальности."
+		
+"DOTA_Tooltip_modifier_item_ethereal_blade_2_ethereal"					"Ether Blast 2"
+"DOTA_Tooltip_modifier_item_ethereal_blade_2_ethereal_Description"		"Находится в бесплотном облике. Получает увеличенный на %dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_DECREPIFY_UNIQUE%%% магический урон, не может атаковать или быть целью атаки."
+
+"DOTA_Tooltip_modifier_item_ethereal_blade_2_slow"						"Замедление от Ethereal Blade 2"
+"DOTA_Tooltip_modifier_item_ethereal_blade_2_slow_Description"			"Скорость передвижения снижена на %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%."

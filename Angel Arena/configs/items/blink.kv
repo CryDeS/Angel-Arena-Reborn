@@ -1,0 +1,302 @@
+	//=================================================================================================================
+	// Blink dagger
+	//=================================================================================================================
+	"item_blink"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		"AbilityOvershootCastRange"     "960"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"15.0"
+		"AbilityManaCost"				"0"
+		"AbilitySharedCooldown"			"blink"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2000" // 2250
+		"ItemShopTags"					"teleport"
+		"ItemQuality"					"component"
+		"ItemAliases"					"blink dagger"
+		//"SideShop"						"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blink_range"			"1200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"blink_damage_cooldown"	"3.0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blink_range_clamp"		"960"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Blink dagger
+	//=================================================================================================================
+	"item_overwhelming_blink"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"600"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		"AbilityOvershootCastRange"     "960"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"15.0"
+		"AbilityManaCost"				"0"
+		"AbilitySharedCooldown"			"blink"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"6800"
+		"ItemShopTags"					"teleport"
+		"ItemQuality"					"component"
+		"ItemAliases"					"blink dagger"
+		//"SideShop"						"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blink_range"			"1200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"blink_damage_cooldown"	"3.0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blink_range_clamp"		"960"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"30" // 25
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"		"800"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"movement_slow"		"60" // 50
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"attack_slow"		"60" // 50
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"		"6"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_pct"		"200" // 150
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Blink dagger
+	//=================================================================================================================
+	"item_swift_blink"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"603"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		"AbilityOvershootCastRange"     "960"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"15.0"
+		"AbilityManaCost"				"0"
+		"AbilitySharedCooldown"			"blink"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"6800"
+		"ItemShopTags"					"teleport"
+		"ItemQuality"					"component"
+		"ItemAliases"					"blink dagger"
+		//"SideShop"						"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"blink_range"			"1200"
+				"blink_damage_cooldown"	"3.0"
+				"blink_range_clamp"		"960"
+				"bonus_agility"		"30" // 35
+				"bonus_movement"		"50" // 40
+				"bonus_agi_active"		"50" // 45
+				"duration"		"6"
+		}
+	}
+
+	//=================================================================================================================
+	// Blink dagger
+	//=================================================================================================================
+	"item_arcane_blink"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"604"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		"AbilityOvershootCastRange"     "960"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"15.0"
+		"AbilityManaCost"				"0"
+		"AbilitySharedCooldown"			"blink"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"6800"
+		"ItemShopTags"					"teleport"
+		"ItemQuality"					"component"
+		"ItemAliases"					"blink dagger"
+		//"SideShop"						"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"blink_range"			"1200"
+				"blink_damage_cooldown"	"3.0"
+				"blink_range_clamp"		"960"
+				"bonus_intellect"		"30" // 25
+				"duration"		"6"
+				"cast_pct_improvement"		"50"
+				"manacost_reduction"		"25"
+				"debuff_amp"					"25" // 20
+		}
+	}
+
+	
+	
+	
+	//=================================================================================================================
+	// Recipe: Arcane Blink
+	//=================================================================================================================
+	"item_recipe_arcane_blink"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"606"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1200" // 1750	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_arcane_blink"
+		"ItemRequirements"
+		{
+			"01"						"item_blink*;item_mystic_staff"
+		}
+	}
+
+	
+	
+	
+	//=================================================================================================================
+	// Recipe: Swift Blink
+	//=================================================================================================================
+	"item_recipe_swift_blink"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"607"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1200" // 1750	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_swift_blink"
+		"ItemRequirements"
+		{
+			"01"						"item_blink*;item_eagle"
+		}
+	}
+
+	
+	
+	
+	//=================================================================================================================
+	// Recipe: Overwhelming Blink
+	//=================================================================================================================
+	"item_recipe_overwhelming_blink"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"608"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1200" // 1750	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_overwhelming_blink"
+		"ItemRequirements"
+		{
+			"01"						"item_blink*;item_reaver"
+		}
+	}

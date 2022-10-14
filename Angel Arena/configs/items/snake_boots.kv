@@ -9,7 +9,7 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"2000" // 1000	
+	"ItemCost"						"2500" // 1000	
 	"ItemShopTags"					"int"
 	
 	// Recipe
@@ -31,7 +31,8 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 	
 	"AbilityTextureName"	        "item_snake_boots"
-	"AbilityCooldown"				"45" // 60
+	"AbilityCooldown"				"40" // 45
+	"AbilitySharedCooldown"			"teleport"
 	"AbilityChannelTime"      		"1.5"
 	"AbilityCastAnimation"  		"ACT_DOTA_TELEPORT"
 	
@@ -45,7 +46,7 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"5500"
+	"ItemCost"						"7000"
 	"ItemStackable"					"0"
 	
 	"ItemKillable"                  "1"
@@ -56,8 +57,6 @@
 	"ItemQuality"					"common"
 	"ItemAliases"					"bot;boots of travel;tp"
 	
-	"AbilitySharedCooldown"			"travel"
-	
 	//special
 	"AbilitySpecial"
 	{
@@ -67,21 +66,6 @@
 			"bonus_speed"			"130" // 100
 		}
 		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_armor"			"1" // 2
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_hp_regen"		"5"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_stats"			"5" // 20
-		}
-		"05"
 		{
 			"var_type"				"FIELD_INTEGER"
 			"teleport_mod_time"		"2"
@@ -141,11 +125,6 @@
 			
 			"Properties"
 			{
-				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%bonus_armor"
-				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"			"%bonus_hp_regen"
-				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"				"%bonus_stats"
-				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"			"%bonus_stats"
-				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"			"%bonus_stats"
 				"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"			"%bonus_speed"
 			}		
 		}

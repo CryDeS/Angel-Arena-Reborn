@@ -96,10 +96,8 @@
 	"item"	"item_hand_of_midas"
 	"item"	"item_travel_boots"   
 	"item"	"item_moon_shard"
-	"item"	"item_hood_of_rage"
 	"item"	"item_polar_spear"
 	"item"	"item_magician_ring"
-	"item"	"item_falcon_blade"
 	"item"	"item_orb_of_corrosion"
   }
 
@@ -148,6 +146,7 @@
 	"item"	"item_plague_staff"
 	"item"	"item_mozaius_blade"
 	"item"	"item_mage_slayer"
+	"item"	"item_demonicon_2"
 	}
 	
   // Level 3 - Purple Recipes 
@@ -170,7 +169,7 @@
 	"item"	"item_life_catcher"
 	"item"	"item_soul_merchant"
 	"item"	"item_material_projector"
-	"item"	"item_eternal_shroud"
+	"item"	"item_hood_of_rage"
   }
 	
   "weapons"
@@ -229,6 +228,7 @@
 	"item"	"item_overwhelming_blink"
 	"item"	"item_swift_blink"
 	"item"	"item_arcane_blink"
+	"item"	"item_fallen_sky_2"
 	"item"	"item_wind_waker"
   }
 

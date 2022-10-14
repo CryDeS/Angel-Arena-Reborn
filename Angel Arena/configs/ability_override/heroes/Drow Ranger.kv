@@ -93,57 +93,30 @@
 	"MaxLevel"								"7"
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-        "01"
-        {
-            "var_type"						"FIELD_INTEGER"
-            "chance"	                    "10" // 15 
-            "LinkedSpecialBonus"		"special_bonus_unique_drow_ranger_3"
-        }
-        "02"
-        {
-            "var_type"						"FIELD_INTEGER"
-            "bonus_damage"					"20"
-            "CalculateSpellDamageTooltip"	"0"
-        }
-        "03"
+	"AbilityValues"
 		{
-			"var_type"						"FIELD_INTEGER"
-			"agility_multiplier"			"22 25 28 31 34 37 40" // "25 29 33 37 41 45 50"
+			"chance"
+			{
+				"value"										"10"
+				"special_bonus_unique_drow_ranger_3"		"+5"
+			}
+			"bonus_damage"									
+			{
+				"value"										"20"
+			}
+			"agility_multiplier"							"22 25 28 31 34 37 40"
+			"agility_range"									"1350"
+			"split_count"
+			{		
+				"value"										"0"
+				"special_bonus_scepter"						"+2"
+			}
+			"split_range"									"375"
+			"split_damage_reduction"						"35"
+			"disable_range"									"300"
+		
 		}
-		"04"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"agility_range"					"1350"
-		}
-        "05"
-        {
-            "var_type"						"FIELD_INTEGER"
-            "split_count_scepter"			"3" // 2
-            "RequiresScepter"		        "1"
-        }
-        "06"
-        {
-            "var_type"						"FIELD_INTEGER"
-            "scepter_range"					"400"
-            "RequiresScepter"				"1"
-        }
-        "07"
-        {
-            "var_type"						"FIELD_INTEGER"
-            "damage_reduction_scepter"		"35"
-            "RequiresScepter"		        "1"
-            "CalculateSpellDamageTooltip"	"0"
-        }
-        "08"
-        {
-            "var_type"						"FIELD_INTEGER"
-            "disable_range"		            "300" // 400
-        }
 	}
-}
-
 
 "drow_ranger_multishot"
 {
@@ -212,26 +185,3 @@
 	}
 	"AbilityCastAnimation"		"ACT_DOTA_CHANNEL_ABILITY_3"
 }
-//=================================================================================================================
-	// Ability: Special Bonus
-	//=================================================================================================================
-	"special_bonus_unique_drow_ranger_3"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"					"6280"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"5" // 12
-				"ad_linked_abilities"			"drow_ranger_marksmanship"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
-		}
-	}

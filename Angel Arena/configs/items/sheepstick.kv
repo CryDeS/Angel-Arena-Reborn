@@ -1,0 +1,151 @@
+	"item_sheepstick"
+	{
+
+		"AbilityCastRange"				"700"
+		"AbilityCooldown"				"22.0"
+		"AbilitySharedCooldown"			"hex"
+		"AbilityManaCost"				"200"
+		"ItemBaseLevel"					"1"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"10 20"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"10 20"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"		"35 70"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"		"9 18"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"sheep_duration"		"3.0 4.0"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"sheep_movement_speed"	"150 100"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"upgrade_radius"		"200"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Recipe: Sheepstick 2
+	//=================================================================================================================
+	"item_recipe_sheepstick_2"
+	{
+		"AbilityTextureName" 			"item_recipe_sheepstick_2"
+
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							""														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl" 
+		"BaseClass"                     "item_recipe_arcane_boots"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1325"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_sheepstick_2"
+		"ItemRequirements"
+		{
+			"01"						"item_sheepstick;item_boss_soul"
+		}
+	}
+	
+	//=================================================================================================================
+	// Sheepstick 2
+	//=================================================================================================================
+	"item_sheepstick_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							""														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"BaseClass"						"item_sheepstick"
+		"AbilityTextureName"			"sheepstick_2"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"18.0"
+		"AbilitySharedCooldown"			"hex"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"300"
+		"ItemCost"						"17000"
+		"ItemShopTags"					"int;regen_mana;agi;hard_to_tag"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"hex;sheepstick;scythe of vyse"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"ItemBaseLevel"					"2"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"10 20"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"10 20"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"		"35 70"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"		"9 18"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"sheep_duration"		"3.0 4.0"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"sheep_movement_speed"	"150 100"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"upgrade_radius"		"200"
+			}
+		}
+	}

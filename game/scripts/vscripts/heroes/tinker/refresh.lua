@@ -28,6 +28,7 @@ local non_refreshable = {
 	["item_shard_joe_black"]	= 1,
 	["item_shard_satan"]	= 1,
 	["item_seer_stone"]     = 1,
+	["item_minotaur_horn"]     = 1,
 }
 
 

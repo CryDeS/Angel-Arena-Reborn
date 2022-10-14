@@ -18,7 +18,7 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"2800"
+	"ItemCost"						"2000" // 2800
 	"ItemQuality"					"component"
 	"ItemStackable"					"1"
 	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
@@ -29,10 +29,11 @@
 	"ItemSellable"                  "1"
 	"ItemDroppable"                 "1"
 	"ItemPurchasable"				"1"
+	"ItemInitialStockTime"			"960"
 
-	"ItemStockMax"					"20"
-	"ItemStockInitial"				"5"
-	"ItemStockTime"					"120.0"
+	"ItemStockMax"					"30" // 20
+	"ItemStockInitial"				"0"
+	"ItemStockTime"					"60.0" // 120
 	
 	"OnSpellStart"
 	{
@@ -41,9 +42,9 @@
 			"Target"			"CASTER"
 			"ScriptFile"		"tome.lua"
 			"Function"			"UpgradeStats"
-			"Str"				"6"
-			"Agi"				"6"
-			"Int"				"6"
+			"Str"				"5" // 6
+			"Agi"				"5" // 6
+			"Int"				"5" // 6
 		}
 		"SpendCharge"
 		{

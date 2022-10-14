@@ -9,7 +9,7 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"300" // 500
+	"ItemCost"						"100" // 300
 	"ItemShopTags"					""
 	
 	// Recipe
@@ -19,7 +19,7 @@
 	"ItemRequirements"
 	{
 		//100+450+550
-		"01"						"item_belt_of_strength;item_chainmail"
+		"01"						"item_ring_of_protection;item_fluffy_hat;item_ring_of_regen;item_cursed_orb"
 	}
 }
 
@@ -56,38 +56,38 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"heal_const"			"550"
+			"heal_const"			"500" // 550
 		}
 		"02"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"heal_per_main_stat"	"4.5"
+			"heal_per_main_stat"	"5.0" // 4.5
 		}
 		"03"
         {
             "var_type"				"FIELD_FLOAT"
-            "time_to_heal"	        "3.5"
+            "time_to_heal"	        "4.0" // 3.5
         }
         //Stats
         "05"
         {
             "var_type"				"FIELD_FLOAT"
-            "armor"	                "4.0"
+            "armor"	                "2.0" // 4.0
         }
         "06"
         {
             "var_type"				"FIELD_FLOAT"
-            "health_regen"	        "5.5"
+            "health_regen"	        "2.0" // 5.5
         }
         "07"
         {
             "var_type"				"FIELD_FLOAT"
-            "all_stats"	            "6" // 10
+            "all_stats"	            "10" // 6
         }
         "07"
         {
             "var_type"				"FIELD_FLOAT"
-            "health"	            "100"
+            "health"	            "200" // 100
         }
 	}
 }

@@ -1,27 +1,26 @@
-"item_pupils_gift"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"ID"							"306"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-	// Item Info
-	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"0"
-	"ItemIsNeutralDrop"				"0"
-	"ItemPurchasable"				"0"
-	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
-
-	"Model"							"models/props_gameplay/neutral_box.vmdl"
-	
-	// Special	
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+//=================================================================================================================
+	// Pupil's Gift
+	//=================================================================================================================
+	"item_pupils_gift"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"306"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"secondary_stats"			"25" // 30
+				"secondary_stats"			"25"
 		}
 	}
-}

@@ -20,7 +20,7 @@ function mod:OnCreated(kv)
 	self.bonusStr      = ability:GetSpecialValueFor("bonus_str")
 	self.bonusAgi      = ability:GetSpecialValueFor("bonus_agi")
 	self.bonusInt      = ability:GetSpecialValueFor("bonus_int")
-	self.bonusAs       = ability:GetSpecialValueFor("bonus_as")
+	self.bonus_health  = ability:GetSpecialValueFor("bonus_health")
 	self.bonusHpReg    = ability:GetSpecialValueFor("health_regen")
 	self.bonusMpReg    = ability:GetSpecialValueFor("bonus_manaregen")
 	self.bonusDamage   = ability:GetSpecialValueFor("bonus_damage")
@@ -33,7 +33,7 @@ mod.OnRefresh = mod.OnCreated
 
 function mod:DeclareFunctions() return 
 {
-	MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,
+	MODIFIER_PROPERTY_HEALTH_BONUS,
 	MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,
 	MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,
 	MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
@@ -60,8 +60,8 @@ function mod:OnTakeDamage( params )
 	self:ProcessDamageToExp( parent, self:GetAbility(), params.damage )
 end
 
-function mod:GetModifierAttackSpeedBonus_Constant( params )
-	return self.bonusAs
+function mod:GetModifierHealthBonus(kv)
+	return self.bonus_health
 end
 
 function mod:GetModifierBonusStats_Strength(kv) 

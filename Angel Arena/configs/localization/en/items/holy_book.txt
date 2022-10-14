@@ -1,7 +1,8 @@
 "DOTA_Tooltip_Ability_item_holy_book"								"Holy Book"
 "DOTA_Tooltip_Ability_item_holy_book_Description"					"<h1>Passive: Multiple Attack</h1>Every attack mirror to all enemies around main attack target in radius %splash_radius% and deal %splash_pct%%  damage from main target damage."
-"DOTA_Tooltip_Ability_item_holy_book_bonus_int"						"+$int"
+"DOTA_Tooltip_Ability_item_holy_book_bonus_agi"						"+$agi"
 "DOTA_Tooltip_Ability_item_holy_book_bonus_str"						"+$str"
+"DOTA_Tooltip_Ability_item_holy_book_bonus_as"						"+$attack"
 "DOTA_Tooltip_Ability_item_holy_book_bonus_damage"					"+$damage"
 "DOTA_Tooltip_Ability_item_holy_book_Note0"							"<b>Multiple Attack</b> doesn't apply attack modifiers."
 "DOTA_Tooltip_Ability_item_holy_book_Lore"							"Enchanting reality that mighty book was created by misterious creature that is never show up in that dimension."
@@ -14,6 +15,7 @@
 "DOTA_Tooltip_Ability_item_holy_book_2_bonus_agi"					"+$agi"
 "DOTA_Tooltip_Ability_item_holy_book_2_bonus_int"					"+$int"
 "DOTA_Tooltip_Ability_item_holy_book_2_bonus_hp_regen"				"+$hp_regen"
+"DOTA_Tooltip_ability_item_holy_book_2_bonus_mpreg"					"+$mana_regen"
 "DOTA_Tooltip_Ability_item_holy_book_2_Note0"						"<b>Greater Multiple Attack</b> doesn't apply attack modifiers"
 "DOTA_Tooltip_Ability_item_holy_book_2_Lore"						"Second volume of mighty book allow owner to feel vibrations of another worlds and rule to some of that virations by his mind."
 
@@ -24,7 +26,7 @@
 "DOTA_Tooltip_Ability_item_burning_book_bonus_agi"					"+$agi"
 "DOTA_Tooltip_Ability_item_burning_book_bonus_int"					"+$int"
 "DOTA_Tooltip_Ability_item_burning_book_bonus_as"					"+$attack"
-"DOTA_Tooltip_Ability_item_burning_book_status_resist"				"+$hp_regen"
+"DOTA_Tooltip_Ability_item_burning_book_bonus_hp_regen"				"+$hp_regen"
 "DOTA_Tooltip_Ability_item_burning_book_bonus_ms"					"%+$move_speed"
 "DOTA_Tooltip_Ability_item_burning_book_bonus_status_resist"		"%+$status_resist"
 

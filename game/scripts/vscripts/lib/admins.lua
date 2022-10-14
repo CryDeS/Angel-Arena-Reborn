@@ -14,6 +14,7 @@ function AngelArenaAdmins:Init()
 	self.ids = tohashtable({
 		73911256,	-- crydes
 		104356809,	-- sheodar
+		131897948,  -- Dunkan
 	})
 end
 

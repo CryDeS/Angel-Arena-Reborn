@@ -21,6 +21,9 @@ function modifier_rebels_sword_passive:OnCreated( kv )
     self.bonus_damage           = ability:GetSpecialValueFor("bonus_damage")
     self.bonus_all_stats        = ability:GetSpecialValueFor("bonus_all_stats")
     self.bonus_attack_speed     = ability:GetSpecialValueFor("bonus_attack_speed")
+    self.evasion                = ability:GetSpecialValueFor("bonus_evasion")
+    self.armor                  = ability:GetSpecialValueFor("bonus_armor")
+    self.health_regen           = ability:GetSpecialValueFor("bonus_health_regen")       
 
     if IsServer() then 
         self.disarmor               = ability:GetSpecialValueFor("disarmor")          / 100
@@ -42,6 +45,9 @@ function modifier_rebels_sword_passive:DeclareFunctions() return
     MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
     MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,
     MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,
+    MODIFIER_PROPERTY_EVASION_CONSTANT,
+    MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS,
+    MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT,
 
     -- Events
     MODIFIER_EVENT_ON_ATTACK_LANDED,
@@ -53,6 +59,9 @@ function modifier_rebels_sword_passive:GetModifierBonusStats_Strength(kv)       
 function modifier_rebels_sword_passive:GetModifierBonusStats_Agility(kv)        return self.bonus_all_stats;    end 
 function modifier_rebels_sword_passive:GetModifierBonusStats_Intellect(kv)      return self.bonus_all_stats;    end 
 function modifier_rebels_sword_passive:GetModifierAttackSpeedBonus_Constant(kv) return self.bonus_attack_speed; end  
+function modifier_rebels_sword_passive:GetModifierEvasion_Constant(kv)          return self.evasion;            end 
+function modifier_rebels_sword_passive:GetModifierPhysicalArmorBonus(kv)        return self.armor;              end 
+function modifier_rebels_sword_passive:GetModifierConstantHealthRegen(kv)       return self.health_regen;       end
 
 --------------------------------------------------------------------------------
 

@@ -10,8 +10,12 @@ function mod:IsPurgeException() return false end
 function mod:GetAttributes() return MODIFIER_ATTRIBUTE_PERMANENT + MODIFIER_ATTRIBUTE_MULTIPLE end
 
 function mod:OnCreated(kv)
-	self.bonusHpReg  = self:GetAbility():GetSpecialValueFor("bonus_hp_regen")
-	self.bonusMpReg  = self:GetSpecialValueFor("bonus_mpreg")
+	local ability = self:GetAbility()
+
+	if not ability then return end
+
+	self.bonusHpReg  = ability:GetSpecialValueFor("bonus_hp_regen")
+	self.bonusMpReg  = ability:GetSpecialValueFor("bonus_mpreg")
 end
 
 mod.OnRefresh = mod.OnCreated

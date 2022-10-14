@@ -1,4 +1,4 @@
-//=================================================================================================================
+	//=================================================================================================================
 	// Obsidian Destroyer: Arcane Orb
 	//=================================================================================================================
 	"obsidian_destroyer_arcane_orb"
@@ -6,7 +6,13 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5391"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilitySound"					"Hero_ObsidianDestroyer.ArcaneOrb"
 		"MaxLevel"						"7"
 
 		"AbilityCastRange"				"450"
@@ -14,22 +20,21 @@
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"0"
-		"AbilityCooldown"				"6 4 2 0"
+		"AbilityCooldown"				"3 2.5 2 1.5 1 0.5 0"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"mana_pool_damage_pct"	
 			{
-				"var_type"				"FIELD_FLOAT"
-				"mana_pool_damage_pct"	"4 5 6 6.5 7 8 9"
-				"LinkedSpecialBonus"	"special_bonus_unique_outworld_devourer"
+				"value"										"6 7 8 9 10 11 12" 
+				"special_bonus_unique_outworld_devourer"	"+3"
 			}
-			"02"
+			"mana_cost_percentage"							"6 7 8 9 10 11 12" 
+			"bounce_radius"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"mana_cost_percentage"	"3 4 5 6 7 8 9"
+				"value"										"0"			
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
@@ -43,8 +48,17 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5392"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-	
-        "MaxLevel"						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilitySound"					"Hero_ObsidianDestroyer.AstralImprisonment"
+       	"HasShardUpgrade"               "1"
+        "HasScepterUpgrade"				"1"
+		"MaxLevel"						"7"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -67,15 +81,15 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"prison_duration"		"1.5 1.8 2.2 2.3 2.7 3.2 4.0"
+			"prison_duration"		"1.6 2.0 2.4 2.8 3.2 3.6 4.0" 
 			"damage"		
 			{
-				"value"					"120 245 285 350 420 480 520"
+				"value"					"120 200 280 360 440 520 600" 
 				"special_bonus_scepter"		"+140"
 			}
 			"mana_capacity_steal"	
 			{
-				"value"							"17"
+				"value"							"14 16 18 20 22 24 26" 
 				"special_bonus_shard"			"+5"
 			}
 			
@@ -97,13 +111,12 @@
 			}
 			"AbilityCastRange"
 			{
-				"value"						"650"
+				"value"						"600 625 650 675 700 725 750" 
 				"special_bonus_unique_outworld_devourer_astral_castrange"	"+100"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}	
-
 
 	//=================================================================================================================
 	// Obsidian Destroyer: Essence Aura
@@ -113,7 +126,11 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5393"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilitySound"					"Hero_ObsidianDestroyer.EssenceAura"
+		"MaxLevel"                      "7"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -127,17 +144,17 @@
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus_mana"	    "150 250 350 450"
+				"bonus_mana"	    "150 250 350 450 550 650 750" 
 			}
 			"03"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"restore_amount"	"10 15 20 25"
+				"restore_amount"	"10 15 20 25 30 35 40" 
 			}
 			"04"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"restore_chance"		"40"
+				"restore_chance"		"20 25 30 35 40 45 50" 
 			}
 			"05"
 			{
@@ -162,11 +179,11 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5684"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		
-		
-		 "MaxLevel"                      "7"
-		
-
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		"MaxLevel"                      "7"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -179,12 +196,12 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"proc_chance"		"25"
+				"proc_chance"		"20 25 30 35 40 45 50"
 			}
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"mana_restore"	"35 40 45 50 55 60 65"
+				"mana_restore"	"10 15 20 25 30 35 40"
 			}
 			"03"
 			{
@@ -194,12 +211,12 @@
 			"04"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"mana_capacity_duration"	"50"
+				"mana_capacity_duration"	"30 35 40 45 50 55 60"
 			}
 			"05"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"shard_bonus_mana"	"500" 
+				"shard_bonus_mana"	"300"
 			}
 			"06"
 			{
@@ -217,16 +234,19 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5394"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		
-		 "MaxLevel"                      "7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"MaxLevel"                      "7"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"70"
+		"AbilityCooldown"				"110" 
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"175 250 325 525 725 925 1250"
+		"AbilityManaCost"				"150 250 350 450 550 650 750" 
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -235,22 +255,22 @@
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"base_damage"				"200 300 400 500 600 700 800"
+				"base_damage"				"150 250 350 450 550 650 750" 
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"400 433 466 500 533 566 600"
+				"radius"					"450 475 500 525 550 575 600" 
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"cast_range"					"700"
+				"cast_range"				"600 625 650 675 700 725 750" 
 			}			
 			"04"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"damage_multiplier"	"0.4 0.5 0.6 0.7 0.8 0.9 1.0"
+				"damage_multiplier"	"0.85"
 				"LinkedSpecialBonus"	"special_bonus_unique_outworld_devourer_4"
 				"DamageTypeTooltip"		"DAMAGE_TYPE_NONE"
 			}

@@ -1,42 +1,27 @@
 "item_paladin_sword"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"ID"							"376"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	
-	// Item Info
-	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"0"
-	"ItemIsNeutralDrop"				"0"
-	"ItemPurchasable"				"0"
-	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
-
-	"Model"							"models/props_gameplay/neutral_box.vmdl"
-	
-	// Special	
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"376"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_damage"			"45"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_lifesteal"		"25"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_spell_lifesteal"	"33"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_amp"				"35"
+			"bonus_damage"			"60" // 45
+			"bonus_lifesteal"			"25"
+			"bonus_spell_lifesteal"			"25" // 33
+			"bonus_amp"			"30" // 35
+			"creep_lifesteal_reduction_pct"	"50"
 		}
 	}
-}

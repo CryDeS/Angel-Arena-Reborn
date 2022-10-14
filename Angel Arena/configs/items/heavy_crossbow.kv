@@ -9,7 +9,7 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"2850" // 2350
+	"ItemCost"						"2200" // 2850
 	"ItemShopTags"					""
 	
 	// Recipe
@@ -18,7 +18,7 @@
 	"ItemResult"					"item_heavy_crossbow"
 	"ItemRequirements"
 	{
-		"01"						"item_doombolt;item_dimensional_accelerator"
+		"01"						"item_doombolt;item_dimensional_accelerator;item_blessed_essence"
 	}
 }
 
@@ -70,59 +70,63 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"bonus_damage"			"50"
+			"bonus_damage"			"50" // 40
 		}
 		"02"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"bonus_stats"			"12"
+			"bonus_stats"			"25" // 12
 		}
 		"03"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"bonus_as"				"50"
+			"bonus_as"				"60" // 50
 		}
 		"04"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"bonus_attack_range"	"150"
+			"bonus_hp"				"400"
 		}
-		
 		"05"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"abilitycastrange"		""
+			"bonus_attack_range"	"170" // 150
 		}
 		"06"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"stun_duration"			"0.5"
+			"abilitycastrange"		""
 		}
 		"07"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"damage"				"250"
+			"stun_duration"			"0.8" // 0.5
 		}
 		"08"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"attack_to_dmg"			"200" // 225
+			"damage"				"250"
 		}
 		"09"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"attack_to_dmg"			"200" // 225
+		}
+		"10"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"projectile_speed"		"1500"
 		}
 		
-		"10"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"crit_chance"			"20"
-		}
 		"11"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"crit_damage"			"200"
+			"crit_chance"			"25" // 20
+		}
+		"12"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"crit_damage"			"225" // 200
 		}
 	}
 }

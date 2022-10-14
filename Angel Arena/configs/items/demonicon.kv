@@ -1,0 +1,107 @@
+	/=================================================================================================================
+	// Recipe: demonicon 2
+	//=================================================================================================================
+	"item_recipe_demonicon_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							""														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"                     "item_recipe_arcane_boots"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"3400"	
+		"ItemShopTags"					"artifacts"
+
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_demonicon_2"
+		"ItemRequirements"
+		{
+			"01"						"item_reaver;item_mystic_staff;"
+		}
+	}
+
+	//=================================================================================================================
+	// 	demonicon 2
+	//=================================================================================================================
+	"item_demonicon_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							""	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass"						"item_demonicon"													
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"45.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"9000"
+		"ItemIsNeutralDrop"				"0"
+		"ItemStackable"					"0"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemPurchasable"				"1"
+		"ShouldBeSuggested"				"1"
+		"ItemBaseLevel"					"2"
+		"ItemShopTags"					"magic;hard_to_tag"
+		"ItemQuality"					"component"
+		"ItemAliases"					"mystic staff;reaver"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_strength"			"45" // 35
+			}
+			"02"
+			{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_intellect"		"45" // 35
+			}
+			"03"
+			{
+			"var_type"				"FIELD_FLOAT"
+			"summon_duration"				"45" // 75
+			}
+		}
+	}
+
+"item_demonicon"
+{
+	"ID"							"370"	
+	"ItemBaseLevel"					"1"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_strength"			"45" // 35
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_intellect"		"45" // 35
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"summon_duration"				"45" // 75
+		}
+	}
+}

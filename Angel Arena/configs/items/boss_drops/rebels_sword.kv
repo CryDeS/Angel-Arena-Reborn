@@ -1,6 +1,6 @@
 "item_recipe_rebels_sword"
 {
-		"AbilityTextureName" 				"item_recipe_rebels_sword"
+	"AbilityTextureName" 			"item_recipe_rebels_sword"
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"ID"							"1277"						
@@ -9,7 +9,7 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"3000"	
+	"ItemCost"						"5000"
 	"ItemShopTags"					"artifacts"
 	
 	// Recipe
@@ -18,7 +18,7 @@
 	"ItemResult"					"item_rebels_sword"
 	"ItemRequirements"
 	{
-		"01"						"item_corrupted_skull;item_sealed_rune;item_boss_soul;"
+		"01"						"item_burning_sword;item_boss_soul;"
 	}
 }
 
@@ -34,14 +34,16 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"19200"
-	"ItemStackable"					"0"
-	
-	"ItemKillable"                  "1"
-	"ItemSellable"                  "1"
-	"ItemDroppable"                 "1"
+	"ItemCost"						"40000"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	"ItemDroppable" 				"1"
+	"ItemKillable"					"1"
 	"ItemPurchasable"				"1"
-	
+	"ItemSellable"					"1"
+	"ItemStackable"					"0"
+	"ShouldBeSuggested"				"1"
+	"ItemBaseLevel"					"2"
 	"AbilityCooldown"				"0.4"
 	
 	"AbilitySpecial"
@@ -49,38 +51,52 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_damage"			"50"
+			"bonus_damage"			"90 100"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_all_stats"		"40 50"
 		}
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_all_stats"		"25"
+			"bonus_attack_speed"	"90 100"
 		}
 		"04"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_attack_speed"	"20"
-		}		
+			"bonus_evasion"			"30 40"
+		}
 		"05"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"disarmor"				"8"
+			"bonus_armor"			"10 20"
 		}
-		
 		"06"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"disarmor_const"		"4"
-		}
+        {
+            "var_type"				"FIELD_FLOAT"
+            "bonus_health_regen"	"30 40"
+        }
 		"07"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"max_disarmor_pct"		"40"
+			"disarmor"				"6 9"
 		}
 		"08"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"duration"				"3"
+			"disarmor_const"		"3 6"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"max_disarmor_pct"		"36 54"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"				"2.5 3.5"
 		}
 	}
 }

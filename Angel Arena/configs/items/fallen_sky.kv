@@ -1,0 +1,112 @@
+	//=================================================================================================================
+	// Recipe: Fallen Sky 2 
+	//=================================================================================================================
+	"item_recipe_fallen_sky_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							""														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"                     "item_recipe_arcane_boots"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1800"	
+		"ItemShopTags"					"artifacts"
+
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_fallen_sky_2"
+		"ItemRequirements"
+		{
+			"01"						"item_blink*;item_meteor_hammer;"
+		}
+	}
+
+	//=================================================================================================================
+	// Fallen Sky 2 
+	//=================================================================================================================
+	"item_fallen_sky_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							""	
+		"BaseClass"						"item_fallen_sky"													// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"FightRecapLevel"				"1"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		"AbilityCooldown"				"15.0"
+		"AbilityCastPoint"				"0.0"
+		"AbilityManaCost"				"0"
+		"AbilitySharedCooldown"			"blink"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"6000"
+		"ItemIsNeutralDrop"				"0"
+		"ItemStackable"					"0"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemPurchasable"				"1"
+		"ShouldBeSuggested"				"1"
+		"ItemBaseLevel"					"2"
+		"ItemShopTags"					"teleport;hard_to_tag"
+		"ItemQuality"					"component"
+		"ItemAliases"					"blink dagger;meteor hammer"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_strength"		"15"
+			"bonus_intellect"		"15"
+			"bonus_health_regen"		"10"
+			"bonus_mana_regen"		"4"
+			"burn_dps_buildings"		"100"
+			"burn_dps_units"		"100"
+			"burn_duration"		"3"
+			"stun_duration"		"1.5"
+			"burn_interval"				"1.0"
+			"land_time"				"1.0"
+			"impact_radius"		"400"
+			"max_duration"		"1.0"
+			"impact_damage_buildings"		"200"
+			"impact_damage_units"		"200"
+			"blink_damage_cooldown"	"3.0"
+		}
+	}
+
+	"item_fallen_sky"
+	{
+		"ItemBaseLevel"					"1"
+		"AbilitySharedCooldown"			"blink"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_strength"		"15"
+			"bonus_intellect"		"15"
+			"bonus_health_regen"		"15.0"
+			"bonus_mana_regen"		"10.0"
+			"burn_dps_buildings"		"60"
+			"burn_dps_units"		"60"
+			"burn_duration"		"6"
+			"stun_duration"		"2.0"
+			"burn_interval"				"1.0"
+			"land_time"				"1"
+			"impact_radius"		"315"
+			"max_duration"		"2.5"
+			"impact_damage_buildings"		"75"
+			"impact_damage_units"		"150"
+			"blink_damage_cooldown"	"3.0"
+		}
+	}

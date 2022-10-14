@@ -1,135 +1,3 @@
-"item_recipe_manta_3"
-{
-	"AbilityTextureName" 			"item_recipe_manta_3"
-
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"ID"							"1285"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-	"Model"							"models/props_gameplay/recipe.vmdl"
-	"BaseClass"                     "item_recipe_arcane_boots"
-	
-	// Item Info
-	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"0"	
-	"ItemShopTags"					""
-	
-	// Recipe
-	//-------------------------------------------------------------------------------------------------------------
-	"ItemRecipe"					"1"
-	"ItemResult"					"item_manta_3"
-	"ItemRequirements"
-	{
-		"01"						"item_manta_2;item_ultimate_orb;item_ultimate_orb"
-	}
-}
-
-
-"item_manta_3"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"BaseClass"						"item_manta"
-	"ID"							"1284"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-	"AbilityTextureName"			"manta_3"
-	"AbilitySharedCooldown"			"manta_cooldown_shared"
-	// Stats		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"20.0"
-	"AbilityCastPoint"				"0.0"
-	"ItemBaseLevel"					"3"
-	"AbilityManaCost"				"325"	
-	// Item Info
-	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"14150"
-	"ItemShopTags"					"agi;str;int;attack_speed;move_speed;hard_to_tag"
-	"ItemQuality"					"epic"
-	"ItemAliases"					"manta style"
-	"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
-	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-	
-	// Special	
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-            "01"
-            {
-                "var_type"				"FIELD_INTEGER"
-                "bonus_strength"		"10 20 40"
-            }
-            "02"
-            {
-                "var_type"				"FIELD_INTEGER"
-                "bonus_agility"			"20 40 60"
-            }
-            "03"
-            {
-                "var_type"				"FIELD_INTEGER"
-                "bonus_intellect"		"10 20 40"
-            }
-            "04"
-            {
-                "var_type"				"FIELD_INTEGER"
-                "bonus_attack_speed"	"15 35 90"
-            }
-            "05"
-            {
-                "var_type"				"FIELD_INTEGER"
-                "bonus_movement_speed"	"10 12 14"
-            }
-            "06"
-            {
-                "var_type"				"FIELD_INTEGER"
-                "images_count"			"2 2 2"
-            }
-            "07"
-            {
-                "var_type"				"FIELD_INTEGER"
-                "tooltip_illusion_duration"			"20 20 20"
-            }
-            "08"
-            {
-                "var_type"				"FIELD_INTEGER"
-                "images_do_damage_percent_melee"	"-67 -50 -35"
-            }
-            "09"
-            {
-                "var_type"				"FIELD_INTEGER"
-                "tooltip_damage_outgoing_melee"			"33 50 65"
-            }
-            "10"
-            {
-                "var_type"				"FIELD_INTEGER"
-                "images_take_damage_percent"	"250 180 100"
-            }
-            "11"
-            {
-                "var_type"				"FIELD_INTEGER"
-                "tooltip_damage_incoming_total_pct"			"350 280 200"
-            }
-            "12"
-            {
-                "var_type"				"FIELD_INTEGER"
-                "images_do_damage_percent_ranged"	"-72 -65 -50"
-            }
-            "13"
-            {
-                "var_type"				"FIELD_INTEGER"
-                "tooltip_damage_outgoing_ranged"			"28 35 50"
-            }
-            "14"
-            {
-                "var_type"				"FIELD_FLOAT"
-                "invuln_duration"		"0.1 0.1 0.1"
-            }
-            "15"
-            {
-                "var_type"				"FIELD_INTEGER"
-                "vision_radius"			"1000"
-            }
-	}
-}
-
 "item_recipe_manta_2"
 {
 	"AbilityTextureName" 			"item_recipe_manta_2"
@@ -142,7 +10,7 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"0"	
+	"ItemCost"						"3000" // 0
 	"ItemShopTags"					""
 	
 	// Recipe
@@ -151,7 +19,7 @@
 	"ItemResult"					"item_manta_2"
 	"ItemRequirements"
 	{
-		"01"						"item_manta;item_manta"
+		"01"						"item_manta;item_boss_soul;"
 	}
 }
 
@@ -173,100 +41,100 @@
 	"AbilityManaCost"				"325"	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"9900"
+	"ItemCost"						"18000"
 	"ItemShopTags"					"agi;str;int;attack_speed;move_speed;hard_to_tag"
 	"ItemQuality"					"epic"
 	"ItemAliases"					"manta style"
 	"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 	
-	// Special	
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
+	// Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
             "01"
             {
-                "var_type"				"FIELD_INTEGER"
-                "bonus_strength"		"10 20 40"
+                "var_type"              "FIELD_INTEGER"
+                "bonus_strength"        "25 50" // 10 40
             }
             "02"
             {
-                "var_type"				"FIELD_INTEGER"
-                "bonus_agility"			"20 40 60"
+                "var_type"              "FIELD_INTEGER"
+                "bonus_agility"         "35 70" // 20 60
             }
             "03"
             {
-                "var_type"				"FIELD_INTEGER"
-                "bonus_intellect"		"10 20 40"
+                "var_type"              "FIELD_INTEGER"
+                "bonus_intellect"       "10 20" // 10 40
             }
             "04"
             {
-                "var_type"				"FIELD_INTEGER"
-                "bonus_attack_speed"	"15 35 90"
+                "var_type"              "FIELD_INTEGER"
+                "bonus_attack_speed"    "35 70" // 15 90
             }
             "05"
             {
-                "var_type"				"FIELD_INTEGER"
-                "bonus_movement_speed"	"10 12 14"
+                "var_type"              "FIELD_INTEGER"
+                "bonus_movement_speed"  "10 20" // 10 14
             }
             "06"
             {
-                "var_type"				"FIELD_INTEGER"
-                "images_count"			"2 2 2"
+                "var_type"              "FIELD_INTEGER"
+                "images_count"          "2 2"
             }
             "07"
             {
-                "var_type"				"FIELD_INTEGER"
-                "tooltip_illusion_duration"			"20 20 20"
+                "var_type"              "FIELD_INTEGER"
+                "tooltip_illusion_duration"         "20 20"
             }
             "08"
             {
-                "var_type"				"FIELD_INTEGER"
-                "images_do_damage_percent_melee"	"-67 -50 -35"
+                "var_type"              "FIELD_INTEGER"
+                "images_do_damage_percent_melee"    "-65 -30"
             }
             "09"
             {
-                "var_type"				"FIELD_INTEGER"
-                "tooltip_damage_outgoing_melee"			"33 50 65"
+                "var_type"              "FIELD_INTEGER"
+                "tooltip_damage_outgoing_melee"         "35 70"
             }
             "10"
             {
-                "var_type"				"FIELD_INTEGER"
-                "images_take_damage_percent"	"250 180 100"
+                "var_type"              "FIELD_INTEGER"
+                "images_take_damage_percent"    "200 100"
             }
             "11"
             {
-                "var_type"				"FIELD_INTEGER"
-                "tooltip_damage_incoming_total_pct"			"350 280 200"
+                "var_type"              "FIELD_INTEGER"
+                "tooltip_damage_incoming_total_pct"         "300 200"
             }
             "12"
             {
-                "var_type"				"FIELD_INTEGER"
-                "images_do_damage_percent_ranged"	"-72 -65 -50"
+                "var_type"              "FIELD_INTEGER"
+                "images_do_damage_percent_ranged"   "-75 -50"
             }
             "13"
             {
-                "var_type"				"FIELD_INTEGER"
-                "tooltip_damage_outgoing_ranged"			"28 35 50"
+                "var_type"              "FIELD_INTEGER"
+                "tooltip_damage_outgoing_ranged"            "25 50"
             }
             "14"
             {
-                "var_type"				"FIELD_FLOAT"
-                "invuln_duration"		"0.1 0.1 0.1"
+                "var_type"              "FIELD_FLOAT"
+                "invuln_duration"       "0.1 0.1"
             }
             "15"
             {
-                "var_type"				"FIELD_INTEGER"
-                "vision_radius"			"1000"
+                "var_type"              "FIELD_INTEGER"
+                "vision_radius"         "1000"
             }
-	}
+    }
 }
 
 "item_recipe_manta"
 {
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
-    "ItemCost"						"400"
+    "ItemCost"						"450"
     "ItemShopTags"					""
 
     // Recipe
@@ -275,7 +143,7 @@
     "ItemResult"					"item_manta"
     "ItemRequirements"
     {
-        "01"						"item_ultimate_orb;item_ultimate_orb"
+        "01"						"item_sealed_rune;item_wisdom_shard;item_wind_lace;"
     }
 }
 
@@ -285,82 +153,84 @@
 	"ItemBaseLevel"					"1"
 	"AbilitySharedCooldown"			"manta_cooldown_shared"
 	
-	"AbilitySpecial"
-	{
+	// Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
             "01"
             {
-                "var_type"				"FIELD_INTEGER"
-                "bonus_strength"		"10 20 40"
+                "var_type"              "FIELD_INTEGER"
+                "bonus_strength"        "25 50" // 10 40
             }
             "02"
             {
-                "var_type"				"FIELD_INTEGER"
-                "bonus_agility"			"20 40 60"
+                "var_type"              "FIELD_INTEGER"
+                "bonus_agility"         "35 70" // 20 60
             }
             "03"
             {
-                "var_type"				"FIELD_INTEGER"
-                "bonus_intellect"		"10 20 40"
+                "var_type"              "FIELD_INTEGER"
+                "bonus_intellect"       "10 20" // 10 40
             }
             "04"
             {
-                "var_type"				"FIELD_INTEGER"
-                "bonus_attack_speed"	"15 35 90"
+                "var_type"              "FIELD_INTEGER"
+                "bonus_attack_speed"    "35 70" // 15 90
             }
             "05"
             {
-                "var_type"				"FIELD_INTEGER"
-                "bonus_movement_speed"	"10 12 14"
+                "var_type"              "FIELD_INTEGER"
+                "bonus_movement_speed"  "10 20" // 10 14
             }
             "06"
             {
-                "var_type"				"FIELD_INTEGER"
-                "images_count"			"2 2 2"
+                "var_type"              "FIELD_INTEGER"
+                "images_count"          "2 2"
             }
             "07"
             {
-                "var_type"				"FIELD_INTEGER"
-                "tooltip_illusion_duration"			"20 20 20"
+                "var_type"              "FIELD_INTEGER"
+                "tooltip_illusion_duration"         "20 20"
             }
             "08"
             {
-                "var_type"				"FIELD_INTEGER"
-                "images_do_damage_percent_melee"	"-67 -50 -35"
+                "var_type"              "FIELD_INTEGER"
+                "images_do_damage_percent_melee"    "-65 -30"
             }
             "09"
             {
-                "var_type"				"FIELD_INTEGER"
-                "tooltip_damage_outgoing_melee"			"33 50 65"
+                "var_type"              "FIELD_INTEGER"
+                "tooltip_damage_outgoing_melee"         "35 70"
             }
             "10"
             {
-                "var_type"				"FIELD_INTEGER"
-                "images_take_damage_percent"	"250 180 100"
+                "var_type"              "FIELD_INTEGER"
+                "images_take_damage_percent"    "200 100"
             }
             "11"
             {
-                "var_type"				"FIELD_INTEGER"
-                "tooltip_damage_incoming_total_pct"			"350 280 200"
+                "var_type"              "FIELD_INTEGER"
+                "tooltip_damage_incoming_total_pct"         "300 200"
             }
             "12"
             {
-                "var_type"				"FIELD_INTEGER"
-                "images_do_damage_percent_ranged"	"-72 -65 -50"
+                "var_type"              "FIELD_INTEGER"
+                "images_do_damage_percent_ranged"   "-75 -50"
             }
             "13"
             {
-                "var_type"				"FIELD_INTEGER"
-                "tooltip_damage_outgoing_ranged"			"28 35 50"
+                "var_type"              "FIELD_INTEGER"
+                "tooltip_damage_outgoing_ranged"            "25 50"
             }
             "14"
             {
-                "var_type"				"FIELD_FLOAT"
-                "invuln_duration"		"0.1 0.1 0.1"
+                "var_type"              "FIELD_FLOAT"
+                "invuln_duration"       "0.1 0.1"
             }
             "15"
             {
-                "var_type"				"FIELD_INTEGER"
-                "vision_radius"			"1000"
+                "var_type"              "FIELD_INTEGER"
+                "vision_radius"         "1000"
             }
-	}
+    }
 }

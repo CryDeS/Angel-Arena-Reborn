@@ -1,3 +1,27 @@
+	//=================================================================================================================
+	// Recipe: Monkey King Bar
+	//=================================================================================================================
+	"item_recipe_monkey_king_bar"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"134"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"700"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_monkey_king_bar"
+		"ItemRequirements"
+		{
+			"01"						"item_demon_edge;item_javelin;item_blitz_knuckles"
+		}
+	}
+
 "item_monkey_king_bar"
 {
 	// General
@@ -7,7 +31,7 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"5400"
+	"ItemCost"						"5000"
 	"ItemShopTags"					"damage;attack_speed;hard_to_tag"
 	"ItemQuality"					"epic"
 	"ItemAliases"					"mkb;monkey king bar"
@@ -20,22 +44,22 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_damage"			"52"
+			"bonus_damage"			"50" // 52
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_attack_speed"	"66"
+			"bonus_attack_speed"	"70" // 66
 		}
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_chance"			"75"
+			"bonus_chance"			"80" // 75
 		}
 		"04"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_chance_damage"	"90"
+			"bonus_chance_damage"	"80" // 90
 		}
 	}
 }

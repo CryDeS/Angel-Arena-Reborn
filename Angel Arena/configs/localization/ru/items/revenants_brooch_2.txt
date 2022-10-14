@@ -1,0 +1,13 @@
+"DOTA_Tooltip_Ability_item_revenants_brooch_2"							"Revenant's Brooch 2"
+"DOTA_Tooltip_Ability_item_recipe_revenants_brooch_2"					"Рецепт: Revenant's Brooch 2"
+
+"DOTA_Tooltip_ability_item_revenants_brooch_2_Description"				"<h1>Активное: Phantom Province</h1>Следующие %number_of_attacks% атак владельца наносят магический урон, и ими нельзя промахнуться. Длительность: %active_duration% сек.<br><br> Позволяет атаковать бесплотных существ и не наносит урона целям, невосприимчивым к магии.\n<h1>Пассивное: Witch Blade</h1>Следующая атака отравит жертву на %slow_duration% сек., замедлив её на %slow%%% и каждую секунду нанося ей урон, равный интеллекту владельца, помноженному на %int_damage_multiplier%. Перезарядка: %passive_cooldown% сек."
+
+"DOTA_Tooltip_ability_item_revenants_brooch_2_Lore"						"Проклятая брошь павшего стража, блуждающего меж завесами жизни и смерти."
+"DOTA_Tooltip_ability_item_revenants_brooch_2_bonus_armor"				"+$armor"
+"DOTA_Tooltip_ability_item_revenants_brooch_2_bonus_intellect"			"+$int"
+"DOTA_Tooltip_ability_item_revenants_brooch_2_bonus_attack_speed"		"+$attack"
+"DOTA_Tooltip_ability_item_revenants_brooch_2_projectile_speed"			"+$projectile_speed"
+
+"DOTA_Tooltip_modifier_item_revenants_brooch_2_internal_cd"				"Перезарядка Witch Blade"
+"DOTA_Tooltip_modifier_item_revenants_brooch_2_internal_cd_Description"	"Задержка, после которой атака получит эффект Witch Blade."

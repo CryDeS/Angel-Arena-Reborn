@@ -1,0 +1,179 @@
+"item_recipe_crimson_agony"
+{
+	"AbilityTextureName" 			"item_recipe_crimson_agony"
+	
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							""						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"1695"
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_crimson_agony"
+	"ItemRequirements"
+	{
+		"01"						"item_death_shield;item_hood_of_rage;item_boss_soul;"
+	}
+}
+
+"item_crimson_agony"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_datadriven"
+	"ID"							""
+	"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	"AbilityTextureName"	        "crimson_agony"
+	"AbilityCastPoint"				"0.0"
+	"AbilityCooldown"				"15.0"
+	"AbilitySharedCooldown"			"item_hood_of_rage"
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+
+	// Item Info
+	"ItemCost"						"20000"
+	"ItemStackable"					"0"
+	
+	"ItemPermanent"					"0"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+
+	"precache"
+	{
+		"soundfile"		"sounds/items/pipe.vsnd"		
+		"particle"		"particles/items2_fx/pipe_of_insight.vpcf"		
+	}
+
+	//special
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_health"			"1000"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_hpregen"			"100"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"magic_resist"			"40"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_defence"			"-20"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"absorb_chance"			"10"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"block_damage"			"100"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"activate_resist"		"60"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"activate_duration"		"5"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_crimson_agony_active"
+			"Target" 		"CASTER"
+			"Duration"		"%activate_duration"
+		}
+		"FireSound"
+		{
+			"Target"		"CASTER"
+			"EffectName"	"DOTA_Item.Pipe.Activate"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_crimson_agony_passive_uniq"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" 							"%bonus_damage"
+				"MODIFIER_PROPERTY_HEALTH_BONUS"									"%bonus_health"
+				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"							"%bonus_hpregen"
+				"MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK" 						"%block_damage"		
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"							"%bonus_armor"
+				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"						"%magic_resist"
+				"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"						"%bonus_defence"
+			}
+		}
+		"modifier_crimson_agony_evasion"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+			
+			"OnTakeDamage"
+			{
+				"Random"
+				{
+					"Chance"		"%absorb_chance"
+					"PseudoRandom"	"DOTA_PSEUDO_RANDOM_TROLL_BASH"
+					
+					"OnSuccess"
+					{
+						"RunScript"
+						{
+							"ScriptFile"	"scripts/vscripts/items/funcs/absorb_damage.lua"
+							"Function"		"AbsorbDamage"
+							"damage"		"%attack_damage"
+						}		
+					}
+				}
+			}
+		}
+		"modifier_crimson_agony_active"
+		{
+			"Passive"	"0"
+			"IsHidden"	"0"
+			"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"TextureName"				"custom/hood_of_rage"
+			
+			"EffectName"				"particles/items2_fx/pipe_of_insight.vpcf"
+			"EffectAttachType"			"attach_origin"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%activate_resist"				
+			}
+		}
+	}
+
+}

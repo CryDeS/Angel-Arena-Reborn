@@ -1,0 +1,13 @@
+"DOTA_Tooltip_Ability_item_revenants_brooch_2"							"Revenant's Brooch 2"
+"DOTA_Tooltip_Ability_item_recipe_revenants_brooch_2"					"Revenant's Brooch 2 Recipe"
+
+"DOTA_Tooltip_ability_item_revenants_brooch_2_Description"				"<h1>Active: Phantom Province</h1>Your next %number_of_attacks% attacks have True Strike and deal magic damage. Expires after %active_duration% seconds.<br><br> Can attack Ethereal units and deals no damage to Magic Immune targets.\n<h1>Passive: Witch Blade</h1> Causes your next attack to apply a poison for %slow_duration% seconds, slowing by %slow%%% and dealing %int_damage_multiplier%x your intelligence as damage every second. Can only trigger once every %passive_cooldown% seconds."
+
+"DOTA_Tooltip_ability_item_revenants_brooch_2_Lore"						"The cursed brooch of a fallen guardian who stalks forever between the veil of life and death."
+"DOTA_Tooltip_ability_item_revenants_brooch_2_bonus_armor"				"+$armor"
+"DOTA_Tooltip_ability_item_revenants_brooch_2_bonus_intellect"			"+$int"
+"DOTA_Tooltip_ability_item_revenants_brooch_2_bonus_attack_speed"		"+$attack"
+"DOTA_Tooltip_ability_item_revenants_brooch_2_projectile_speed"			"+$projectile_speed"
+
+"DOTA_Tooltip_modifier_item_revenants_brooch_2_internal_cd"				"Witch Blade Cooldown"
+"DOTA_Tooltip_modifier_item_revenants_brooch_2_internal_cd_Description"	"Delay until your next attack procs the Witch Blade."

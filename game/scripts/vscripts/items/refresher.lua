@@ -9,6 +9,7 @@ local non_refreshable = {
 	["spike_conclusion"] 				= 1,
 	["item_aegis_aa"]					= 1,
 	["item_ex_machina"]					= 1,
+	["dazzle_good_juju"]				= 1,
 
 }
 

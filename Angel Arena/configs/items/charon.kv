@@ -9,7 +9,7 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"1000"
+	"ItemCost"						"1075"
 	"ItemShopTags"					"artifacts"
 	
 	// Recipe
@@ -50,8 +50,8 @@
 	"ItemDroppable"                 "1"
 	"ItemPurchasable"				"1"
 	
-	"AbilityCooldown"				"22.0"
-	"AbilityManaCost"				"250"
+	"AbilityCooldown"				"25.0" // 22
+	"AbilityManaCost"				"200" // 250
 	
 	//special
 	"AbilitySpecial"
@@ -59,7 +59,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"astral_duration"		"3.0"
+			"astral_duration"		"2.5" // 3.0
 		}
 		"02"
 		{
@@ -74,12 +74,12 @@
 		"04"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_int"				"30"
+			"bonus_int"				"25" // 30
 		}
 		"05"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"hp_regen_pct"			"8"
+			"hp_regen_pct"			"10" // 8
 		}
 	}
 	
@@ -165,5 +165,36 @@
 
 "item_cyclone"
 {
-	"AbilitySharedCooldown"			"items_cyclone_cooldown"
+	"AbilitySharedCooldown"			"cyclone"
+	"AbilityCooldown"				"25.0"
+	"AbilityManaCost"				"150"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_intellect"		"15"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_mana_regen"		"3.0"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_movement_speed"	"30"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"cyclone_duration"		"2.5"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"tooltip_drop_damage"	"50"
+		}
+	}
 }

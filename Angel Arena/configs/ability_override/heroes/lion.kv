@@ -6,20 +6,23 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5044"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		
-		"MaxLevel"						"7"
-		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"AbilitySound"					"Hero_Lion.Impale"
+		"MaxLevel"                      "7"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"600"
 		"AbilityCastPoint"				"0.3"
 		
-		
-
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"100 120 145 170 180 200 250"
+		"AbilityManaCost"				"100 120 140 160 180 200 220" 
 		
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
@@ -32,13 +35,13 @@
 
 			"damage"			
 			{
-				"value"			"100 120 145 170 180 200 250"
-				"special_bonus_unique_lion_3"	"+65"
+				"value"			"120 200 280 360 440 520 600" 
+				"special_bonus_unique_lion_3"	"+100" 
 			}
 			"width"				"125"
 			"duration"			"2"
 			"length_buffer"		"325"
-			"speed"				"1600 1600 1600 1600 2000 2200 2400"
+			"speed"				"1500 1600 1700 1800 1900 2000 2100" 
 			"pierces_immunity"
 			{
 				"value"			"0"
@@ -56,17 +59,22 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5045"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-	
-		"MaxLevel"						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"AbilitySound"					"Hero_Lion.Voodoo"
+		"MaxLevel"                      "7"
+
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"500"
-		"AbilityCastPoint"				"0 0 0 0"
-
+		"AbilityCastRange"				"550" 
+		"AbilityCastPoint"				"0.1" 
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"125 150 175 200 220 240 260"
+		"AbilityManaCost"				"125 150 175 200 225 250 275"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -74,10 +82,10 @@
 		{
 			"AbilityCooldown"				
 			{
-				"value"				"30.0 26.0 24.0 22.0 18.0 16.0 14.0"
+				"value"				"21 20 19 18 17 16 15" 
 				"special_bonus_unique_lion_5"	"-2"
 			}
-			"duration"					"2.5 2.75 2.9 3.0 3.2 3.4 3.6"
+			"duration"					"2.25 2.5 2.75 3.0 3.25 3.5 3.75" 
 			"movespeed"					"120"
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
@@ -91,23 +99,28 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5046"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		
-		"MaxLevel"						"7"
-       
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+        "HasShardUpgrade"               "1"
+        "MaxLevel"                      "7"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"1500"
+		"AbilityCastRange"				"1000" 
 		"AbilityCastPoint"				"0.3"
 		"AbilityChannelTime"				"5.1"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"20.0 17.0 15.0 13.0 10.0 7.0 5.0"
+		"AbilityCooldown"				"20 18 16 14 12 10 8" 
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"10"
+		"AbilityManaCost"				"10 20 30 40 50 60 70" 
 		
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -120,18 +133,17 @@
 				"duration"					"5.0"
 				"mana_per_second"			
 				{
-					"value"		"30 50 80 100 120 180 220"
-					"special_bonus_unique_lion_5"	"+50"
+					"value"		"30 60 90 120 150 180 210" 
 				}
 				"break_distance"			
 				{
-					"value"	"1600"
+					"value"	"1200"
 					"special_bonus_shard"		"+400"	
 				}
 				"tick_interval"				"0.1"
 				"movespeed"			
 				{
-					"value"				"25 27 29 31 33 36 38"
+					"value"				"22 25 28 31 34 37 40"
 					"special_bonus_unique_lion_6"	"+10"
 				}
 				"shard_bonus_break_distance"			//OBSOLETE
@@ -147,7 +159,7 @@
 				"damage_pct"					
 				{
 					"value"					"0"		
-					"special_bonus_unique_lion_manadrain_damage"			"+150"
+					"special_bonus_unique_lion_manadrain_damage"			"+200" 
 				}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -161,9 +173,16 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5047"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		
-		"MaxLevel"						"7"
-		
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilitySound"					"Hero_Lion.FingerOfDeath"
+		"HasScepterUpgrade"				"1"
+		"MaxLevel"                      "7"
+
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"1000"
@@ -172,11 +191,11 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"60 55 50 45 40 35 30"
+		"AbilityCooldown"				"70 65 60 55 50 45 40" 
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"60 55 50 45 40 35 30"
+		"AbilityManaCost"				"200 350 500 650 800 950 1100" 
 		
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -188,24 +207,24 @@
 		{
 				"damage"					
 				{
-					"value"				"400 500 600 700 800 900 1000"
+					"value"				"400 600 800 1000 1200 1400 1600"
 					"special_bonus_scepter"		"+100"
 				}
 				"damage_per_kill"			
 				{
-					"value"				"40"
-					"special_bonus_unique_lion_8"	"+20"
+					"value"				"50" 
+					"special_bonus_unique_lion_8"	"+25" 
 					"CalculateSpellDamageTooltip"	"0"
 				}
 				"grace_period"				"3"
 				"damage_delay"				
 				{
-					"value"				"0.25"
+					"value"				"0.2" 
 					"CalculateSpellDamageTooltip"	"0"
 				}
 				"cooldown_scepter"			
 				{
-					"value"	"20.0"
+					"value"	"50 45 40 35 30 25 20" 
 					"RequiresScepter"			"1"
 				}
 				"splash_radius_scepter"		

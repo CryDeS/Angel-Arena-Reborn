@@ -1,0 +1,13 @@
+"DOTA_Tooltip_Ability_item_lotus_orb_2"								"Lotus Orb 2"
+
+"DOTA_Tooltip_ability_item_lotus_orb_2_Description"					"<h1>Активная: Echo Shell</h1> Создаёт вокруг цели щит, отражающий большинство направленных заклинаний обратно во врага. Действует %active_duration% сек.<br><br>Не блокирует эффекты вражеских заклинаний. <br><br>Дальность применения: %abilitycastrange%<br>Тип развеивания: <span class=\"GameplayValues GameplayVariable\">нормальное</span>"
+
+"DOTA_Tooltip_ability_item_lotus_orb_2_bonus_armor"					"+$armor"
+"DOTA_Tooltip_ability_item_lotus_orb_2_bonus_health_regen"			"+$hp_regen"
+"DOTA_Tooltip_ability_item_lotus_orb_2_bonus_mana_regen"			"+$mana_regen"
+"DOTA_Tooltip_ability_item_lotus_orb_2_bonus_mana"		    		"+$mana"
+
+"DOTA_Tooltip_ability_item_lotus_orb_2_Lore"						"Бриллиант в центре всё еще несёт блёклое отражение своего создателя."
+		
+"DOTA_Tooltip_modifier_item_lotus_orb_2_active"						"Echo Shell"
+"DOTA_Tooltip_modifier_item_lotus_orb_2_active_Description"			"Большинство направленных на цель заклинаний будет направлено обратно."

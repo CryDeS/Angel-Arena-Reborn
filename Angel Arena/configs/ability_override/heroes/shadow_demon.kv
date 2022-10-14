@@ -6,7 +6,7 @@
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityDuration"				"2.5 2.5 2.5 2.5 2.5 2.5 2.5"
-	"AbilityCooldown"				"16" // 12
+	"AbilityCooldown"				"16" 
 
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
@@ -30,7 +30,7 @@
 		"02"
 		{
 			"var_type"					"FIELD_FLOAT"
-			"illusion_duration"			"6 7 8 9 10 10 10" // "6 7 8 9 10 11 12"
+			"illusion_duration"			"6 7 8 9 10 10 10" 
 		}
 		"03"
 		{
@@ -50,7 +50,7 @@
 		"06"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"tooltip_total_illusion_incoming_damage"	"180.0"
+			"tooltip_total_illusion_incoming_damage"	"250" 
 		}
 		"07"
 		{
@@ -209,7 +209,7 @@
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityDuration"				"5.0"
-	"AbilityCooldown"				"40"
+	"AbilityCooldown"				"60" 
 
 	// Damage.
 	//-------------------------------------------------------------------------------------------------------------
@@ -301,4 +301,28 @@
 			"radius"					"600"
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_shadow_demon_9"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"752"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"						"20" 
+				"ad_linked_abilities"			"shadow_demon_demonic_purge"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
 	}

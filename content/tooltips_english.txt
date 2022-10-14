@@ -379,5 +379,5 @@
 		"DOTA_Tooltip_ability_item_ward_observer_health"                                  "HEALTH:"
 		"DOTA_Tooltip_ability_item_ward_observer_duration_minutes_tooltip"                "DURATION MINUTES TOOLTIP:"
 
-		"DOTA_Tooltip_ability_item_recipe_nullifier_2"                                  "Recipe Nullifier"
+		"DOTA_Tooltip_ability_item_recipe_nullifier_2"                                  "Recipe Nullifier 2"
 		"DOTA_Tooltip_ability_item_recipe_nullifier_2_Description"                       ""

@@ -36,7 +36,6 @@ function modifier_plague_staff:DeclareFunctions()
 		MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,
 		MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
 		MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,
-		MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
 		MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT,
 		MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE,
 		MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS,
@@ -69,12 +68,6 @@ end
 
 function modifier_plague_staff:GetModifierBonusStats_Intellect( params )
 	return self:GetAbility():GetSpecialValueFor("bonus_int") or 0
-end
-
---------------------------------------------------------------------------------
-
-function modifier_plague_staff:GetModifierPreAttack_BonusDamage( params )
-	return self:GetAbility():GetSpecialValueFor("bonus_damage") or 0
 end
 
 --------------------------------------------------------------------------------

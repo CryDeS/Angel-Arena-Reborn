@@ -84,6 +84,7 @@ local PURGE_MODIFIERS = {
 	"modifier_ice_blast",
 	"modifier_riki_tricks_of_the_trade_phase",
 	"modifier_venomancer_venomous_gale",
+	"modifier_fountain_invulnerability",
 }
 
 local function _IsHeroCheck(hero)

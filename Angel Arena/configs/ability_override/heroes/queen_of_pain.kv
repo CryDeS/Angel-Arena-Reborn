@@ -11,16 +11,16 @@
 
 			// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"600"
-		"AbilityCastPoint"				"0.4"
+		"AbilityCastRange"				"450 475 500 525 550 575 600" 
+		"AbilityCastPoint"				"0.3" 
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"10 9 8 7 6 5 4"
+		"AbilityCooldown"				"12 11 10 9 8 7 6" 
 	
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"110"
+		"AbilityManaCost"				"100 110 120 130 140 150 160" 
 	
 		
 		// Special	
@@ -29,18 +29,18 @@
 		{
 			"strike_damage"			
 			{
-				"value"								"80 125 175 250 300 350 400"
-				"special_bonus_scepter"				"+80"
+				"value"								"80 130 180 230 280 330 380" 
+				"special_bonus_scepter"				"+120" 
 			}
-			"duration_damage"		"35 45 55 70 85 105 130"
-			"movement_slow"			"-20 -35 -50 -65"
+			"duration_damage"		"30 45 60 75 90 105 120" 
+			"movement_slow"			"-25 -30 -35 -40 -45 -50 -55" 
 			"projectile_speed"		"900"
 			"damage_interval"		
 			{
-				"value"					"1.7"
-				"special_bonus_unique_queen_of_pain_4"		"-0.7"
+				"value"					"1.5" 
+				"special_bonus_unique_queen_of_pain_4"		"-0.5" 
 			}
-			"duration_heal"		"10 15 20 30 40 50 65"
+			"duration_heal"		"10 20 30 40 50 60 70" 
 			"generate_scream"
 			{
 				"value"								"0"
@@ -51,7 +51,7 @@
 				"value"								"0"
 				"special_bonus_scepter"				"+375"
 			}
-			"duration"						"15"
+			"duration"						"9" 
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
@@ -71,16 +71,16 @@
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
-		"AbilityCastRange"				"750 800 850 900 950 1000 1050"
-		"AbilityCastPoint"				"0.33"
+		"AbilityCastRange"				"800 850 900 950 1000 1050 1100"
+		"AbilityCastPoint"				"0.25" 
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"15.0 14.0 13.0 10.0 8.0 7.0 6.0"
+		"AbilityCooldown"				"13 12 11 10 9 8 7" 
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"60 50 40 30 20 10 0"
+		"AbilityManaCost"				"60" 
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -90,18 +90,18 @@
 				"shard_damage"			
 				{
 					"RequiresShard"				"1"
-					"value"						"125"
+					"value"						"250" 
 				}
 
 				"shard_duration"
 				{
 					"RequiresShard"				"1"
-					"value"						"1.75"
+					"value"						"2.0" 
 				}	
 				"shard_aoe"
 				{
 					"RequiresShard"				"1"
-					"value"						"300"
+					"value"						"350" 
 				}									
 		}
 	}
@@ -115,30 +115,31 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5175"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		
+		"MaxLevel"						"7"
+
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"0"
-		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+		"AbilityCastPoint"				"0.1"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"9"
+		"AbilityCooldown"				"13 12 11 10 9 8 7" 
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"110 120 130 140 150 160 170"
+		"AbilityManaCost"				"100 120 140 160 180 200 220" 
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"area_of_effect"									"475"
+			"area_of_effect"									"550" 
 			"projectile_speed"									"900"
 			"damage"										
 			{
-				"value"											"120 215 295 380 420 480 520"
-				"special_bonus_unique_queen_of_pain_2" 			"+120"
+				"value"											"120 200 280 360 440 520 600" 
+				"special_bonus_unique_queen_of_pain_2" 			"+160"
 			}
 
 		}
@@ -168,7 +169,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"250 360 420 530 580 620 630"
+		"AbilityManaCost"				"200 300 400 500 600 700 800" 
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -180,8 +181,8 @@
 				"speed"				"1100"
 				"damage"			
 				{
-					"value"											"400 525 625 825 925 1000 1250"
-					"special_bonus_unique_queen_of_pain_7"			"+200"
+					"value"											"320 480 640 800 960 1120 1280" 
+					"special_bonus_unique_queen_of_pain_7"			"+320" 
 				}
 				"knockback_distance"	"350"
 				"knockback_duration" "1.4"

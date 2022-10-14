@@ -1,4 +1,4 @@
-//=================================================================================================================
+	//=================================================================================================================
 	// Enchantress: Untouchable
 	//=================================================================================================================
 	"enchantress_untouchable"
@@ -6,9 +6,14 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5267"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		
-		"MaxLevel"						"7"
-		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"HasScepterUpgrade"			"1"
+		"AbilityDraftUltScepterAbility"		"enchantress_bunny_hop"
+		"MaxLevel" 						"7"
+
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -16,7 +21,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"slow_attack_speed"		"-80 -120 -160 -200 -240 -280 -320"
+				"slow_attack_speed"		"-100 -140 -180 -220 -260 -300 -340" 
 				"LinkedSpecialBonus"	"special_bonus_unique_enchantress_3"
 			}
 			"02"
@@ -29,42 +34,6 @@
 	}
 
 	//=================================================================================================================
-	// Enchantress: Little Friends
-	//=================================================================================================================
-	"enchantress_little_friends"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"981"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		
-
-		// Casting
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
-		"AbilityCastGestureSlot"		"DEFAULT"
-		
-		// Time		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"20"
-		"AbilityCastRange"				"600"
-		// Cost
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"75"
-		
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityValues"
-		{
-			"duration"					"6"
-			"bonus_attack_speed"		"100"
-			"bonus_move_speed"			"100"
-			"radius"					"1200"
-		}
-	}
-	
-
-	
-	//=================================================================================================================
 	// Enchantress: Bunny Hop ( scepter ability - sproink )
 	//=================================================================================================================
 	"enchantress_bunny_hop"
@@ -72,7 +41,11 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"320"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"MaxLevel"						"1"
+		"IsGrantedByScepter"			"1"
+		"AbilitySound"					"Hero_Enchantress.EnchantCreep"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -81,7 +54,7 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"5"
+		"AbilityCooldown"				"4"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -119,8 +92,47 @@
 		}
 	}
 
+	//=================================================================================================================
+	// Enchantress: Little Friends
+	//=================================================================================================================
+	"enchantress_little_friends"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"981"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"1"
+		"IsGrantedByShard"				"1"
+		"AbilitySound"					"Hero_Enchantress.EnchantCreep"
 
-
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"
+		"AbilityCastRange"				"600"
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"					"6"
+			"bonus_attack_speed"		"100"
+			"bonus_move_speed"			"100"
+			"radius"					"1200"
+		}
+	}
 	
 	//=================================================================================================================
 	// Enchantress: Enchant
@@ -130,33 +142,38 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5268"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		
-		"MaxLevel"						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilitySound"					"Hero_Enchantress.EnchantCreep"
+		"MaxLevel" 						"7"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"700"
+		"AbilityCastRange"				"500 550 600 650 700 750 800"
 		"AbilityCastPoint"				"0.3"
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"10"
+		"AbilityCooldown"				"16 15 14 13 12 11 10" 
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"65 75 85 90 100 110 120"
+		"AbilityManaCost"				"50 60 70 80 90 100 110" 
 			
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"dominate_duration"			"80.0 100.0 120.0 160.0 200.0 260.0 300.0"
-			"enchant_health"			"200 400 800 1200 1600 2000 2400"
-			"enchant_armor"				"2 4 6 8 10 12 14"
-			"enchant_damage"			"50 75 100 125 150 200 225"
+			"dominate_duration"			"240"
+			"enchant_health"			"300 600 900 1200 1500 1800 2100"
+			"enchant_armor"				"4 5 6 7 8 9 10" 
+			"enchant_damage"			"30 60 90 120 150 180 210" 
 			"slow_movement_speed"		"-20 -25 -30 -35 -40 -45 -50"
-			"slow_duration"				"3.75 4.5 5.25 6"
-			"level_req"					"4 5 6 6"
+			"slow_duration"				"3 3.5 4 4.5 5 5.5 6"
+			"level_req"					"4 4 5 6" 
 
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
@@ -170,8 +187,11 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5269"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-	
-        "MaxLevel"						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		"AbilitySound"					"Hero_Enchantress.NaturesAttendantsCast"
+		"MaxLevel" 						"7"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -194,7 +214,7 @@
 			"heal_interval"			"1"
 			"heal"					
 			{
-				"value"				"12"
+				"value"				"15"
 				"LinkedSpecialBonus"	"special_bonus_unique_enchantress_5"
 			}
 			"radius"				"275"
@@ -211,8 +231,7 @@
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
-	
-	
+		
 	//=================================================================================================================
 	// Enchantress: Impetus
 	//=================================================================================================================
@@ -221,23 +240,28 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5270"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-	
-		"MaxLevel"						"7"
-		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"AbilitySound"					"Hero_Enchantress.Impetus"
+		"MaxLevel" 						"7"
+
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"550"
-		"AbilityCastPoint"				"0.0 0.0 0.0"
+		"AbilityCastRange"				"575" 
+		"AbilityCastPoint"				"0.0"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"6 4 2 0"
-		"AbilityDuration"				"1.5"
+		"AbilityCooldown"				"6 5 4 3 2 1 0" 
+		"AbilityDuration"				"1.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"50"
+		"AbilityManaCost"				"40 45 50 55 60 65 70" 
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -245,10 +269,10 @@
 		{
 			"distance_damage_pct"	
 			{
-				"value"			"8 10 12 15 16 18 20"
-				"special_bonus_unique_enchantress_4"	"+6.5"	
+				"value"			"8 11 14 17 20 23 26" 
+				"special_bonus_unique_enchantress_4"	"+9" 	
 			}
-			"distance_cap"			"4000"
+			"distance_cap"			"2500" 
 			"creep_multiplier"		"2"
 		}
 	}

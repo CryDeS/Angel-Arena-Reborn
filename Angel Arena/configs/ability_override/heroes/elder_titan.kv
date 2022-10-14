@@ -6,127 +6,122 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5589"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		
-		"MaxLevel" 						"7"
-
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_ElderTitan.EchoStomp"
+        "HasShardUpgrade"               "1"
+        "MaxLevel" 						"7"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
  		"AbilityCastAnimation"			"ACT_INVALID"
 		"AbilityCastPoint"				"0.4"
- 		"AbilityCastRange"				"475"
+ 		"AbilityCastRange"				"500"
 		"AbilityChannelTime"			"1.3"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"10"
-		"AbilityManaCost"				"120 130 150 170 190 200 210"
+		"AbilityManaCost"				"100 120 140 160 180 200 220"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"cast_time"						"1.9"
-			}
-			"02"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"radius"						"475"
-			}
-			"03"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"sleep_duration"				"2 2.5 3 3.5 4 4.5 5"
-			}
-			"04"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"stomp_damage"					"100 150 225 300 350 450 500"
-				"LinkedSpecialBonus"			"special_bonus_unique_elder_titan_2"
-			}
-			"05"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"initial_stun_duration"					"0.5"
-			}
-			"06"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"animation_rate"					"0.0"
-			}
-			"07"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"wake_damage_limit"				"80 150 230 310 400 520 650"
-				"LinkedSpecialBonus"			"special_bonus_unique_elder_titan_4"
-			}
-		}
-	}
-//=================================================================================================================
-// Elder Titan: Echo Stomp (Spirit Version)
-//=================================================================================================================
-"elder_titan_echo_stomp_spirit"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"MaxLevel" "7"
-	
-	// Stats
-	//-------------------------------------------------------------------------------------------------------------
-
-	"AbilityCastPoint"				"0.0"
-	"AbilityCooldown"				"10"
-	"AbilityChannelTime"			"1.2"
-	"AbilityManaCost"				"0 0 0 0 0 0 0"
-	"AbilityCastRange"				"475"
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"cast_time"						"0.9"
-		}
-		"02"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"radius"						"475"
-		}
-		"03"
-		{
-			"var_type"						"FIELD_FLOAT"
+			"cast_time"						"1.7"
+			"radius"						"500"
 			"sleep_duration"				"2 2.5 3 3.5 4 4.5 5"
+			"stomp_damage"
+			{
+				"value"					"100 170 240 310 380 450 520"
+				"special_bonus_unique_elder_titan_2"			"+75"
+				"DamageTypeTooltip"				"DAMAGE_TYPE_NONE"
+			}
+			"initial_stun_duration"					"0.2"
+			"animation_rate"					"0.0"
+			"wake_damage_limit"
+			{
+				"value"				"100 170 240 310 380 450 520"
+				"special_bonus_unique_elder_titan_4"			"+450"
+				"DamageTypeTooltip"				"DAMAGE_TYPE_NONE"
+			}
+			"AbilityCooldown"				
+			{
+				"value"				"12"
+				"special_bonus_shard"				"-2"
+			}
 		}
-		"04"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"stomp_damage"					"100 150 225 300 350 450 500"
-		}
-        "05"
-        {
-            "var_type"						"FIELD_FLOAT"
-            "animation_rate"					"0.0"
-        }
 	}
-}
+	//=================================================================================================================
+	// Elder Titan: Echo Stomp (Spirit Version)
+	//=================================================================================================================
+	"elder_titan_echo_stomp_spirit"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5590"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CUSTOM"
+		"FightRecapLevel"				"1"
+		"HasShardUpgrade"               "1"
+		"MaxLevel" 						"7"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_INVALID"
+		"AbilityCastPoint"				"0.0"
+		"AbilityChannelTime"			"1.3"
+		"AbilityManaCost"				"0 0 0 0"
+		"AbilityCastRange"				"500"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"cast_time"						"1.7"
+			"radius"						"500"
+			"sleep_duration"				"2 3 4 5"
+			"stomp_damage"
+			{
+				"value"					"100 170 240 310 380 450 520"
+				"special_bonus_unique_elder_titan_2"			"+75"
+				"DamageTypeTooltip"				"DAMAGE_TYPE_NONE"
+			}
+			"wake_damage_limit"
+			{
+				"value"				"100 170 240 310 380 450 520"
+				"special_bonus_unique_elder_titan_4"			"+450"
+				"DamageTypeTooltip"				"DAMAGE_TYPE_NONE"
+			}
+			"animation_rate"					"0.0"
+			"AbilityCooldown"				
+			{
+				"value"				"12"
+				"special_bonus_shard"				"-2"
+			}
+		}
+	}
 
-//=================================================================================================================
-// Elder Titan: Ancestral Spirit
-//=================================================================================================================
-"elder_titan_ancestral_spirit"
+	//=================================================================================================================
+	// Elder Titan: Ancestral Spirit
+	//=================================================================================================================
+	"elder_titan_ancestral_spirit"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5591"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_ElderTitan.AncestralSpirit.Cast"
+		"HasScepterUpgrade"				"1"
 		"MaxLevel"						"7"
-
-		"HasScepterUpgrade"			"1"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -141,43 +136,87 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"110"
+		"AbilityManaCost"				"80 90 100 110 120 130 140" 
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
 			"radius"						"275"
-			"pass_damage"					"100 120 180 250 280 300 320"
+			"pass_damage"					"80 140 200 260 320 380 440"
 			"spirit_duration"				"10.0"
 			"buff_duration"					"16.0"
-			"speed"							"600"
-			"move_pct_creeps"				"1"
+			"speed"							"900"
+			"move_pct_creeps"				"1.5" 
 			"move_pct_heroes"				
 			{
-				"value"		"5"
+				"value"		"3 4 5 6 7 8 9" 
 				"special_bonus_unique_elder_titan_bonus_spirit_speed"	"+2"
 			}
 			"damage_creeps"					
 			{
-				"value"	"3 6 9 12 18 20 22"
+				"value"	"5 10 15 20 25 30 35" 
 				"CalculateSpellDamageTooltip"				"0"
+				"DamageTypeTooltip"		"DAMAGE_TYPE_NONE"
 			}
 			"damage_heroes"
 			{
-				"value"		"3 6 9 12 18 20 22"
+				"value"		"15 30 45 60 75 90 105" 
 				"special_bonus_unique_elder_titan"	"+25"
 				"CalculateSpellDamageTooltip"	"0"
+				"DamageTypeTooltip"				"DAMAGE_TYPE_NONE"
 			}
-			"armor_creeps"					"0.5"
-			"armor_heroes"					"3 6 9 12 18 20 22"
-			"move_pct_cap"					"40"
+			"armor_creeps"					"1 2 3 4 5 6 7" 
+			"armor_heroes"					"2 4 6 8 10 12 14" 
+			"move_pct_cap"					"45" // 40
 			"scepter_magic_immune_per_hero"	
 			{
 				"value"				"2"
 				"RequiresScepter"				"1"
 			}
 		}
+	}
+
+	//=================================================================================================================
+	// Elder Titan: Return Spirit
+	//=================================================================================================================
+	"elder_titan_return_spirit"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5592"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"MaxLevel"						"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+ 		"AbilityCastAnimation"			"ACT_INVALID"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.0"
+	}
+
+	//=================================================================================================================
+	// Elder Titan: Return Spirit
+	//=================================================================================================================
+	"elder_titan_move_spirit"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"6563"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_POINT_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"MaxLevel"						"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+ 		"AbilityCastAnimation"			"ACT_INVALID"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.0"
 	}
 
 	//=================================================================================================================
@@ -188,23 +227,28 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5593"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+ 		"AbilityCastAnimation"			"ACT_INVALID"
 		"MaxLevel"						"7"
+
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
 				"radius"					
 				{
-					"value"		"500"
+					"value"		"350"
 					"special_bonus_unique_elder_titan_5"	"+100"
 				}
-				"armor_reduction_pct"	    "20 40 50 56 64 66 68"
+				"armor_reduction_pct"	    "30 35 40 45 50 55 60" 
 				"magic_resistance_pct"		"40 50 60 70 80 90 100"
 		}
 	}
 
-//=================================================================================================================
+	//=================================================================================================================
 	// Elder Titan: Natural Order Spirit
 	//=================================================================================================================
 	"elder_titan_natural_order_spirit"
@@ -212,8 +256,13 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5750"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-	
-		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+ 		"AbilityCastAnimation"			"ACT_INVALID"
+		"MaxLevel"						"7"
+
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -221,12 +270,12 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"375"
+				"radius"					"350"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"armor_reduction_pct"	    "20 40 50 56 64 66 68"
+				"armor_reduction_pct"	    "30 35 40 45 50 55 60"
 			}
 			"03"
 			{
@@ -236,16 +285,22 @@
 		}
 	}
 
-
-//=================================================================================================================
-// Elder Titan: Earth Splitter
-//=================================================================================================================
-"elder_titan_earth_splitter"
+	//=================================================================================================================
+	// Elder Titan: Earth Splitter
+	//=================================================================================================================
+	"elder_titan_earth_splitter"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5594"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_ElderTitan.EarthSplitter.Cast"
 		"MaxLevel"						"7"
 
 		// Casting
@@ -256,11 +311,11 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"90"
+		"AbilityCooldown"				"120 115 110 105 100 95 90" 
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"175"
+		"AbilityManaCost"				"150 200 250 300 350 400 450"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -294,12 +349,12 @@
 			"06"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"speed"						"910"
+				"speed"						"1100" 
 			}
 			"07"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_pct"				"30 35 40 45 50 55 60" //65
+				"damage_pct"				"30 35 40 45 50 55 60"
 				"DamageTypeTooltip"		"DAMAGE_TYPE_NONE"
 			}
 			"08"
@@ -330,7 +385,8 @@
 			"13"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"slow_duration_scepter"		"4.0 5.0 6.0 7.0"
+				"slow_duration_scepter"		"4.0 4.5 5.0 5.5 6.0 6.5 7.0" 
 			}
 		}
 	}
+

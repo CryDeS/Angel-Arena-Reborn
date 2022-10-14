@@ -1,0 +1,12 @@
+"DOTA_Tooltip_Ability_item_aeon_disk_2"							"Aeon Disk 2"
+"DOTA_Tooltip_Ability_item_recipe_aeon_disk_2"						"Рецепт: Aeon Disk 2"
+
+"DOTA_Tooltip_ability_item_aeon_disk_2_Description"					"<h1>Пассивная: Combo Breaker</h1> Если здоровье владельца упадёт ниже %health_threshold_pct%%%, он получит магический щит, который сильным очищением развеет большинство эффектов, а также на %buff_duration% сек. увеличит сопротивление эффектам на %status_resistance%%% и не даст наносить или получать урон. Срабатывает только от урона игроков."
+
+"DOTA_Tooltip_ability_item_aeon_disk_2_lore"						"Могущественный артефакт, давным-давно, как поговаривают, выкраденный из Белого инкубатория."
+
+"DOTA_Tooltip_ability_item_aeon_disk_2_bonus_health"				"+$health"
+"DOTA_Tooltip_ability_item_aeon_disk_2_bonus_mana"					"+$mana"		
+
+"DOTA_Tooltip_modifier_item_aeon_disk_2_buff"						"Combo Breaker"
+"DOTA_Tooltip_modifier_item_aeon_disk_2_buff_Description"			"Не позволяет наносить или получать урон."

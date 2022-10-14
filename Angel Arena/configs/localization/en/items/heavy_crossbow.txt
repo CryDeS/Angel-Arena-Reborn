@@ -6,6 +6,7 @@
 "DOTA_Tooltip_ability_item_heavy_crossbow_bonus_damage"						"+$damage"
 "DOTA_Tooltip_ability_item_heavy_crossbow_bonus_stats"						"+$all"
 "DOTA_Tooltip_ability_item_heavy_crossbow_bonus_as"							"+$attack"
+"DOTA_Tooltip_ability_item_heavy_crossbow_bonus_hp"							"+$health"
 "DOTA_Tooltip_ability_item_heavy_crossbow_bonus_attack_range"				"+$attack_range"
 
 "DOTA_Tooltip_ability_item_heavy_crossbow_projectile_speed"					"PROJECTILE SPEED:"

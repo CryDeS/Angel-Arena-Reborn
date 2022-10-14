@@ -1,24 +1,28 @@
-"item_fluffy_hat"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	
-	// Item Info
-	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"250"
-	"ItemShopTags"					"health_pool"
-	"ItemQuality"					"secret_shop"
-	"ItemAliases"					"flf;fluffy hat;hat;fh"
-
-	// Special	
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Fluffy Hat
+	//=================================================================================================================
+	"item_fluffy_hat"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"593"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"250"
+		"ItemShopTags"					"health_pool"
+		"ItemQuality"					"secret_shop"
+		"ItemAliases"					"flf;fluffy hat;hat;fh"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_health"			"125"
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"			"150"
+			}
 		}
 	}
-}

@@ -1,19 +1,18 @@
-"item_mirror_shield"
+"item_keen_optic"
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"ID"							"301"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	"ID"							"287"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
-	
+	"Model"							"models/props_gameplay/neutral_box.vmdl"
+		
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
 	"ItemCost"						"0"
 	"ItemIsNeutralDrop"				"0"
 	"ItemPurchasable"				"0"
+	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
 
-	"Model"							"models/props_gameplay/neutral_box.vmdl"
-	
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilitySpecial"
@@ -21,17 +20,12 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"reflect_chance"			"75"
+			"cast_range_bonus"			"125"
 		}
 		"02"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"all_stats"				"20"
-		}
-		"03"
-		{
 			"var_type"				"FIELD_FLOAT"
-			"block_cooldown"		"6.0"
+			"bonus_mana_regen"		"3"
 		}
 	}
 }

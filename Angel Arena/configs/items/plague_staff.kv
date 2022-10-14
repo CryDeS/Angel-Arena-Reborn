@@ -3,22 +3,22 @@
 	"AbilityTextureName" 				"item_recipe_plague_staff"
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"ID"							"1301"						
-	"Model"							"models/props_gameplay/recipe.vmdl"
-	"BaseClass"                     "item_recipe_arcane_boots"
+	"ID"								"1301"						
+	"Model"								"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     	"item_recipe_arcane_boots"
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"1500"	
-	"ItemShopTags"					""
+	"ItemCost"							"650" // 1500
+	"ItemShopTags"						""
 	
 	// Recipe
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemRecipe"					"1"
-	"ItemResult"					"item_plague_staff"
+	"ItemRecipe"						"1"
+	"ItemResult"						"item_plague_staff"
 	"ItemRequirements"
-	{ //2240 + 600 + 900
-		"01"						"item_veil_of_discord;item_talisman_of_mastery;item_energy_booster;item_boss_soul"
+	{
+		"01"							"item_veil_of_discord;item_helm_of_iron_will;item_energy_booster;item_ultimate_orb;"
 	}
 }
 
@@ -30,18 +30,20 @@
 	"BaseClass"							"item_lua"
 	"AbilityTextureName" 				"plague_staff"
 	"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	"ItemDeclarations"					"DECLARE_PURCHASES_TO_TEAMMATES"
 	"ScriptFile"						"items/plague_staff/plague_staff.lua"
-	
+
+	"ItemDeclarations"					"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 	"ItemQuality"						"rare"
 	"ItemDroppable" 					"1"
 	"ItemCastOnPickup"					"0"
 	"ItemKillable"						"1"
 	"ItemPurchasable"					"1"
 	"ItemSellable"						"1"
-	"ItemCost"							"5015"
+	"ItemCost"							"6000"
 	"ItemStackable"						"0"
-	
+	"ShouldBeSuggested"					"1"
+	"ItemBaseLevel"						"1"
+
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilitySpecial"
@@ -49,52 +51,48 @@
 		"01"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"bonus_int"					"60" //25
+			"bonus_int"					"20 40" // 60
 		}
 		"02"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"bonus_str"					"15" // 6
+			"bonus_str"					"20 40" // 15
 		}
 		"03"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"bonus_agi"					"15" //6
+			"bonus_agi"					"20 40" // 15
 		}
 		"04"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"bonus_armor"				"8" // 3
+			"bonus_armor"				"5 10" // 8
 		}
 		"05"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"bonus_damage"				"20" // 12
+			"bonus_hpregen"				"10 20" // 15
 		}
 		"06"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"bonus_hpregen"				"15" // 8
+			"bonus_mana"				"400 800" // 500
 		}
 		"07"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"bonus_mana"				"500" // 300
+			"bonus_spellamp"			"10 20" // 10
 		}
 		"08"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"bonus_spellamp"			"10" 
+			"chance"					"20 30" // 25
 		}
-		"08"
+		"09"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"chance"					"25" // 20
-		}
-		"08"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"magical_crit"				"200"
+			"magical_crit"				"140 180" // 200
 		}
 	}
 }
+

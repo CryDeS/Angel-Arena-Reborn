@@ -23,7 +23,6 @@
 	}
 }
 
-
 "item_sphere_2"
 {
 	// General
@@ -37,12 +36,12 @@
 	"FightRecapLevel"				"1"
 	"ItemBaseLevel"					"2"
 	
-	"AbilityCastRange"				"700"
+	"AbilityCastRange"				"800"
 	"AbilityCooldown"				"12.0"
 
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"9600"
+	"ItemCost"						"9000"
 	"ItemShopTags"					"regen_health;regen_mana;str;agi;int;hard_to_tag"
 	"ItemQuality"					"epic"
 	"ItemAliases"					"ls;linken's sphere"
@@ -51,67 +50,78 @@
 	
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	"AbilityValues"
+		{
+				"bonus_all_stats"		"20 40"
+				"bonus_health_regen"	"10 20"
+				"bonus_mana_regen"		"8 16"
+				"block_cooldown"		"12.0"
+				"upgrade_absorb_duration"		"10.0"
+				"damage_absorb"		"300"
+		}
+}
+	//=================================================================================================================
+	// Recipe: Sphere
+	//=================================================================================================================
+	"item_recipe_sphere"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"122"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"800"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_sphere"
+		"ItemRequirements"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_all_stats"		"20 40"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_health_regen"	"10 20"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_mana_regen"		"8 16"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"block_cooldown"		"13 12"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"cast_range_tooltip"	"700 700"
+			"01"						"item_ultimate_orb;item_pers"
 		}
 	}
-}
 
-"item_sphere"
-{
-	"AbilitySharedCooldown"			"linken_sphere"
-	"ItemBaseLevel"					"1"
-	
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Sphere
+	//=================================================================================================================
+	"item_sphere"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"123"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilitySharedCooldown"			"linken_sphere"
+		"ItemBaseLevel"					"1"
+		
+		"AbilityCastRange"				"700"
+		"AbilityCooldown"				"14.0"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"4500"
+		"ItemShopTags"					"regen_health;regen_mana;str;agi;int;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"ls;linken's sphere"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ActiveDescriptionLine"			"2"
+		"ShouldBeSuggested"				"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_all_stats"		"20 40" // 15 45 
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_health_regen"	"10 20" // 6 25
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_mana_regen"		"8 16"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"block_cooldown"		"13 12"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"cast_range_tooltip"	"700 700"
+				"bonus_all_stats"		"20 40"
+				"bonus_health_regen"	"10 20"
+				"bonus_mana_regen"		"8 16"
+				"block_cooldown"		"14.0"
+				"upgrade_absorb_duration"		"10.0"
+				"damage_absorb"		"300"
 		}
 	}
-}

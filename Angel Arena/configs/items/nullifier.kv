@@ -38,14 +38,19 @@
 		"FightRecapLevel"				"1"
 		"ItemBaseLevel"					"1"
 		
-		"AbilityCooldown"				"11.0"
+		"AbilityCooldown"				"9.0" // 11
 		"AbilityCastRange"				"900"
 		"AbilityManaCost"				"0"
-		
+		"AbilitySharedCooldown"			"nullify"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"4725"
+		"ItemStackable"					"0"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemPurchasable"				"1"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"nlf;nullifier"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
@@ -58,17 +63,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"80"
+				"bonus_damage"			"100 200" // 80 230
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"8"
+				"bonus_armor"			"10" // 8 10
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_regen"			"6"
+				"bonus_regen"			"10" // 6 10
 			}
 			"04"
 			{
@@ -78,7 +83,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"projectile_speed"		"1100"
+				"projectile_speed"		"1100 1500"
 			}
 			"06"
 			{
@@ -104,7 +109,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1500"	
+		"ItemCost"						"275" // 1500	
 		"ItemShopTags"					""
 		
 		// Recipe
@@ -134,41 +139,42 @@
 		"AbilityCooldown"				"9.0"
 		"AbilityCastRange"				"900"
 		"AbilityManaCost"				"0"
-		
-		
+		"AbilitySharedCooldown"			"nullify"		
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"8725"
+		"ItemCost"						"8000"
+		"ItemStackable"					"0"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemPurchasable"				"1"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"nlf;nullifier"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
-		"AbilitySharedCooldown"			"nullifier"
 		
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"80 230"
+				"bonus_damage"			"100 200" // 80 230
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"8 10"
+				"bonus_armor"			"10" // 8 10
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_regen"			"6 10"
+				"bonus_regen"			"10" // 6 10
 			}
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"mute_duration"			"5.0 5.0"
+				"mute_duration"			"5.0"
 			}
 			"05"
 			{
@@ -178,12 +184,12 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"slow_pct"				"80 80"
+				"slow_pct"				"80"
 			}
 			"07"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"slow_interval_duration"	"0.5 0.5"
+				"slow_interval_duration"	"0.5"
 			}
 		}
 	}

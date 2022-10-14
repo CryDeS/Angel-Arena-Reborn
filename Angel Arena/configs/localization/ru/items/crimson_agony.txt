@@ -1,0 +1,11 @@
+"DOTA_Tooltip_Ability_item_crimson_agony"						"Crimson Agony"
+
+"DOTA_Tooltip_modifier_crimson_agony_active"					"Magic Resist"
+
+"DOTA_Tooltip_Ability_item_crimson_agony_Description"			"<h1>Активируемая: Magic Resist</h1> Дает сопротивление к магии 60 процентов на 5 секунд. 
+\n<h1>Пассивная: Damage block</h1> Блокирует %block_damage% входящего физического урона и %bonus_defence%% общего входящего урона."
+
+"DOTA_Tooltip_Ability_item_crimson_agony_bonus_health"			"+$health"
+"DOTA_Tooltip_Ability_item_crimson_agony_bonus_hpregen"			"+$hp_regen"
+"DOTA_Tooltip_Ability_item_crimson_agony_magic_resist"			"%+$spell_resist"
+"DOTA_Tooltip_Ability_item_crimson_agony_absorb_chance"			"%ШАНС ПОГЛОТИТЬ УРОН:"

@@ -10,7 +10,6 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
-		"FightRecapLevel"				"1"
 		"AbilitySound"					"Hero_Omniknight.Purification"
 	"AbilityTextureName"			"omniknight_purification"
 	
@@ -25,16 +24,16 @@
 	
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"600"
-	"AbilityCastPoint"				"0.25"
+	"AbilityCastRange"				"500 550 600 650 700 750 800"
+	"AbilityCastPoint"				"0.3" 
 	
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"12.0"
+	"AbilityCooldown"				"16 15 14 13 12 11 10"
 	
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"100 120 140 160 180 200 220"
+	"AbilityManaCost"				"160" 
 	
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
@@ -43,24 +42,24 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"heal"					"120 160 250 300 375 425 550"
+			"heal"					"1" 
 			"LinkedSpecialBonus"	"special_bonus_unique_omniknight_1"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"radius"				"260"
+			"radius"				"200 225 250 275 300 325 350" 
 			"LinkedSpecialBonus"	"special_bonus_unique_omniknight_4"
 		}
 		"03"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"heal_percent"			"150"
+			"heal_percent"			"500" 
 		}
 		"04"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"damage_percent"		"100"
+			"damage_percent"		"350" 
 		}
 	}
 	"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
@@ -171,7 +170,7 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"350"
+		"AbilityCastRange"				"275 300 325 350 375 400 425" 
 		"AbilityCastPoint"				"0.3"
 
 		// Time		
@@ -183,7 +182,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"50 60 70 80 90 100 110"
+		"AbilityManaCost"				"60 80 100 120 140 160 180" 
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -191,17 +190,17 @@
 		{
 			"AbilityCooldown"				
 			{
-				"value"				"10"
-				"special_bonus_unique_omniknight_3"		"-6"
+				"value"				"11" 
+				"special_bonus_unique_omniknight_3"		"-5" 
 			}
 			"base_damage"	
 			{
-				"value"		"55 60 65 70 75 85 100" // "40 45 50 55 60 65 70"
-				"special_bonus_unique_omniknight_4"	"+75" // 50
+				"value"		"100" 
+				"special_bonus_unique_omniknight_4"	"+100" 
 			}
-			"bonus_damage"	"60 70 80 90 100 110 120" // "40 50 60 70 80 90 100"
-			"duration"	"5"
-			"movement_slow"				"25"
+			"bonus_damage"	"30 40 50 60 70 80 90" 
+			"duration"	"3.6 4.0 4.4 4.8 5.2 5.6 6.0" 
+			"movement_slow"				"12 16 20 24 28 32 36" 
 			
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
@@ -227,16 +226,16 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"500"
-		"AbilityCastPoint"				"0.5"
+		"AbilityCastRange"				"400 450 500 550 600 650 700" 
+		"AbilityCastPoint"				"0.4" 
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"20"
+		"AbilityCooldown"				"21 20 19 18 17 16 15" 
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"50"
+		"AbilityManaCost"				"60 70 80 90 100 110 120" 
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -250,22 +249,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"6"
+				"duration"				"7.0" 
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"status_resistance"		"25 28 32 35 38 42 45"
+				"status_resistance"		"20 25 30 35 40 45 50" 
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"		"15 26 37 48 58 69 80"
+				"bonus_str"		"15 25 35 45 55 65 75" 
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hp_regen"		"20 25 32 42 53 64 75"
+				"hp_regen"		"15 25 35 45 55 65 75" 
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
@@ -365,23 +364,23 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"500"
-		"AbilityCastPoint"				"0.5"
+		"AbilityCastRange"				"400 450 500 550 600 650 700" 
+		"AbilityCastPoint"				"0.4" 
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"20"
+		"AbilityCooldown"				"21 20 19 18 17 16 15" 
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"50"
+		"AbilityManaCost"				"60 70 80 90 100 110 120" 
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-				"base_strength"				"15 26 37 48 58 69 80"
-				"base_hpregen"				"20 25 32 42 53 64 75"
+				"base_strength"				"15 25 35 45 55 65 75" 
+				"base_hpregen"				"15 25 35 45 55 65 75" 
 				"strength_bonus"		
 				{
 					"value"			"3 4 5 6 7 8 9"
@@ -389,7 +388,7 @@
 				}
 				"duration"				
 				{
-					"value"			"6"
+					"value"			"7.0" 
 					"LinkedSpecialBonus"	"special_bonus_unique_omniknight_5"
 				}
 		}
@@ -417,23 +416,23 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"80" // 60
-		"AbilityCastPoint"				"0.5"
+		"AbilityCooldown"				"105 100 95 90 85 80 75" 
+		"AbilityCastPoint"				"0.4" 
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"125 175 250 325 420 480 550"
+		"AbilityManaCost"				"120 200 280 360 440 520 600" 
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-				"duration"					"3.5 3.7 3.9 4.2 4.4 4.6 4.8"
+				"duration"					"3.5 3.75 4.0 4.25 4.5 4.75 5.0" 
 				"radius"					"1200"
 				"duration_scepter"
 				{
-					"value"		"6.5 6.75 7.0 7.25 7.5 7.75 8" //"7.5"
+					"value"		"6.5 6.75 7.0 7.25 7.5 7.75 8" 
 					"RequiresScepter"		"1"
 				}
 				"scepter_status_resist"					
@@ -506,30 +505,6 @@
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
 
-//=================================================================================================================
-	// Ability: Special Bonus
-	//=================================================================================================================
-	"special_bonus_unique_omniknight_1"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"					"5981"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"160"
-				"ad_linked_abilities"			"omniknight_purification"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
-		}
-	}
-
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
@@ -565,30 +540,6 @@
 		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		
-	}
-
-	//=================================================================================================================
-	// Ability: Special Bonus
-	//=================================================================================================================
-	"special_bonus_unique_omniknight_4"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"					"7010"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"80"
-				"ad_linked_abilities"			"omniknight_purification"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
-		}
 	}
 
 	//=================================================================================================================
@@ -635,7 +586,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"10"
+				"value"				"15" // 10
 				"ad_linked_abilities"			"omniknight_guardian_angel"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}

@@ -1,74 +1,209 @@
-"item_bloodthorn"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"ID"							"250"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-	"FightRecapLevel"				"1"
-	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-
-	// Stats
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"900"
-	"AbilityCastPoint"				"0.0"
-	"AbilityCooldown"				"15.0"
-	"AbilitySharedCooldown"			"orchid"
-
-	// Item Info
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"100"
-	"ItemCost"						"6475"
-	"ItemShopTags"					"int;attack_speed;damage;regen_mana;damage;hard_to_tag"
-	"ItemQuality"					"epic"
-	"ItemAliases"					"orchid malevolence"
-	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-	"ShouldBeSuggested"				"1"
-	
-	// Special	
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+	//=================================================================================================================
+	// Recipe: Bloodthorn
+	//=================================================================================================================
+	"item_recipe_bloodthorn"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"245"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"400"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_bloodthorn"
+		"ItemRequirements"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_intellect"		"25"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_attack_speed"	"90"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_damage"			"30"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"bonus_mana_regen"		"5.5"
-		}			
-		"05"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"silence_damage_percent"	"30"
-		}	
-		"06"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"silence_duration"		"5"
-		}
-		"07"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"target_crit_multiplier"		"130"
-		}
-		"08"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"tooltip_crit_chance"	"100"
+			"01"						"item_orchid*;item_mage_slayer"
 		}
 	}
-}
+	
+	//=================================================================================================================
+	// Bloodthorn
+	//=================================================================================================================
+	"item_bloodthorn"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"250"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"FightRecapLevel"				"1"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"15.0"
+		"AbilitySharedCooldown"			"orchid"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+		"ItemCost"						"6000"
+		"ItemShopTags"					"int;attack_speed;damage;regen_mana;damage;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"orchid malevolence"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"bonus_intellect"			"20"
+				"bonus_attack_speed"		"70"
+				"bonus_damage"				"60"
+				"bonus_mana_regen"			"7"
+				"bonus_magic_resist"		"25"	
+
+				"silence_duration"			"5"
+				"silence_damage_percent"	"25"
+				"target_crit_multiplier"	"150"
+				"tooltip_crit_chance"		"100"
+
+				"duration"					"6"			
+				"spell_amp_debuff"			"40"
+		}
+	}
+
+	//=================================================================================================================
+	// Recipe: Orchid
+	//=================================================================================================================
+	"item_recipe_orchid"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"97"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"225"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_orchid"
+		"ItemRequirements"
+		{
+			"01"						"item_blitz_knuckles;item_claymore;item_void_stone"
+		}
+	}
+	
+	//=================================================================================================================
+	// Orchid
+	//=================================================================================================================
+	"item_orchid"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"98"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"FightRecapLevel"				"1"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"15.0"
+		"AbilitySharedCooldown"			"orchid"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+		"ItemCost"						"3375"
+		"ItemShopTags"					"attack_speed;damage;regen_mana;hard_to_tag"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"orchid malevolence;silence"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityValues"
+		{
+				"bonus_attack_speed"	"45"
+				"bonus_damage"			"35"
+				"bonus_mana_regen"		"4"
+				"silence_damage_percent"	"25"
+				"silence_duration"		"5"
+		}
+		
+	}
+
+	//=================================================================================================================
+	// Recipe: Mage Slayer
+	//=================================================================================================================
+	"item_recipe_mage_slayer"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"597"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"200"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_mage_slayer"
+		"ItemRequirements"
+		{
+			"01"						"item_cloak;item_oblivion_staff"
+		}
+	}
+	
+	//=================================================================================================================
+	// Mage Slayer
+	//=================================================================================================================
+	"item_mage_slayer"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"598"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2200"
+		"ItemShopTags"					"hard_to_tag"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"mage slayer;ms"
+		"ShouldBeInitiallySuggested"	"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"bonus_magical_armor"	"25"
+				"bonus_attack_speed"	"25"
+				"bonus_damage"			"25"
+				"spell_amp_debuff"		"40"
+				"bonus_mana_regen"		"3"
+				"duration"		"6"
+				"bonus_intellect"		"15"
+		}
+	}

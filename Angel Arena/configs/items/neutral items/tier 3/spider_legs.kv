@@ -1,47 +1,33 @@
-"item_spider_legs"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"ID"							"326"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-	
-	// Stats		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"10.0"
-		
-	// Item Info
-	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"0"
-	"ItemIsNeutralDrop"				"0"
-	"ItemPurchasable"				"0"
-	"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
-
-	"Model"							"models/props_gameplay/neutral_box.vmdl"
-	
-	
-	// Special	
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
+//=================================================================================================================
+	// Spider Legs
+	//=================================================================================================================
+	"item_spider_legs"
 	{
-		"01"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"326"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12.0"
+			
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"0"
+
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
 		{
-			"var_type"				"FIELD_INTEGER"
 			"bonus_movement_speed"	"55"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"turn_rate"				"50"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
+			"turn_rate"	"50"
 			"bonus_movement_speed_active"	"24"
+			"duration"			"3.0"
 		}
-		"04"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"duration"			"3"
-		}			
 	}
-}

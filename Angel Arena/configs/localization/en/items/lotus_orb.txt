@@ -1,0 +1,13 @@
+"DOTA_Tooltip_Ability_item_lotus_orb_2"								"Lotus Orb 2"
+
+"DOTA_Tooltip_ability_item_lotus_orb_2_Description"					"<h1>Active: Echo Shell</h1>Applies a shield to the target unit for %active_duration% seconds which re-casts most targeted spells back to their caster.<br><br>The shielded unit will still take damage from the spell. <br><br>Range: %abilitycastrange%<br>Dispel Type: <span class=\"GameplayValues GameplayVariable\">Basic Dispel</span>"
+
+"DOTA_Tooltip_ability_item_lotus_orb_2_bonus_armor"					"+$armor"
+"DOTA_Tooltip_ability_item_lotus_orb_2_bonus_health_regen"			"+$hp_regen"
+"DOTA_Tooltip_ability_item_lotus_orb_2_bonus_mana_regen"			"+$mana_regen"
+"DOTA_Tooltip_ability_item_lotus_orb_2_bonus_mana"		    		"+$mana"
+
+"DOTA_Tooltip_ability_item_lotus_orb_2_Lore"						"The jewel at its center still reflects a pale image of its creator."
+		
+"DOTA_Tooltip_modifier_item_lotus_orb_2_active"						"Echo Shell"
+"DOTA_Tooltip_modifier_item_lotus_orb_2_active_Description"			"Most targeted spells will be re-cast at the caster."

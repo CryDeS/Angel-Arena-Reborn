@@ -25,6 +25,7 @@ local admin_ids = {
     [136098003] = 1, -- homie
     [144780201] = 1, -- cyberpunk
     [302781235] = 1, -- dimon
+    [131897948] = 1, -- Dunkan
 }
 
 function IsAdmin(player)

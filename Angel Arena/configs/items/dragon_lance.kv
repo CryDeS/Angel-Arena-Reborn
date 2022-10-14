@@ -1,0 +1,66 @@
+	//=================================================================================================================
+	// Recipe: Dragon Lance
+	//=================================================================================================================
+	"item_recipe_dragon_lance"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"234"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"550"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_dragon_lance"
+		"ItemRequirements"
+		{
+			"01"						"item_blade_of_alacrity;item_belt_of_strength"
+		}
+	}
+	
+	//=================================================================================================================
+	// Dragon Lance
+	//=================================================================================================================
+	"item_dragon_lance"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"236"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2000"
+		"ItemShopTags"					"damage"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"dragon lance"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"20"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"15"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"base_attack_range"		"150"
+			}
+		}
+	}

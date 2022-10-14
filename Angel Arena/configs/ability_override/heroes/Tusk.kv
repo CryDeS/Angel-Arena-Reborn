@@ -11,88 +11,51 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"FightRecapLevel"				"1"
 		"HasShardUpgrade"               "1"
 		"AbilitySound"					"Hero_Tusk.IceShards"
 		"MaxLevel"						"7"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"1200"
+		"AbilityCastRange"				"1200 1300 1400 1500 1600 1700 1800"
 		"AbilityCastPoint"				"0.1"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"10"
+		"AbilityCooldown"				"14" 
 
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"70 75 80 85 90 95 100"
+		"AbilityManaCost"				"80 85 90 95 100 110 120"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
 				"shard_width"				"200"
-			}
-			
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"shard_damage"				"100 175 250 300 350 425 525"
-			}
-			"03"
-			{
-				"var_type"					"FIELD_INTEGER"
+				"shard_damage"				"100 170 240 310 380 450 520" 
 				"shard_count"				"7"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"shard_speed"				"1100.0"
-			}
-			"05"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"shard_duration"				"7.0"
-			}
-			"06"
-			{
-				"var_type"					"FIELD_FLOAT"
+				"shard_speed"				"1200.0"
+				"shard_duration"			"3.5 4 4.5 5 5.5 6 6.5" 
 				"shard_angle_step"			"40.0"
-			}
-			"07"
-			{
-				"var_type"					"FIELD_INTEGER"
 				"shard_distance"			"200"
-			}
-			"08"
-			{
-				"var_type"					"FIELD_INTEGER"
 				"turn_rate_slow"			"0"
-			}
-			"09"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"aghs_shard_move_slow"		"40"
-				"RequiresShard"				"1"
-			}
-			"10"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"aghs_shard_damage"			"60"
-				"RequiresShard"				"1"
-			}
-			"11"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"aghs_shard_depth"			"300"
-				"RequiresShard"				"1"
-			}
+				"aghs_shard_move_slow"	
+				{
+					"value"					"40"
+					"RequiresShard"			"1"
+				}
+				"aghs_shard_damage"			
+				{
+					"value"					"120"
+					"RequiresShard"			"1"
+				}
+				"aghs_shard_depth"			
+				{
+					"value"						"300"
+					"RequiresShard"				"1"
+				}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
@@ -140,7 +103,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"15"
+		"AbilityCooldown"				"16"
 
 
 		// Cost
@@ -399,13 +362,13 @@
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"air_time"					"0.6" // 1
+				"air_time"					"0.6"
 				"LinkedSpecialBonus"		"special_bonus_unique_tusk_7"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"slow_duration"				"2.0 3.0 4.0 5.0 6.0 7.0 8.0"
+				"slow_duration"				"2.0 2.5 3.0 3.5 4.0 4.5 5.0" 
 			}
 			"04"
 			{

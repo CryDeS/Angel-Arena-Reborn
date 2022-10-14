@@ -9,7 +9,7 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"3000" // 1200	
+	"ItemCost"						"1500" // 1200	
 	"ItemShopTags"					""
 	
 	// Recipe
@@ -18,7 +18,7 @@
 	"ItemResult"					"item_reverse"
 	"ItemRequirements"
 	{
-		"01"						"item_phase_boots_3"
+		"01"						"item_phase_boots_3;item_boss_soul;"
 	}
 }
 
@@ -32,7 +32,7 @@
 
 	// Stats		
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"12.0"
+	"AbilityCooldown"				"10" // 12
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
@@ -50,12 +50,12 @@
         "01"
         {
             "var_type"				"FIELD_INTEGER"
-            "bonus_movement_speed"	"45 50 55 60"
+            "bonus_movement_speed"	"45 50 55 65" // 45 50 55 60
         }
         "02"
         {
             "var_type"				"FIELD_INTEGER"
-            "bonus_damage"	        "200"
+            "bonus_damage"	        "40 80 120 200" // 200
         }
         "03"
         {
@@ -85,7 +85,7 @@
         "08"
         {
             "var_type"				"FIELD_FLOAT"
-            "phase_duration"		"3.0 3.5 4.0 4.5"
+            "phase_duration"		"3.0 3.5 4.0 5.0" // 3.0 3.5 4.0 4.5
         }
         "09"
         {
@@ -95,12 +95,12 @@
         "10"
         {
             "var_type"				"FIELD_INTEGER"
-            "bonus_armor"			"3 5 7 10"
+            "bonus_armor"			"2 4 6 10" // 3 5 7 10
         }
 		"11"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"speed_limit_tooltip"	"1000"
+			"speed_limit_tooltip"	"4000" // 1000
 		}
 	}
 
