@@ -10,7 +10,7 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"1000"	
+	"ItemCost"						"2500"	
 	"ItemShopTags"					"artifacts"
 	
 	// Recipe
@@ -19,7 +19,7 @@
 	"ItemResult"					"item_double_diff"
 	"ItemRequirements"
 	{
-		"01"						"item_diffusal_blade;item_power_treads_2;item_boss_soul;"
+		"01"						"item_diffusal_blade"
 	}
 }
 
@@ -40,22 +40,20 @@
 
 	// Stats
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"8.0"
+	"AbilityCooldown"				"10.0"
 	"AbilityCastRange"				"600"
 	"AbilityManaCost"				"50"	
-	"AbilitySharedCooldown"			"diffusal"
-
+	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"17000"
+	"ItemCost"						"7700"
 	"ItemStackable"					"0"
-	"ShouldBeSuggested"				"1"
+	
 	"ItemPermanent"					"0"
 	"ItemKillable"                  "1"
 	"ItemSellable"                  "1"
 	"ItemDroppable"                 "1"
 	"ItemPurchasable"				"1"
-	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 	
 	//special
 	"AbilitySpecial"
@@ -63,39 +61,34 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_movement_speed"  "80"
+			"bonus_agi"				"20 40"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_stats"			"40"
-		}	
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_attack_speed"	"80"
+			"bonus_int"				"10 20"
 		}
-		"04"
+		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
 			"mana_burn"				"60"
 		}
-		"05"
+		"04"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"burn_pct"				"2.0"
+			"burn_pct"				"0.0"
 		}
-		"06"
+		"05"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"burn_to_damage"		"90"
+			"burn_to_damage"		"60"
 		}
-		"07"
+		"06"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"purge_slow_duration"	"4.0"
 		}
-		"08"
+		"07"
 		{
 			"var_type"				"FIELD_INTEGER"
 			"purge_slow"			"-100"
@@ -118,14 +111,12 @@
 			"IsHidden"	 	"1"
 			"IsPurgable"	"0"
 			"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
-						
+			
+			
 			"Properties"
 			{
-				"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"				"%bonus_movement_speed"
-				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"					"%bonus_stats"			
-				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"						"%bonus_stats"	
-				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"					"%bonus_stats"	
-				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"				"%bonus_attack_speed"		
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" 		"%bonus_int"		
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" 		"%bonus_agi"		
 			}
 			
 		}
@@ -171,18 +162,58 @@
 
 "item_diffusal_blade"
 {
-	"AbilitySharedCooldown"			"diffusal"
 	"ItemBaseLevel"					"1"
-	"AbilityValues"
+	"AbilitySpecial"
+	{
+		"01"
 		{
-			"bonus_agility"			"20"
-			"bonus_intellect"		"10"
-			"feedback_mana_burn"	"40"
-			"feedback_mana_burn_illusion_melee"	"20"
-			"feedback_mana_burn_illusion_ranged"	"20"
-			"purge_rate"			"5"
-			"purge_root_duration"	"3.0"
-			"purge_slow_duration"	"4.0"
-			"damage_per_burn"		"1"
+			"var_type"				"FIELD_INTEGER"
+			"bonus_agility"			"20 40"
 		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_intellect"		"10 20"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"feedback_mana_burn"	"40"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"feedback_mana_burn_illusion_melee"	"16"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"feedback_mana_burn_illusion_ranged"	"8"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"purge_rate"			"5"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"purge_root_duration"	"3.0"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"purge_slow_duration"	"4.0"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_per_burn"		"0.8"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"cast_range_tooltip"		"600"
+		}
+	}
 }
