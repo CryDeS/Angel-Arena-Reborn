@@ -3,22 +3,22 @@
 	"AbilityTextureName" 				"item_recipe_abyssal_blade_2"
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"ID"								"1219"						
-	"Model"								"models/props_gameplay/recipe.vmdl"
-	"BaseClass"                     	"item_recipe_arcane_boots"
+	"ID"							"1219"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_recipe_arcane_boots"
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"							"2000"	
-	"ItemShopTags"						""
+	"ItemCost"						"2135"	
+	"ItemShopTags"					""
 	
 	// Recipe
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemRecipe"						"1"
-	"ItemResult"						"item_abyssal_blade_2"
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_abyssal_blade_2"
 	"ItemRequirements"
 	{
-		"01"							"item_abyssal_blade;item_boss_soul;"
+		"01"						"item_abyssal_blade;item_death_shield"
 	}
 }
 
@@ -36,17 +36,17 @@
 
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"30"
-		"AbilityCastRange"				"200"
+		"AbilityCooldown"				"35"
+		"AbilityCastRange"				"150"
 		"AbilityCastPoint"				"0.0"
 		"AbilitySharedCooldown"			"item_abyssal"
-		"AbilityManaCost"				"50"
+		"AbilityManaCost"				"75"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 
 		"ItemBaseLevel"					"2"
-		"ItemCost"						"17000"
+		"ItemCost"						"20800"
 		"ItemShopTags"					"damage;str;hard_to_tag"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"abyssal blade"
@@ -60,74 +60,80 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"25 50"
+				"bonus_damage"			"50 75"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health"			"400 800"
+				"bonus_health"			"250 820"
 			}
 			"03"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"bonus_health_regen"	"10 20"
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health_regen"	"15 32"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"block_damage_melee"	"60 120"
+				"block_damage_melee"	"40 150"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"block_damage_ranged"	"40 80"
-			}			
+				"block_damage_ranged"	"20 120"
+			}
+			
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"block_chance"			"50 100"
+				"block_chance"			"100"
 			}
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_strength"		"10 20"
+				"bonus_strength"		"15 35"
 			}
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bash_chance_melee"		"25 30"
+				"bash_chance_melee"		"25 25"
 			}
 			"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bash_chance_ranged"	"10"
+				"bash_chance_ranged"	"10 10"
 			}
 			"10"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bash_duration"			"1.2 1.4"
+				"bash_duration"			"1.0 1.0"
 			}
 			"11"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bash_cooldown"			"3.0 2.5"
+				"bash_cooldown"			"4.5 4.5"
 			}
 			"12"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_chance_damage"	"150 300"
-			}
+				"bonus_chance_damage"	"180 250"
+			}	
 			"13"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"stun_duration"			"1.8 2.2"
+				"stun_duration"			"2 2"
+			}
+			"14"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_range"			"140 140"
 			}
 		}
 	}
 	
 	"item_recipe_abyssal_blade"
 	{
-		"ItemCost"						"300"	
+		"ItemCost"						"1185"	
 	}
 	
 	
@@ -135,11 +141,7 @@
 	{
 		"ItemBaseLevel"					"1"
 		"AbilitySharedCooldown"			"item_abyssal"
-		"AbilityCooldown"				"40"
 		"AbilityCastRange"				"150"
-		"AbilityCastPoint"				"0.0"
-		"AbilityManaCost"				"100"
-
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -147,67 +149,73 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"25 50"
+				"bonus_damage"			"50 75"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health"			"400 800"
+				"bonus_health"			"250 820"
 			}
 			"03"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"bonus_health_regen"	"10 20"
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health_regen"	"15 32"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"block_damage_melee"	"60 120"
+				"block_damage_melee"	"40 150"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"block_damage_ranged"	"40 80"
-			}			
+				"block_damage_ranged"	"20 120"
+			}
+			
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"block_chance"			"50 100"
+				"block_chance"			"100"
 			}
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_strength"		"10 20"
+				"bonus_strength"		"15 35"
 			}
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bash_chance_melee"		"25 30"
+				"bash_chance_melee"		"25 25"
 			}
 			"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bash_chance_ranged"	"10"
+				"bash_chance_ranged"	"10 10"
 			}
 			"10"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bash_duration"			"1.2 1.4"
+				"bash_duration"			"1.0 1.0"
 			}
 			"11"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bash_cooldown"			"3.0 2.5"
+				"bash_cooldown"			"4.5 4.5"
 			}
 			"12"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_chance_damage"	"150 300"
-			}
+				"bonus_chance_damage"	"180 250"
+			}	
 			"13"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"stun_duration"			"1.8 2.2"
+				"stun_duration"			"2 2"
+			}
+			"14"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_range"			"140 140"
 			}
 		}
 	}
@@ -229,12 +237,12 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bash_chance_melee"		"20"
+				"bash_chance_melee"		"25"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bash_chance_ranged"	"10"
+				"bash_chance_ranged"		"10"
 			}
 			"05"
 			{
@@ -244,12 +252,12 @@
 			"06"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bash_cooldown"			"3.5"
+				"bash_cooldown"			"2.3"
 			}
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_chance_damage"	"100"
+				"bonus_chance_damage"	"140"
 			}
 		}
 	}
